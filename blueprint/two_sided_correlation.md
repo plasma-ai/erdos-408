@@ -30,7 +30,7 @@ Some of these scales are *above* `x`, where the premise `IntegerKernelBound`, wh
 (`Erdos408/Analytic/IntegerKernel.lean`) has no upper bound on the scale, and it covers S19
 completely (§6.6). The premise `IntegerKernelBound` (AP2) is used only in the sparse Gram bound
 S17, where every scale is at most `x` (§6.5); the premise `PrimeTwistBound` (AP1) is used only
-in S18 (§6.6). The draft paper *The normal order of the number of iterations of Euler's
+in S18 (§6.6). The paper *The normal order of the number of iterations of Euler's
 function* (Plasma AI, 2026) notes the same point: the constant-term argument uses the
 progression bound on slightly larger scales.
 

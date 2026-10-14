@@ -19,7 +19,7 @@ namespace Erdos408
 /-- The rectangle statistic, from the one-sided Type II estimate and from the
 two-sided correlation, which the graph transference input gives. -/
 theorem rectangleInput : RectangleInput :=
-  rectangleInput_of_hypotheses oneSidedTypeII
+  rectangleInput_of_oneSidedTypeII_of_twoSidedCorrelation oneSidedTypeII
     (twoSidedCorrelation_of_graphTransference graphTransference)
 
 /-- `f n` has normal order `α log n` for a constant `1 / log 3 ≤ α ≤ 1 / log 2`,

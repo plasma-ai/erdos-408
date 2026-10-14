@@ -552,9 +552,10 @@ end Unsmooth
 
 open Unsmooth
 
-/-- The two graph hypotheses imply the rectangle statistic. -/
-theorem rectangleInput_of_hypotheses (h₁ : OneSidedTypeII) (h₂ : TwoSidedCorrelation) :
-    RectangleInput := by
+/-- The one-sided Type II estimate and the two-sided correlation give the rectangle
+statistic. -/
+theorem rectangleInput_of_oneSidedTypeII_of_twoSidedCorrelation (h₁ : OneSidedTypeII)
+    (h₂ : TwoSidedCorrelation) : RectangleInput := by
   obtain ⟨C₀, hC₀⟩ := eventually_smooth_rectangle h₁ h₂ 1 3 400
     (fun r => 2 * transitionBound r) one_pos (by norm_num)
   obtain ⟨c, hc, C, hC, hπ⟩ := exists_card_primesIoc_le

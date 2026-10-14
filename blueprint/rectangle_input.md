@@ -340,7 +340,7 @@ The steps, with the paper's account in §§6.3–6.4:
   (`Sieve.final_budget`). The paper gives E9 and E11 only in aggregate.
 
 Then **unsmoothing** gives the hard `RectangleInput`
-(`Erdos408.rectangleInput_of_hypotheses`, `Extraction/Unsmooth.lean`).
+(`Erdos408.rectangleInput_of_oneSidedTypeII_of_twoSidedCorrelation`, `Extraction/Unsmooth.lean`).
 Bound the dyad above by a smooth cutoff of steepness `T^{400}`, and bound
 its two edge strips with AC0, using `|f_𝔟| ≤ 27T^{60}` and `|C_𝔟| ≤ 8T³`.
 AC0 also normalizes `x/L` to `Π_x`. `RectangleInput` then feeds the
@@ -362,11 +362,11 @@ deduction of the normal order (paper §§3–5).
   in `PNT`, `ProxyTwist`, `PrimeTwist` and `IntegerKernel`, indexed by
   `Contracts`.
 - `Erdos408/Extraction/`: E0–E11 and unsmoothing, ending in
-  `theorem rectangleInput_of_hypotheses (h₁ : OneSidedTypeII)
+  `theorem rectangleInput_of_oneSidedTypeII_of_twoSidedCorrelation (h₁ : OneSidedTypeII)
   (h₂ : TwoSidedCorrelation) : RectangleInput`. The block sieve enters
   through `blockSieve`, inside `eventually_smooth_rectangle`.
-- `Solution.lean`: `rectangleInput` applies `rectangleInput_of_hypotheses`
-  to `oneSidedTypeII` and
+- `Solution.lean`: `rectangleInput` applies
+  `rectangleInput_of_oneSidedTypeII_of_twoSidedCorrelation` to `oneSidedTypeII` and
   `twoSidedCorrelation_of_graphTransference graphTransference`, and the
   compared theorems follow from it.
 
