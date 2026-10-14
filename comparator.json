@@ -1,0 +1,6 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": ["Erdos408.normal_order_rate", "Erdos408.erdos_408.parts.i", "Erdos408.erdos_408.parts.ii"],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"]
+}

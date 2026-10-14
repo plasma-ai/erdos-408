@@ -1,0 +1,7 @@
+import Erdos821.P4Probe.GraphSharedPairing
+import Erdos821.P4Probe.SharedProducts
+import Erdos821.P4Probe.PhaseProducts
+import Erdos821.P4Probe.ConditionalBounds
+import Erdos821.P4Marg.PatternAveraging
+import Erdos821.P4Independent.DisjointMarginal
+import Erdos821.P4Shared.SharedPairing

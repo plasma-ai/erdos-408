@@ -1,0 +1,202 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Erdős Problem 408: distribution of iterated totient heights"
+  description: >-
+    A Lean proof that the least k with φ_k(n) = 1 has normal order α log n
+    for a constant 1 / log 3 ≤ α ≤ 1 / log 2, with mean-square error
+    O(x (log x)² / (log log x)⁵). This answers the first two questions of Erdős
+    Problem 408. The proof formalizes extensions of Theorems 3.1 and 6.1 of
+    OpenAI's The Poisson-Dirichlet law for prime predecessors, and uses
+    vendored Lean proofs of the zero-free half-plane re s > 7/8 for Dirichlet
+    L-functions (openai/math) and of the weighted dilation graph results
+    (Yao Xu's totient-fibers-lean4).
+  authors:
+    - "Jacob Parish"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Jacob Parish"
+
+classification:
+  arxiv: ["math.NT"]
+  msc2020: ["11A25", "11N37", "11N64"]
+
+sources:
+  - title: "Erdős Problem #408"
+    authors: ["Thomas F. Bloom"]
+    id: "https://www.erdosproblems.com/408"
+    relationship: "background"
+    note: >-
+      Accessed 2026-10-12. Bloom's catalog entry supplies the problem number
+      and statement.
+  - title: "Formal Conjectures: ErdosProblems/408.lean"
+    authors: ["The Formal Conjectures Authors"]
+    id: "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/408.lean"
+    relationship: "background"
+    note: >-
+      At commit 7db2ea3b91bfbd0ab620215163e6c488bbb916d5. The definition of f
+      in Challenge.lean is copied verbatim, and erdos_408.parts.i and
+      erdos_408.parts.ii are its statements verbatim, with Set.HasDensity
+      written as HasDensity, which inlines its definition.
+  - title: "The normal order of the number of iterations of Euler's function"
+    authors: ["Plasma AI"]
+    id: "https://github.com/plasma-ai/erdos-408/blob/main/paper/totient_iterates.pdf"
+    type: "paper"
+    relationship: "formalizes"
+    note: >-
+      Unpublished draft manuscript, not yet released or refereed; it follows
+      the argument formalized here. Theorem 1.1 is Erdos408.normal_order_rate,
+      and Theorem 2.1 (the quantitative rectangle estimate) is
+      Erdos408.RectangleInput.
+      The Lean deduction from RectangleInput follows Sections 3–5 (spare-slot
+      removal, positivity and the dyadic renewal), and Erdos408/Extraction
+      formalizes the extraction that Section 6 outlines.
+  - title: "On the normal behavior of the iterates of some arithmetic functions"
+    authors: ["P. Erdős", "A. Granville", "C. Pomerance", "C. Spiro"]
+    id: "Analytic number theory (Allerton Park, IL, 1989), Progr. Math. 85 (1990), 165–204"
+    type: "paper"
+    relationship: "adapts"
+    note: >-
+      The additive companion F, the integer moment identities (2.8) and (2.19),
+      and the renewal structure of Section 2, here with explicit rates and a
+      dyadic renewal in place of the continuous one.
+  - title: "The Poisson-Dirichlet law for prime predecessors"
+    authors: ["OpenAI"]
+    id: "https://github.com/openai/math/blob/main/preprints/The-Poisson-Dirichlet-Law-for-Prime-Predecessors-September-24-2026/paper.pdf"
+    type: "paper"
+    relationship: "formalizes"
+    note: >-
+      Theorems 3.1 and 6.1, extended as the extraction of the normal-order
+      paper above uses them, are OneSidedTypeII and TwoSidedCorrelation,
+      proved following Sections 3–5 and Section 6. Lemma 2.6 (the block
+      sieve) is proved, and Section 7's extraction, quantitatively modified as
+      in Section 6 of the normal-order paper, is formalized.
+  - title: "Weighted dilation graphs, smooth shifted primes and totient fibers"
+    authors: ["OpenAI"]
+    id: "https://github.com/openai/math/blob/main/preprints/Weighted-Dilation-Graphs-Smooth-Shifted-Primes-and-Totient-Fibers-September-24-2026/paper.pdf"
+    type: "paper"
+    relationship: "uses"
+    note: >-
+      Lemma 3.4, Theorem 3.5, Corollary 3.11, Theorem 4.1 and Lemma 4.3 (the
+      dilation-graph transference and ideal kernels) give PD Propositions 6.2
+      and 6.3, used through the vendored formalization below. Lemma 2.9 (the
+      block sieve) is proved here.
+  - title: "The Quasi-Riemann Hypothesis: A Zero-Free Half-Plane Re(s) > 7/8"
+    authors: ["OpenAI"]
+    id: "https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf"
+    type: "paper"
+    relationship: "uses"
+    note: >-
+      Theorem 1.1, the zero-free half-plane for Dirichlet L-functions, from
+      which the analytic premises of the graph results and the prime number
+      theorem in progressions with a power saving are proved. Its Lean proof
+      is vendored under vendor/OAI from openai/math commit
+      fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb and ported to this toolchain.
+  - title: "PrimeNumberTheoremAnd"
+    authors: ["Alex Kontorovich", "Terence Tao", "and contributors"]
+    id: "https://github.com/AlexKontorovich/PrimeNumberTheoremAnd"
+    relationship: "adapts"
+    note: >-
+      Mertens' first and second theorems, the smoothed Perron formula and
+      rectangle residue calculus, and the Wiener closure used by the OAI
+      library, vendored under vendor/PrimeNumberTheoremAnd from commit
+      c39a751132c88b6e8080b74c74023fd95b3d8be0.
+  - title: "totient-fibers-lean4"
+    authors: ["Yao Xu"]
+    id: "https://github.com/cadamcat/totient-fibers-lean4"
+    relationship: "adapts"
+    note: >-
+      A Lean formalization of the weighted dilation graphs paper. The import
+      closure of its transference, ideal-construction and lifted
+      shifted-correlation results is vendored under vendor/TotientFibers from
+      commit dfce35707a67fce7362cb2bd95af8b80a0b0373e and ported to this
+      toolchain; Erdos408/Graph derives GraphTransference from it.
+  - title: "rellich-kondrachov"
+    authors: ["Adam Benenson"]
+    id: "https://github.com/abenenson/rellich-kondrachov"
+    relationship: "adapts"
+    note: >-
+      The Rellich–Kondrachov closure used by the OAI library, vendored under
+      vendor/RellichKondrachov from commit
+      70f85d4c1bf99c6e7d61e8be4daa6f3664d08d23.
+
+status:
+  scope: >-
+    Comparator checks three theorems, with no hypotheses: the normal order
+    with its rate and exceptional count, and formal-conjectures'
+    erdos_408.parts.i and erdos_408.parts.ii. The third question of the
+    problem is not addressed.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Quot.sound", "Classical.choice"]
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["claude-opus-5-5"]
+      framework: "Claude Code"
+      tool_setup: "Lean 4.35.0, Mathlib, and Lake."
+      prompting_notes: >-
+        Asked to formalize the normal-order argument of the draft paper above,
+        first conditional on the graph papers and then outright, and to vendor
+        the quasi-Riemann hypothesis formalization and, once found, Yao Xu's
+        formalization of the weighted dilation graphs paper. Claude Code
+        stated the extended graph theorems with their analytic inputs as
+        premises, simplified the deduction from the rectangle statistic to
+        avoid sieve bounds and a rate in the prime number theorem, wrote the
+        blueprints, statements and module interfaces, and reviewed and
+        integrated the proofs. Parallel subagents wrote the proofs.
+  notes: >-
+    The vendored OAI library was produced by an internal OpenAI model, and
+    the vendored totient-fibers-lean4 by AI coding agents under Yao Xu's
+    direction, as recorded upstream.
+
+fidelity:
+  divergences: >-
+    formal-conjectures defines f(n) as the least k ≥ 1 with φ_k(n) = 1, so
+    f(1) = 1; this does not affect densities or the normal order. The Lean
+    proof follows the route of the draft paper The normal order of the
+    number of iterations of Euler's function, and the theorem proved is its
+    Theorem 1.1.
+
+review:
+  status: "self-assessed"
+  reviewers: []
+  notes: >-
+    The full development, including the vendored libraries, builds on Lean
+    v4.35.0, and the three compared theorems depend only on propext,
+    Classical.choice, and Quot.sound. Comparator, built for this toolchain,
+    accepts them against Challenge.lean with the Lean kernel. It ran on macOS
+    with a stand-in for landrun that does not sandbox the solution build. No
+    independent mathematical review of the argument has been recorded. The
+    quasi-Riemann hypothesis is used through its vendored Lean proof, which
+    upstream checks with Comparator against
+    ComparatorChallenges/DirichletSevenEighths.lean.
+
+alignment:
+  namespace: "Erdos408"
+  statements:
+    - source: "Erdős Problem 408, normal order (with rate)"
+      lean: "Erdos408.normal_order_rate"
+      module: "Solution"
+      status: "proved"
+      note: >-
+        1 / log 3 ≤ α ≤ 1 / log 2,
+        ∑_{n ≤ x} (f(n) − α log n)² ≤ C x (log x)² / (log log x)⁵, and at most
+        C (x / (log log x)³ + √x) integers n ≤ x have
+        |f(n) − α log n| > log n / log log n.
+    - source: "Erdős Problem 408, first question"
+      lean: "Erdos408.erdos_408.parts.i"
+      module: "Solution"
+      status: "proved"
+      note: >-
+        formal-conjectures' erdos_408.parts.i.
+    - source: "Erdős Problem 408, second question"
+      lean: "Erdos408.erdos_408.parts.ii"
+      module: "Solution"
+      status: "proved"
+      note: >-
+        formal-conjectures' erdos_408.parts.ii.
+
+acknowledgements: "Mathlib, formal-conjectures, openai/math, totient-fibers-lean4, PrimeNumberTheoremAnd, rellich-kondrachov, and the authors of the cited mathematical sources."

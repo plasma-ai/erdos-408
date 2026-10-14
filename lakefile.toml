@@ -1,0 +1,53 @@
+name = "Erdos408"
+defaultTargets = ["OAI", "PrimeNumberTheoremAnd", "RellichKondrachov", "TotientFibers", "Erdos408", "Challenge", "Solution"]
+
+# No silently-introduced implicit binders anywhere in the corpus.
+[leanOptions]
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.35.0"
+
+# Import closure of the Dirichlet seven-eighths theorem from openai/math,
+# under its upstream module names.
+[[lean_lib]]
+name = "OAI"
+srcDir = "vendor/OAI"
+globs = ["OAI.+"]
+
+# Import closures of `PrimeNumberTheoremAnd.IEANTN.Mertens`, which proves
+# Mertens' first and second theorems, and of `PrimeNumberTheoremAnd.Wiener`,
+# used by the OAI closure.
+[[lean_lib]]
+name = "PrimeNumberTheoremAnd"
+srcDir = "vendor/PrimeNumberTheoremAnd"
+globs = ["PrimeNumberTheoremAnd.+"]
+
+# Import closure of the Rellich–Kondrachov theorem, used by the OAI closure.
+[[lean_lib]]
+name = "RellichKondrachov"
+srcDir = "vendor/RellichKondrachov"
+globs = ["RellichKondrachov.+"]
+
+# Import closure of the transference (Lemma 3.4, Theorem 3.5, Corollary 3.11),
+# ideal-construction (Theorem 4.1, Lemma 4.3) and lifted shifted correlation
+# results of the weighted dilation graphs paper, from Yao Xu's
+# totient-fibers-lean4, under its upstream module names.
+[[lean_lib]]
+name = "TotientFibers"
+srcDir = "vendor/TotientFibers"
+globs = ["Erdos821.+"]
+
+[[lean_lib]]
+name = "Erdos408"
+globs = ["Erdos408.+"]
+
+[[lean_lib]]
+name = "Challenge"
+roots = ["Challenge"]
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]

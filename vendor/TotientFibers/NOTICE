@@ -1,0 +1,17 @@
+totient-fibers-lean4
+Copyright 2026 Yao Xu
+
+This project includes a definition and a theorem statement copied from
+Google DeepMind's Formal Conjectures
+(https://github.com/google-deepmind/formal-conjectures), commit
+317647fa3fc24ae900a50382186da1d22e4ea398, Copyright 2026 The Formal
+Conjectures Authors, licensed under the Apache License, Version 2.0. They are
+in Challenge.lean, Erdos821/Challenge.lean and
+Erdos821/Fidelity/FormalConjectures.lean; THIRD_PARTY.md records the
+upstream file and the changes.
+
+This project depends on OpenAI's openai/math library
+(https://github.com/openai/math), commit
+adc7f1241b42e322a6451854ab7e4b4c146bf78a, in the lean/ directory, licensed
+under the Apache License, Version 2.0. Lake fetches it; no OpenAI source is
+copied into this repository. The upstream repository has no NOTICE file.
