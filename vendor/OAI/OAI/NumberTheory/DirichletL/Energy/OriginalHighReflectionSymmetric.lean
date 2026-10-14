@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.OriginalHighReflectionPower
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.OriginalHighReflectionPower
+
+@[expose] public section
 
 namespace OAI
 

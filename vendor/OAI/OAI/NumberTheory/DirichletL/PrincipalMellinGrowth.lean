@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.MellinBoundary
-import OAI.NumberTheory.DirichletL.Hecke.LogarithmicInput
-import OAI.NumberTheory.DirichletL.Hecke.DeletionBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.MellinBoundary
+public import OAI.NumberTheory.DirichletL.Hecke.LogarithmicInput
+public import OAI.NumberTheory.DirichletL.Hecke.DeletionBounds
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.TraceConductor
-import Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform
+module
+
+public import OAI.NumberTheory.DirichletL.TraceConductor
+public import Mathlib.Analysis.SpecialFunctions.Gaussian.FourierTransform
+
+@[expose] public section
 
 namespace OAI
 

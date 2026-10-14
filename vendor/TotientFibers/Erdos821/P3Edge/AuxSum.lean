@@ -1,4 +1,8 @@
-import Erdos821.P3Edge.FreshBound
+module
+
+public import Erdos821.P3Edge.FreshBound
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

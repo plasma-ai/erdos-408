@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.KernelWeights
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.KernelWeights
+
+@[expose] public section
 
 namespace OAI
 

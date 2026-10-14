@@ -1,8 +1,12 @@
-import Erdos821.S2.FullNormTask
-import Erdos821.S2.AbsoluteRootTask
-import Erdos821.S2.PhysicalPathTask
+module
+
+public import Erdos821.S2.FullNormTask
+public import Erdos821.S2.AbsoluteRootTask
+public import Erdos821.S2.PhysicalPathTask
 
 /-! Exact final §2 theorem from explicit memory, physical and CRT proof inputs. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

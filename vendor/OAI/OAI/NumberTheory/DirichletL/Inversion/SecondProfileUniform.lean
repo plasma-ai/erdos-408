@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialProfile
-import OAI.NumberTheory.DirichletL.Inversion.AmbientProfileTower
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialProfile
+public import OAI.NumberTheory.DirichletL.Inversion.AmbientProfileTower
+
+@[expose] public section
 
 namespace OAI
 

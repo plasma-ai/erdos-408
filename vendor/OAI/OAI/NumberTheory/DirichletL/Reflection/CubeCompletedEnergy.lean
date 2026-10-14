@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.OriginalCompletedEnergy
-import OAI.NumberTheory.DirichletL.Reflection.CubeSlotEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalCompletedEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.CubeSlotEnergy
+
+@[expose] public section
 
 namespace OAI
 

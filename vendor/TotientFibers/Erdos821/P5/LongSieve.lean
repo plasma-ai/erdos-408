@@ -1,5 +1,10 @@
-import Erdos821.P5.Basic
-import Erdos821.Blueprint.Sieve
+module
+
+public import Erdos821.P5.Basic
+public import Erdos821.Blueprint.Sieve
+public import Mathlib.NumberTheory.DirichletCharacter.Bounds
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

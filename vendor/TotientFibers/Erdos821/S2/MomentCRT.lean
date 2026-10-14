@@ -1,7 +1,11 @@
-import Erdos821.S2.ClosedPaths
-import Erdos821.Blueprint.Transference
+module
+
+public import Erdos821.S2.ClosedPaths
+public import Erdos821.Blueprint.Transference
 
 /-! The physical expansion and relative CRT error give a root-moment comparison. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,6 +1,11 @@
-import Erdos821.Blueprint.Analytic
+module
+
+public import Erdos821.Blueprint.Analytic
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
 
 /-! Eventual inequalities in `x`, with `L x = log x`. -/
+
+@[expose] public section
 
 noncomputable section
 open Filter Real

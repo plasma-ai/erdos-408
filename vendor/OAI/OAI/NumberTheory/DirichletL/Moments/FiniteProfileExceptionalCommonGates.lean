@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonAsymmetric
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalGates
-import OAI.NumberTheory.DirichletL.Moments.CommonLinearSource
-import OAI.NumberTheory.DirichletL.Moments.FixedRowMask
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonAsymmetric
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalGates
+public import OAI.NumberTheory.DirichletL.Moments.CommonLinearSource
+public import OAI.NumberTheory.DirichletL.Moments.FixedRowMask
+
+@[expose] public section
 
 namespace OAI
 

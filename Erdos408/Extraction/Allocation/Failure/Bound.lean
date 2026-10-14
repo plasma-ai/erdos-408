@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Allocation.CoreMoment
-import Erdos408.Extraction.Allocation.Failure.Scale
+module
+
+public import Erdos408.Extraction.Allocation.CoreMoment
+public import Erdos408.Extraction.Allocation.Failure.Scale
 
 /-!
 # The free-factor sum in Euler products
@@ -15,6 +17,8 @@ and `κ_j^j ∏_{p ∈ P} (1 - 1/p)⁻¹ ≤ exp(2 ∑_{p ∈ P} 1/p²)`: the no
 the proxy cancels the Euler product of the candidate part exactly, up to the
 squares.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

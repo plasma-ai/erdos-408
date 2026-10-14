@@ -1,10 +1,14 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstExtractedLedger
-import OAI.NumberTheory.DirichletL.Moments.FirstScale
-import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
-import OAI.NumberTheory.DirichletL.Moments.AmplificationSlotGap
-import OAI.NumberTheory.DirichletL.Moments.AmplificationOriginalErrors
-import OAI.NumberTheory.DirichletL.Moments.AmplificationAllocationScale
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstExtractedLedger
+public import OAI.NumberTheory.DirichletL.Moments.FirstScale
+public import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationSlotGap
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationOriginalErrors
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationAllocationScale
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+
+@[expose] public section
 
 namespace OAI
 

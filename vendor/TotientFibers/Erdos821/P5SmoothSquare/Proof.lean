@@ -1,5 +1,9 @@
-import Erdos821.P5.SmoothEndpointSquareTask
-import Erdos821.P5.EndpointPrefix
+module
+
+public import Erdos821.P5.SmoothEndpointSquareTask
+public import Erdos821.P5.EndpointPrefix
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

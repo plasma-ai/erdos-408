@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstExceptionalPaidScales
-import OAI.NumberTheory.DirichletL.Moments.FirstCanonicalAllowance
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstExceptionalPaidScales
+public import OAI.NumberTheory.DirichletL.Moments.FirstCanonicalAllowance
+
+@[expose] public section
 
 namespace OAI
 

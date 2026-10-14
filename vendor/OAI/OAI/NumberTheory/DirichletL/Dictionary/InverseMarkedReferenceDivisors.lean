@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceCoefficients
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedPolynomial
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceCoefficients
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedPolynomial
+
+@[expose] public section
 
 namespace OAI
 

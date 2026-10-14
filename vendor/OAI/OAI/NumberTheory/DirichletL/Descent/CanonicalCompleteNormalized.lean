@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongNormalization
-import OAI.NumberTheory.DirichletL.Descent.CanonicalPunctureMaskEnergy
-import OAI.NumberTheory.DirichletL.Descent.CompletedReopening
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongNormalization
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalPunctureMaskEnergy
+public import OAI.NumberTheory.DirichletL.Descent.CompletedReopening
+
+@[expose] public section
 
 namespace OAI
 

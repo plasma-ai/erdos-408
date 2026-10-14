@@ -1,9 +1,13 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalSymmetry
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalPairBound
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonWindow
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalHeight
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalWindow
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalWindowHeight
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalSymmetry
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalPairBound
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonWindow
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalHeight
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalWindow
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalWindowHeight
+
+@[expose] public section
 
 namespace OAI
 

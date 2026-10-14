@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.LocalCutoffs
-import OAI.NumberTheory.DirichletL.MeanSquare.HarmonicAggregation
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.LocalCutoffs
+public import OAI.NumberTheory.DirichletL.MeanSquare.HarmonicAggregation
+
+@[expose] public section
 
 namespace OAI
 

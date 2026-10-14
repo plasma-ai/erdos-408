@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.DetectorBatch
-import OAI.NumberTheory.DirichletL.PrimeRows.CubeSupportedWitness
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.DetectorBatch
+public import OAI.NumberTheory.DirichletL.PrimeRows.CubeSupportedWitness
+
+@[expose] public section
 
 namespace OAI
 

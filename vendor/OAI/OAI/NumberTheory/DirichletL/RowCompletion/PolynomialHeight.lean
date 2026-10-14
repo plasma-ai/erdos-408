@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.LogSeparation
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.LogSeparation
+
+@[expose] public section
 
 namespace OAI
 

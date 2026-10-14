@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.FirstStageLossBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.FirstStageLossBudget
+
+@[expose] public section
 
 namespace OAI
 

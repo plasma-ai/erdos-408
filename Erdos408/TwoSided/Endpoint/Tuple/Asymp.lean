@@ -1,4 +1,6 @@
-import Erdos408.Extraction.TypeII.Asymp
+module
+
+public import Erdos408.Extraction.TypeII.Asymp
 
 /-!
 # Growth facts for the tuple part
@@ -10,6 +12,8 @@ with `L = log x`, `T = log L` and the slot margin `x^ε = exp(c L / T²⁰)`:
 * `eventually_mul_exp_rpow_le_margin`: `D exp(L^a) ≤ x^ε` for `0 ≤ a < 1`;
 * `eventually_mul_exp_div_le_margin`: `D exp(L/T²²) ≤ x^ε`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.TupleHigh
 

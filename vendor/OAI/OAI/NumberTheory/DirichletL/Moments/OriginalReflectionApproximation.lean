@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RetainedReflection
-import OAI.NumberTheory.DirichletL.Moments.ReflectedNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RetainedReflection
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedNormalization
+
+@[expose] public section
 
 namespace OAI
 

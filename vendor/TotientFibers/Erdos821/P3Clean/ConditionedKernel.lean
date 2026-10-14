@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.CleanCoefficients
+module
+
+public import Erdos821.P3Clean.CleanCoefficients
 
 /-! The exact conditioned signed kernel, retaining every big auxiliary draw. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

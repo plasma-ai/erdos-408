@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.FirstPassage
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.FirstPassage
+
+@[expose] public section
 
 namespace OAI
 

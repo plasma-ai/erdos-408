@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.MeanSquare.InputEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.MeanSquare.InputEnergy
+
+@[expose] public section
 
 namespace OAI
 

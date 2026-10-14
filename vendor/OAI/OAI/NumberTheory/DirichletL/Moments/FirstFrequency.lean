@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAssembly
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAssembly
+
+@[expose] public section
 
 namespace OAI
 

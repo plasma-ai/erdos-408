@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Endpoint.Low.Progression
+module
+
+public import Erdos408.TwoSided.Endpoint.Low.Progression
 
 /-!
 # One progression of the low-frequency sum
@@ -13,6 +15,8 @@ the progression sum `P_m = ∑_{w ≤ N, m ∣ w} G(w) e(hw/k) H(w)` is
   `R = Y/m` (`LowFreq.norm_sum_mul_sub_model_le`);
 * the progression errors `(∑_d |A_d|) k TV(G)` (`LowFreq.norm_sum_dvd_sub_le`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.LowFreq
 

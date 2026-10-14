@@ -1,6 +1,10 @@
-import Erdos821.S2.MemoryEdge
+module
+
+public import Erdos821.S2.MemoryEdge
 
 /-! Literal finite alternating paths, before independent residues are averaged. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.MeanSquare.TransformedColumns
+module
+
+public import OAI.NumberTheory.DirichletL.MeanSquare.TransformedColumns
+
+@[expose] public section
 
 namespace OAI
 

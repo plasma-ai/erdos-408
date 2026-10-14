@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorFourierSeparation
-import OAI.NumberTheory.DirichletL.Hecke.DetectorPartition
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorFourierSeparation
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorPartition
+
+@[expose] public section
 
 namespace OAI
 

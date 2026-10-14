@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.CentralRepeatedSum
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CentralRepeatedSum
+
+@[expose] public section
 
 namespace OAI
 

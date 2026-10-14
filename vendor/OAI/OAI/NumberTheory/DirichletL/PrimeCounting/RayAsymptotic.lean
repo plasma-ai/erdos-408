@@ -1,5 +1,10 @@
-import OAI.NumberTheory.DirichletL.RayQuotient
-import OAI.NumberTheory.DirichletL.IdealLogDerivative
+module
+
+public import OAI.NumberTheory.DirichletL.RayQuotient
+public import OAI.NumberTheory.DirichletL.IdealLogDerivative
+public import Mathlib.NumberTheory.LSeries.Linearity
+
+@[expose] public section
 
 namespace OAI
 

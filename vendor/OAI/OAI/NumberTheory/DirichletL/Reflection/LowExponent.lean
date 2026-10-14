@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Reflection.LowWidth
-import OAI.NumberTheory.DirichletL.Reflection.SurvivingGate
-import OAI.NumberTheory.DirichletL.Reflection.RetainedCaps
-import OAI.NumberTheory.DirichletL.Detector.LowReflectedLength
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.LowWidth
+public import OAI.NumberTheory.DirichletL.Reflection.SurvivingGate
+public import OAI.NumberTheory.DirichletL.Reflection.RetainedCaps
+public import OAI.NumberTheory.DirichletL.Detector.LowReflectedLength
+
+@[expose] public section
 
 namespace OAI
 

@@ -4,11 +4,13 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
 
-import RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.H1
-import Mathlib.Analysis.Calculus.FDeriv.Add
-import Mathlib.MeasureTheory.Group.Measure
-import Mathlib.MeasureTheory.Function.LpSpace.Basic
-import Mathlib.Topology.Algebra.Group.Basic
+module
+
+public import RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.H1
+public import Mathlib.Analysis.Calculus.FDeriv.Add
+public import Mathlib.MeasureTheory.Group.Measure
+public import Mathlib.MeasureTheory.Function.LpSpace.Basic
+public import Mathlib.Topology.Algebra.Group.Basic
 
 /-!
 # `RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.Translation`
@@ -25,6 +27,8 @@ operators and their interaction with the `C¹_c` graph embedding used to define 
 - `translateL2_toL2` / `translateL2_toL2Grad`: translation commutes with `toL2` / `toL2Grad`.
 - `grad_translate`: the Euclidean gradient commutes with translation.
 -/
+
+@[expose] public section
 
 namespace RellichKondrachov
 namespace Analysis

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.MeanSquare.CanonicalDensity
+module
+
+public import OAI.NumberTheory.DirichletL.MeanSquare.CanonicalDensity
+
+@[expose] public section
 
 namespace OAI
 

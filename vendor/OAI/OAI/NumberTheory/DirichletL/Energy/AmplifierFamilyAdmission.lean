@@ -1,9 +1,13 @@
-import OAI.NumberTheory.DirichletL.Energy.CanonicalAmplifiedUniform
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPowerBudget
-import OAI.NumberTheory.DirichletL.Moments.FirstCommonReferencePower
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedMainError
-import OAI.NumberTheory.DirichletL.Energy.FirstLiveAdmission
-import OAI.NumberTheory.DirichletL.Energy.FirstAnnularAdmission
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalAmplifiedUniform
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPowerBudget
+public import OAI.NumberTheory.DirichletL.Moments.FirstCommonReferencePower
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedMainError
+public import OAI.NumberTheory.DirichletL.Energy.FirstLiveAdmission
+public import OAI.NumberTheory.DirichletL.Energy.FirstAnnularAdmission
+
+@[expose] public section
 
 namespace OAI
 

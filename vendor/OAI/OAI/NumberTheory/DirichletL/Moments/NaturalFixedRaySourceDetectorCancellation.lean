@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDetectorProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDetectorProfile
+
+@[expose] public section
 
 namespace OAI
 

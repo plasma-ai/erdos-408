@@ -1,5 +1,10 @@
-import Erdos821.P5.EndpointShiftCollision
-import Erdos821.P5.LongGrowth
+module
+
+public import Erdos821.P5.EndpointShiftCollision
+public import Erdos821.P5.LongGrowth
+public import Mathlib.Algebra.Ring.IsFormallyReal
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

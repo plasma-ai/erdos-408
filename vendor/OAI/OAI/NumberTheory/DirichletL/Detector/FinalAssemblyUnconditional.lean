@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.CertifiedExistence
-import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyCertifiedBands
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainSlotProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CertifiedExistence
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyCertifiedBands
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainSlotProfile
+
+@[expose] public section
 
 namespace OAI
 

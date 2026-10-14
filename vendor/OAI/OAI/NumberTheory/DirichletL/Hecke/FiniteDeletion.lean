@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.Reciprocal
-import OAI.NumberTheory.DirichletL.Hecke.IdealOperations
-import OAI.NumberTheory.DirichletL.EulerFactors
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Reciprocal
+public import OAI.NumberTheory.DirichletL.Hecke.IdealOperations
+public import OAI.NumberTheory.DirichletL.EulerFactors
+
+@[expose] public section
 
 namespace OAI
 

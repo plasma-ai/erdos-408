@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CompletedReopening
-import OAI.NumberTheory.DirichletL.Descent.ReopenedPriority
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CompletedReopening
+public import OAI.NumberTheory.DirichletL.Descent.ReopenedPriority
+
+@[expose] public section
 
 namespace OAI
 

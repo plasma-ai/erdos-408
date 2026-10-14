@@ -1,6 +1,12 @@
-import Erdos821.Blueprint.Classical
+module
+
+public import Erdos821.Blueprint.Classical
+public import Mathlib.Data.Nat.Squarefree
 
 /-! P7: geometric slot lists, their literal coefficient and uniform candidate bounds. -/
+
+@[expose] public section
+
 noncomputable section
 open scoped BigOperators ContDiff
 open Filter

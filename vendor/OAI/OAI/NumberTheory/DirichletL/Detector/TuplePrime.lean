@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.TupleRows
-import OAI.NumberTheory.DirichletL.Detector.CompensationActual
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.TupleRows
+public import OAI.NumberTheory.DirichletL.Detector.CompensationActual
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,11 +1,15 @@
-import Erdos821.P5MarkedEnergy.ThreeRange
-import Erdos821.P5MarkedEnergy.Collapse
-import Erdos821.P5.SparseTheorem
-import Erdos821.Classical.DirichletMean
+module
+
+public import Erdos821.P5MarkedEnergy.ThreeRange
+public import Erdos821.P5MarkedEnergy.Collapse
+public import Erdos821.P5.SparseTheorem
+public import Erdos821.Classical.DirichletMean
 
 /-! The three-range estimate for one box of four dyadic polynomials, with the
 mean square for the complementary product and the sparse residual mean square
 on the exceptional unit intervals made explicit. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,8 +1,12 @@
-import Erdos821.P4Cancel.Symmetrize
-import Erdos821.P4Probe.RowBridge
-import Erdos821.P4Probe.ProbeContraction
-import Erdos821.P4Probe.RawTailPairing
-import Erdos821.P4Probe.PairingSums
+module
+
+public import Erdos821.P4Cancel.Symmetrize
+public import Erdos821.P4Probe.RowBridge
+public import Erdos821.P4Probe.ProbeContraction
+public import Erdos821.P4Probe.RawTailPairing
+public import Erdos821.P4Probe.PairingSums
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

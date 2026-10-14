@@ -1,5 +1,9 @@
-import Erdos821.P4Probe.PatternBridgeTasks
-import Erdos821.P4Probe.AverageOrthogonality
+module
+
+public import Erdos821.P4Probe.PatternBridgeTasks
+public import Erdos821.P4Probe.AverageOrthogonality
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

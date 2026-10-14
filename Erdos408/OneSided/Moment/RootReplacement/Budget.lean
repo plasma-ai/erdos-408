@@ -1,5 +1,7 @@
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
-import Mathlib.Analysis.SpecialFunctions.Stirling
+module
+
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+public import Mathlib.Analysis.SpecialFunctions.Stirling
 
 /-!
 # The final budget
@@ -20,6 +22,8 @@ term. The proofs write every power of `L` as a power of `ℓ = L^{1/100}` (`budg
 `budget_discrepancy`, `budget_boundary`, `budget_faces` bound each term by `exp(-ℓ^76) / 4`), and
 all exponent comparisons follow from `ℓ` exceeding a constant depending on `K` and `C₀`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

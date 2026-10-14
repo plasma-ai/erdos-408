@@ -1,4 +1,8 @@
-import Erdos821.P5Mellin.DerivativeTransfer
+module
+
+public import Erdos821.P5Mellin.DerivativeTransfer
+
+@[expose] public section
 
 namespace Erdos821.P5Mellin
 

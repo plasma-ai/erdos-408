@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Arithmetic.LatticeCount
+module
+
+public import OAI.NumberTheory.DirichletL.Arithmetic.LatticeCount
+
+@[expose] public section
 
 namespace OAI
 

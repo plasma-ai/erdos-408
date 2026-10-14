@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.LogDyadic
-import OAI.NumberTheory.DirichletL.Moments.SecondSectorRetained
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.LogDyadic
+public import OAI.NumberTheory.DirichletL.Moments.SecondSectorRetained
+
+@[expose] public section
 
 namespace OAI
 

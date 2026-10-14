@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.Row
-import OAI.NumberTheory.DirichletL.Detector.PhysicalCoefficient
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.Row
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalCoefficient
+
+@[expose] public section
 
 namespace OAI
 

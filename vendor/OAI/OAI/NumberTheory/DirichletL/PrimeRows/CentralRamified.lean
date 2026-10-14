@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralRamifiedQuotient
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralRamifiedQuotient
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedBounds
+
+@[expose] public section
 
 namespace OAI
 

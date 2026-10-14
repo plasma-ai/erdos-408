@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.MarkedFiber
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedFiber
+
+@[expose] public section
 
 namespace OAI
 

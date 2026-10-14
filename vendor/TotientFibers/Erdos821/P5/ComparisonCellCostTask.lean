@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparisonRowExpansion
-import Erdos821.P5.PatternCosts
+module
+
+public import Erdos821.P5.ComparisonRowExpansion
+public import Erdos821.P5.PatternCosts
+
+@[expose] public section
 
 noncomputable section
 

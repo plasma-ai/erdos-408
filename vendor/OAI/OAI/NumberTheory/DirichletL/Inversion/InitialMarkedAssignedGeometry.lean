@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceProducts
-import OAI.NumberTheory.DirichletL.Inversion.InitialQuotientGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceProducts
+public import OAI.NumberTheory.DirichletL.Inversion.InitialQuotientGeometry
+
+@[expose] public section
 
 namespace OAI
 

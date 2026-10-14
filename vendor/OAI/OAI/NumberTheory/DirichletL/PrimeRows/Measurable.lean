@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.WeightedTuple
-import Mathlib.MeasureTheory.Constructions.Polish.Basic
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.WeightedTuple
+public import Mathlib.MeasureTheory.Constructions.Polish.Basic
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongUniformTestBin
-import OAI.NumberTheory.DirichletL.Descent.CanonicalReopeningHeight
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongUniformTestBin
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalReopeningHeight
+
+@[expose] public section
 
 namespace OAI
 

@@ -4,12 +4,14 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
 
-import Mathlib.Analysis.Calculus.ContDiff.Operations
-import Mathlib.Analysis.Calculus.FDeriv.Const
-import Mathlib.Analysis.InnerProductSpace.Dual
-import Mathlib.MeasureTheory.Function.LpSpace.Complete
-import Mathlib.MeasureTheory.Function.LpSpace.Indicator
-import Mathlib.Topology.Algebra.Support
+module
+
+public import Mathlib.Analysis.Calculus.ContDiff.Operations
+public import Mathlib.Analysis.Calculus.FDeriv.Const
+public import Mathlib.Analysis.InnerProductSpace.Dual
+public import Mathlib.MeasureTheory.Function.LpSpace.Complete
+public import Mathlib.MeasureTheory.Function.LpSpace.Indicator
+public import Mathlib.Topology.Algebra.Support
 
 /-!
 # `RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.H1`
@@ -40,6 +42,8 @@ compact support and their gradients (expressed using the Riesz representation `t
 No analytic “Sobolev theorems” are proved here; those are tracked separately (Rellich / elliptic
 regularity beads).
 -/
+
+@[expose] public section
 
 namespace RellichKondrachov
 namespace Analysis

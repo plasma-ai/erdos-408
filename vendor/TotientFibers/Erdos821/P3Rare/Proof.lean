@@ -1,4 +1,8 @@
-import Erdos821.P3Rare.Sectors
+module
+
+public import Erdos821.P3Rare.Sectors
+
+@[expose] public section
 
 set_option autoImplicit false
 

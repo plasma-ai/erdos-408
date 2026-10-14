@@ -1,6 +1,8 @@
-import Mathlib.Algebra.BigOperators.Intervals
-import Mathlib.Algebra.Order.BigOperators.Ring.Finset
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Intervals
+public import Mathlib.Algebra.Order.BigOperators.Ring.Finset
+public import Mathlib.Basic.Real.Basic
 
 /-!
 # The lifespan values of one prime
@@ -35,6 +37,8 @@ At `t = 0` the unborn and active values are `c ∑_ℓ Λ_0(ℓ)` and `∑_ℓ �
 averages of PD `mem:prime-factor`; after the last ghost, a pending prime has value `0` and
 every other prime value `1`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedAllowance
-import OAI.NumberTheory.DirichletL.Moments.CommonRadiusSaving
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedAllowance
+public import OAI.NumberTheory.DirichletL.Moments.CommonRadiusSaving
+
+@[expose] public section
 
 namespace OAI
 

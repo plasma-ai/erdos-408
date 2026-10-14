@@ -1,7 +1,11 @@
-import Erdos821.P4Frame.Frame
-import Erdos821.S34.FrameTasks
-import Erdos821.S34.CellSup
-import Erdos821.S34.OwnedLeafProofs
+module
+
+public import Erdos821.P4Frame.Frame
+public import Erdos821.S34.FrameTasks
+public import Erdos821.S34.CellSup
+public import Erdos821.S34.OwnedLeafProofs
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

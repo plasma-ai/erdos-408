@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.WholePriorityRays
-import OAI.NumberTheory.DirichletL.Descent.WholePriorityPrincipal
-import OAI.NumberTheory.DirichletL.Inversion.WholePriorityRapidTail
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.WholePriorityRays
+public import OAI.NumberTheory.DirichletL.Descent.WholePriorityPrincipal
+public import OAI.NumberTheory.DirichletL.Inversion.WholePriorityRapidTail
+
+@[expose] public section
 
 namespace OAI
 

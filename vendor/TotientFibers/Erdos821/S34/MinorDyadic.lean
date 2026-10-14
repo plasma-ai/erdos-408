@@ -1,6 +1,10 @@
-import Erdos821.S34.TupleBilinear
-import Erdos821.S34.KernelDyadicSupport
-import Erdos821.S34.KernelReindex
+module
+
+public import Erdos821.S34.TupleBilinear
+public import Erdos821.S34.KernelDyadicSupport
+public import Erdos821.S34.KernelReindex
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

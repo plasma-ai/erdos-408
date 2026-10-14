@@ -1,7 +1,11 @@
-import Erdos821.P5Energy.Schur
+module
+
+public import Erdos821.P5Energy.Schur
 
 /-! Replacing the additive kernel `K((n-v)/H)` by the dilation kernel `K(v log(n/v)/H)`
 on the range `Y/2 ≤ v ≤ 5Y/2`: support, Lipschitz error, counting and integration. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ContDiff

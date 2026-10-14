@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.UniformDivisorShell
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.UniformDivisorShell
+
+@[expose] public section
 
 namespace OAI
 

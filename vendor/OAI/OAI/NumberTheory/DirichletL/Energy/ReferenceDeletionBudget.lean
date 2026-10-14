@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonMaskExpansion
-import OAI.NumberTheory.DirichletL.Hecke.DeletionBounds
-import OAI.NumberTheory.DirichletL.Moments.LiveCapacity
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonMaskExpansion
+public import OAI.NumberTheory.DirichletL.Hecke.DeletionBounds
+public import OAI.NumberTheory.DirichletL.Moments.LiveCapacity
+
+@[expose] public section
 
 namespace OAI
 

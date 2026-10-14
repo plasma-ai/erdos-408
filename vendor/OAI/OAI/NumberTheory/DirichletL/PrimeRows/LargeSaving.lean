@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.LargeTail
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.LargeTail
+
+@[expose] public section
 
 namespace OAI
 

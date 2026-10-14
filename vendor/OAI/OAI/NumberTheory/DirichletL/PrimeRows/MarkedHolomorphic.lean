@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.MarkedContinuation
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedHolomorphic
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.MarkedContinuation
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedHolomorphic
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceDeleted
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedUniform
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceShift
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceDeleted
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedUniform
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceShift
+
+@[expose] public section
 
 namespace OAI
 

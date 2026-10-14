@@ -1,6 +1,10 @@
-import Erdos821.S2.SpanCoefficients
+module
+
+public import Erdos821.S2.SpanCoefficients
 
 /-! The original small and big mark normalizations split without extra charges. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

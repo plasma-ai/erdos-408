@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.ReflectedPairEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedPairEnergy
+
+@[expose] public section
 
 namespace OAI
 

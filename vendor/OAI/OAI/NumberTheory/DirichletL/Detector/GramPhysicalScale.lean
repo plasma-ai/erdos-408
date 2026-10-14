@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramMobiusLattice
-import OAI.NumberTheory.DirichletL.Detector.GramNonexceptionalBlock
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramMobiusLattice
+public import OAI.NumberTheory.DirichletL.Detector.GramNonexceptionalBlock
+
+@[expose] public section
 
 namespace OAI
 

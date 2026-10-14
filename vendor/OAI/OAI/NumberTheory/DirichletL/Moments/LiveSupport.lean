@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceLiveColumn
-import OAI.NumberTheory.DirichletL.Moments.SourceCommonMask
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceLiveColumn
+public import OAI.NumberTheory.DirichletL.Moments.SourceCommonMask
+
+@[expose] public section
 
 namespace OAI
 

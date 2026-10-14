@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DyadicCentralBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicCentralBudget
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.SquarefreeTransfer
-import OAI.NumberTheory.DirichletL.CubicSieve.CubeBlocks
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.SquarefreeTransfer
+public import OAI.NumberTheory.DirichletL.CubicSieve.CubeBlocks
+
+@[expose] public section
 
 namespace OAI
 

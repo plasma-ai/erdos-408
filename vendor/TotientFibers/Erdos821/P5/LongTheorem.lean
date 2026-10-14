@@ -1,6 +1,10 @@
-import Erdos821.P5.LongRoughReduction
-import Erdos821.P5.LongScales
-import Erdos821.P5.LongFrequency
+module
+
+public import Erdos821.P5.LongRoughReduction
+public import Erdos821.P5.LongScales
+public import Erdos821.P5.LongFrequency
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

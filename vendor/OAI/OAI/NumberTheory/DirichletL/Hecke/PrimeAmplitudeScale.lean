@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeAmplitudeBins
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeAmplitudeBins
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicGeometry
+
+@[expose] public section
 
 namespace OAI
 

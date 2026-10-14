@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.MarkedActiveSets
-import OAI.NumberTheory.DirichletL.Reflection.MarkedLevel
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedActiveSets
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedLevel
+
+@[expose] public section
 
 namespace OAI
 

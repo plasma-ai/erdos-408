@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.IntegralCover
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.IntegralCover
+
+@[expose] public section
 
 namespace OAI
 

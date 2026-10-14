@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.OriginalSource
-import OAI.NumberTheory.DirichletL.Energy.Bands
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.OriginalSource
+public import OAI.NumberTheory.DirichletL.Energy.Bands
+
+@[expose] public section
 
 namespace OAI
 

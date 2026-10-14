@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.SpectralCompensation
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SpectralCompensation
+
+@[expose] public section
 
 namespace OAI
 

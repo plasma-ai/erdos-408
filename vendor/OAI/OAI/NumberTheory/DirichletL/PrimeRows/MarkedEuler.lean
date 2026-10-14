@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.MarkedEuler
-import OAI.NumberTheory.DirichletL.Detector.HighRowsLocal
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.MarkedEuler
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsLocal
+
+@[expose] public section
 
 namespace OAI
 

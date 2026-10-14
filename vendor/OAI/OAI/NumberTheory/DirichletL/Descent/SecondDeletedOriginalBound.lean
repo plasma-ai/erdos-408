@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondModeIntegral
-import OAI.NumberTheory.DirichletL.Descent.SecondDeletedModeEnergy
-import OAI.NumberTheory.DirichletL.Descent.SecondWholeMass
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondModeIntegral
+public import OAI.NumberTheory.DirichletL.Descent.SecondDeletedModeEnergy
+public import OAI.NumberTheory.DirichletL.Descent.SecondWholeMass
+
+@[expose] public section
 
 namespace OAI
 

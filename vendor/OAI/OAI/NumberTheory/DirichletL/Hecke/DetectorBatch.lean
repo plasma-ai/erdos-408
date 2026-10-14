@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorFiberPartition
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorFiberPartition
+
+@[expose] public section
 
 namespace OAI
 

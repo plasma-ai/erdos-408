@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.MeanSquare.ThetaDensity
+module
+
+public import OAI.NumberTheory.DirichletL.MeanSquare.ThetaDensity
+
+@[expose] public section
 
 namespace OAI
 

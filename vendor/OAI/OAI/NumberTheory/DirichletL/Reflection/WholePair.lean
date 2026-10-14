@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.SectorCover
-import OAI.NumberTheory.DirichletL.Reflection.WholeRow
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.SectorCover
+public import OAI.NumberTheory.DirichletL.Reflection.WholeRow
+
+@[expose] public section
 
 namespace OAI
 

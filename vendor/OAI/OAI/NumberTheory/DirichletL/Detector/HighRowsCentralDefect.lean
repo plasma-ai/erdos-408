@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralBase
-import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralEntry
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralBase
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralEntry
+
+@[expose] public section
 
 namespace OAI
 

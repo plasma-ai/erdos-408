@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowPeriod
-import OAI.NumberTheory.DirichletL.Detector.CalibrationSupport
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowPeriod
+public import OAI.NumberTheory.DirichletL.Detector.CalibrationSupport
+
+@[expose] public section
 
 namespace OAI
 

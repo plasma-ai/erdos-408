@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondReducedPredicate
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondReducedPredicate
+
+@[expose] public section
 
 namespace OAI
 

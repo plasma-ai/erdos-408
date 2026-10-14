@@ -1,6 +1,10 @@
-import Erdos821.P5.EndpointBounds
-import Erdos821.P5.RoughDivisorTask
-import Erdos821.P5Div.Basic
+module
+
+public import Erdos821.P5.EndpointBounds
+public import Erdos821.P5.RoughDivisorTask
+public import Erdos821.P5Div.Basic
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

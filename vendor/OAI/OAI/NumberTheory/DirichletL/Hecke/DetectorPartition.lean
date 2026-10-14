@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorWitnessArithmetic
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorWitnessArithmetic
+
+@[expose] public section
 
 namespace OAI
 

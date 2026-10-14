@@ -1,5 +1,9 @@
-import Erdos821.P4Bridge.Sites
-import Erdos821.P4Bridge.Support
+module
+
+public import Erdos821.P4Bridge.Sites
+public import Erdos821.P4Bridge.Support
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

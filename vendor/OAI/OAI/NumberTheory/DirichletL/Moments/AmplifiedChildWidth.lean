@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationRadicalChoice
-import OAI.NumberTheory.DirichletL.Moments.SecondChildRadialWidth
-import OAI.NumberTheory.DirichletL.Moments.CommonRadiusSaving
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalLedger
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationRadicalChoice
+public import OAI.NumberTheory.DirichletL.Moments.SecondChildRadialWidth
+public import OAI.NumberTheory.DirichletL.Moments.CommonRadiusSaving
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalLedger
+
+@[expose] public section
 
 namespace OAI
 

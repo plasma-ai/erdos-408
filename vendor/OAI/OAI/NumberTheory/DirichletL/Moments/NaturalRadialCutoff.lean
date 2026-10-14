@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.OriginalRadialTail
-import OAI.NumberTheory.DirichletL.Moments.NaturalRowSourceFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.OriginalRadialTail
+public import OAI.NumberTheory.DirichletL.Moments.NaturalRowSourceFamily
+
+@[expose] public section
 
 namespace OAI
 

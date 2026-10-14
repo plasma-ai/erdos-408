@@ -1,4 +1,8 @@
-import Erdos821.P5.CollisionLog
+module
+
+public import Erdos821.P5.CollisionLog
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

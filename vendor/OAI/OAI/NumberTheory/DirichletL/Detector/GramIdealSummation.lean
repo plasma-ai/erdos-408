@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Foundation
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthSource
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthSource
+
+@[expose] public section
 
 namespace OAI
 

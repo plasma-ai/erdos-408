@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.Split
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Split
+
+@[expose] public section
 
 namespace OAI
 

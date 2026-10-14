@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstLiveCaps
-import OAI.NumberTheory.DirichletL.Inversion.FirstGlobalCaps
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstLiveCaps
+public import OAI.NumberTheory.DirichletL.Inversion.FirstGlobalCaps
+
+@[expose] public section
 
 namespace OAI
 

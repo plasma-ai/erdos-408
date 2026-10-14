@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceBlockWindows
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceBlockWindows
+
+@[expose] public section
 
 namespace OAI
 

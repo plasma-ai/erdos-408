@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramCommonLinear
-import OAI.NumberTheory.DirichletL.Moments.Canonical
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramCommonLinear
+public import OAI.NumberTheory.DirichletL.Moments.Canonical
+
+@[expose] public section
 
 namespace OAI
 

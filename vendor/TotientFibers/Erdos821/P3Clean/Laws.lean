@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.Structure
+module
+
+public import Erdos821.P3Clean.Structure
 
 /-! Probability normalization of the original auxiliary laws. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

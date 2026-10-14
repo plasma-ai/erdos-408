@@ -1,9 +1,13 @@
-import Mathlib.Analysis.MellinTransform
-import Mathlib.Analysis.Complex.HalfPlane
-import Mathlib.Analysis.Complex.Convex
-import Mathlib.Analysis.Complex.CauchyIntegral
-import Mathlib.Analysis.Analytic.Uniqueness
-import OAI.NumberTheory.DirichletL.Supremum
+module
+
+public import Mathlib.Analysis.MellinTransform
+public import Mathlib.Analysis.Complex.HalfPlane
+public import Mathlib.Analysis.Complex.Convex
+public import Mathlib.Analysis.Complex.CauchyIntegral
+public import Mathlib.Analysis.Analytic.Uniqueness
+public import OAI.NumberTheory.DirichletL.Supremum
+
+@[expose] public section
 
 namespace OAI
 

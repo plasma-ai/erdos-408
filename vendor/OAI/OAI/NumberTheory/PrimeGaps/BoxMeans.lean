@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.SingularTails
+module
+
+public import OAI.NumberTheory.PrimeGaps.SingularTails
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowGaussianRemote
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowGaussianRemote
+
+@[expose] public section
 
 namespace OAI
 

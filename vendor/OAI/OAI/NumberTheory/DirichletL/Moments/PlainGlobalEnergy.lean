@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.PlainGlobalActual
-import OAI.NumberTheory.DirichletL.Moments.CoreFloor
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionary
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PlainGlobalActual
+public import OAI.NumberTheory.DirichletL.Moments.CoreFloor
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionary
+
+@[expose] public section
 
 namespace OAI
 

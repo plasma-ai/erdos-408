@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.GaussSum.ActiveConductor
-import OAI.NumberTheory.DirichletL.GaussSum.CubicTrace
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.ActiveConductor
+public import OAI.NumberTheory.DirichletL.GaussSum.CubicTrace
+
+@[expose] public section
 
 namespace OAI
 

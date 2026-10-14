@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Goodness.BadCount
-import Erdos408.OneSided.Goodness.Targets
-import Erdos408.OneSided.Decomposition.Eventually
-import Erdos408.OneSided.Pairing
+module
+
+public import Erdos408.OneSided.Goodness.BadCount
+public import Erdos408.OneSided.Goodness.Targets
+public import Erdos408.OneSided.Decomposition.Eventually
+public import Erdos408.OneSided.Pairing
 
 /-!
 # The bad mass
@@ -24,6 +26,8 @@ absolute row mass of `𝒯` on pairs with a bad source or a bad target is at mos
 * The errors are `exp(O(L^{1/2})) UV min(U, V)^{-1/5}`, negligible since
   `min(U, V) ≥ x^γ ≥ exp(L^{0.99})`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 
@@ -1130,7 +1134,6 @@ theorem add_le_mul_pow (C₁ : ℝ) {t : ℝ} (ht : 1 ≤ t) :
   rw [h₂]
   linarith [mul_le_mul_of_nonneg_left h₁ (by norm_num : (0 : ℝ) ≤ 19)]
 
-set_option maxHeartbeats 1000000 in
 open scoped Classical in
 /-- **The bad mass** (`eventually_badMass_le` with `badMass` unfolded): the absolute row mass of
 `𝒯` on pairs with a bad source or a bad target is at most `C₀ UV L^{3A₀} exp(-L^{a₋}/8)`,
@@ -1307,10 +1310,12 @@ theorem eventually_stateMass_mul_sum_le {q C CX alo ahi g : ℝ} (hq : 0 < q) (h
   have hĒ : ∀ z G' N : ℝ, |z| ≤ 8 * t ^ 8 → 0 ≤ G' → G' ≤ t ^ 8 → 0 ≤ N → N ≤ 6 * t ^ 17 →
       3 * |z| * (C₁ * U * V * G' ^ 4 * μ ^ (-(1 / 5 : ℝ)) + (16 * U + V + 2)) * N ≤ Ē :=
     fun z G' N hz hG0 hG hN0 hN =>
-      err_total_le (by linarith) (by linarith) hC₁ ht1 hz hG0 hG hN0 hN
+      err_total_le (one_le_two.trans hU2) (one_le_two.trans hV2) hC₁ ht1 hz hG0 hG hN0 hN
   have hz8 : 8 * d₀ * Y ≤ 8 * t ^ 8 := by
     have := mul_le_mul hd₀t hYt hY0.le (by positivity)
-    nlinarith
+    calc 8 * d₀ * Y = 8 * (d₀ * Y) := by ring
+      _ ≤ 8 * (t ^ 4 * t ^ 4) := by linarith
+      _ = 8 * t ^ 8 := by ring
   have hGt : ∀ p ∈ lists x d (padCount x), (listProd p : ℝ) ≤ t ^ 4 := fun p hp =>
     (listProd_le_exp' hd hahi hL hp).trans hexp4.le
   have hlast : ∀ p ∈ lists x d (padCount x), (lastProd p : ℝ) ≤ t ^ 4 := by
@@ -1359,7 +1364,8 @@ theorem eventually_stateMass_mul_sum_le {q C CX alo ahi g : ℝ} (hq : 0 < q) (h
     push_cast
     refine sum_le_sum fun p hp => (card_bad_dvd_le hC₁ hCB hB hdisj hU2 hV2 hp).trans
       (add_le_add le_rfl ?_)
-    have := hĒ 1 (listProd p) (badIntervals x d Y p) (by rw [abs_one]; nlinarith)
+    have := hĒ 1 (listProd p) (badIntervals x d Y p)
+      (by rw [abs_one]; linarith [one_le_pow₀ (n := 8) ht1])
       (Nat.cast_nonneg _) ((hGt p hp).trans ht4) (badIntervals_nonneg _ _ _ _) (hNt p hp)
     rwa [abs_one, mul_one] at this
   have hCS : CS ≤ nb * (17 * (10 * Y + 1) * Λn) := by
@@ -1383,25 +1389,25 @@ theorem eventually_stateMass_mul_sum_le {q C CX alo ahi g : ℝ} (hq : 0 < q) (h
   have hPmt : Pm ≤ t ^ 11 := by
     have h₁ : m * W ≤ t ^ 3 := by
       rw [hmW]
-      exact (pow_le_pow_left₀ (by linarith) hWK _).trans (two_pow_pow_le hL)
+      exact (pow_le_pow_left₀ (zero_le_one.trans hW1) hWK _).trans (two_pow_pow_le hL)
     have h₂ : nL ^ 2 ≤ (t ^ 4) ^ 2 := pow_le_pow_left₀ (Nat.cast_nonneg _) hnLt 2
     calc Pm ≤ t ^ 3 * (t ^ 4) ^ 2 :=
-          mul_le_mul h₁ h₂ (by positivity) (by positivity)
+          mul_le_mul h₁ h₂ (sq_nonneg _) (by positivity)
       _ = t ^ 11 := by ring
-  have hPm0 : 0 ≤ Pm := by positivity
+  have hPm0 : 0 ≤ Pm := mul_nonneg (mul_nonneg hm0 (zero_le_one.trans hW1)) (sq_nonneg _)
   have hmnL : m * nL ≤ Pm := by
     have h₁ : nL ≤ nL ^ 2 := natCast_le_sq _
     calc m * nL = m * 1 * nL := by ring
       _ ≤ m * W * nL ^ 2 :=
           mul_le_mul (mul_le_mul_of_nonneg_left hW1 hm0) h₁ (Nat.cast_nonneg _)
-            (mul_nonneg hm0 (by linarith))
+            (mul_nonneg hm0 (zero_le_one.trans hW1))
   have hfiltc : (filt.card : ℝ) ≤ nL ^ 2 := by
     have := card_filter_le (lists x d (padCount x) ×ˢ lists x d (padCount x))
       (fun pp => ListEdge Y d₀ pp.1 pp.2)
     rw [card_product] at this
     rw [hnL, sq]
     exact_mod_cast this
-  have hmW0 : 0 ≤ m * W := mul_nonneg hm0 (by linarith)
+  have hmW0 : 0 ≤ m * W := mul_nonneg hm0 (zero_le_one.trans hW1)
   have hRS' : m * W * RS ≤ 1530 * (U * V) * ε + 17 * Pm * Ē := by
     have hmass := mass_mul_sum_inv_le hbm0 Y d₀
     rw [← hW_def, ← hm_def] at hmass
@@ -1479,11 +1485,11 @@ theorem eventually_stateMass_mul_sum_le {q C CX alo ahi g : ℝ} (hq : 0 < q) (h
       rwa [Real.log_exp] at this
     have hHmx : d.Hm ≤ CX * x := by
       have h₁ := hd.X_le
-      have h₂ : d.Hm * 1 ≤ d.Hm * d.Hn := mul_le_mul_of_nonneg_left (by linarith) hHm0.le
+      have h₂ : d.Hm * 1 ≤ d.Hm * d.Hn := mul_le_mul_of_nonneg_left (one_le_two.trans hV2) hHm0.le
       linarith
     have hlogHm : Real.log d.Hm ≤ Real.log CX + L := by
       have := Real.log_le_log hHm0 hHmx
-      rwa [Real.log_mul (by linarith) (by linarith)] at this
+      rwa [Real.log_mul (one_pos.trans_le hCX).ne' (one_pos.trans_le hx1).ne'] at this
     have hlog16U : Real.log (16 * U) = Real.log 16 + Real.log d₀ + Real.log Y + Real.log d.Hm := by
       simp only [hU_def]
       rw [Real.log_mul (by positivity) (by positivity),
@@ -1564,8 +1570,8 @@ theorem eventually_stateMass_mul_sum_le {q C CX alo ahi g : ℝ} (hq : 0 < q) (h
           ‖rowOp q A₀ x d Y d₀ s s'‖
       ≤ m * (W * (RS + RT) + W * κ * (CS + CT)) := mul_le_mul_of_nonneg_left hstep hm0
     _ ≤ (3094 + 2 ^ (K + 1) * 748 * 91) * (U * V) * L ^ (3 * A₀) * e₈ :=
-        badMass_final_combine hm0 (by linarith) hWK hY1 (by positivity) (by positivity) hPm0 hĒ0
-          hnb0
+        badMass_final_combine hm0 (zero_le_one.trans hW1) hWK hY1 (by positivity) (by positivity)
+          hPm0 hĒ0 hnb0
           hRS' hRT' hCS hCT hnb' hΛ0 hΛ hPĒ (Real.exp_pos _).le hεA hTA hΛε hΛT
 
 end Erdos408.OneSided

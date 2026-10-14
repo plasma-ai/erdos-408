@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.BranchCount
-import OAI.NumberTheory.DirichletL.Reflection.TruncatedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.BranchCount
+public import OAI.NumberTheory.DirichletL.Reflection.TruncatedSource
+
+@[expose] public section
 
 namespace OAI
 

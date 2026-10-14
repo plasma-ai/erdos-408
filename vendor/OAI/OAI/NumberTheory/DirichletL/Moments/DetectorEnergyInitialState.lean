@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Energy.State
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainFiberSource
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFixedIdeal
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformTests
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.State
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainFiberSource
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFixedIdeal
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformTests
+
+@[expose] public section
 
 namespace OAI
 

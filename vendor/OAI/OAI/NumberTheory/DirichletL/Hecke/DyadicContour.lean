@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DyadicMellin
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicMellin
+
+@[expose] public section
 
 namespace OAI
 

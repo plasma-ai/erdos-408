@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.IdealOperations
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.IdealOperations
+
+@[expose] public section
 
 namespace OAI
 

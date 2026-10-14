@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.OriginalChosen
-import OAI.NumberTheory.DirichletL.Reflection.MarkedChosenDual
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalChosen
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedChosenDual
+
+@[expose] public section
 
 namespace OAI
 

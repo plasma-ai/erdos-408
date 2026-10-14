@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.DyadicColumns
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.DyadicColumns
+
+@[expose] public section
 
 namespace OAI
 

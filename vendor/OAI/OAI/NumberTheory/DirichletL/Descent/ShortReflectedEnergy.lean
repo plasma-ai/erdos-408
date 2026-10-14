@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ShortCompletionEnergy
-import OAI.NumberTheory.DirichletL.Reflection.CubeCompletedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ShortCompletionEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.CubeCompletedEnergy
+
+@[expose] public section
 
 namespace OAI
 

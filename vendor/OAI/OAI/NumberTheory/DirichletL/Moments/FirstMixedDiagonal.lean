@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedExceptionalCap
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedExceptionalCap
+
+@[expose] public section
 
 namespace OAI
 

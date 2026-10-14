@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalPrincipalMass
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPrincipalMass
+
+@[expose] public section
 
 namespace OAI
 

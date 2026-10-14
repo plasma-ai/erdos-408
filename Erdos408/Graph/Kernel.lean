@@ -1,4 +1,9 @@
-import Erdos408.Graph.Pattern
+module
+
+public import Erdos408.Graph.Pattern
+public import Mathlib.Analysis.Complex.Polynomial.Basic
+public import Mathlib.NumberTheory.DirichletCharacter.Bounds
+public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 /-!
 # The comparison kernels as cell-character sums
@@ -14,6 +19,8 @@ source labels in `B`. Each `selectedKernel` is
 `Q²` characters (`card_primitiveCharacters_le`), and a cell of log-width
 `h ≤ 1` lies in `[U, eU]` (`mem_cell`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.Graph
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.CorrespondenceEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.CorrespondenceEnergy
+
+@[expose] public section
 
 namespace OAI
 

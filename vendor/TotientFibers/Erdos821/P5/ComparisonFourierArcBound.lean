@@ -1,5 +1,9 @@
-import Erdos821.P5.SmoothComparisonFourier
-import Erdos821.P5.RationalArcCenters
+module
+
+public import Erdos821.P5.SmoothComparisonFourier
+public import Erdos821.P5.RationalArcCenters
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

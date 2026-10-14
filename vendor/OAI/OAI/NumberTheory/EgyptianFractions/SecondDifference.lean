@@ -1,4 +1,14 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.Calculus.Darboux
+public import Mathlib.Analysis.Calculus.Deriv.MeanValue
+public import Mathlib.Analysis.Calculus.Deriv.Shift
+public import Mathlib.Analysis.InnerProductSpace.Basic
+public import Mathlib.Analysis.LocallyConvex.AbsConvexOpen
+public import Mathlib.Topology.Algebra.Module.ModuleTopology
+
+@[expose] public section
 
 namespace OAI
 open Set

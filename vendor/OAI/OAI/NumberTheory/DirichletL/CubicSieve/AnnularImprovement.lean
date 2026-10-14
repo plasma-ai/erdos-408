@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.CostGrowth
-import OAI.NumberTheory.DirichletL.CubicSieve.ColumnShells
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.CostGrowth
+public import OAI.NumberTheory.DirichletL.CubicSieve.ColumnShells
+
+@[expose] public section
 
 namespace OAI
 

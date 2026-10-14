@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondAllModes
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondAllModes
+
+@[expose] public section
 
 namespace OAI
 

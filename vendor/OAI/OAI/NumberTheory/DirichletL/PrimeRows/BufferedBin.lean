@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.DetectorBins
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.DetectorBins
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.Chain.Induction
+module
+
+public import Erdos408.OneSided.Moment.Chain.Induction
 
 /-!
 # The memory identity S3
@@ -17,6 +19,8 @@ from its lists with the lifespan product. At `t = 0` an initial label has value
 measure `∏ ν(act) = σ ∏_{p listed} c_p` supplies the missing `c_p`, and
 `b'_p c_p ∑_ℓ Λ_0(ℓ) = primeFactor_p` (`initial_weight_eq`).
 -/
+
+@[expose] public section
 
 noncomputable section
 

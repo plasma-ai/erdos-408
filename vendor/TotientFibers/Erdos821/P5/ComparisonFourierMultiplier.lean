@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparisonMinorArcAdapterTask
-import Erdos821.P5.ComparisonMellinAlgebra
+module
+
+public import Erdos821.P5.ComparisonMinorArcAdapterTask
+public import Erdos821.P5.ComparisonMellinAlgebra
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

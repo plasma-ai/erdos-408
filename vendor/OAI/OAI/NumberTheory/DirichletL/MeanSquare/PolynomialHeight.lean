@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.PolynomialHeight
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.PolynomialHeight
+
+@[expose] public section
 
 namespace OAI
 

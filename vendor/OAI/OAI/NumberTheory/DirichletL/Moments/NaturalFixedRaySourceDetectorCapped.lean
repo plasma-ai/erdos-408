@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDetectorSlots
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalCappedAmplitude
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDetectorSlots
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalCappedAmplitude
+
+@[expose] public section
 
 namespace OAI
 

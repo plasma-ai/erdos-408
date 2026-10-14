@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformHeight
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRowwise
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformHeight
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRowwise
+
+@[expose] public section
 
 namespace OAI
 

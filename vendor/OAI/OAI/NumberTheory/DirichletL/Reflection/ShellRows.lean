@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.ShellDomains
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.ShellDomains
+
+@[expose] public section
 
 namespace OAI
 

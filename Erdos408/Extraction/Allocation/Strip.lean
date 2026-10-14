@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Defs
-import Mathlib.Algebra.Order.Antidiag.Nat
+module
+
+public import Erdos408.Extraction.Defs
+public import Mathlib.Algebra.Order.Antidiag.Nat
 
 /-!
 # The allocation identity
@@ -18,6 +20,8 @@ where `G_j(v) = ∑_{e₁ ⋯ e_j = v̄} ∏ b(e_i)` is the core. The allocation
 factor `d_j(v_P) j^{-Ω_P(v)}` lies in `[0, 1]` and is exactly `1` off the
 candidate-square multiples, since then `d_j(v_P) = j^{ω(v_P)} = j^{Ω_P(v)}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

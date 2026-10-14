@@ -1,8 +1,10 @@
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Data.Fintype.Pi
-import Mathlib.Data.Nat.Factorial.Basic
-import Mathlib.Algebra.Order.BigOperators.Ring.Finset
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Data.Fintype.Pi
+public import Mathlib.Data.Nat.Factorial.Basic
+public import Mathlib.Algebra.Order.BigOperators.Ring.Finset
+public import Mathlib.Basic.Real.Basic
 
 /-!
 # The memory space
@@ -21,6 +23,8 @@ So the memory space is `ℓ²` of the multiplicity functions `S : X → ℕ`, we
 Particles of all groups share one type `X`; the group of a particle is determined by its
 prime, since the bands are disjoint.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

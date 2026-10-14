@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredStep
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredAggregateUniform
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredAggregate
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFullAggregate
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredStep
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredAggregateUniform
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredAggregate
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFullAggregate
+
+@[expose] public section
 
 namespace OAI
 

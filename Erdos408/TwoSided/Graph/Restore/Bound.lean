@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Graph.Restore.Clean
+module
+
+public import Erdos408.TwoSided.Graph.Restore.Clean
 
 /-!
 # Absolute bounds on the summands
@@ -10,6 +12,8 @@ correlation, summed over the unshared parts `l, l'`, are at most
 resp. `w, w + D_C`). Here `T = ∏_g V_g^{-t_g}` and `Λ(n) = q₀^{ω(n) - M s} · #lists(n)` keeps
 each damping with its list count (`listWeight`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

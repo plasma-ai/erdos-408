@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondEnergySplit
-import OAI.NumberTheory.DirichletL.Moments.SecondBlockRadicalHarmonicMass
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalAmplitudePair
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondEnergySplit
+public import OAI.NumberTheory.DirichletL.Moments.SecondBlockRadicalHarmonicMass
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalAmplitudePair
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,11 @@
-import Erdos821.P5.PartialSummation
-import Erdos821.P5.Tasks
-import Erdos821.Classical.DerivativeTests
+module
+
+public import Erdos821.P5.PartialSummation
+public import Erdos821.P5.Tasks
+public import Erdos821.Classical.DerivativeTests
+public import Mathlib.Algebra.Order.Ring.Star
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

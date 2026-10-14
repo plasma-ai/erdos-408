@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Mellin.ExponentialSmoothing
+module
+
+public import OAI.NumberTheory.DirichletL.Mellin.ExponentialSmoothing
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondMarkedEnergy
-import OAI.NumberTheory.DirichletL.Descent.SecondWeights
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondMarkedEnergy
+public import OAI.NumberTheory.DirichletL.Descent.SecondWeights
+
+@[expose] public section
 
 namespace OAI
 

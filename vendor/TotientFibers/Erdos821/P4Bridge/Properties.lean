@@ -1,4 +1,8 @@
-import Erdos821.P4Bridge.Structure
+module
+
+public import Erdos821.P4Bridge.Structure
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

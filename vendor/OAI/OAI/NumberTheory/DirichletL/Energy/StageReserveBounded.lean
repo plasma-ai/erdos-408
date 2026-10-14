@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.StageReserve
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.StageReserve
+
+@[expose] public section
 
 namespace OAI
 

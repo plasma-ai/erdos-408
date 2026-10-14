@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.RestoreCorrection
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralNormalized
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralRamified
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.RestoreCorrection
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralNormalized
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralRamified
+
+@[expose] public section
 
 namespace OAI
 

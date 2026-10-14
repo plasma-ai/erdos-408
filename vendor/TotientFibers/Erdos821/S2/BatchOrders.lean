@@ -1,7 +1,11 @@
-import Erdos821.S2.SpanHistory
-import Mathlib.Data.List.FinRange
+module
+
+public import Erdos821.S2.SpanHistory
+public import Mathlib.Data.List.FinRange
 
 /-! Ordered ghost batches have permutation fibers with invariant coefficients. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

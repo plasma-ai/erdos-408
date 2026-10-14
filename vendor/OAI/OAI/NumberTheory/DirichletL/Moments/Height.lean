@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.Twist
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Twist
+
+@[expose] public section
 
 namespace OAI
 

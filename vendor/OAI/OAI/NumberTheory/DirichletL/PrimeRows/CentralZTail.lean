@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.UniformError
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.UniformError
+
+@[expose] public section
 
 namespace OAI
 

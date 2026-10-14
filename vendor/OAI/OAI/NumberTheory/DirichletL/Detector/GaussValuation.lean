@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.PrimePower
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PrimePower
+
+@[expose] public section
 
 namespace OAI
 

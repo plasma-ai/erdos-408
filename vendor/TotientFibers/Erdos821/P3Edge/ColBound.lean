@@ -1,5 +1,9 @@
-import Erdos821.P3Edge.BoundedMem
-import Erdos821.P3Edge.RowSummable
+module
+
+public import Erdos821.P3Edge.BoundedMem
+public import Erdos821.P3Edge.RowSummable
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

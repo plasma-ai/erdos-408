@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.BoundaryIntegration
-import OAI.NumberTheory.DirichletL.Hecke.Origin
-import OAI.NumberTheory.DirichletL.IdealLogDerivative
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.BoundaryIntegration
+public import OAI.NumberTheory.DirichletL.Hecke.Origin
+public import OAI.NumberTheory.DirichletL.IdealLogDerivative
+
+@[expose] public section
 
 namespace OAI
 

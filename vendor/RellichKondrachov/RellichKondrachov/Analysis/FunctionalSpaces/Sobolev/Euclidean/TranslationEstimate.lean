@@ -4,11 +4,13 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
 
-import RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.H1
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.ContDiff
-import Mathlib.Analysis.Calculus.Deriv.Comp
-import Mathlib.Analysis.Calculus.Deriv.Mul
-import Mathlib.Analysis.Calculus.Deriv.Add
+module
+
+public import RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.H1
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.ContDiff
+public import Mathlib.Analysis.Calculus.Deriv.Comp
+public import Mathlib.Analysis.Calculus.Deriv.Mul
+public import Mathlib.Analysis.Calculus.Deriv.Add
 
 /-!
 # `RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.TranslationEstimate`
@@ -21,6 +23,8 @@ translation differences are controlled by the `L²`-gradient.
 At this stage we only prove *pointwise* inequalities along the segment `t ↦ x + t • a`.
 The measure-theoretic lifting to `L²` is tracked separately under `lean-103.5.2.26.5.3.2.3`.
 -/
+
+@[expose] public section
 
 namespace RellichKondrachov
 namespace Analysis

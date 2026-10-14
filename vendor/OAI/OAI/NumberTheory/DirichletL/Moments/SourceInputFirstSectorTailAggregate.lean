@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceInputFirstSectorTailPair
-import OAI.NumberTheory.DirichletL.Moments.FirstSectorLocalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceInputFirstSectorTailPair
+public import OAI.NumberTheory.DirichletL.Moments.FirstSectorLocalization
+
+@[expose] public section
 
 namespace OAI
 

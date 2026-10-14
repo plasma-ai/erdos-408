@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstRetainedPhysical
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstRetainedPhysical
+
+@[expose] public section
 
 namespace OAI
 

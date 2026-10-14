@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.RowAnalytic
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RowAnalytic
+
+@[expose] public section
 
 namespace OAI
 

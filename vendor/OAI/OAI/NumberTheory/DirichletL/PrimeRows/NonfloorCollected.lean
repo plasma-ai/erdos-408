@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorDyadic
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorDyadic
+
+@[expose] public section
 
 namespace OAI
 

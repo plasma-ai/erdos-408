@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroReferencePhysical
-import OAI.NumberTheory.DirichletL.Energy.PositiveHighParameters
-import OAI.NumberTheory.DirichletL.Moments.FirstAnnularInput
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroReferencePhysical
+public import OAI.NumberTheory.DirichletL.Energy.PositiveHighParameters
+public import OAI.NumberTheory.DirichletL.Moments.FirstAnnularInput
+
+@[expose] public section
 
 namespace OAI
 

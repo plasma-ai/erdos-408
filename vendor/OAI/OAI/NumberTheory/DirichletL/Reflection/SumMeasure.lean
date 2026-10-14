@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.SumEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.SumEnergy
+
+@[expose] public section
 
 namespace OAI
 

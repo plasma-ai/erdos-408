@@ -1,4 +1,9 @@
-import OAI.NumberTheory.PrimeGaps.LaplaceTransform
+module
+
+public import OAI.NumberTheory.PrimeGaps.LaplaceTransform
+public import Mathlib.Order.CompletePartialOrder
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,9 +1,14 @@
-import Mathlib.NumberTheory.JacobiSum.Basic
-import Mathlib.Analysis.Normed.Ring.Finite
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.LinearCombination
-import Mathlib.GroupTheory.Index
+module
+
+public import Mathlib.NumberTheory.JacobiSum.Basic
+public import Mathlib.Analysis.Normed.Ring.Finite
+public import Mathlib.Tactic.Ring
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.LinearCombination
+public import Mathlib.GroupTheory.Index
+public import Mathlib.NumberTheory.MulChar.Lemmas
+
+@[expose] public section
 
 namespace OAI
 

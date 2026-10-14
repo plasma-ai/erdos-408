@@ -1,6 +1,10 @@
-import Erdos821.Blueprint.Graph
+module
+
+public import Erdos821.Blueprint.Graph
 
 /-! The literal finite-choice ghost kernel on multiset memory states. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,8 +1,12 @@
-import Erdos821.S34.IdealAssembly
-import Erdos821.P4Probe.Construction
-import Erdos821.P4Probe.InvarianceTasks
-import Erdos821.P4Count.ProbeCounting
-import Erdos821.P4Proj.Invariance
+module
+
+public import Erdos821.S34.IdealAssembly
+public import Erdos821.P4Probe.Construction
+public import Erdos821.P4Probe.InvarianceTasks
+public import Erdos821.P4Count.ProbeCounting
+public import Erdos821.P4Proj.Invariance
+
+@[expose] public section
 
 set_option autoImplicit false
 

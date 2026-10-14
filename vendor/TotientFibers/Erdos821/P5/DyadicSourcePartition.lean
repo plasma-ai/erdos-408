@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparableTargets
-import Mathlib.Data.Nat.Log
+module
+
+public import Erdos821.P5.ComparableTargets
+public import Mathlib.Data.Nat.Log
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

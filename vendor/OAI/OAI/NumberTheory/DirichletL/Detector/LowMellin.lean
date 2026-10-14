@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowCutoff
-import OAI.NumberTheory.DirichletL.Detector.PhysicalNorms
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowCutoff
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalNorms
+
+@[expose] public section
 
 namespace OAI
 

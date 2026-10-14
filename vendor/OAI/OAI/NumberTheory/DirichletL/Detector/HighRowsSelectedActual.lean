@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedUnramified
-import OAI.NumberTheory.DirichletL.Detector.HighRowsRegion
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedUnramified
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsRegion
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramIdealDilation
-import OAI.NumberTheory.DirichletL.Moments.MobiusRegroup
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramIdealDilation
+public import OAI.NumberTheory.DirichletL.Moments.MobiusRegroup
+
+@[expose] public section
 
 namespace OAI
 

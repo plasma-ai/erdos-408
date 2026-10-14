@@ -1,5 +1,7 @@
-import Erdos408.TwoSided.Endpoint.Constant.Boxes
-import Erdos408.TwoSided.Endpoint.Constant.Piece
+module
+
+public import Erdos408.TwoSided.Endpoint.Constant.Boxes
+public import Erdos408.TwoSided.Endpoint.Constant.Piece
 
 /-!
 # The constant part at high times, for fixed `x`
@@ -14,6 +16,8 @@ the model bound E10.2 and the divisor model E1 of the marks `H`.
 * `integral_boxSum_le`: one box, including the corner error of the separation.
 * `integral_twistedPoly_const_le`: the sum over the `I²` boxes.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.ConstHigh
 

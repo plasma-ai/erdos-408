@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.Presentation
-import OAI.NumberTheory.DirichletL.Hecke.Origin
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Presentation
+public import OAI.NumberTheory.DirichletL.Hecke.Origin
+
+@[expose] public section
 
 namespace OAI
 

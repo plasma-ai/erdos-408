@@ -1,4 +1,6 @@
-import Erdos408.Extraction.TypeII.Assembly
+module
+
+public import Erdos408.Extraction.TypeII.Assembly
 
 /-!
 # The facts at large `x`
@@ -6,6 +8,8 @@ import Erdos408.Extraction.TypeII.Assembly
 Each field of `LargeX` holds for all large `x`: they are comparisons between fixed powers of
 `L`, `T` and `s`, all following from `s^k = o(T)` and `T^A = o(L^ε)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

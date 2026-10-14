@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryFiber
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionarySupport
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryProfiles
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryFiber
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionarySupport
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryProfiles
+
+@[expose] public section
 
 namespace OAI
 

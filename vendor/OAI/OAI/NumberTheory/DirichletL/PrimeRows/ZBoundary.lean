@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.ZContour
-import OAI.NumberTheory.DirichletL.PrimeRows.ZGrowth
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.ZContour
+public import OAI.NumberTheory.DirichletL.PrimeRows.ZGrowth
+
+@[expose] public section
 
 namespace OAI
 

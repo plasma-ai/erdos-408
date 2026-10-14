@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadic
-import OAI.NumberTheory.DirichletL.PrimeCounting.IdealPrimeMass
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadic
+public import OAI.NumberTheory.DirichletL.PrimeCounting.IdealPrimeMass
+
+@[expose] public section
 
 namespace OAI
 

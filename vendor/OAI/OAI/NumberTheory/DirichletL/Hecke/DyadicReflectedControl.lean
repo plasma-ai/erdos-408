@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DyadicReflectedFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicReflectedFamily
+
+@[expose] public section
 
 namespace OAI
 

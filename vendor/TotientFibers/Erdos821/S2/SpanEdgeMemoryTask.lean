@@ -1,6 +1,10 @@
-import Erdos821.S2.SpanEdge
+module
+
+public import Erdos821.S2.SpanEdge
 
 /-! The remaining inverse-edge equality, separated from gates and hit tests. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

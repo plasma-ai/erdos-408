@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationSourcePolynomial
-import OAI.NumberTheory.DirichletL.Moments.AmplificationSourcePool
-import OAI.NumberTheory.DirichletL.Moments.AmplificationRectangle
-import OAI.NumberTheory.DirichletL.Moments.GaussNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationSourcePolynomial
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationSourcePool
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationRectangle
+public import OAI.NumberTheory.DirichletL.Moments.GaussNormalization
+
+@[expose] public section
 
 namespace OAI
 

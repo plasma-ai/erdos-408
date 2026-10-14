@@ -1,4 +1,8 @@
-import Erdos821.P5.SharedProducts
+module
+
+public import Erdos821.P5.SharedProducts
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

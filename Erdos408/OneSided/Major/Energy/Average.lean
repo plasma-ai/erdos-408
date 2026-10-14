@@ -1,6 +1,8 @@
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
-import Mathlib.MeasureTheory.Integral.Prod
+module
+
+public import Mathlib.Algebra.QuadraticDiscriminant
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+public import Mathlib.MeasureTheory.Integral.Prod
 
 /-!
 # The energy of an average
@@ -11,6 +13,8 @@ dyad is bounded by an average `c ∫ w(ξ) h(ξ, τ) dξ` of isolated polynomial
 Here Cauchy–Schwarz in `ξ` with the weight `w` gives `(∫ w h)² ≤ (∫ w) ∫ w h²`, and Fubini
 gives `∫_a^b F² ≤ c² (∫ w)² sup_ξ ∫_a^b h(ξ, ·)²`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

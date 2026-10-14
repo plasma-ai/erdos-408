@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowwisePolynomial
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowwiseChain
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowwisePolynomial
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowwiseChain
+
+@[expose] public section
 
 namespace OAI
 

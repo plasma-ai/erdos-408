@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Setup
+module
+
+public import Erdos408.TwoSided.Setup
 
 /-!
 # Free labels of a comparison pattern
@@ -15,6 +17,8 @@ in `Setup.lean`.
   four box sums `∑_{n, v} α_n β_v e(-θnv)` (`bilinearPhase`), grouping the labels by their
   products and splitting `[U, 4U]` into `[U, 2U]` and `(2U, 4U]`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.Arcs
 

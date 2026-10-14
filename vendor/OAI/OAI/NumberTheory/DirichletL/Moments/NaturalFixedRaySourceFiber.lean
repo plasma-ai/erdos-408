@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourcePhysical
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionarySource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourcePhysical
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionarySource
+
+@[expose] public section
 
 namespace OAI
 

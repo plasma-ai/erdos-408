@@ -1,5 +1,7 @@
-import Mathlib.NumberTheory.EulerProduct.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow.NNReal
+module
+
+public import Mathlib.NumberTheory.EulerProduct.Basic
+public import Mathlib.Analysis.SpecialFunctions.Pow.NNReal
 
 /-!
 # Euler products for completely multiplicative weights
@@ -10,6 +12,8 @@ sum over `[1, N]` is at most `∏_{p ≤ N} (1 - loc p)⁻¹`, by the Euler prod
 over the `N`-factored numbers. The product is at most `exp(2 ∑ loc p)` when
 every `loc p ≤ 1/2`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

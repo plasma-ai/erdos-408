@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawFourier
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRaw
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawFourier
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRaw
+
+@[expose] public section
 
 namespace OAI
 

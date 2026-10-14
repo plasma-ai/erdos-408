@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceAllocatedInput
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceAllocationControl
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceAllocatedInput
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceAllocationControl
+
+@[expose] public section
 
 namespace OAI
 

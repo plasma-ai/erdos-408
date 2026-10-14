@@ -1,11 +1,15 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstTwoPassParentEnergy
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongCoefficient
-import OAI.NumberTheory.DirichletL.Descent.FirstDyadicFullEnergy
-import OAI.NumberTheory.DirichletL.Descent.FirstDyadicOriginalBranches
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveParents
-import OAI.NumberTheory.DirichletL.Descent.FirstLiveCountBudget
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveAggregate
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstTwoPassParentEnergy
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongCoefficient
+public import OAI.NumberTheory.DirichletL.Descent.FirstDyadicFullEnergy
+public import OAI.NumberTheory.DirichletL.Descent.FirstDyadicOriginalBranches
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveParents
+public import OAI.NumberTheory.DirichletL.Descent.FirstLiveCountBudget
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveAggregate
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveEnergy
+
+@[expose] public section
 
 namespace OAI
 

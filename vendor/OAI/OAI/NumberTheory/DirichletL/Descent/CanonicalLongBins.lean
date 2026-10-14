@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongNormalization
+
+@[expose] public section
 
 namespace OAI
 

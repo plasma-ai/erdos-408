@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.GaussSum.MellinSupport
-import OAI.NumberTheory.DirichletL.GaussSum.FiniteTranslations
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.MellinSupport
+public import OAI.NumberTheory.DirichletL.GaussSum.FiniteTranslations
+
+@[expose] public section
 
 namespace OAI
 

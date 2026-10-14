@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongWeight
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongCount
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongWeight
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongCount
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongIntegral
+
+@[expose] public section
 
 namespace OAI
 

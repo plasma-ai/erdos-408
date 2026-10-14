@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.NormFiberCharacters
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.NormFiberCharacters
+
+@[expose] public section
 
 namespace OAI
 

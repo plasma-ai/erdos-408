@@ -1,6 +1,10 @@
-import Erdos821.P5.StrippedPhysicalLists
-import Erdos821.P5.SharedExclusionTheorem
-import Erdos821.P5.ResidualExt
+module
+
+public import Erdos821.P5.StrippedPhysicalLists
+public import Erdos821.P5.SharedExclusionTheorem
+public import Erdos821.P5.ResidualExt
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

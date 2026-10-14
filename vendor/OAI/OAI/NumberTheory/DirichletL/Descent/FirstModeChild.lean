@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstModeColumns
-import OAI.NumberTheory.DirichletL.Descent.FirstPass
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstModeColumns
+public import OAI.NumberTheory.DirichletL.Descent.FirstPass
+
+@[expose] public section
 
 namespace OAI
 

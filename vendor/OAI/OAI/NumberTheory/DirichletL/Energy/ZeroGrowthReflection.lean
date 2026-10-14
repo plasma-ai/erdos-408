@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthWindow
-import OAI.NumberTheory.DirichletL.Energy.ReferenceHomogeneous
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthWindow
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceHomogeneous
+
+@[expose] public section
 
 namespace OAI
 

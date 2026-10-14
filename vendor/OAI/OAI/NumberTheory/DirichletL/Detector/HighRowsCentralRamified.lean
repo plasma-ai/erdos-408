@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralBase
-import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralEntry
-import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedRamified
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralBase
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralEntry
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedRamified
+
+@[expose] public section
 
 namespace OAI
 

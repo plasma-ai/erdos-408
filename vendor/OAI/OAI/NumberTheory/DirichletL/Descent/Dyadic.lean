@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.Reconstruction
-import OAI.NumberTheory.DirichletL.Descent.SieveComposition
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.Reconstruction
+public import OAI.NumberTheory.DirichletL.Descent.SieveComposition
+
+@[expose] public section
 
 namespace OAI
 

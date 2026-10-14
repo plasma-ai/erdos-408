@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorPlainFiberCount
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorPlainFiberCount
+
+@[expose] public section
 
 namespace OAI
 

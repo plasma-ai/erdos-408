@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.ParametersHighData
+module
+
+public import OAI.NumberTheory.DirichletL.ParametersHighData
+
+@[expose] public section
 
 namespace OAI
 

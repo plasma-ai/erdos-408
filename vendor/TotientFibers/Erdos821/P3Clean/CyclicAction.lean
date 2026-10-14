@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.ActionLifting
-import Erdos821.P3Clean.Phases
+module
+
+public import Erdos821.P3Clean.ActionLifting
+public import Erdos821.P3Clean.Phases
 
 /-! A finite permutation generates a cyclic residue-translation action. -/
+
+@[expose] public section
 
 noncomputable section
 

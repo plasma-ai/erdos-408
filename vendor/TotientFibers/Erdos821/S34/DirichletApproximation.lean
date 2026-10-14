@@ -1,4 +1,9 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.NumberTheory.DiophantineApproximation.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 

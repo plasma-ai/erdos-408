@@ -1,7 +1,17 @@
-import Erdos821.P5.LocalEnergyTask
-import Mathlib.Analysis.Calculus.BumpFunction.Normed
-import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
+module
 
+public import Erdos821.P5.LocalEnergyTask
+public import Mathlib.Analysis.Calculus.BumpFunction.Normed
+public import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
+public import Mathlib.Algebra.Lie.OfAssociative
+public import Mathlib.Algebra.Order.Archimedean.Real.Hom
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
+public import Mathlib.Analysis.Calculus.IteratedDeriv.FaaDiBruno
+public import Mathlib.Topology.UniformSpace.Uniformizable
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ContDiff FourierTransform SchwartzMap

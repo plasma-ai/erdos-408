@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Detector.DetectorMomentData
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawFiberSource
-import OAI.NumberTheory.DirichletL.Hecke.DetectorBatch
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedElement
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.DetectorMomentData
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawFiberSource
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorBatch
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedElement
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.ReflectedSeries
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedSeries
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DyadicBuffered
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicBuffered
+
+@[expose] public section
 
 namespace OAI
 

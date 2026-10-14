@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstCanonicalTail
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstCanonicalTail
+
+@[expose] public section
 
 namespace OAI
 

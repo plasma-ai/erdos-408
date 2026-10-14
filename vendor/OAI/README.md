@@ -70,4 +70,14 @@ Lean and Mathlib changes and keep every statement:
   `Dictionary/InverseMarkedReferenceFiberEnergy.lean` restates the goal with
   `show` instead.
 
+All 2,987 modules also use the module system: each begins with `module`,
+imports with `public import`, and exposes its definitions with
+`@[expose] public section`. The eight that imported all of Mathlib import the
+Mathlib modules they use instead, and 37 others import Mathlib modules they
+use but no longer see, because a module sees only what its imports export.
+A module does not export its private declarations, so 31 modules drop
+`private` from the declarations that a public statement or definition
+mentions, or that a later module uses: `PrimeRows/Measurable.lean` relies on
+the `Countable (Ideal O)` instance of `Hecke/Dyadic.lean`.
+
 No `sorry`, `axiom`, or heartbeat option was added.

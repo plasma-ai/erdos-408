@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.RayFamily
-import OAI.NumberTheory.DirichletL.PrimeCounting.RayAsymptotic
-import OAI.NumberTheory.DirichletL.PrimeCounting.IdealPrimeMass
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.RayFamily
+public import OAI.NumberTheory.DirichletL.PrimeCounting.RayAsymptotic
+public import OAI.NumberTheory.DirichletL.PrimeCounting.IdealPrimeMass
+
+@[expose] public section
 
 namespace OAI
 

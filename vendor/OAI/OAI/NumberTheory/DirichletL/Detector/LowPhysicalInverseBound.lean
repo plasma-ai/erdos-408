@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowNominalEnergy
-import OAI.NumberTheory.DirichletL.Detector.LowInverseNormalize
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowNominalEnergy
+public import OAI.NumberTheory.DirichletL.Detector.LowInverseNormalize
+
+@[expose] public section
 
 namespace OAI
 

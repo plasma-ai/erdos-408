@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondUniformSubsetSource
-import OAI.NumberTheory.DirichletL.Moments.SecondFrozenLiveDescent
-import OAI.NumberTheory.DirichletL.Moments.SourceInputReindex
-import OAI.NumberTheory.DirichletL.Moments.SecondSourceRemainder
-import OAI.NumberTheory.DirichletL.Moments.SecondFrozenLiveSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondUniformSubsetSource
+public import OAI.NumberTheory.DirichletL.Moments.SecondFrozenLiveDescent
+public import OAI.NumberTheory.DirichletL.Moments.SourceInputReindex
+public import OAI.NumberTheory.DirichletL.Moments.SecondSourceRemainder
+public import OAI.NumberTheory.DirichletL.Moments.SecondFrozenLiveSource
+
+@[expose] public section
 
 namespace OAI
 

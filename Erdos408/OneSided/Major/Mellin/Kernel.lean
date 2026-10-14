@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Major.Mellin.Smooth
-import Mathlib.Analysis.Normed.Operator.Prod
+module
+
+public import Erdos408.OneSided.Major.Mellin.Smooth
+public import Mathlib.Analysis.Normed.Operator.Prod
 
 /-!
 # The major-arc kernel in logarithmic coordinates
@@ -13,6 +15,8 @@ with `φ(X(w - w'))` on that range when `φ` vanishes outside `(-5, 5)`.
   when `‖D^i φ‖ ≤ K` for `i ≤ 4`.
 * `gapKernel_log`: `Φ(X log(w/w'), log w') = φ(X(w - w'))`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided.Mellin
 

@@ -1,4 +1,8 @@
-import Erdos821.P5.LiftedSharedRow
+module
+
+public import Erdos821.P5.LiftedSharedRow
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceSmoothedAllocation
-import OAI.NumberTheory.DirichletL.Moments.LiveDomain
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceSmoothedAllocation
+public import OAI.NumberTheory.DirichletL.Moments.LiveDomain
+
+@[expose] public section
 
 namespace OAI
 

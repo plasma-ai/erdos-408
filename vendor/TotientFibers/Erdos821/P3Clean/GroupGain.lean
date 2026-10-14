@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.Conditioning
+module
+
+public import Erdos821.P3Clean.Conditioning
 
 /-! Converting a constant per small group into the fixed logarithmic exponent. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

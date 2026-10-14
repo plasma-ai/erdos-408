@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ReopenedBins
-import OAI.NumberTheory.DirichletL.Descent.FirstDyadicFullEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ReopenedBins
+public import OAI.NumberTheory.DirichletL.Descent.FirstDyadicFullEnergy
+
+@[expose] public section
 
 namespace OAI
 

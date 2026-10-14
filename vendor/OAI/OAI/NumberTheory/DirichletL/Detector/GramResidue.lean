@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramPrimeSeparation
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramPrimeSeparation
+
+@[expose] public section
 
 namespace OAI
 

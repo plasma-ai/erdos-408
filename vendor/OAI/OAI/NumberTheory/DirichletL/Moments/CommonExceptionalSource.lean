@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalAsymmetricSource
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalMass
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalGates
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalAsymmetricSource
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalMass
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalGates
+
+@[expose] public section
 
 namespace OAI
 

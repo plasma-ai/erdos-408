@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.ConductorBounds
-import OAI.NumberTheory.DirichletL.CharacterTransport
+module
+
+public import OAI.NumberTheory.DirichletL.ConductorBounds
+public import OAI.NumberTheory.DirichletL.CharacterTransport
+
+@[expose] public section
 
 namespace OAI
 

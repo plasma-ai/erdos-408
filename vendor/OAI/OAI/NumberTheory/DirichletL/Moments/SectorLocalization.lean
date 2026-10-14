@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.Tail
-import OAI.NumberTheory.DirichletL.Moments.DescentLedger
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Tail
+public import OAI.NumberTheory.DirichletL.Moments.DescentLedger
+
+@[expose] public section
 
 namespace OAI
 

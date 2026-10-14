@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramBound
-import OAI.NumberTheory.DirichletL.Detector.LowSlotPolynomial
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramBound
+public import OAI.NumberTheory.DirichletL.Detector.LowSlotPolynomial
+
+@[expose] public section
 
 namespace OAI
 

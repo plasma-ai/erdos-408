@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceOverlap
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedFourier
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceOverlap
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedFourier
+
+@[expose] public section
 
 namespace OAI
 

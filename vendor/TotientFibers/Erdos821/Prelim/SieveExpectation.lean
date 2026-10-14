@@ -1,6 +1,7 @@
-import Mathlib
-import Erdos821.Prelim.SieveCalculus
-import Erdos821.Prelim.BlockSieve
+module
+
+public import Erdos821.Prelim.SieveCalculus
+public import Erdos821.Prelim.BlockSieve
 
 /-!
 # Sieve expectations: independent-trial averaging for one block (`lem:sieve`)
@@ -11,6 +12,8 @@ For a block `B` with densities `g`, independent inclusion with `Prob(T)` gives
 `esymm_le`. No alternating-series analysis: averaging preserves pointwise
 bounds. Product factorization across disjoint blocks follows in the bridge.
 -/
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

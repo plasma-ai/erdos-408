@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Analysis.Divisor
-import Erdos408.TwoSided.Graph.Restore.Core
-import Erdos408.TwoSided.Graph.Restore.General
+module
+
+public import Erdos408.OneSided.Analysis.Divisor
+public import Erdos408.TwoSided.Graph.Restore.Core
+public import Erdos408.TwoSided.Graph.Restore.General
 
 /-!
 # Lemma G5 at scale `x`
@@ -16,6 +18,8 @@ The size of the constants of `norm_physSum_sub_stripSum_le` for groups as in (6.
 The result (`exists_eventually_norm_physSum_sub_stripSum_le`) is G5 for every pattern with
 `|C g| ≤ m₀`: the error is `κ_K L^{C_r} e^{-L^{0.27}}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

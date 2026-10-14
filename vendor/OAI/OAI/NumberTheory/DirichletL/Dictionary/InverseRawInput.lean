@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawConjugateGates
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedForcing
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawConjugateGates
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedForcing
+
+@[expose] public section
 
 namespace OAI
 

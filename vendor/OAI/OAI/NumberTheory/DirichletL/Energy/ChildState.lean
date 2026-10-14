@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Energy.State
-import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalChosenBlock
-import OAI.NumberTheory.DirichletL.Moments.SecondChildRadialWidth
-import OAI.NumberTheory.DirichletL.Moments.AmplifiedRetainedRadius
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.State
+public import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalChosenBlock
+public import OAI.NumberTheory.DirichletL.Moments.SecondChildRadialWidth
+public import OAI.NumberTheory.DirichletL.Moments.AmplifiedRetainedRadius
+
+@[expose] public section
 
 namespace OAI
 

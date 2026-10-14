@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Pairing.Endpoint
-import Erdos408.OneSided.Pairing.Geometry
+module
+
+public import Erdos408.OneSided.Pairing.Endpoint
+public import Erdos408.OneSided.Pairing.Geometry
 
 /-!
 # From the moment to the pairing
@@ -17,6 +19,8 @@ PD §3.3 (`blueprint/one_sided_type_ii.md` §5.1). A bound on the determinant mo
   `log H = O(L^{0.21})` and `R ≍ L^{1/2}`.
 * The endpoint bounds `‖f‖² ≪ UV L^{4C}`, `sup|f| ≤ L^{2C}` (PD (3.18)).
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

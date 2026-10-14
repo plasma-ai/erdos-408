@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Descent.PriorityRetainedMovingRadiusWindowOrder
-import OAI.NumberTheory.DirichletL.Descent.PriorityMovingRadiusWindowOrderUniform
-import OAI.NumberTheory.DirichletL.Descent.PriorityMovingRadiusWindowOrder
-import OAI.NumberTheory.DirichletL.Descent.PriorityMovingRadius
-import OAI.NumberTheory.DirichletL.Descent.PrioritySourceBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.PriorityRetainedMovingRadiusWindowOrder
+public import OAI.NumberTheory.DirichletL.Descent.PriorityMovingRadiusWindowOrderUniform
+public import OAI.NumberTheory.DirichletL.Descent.PriorityMovingRadiusWindowOrder
+public import OAI.NumberTheory.DirichletL.Descent.PriorityMovingRadius
+public import OAI.NumberTheory.DirichletL.Descent.PrioritySourceBudget
+
+@[expose] public section
 
 namespace OAI
 

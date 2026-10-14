@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondKernelMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondKernelMeasure
+
+@[expose] public section
 
 namespace OAI
 

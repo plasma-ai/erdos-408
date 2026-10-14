@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SmallPartition
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SmallPartition
+
+@[expose] public section
 
 namespace OAI
 

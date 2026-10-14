@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib.Analysis.CStarAlgebra.Classes
+
+@[expose] public section
 
 namespace OAI
 open scoped BigOperators

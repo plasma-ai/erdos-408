@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawRadial
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawRadial
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,8 +1,13 @@
-import Erdos821.S2.RankCount
-import Erdos821.Blueprint.Graph
+module
+
+public import Erdos821.S2.RankCount
+public import Erdos821.Blueprint.Graph
+public import Mathlib.Algebra.Order.Field.GeomSum
 
 /-! Finite equality-rank summation: low ranks by a polynomial bound, high ranks by a
 geometric tail. Purely finite; no analytic input. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

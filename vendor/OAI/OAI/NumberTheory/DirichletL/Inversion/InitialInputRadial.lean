@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialTotalEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialTotalEnergy
+
+@[expose] public section
 
 namespace OAI
 

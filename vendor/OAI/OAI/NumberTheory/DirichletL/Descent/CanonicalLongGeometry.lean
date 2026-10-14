@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongCoefficient
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongCoefficient
+
+@[expose] public section
 
 namespace OAI
 

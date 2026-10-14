@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstPhysicalTail
-import OAI.NumberTheory.DirichletL.Descent.MarkBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstPhysicalTail
+public import OAI.NumberTheory.DirichletL.Descent.MarkBounds
+
+@[expose] public section
 
 namespace OAI
 

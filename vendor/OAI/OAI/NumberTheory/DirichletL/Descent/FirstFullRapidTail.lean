@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstRapidPhysicalTail
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstRapidPhysicalTail
+
+@[expose] public section
 
 namespace OAI
 

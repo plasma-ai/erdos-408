@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.AllocatedBound
-import OAI.NumberTheory.DirichletL.Energy.AllocatedProfiles
-import OAI.NumberTheory.DirichletL.Energy.Bands
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.AllocatedBound
+public import OAI.NumberTheory.DirichletL.Energy.AllocatedProfiles
+public import OAI.NumberTheory.DirichletL.Energy.Bands
+
+@[expose] public section
 
 namespace OAI
 

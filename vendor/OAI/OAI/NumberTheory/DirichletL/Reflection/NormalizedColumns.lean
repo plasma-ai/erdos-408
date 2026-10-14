@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.FrozenNorms
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.FrozenNorms
+
+@[expose] public section
 
 namespace OAI
 

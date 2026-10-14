@@ -1,10 +1,14 @@
-import OAI.NumberTheory.DirichletL.FiniteFourier
-import Mathlib.NumberTheory.MulChar.Duality
-import Mathlib.RingTheory.Ideal.Quotient.Defs
-import Mathlib.Analysis.Complex.Polynomial.Basic
-import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
-import Mathlib.Order.Preorder.Finite
-import Mathlib.RingTheory.Ideal.Maps
+module
+
+public import OAI.NumberTheory.DirichletL.FiniteFourier
+public import Mathlib.NumberTheory.MulChar.Duality
+public import Mathlib.RingTheory.Ideal.Quotient.Defs
+public import Mathlib.Analysis.Complex.Polynomial.Basic
+public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
+public import Mathlib.Order.Preorder.Finite
+public import Mathlib.RingTheory.Ideal.Maps
+
+@[expose] public section
 
 namespace OAI
 

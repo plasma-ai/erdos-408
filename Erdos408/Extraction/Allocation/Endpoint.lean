@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Allocation.Expansion
-import Erdos408.Extraction.Allocation.Groups
+module
+
+public import Erdos408.Extraction.Allocation.Expansion
+public import Erdos408.Extraction.Allocation.Groups
 
 /-!
 # Pointwise bounds for the weights and the endpoint
@@ -13,6 +15,8 @@ import Erdos408.Extraction.Allocation.Groups
   `C_𝔟 ≤ (∑_{x^ε < p ≤ x} 1/p)^{d+1} ≤ (T + 1)^3` by Mertens. So
   `|f_𝔟 - C_𝔟| ≤ (2 T^{20}/c + 1)^3 + (T + 1)^3` with `ε = c T^{-20}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

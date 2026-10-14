@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.Detector.GramLatticeDecay
-import OAI.NumberTheory.DirichletL.Detector.GramAnnularLattice
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.Detector.GramLatticeDecay
+public import OAI.NumberTheory.DirichletL.Detector.GramAnnularLattice
+
+@[expose] public section
 
 namespace OAI
 

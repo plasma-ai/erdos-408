@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.PhaseCancellation
-import OAI.NumberTheory.DirichletL.Detector.Sextic
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PhaseCancellation
+public import OAI.NumberTheory.DirichletL.Detector.Sextic
+
+@[expose] public section
 
 namespace OAI
 

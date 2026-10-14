@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.Bridge
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Bridge
+
+@[expose] public section
 
 namespace OAI
 

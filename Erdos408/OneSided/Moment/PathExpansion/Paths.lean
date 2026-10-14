@@ -1,6 +1,8 @@
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Basic.Complex.Basic
-import Mathlib.LinearAlgebra.Matrix.ConjTranspose
+module
+
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Basic.Complex.Basic
+public import Mathlib.LinearAlgebra.Matrix.ConjTranspose
 
 /-!
 # Paths in matrix powers
@@ -13,6 +15,8 @@ Two generic facts for the path expansion (`blueprint/one_sided_type_ii.md` §12,
   of products with the indicator `V` of the image inserted, and powers of a restriction are
   restrictions of powers when the big matrix vanishes off the image.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

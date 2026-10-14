@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstNominal
-import OAI.NumberTheory.DirichletL.Descent.Basic
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstNominal
+public import OAI.NumberTheory.DirichletL.Descent.Basic
+
+@[expose] public section
 
 namespace OAI
 

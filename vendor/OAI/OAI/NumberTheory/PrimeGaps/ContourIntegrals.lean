@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.FourierDerivatives
+module
+
+public import OAI.NumberTheory.PrimeGaps.FourierDerivatives
+
+@[expose] public section
 
 namespace OAI
 

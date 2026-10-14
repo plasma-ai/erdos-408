@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.LowCentralTuple
-import OAI.NumberTheory.DirichletL.Detector.LowRemoteMass
-import OAI.NumberTheory.DirichletL.Detector.GaussianCommon
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowCentralTuple
+public import OAI.NumberTheory.DirichletL.Detector.LowRemoteMass
+public import OAI.NumberTheory.DirichletL.Detector.GaussianCommon
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import Erdos821.P3Edge.SmallDamp
-import Erdos821.P3Edge.SmallFresh
-import Erdos821.P3Edge.TransferBounds
+module
+
+public import Erdos821.P3Edge.SmallDamp
+public import Erdos821.P3Edge.SmallFresh
+public import Erdos821.P3Edge.TransferBounds
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

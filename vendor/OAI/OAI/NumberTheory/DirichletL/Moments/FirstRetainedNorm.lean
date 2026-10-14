@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstRetainedAssembly
-import OAI.NumberTheory.DirichletL.Moments.FirstRetainedActive
-import OAI.NumberTheory.DirichletL.Moments.FirstTailAggregate
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstRetainedAssembly
+public import OAI.NumberTheory.DirichletL.Moments.FirstRetainedActive
+public import OAI.NumberTheory.DirichletL.Moments.FirstTailAggregate
+
+@[expose] public section
 
 namespace OAI
 

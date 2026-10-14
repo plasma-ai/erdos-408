@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.AllocatedChildren
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.AllocatedChildren
+
+@[expose] public section
 
 namespace OAI
 

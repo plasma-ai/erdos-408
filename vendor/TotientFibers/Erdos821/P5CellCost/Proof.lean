@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparisonCellCostTask
-import Erdos821.P5.PatternCosts
+module
+
+public import Erdos821.P5.ComparisonCellCostTask
+public import Erdos821.P5.PatternCosts
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

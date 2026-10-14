@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparisonRowExpansion
-import Erdos821.P5.ResidualStripping
+module
+
+public import Erdos821.P5.ComparisonRowExpansion
+public import Erdos821.P5.ResidualStripping
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

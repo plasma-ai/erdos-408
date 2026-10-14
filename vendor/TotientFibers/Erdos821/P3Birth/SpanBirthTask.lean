@@ -1,7 +1,11 @@
-import Erdos821.S2.SpanBirthTask
-import Erdos821.S2.HistoryBirths
+module
+
+public import Erdos821.S2.SpanBirthTask
+public import Erdos821.S2.HistoryBirths
 
 /-! Birth addresses in a reconstructed lifespan history are globally injective. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

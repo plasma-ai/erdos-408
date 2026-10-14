@@ -1,7 +1,11 @@
-import Mathlib.RingTheory.Radical.Basic
-import OAI.NumberTheory.DirichletL.Moments.CommonMaskEnergy
-import OAI.NumberTheory.DirichletL.Moments.RadialEligibleEnergy
-import OAI.NumberTheory.DirichletL.Moments.CommonRadialData
+module
+
+public import Mathlib.RingTheory.Radical.Basic
+public import OAI.NumberTheory.DirichletL.Moments.CommonMaskEnergy
+public import OAI.NumberTheory.DirichletL.Moments.RadialEligibleEnergy
+public import OAI.NumberTheory.DirichletL.Moments.CommonRadialData
+
+@[expose] public section
 
 namespace OAI
 

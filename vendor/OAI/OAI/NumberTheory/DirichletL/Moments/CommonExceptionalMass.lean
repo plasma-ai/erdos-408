@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalCost
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalCost
+
+@[expose] public section
 
 namespace OAI
 

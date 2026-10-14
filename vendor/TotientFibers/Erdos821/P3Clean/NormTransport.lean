@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.Contractions
+module
+
+public import Erdos821.P3Clean.Contractions
 
 /-! Equivalence and cutoff-subtype transport for finite-support norms. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.BufferedTransport
-import OAI.NumberTheory.DirichletL.PrimeRows.BufferedJoins
-import OAI.NumberTheory.DirichletL.PrimeRows.OriginalHeightTail
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.BufferedTransport
+public import OAI.NumberTheory.DirichletL.PrimeRows.BufferedJoins
+public import OAI.NumberTheory.DirichletL.PrimeRows.OriginalHeightTail
+
+@[expose] public section
 
 namespace OAI
 

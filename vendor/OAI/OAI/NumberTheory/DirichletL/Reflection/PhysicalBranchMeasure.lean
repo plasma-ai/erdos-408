@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.PhysicalIntegral
-import OAI.NumberTheory.DirichletL.Reflection.SumMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.PhysicalIntegral
+public import OAI.NumberTheory.DirichletL.Reflection.SumMeasure
+
+@[expose] public section
 
 namespace OAI
 

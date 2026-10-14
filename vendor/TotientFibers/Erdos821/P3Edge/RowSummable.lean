@@ -1,4 +1,9 @@
-import Erdos821.P3Edge.RowFinite
+module
+
+public import Erdos821.P3Edge.RowFinite
+public import Mathlib.Algebra.Ring.IsFormallyReal
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceChild
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowth
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceChild
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowth
+
+@[expose] public section
 
 namespace OAI
 

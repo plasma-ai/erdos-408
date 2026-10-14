@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstProduct
-import OAI.NumberTheory.DirichletL.PrimeRows.Agreement
-import OAI.NumberTheory.DirichletL.PrimeRows.MarkedExclusions
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstProduct
+public import OAI.NumberTheory.DirichletL.PrimeRows.Agreement
+public import OAI.NumberTheory.DirichletL.PrimeRows.MarkedExclusions
+
+@[expose] public section
 
 namespace OAI
 

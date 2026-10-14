@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowOriginalPools
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowOriginalPools
+
+@[expose] public section
 
 namespace OAI
 

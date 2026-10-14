@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.ComparisonReflection
-import OAI.NumberTheory.DirichletL.Moments.HeckeWindowEnergy
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicBridge
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationScaleSup
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ComparisonReflection
+public import OAI.NumberTheory.DirichletL.Moments.HeckeWindowEnergy
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicBridge
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationScaleSup
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DeletionBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DeletionBounds
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstReferenceBlock
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalActiveDictionary
-import OAI.NumberTheory.DirichletL.Moments.FirstNonexceptionalLocalWeightSum
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstReferenceBlock
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalActiveDictionary
+public import OAI.NumberTheory.DirichletL.Moments.FirstNonexceptionalLocalWeightSum
+
+@[expose] public section
 
 namespace OAI
 

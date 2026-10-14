@@ -1,8 +1,12 @@
-import Erdos821.S2.MemoryIdentity
-import Erdos821.S2.ClosedPaths
-import Erdos821.S2.MemoryTailTask
+module
+
+public import Erdos821.S2.MemoryIdentity
+public import Erdos821.S2.ClosedPaths
+public import Erdos821.S2.MemoryTailTask
 
 /-! Absolute closed paths from the same finite history fibers and absolute rows. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

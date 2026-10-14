@@ -1,6 +1,10 @@
-import Erdos821.Blueprint.Graph
+module
+
+public import Erdos821.Blueprint.Graph
 
 /-! The exponential memory-cutoff gain absorbs every fixed path cost. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

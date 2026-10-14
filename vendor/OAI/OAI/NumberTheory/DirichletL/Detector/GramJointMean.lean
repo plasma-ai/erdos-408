@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramJointSource
-import OAI.NumberTheory.DirichletL.Detector.GramMeanLift
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramJointSource
+public import OAI.NumberTheory.DirichletL.Detector.GramMeanLift
+
+@[expose] public section
 
 namespace OAI
 

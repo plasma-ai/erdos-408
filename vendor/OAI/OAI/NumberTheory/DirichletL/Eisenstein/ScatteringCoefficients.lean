@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.CutoffApproximation
-import OAI.NumberTheory.DirichletL.Eisenstein.ConjugateLevelAction
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.CutoffApproximation
+public import OAI.NumberTheory.DirichletL.Eisenstein.ConjugateLevelAction
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Bands
-import Erdos408.TwoSided.Defs
+module
+
+public import Erdos408.OneSided.Bands
+public import Erdos408.TwoSided.Defs
 
 /-!
 # Pointwise bounds for the tuple coefficient
@@ -11,6 +13,8 @@ The coefficient `c(u) = 𝒲(u) 𝒜_B(u) W_{S'}^b(u)` of the tuple part (PD (6.
 
 * `abs_sum_filter_prod_dvd_le`: `|𝒜_B(n)| ≤ ω(n)^d`, with `ω(n) ≤ 2 log n`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.TupleHigh
 

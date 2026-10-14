@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationFamily
-import OAI.NumberTheory.DirichletL.Hecke.Conjugation
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationScale
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationFamily
+public import OAI.NumberTheory.DirichletL.Hecke.Conjugation
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationScale
+
+@[expose] public section
 
 namespace OAI
 

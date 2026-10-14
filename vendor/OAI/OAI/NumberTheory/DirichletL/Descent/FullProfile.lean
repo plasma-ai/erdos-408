@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.RootWindows
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.RootWindows
+
+@[expose] public section
 
 namespace OAI
 

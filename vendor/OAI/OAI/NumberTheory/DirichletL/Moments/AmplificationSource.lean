@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationAllocation
-import OAI.NumberTheory.DirichletL.Moments.LiveDomain
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationAllocation
+public import OAI.NumberTheory.DirichletL.Moments.LiveDomain
+
+@[expose] public section
 
 namespace OAI
 

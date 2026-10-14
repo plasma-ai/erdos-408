@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.RaySlots
-import OAI.NumberTheory.DirichletL.Hecke.PrimeRow
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RaySlots
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeRow
+
+@[expose] public section
 
 namespace OAI
 

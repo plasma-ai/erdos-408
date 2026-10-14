@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Energy.CanonicalLowPhysical
-import OAI.NumberTheory.DirichletL.Energy.PositiveBalancedAdmission
-import OAI.NumberTheory.DirichletL.Energy.PositiveLowBandSource
-import OAI.NumberTheory.DirichletL.Energy.FirstSourceParameters
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalLowPhysical
+public import OAI.NumberTheory.DirichletL.Energy.PositiveBalancedAdmission
+public import OAI.NumberTheory.DirichletL.Energy.PositiveLowBandSource
+public import OAI.NumberTheory.DirichletL.Energy.FirstSourceParameters
+
+@[expose] public section
 
 namespace OAI
 

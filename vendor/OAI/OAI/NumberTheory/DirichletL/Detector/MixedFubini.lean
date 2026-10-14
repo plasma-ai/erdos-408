@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.RawPhysicalIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RawPhysicalIntegral
+
+@[expose] public section
 
 namespace OAI
 

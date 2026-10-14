@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalControl
-import OAI.NumberTheory.DirichletL.Moments.RetainedProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalControl
+public import OAI.NumberTheory.DirichletL.Moments.RetainedProfile
+
+@[expose] public section
 
 namespace OAI
 

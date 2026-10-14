@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.ResidualSectors
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.ResidualSectors
+
+@[expose] public section
 
 namespace OAI
 

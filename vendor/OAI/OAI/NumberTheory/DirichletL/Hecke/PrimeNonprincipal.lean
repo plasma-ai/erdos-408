@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeRow
-import OAI.NumberTheory.DirichletL.Hecke.RowNonprincipal
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeRow
+public import OAI.NumberTheory.DirichletL.Hecke.RowNonprincipal
+
+@[expose] public section
 
 namespace OAI
 

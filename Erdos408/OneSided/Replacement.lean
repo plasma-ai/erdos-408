@@ -1,8 +1,10 @@
-import Erdos408.OneSided.Decomposition
-import Erdos408.OneSided.Goodness.Removal
-import Erdos408.OneSided.Moment.Memory
-import Erdos408.OneSided.Moment.Statements
-import Erdos408.OneSided.Pairing
+module
+
+public import Erdos408.OneSided.Decomposition
+public import Erdos408.OneSided.Goodness.Removal
+public import Erdos408.OneSided.Moment.Memory
+public import Erdos408.OneSided.Moment.Statements
+public import Erdos408.OneSided.Pairing
 
 /-!
 # The replacement of the determinant equation
@@ -22,6 +24,8 @@ square and the major sum differ by `O(X Y L^{-D₁ - 1})`. It follows from four 
 
 The damping exponent of the lift is a free parameter; the replacement uses `q = 1/2`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

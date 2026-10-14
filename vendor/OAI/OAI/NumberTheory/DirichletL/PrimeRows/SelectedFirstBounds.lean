@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedFirst
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedFirst
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import Erdos821.P5.SharedReindex
-import Mathlib.Data.Finset.Preimage
+module
+
+public import Erdos821.P5.SharedReindex
+public import Mathlib.Data.Finset.Preimage
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

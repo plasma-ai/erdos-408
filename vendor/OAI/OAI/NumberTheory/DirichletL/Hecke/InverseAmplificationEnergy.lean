@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationMask
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationMask
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,6 @@
-import Erdos408.Extraction.TypeII.Numeric
+module
+
+public import Erdos408.Extraction.TypeII.Numeric
 
 /-!
 # Collecting the bounds
@@ -9,6 +11,8 @@ With `u = L^{1/200}` bounding every factor of size `L^{o(1)}`,
 
 so that `|Comp_j - Prox_j| ≤ (C₄ + C₅)(x/L) L^{-1/20}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

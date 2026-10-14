@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.RowNonprincipal
-import OAI.NumberTheory.DirichletL.CenteredExceptionalCount
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.RowNonprincipal
+public import OAI.NumberTheory.DirichletL.CenteredExceptionalCount
+
+@[expose] public section
 
 namespace OAI
 

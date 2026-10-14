@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Allocation.Groups
-import Erdos408.TwoSided.Setup
+module
+
+public import Erdos408.Extraction.Allocation.Groups
+public import Erdos408.TwoSided.Setup
 
 /-!
 # The centered core and the clipped core at the active primes
@@ -12,6 +14,8 @@ The pointwise facts about `F = 𝒲 (f_B - C_B)` and the clipped core `G` that L
   below the slots;
 * `G(p n) = G(n)` for every active prime `p`, since `G = G ∘ stripPrimes`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstModeAssembly
-import OAI.NumberTheory.DirichletL.Descent.FirstModeChild
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstModeAssembly
+public import OAI.NumberTheory.DirichletL.Descent.FirstModeChild
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reciprocity.RamifiedCuspPhases
+module
+
+public import OAI.NumberTheory.DirichletL.Reciprocity.RamifiedCuspPhases
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.PositiveHighSource
-import OAI.NumberTheory.DirichletL.Energy.OriginalProfileControl
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.PositiveHighSource
+public import OAI.NumberTheory.DirichletL.Energy.OriginalProfileControl
+
+@[expose] public section
 
 namespace OAI
 

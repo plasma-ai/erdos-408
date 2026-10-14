@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.RawNesting
-import OAI.NumberTheory.DirichletL.Detector.RawNestedJoin
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RawNesting
+public import OAI.NumberTheory.DirichletL.Detector.RawNestedJoin
+
+@[expose] public section
 
 namespace OAI
 

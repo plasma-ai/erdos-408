@@ -1,6 +1,10 @@
-import Erdos821.S2.MemoryGhost
+module
+
+public import Erdos821.S2.MemoryGhost
 
 /-! The literal edge choices for active lists and pending memory. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,8 +1,9 @@
-import Mathlib
-import Erdos821.Prelim.SieveCalculus
-import Erdos821.Prelim.BlockSieve
-import Erdos821.Prelim.SieveGeometry
-import Erdos821.Blueprint.Sieve
+module
+
+public import Erdos821.Prelim.SieveCalculus
+public import Erdos821.Prelim.BlockSieve
+public import Erdos821.Prelim.SieveGeometry
+public import Erdos821.Blueprint.Sieve
 
 /-!
 # Sieve level: support products are `≤ z^{4h+2}` (`lem:sieve`)
@@ -16,6 +17,8 @@ decomposition (as in `sieve_prod_le`), then
 `∏ Z_j^{e_j} = z^{∑ e_j/2^j} ≤ z^{4h}` via `rpow` + `level_sum_le`,
 and `z^{4h} ≤ z^{4h+2}`.
 -/
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.SmoothTests
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.SmoothTests
+
+@[expose] public section
 
 namespace OAI
 

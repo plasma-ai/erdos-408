@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferencePaddedEnergy
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferencePrimeGates
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceShift
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferencePaddedEnergy
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferencePrimeGates
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceShift
+
+@[expose] public section
 
 namespace OAI
 

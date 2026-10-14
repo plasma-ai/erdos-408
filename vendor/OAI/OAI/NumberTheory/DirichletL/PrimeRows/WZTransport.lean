@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.ZShift
-import OAI.NumberTheory.DirichletL.PrimeRows.FixedIntegral
-import OAI.NumberTheory.DirichletL.PrimeRows.IteratedShift
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.ZShift
+public import OAI.NumberTheory.DirichletL.PrimeRows.FixedIntegral
+public import OAI.NumberTheory.DirichletL.PrimeRows.IteratedShift
+
+@[expose] public section
 
 namespace OAI
 

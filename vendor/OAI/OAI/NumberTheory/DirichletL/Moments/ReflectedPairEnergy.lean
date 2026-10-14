@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.ReflectedProfileMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedProfileMeasure
+
+@[expose] public section
 
 namespace OAI
 

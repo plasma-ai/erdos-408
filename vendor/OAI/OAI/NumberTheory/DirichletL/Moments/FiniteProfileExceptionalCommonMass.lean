@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonAsymmetric
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalMass
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonAsymmetric
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalMass
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

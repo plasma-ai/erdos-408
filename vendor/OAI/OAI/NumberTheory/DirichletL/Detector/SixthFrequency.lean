@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.SourceCoefficient
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SourceCoefficient
+
+@[expose] public section
 
 namespace OAI
 

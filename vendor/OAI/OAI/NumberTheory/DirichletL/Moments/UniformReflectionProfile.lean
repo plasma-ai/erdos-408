@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.OneReflectionEnergy
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformTests
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.OneReflectionEnergy
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformTests
+
+@[expose] public section
 
 namespace OAI
 

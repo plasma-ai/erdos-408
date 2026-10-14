@@ -1,6 +1,10 @@
-import Erdos821.S34.BilinearRestrictions
-import Erdos821.S34.ProductSupport
-import Erdos821.P5.Basic
+module
+
+public import Erdos821.S34.BilinearRestrictions
+public import Erdos821.S34.ProductSupport
+public import Erdos821.P5.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

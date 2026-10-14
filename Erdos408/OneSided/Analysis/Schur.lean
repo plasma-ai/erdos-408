@@ -1,6 +1,8 @@
-import Mathlib.Algebra.Order.BigOperators.Ring.Finset
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.SpecialFunctions.Sqrt
+module
+
+public import Mathlib.Algebra.Order.BigOperators.Ring.Finset
+public import Mathlib.Analysis.Complex.Basic
+public import Mathlib.Analysis.SpecialFunctions.Sqrt
 
 /-!
 # Weighted `ℓ²` bounds for choice operators
@@ -16,6 +18,8 @@ the input measure are at most `C` times the output measure times `h`. Then the n
 Norms are recorded by the predicate `NormLe μ ν T c`, which says `‖T f‖_μ ≤ c ‖f‖_ν` for
 every `f`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

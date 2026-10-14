@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorBudget
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorBudget
+
+@[expose] public section
 
 namespace OAI
 

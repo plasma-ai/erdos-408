@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Detector.LocalPhysical
-import OAI.NumberTheory.DirichletL.Detector.Sextic
-import OAI.NumberTheory.DirichletL.Detector.SixthFrequency
-import OAI.NumberTheory.DirichletL.Moments.Unequal
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LocalPhysical
+public import OAI.NumberTheory.DirichletL.Detector.Sextic
+public import OAI.NumberTheory.DirichletL.Detector.SixthFrequency
+public import OAI.NumberTheory.DirichletL.Moments.Unequal
+
+@[expose] public section
 
 namespace OAI
 

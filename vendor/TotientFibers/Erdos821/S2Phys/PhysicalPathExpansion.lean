@@ -1,7 +1,11 @@
-import Erdos821.S2.PhysicalPathTask
-import Erdos821.S2.PhysicalCompatibility
+module
+
+public import Erdos821.S2.PhysicalPathTask
+public import Erdos821.S2.PhysicalCompatibility
 
 /-! Finite physical path expansion for the literal root moment. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators
@@ -245,7 +249,7 @@ theorem pairNeighbors_subset_pathWindow (A : Model F P J m) (root : ℤ)
       have h := Nat.mul_le_mul_right (pairRadius A) hk
       exact_mod_cast h
 
-private def finiteKernelPower {α : Type*} (K : α → α → ℂ) (S : Finset α) :
+def finiteKernelPower {α : Type*} (K : α → α → ℂ) (S : Finset α) :
     ℕ → α → α → ℂ
   | 0, a, b => if a = b then 1 else 0
   | n + 1, a, b => ∑ z ∈ S, K a z * finiteKernelPower K S n z b

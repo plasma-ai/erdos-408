@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ClippedFourier
-import OAI.NumberTheory.DirichletL.Moments.HeckeWindowEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ClippedFourier
+public import OAI.NumberTheory.DirichletL.Moments.HeckeWindowEnergy
+
+@[expose] public section
 
 namespace OAI
 

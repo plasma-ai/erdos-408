@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.CanonicalChildBound
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalChildBound
+
+@[expose] public section
 
 namespace OAI
 

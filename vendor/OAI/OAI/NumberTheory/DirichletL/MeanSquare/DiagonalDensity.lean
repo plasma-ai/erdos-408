@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.CompletedDyadicRows
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.CompletedDyadicRows
+
+@[expose] public section
 
 namespace OAI
 

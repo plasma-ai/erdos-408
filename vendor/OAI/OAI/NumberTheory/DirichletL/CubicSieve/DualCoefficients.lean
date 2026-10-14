@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.FrequencyShell
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.FrequencyShell
+
+@[expose] public section
 
 namespace OAI
 

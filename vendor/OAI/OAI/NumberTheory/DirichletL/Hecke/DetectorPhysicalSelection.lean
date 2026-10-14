@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorPhysicalBins
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRelativePrime
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorPhysicalBins
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRelativePrime
+
+@[expose] public section
 
 namespace OAI
 

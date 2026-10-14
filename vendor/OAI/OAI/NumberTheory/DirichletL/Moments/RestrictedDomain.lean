@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.LiveDomain
-import OAI.NumberTheory.DirichletL.Moments.RestrictedWindow
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.LiveDomain
+public import OAI.NumberTheory.DirichletL.Moments.RestrictedWindow
+
+@[expose] public section
 
 namespace OAI
 

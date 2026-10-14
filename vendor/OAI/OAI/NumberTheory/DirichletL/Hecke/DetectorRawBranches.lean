@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRawFiber
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRawFiber
+
+@[expose] public section
 
 namespace OAI
 

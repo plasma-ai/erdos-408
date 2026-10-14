@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SupportedTailAggregate
-import OAI.NumberTheory.DirichletL.Moments.SourceSecondZeroEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SupportedTailAggregate
+public import OAI.NumberTheory.DirichletL.Moments.SourceSecondZeroEnergy
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.ChineseRemainder.AdditiveCharacters
-import OAI.NumberTheory.DirichletL.GaussSum.FiniteFourier
-import OAI.NumberTheory.DirichletL.GaussSum.ChineseRemainder
+module
+
+public import OAI.NumberTheory.DirichletL.ChineseRemainder.AdditiveCharacters
+public import OAI.NumberTheory.DirichletL.GaussSum.FiniteFourier
+public import OAI.NumberTheory.DirichletL.GaussSum.ChineseRemainder
+
+@[expose] public section
 
 namespace OAI
 

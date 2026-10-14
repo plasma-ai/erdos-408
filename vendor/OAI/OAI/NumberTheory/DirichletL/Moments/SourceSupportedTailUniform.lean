@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceProfileMassUniform
-import OAI.NumberTheory.DirichletL.Moments.SupportedTailAggregate
-import OAI.NumberTheory.DirichletL.Moments.SourceZeroEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceProfileMassUniform
+public import OAI.NumberTheory.DirichletL.Moments.SupportedTailAggregate
+public import OAI.NumberTheory.DirichletL.Moments.SourceZeroEnergy
+
+@[expose] public section
 
 namespace OAI
 

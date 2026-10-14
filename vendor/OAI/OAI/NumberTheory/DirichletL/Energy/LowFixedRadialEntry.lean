@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.FixedRadialReduction
-import OAI.NumberTheory.DirichletL.Energy.ZeroComparison
-import OAI.NumberTheory.DirichletL.Energy.PhysicalEntry
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.FixedRadialReduction
+public import OAI.NumberTheory.DirichletL.Energy.ZeroComparison
+public import OAI.NumberTheory.DirichletL.Energy.PhysicalEntry
+
+@[expose] public section
 
 namespace OAI
 

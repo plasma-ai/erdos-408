@@ -1,6 +1,13 @@
-import Mathlib
-import Erdos821.Blueprint.Graph
-import Erdos821.Blueprint.Analytic
+module
+
+public import Erdos821.Blueprint.Graph
+public import Erdos821.Blueprint.Analytic
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.GroupTheory.Nilpotent
+
+@[expose] public section
 
 open scoped BigOperators
 open Filter

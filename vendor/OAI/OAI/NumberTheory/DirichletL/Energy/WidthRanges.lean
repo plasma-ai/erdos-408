@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.WidthSchedule
-import OAI.NumberTheory.DirichletL.Energy.Profiles
-import OAI.NumberTheory.DirichletL.Moments.FirstSecondInputGates
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.WidthSchedule
+public import OAI.NumberTheory.DirichletL.Energy.Profiles
+public import OAI.NumberTheory.DirichletL.Moments.FirstSecondInputGates
+
+@[expose] public section
 
 namespace OAI
 

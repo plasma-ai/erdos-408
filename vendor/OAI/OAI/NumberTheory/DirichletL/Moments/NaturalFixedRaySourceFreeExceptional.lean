@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFixedIdeal
-import OAI.NumberTheory.DirichletL.Hecke.ExceptionalRows
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFixedIdeal
+public import OAI.NumberTheory.DirichletL.Hecke.ExceptionalRows
+
+@[expose] public section
 
 namespace OAI
 

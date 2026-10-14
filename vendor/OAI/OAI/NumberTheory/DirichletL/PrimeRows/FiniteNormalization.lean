@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.MarkedNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.MarkedNormalization
+
+@[expose] public section
 
 namespace OAI
 

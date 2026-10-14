@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowColumnBounds
-import OAI.NumberTheory.DirichletL.Detector.LowCauchy
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowColumnBounds
+public import OAI.NumberTheory.DirichletL.Detector.LowCauchy
+
+@[expose] public section
 
 namespace OAI
 

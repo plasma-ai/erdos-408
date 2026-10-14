@@ -1,10 +1,14 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceMass
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceArithmetic
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawConjugateGates
-import OAI.NumberTheory.DirichletL.Inversion.InitialResidualUniformEnergy
-import OAI.NumberTheory.DirichletL.Inversion.InitialMarkedAssignedGeometry
-import OAI.NumberTheory.DirichletL.Inversion.InitialMarkedReserve
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedPadding
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceMass
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceArithmetic
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawConjugateGates
+public import OAI.NumberTheory.DirichletL.Inversion.InitialResidualUniformEnergy
+public import OAI.NumberTheory.DirichletL.Inversion.InitialMarkedAssignedGeometry
+public import OAI.NumberTheory.DirichletL.Inversion.InitialMarkedReserve
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedPadding
+
+@[expose] public section
 
 namespace OAI
 

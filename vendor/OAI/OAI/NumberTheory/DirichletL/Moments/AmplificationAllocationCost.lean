@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationLiveMask
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationLiveMask
+
+@[expose] public section
 
 namespace OAI
 

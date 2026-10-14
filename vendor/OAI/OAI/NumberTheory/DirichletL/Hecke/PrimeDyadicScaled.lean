@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadicScale
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadicScale
+
+@[expose] public section
 
 namespace OAI
 

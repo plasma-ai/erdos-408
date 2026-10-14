@@ -1,4 +1,8 @@
-import Erdos821.Prelim
+module
+
+public import Erdos821.Prelim
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

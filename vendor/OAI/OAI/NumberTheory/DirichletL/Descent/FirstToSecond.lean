@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstFreshEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstFreshEnergy
+
+@[expose] public section
 
 namespace OAI
 

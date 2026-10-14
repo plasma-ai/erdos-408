@@ -1,4 +1,9 @@
-import OAI.NumberTheory.PrimeGaps.PatternMoments
+module
+
+public import OAI.NumberTheory.PrimeGaps.PatternMoments
+public import Mathlib.Algebra.Order.Chebyshev
+
+@[expose] public section
 
 namespace OAI
 

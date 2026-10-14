@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Poisson.BinaryGaussian
+module
+
+public import OAI.NumberTheory.DirichletL.Poisson.BinaryGaussian
+
+@[expose] public section
 
 namespace OAI
 
@@ -56,11 +60,11 @@ namespace OscillatoryDeterminant
 
 open Complex
 
-private def q (a b : ℂ) : ℂ := a*a-a*b+b*b
+def q (a b : ℂ) : ℂ := a*a-a*b+b*b
 
-private noncomputable def A (t a b : ℂ) : ℂ := t + 2*Complex.I*b/q a b
-private noncomputable def B (t a b : ℂ) : ℂ := -t/2-2*Complex.I*a/q a b
-private noncomputable def D (t a b : ℂ) : ℂ := t + 2*Complex.I*(a-b)/q a b
+noncomputable def A (t a b : ℂ) : ℂ := t + 2*Complex.I*b/q a b
+noncomputable def B (t a b : ℂ) : ℂ := -t/2-2*Complex.I*a/q a b
+noncomputable def D (t a b : ℂ) : ℂ := t + 2*Complex.I*(a-b)/q a b
 
 theorem determinant (t a b : ℂ) (hq : q a b ≠ 0) :
     A t a b * D t a b - (B t a b)^2 =

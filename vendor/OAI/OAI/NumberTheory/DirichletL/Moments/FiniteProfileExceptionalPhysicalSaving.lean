@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalBudget
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalPhysicalSaving
-import OAI.NumberTheory.DirichletL.Moments.FirstCanonicalAllowance
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalBudget
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalPhysicalSaving
+public import OAI.NumberTheory.DirichletL.Moments.FirstCanonicalAllowance
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Defs
+module
+
+public import Erdos408.Extraction.Defs
 
 /-!
 # The independent divisor model
@@ -14,6 +16,8 @@ This file proves the facts about the model that the extraction uses:
 product rule `E_{A ∪ B} = E_A E_B` for disjoint `A, B`, and independence of
 functions of disjoint blocks.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

@@ -1,6 +1,13 @@
-import Erdos821.S2.LifespanAlgebra
+module
+
+public import Erdos821.S2.LifespanAlgebra
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Data.ZMod.Defs
+public import Mathlib.Tactic.Abel
 
 /-! The active-prime part of the exact lifespan expansion. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

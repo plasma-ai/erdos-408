@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.HorizontalIntegral
-import OAI.NumberTheory.DirichletL.PrimeRows.UniformSlices
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.HorizontalIntegral
+public import OAI.NumberTheory.DirichletL.PrimeRows.UniformSlices
+
+@[expose] public section
 
 namespace OAI
 

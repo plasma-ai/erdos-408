@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.OriginalSplitReflection
-import OAI.NumberTheory.DirichletL.Reflection.OriginalChoicePhysical
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalSplitReflection
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalChoicePhysical
+
+@[expose] public section
 
 namespace OAI
 

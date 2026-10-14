@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Hecke.Boundary
-import OAI.NumberTheory.DirichletL.LogarithmicControl
-import Mathlib.Analysis.Complex.LocallyUniformLimit
-import Mathlib.Analysis.SpecialFunctions.Complex.LogBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Boundary
+public import OAI.NumberTheory.DirichletL.LogarithmicControl
+public import Mathlib.Analysis.Complex.LocallyUniformLimit
+public import Mathlib.Analysis.SpecialFunctions.Complex.LogBounds
+
+@[expose] public section
 
 namespace OAI
 

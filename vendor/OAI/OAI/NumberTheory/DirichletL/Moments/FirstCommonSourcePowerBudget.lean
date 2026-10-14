@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstCommonSourceBudget
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildSourceCaps
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstCommonSourceBudget
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildSourceCaps
+
+@[expose] public section
 
 namespace OAI
 

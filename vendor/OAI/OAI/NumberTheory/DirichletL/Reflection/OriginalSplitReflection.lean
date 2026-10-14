@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.MarkedTuples
-import OAI.NumberTheory.DirichletL.Reflection.OriginalSlotSupport
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedTuples
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalSlotSupport
+
+@[expose] public section
 
 namespace OAI
 

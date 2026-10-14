@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.LiteralClean
+module
+
+public import Erdos821.P3Clean.LiteralClean
 
 /-! Signed clean coefficients after the exact small normalization. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.Contractions
+module
+
+public import Erdos821.P3Clean.Contractions
 
 /-! The weighted adjoint has the same finite-support norm bound. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

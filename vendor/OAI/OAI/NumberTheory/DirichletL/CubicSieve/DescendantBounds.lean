@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.CommonFactorBound
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.CommonFactorBound
+
+@[expose] public section
 
 namespace OAI
 

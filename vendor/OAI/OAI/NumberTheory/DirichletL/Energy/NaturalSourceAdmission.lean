@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.NaturalLowSourceBound
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.NaturalLowSourceBound
+
+@[expose] public section
 
 namespace OAI
 

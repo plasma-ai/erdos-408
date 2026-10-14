@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Analysis.Schur
-import Erdos408.OneSided.Memory.Space
-import Mathlib.Analysis.Complex.Exponential
-import Mathlib.Data.Nat.Choose.Sum
+module
+
+public import Erdos408.OneSided.Analysis.Schur
+public import Erdos408.OneSided.Memory.Space
+public import Mathlib.Analysis.Complex.Exponential
+public import Mathlib.Data.Nat.Choose.Sum
 
 /-!
 # The ghost operation
@@ -27,6 +29,8 @@ the exponential series. For each hitting particle the row sum is
 at most the square root of
 `exp(v₀ ∑_{hits} |cre| ν) exp(v₀ |del| ∑_{hits} ν)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Allocation.Endpoint
+module
+
+public import Erdos408.Extraction.Allocation.Endpoint
 
 /-!
 # The coin generating function
@@ -14,6 +16,8 @@ The algebra of E6 before any arithmetic.
 * The expansion `1 - α ℓ(ω_g(u)) = ∑_{K ⊆ g, |K| ≤ 2} c_α(|K|) [K ∣ u]`, with
   `c_α(0) = 1`, `c_α(1) = -α`, `c_α(2) = α`, and its product over a family.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondBlockSupport
-import OAI.NumberTheory.DirichletL.Moments.SourceDyadicShell
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondBlockSupport
+public import OAI.NumberTheory.DirichletL.Moments.SourceDyadicShell
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,9 +1,13 @@
-import Erdos821.S2.ConcreteMemory
-import Erdos821.S2.ConcreteNorms
-import Erdos821.S2.PacketAdapters
-import Erdos821.S2Nondiv.BigPrimeNondiv
+module
+
+public import Erdos821.S2.ConcreteMemory
+public import Erdos821.S2.ConcreteNorms
+public import Erdos821.S2.PacketAdapters
+public import Erdos821.S2Nondiv.BigPrimeNondiv
 
 /-! Assemble completed task proofs into the exact final transference proof packet. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

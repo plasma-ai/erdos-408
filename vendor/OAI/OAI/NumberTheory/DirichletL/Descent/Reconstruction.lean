@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.Decomposition
-import OAI.NumberTheory.DirichletL.Descent.Hybrid
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.Decomposition
+public import OAI.NumberTheory.DirichletL.Descent.Hybrid
+
+@[expose] public section
 
 namespace OAI
 

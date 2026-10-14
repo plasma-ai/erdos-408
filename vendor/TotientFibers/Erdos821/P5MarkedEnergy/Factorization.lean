@@ -1,11 +1,17 @@
-import Erdos821.P5MarkedEnergy.MarkRemoval
-import Erdos821.S56.GroupParts
-import Erdos821.P5.EndpointInvariance
-import Erdos821.P5.EndpointBounds
+module
+
+public import Erdos821.P5MarkedEnergy.MarkRemoval
+public import Erdos821.S56.GroupParts
+public import Erdos821.P5.EndpointInvariance
+public import Erdos821.P5.EndpointBounds
+public import Mathlib.Analysis.Complex.Polynomial.Basic
+public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 /-! The full integer factorization `w = m p_s p r` of a marked endpoint (paper
 §4, four-factor endpoint): the endpoint times the residual mark sum is a
 four-fold Dirichlet convolution. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

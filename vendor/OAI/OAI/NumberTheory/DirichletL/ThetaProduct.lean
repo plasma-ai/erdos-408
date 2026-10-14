@@ -1,5 +1,10 @@
-import Mathlib.NumberTheory.LSeries.HurwitzZetaEven
-import Mathlib.Tactic.Ring
+module
+
+public import Mathlib.NumberTheory.LSeries.HurwitzZetaEven
+public import Mathlib.Tactic.Ring
+public import Mathlib.Analysis.CStarAlgebra.Classes
+
+@[expose] public section
 
 namespace OAI
 

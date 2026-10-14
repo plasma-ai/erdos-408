@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralDefect
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralDefect
+
+@[expose] public section
 
 namespace OAI
 

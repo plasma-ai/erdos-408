@@ -1,4 +1,8 @@
-import Erdos821.S2Empty.BigAsymptotic
+module
+
+public import Erdos821.S2Empty.BigAsymptotic
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

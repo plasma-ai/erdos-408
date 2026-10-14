@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerSource
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerAssignedCanonical
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerWeights
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerSource
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerAssignedCanonical
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerWeights
+
+@[expose] public section
 
 namespace OAI
 

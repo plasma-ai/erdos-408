@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.RowCount
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.RowCount
+
+@[expose] public section
 
 namespace OAI
 

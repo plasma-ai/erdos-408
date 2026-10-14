@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Allocation.Asymptotics
-import Mathlib.Analysis.Complex.ExponentialBounds
+module
+
+public import Erdos408.Extraction.Allocation.Asymptotics
+public import Mathlib.Analysis.Complex.ExponentialBounds
 
 /-!
 # The budgets of E6–E8
@@ -12,6 +14,8 @@ For large `x`:
 * the candidate-square multiples up to `κ x + 1`, at most
   `(κ x + 1) exp(-L^{0.28}) · 6 T`, number at most `x L^{-D}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

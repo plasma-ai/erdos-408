@@ -1,5 +1,9 @@
-import Erdos821.S34.MajorDyadic
-import Erdos821.S34.ProductDyads
+module
+
+public import Erdos821.S34.MajorDyadic
+public import Erdos821.S34.ProductDyads
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

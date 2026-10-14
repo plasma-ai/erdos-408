@@ -1,7 +1,11 @@
-import Erdos821.P3Adj.Factor
-import Erdos821.P3Adj.Single
-import Erdos821.S2.MemoryGhost
-import Erdos821.S2.GhostTasks
+module
+
+public import Erdos821.P3Adj.Factor
+public import Erdos821.P3Adj.Single
+public import Erdos821.S2.MemoryGhost
+public import Erdos821.S2.GhostTasks
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

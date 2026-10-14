@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.Contractions
+module
+
+public import Erdos821.P3Clean.Contractions
 
 /-! The norm consequence of an exact conditioned bilinear-form identity. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

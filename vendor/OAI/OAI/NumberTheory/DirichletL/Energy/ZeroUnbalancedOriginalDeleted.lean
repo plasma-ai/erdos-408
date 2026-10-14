@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceReflection
-import OAI.NumberTheory.DirichletL.Energy.ZeroUnbalancedDeletedGeometry
-import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceError
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceReflection
+public import OAI.NumberTheory.DirichletL.Energy.ZeroUnbalancedDeletedGeometry
+public import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceError
+
+@[expose] public section
 
 namespace OAI
 

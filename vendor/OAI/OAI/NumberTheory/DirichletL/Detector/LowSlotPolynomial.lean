@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowSlotSplit
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowSlotSplit
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalWidth
-import OAI.NumberTheory.DirichletL.Reflection.PoolArithmetic
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalWidth
+public import OAI.NumberTheory.DirichletL.Reflection.PoolArithmetic
+
+@[expose] public section
 
 namespace OAI
 

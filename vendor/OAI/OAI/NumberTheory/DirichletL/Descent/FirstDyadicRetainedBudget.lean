@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstDyadicRetainedEnergy
-import OAI.NumberTheory.DirichletL.Descent.FirstLiveCountBudget
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveAggregate
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstDyadicRetainedEnergy
+public import OAI.NumberTheory.DirichletL.Descent.FirstLiveCountBudget
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveAggregate
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveEnergy
+
+@[expose] public section
 
 namespace OAI
 

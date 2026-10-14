@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.CubeBlocks
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.CubeBlocks
+
+@[expose] public section
 
 namespace OAI
 

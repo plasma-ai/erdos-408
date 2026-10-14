@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeRay
-import OAI.NumberTheory.DirichletL.Hecke.RowClosure
-import OAI.NumberTheory.DirichletL.Hecke.Conjugation
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeRay
+public import OAI.NumberTheory.DirichletL.Hecke.RowClosure
+public import OAI.NumberTheory.DirichletL.Hecke.Conjugation
+
+@[expose] public section
 
 namespace OAI
 

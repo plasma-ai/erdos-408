@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.UniformNormalized
-import OAI.NumberTheory.DirichletL.Reflection.SectorData
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.UniformNormalized
+public import OAI.NumberTheory.DirichletL.Reflection.SectorData
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import Erdos821.P5.WeightedLog
+module
+
+public import Erdos821.P5.WeightedLog
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

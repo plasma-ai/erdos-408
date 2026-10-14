@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.CubicReopening
-import OAI.NumberTheory.DirichletL.Eisenstein.MeromorphicResolvent
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.CubicReopening
+public import OAI.NumberTheory.DirichletL.Eisenstein.MeromorphicResolvent
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Moments.OriginalReflectionEnergy
-import OAI.NumberTheory.DirichletL.Moments.AbsoluteEnergy
-import OAI.NumberTheory.DirichletL.Moments.Counting
-import OAI.NumberTheory.DirichletL.Hecke.PrimeRay
-import OAI.NumberTheory.DirichletL.Moments.ComparisonReflection
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.OriginalReflectionEnergy
+public import OAI.NumberTheory.DirichletL.Moments.AbsoluteEnergy
+public import OAI.NumberTheory.DirichletL.Moments.Counting
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeRay
+public import OAI.NumberTheory.DirichletL.Moments.ComparisonReflection
+
+@[expose] public section
 
 namespace OAI
 

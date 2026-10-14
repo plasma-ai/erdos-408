@@ -1,4 +1,6 @@
-import Erdos408.Hypotheses
+module
+
+public import Erdos408.Hypotheses
 
 /-!
 # The spare prime polynomial
@@ -7,6 +9,8 @@ E9 of `blueprint/two_sided_correlation.md` §6.6 (PD (6.38)). Abel summation wri
 `∑_{p ∈ (lo, hi]} χ(p) p^{iu}` through the partial sums
 `S(y) = ∑_{p ∈ (lo, y]} χ(p) p^{-1 + iu}`, each bounded by `PrimeTwistBound`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.TupleHigh
 

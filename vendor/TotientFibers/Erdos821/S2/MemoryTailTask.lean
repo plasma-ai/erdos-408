@@ -1,6 +1,10 @@
-import Erdos821.S2.HistoryFinite
+module
+
+public import Erdos821.S2.HistoryFinite
 
 /-! The memory tail from doubled original ghost births and absolute rows. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

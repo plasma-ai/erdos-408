@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.HeckeWindowEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.HeckeWindowEnergy
+
+@[expose] public section
 
 namespace OAI
 

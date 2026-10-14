@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedCapacityCommon
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceSupport
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedCapacityCommon
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceSupport
+
+@[expose] public section
 
 namespace OAI
 

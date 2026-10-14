@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.ClippedUniform
-import OAI.NumberTheory.DirichletL.Descent.SecondCellPhysical
-import OAI.NumberTheory.DirichletL.Inversion.AmbientProfileTower
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ClippedUniform
+public import OAI.NumberTheory.DirichletL.Descent.SecondCellPhysical
+public import OAI.NumberTheory.DirichletL.Inversion.AmbientProfileTower
+
+@[expose] public section
 
 namespace OAI
 

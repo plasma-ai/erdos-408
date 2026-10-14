@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.Unequal
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Unequal
+
+@[expose] public section
 
 namespace OAI
 

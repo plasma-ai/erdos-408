@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorSimultaneous
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorSimultaneous
+
+@[expose] public section
 
 namespace OAI
 

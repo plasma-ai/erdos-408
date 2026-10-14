@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.MarkedEuler
-import OAI.NumberTheory.DirichletL.Detector.HighExcludedLocal
-import OAI.NumberTheory.DirichletL.Detector.HighEulerRational
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.MarkedEuler
+public import OAI.NumberTheory.DirichletL.Detector.HighExcludedLocal
+public import OAI.NumberTheory.DirichletL.Detector.HighEulerRational
+
+@[expose] public section
 
 namespace OAI
 

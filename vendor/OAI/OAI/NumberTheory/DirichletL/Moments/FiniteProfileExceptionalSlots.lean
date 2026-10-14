@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCapped
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCapped
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

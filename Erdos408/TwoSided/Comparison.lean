@@ -1,6 +1,8 @@
-import Erdos408.TwoSided.Comparison.Arcs
-import Erdos408.TwoSided.Endpoint
-import Erdos408.TwoSided.Graph.Insertion
+module
+
+public import Erdos408.TwoSided.Comparison.Arcs
+public import Erdos408.TwoSided.Endpoint
+public import Erdos408.TwoSided.Graph.Insertion
 
 /-!
 # The comparison bound
@@ -18,6 +20,8 @@ The constants: `A_m = A'' + K_Ψ`, the arc exponents `(C_arc, C_cost)`,
 `C_m = max(C_arc, C_f + 3)` (so `|σ| = 2π|ξ| ≤ L^{C_m}`), `A_SM = 2(A'' + K_Ψ + C_cost)`; the
 witness `A'` is interface E's at `(m₀, C_m, A_SM, M₁)`, and none of them depends on `E` (§1.3).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

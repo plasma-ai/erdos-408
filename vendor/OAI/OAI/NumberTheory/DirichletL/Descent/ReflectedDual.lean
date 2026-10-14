@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.ControlledMultiplier
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ControlledMultiplier
+
+@[expose] public section
 
 namespace OAI
 

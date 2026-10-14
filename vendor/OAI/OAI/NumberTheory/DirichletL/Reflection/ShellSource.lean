@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.FullDyadic
-import OAI.NumberTheory.DirichletL.Reflection.PhysicalIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.FullDyadic
+public import OAI.NumberTheory.DirichletL.Reflection.PhysicalIntegral
+
+@[expose] public section
 
 namespace OAI
 

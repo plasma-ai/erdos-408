@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeExtraction
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeExtraction
+
+@[expose] public section
 
 namespace OAI
 

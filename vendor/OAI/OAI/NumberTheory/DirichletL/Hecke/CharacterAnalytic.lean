@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.Coordinates
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Coordinates
+
+@[expose] public section
 
 namespace OAI
 

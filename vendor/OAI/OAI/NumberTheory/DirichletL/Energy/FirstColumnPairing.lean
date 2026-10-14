@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstReferenceEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstReferenceEnergy
+
+@[expose] public section
 
 namespace OAI
 

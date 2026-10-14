@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondVaryingDensity
-import OAI.NumberTheory.DirichletL.Inversion.SecondProfileUniform
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondVaryingDensity
+public import OAI.NumberTheory.DirichletL.Inversion.SecondProfileUniform
+
+@[expose] public section
 
 namespace OAI
 

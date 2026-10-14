@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceHomogeneousError
-import OAI.NumberTheory.DirichletL.Moments.RayMaskedFloorCoefficients
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceHomogeneousError
+public import OAI.NumberTheory.DirichletL.Moments.RayMaskedFloorCoefficients
+
+@[expose] public section
 
 namespace OAI
 

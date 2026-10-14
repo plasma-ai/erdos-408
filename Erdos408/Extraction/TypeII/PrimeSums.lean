@@ -1,5 +1,7 @@
-import Erdos408.Mertens
-import Erdos408.Extraction.Defs
+module
+
+public import Erdos408.Mertens
+public import Erdos408.Extraction.Defs
 
 /-!
 # Prime sums for the proxy estimates
@@ -8,6 +10,8 @@ Mertens' third theorem in the form `∏_{p ≤ y} (1 - 1/p) ≥ c₃ / log y`, a
 identification of the prime sets `primesIcc 2 y`, `primesIoc 1 y` and
 `{p ≤ N prime}` used by the Euler-product bounds.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

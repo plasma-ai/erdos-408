@@ -1,4 +1,8 @@
-import Erdos821.P5.ExceptionalCount
+module
+
+public import Erdos821.P5.ExceptionalCount
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

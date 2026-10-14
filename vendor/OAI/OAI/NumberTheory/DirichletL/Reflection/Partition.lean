@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.Cofactor
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Cofactor
+
+@[expose] public section
 
 namespace OAI
 

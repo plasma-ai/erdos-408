@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowDeletedGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowDeletedGeometry
+
+@[expose] public section
 
 namespace OAI
 

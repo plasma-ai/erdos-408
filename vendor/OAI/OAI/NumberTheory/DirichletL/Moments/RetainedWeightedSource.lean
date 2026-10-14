@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.OriginalReflectionApproximation
-import OAI.NumberTheory.DirichletL.Moments.ReflectedNormalization
-import OAI.NumberTheory.DirichletL.Moments.ReflectionWeightedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.OriginalReflectionApproximation
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedNormalization
+public import OAI.NumberTheory.DirichletL.Moments.ReflectionWeightedEnergy
+
+@[expose] public section
 
 namespace OAI
 

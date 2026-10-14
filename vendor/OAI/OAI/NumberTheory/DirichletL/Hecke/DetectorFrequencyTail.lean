@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorFrequency
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorFrequency
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialInputRadial
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialInputRadial
+
+@[expose] public section
 
 namespace OAI
 

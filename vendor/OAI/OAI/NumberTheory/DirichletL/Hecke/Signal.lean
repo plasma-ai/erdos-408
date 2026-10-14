@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.ReciprocalBound
-import OAI.NumberTheory.DirichletL.ContinuationContour
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.ReciprocalBound
+public import OAI.NumberTheory.DirichletL.ContinuationContour
+
+@[expose] public section
 
 namespace OAI
 

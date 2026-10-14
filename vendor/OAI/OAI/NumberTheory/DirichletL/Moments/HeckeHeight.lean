@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.HeckeTwist
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.HeckeTwist
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,11 +1,13 @@
-import Erdos408.Analytic.Core
-import Erdos408.Hypotheses
-import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt
-import Mathlib.NumberTheory.Chebyshev
-import Mathlib.NumberTheory.Harmonic.ZetaAsymp
-import Mathlib.NumberTheory.LSeries.Dirichlet
-import Mathlib.NumberTheory.LSeries.DirichletContinuation
-import PrimeNumberTheoremAnd.PerronFormula
+module
+
+public import Erdos408.Analytic.Core
+public import Erdos408.Hypotheses
+public import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt
+public import Mathlib.NumberTheory.Chebyshev
+public import Mathlib.NumberTheory.Harmonic.ZetaAsymp
+public import Mathlib.NumberTheory.LSeries.Dirichlet
+public import Mathlib.NumberTheory.LSeries.DirichletContinuation
+public import PrimeNumberTheoremAnd.PerronFormula
 
 /-!
 # Twisted prime sums at large heights
@@ -26,6 +28,8 @@ AC2 of `blueprint/rectangle_input.md` §3, the premise `PrimeTwistBound` of
   sums, prime powers cost `ψ - θ ≪ √H log H`, and Abel summation with the weights
   `1 / (p log p)` gives the twisted prime sum.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

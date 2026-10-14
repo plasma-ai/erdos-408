@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationPrimePool
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationPrimePool
+
+@[expose] public section
 
 namespace OAI
 

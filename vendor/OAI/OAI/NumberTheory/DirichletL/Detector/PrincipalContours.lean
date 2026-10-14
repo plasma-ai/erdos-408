@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.FiniteProductX
-import OAI.NumberTheory.DirichletL.Hecke.ReciprocalGrowth
-import Mathlib.MeasureTheory.Constructions.Polish.Basic
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.FiniteProductX
+public import OAI.NumberTheory.DirichletL.Hecke.ReciprocalGrowth
+public import Mathlib.MeasureTheory.Constructions.Polish.Basic
+
+@[expose] public section
 
 namespace OAI
 

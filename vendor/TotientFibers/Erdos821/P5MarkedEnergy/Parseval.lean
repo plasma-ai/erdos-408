@@ -1,8 +1,13 @@
-import Erdos821.P5.LocalEnergyTask
-import Erdos821.P5MarkedEnergy.Factorization
+module
+
+public import Erdos821.P5.LocalEnergyTask
+public import Erdos821.P5MarkedEnergy.Factorization
+public import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 
 /-! Parseval's identity on an interval of length at most one, as an upper bound
 for the additive energy of a finite exponential sum. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

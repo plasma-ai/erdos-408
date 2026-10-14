@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.MeanSquare.DiagonalDensity
+module
+
+public import OAI.NumberTheory.DirichletL.MeanSquare.DiagonalDensity
+
+@[expose] public section
 
 namespace OAI
 

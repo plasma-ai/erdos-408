@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildSourceCaps
-import OAI.NumberTheory.DirichletL.Moments.CommonRadialPointwise
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildSourceCaps
+public import OAI.NumberTheory.DirichletL.Moments.CommonRadialPointwise
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalBudget
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import Erdos821.S2.MemoryIndices
+module
+
+public import Erdos821.S2.MemoryIndices
 
 /-! Index-level conservation needed to reconstruct original prime lifespans. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstRowGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstRowGeometry
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralWTail
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralWTail
+
+@[expose] public section
 
 namespace OAI
 

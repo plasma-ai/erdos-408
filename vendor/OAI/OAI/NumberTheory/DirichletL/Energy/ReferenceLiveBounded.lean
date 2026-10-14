@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceRobustBounded
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceRobustBounded
+
+@[expose] public section
 
 namespace OAI
 

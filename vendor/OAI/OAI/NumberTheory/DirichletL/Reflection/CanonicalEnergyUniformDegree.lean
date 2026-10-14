@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalEnergy
-import OAI.NumberTheory.DirichletL.Reflection.MemberGeometryUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.MemberGeometryUniformDegree
+
+@[expose] public section
 
 namespace OAI
 

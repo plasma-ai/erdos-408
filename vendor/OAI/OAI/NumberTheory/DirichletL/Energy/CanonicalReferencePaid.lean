@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.CanonicalCommonPaid
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedCapacityCommon
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalCommonPaid
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedCapacityCommon
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.BarrierPotential
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.BarrierPotential
+
+@[expose] public section
 
 namespace OAI
 

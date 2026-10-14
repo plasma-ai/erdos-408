@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.MarkedFourier
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.MarkedFourier
+
+@[expose] public section
 
 namespace OAI
 

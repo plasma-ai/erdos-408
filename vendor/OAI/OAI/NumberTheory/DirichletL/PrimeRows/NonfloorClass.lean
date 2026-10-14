@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorMoments
-import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorExponent
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorMoments
+public import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorExponent
+
+@[expose] public section
 
 namespace OAI
 

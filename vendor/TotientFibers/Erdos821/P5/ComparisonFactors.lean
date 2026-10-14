@@ -1,5 +1,9 @@
-import Erdos821.P5.ResidualCoefficient
-import Erdos821.P4Char.Basic
+module
+
+public import Erdos821.P5.ResidualCoefficient
+public import Erdos821.P4Char.Basic
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

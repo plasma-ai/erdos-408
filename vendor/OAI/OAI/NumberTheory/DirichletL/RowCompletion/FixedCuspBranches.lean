@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.FixedConductor
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.FixedConductor
+
+@[expose] public section
 
 namespace OAI
 

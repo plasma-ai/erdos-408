@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeAmplitudeScale
-import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeAmplitudeScale
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
+
+@[expose] public section
 
 namespace OAI
 

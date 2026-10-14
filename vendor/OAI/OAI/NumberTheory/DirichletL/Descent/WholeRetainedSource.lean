@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.WholePriorityPhysical
-import OAI.NumberTheory.DirichletL.Descent.SecondDeletedModeEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.WholePriorityPhysical
+public import OAI.NumberTheory.DirichletL.Descent.SecondDeletedModeEnergy
+
+@[expose] public section
 
 namespace OAI
 

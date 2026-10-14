@@ -1,7 +1,11 @@
-import Erdos821.P5.EndpointBounds
-import Erdos821.P5.GroupFreeBounds
-import Erdos821.P5.ProgressionIntervals
-import Erdos821.Classical.DivisorMoments
+module
+
+public import Erdos821.P5.EndpointBounds
+public import Erdos821.P5.GroupFreeBounds
+public import Erdos821.P5.ProgressionIntervals
+public import Erdos821.Classical.DivisorMoments
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

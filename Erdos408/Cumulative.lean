@@ -1,4 +1,6 @@
-import Erdos408.Mertens
+module
+
+public import Erdos408.Mertens
 
 /-!
 # From dyadic to cumulative prime moments
@@ -13,6 +15,8 @@ proof of Proposition 4.1 of *The normal order of the number of iterations of
 Euler's function* (Plasma AI, 2026), §4, normalized by `π(t)` with an absolute
 error, so that no rate in the prime number theorem is needed.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

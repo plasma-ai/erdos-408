@@ -1,4 +1,10 @@
-import Erdos821.P5.Basic
+module
+
+public import Erdos821.P5.Basic
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ComplexConjugate InnerProductSpace

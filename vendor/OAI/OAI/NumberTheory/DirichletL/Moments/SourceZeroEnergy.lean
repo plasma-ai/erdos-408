@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceProfileMass
-import OAI.NumberTheory.DirichletL.Moments.SupportedZeroEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceProfileMass
+public import OAI.NumberTheory.DirichletL.Moments.SupportedZeroEnergy
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.MellinScaling
-import OAI.NumberTheory.DirichletL.Detector.SourceTriple
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.MellinScaling
+public import OAI.NumberTheory.DirichletL.Detector.SourceTriple
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.GramMobiusPool
-import OAI.NumberTheory.DirichletL.Detector.GramMobiusLattice
-import OAI.NumberTheory.DirichletL.Detector.GramShell
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramMobiusPool
+public import OAI.NumberTheory.DirichletL.Detector.GramMobiusLattice
+public import OAI.NumberTheory.DirichletL.Detector.GramShell
+
+@[expose] public section
 
 namespace OAI
 

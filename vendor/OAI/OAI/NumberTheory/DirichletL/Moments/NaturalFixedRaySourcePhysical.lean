@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceProduct
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceProduct
+
+@[expose] public section
 
 namespace OAI
 

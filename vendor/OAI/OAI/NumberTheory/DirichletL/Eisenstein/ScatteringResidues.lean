@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.SourceProjection
-import OAI.NumberTheory.DirichletL.Eisenstein.ResidualFourierSeries
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.SourceProjection
+public import OAI.NumberTheory.DirichletL.Eisenstein.ResidualFourierSeries
+
+@[expose] public section
 
 namespace OAI
 

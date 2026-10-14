@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondOriginalChildren
-import OAI.NumberTheory.DirichletL.Moments.SecondDivisorSupport
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondOriginalChildren
+public import OAI.NumberTheory.DirichletL.Moments.SecondDivisorSupport
+
+@[expose] public section
 
 namespace OAI
 

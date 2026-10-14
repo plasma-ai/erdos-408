@@ -1,5 +1,10 @@
-import Erdos821.P4Probe.Family
-import Erdos821.P4Char.Basic
+module
+
+public import Erdos821.P4Probe.Family
+public import Erdos821.P4Char.Basic
+public import Mathlib.Algebra.Order.Star.Real
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

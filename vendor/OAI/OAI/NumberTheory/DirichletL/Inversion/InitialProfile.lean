@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.ClippingProfiles
-import OAI.NumberTheory.DirichletL.Descent.SecondFreshMeasure
-import OAI.NumberTheory.DirichletL.Descent.ProfileIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.ClippingProfiles
+public import OAI.NumberTheory.DirichletL.Descent.SecondFreshMeasure
+public import OAI.NumberTheory.DirichletL.Descent.ProfileIntegral
+
+@[expose] public section
 
 namespace OAI
 

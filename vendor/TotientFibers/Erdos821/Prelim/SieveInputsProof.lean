@@ -1,5 +1,9 @@
-import Erdos821.Prelim.SieveBlockProof
-import Erdos821.P2Rough.RoughPolynomial
+module
+
+public import Erdos821.Prelim.SieveBlockProof
+public import Erdos821.P2Rough.RoughPolynomial
+
+@[expose] public section
 
 namespace Erdos821.Blueprint
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.DivisorEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DivisorEnergy
+
+@[expose] public section
 
 namespace OAI
 

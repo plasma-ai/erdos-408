@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.TaylorBounds
+module
+
+public import OAI.NumberTheory.PrimeGaps.TaylorBounds
+
+@[expose] public section
 
 namespace OAI
 

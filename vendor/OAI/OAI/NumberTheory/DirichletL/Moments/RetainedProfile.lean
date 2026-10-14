@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.HeckeHeight
-import Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.HeckeHeight
+public import Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas
+
+@[expose] public section
 
 namespace OAI
 

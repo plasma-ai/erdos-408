@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorNoSlotInverseCount
-import OAI.NumberTheory.DirichletL.Hecke.DetectorNoSlotPlainCount
-import OAI.NumberTheory.DirichletL.Hecke.DetectorSupportedWitness
-import OAI.NumberTheory.DirichletL.Hecke.DetectorBranchBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorNoSlotInverseCount
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorNoSlotPlainCount
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorSupportedWitness
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorBranchBudget
+
+@[expose] public section
 
 namespace OAI
 

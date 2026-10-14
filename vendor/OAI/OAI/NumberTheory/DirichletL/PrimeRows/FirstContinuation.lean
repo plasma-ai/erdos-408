@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.Continuation
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstAnalytic
-import OAI.NumberTheory.DirichletL.Detector.HighRowsFirstRamified
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.Continuation
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstAnalytic
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsFirstRamified
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondSourceTuples
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondSourceTuples
+
+@[expose] public section
 
 namespace OAI
 

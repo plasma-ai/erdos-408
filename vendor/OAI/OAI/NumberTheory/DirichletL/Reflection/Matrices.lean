@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.Sector
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Sector
+
+@[expose] public section
 
 namespace OAI
 

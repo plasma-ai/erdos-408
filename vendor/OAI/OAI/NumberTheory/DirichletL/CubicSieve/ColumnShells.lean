@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.QuotientColumns
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.QuotientColumns
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import Erdos821.S2Root.AbsoluteClosedRoot
-import Erdos821.S2.RootMemoryBound
+module
+
+public import Erdos821.S2Root.AbsoluteClosedRoot
+public import Erdos821.S2.RootMemoryBound
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

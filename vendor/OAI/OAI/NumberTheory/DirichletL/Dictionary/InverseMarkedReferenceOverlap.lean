@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceProducts
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceProducts
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.PhysicalPoisson
-import OAI.NumberTheory.DirichletL.Detector.PhysicalReopen
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalPoisson
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalReopen
+
+@[expose] public section
 
 namespace OAI
 

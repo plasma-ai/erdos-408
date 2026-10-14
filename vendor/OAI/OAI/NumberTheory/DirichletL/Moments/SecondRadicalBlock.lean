@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondIdealBlockBound
-import OAI.NumberTheory.DirichletL.Moments.SecondMaskedWindow
-import OAI.NumberTheory.DirichletL.Moments.SecondRadicalColumns
-import OAI.NumberTheory.DirichletL.Moments.SecondWindowBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondIdealBlockBound
+public import OAI.NumberTheory.DirichletL.Moments.SecondMaskedWindow
+public import OAI.NumberTheory.DirichletL.Moments.SecondRadicalColumns
+public import OAI.NumberTheory.DirichletL.Moments.SecondWindowBudget
+
+@[expose] public section
 
 namespace OAI
 

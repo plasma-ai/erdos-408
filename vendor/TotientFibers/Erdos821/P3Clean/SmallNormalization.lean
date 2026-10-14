@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.ProductConditioning
+module
+
+public import Erdos821.P3Clean.ProductConditioning
 
 /-! The normalized small-conditioning coefficient has exactly the literal edge normalization. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

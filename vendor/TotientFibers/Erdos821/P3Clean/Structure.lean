@@ -1,6 +1,10 @@
-import Erdos821.S2.EdgeTasks
+module
+
+public import Erdos821.S2.EdgeTasks
 
 /-! The literal clean mask and the diagonal memory translation. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

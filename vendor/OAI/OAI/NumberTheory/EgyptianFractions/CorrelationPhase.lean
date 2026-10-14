@@ -1,5 +1,9 @@
-import OAI.NumberTheory.EgyptianFractions.ForwardDifference
-import OAI.NumberTheory.EgyptianFractions.IteratedDifferencing
+module
+
+public import OAI.NumberTheory.EgyptianFractions.ForwardDifference
+public import OAI.NumberTheory.EgyptianFractions.IteratedDifferencing
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

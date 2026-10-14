@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalCompleteRankNormalized
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalCompleteRankNormalized
+
+@[expose] public section
 
 namespace OAI
 

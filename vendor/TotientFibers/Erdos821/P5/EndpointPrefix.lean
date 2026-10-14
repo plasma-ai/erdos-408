@@ -1,4 +1,8 @@
-import Erdos821.P5.EndpointMean
+module
+
+public import Erdos821.P5.EndpointMean
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

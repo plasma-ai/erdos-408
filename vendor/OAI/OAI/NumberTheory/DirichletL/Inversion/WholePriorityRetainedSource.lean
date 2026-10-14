@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.WholePriorityValidSource
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.WholePriorityValidSource
+
+@[expose] public section
 
 namespace OAI
 

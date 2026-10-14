@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAnnularActiveInput
-import OAI.NumberTheory.DirichletL.Moments.AmplificationRadicalChoice
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAnnularActiveInput
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationRadicalChoice
+
+@[expose] public section
 
 namespace OAI
 

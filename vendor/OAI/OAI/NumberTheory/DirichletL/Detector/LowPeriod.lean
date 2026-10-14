@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowRow
-import OAI.NumberTheory.DirichletL.Detector.PhysicalAnalytic
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowRow
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalAnalytic
+
+@[expose] public section
 
 namespace OAI
 

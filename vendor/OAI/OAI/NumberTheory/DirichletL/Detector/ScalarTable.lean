@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.ScalarVanishing
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.ScalarVanishing
+
+@[expose] public section
 
 namespace OAI
 

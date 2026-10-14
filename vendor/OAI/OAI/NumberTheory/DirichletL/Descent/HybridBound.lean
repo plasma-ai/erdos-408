@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SourceHybrid
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SourceHybrid
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimePowers
-import OAI.NumberTheory.DirichletL.PrimeLogProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimePowers
+public import OAI.NumberTheory.DirichletL.PrimeLogProfile
+
+@[expose] public section
 
 namespace OAI
 

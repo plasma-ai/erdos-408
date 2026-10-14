@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceInputReindex
-import OAI.NumberTheory.DirichletL.Moments.AllocatedRayDictionary
-import OAI.NumberTheory.DirichletL.Moments.FirstSecondInputGates
-import OAI.NumberTheory.DirichletL.Moments.FirstAnnularActiveInput
-import OAI.NumberTheory.DirichletL.Moments.FirstChildProfileControl
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceInputReindex
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedRayDictionary
+public import OAI.NumberTheory.DirichletL.Moments.FirstSecondInputGates
+public import OAI.NumberTheory.DirichletL.Moments.FirstAnnularActiveInput
+public import OAI.NumberTheory.DirichletL.Moments.FirstChildProfileControl
+
+@[expose] public section
 
 namespace OAI
 

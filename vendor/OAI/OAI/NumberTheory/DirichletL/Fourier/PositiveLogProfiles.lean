@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.FiniteFourier
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.FiniteFourier
+
+@[expose] public section
 
 namespace OAI
 

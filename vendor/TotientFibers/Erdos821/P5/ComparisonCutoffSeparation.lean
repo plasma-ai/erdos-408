@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparisonMellinIntegral
-import Erdos821.P5.ComparisonSupport
+module
+
+public import Erdos821.P5.ComparisonMellinIntegral
+public import Erdos821.P5.ComparisonSupport
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

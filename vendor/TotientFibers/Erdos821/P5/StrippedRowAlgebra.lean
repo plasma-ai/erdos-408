@@ -1,5 +1,9 @@
-import Erdos821.P5.ResidualCoefficient
-import Erdos821.P5.FreeMarkedExclusion
+module
+
+public import Erdos821.P5.ResidualCoefficient
+public import Erdos821.P5.FreeMarkedExclusion
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

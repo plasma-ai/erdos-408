@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.ControlledPrimeStrata
-import OAI.NumberTheory.DirichletL.RowCompletion.FreePrimePools
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.ControlledPrimeStrata
+public import OAI.NumberTheory.DirichletL.RowCompletion.FreePrimePools
+
+@[expose] public section
 
 namespace OAI
 

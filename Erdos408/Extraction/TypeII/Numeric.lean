@@ -1,4 +1,6 @@
-import Erdos408.Extraction.TypeII.Pointwise
+module
+
+public import Erdos408.Extraction.TypeII.Pointwise
 
 /-!
 # The size of the bounds
@@ -9,6 +11,8 @@ Every factor of `B₄` and `B₅` other than the powers of `L` is `exp(O(s³)) =
   by Mertens' second theorem, so the factor-sum powers are `exp(O(R² s))`;
 * `𝒩, 2^{K N'}` and the endpoint bound are `exp(O(s))`, and `T^{C_Φ} = exp(C_Φ s)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

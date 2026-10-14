@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstReduced
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstReduced
+
+@[expose] public section
 
 namespace OAI
 

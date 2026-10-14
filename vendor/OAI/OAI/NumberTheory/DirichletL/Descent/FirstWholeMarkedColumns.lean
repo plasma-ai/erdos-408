@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstMarkedZero
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstMarkedZero
+
+@[expose] public section
 
 namespace OAI
 

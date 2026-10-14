@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.AllocatedDetectorAmplitude
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalAllocationShell
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedDetectorAmplitude
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalAllocationShell
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Arithmetic.IdealMobius
+module
+
+public import OAI.NumberTheory.DirichletL.Arithmetic.IdealMobius
+
+@[expose] public section
 
 namespace OAI
 

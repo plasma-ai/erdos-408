@@ -1,8 +1,10 @@
-import Erdos408.Analytic.Core
-import Erdos408.Hypotheses
-import Mathlib.Analysis.SpecialFunctions.JapaneseBracket
-import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt
-import PrimeNumberTheoremAnd.PerronFormula
+module
+
+public import Erdos408.Analytic.Core
+public import Erdos408.Hypotheses
+public import Mathlib.Analysis.SpecialFunctions.JapaneseBracket
+public import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt
+public import PrimeNumberTheoremAnd.PerronFormula
 
 /-!
 # The integer kernel in progressions
@@ -18,6 +20,8 @@ the line is shifted to `re s = 63/64`, where `|L| ≤ exp(C √L)`; this saves
 `H^{-1/128}`. A residue class `a mod k` is reduced by `g = (a, k)` to a unit
 class modulo `k / g`, which is an average of character twists.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

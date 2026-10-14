@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparisonScaleAsymptotics
-import Erdos821.P5.MinorArcTask
+module
+
+public import Erdos821.P5.ComparisonScaleAsymptotics
+public import Erdos821.P5.MinorArcTask
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

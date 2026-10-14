@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.OriginalSource
-import OAI.NumberTheory.DirichletL.Moments.RetainedProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.OriginalSource
+public import OAI.NumberTheory.DirichletL.Moments.RetainedProfile
+
+@[expose] public section
 
 namespace OAI
 

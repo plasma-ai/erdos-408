@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorFrequencyTail
-import OAI.NumberTheory.DirichletL.Hecke.DetectorLower
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorFrequencyTail
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorLower
+
+@[expose] public section
 
 namespace OAI
 

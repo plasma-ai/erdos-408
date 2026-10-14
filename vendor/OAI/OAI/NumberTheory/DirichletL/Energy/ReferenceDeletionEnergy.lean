@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceWeightedEnergy
-import OAI.NumberTheory.DirichletL.Energy.ReferenceDeletionBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceWeightedEnergy
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceDeletionBudget
+
+@[expose] public section
 
 namespace OAI
 

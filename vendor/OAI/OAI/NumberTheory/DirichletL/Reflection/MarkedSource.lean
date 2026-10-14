@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.MarkedJoined
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedJoined
+
+@[expose] public section
 
 namespace OAI
 

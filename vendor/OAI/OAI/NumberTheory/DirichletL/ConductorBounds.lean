@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.FiniteConductor
-import Mathlib.RingTheory.Ideal.Quotient.Operations
-import Mathlib.RingTheory.Ideal.Norm.AbsNorm
+module
+
+public import OAI.NumberTheory.DirichletL.FiniteConductor
+public import Mathlib.RingTheory.Ideal.Quotient.Operations
+public import Mathlib.RingTheory.Ideal.Norm.AbsNorm
+
+@[expose] public section
 
 namespace OAI
 

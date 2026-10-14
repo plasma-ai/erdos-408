@@ -1,4 +1,9 @@
-import OAI.NumberTheory.EgyptianFractions.VanDerCorput
+module
+
+public import OAI.NumberTheory.EgyptianFractions.VanDerCorput
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowth
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthReserve
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthOriginal
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowth
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthReserve
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthOriginal
+
+@[expose] public section
 
 namespace OAI
 

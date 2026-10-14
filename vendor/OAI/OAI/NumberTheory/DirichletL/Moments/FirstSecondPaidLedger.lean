@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstSecondCapacityDefect
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalLedger
-import OAI.NumberTheory.DirichletL.Moments.SecondCanonical
-import OAI.NumberTheory.DirichletL.Moments.FinalStageLedger
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstSecondCapacityDefect
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalLedger
+public import OAI.NumberTheory.DirichletL.Moments.SecondCanonical
+public import OAI.NumberTheory.DirichletL.Moments.FinalStageLedger
+
+@[expose] public section
 
 namespace OAI
 

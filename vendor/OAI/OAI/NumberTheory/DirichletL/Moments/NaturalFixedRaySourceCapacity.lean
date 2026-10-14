@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceBatch
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceBatch
+
+@[expose] public section
 
 namespace OAI
 

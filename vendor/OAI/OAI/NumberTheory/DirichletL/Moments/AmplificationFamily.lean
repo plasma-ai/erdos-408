@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationSourceError
-import OAI.NumberTheory.DirichletL.Moments.SecondChildProfile
-import OAI.NumberTheory.DirichletL.Moments.FirstTailAggregate
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationSourceError
+public import OAI.NumberTheory.DirichletL.Moments.SecondChildProfile
+public import OAI.NumberTheory.DirichletL.Moments.FirstTailAggregate
+
+@[expose] public section
 
 namespace OAI
 

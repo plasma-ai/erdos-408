@@ -1,4 +1,8 @@
-import Erdos821.P5.GroupFreeBounds
+module
+
+public import Erdos821.P5.GroupFreeBounds
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

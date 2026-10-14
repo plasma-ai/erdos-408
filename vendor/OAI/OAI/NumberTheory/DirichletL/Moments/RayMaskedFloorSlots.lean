@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceRayPrime
-import OAI.NumberTheory.DirichletL.Moments.CommonMaskEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceRayPrime
+public import OAI.NumberTheory.DirichletL.Moments.CommonMaskEnergy
+
+@[expose] public section
 
 namespace OAI
 

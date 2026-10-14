@@ -1,8 +1,10 @@
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Data.Nat.Factorial.Basic
-import Mathlib.Data.Fintype.Powerset
-import Mathlib.Algebra.Order.BigOperators.Ring.Finset
-import Mathlib.Data.Nat.Choose.Sum
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Data.Nat.Factorial.Basic
+public import Mathlib.Data.Fintype.Powerset
+public import Mathlib.Algebra.Order.BigOperators.Ring.Finset
+public import Mathlib.Data.Nat.Choose.Sum
 
 /-!
 # The partition identity for distinct births
@@ -15,6 +17,8 @@ with one common prime. Then the indicator that the performed values are distinct
 disjoint blocks of size at least two. The coefficient mass at rank
 `r(𝒞) = ∑_C (|C| - 1)` is at most `|α|^{2r}`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

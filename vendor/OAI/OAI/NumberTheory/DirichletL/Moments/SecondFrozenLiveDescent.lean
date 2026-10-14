@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSourceRemainder
-import OAI.NumberTheory.DirichletL.Moments.SecondFrozenLiveSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSourceRemainder
+public import OAI.NumberTheory.DirichletL.Moments.SecondFrozenLiveSource
+
+@[expose] public section
 
 namespace OAI
 

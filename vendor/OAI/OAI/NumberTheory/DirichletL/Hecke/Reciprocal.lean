@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.ZeroSupremum
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.ZeroSupremum
+
+@[expose] public section
 
 namespace OAI
 

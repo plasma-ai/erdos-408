@@ -1,6 +1,10 @@
-import Erdos821.P5.ComparisonCellScales
-import Erdos821.S34.CellCount
-import Erdos821.S34.ScaleGrowth
+module
+
+public import Erdos821.P5.ComparisonCellScales
+public import Erdos821.S34.CellCount
+public import Erdos821.S34.ScaleGrowth
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

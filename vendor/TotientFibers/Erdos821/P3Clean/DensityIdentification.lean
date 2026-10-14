@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.Contractions
+module
+
+public import Erdos821.P3Clean.Contractions
 
 /-! Unitary square-root density identification in the finite-support norm. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

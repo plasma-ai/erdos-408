@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.ProductCRT
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ProductCRT
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.AnnularRecursion
-import OAI.NumberTheory.DirichletL.Eisenstein.ConstantTermSupport
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.AnnularRecursion
+public import OAI.NumberTheory.DirichletL.Eisenstein.ConstantTermSupport
+
+@[expose] public section
 
 namespace OAI
 

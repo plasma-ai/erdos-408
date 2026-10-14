@@ -1,5 +1,8 @@
-import Mathlib
-import OAI.NumberTheory.PrimeGaps.AdditiveSieve
+module
+
+public import OAI.NumberTheory.PrimeGaps.AdditiveSieve
+
+@[expose] public section
 
 set_option autoImplicit false
 

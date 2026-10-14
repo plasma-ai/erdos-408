@@ -1,8 +1,10 @@
-import Erdos408.Extraction.Sieve
-import Erdos408.Mertens
-import Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas
-import Mathlib.Analysis.SpecialFunctions.SmoothTransition
-import Mathlib.NumberTheory.Chebyshev
+module
+
+public import Erdos408.Extraction.Sieve
+public import Erdos408.Mertens
+public import Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas
+public import Mathlib.Analysis.SpecialFunctions.SmoothTransition
+public import Mathlib.NumberTheory.Chebyshev
 
 /-!
 # From the smoothed statistic to `RectangleInput`
@@ -27,6 +29,8 @@ strips `(x - 2x/W, x]` and `(2x, 2x + 2x/W]` directly. With margin `T⁻²⁰`:
 So the strips lose `O((x / L) T⁶⁰ (1/W + x^{-c})) = O((x / L) T⁻³⁰⁰)`, and
 dividing by `Π_x` gives `RectangleInput` with margin constant `1`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityBranches
-import OAI.NumberTheory.DirichletL.Descent.GlobalPrincipalMassPrefactor
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityBranches
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPrincipalMassPrefactor
+
+@[expose] public section
 
 namespace OAI
 

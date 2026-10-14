@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialCompletePool
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedPolynomial
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialCompletePool
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedPolynomial
+
+@[expose] public section
 
 namespace OAI
 

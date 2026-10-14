@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.SourceAmplitudeClasses
-import OAI.NumberTheory.DirichletL.Detector.CentralClassPartition
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SourceAmplitudeClasses
+public import OAI.NumberTheory.DirichletL.Detector.CentralClassPartition
+
+@[expose] public section
 
 namespace OAI
 

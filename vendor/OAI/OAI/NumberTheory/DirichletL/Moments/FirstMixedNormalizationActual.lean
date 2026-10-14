@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedNormalization
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedRoot
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedNormalization
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedRoot
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceDeletionCapacity
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceDeletionCapacity
+
+@[expose] public section
 
 namespace OAI
 

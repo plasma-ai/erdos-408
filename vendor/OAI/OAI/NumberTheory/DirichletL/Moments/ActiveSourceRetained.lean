@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceRectangleEnergy
-import OAI.NumberTheory.DirichletL.Moments.ActiveAllocation
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceRectangleEnergy
+public import OAI.NumberTheory.DirichletL.Moments.ActiveAllocation
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,11 @@
-import Erdos821.Classical.DerivativeTests
-import OAI.NumberTheory.EgyptianFractions.CorrelationPhase
-import OAI.NumberTheory.EgyptianFractions.ReciprocalDerivatives
+module
+
+public import Erdos821.Classical.DerivativeTests
+public import OAI.NumberTheory.EgyptianFractions.CorrelationPhase
+public import OAI.NumberTheory.EgyptianFractions.ReciprocalDerivatives
+public import Mathlib.Analysis.Real.Pi.Bounds
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators
@@ -30,18 +35,18 @@ def LogPhaseSumTask : Prop :=
       ‖∑ y ∈ Finset.Icc ⌈lo⌉ ⌊hi⌋,
         mellin (q * (y : ℝ) + a) u‖ ≤ K * N * (|u|⁻¹ + N ^ (-δ))
 
-private def logPhase (q a : ℕ) (u y : ℝ) : ℝ :=
+def logPhase (q a : ℕ) (u y : ℝ) : ℝ :=
   u / (2 * Real.pi) * Real.log ((q : ℝ) * y + a)
 
 /-! Local logarithmic derivative lemmas. These are the forms used by the
 generic positive-shift mean-value theorem imported through `CorrelationPhase`.
 -/
 
-private lemma logPhase_base_smooth (Z : ℝ) :
+lemma logPhase_base_smooth (Z : ℝ) :
     ContDiffOn ℝ ∞ (fun y : ℝ => Z * Real.log y) (Set.Ioi 0) :=
   contDiffOn_const.mul (Real.contDiffOn_log.mono (fun _ hx => ne_of_gt hx))
 
-private lemma logPhase_base_iteratedDeriv (k : ℕ) (Z : ℝ) {x : ℝ}
+lemma logPhase_base_iteratedDeriv (k : ℕ) (Z : ℝ) {x : ℝ}
     (hx : 0 < x) :
     iteratedDeriv (k + 1) (fun y : ℝ => Z * Real.log y) x =
       (-1 : ℝ) ^ k * (k.factorial : ℝ) * Z / x ^ (k + 1) := by
@@ -53,14 +58,14 @@ private lemma logPhase_base_iteratedDeriv (k : ℕ) (Z : ℝ) {x : ℝ}
   rw [iteratedDeriv_succ', he.iteratedDeriv_eq k]
   exact OAI.Problem337.reciprocal_phase_iteratedDeriv k Z x
 
-private lemma logPhase_base_abs_iteratedDeriv (k : ℕ) (Z : ℝ) {x : ℝ}
+lemma logPhase_base_abs_iteratedDeriv (k : ℕ) (Z : ℝ) {x : ℝ}
     (hx : 0 < x) :
     |iteratedDeriv (k + 1) (fun y : ℝ => Z * Real.log y) x| =
       (k.factorial : ℝ) * |Z| / x ^ (k + 1) := by
   rw [logPhase_base_iteratedDeriv k Z hx]
   simp [abs_div, abs_mul, abs_pow, abs_of_pos hx]
 
-private lemma logPhase_forwardDifference_second_bounds (hs : List ℝ)
+lemma logPhase_forwardDifference_second_bounds (hs : List ℝ)
     (hhs : ∀ h ∈ hs, 0 < h) (Z : ℝ) {U V x : ℝ}
     (hU : 0 < U) (hx : U ≤ x) (hxV : x + hs.sum ≤ V) :
     hs.prod * ((hs.length + 1).factorial : ℝ) * |Z| / V ^ (hs.length + 2) ≤
@@ -88,7 +93,7 @@ private lemma logPhase_forwardDifference_second_bounds (hs : List ℝ)
       (pow_pos hU _) hpow
     simpa only [mul_div_assoc, mul_assoc] using mul_le_mul_of_nonneg_left hd hp
 
-private lemma sum_Icc_int_toNat {M : Type*} [AddCommMonoid M] {L U : ℤ}
+lemma sum_Icc_int_toNat {M : Type*} [AddCommMonoid M] {L U : ℤ}
     (hL : 0 ≤ L) (hU : 0 ≤ U) (f : ℤ → M) :
     (∑ n ∈ Finset.Icc L U, f n) =
       ∑ n ∈ Finset.Icc L.toNat U.toNat, f (n : ℤ) := by
@@ -119,7 +124,7 @@ private lemma sum_Icc_int_toNat {M : Type*} [AddCommMonoid M] {L U : ℤ}
     have hn0 : 0 ≤ n := hL.trans (Finset.mem_Icc.mp hn).1
     simp [Int.toNat_of_nonneg hn0]
 
-private lemma forwardDifference_const_add_aux (hs : List ℝ) (c : ℝ)
+lemma forwardDifference_const_add_aux (hs : List ℝ) (c : ℝ)
     (f : ℝ → ℝ) :
     (hs = [] →
       OAI.Problem337.forwardDifference hs (fun x => c + f x) = fun x => c + f x) ∧
@@ -151,7 +156,7 @@ private lemma forwardDifference_const_add_aux (hs : List ℝ) (c : ℝ)
             OAI.Problem337.forwardDifference hs f x
         rw [hIH]
 
-private lemma forwardDifference_const_add_translate {hs : List ℝ}
+lemma forwardDifference_const_add_translate {hs : List ℝ}
     (hne : hs ≠ []) (c b : ℝ) (f : ℝ → ℝ) :
     OAI.Problem337.forwardDifference hs (fun x => c + f (x + b)) =
       fun x => OAI.Problem337.forwardDifference hs f (x + b) := by
@@ -162,7 +167,7 @@ private lemma forwardDifference_const_add_translate {hs : List ℝ}
       OAI.Problem337.forwardDifference_translate_input hs (fun y => c + f y) b
     _ = fun x => OAI.Problem337.forwardDifference hs f (x + b) := by rw [hc]
 
-private lemma logPhase_decompose {q a : ℕ} {u y : ℝ}
+lemma logPhase_decompose {q a : ℕ} {u y : ℝ}
     (hq : 1 ≤ q) (hy : 1 ≤ y) :
     logPhase q a u y =
       u / (2 * Real.pi) * Real.log (q : ℝ) +
@@ -174,7 +179,7 @@ private lemma logPhase_decompose {q a : ℕ} {u y : ℝ}
   rw [logPhase, hfactor, Real.log_mul (ne_of_gt hqpos) (ne_of_gt harg)]
   ring
 
-private lemma forwardDifference_congr_on_Ici (hs : List ℝ) :
+lemma forwardDifference_congr_on_Ici (hs : List ℝ) :
     ∀ (_hhs : ∀ h ∈ hs, 0 ≤ h) (lo : ℝ) (f g : ℝ → ℝ),
       (∀ y, lo ≤ y → f y = g y) →
       ∀ y, lo ≤ y →
@@ -191,11 +196,11 @@ private lemma forwardDifference_congr_on_Ici (hs : List ℝ) :
     simp only [OAI.Problem337.forwardDifference]
     rw [ih htail lo f g hfg (y + h) (by linarith), ih htail lo f g hfg y hy]
 
-private noncomputable def firstTestConstant
+noncomputable def firstTestConstant
     (hD : Blueprint.DerivativeTests) : ℝ :=
   Classical.choose hD.1
 
-private lemma firstTestConstant_spec (hD : Blueprint.DerivativeTests) :
+lemma firstTestConstant_spec (hD : Blueprint.DerivativeTests) :
     0 < firstTestConstant hD ∧
       ∀ (lo hi lam : ℝ) (j : ℤ) (f : ℝ → ℝ),
         lo ≤ hi → 0 < lam → lam ≤ 1 / 2 → DifferentiableOn ℝ f (Set.Icc lo hi) →
@@ -205,11 +210,11 @@ private lemma firstTestConstant_spec (hD : Blueprint.DerivativeTests) :
           firstTestConstant hD / lam := by
   exact Classical.choose_spec hD.1
 
-private noncomputable def secondTestConstant
+noncomputable def secondTestConstant
     (hD : Blueprint.DerivativeTests) : ℝ :=
   Classical.choose (hD.2 9 (by norm_num))
 
-private lemma secondTestConstant_spec (hD : Blueprint.DerivativeTests) :
+lemma secondTestConstant_spec (hD : Blueprint.DerivativeTests) :
     0 < secondTestConstant hD ∧
       ∀ (lo hi lam : ℝ) (f : ℝ → ℝ),
         lo ≤ hi → 0 < lam → ContDiffOn ℝ 2 f (Set.Icc lo hi) →
@@ -220,11 +225,11 @@ private lemma secondTestConstant_spec (hD : Blueprint.DerivativeTests) :
             ((hi - lo + 1) * Real.sqrt lam + (Real.sqrt lam)⁻¹) := by
   exact Classical.choose_spec (hD.2 9 (by norm_num))
 
-private noncomputable def secondTestConstantFor (hD : Blueprint.DerivativeTests)
+noncomputable def secondTestConstantFor (hD : Blueprint.DerivativeTests)
     (C : ℝ) (hC : 1 ≤ C) : ℝ :=
   Classical.choose (hD.2 C hC)
 
-private lemma secondTestConstantFor_spec (hD : Blueprint.DerivativeTests)
+lemma secondTestConstantFor_spec (hD : Blueprint.DerivativeTests)
     (C : ℝ) (hC : 1 ≤ C) :
     0 < secondTestConstantFor hD C hC ∧
       ∀ (lo hi lam : ℝ) (f : ℝ → ℝ),
@@ -236,36 +241,36 @@ private lemma secondTestConstantFor_spec (hD : Blueprint.DerivativeTests)
             ((hi - lo + 1) * Real.sqrt lam + (Real.sqrt lam)⁻¹) := by
   exact Classical.choose_spec (hD.2 C hC)
 
-private lemma analyticE_eq_differencingPhase (t : ℝ) :
+lemma analyticE_eq_differencingPhase (t : ℝ) :
     e t = OAI.Problem337.differencingPhase t := by
   unfold e OAI.Problem337.differencingPhase
   congr 1
   push_cast
   ring
 
-private def logPhaseTerminalLambda (C N u : ℝ) (hs : List ℤ) : ℝ :=
+def logPhaseTerminalLambda (C N u : ℝ) (hs : List ℤ) : ℝ :=
   let hsR := hs.map (fun h : ℤ => (h : ℝ))
   hsR.prod * ((hsR.length + 1).factorial : ℝ) * |u / (2 * Real.pi)| /
     (C * N ^ (hsR.length + 2))
 
-private def logPhaseBandAlpha (M : ℕ) : ℝ := 1 / (20 * (M : ℝ))
+def logPhaseBandAlpha (M : ℕ) : ℝ := 1 / (20 * (M : ℝ))
 
-private def logPhaseBandH (N : ℝ) (k : ℕ) : ℕ :=
+def logPhaseBandH (N : ℝ) (k : ℕ) : ℕ :=
   ⌊N ^ (1 / (20 * (k : ℝ)))⌋₊
 
-private def logPhaseBandR (N : ℝ) : ℕ := ⌊2 * N⌋₊ + 1
+def logPhaseBandR (N : ℝ) : ℕ := ⌊2 * N⌋₊ + 1
 
-private noncomputable def logPhaseBandSecondConstant
+noncomputable def logPhaseBandSecondConstant
     (hD : Blueprint.DerivativeTests) (M : ℕ) : ℝ :=
   secondTestConstantFor hD ((3 : ℝ) ^ M) (one_le_pow₀ (by norm_num : (1 : ℝ) ≤ 3))
 
-private noncomputable def logPhaseBandD
+noncomputable def logPhaseBandD
     (hD : Blueprint.DerivativeTests) (M : ℕ) : ℝ :=
   4 + logPhaseBandSecondConstant hD M *
     (Real.sqrt (M.factorial : ℝ) +
       Real.sqrt (8 * Real.pi * ((3 : ℝ) ^ M)))
 
-private lemma logPhaseBandD_bounds (hD : Blueprint.DerivativeTests) (M : ℕ) :
+lemma logPhaseBandD_bounds (hD : Blueprint.DerivativeTests) (M : ℕ) :
     4 ≤ logPhaseBandD hD M ∧
     logPhaseBandSecondConstant hD M *
       (Real.sqrt (M.factorial : ℝ) + Real.sqrt (8 * Real.pi * ((3 : ℝ) ^ M))) ≤
@@ -277,7 +282,7 @@ private lemma logPhaseBandD_bounds (hD : Blueprint.DerivativeTests) (M : ℕ) :
       Real.sqrt (8 * Real.pi * ((3 : ℝ) ^ M)) := by positivity
   constructor <;> dsimp [logPhaseBandD] <;> linarith [mul_nonneg hK.le hS]
 
-private lemma list_prod_lower_one (hs : List ℝ)
+lemma list_prod_lower_one (hs : List ℝ)
     (hhs : ∀ x ∈ hs, 1 ≤ x) : 1 ≤ hs.prod := by
   induction hs with
   | nil => simp
@@ -288,7 +293,7 @@ private lemma list_prod_lower_one (hs : List ℝ)
     simpa only [List.prod_cons, one_mul] using
       (mul_le_mul hx hprod (by norm_num) (by linarith [hx]))
 
-private lemma list_prod_upper_pow (hs : List ℝ) (H : ℝ)
+lemma list_prod_upper_pow (hs : List ℝ) (H : ℝ)
     (hH : 0 ≤ H) (hhs : ∀ x ∈ hs, 0 ≤ x ∧ x ≤ H) :
     hs.prod ≤ H ^ hs.length := by
   induction hs with
@@ -304,7 +309,7 @@ private lemma list_prod_upper_pow (hs : List ℝ) (H : ℝ)
       _ ≤ H * H ^ hs.length := mul_le_mul_of_nonneg_left hih hH
       _ = H ^ hs.length * H := by ring
 
-private theorem logPhaseTerminalLambda_bounds
+theorem logPhaseTerminalLambda_bounds
     {M k : ℕ} {N u : ℝ} {hs : List ℤ} {H : ℕ}
     (hk : 3 ≤ k) (hkM : k ≤ M) (hN : 1 ≤ N)
     (hlen : hs.length + 2 = k)
@@ -489,7 +494,7 @@ private theorem logPhaseTerminalLambda_bounds
           (mul_le_mul_of_nonneg_left hfreqHi (by positivity)) (by positivity)
       _ = (M.factorial : ℝ) * N ^ (-(1 : ℝ) / 20) := hratioHi
 
-private theorem logPhaseBand_scales {M k : ℕ} {N D : ℝ}
+theorem logPhaseBand_scales {M k : ℕ} {N D : ℝ}
     (hM : 3 ≤ M) (hk : 3 ≤ k) (hkM : k ≤ M)
     (hN : 1 ≤ N) (hD4 : 4 ≤ D)
     (hDlarge : D ≤ N ^ (logPhaseBandAlpha M)) :
@@ -577,7 +582,7 @@ private theorem logPhaseBand_scales {M k : ℕ} {N D : ℝ}
   refine ⟨hHone, hHR, hRlo, hRhi, ?_⟩
   simpa [H, R, α, β] using hHeps
 
-private theorem logPhase_terminal_secondDerivativeTest
+theorem logPhase_terminal_secondDerivativeTest
     (hD : Blueprint.DerivativeTests) {C N : ℝ} {R : ℕ}
     {q a : ℕ} {u : ℝ} {L U T : ℤ} {hs : List ℤ}
     (hC : 1 ≤ C) (hCpow : (3 : ℝ) ^ (hs.length + 2) ≤ C)
@@ -787,7 +792,7 @@ private theorem logPhase_terminal_secondDerivativeTest
           (Real.sqrt lam + (Real.sqrt lam)⁻¹ / (R : ℝ)) :=
       mul_le_mul_of_nonneg_left hinner hK.le
 
-private theorem logPhase_terminal_epsilon
+theorem logPhase_terminal_epsilon
     (hD : Blueprint.DerivativeTests) {M k : ℕ} {N : ℝ}
     {q a : ℕ} {u : ℝ} {L U T : ℤ} {hs : List ℤ}
     (hM : 3 ≤ M) (hk : 3 ≤ k) (hkM : k ≤ M) (hN : 1 ≤ N)
@@ -973,7 +978,7 @@ private theorem logPhase_terminal_epsilon
     _ ≤ D * N ^ (-logPhaseBandAlpha M) :=
       mul_le_mul_of_nonneg_left hpow40 hDnonneg
 
-private lemma logPhase_rpow_epsilon {D N α δ e : ℝ}
+lemma logPhase_rpow_epsilon {D N α δ e : ℝ}
     (hD : 1 ≤ D) (hN : 1 ≤ N) (he : 0 ≤ e) (he1 : e ≤ 1)
     (hδ : δ ≤ α * e) :
     (D * N ^ (-α)) ^ e ≤ D * N ^ (-δ) := by
@@ -993,7 +998,7 @@ private lemma logPhase_rpow_epsilon {D N α δ e : ℝ}
       mul_le_mul_of_nonneg_left
         (Real.rpow_le_rpow_of_exponent_le hN hExp) (by positivity)
 
-private lemma logPhase_hasDerivAt {q a : ℕ} {u y : ℝ}
+lemma logPhase_hasDerivAt {q a : ℕ} {u y : ℝ}
     (hy : 0 < (q : ℝ) * y + a) :
     HasDerivAt (logPhase q a u)
       (u / (2 * Real.pi) * ((q : ℝ) / ((q : ℝ) * y + a))) y := by
@@ -1006,13 +1011,13 @@ private lemma logPhase_hasDerivAt {q a : ℕ} {u y : ℝ}
   · simp only [div_eq_mul_inv]
     field_simp [Real.pi_ne_zero, ne_of_gt hy]
 
-private lemma logPhase_deriv {q a : ℕ} {u y : ℝ}
+lemma logPhase_deriv {q a : ℕ} {u y : ℝ}
     (hy : 0 < (q : ℝ) * y + a) :
     deriv (logPhase q a u) y =
       u / (2 * Real.pi) * ((q : ℝ) / ((q : ℝ) * y + a)) :=
   (logPhase_hasDerivAt hy).deriv
 
-private lemma logPhase_iteratedDeriv_two {q a : ℕ} {u y : ℝ}
+lemma logPhase_iteratedDeriv_two {q a : ℕ} {u y : ℝ}
     (hy : 0 < (q : ℝ) * y + a) :
     iteratedDeriv 2 (logPhase q a u) y =
       -(u / (2 * Real.pi)) * ((q : ℝ) ^ 2 / ((q : ℝ) * y + a) ^ 2) := by
@@ -1048,7 +1053,7 @@ private lemma logPhase_iteratedDeriv_two {q a : ℕ} {u y : ℝ}
           dsimp [c]
           field_simp [Real.pi_ne_zero, ne_of_gt hy]
 
-private lemma logPhase_contDiffOn (q a : ℕ) (u lo hi : ℝ)
+lemma logPhase_contDiffOn (q a : ℕ) (u lo hi : ℝ)
     (hbase : ∀ y ∈ Set.Icc lo hi, 0 < (q : ℝ) * y + a) :
     ContDiffOn ℝ 2 (logPhase q a u) (Set.Icc lo hi) := by
   have harg : ContDiffOn ℝ 2 (fun y : ℝ => (q : ℝ) * y + a) (Set.Icc lo hi) := by
@@ -1065,7 +1070,7 @@ private lemma logPhase_contDiffOn (q a : ℕ) (u lo hi : ℝ)
     (Set.Icc lo hi)
   exact contDiffOn_const.mul hlog
 
-private lemma logPhase_mellin (q a : ℕ) (u y : ℝ) :
+lemma logPhase_mellin (q a : ℕ) (u y : ℝ) :
     Blueprint.Analytic.e (logPhase q a u y) =
       Blueprint.Analytic.mellin ((q : ℝ) * y + a) u := by
   unfold Blueprint.Analytic.e Blueprint.Analytic.mellin logPhase
@@ -1543,7 +1548,7 @@ theorem logPhaseSum_lowMedium
       _ = K * N * (|u|⁻¹ + N ^ (-(1 : ℝ) / 20)) := by ring
 
 /-- Overlapping power ranges cover every frequency up to N^(m-1/10). -/
-private theorem logPhase_frequencyCover_aux (m : ℕ) :
+theorem logPhase_frequencyCover_aux (m : ℕ) :
     2 ≤ m → ∀ {N U : ℝ}, 1 ≤ N →
       U ≤ N ^ ((m : ℝ) - (1 : ℝ) / 10) →
       U ≤ N ^ ((19 : ℝ) / 10) ∨

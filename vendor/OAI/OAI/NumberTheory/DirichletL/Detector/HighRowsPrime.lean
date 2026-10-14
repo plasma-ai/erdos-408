@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.LocalUnitFrequency
-import OAI.NumberTheory.DirichletL.Detector.HighRowsSeries
-import OAI.NumberTheory.DirichletL.Detector.HighRowsLocal
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LocalUnitFrequency
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsSeries
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsLocal
+
+@[expose] public section
 
 namespace OAI
 

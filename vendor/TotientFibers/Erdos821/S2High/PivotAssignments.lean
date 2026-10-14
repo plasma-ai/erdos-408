@@ -1,4 +1,8 @@
-import Erdos821.S2High.PivotAddresses
+module
+
+public import Erdos821.S2High.PivotAddresses
+
+@[expose] public section
 
 noncomputable section
 

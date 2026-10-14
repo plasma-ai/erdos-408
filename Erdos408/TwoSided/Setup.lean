@@ -1,9 +1,11 @@
-import Erdos408.Extraction.Sieve.Inert
-import Erdos408.OneSided.Cauchy
-import Erdos408.OneSided.Decomposition.Eventually
-import Erdos408.TwoSided.Defs
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+module
+
+public import Erdos408.Extraction.Sieve.Inert
+public import Erdos408.OneSided.Cauchy
+public import Erdos408.OneSided.Decomposition.Eventually
+public import Erdos408.TwoSided.Defs
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 
 /-!
 # Uniform facts and the reindexing
@@ -34,6 +36,8 @@ The setup of `blueprint/two_sided_correlation.md` §2.
 
 The other uniform facts of §2 (U1–U11) are proved where they are used.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

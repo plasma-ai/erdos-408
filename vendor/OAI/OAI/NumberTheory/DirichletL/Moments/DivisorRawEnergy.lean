@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.DivisorRaw
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DivisorRaw
+
+@[expose] public section
 
 namespace OAI
 

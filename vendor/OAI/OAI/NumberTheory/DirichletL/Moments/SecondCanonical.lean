@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondLedger
-import OAI.NumberTheory.DirichletL.Moments.FirstCanonicalFamily
-import OAI.NumberTheory.DirichletL.Moments.SecondSectorColumns
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondLedger
+public import OAI.NumberTheory.DirichletL.Moments.FirstCanonicalFamily
+public import OAI.NumberTheory.DirichletL.Moments.SecondSectorColumns
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondRadicalFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondRadicalFamily
+
+@[expose] public section
 
 namespace OAI
 

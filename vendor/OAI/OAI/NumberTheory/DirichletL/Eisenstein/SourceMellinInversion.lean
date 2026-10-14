@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.SquarefreeCoefficients
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.SquarefreeCoefficients
+
+@[expose] public section
 
 namespace OAI
 

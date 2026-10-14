@@ -1,8 +1,12 @@
-import Erdos821.S2.HistoryBirths
-import Erdos821.S2.HistoryFinite
-import Erdos821.S2.MemoryTailTask
+module
+
+public import Erdos821.S2.HistoryBirths
+public import Erdos821.S2.HistoryFinite
+public import Erdos821.S2.MemoryTailTask
 
 /-! Equality phases affect only the local operations containing their births. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourcePrimeGate
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourcePrimeGate
+
+@[expose] public section
 
 namespace OAI
 

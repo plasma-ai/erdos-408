@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialPoissonBridge
-import OAI.NumberTheory.DirichletL.Inversion.InitialProfile
-import OAI.NumberTheory.DirichletL.Inversion.InitialArithmetic
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialPoissonBridge
+public import OAI.NumberTheory.DirichletL.Inversion.InitialProfile
+public import OAI.NumberTheory.DirichletL.Inversion.InitialArithmetic
+
+@[expose] public section
 
 namespace OAI
 

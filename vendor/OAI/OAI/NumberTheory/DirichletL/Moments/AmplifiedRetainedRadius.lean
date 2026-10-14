@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplificationChoice
-import OAI.NumberTheory.DirichletL.Moments.SmoothedWindowEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplificationChoice
+public import OAI.NumberTheory.DirichletL.Moments.SmoothedWindowEnergy
+
+@[expose] public section
 
 namespace OAI
 

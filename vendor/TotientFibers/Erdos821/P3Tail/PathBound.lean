@@ -1,6 +1,11 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Analysis.Normed.Order.Lattice
 
 /-! Chronological elimination for finite sets of alternating state paths. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

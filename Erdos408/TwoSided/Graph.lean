@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Graph.Restore
+module
+
+public import Erdos408.TwoSided.Graph.Restore
 
 /-!
 # The graph reduction
@@ -15,6 +17,8 @@ is `O(L^{-A})`. It combines
 
 With `∑ |β| ≤ L^{C₁}`, the stripping errors are below `2 L^{-A}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.RawCoefficient
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.RawCoefficient
+
+@[expose] public section
 
 namespace OAI
 

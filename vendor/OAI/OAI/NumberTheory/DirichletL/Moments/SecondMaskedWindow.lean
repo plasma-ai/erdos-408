@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondReducedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondReducedEnergy
+
+@[expose] public section
 
 namespace OAI
 

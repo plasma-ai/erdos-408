@@ -1,5 +1,7 @@
-import Erdos408.TwoSided.Setup
-import Mathlib.Data.Int.CardIntervalMod
+module
+
+public import Erdos408.TwoSided.Setup
+public import Mathlib.Data.Int.CardIntervalMod
 
 /-!
 # Counting physical lists
@@ -12,6 +14,8 @@ The list counts behind Lemmas G1 and G2a of `blueprint/two_sided_correlation.md`
   `∑_n #lists(n) ∏ V^{-M} ≤ ∑_p (Y/Π(p) + 2) ∏ V^{-M} = Y + 2 ∏_g (|P_g|/V_g)^M`, which is
   (6.12) plus a list count; eventually the list count is at most `√x / 2`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

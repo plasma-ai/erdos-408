@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstContinuation
-import OAI.NumberTheory.DirichletL.Detector.HighRowsFirstNeighborhood
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstContinuation
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsFirstNeighborhood
+
+@[expose] public section
 
 namespace OAI
 

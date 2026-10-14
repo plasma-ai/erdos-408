@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawGeometry
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawRadial
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedElement
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedOverlap
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawGeometry
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawRadial
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedElement
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedOverlap
+
+@[expose] public section
 
 namespace OAI
 

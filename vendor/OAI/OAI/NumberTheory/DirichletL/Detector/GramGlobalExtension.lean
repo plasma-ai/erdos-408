@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramLocalExtension
-import OAI.NumberTheory.DirichletL.Detector.GramCommonPhase
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramLocalExtension
+public import OAI.NumberTheory.DirichletL.Detector.GramCommonPhase
+
+@[expose] public section
 
 namespace OAI
 

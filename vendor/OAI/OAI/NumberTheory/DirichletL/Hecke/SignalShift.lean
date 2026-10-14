@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.Signal
-import OAI.NumberTheory.DirichletL.ContinuationPolynomialContour
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Signal
+public import OAI.NumberTheory.DirichletL.ContinuationPolynomialContour
+
+@[expose] public section
 
 namespace OAI
 

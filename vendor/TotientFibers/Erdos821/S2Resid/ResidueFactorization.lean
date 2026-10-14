@@ -1,4 +1,8 @@
-import Erdos821.S2.ResidueFactorizationTask
+module
+
+public import Erdos821.S2.ResidueFactorizationTask
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

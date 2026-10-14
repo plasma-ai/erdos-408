@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Defs
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+module
+
+public import Erdos408.Extraction.Defs
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
 
 /-!
 # Growth comparisons for the extraction parameters
@@ -9,6 +11,8 @@ the shape `exp(A (s² + 1))`, which is `L^{o(1)}` because `s² = o(e^s) = o(T)`.
 This file records that comparison, the size `T^{-21} ≤ γ ≤ 1` of the presieve
 exponent, and the elementary limits used with them.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

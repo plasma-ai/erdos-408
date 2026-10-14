@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.PhysicalRows
-import OAI.NumberTheory.DirichletL.Detector.GaussianDensityBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalRows
+public import OAI.NumberTheory.DirichletL.Detector.GaussianDensityBudget
+
+@[expose] public section
 
 namespace OAI
 

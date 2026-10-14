@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroBalancedDictionary
-import OAI.NumberTheory.DirichletL.Energy.NaturalSourceAdmission
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroBalancedDictionary
+public import OAI.NumberTheory.DirichletL.Energy.NaturalSourceAdmission
+
+@[expose] public section
 
 namespace OAI
 

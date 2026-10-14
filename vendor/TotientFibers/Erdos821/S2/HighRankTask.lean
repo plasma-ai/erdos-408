@@ -1,8 +1,12 @@
-import Erdos821.S2.LowRankTask
-import Erdos821.S2.EdgeTasks
-import Erdos821.S2.GhostTasks
+module
+
+public import Erdos821.S2.LowRankTask
+public import Erdos821.S2.EdgeTasks
+public import Erdos821.S2.GhostTasks
 
 /-! Chronological dependent births retain their reciprocal-prime savings. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

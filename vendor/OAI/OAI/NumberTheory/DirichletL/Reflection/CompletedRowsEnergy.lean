@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.CompletedCanonicalEnergy
-import OAI.NumberTheory.DirichletL.Reflection.CompletedAggregation
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalCaps
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CompletedCanonicalEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.CompletedAggregation
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalCaps
+
+@[expose] public section
 
 namespace OAI
 

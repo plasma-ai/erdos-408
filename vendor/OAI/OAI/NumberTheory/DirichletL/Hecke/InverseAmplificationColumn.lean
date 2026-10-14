@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRows
-import OAI.NumberTheory.DirichletL.Hecke.DyadicContour
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRows
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicContour
+
+@[expose] public section
 
 namespace OAI
 

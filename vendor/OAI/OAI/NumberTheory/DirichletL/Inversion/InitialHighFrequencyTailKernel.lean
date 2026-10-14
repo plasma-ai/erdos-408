@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialPhysicalMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialPhysicalMeasure
+
+@[expose] public section
 
 namespace OAI
 

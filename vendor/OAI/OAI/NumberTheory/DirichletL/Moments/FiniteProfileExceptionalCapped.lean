@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalRow
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalRow
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

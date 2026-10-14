@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawReference
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawUniform
-import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyCountParameters
-import OAI.NumberTheory.DirichletL.Detector.DetectorMomentData
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawReference
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawUniform
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyCountParameters
+public import OAI.NumberTheory.DirichletL.Detector.DetectorMomentData
+
+@[expose] public section
 
 namespace OAI
 

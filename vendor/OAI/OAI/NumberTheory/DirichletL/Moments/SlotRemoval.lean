@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorSlotSelection
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorSlotSelection
+
+@[expose] public section
 
 namespace OAI
 

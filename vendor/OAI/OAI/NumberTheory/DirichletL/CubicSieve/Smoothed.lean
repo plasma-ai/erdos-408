@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.DualCoefficients
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.DualCoefficients
+
+@[expose] public section
 
 namespace OAI
 

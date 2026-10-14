@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralRectangle
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralZTail
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralRectangle
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralZTail
+
+@[expose] public section
 
 namespace OAI
 

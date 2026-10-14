@@ -1,4 +1,6 @@
-import Erdos408.Mertens
+module
+
+public import Erdos408.Mertens
 
 /-!
 # The harmonic cross term
@@ -18,6 +20,8 @@ Granville, Pomerance and Spiro (1990), (2.21)–(2.22), proved in Lemma 5.2 of
 *The normal order of the number of iterations of Euler's function* (Plasma AI,
 2026), §5.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

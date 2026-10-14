@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstSecondCapacityShift
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstSecondCapacityShift
+
+@[expose] public section
 
 namespace OAI
 

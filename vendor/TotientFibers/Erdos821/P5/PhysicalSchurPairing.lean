@@ -1,4 +1,8 @@
-import Erdos821.P5.PhysicalKernelSupport
+module
+
+public import Erdos821.P5.PhysicalKernelSupport
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

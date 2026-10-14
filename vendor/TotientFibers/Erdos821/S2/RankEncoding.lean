@@ -1,6 +1,11 @@
-import Erdos821.S2.CycleSigns
+module
+
+public import Erdos821.S2.CycleSigns
+public import Mathlib.GroupTheory.Perm.Cycle.Concrete
 
 /-! A rank-r permutation is encoded by r pairs of transposed addresses. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

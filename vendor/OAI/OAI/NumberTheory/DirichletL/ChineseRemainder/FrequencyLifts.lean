@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Cusp.ResiduePhases
+module
+
+public import OAI.NumberTheory.DirichletL.Cusp.ResiduePhases
+
+@[expose] public section
 
 namespace OAI
 

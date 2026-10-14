@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityZeroPhysical
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityAggregate
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityTailPhysical
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityZeroPhysical
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityAggregate
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityTailPhysical
+
+@[expose] public section
 
 namespace OAI
 

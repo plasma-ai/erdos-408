@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.ReflectedFibers
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.ReflectedFibers
+
+@[expose] public section
 
 namespace OAI
 

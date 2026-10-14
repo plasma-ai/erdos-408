@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Analysis.Divisor
-import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds
-import Mathlib.NumberTheory.LegendreSymbol.AddCharacter
+module
+
+public import Erdos408.OneSided.Analysis.Divisor
+public import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds
+public import Mathlib.NumberTheory.LegendreSymbol.AddCharacter
 
 /-!
 # Counting a periodic set in a box by completion
@@ -20,6 +22,8 @@ transforms are geometric sums, `|Â(h)| ≤ m / (2 ‖h q‖)` with `‖·‖` t
 `ℤ/m`. If `|Ŝ_G(h, k)| ≤ X (k, m)` for `k ≠ 0`, the error is therefore at most
 `X τ(m) (2 + log m)²` (`abs_card_filter_mem_prog_sub_le`), whatever the length of `B`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided.RootResidue
 

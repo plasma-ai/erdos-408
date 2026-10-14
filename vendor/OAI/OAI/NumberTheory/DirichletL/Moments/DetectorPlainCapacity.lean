@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RelativeCapacityRemoval
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainSlotProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RelativeCapacityRemoval
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainSlotProfile
+
+@[expose] public section
 
 namespace OAI
 

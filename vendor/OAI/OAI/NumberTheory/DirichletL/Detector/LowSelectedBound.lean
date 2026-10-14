@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowActualReflectedEnergy
-import OAI.NumberTheory.DirichletL.Reflection.LowOriginalEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowActualReflectedEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.LowOriginalEnergy
+
+@[expose] public section
 
 namespace OAI
 

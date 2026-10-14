@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.CommonMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CommonMeasure
+
+@[expose] public section
 
 namespace OAI
 

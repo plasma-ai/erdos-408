@@ -1,10 +1,14 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalDyadic
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalBudget
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalSaving
-import OAI.NumberTheory.DirichletL.Moments.SecondDyadicRowSupport
-import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalBlock
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalKernel
-import OAI.NumberTheory.DirichletL.Moments.SecondDivisorSupport
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalDyadic
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalBudget
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalSaving
+public import OAI.NumberTheory.DirichletL.Moments.SecondDyadicRowSupport
+public import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalBlock
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalKernel
+public import OAI.NumberTheory.DirichletL.Moments.SecondDivisorSupport
+
+@[expose] public section
 
 namespace OAI
 

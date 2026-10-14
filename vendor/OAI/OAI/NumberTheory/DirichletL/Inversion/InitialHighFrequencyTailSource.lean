@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailWeights
-import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailKernel
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailWeights
+public import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailKernel
+
+@[expose] public section
 
 namespace OAI
 

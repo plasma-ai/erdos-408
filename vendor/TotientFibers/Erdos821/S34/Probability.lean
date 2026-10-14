@@ -1,4 +1,10 @@
-import Erdos821.S34.Core
+module
+
+public import Erdos821.S34.Core
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Classes
+
+@[expose] public section
 
 set_option autoImplicit false
 

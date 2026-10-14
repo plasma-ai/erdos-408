@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianDerivative
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianDerivative
+
+@[expose] public section
 
 namespace OAI
 

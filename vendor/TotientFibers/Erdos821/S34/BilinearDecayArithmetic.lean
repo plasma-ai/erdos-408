@@ -1,4 +1,10 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.SpecialFunctions.Log.Basic
+public import Mathlib.Tactic.NormNum.RealSqrt
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.IdealMultiplicative
-import OAI.NumberTheory.DirichletL.Detector.SourcePrime
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.IdealMultiplicative
+public import OAI.NumberTheory.DirichletL.Detector.SourcePrime
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,10 @@
-import Mathlib
+module
+
+public import Mathlib.Analysis.Calculus.Deriv.ZPow
+public import Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas
+public import Mathlib.Analysis.InnerProductSpace.Basic
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

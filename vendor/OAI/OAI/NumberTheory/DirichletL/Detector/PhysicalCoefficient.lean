@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.PhysicalFourier
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalFourier
+
+@[expose] public section
 
 namespace OAI
 

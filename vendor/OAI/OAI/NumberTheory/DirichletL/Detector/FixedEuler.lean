@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.HighExcludedLocal
-import OAI.NumberTheory.DirichletL.Hecke.RayFamily
-import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighExcludedLocal
+public import OAI.NumberTheory.DirichletL.Hecke.RayFamily
+public import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
+
+@[expose] public section
 
 namespace OAI
 

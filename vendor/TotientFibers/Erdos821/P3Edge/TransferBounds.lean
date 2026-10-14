@@ -1,5 +1,9 @@
-import Erdos821.S2.MemoryEdge
-import Erdos821.Leaves
+module
+
+public import Erdos821.S2.MemoryEdge
+public import Erdos821.Leaves
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

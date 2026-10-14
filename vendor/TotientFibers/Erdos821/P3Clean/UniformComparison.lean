@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.TiltedAdjoint
+module
+
+public import Erdos821.P3Clean.TiltedAdjoint
 
 /-! The same quantitative comparison holds in both signed directions. -/
+
+@[expose] public section
 
 noncomputable section
 

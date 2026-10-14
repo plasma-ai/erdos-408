@@ -1,6 +1,10 @@
-import Erdos821.P5.EndpointRoughBounds
-import Erdos821.P5.GroupFreeBounds
-import Erdos821.P5.LongGrowth
+module
+
+public import Erdos821.P5.EndpointRoughBounds
+public import Erdos821.P5.GroupFreeBounds
+public import Erdos821.P5.LongGrowth
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

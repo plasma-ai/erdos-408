@@ -1,5 +1,9 @@
-import Erdos821.S34.BilinearBlocks
-import Erdos821.S34.Core
+module
+
+public import Erdos821.S34.BilinearBlocks
+public import Erdos821.S34.Core
+
+@[expose] public section
 
 set_option autoImplicit false
 

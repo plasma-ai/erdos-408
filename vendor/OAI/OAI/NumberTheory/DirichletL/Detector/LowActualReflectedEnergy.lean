@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowActualIdealLists
-import OAI.NumberTheory.DirichletL.Detector.LowElementRows
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowActualIdealLists
+public import OAI.NumberTheory.DirichletL.Detector.LowElementRows
+
+@[expose] public section
 
 namespace OAI
 

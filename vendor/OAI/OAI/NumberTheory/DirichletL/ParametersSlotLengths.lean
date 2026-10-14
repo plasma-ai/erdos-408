@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Parameters
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.BigOperators.Field
+module
+
+public import OAI.NumberTheory.DirichletL.Parameters
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Algebra.BigOperators.Field
+
+@[expose] public section
 
 namespace OAI
 

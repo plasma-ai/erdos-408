@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.InactiveEnergy
-import OAI.NumberTheory.DirichletL.Reflection.FixedLevel
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.InactiveEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.FixedLevel
+
+@[expose] public section
 
 namespace OAI
 

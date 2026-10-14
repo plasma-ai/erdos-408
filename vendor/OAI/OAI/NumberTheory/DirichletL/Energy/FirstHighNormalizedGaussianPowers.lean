@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.FirstGaussianCoefficients
-import OAI.NumberTheory.DirichletL.Energy.FirstHighFourCoefficients
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.FirstGaussianCoefficients
+public import OAI.NumberTheory.DirichletL.Energy.FirstHighFourCoefficients
+
+@[expose] public section
 
 namespace OAI
 

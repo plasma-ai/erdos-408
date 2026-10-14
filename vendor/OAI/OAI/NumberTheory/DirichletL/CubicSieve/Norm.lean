@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.Ideal
-import OAI.NumberTheory.DirichletL.CubicSieve.Initial
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.Ideal
+public import OAI.NumberTheory.DirichletL.CubicSieve.Initial
+
+@[expose] public section
 
 namespace OAI
 

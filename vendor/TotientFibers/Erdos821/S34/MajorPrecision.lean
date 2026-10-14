@@ -1,4 +1,8 @@
-import Erdos821.S34.PrecisionPowers
+module
+
+public import Erdos821.S34.PrecisionPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 

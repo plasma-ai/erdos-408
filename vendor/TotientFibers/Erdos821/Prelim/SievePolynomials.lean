@@ -1,4 +1,6 @@
-import Erdos821.Prelim.SieveBounds
+module
+
+public import Erdos821.Prelim.SieveBounds
 
 /-!
 # Coefficient certificates for the block-sieve polynomials
@@ -7,6 +9,8 @@ Index the prime-set supports by their squarefree products. Both polynomials
 have the same sign on their common support, so their difference also has
 coefficients of absolute value at most one.
 -/
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

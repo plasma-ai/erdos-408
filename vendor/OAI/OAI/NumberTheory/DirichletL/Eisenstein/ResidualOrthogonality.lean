@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.CubeEigenrelation
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.CubeEigenrelation
+
+@[expose] public section
 
 namespace OAI
 

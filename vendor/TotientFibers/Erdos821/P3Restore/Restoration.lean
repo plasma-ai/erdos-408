@@ -1,12 +1,16 @@
-import Erdos821.S2.RestorationTask
-import Erdos821.S2.ActualGhostNorms
-import Erdos821.S2.CountableSchur
-import Erdos821.P3Restore.RankSum
-import Erdos821.P3Restore.Scalar
+module
+
+public import Erdos821.S2.RestorationTask
+public import Erdos821.S2.ActualGhostNorms
+public import Erdos821.S2.CountableSchur
+public import Erdos821.P3Restore.RankSum
+public import Erdos821.P3Restore.Scalar
 
 /-! The restored memory norm: the exact truncated distinct expression is the finite
 equality-rank sum of low-rank expressions; low ranks use `LowRankMemoryTask`, high ranks
 `HighRankMemoryTask`, and the scalar margin absorbs both. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

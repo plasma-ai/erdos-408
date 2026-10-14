@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowReflection
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowError
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowReflection
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowError
+
+@[expose] public section
 
 namespace OAI
 

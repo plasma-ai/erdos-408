@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalHeight
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalHeight
+
+@[expose] public section
 
 namespace OAI
 

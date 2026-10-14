@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceScalarBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceScalarBounds
+
+@[expose] public section
 
 namespace OAI
 

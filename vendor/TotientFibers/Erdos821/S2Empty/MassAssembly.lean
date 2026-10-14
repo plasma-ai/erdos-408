@@ -1,5 +1,9 @@
-import Erdos821.S2Empty.BoundaryAssembly
-import Erdos821.S2.MassDecomposition
+module
+
+public import Erdos821.S2Empty.BoundaryAssembly
+public import Erdos821.S2.MassDecomposition
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.PairPrimes
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.PairPrimes
+
+@[expose] public section
 
 namespace OAI
 

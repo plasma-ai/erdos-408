@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.RetainedBudget
-import OAI.NumberTheory.DirichletL.Reflection.FullEnergyBasic
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.RetainedBudget
+public import OAI.NumberTheory.DirichletL.Reflection.FullEnergyBasic
+
+@[expose] public section
 
 namespace OAI
 

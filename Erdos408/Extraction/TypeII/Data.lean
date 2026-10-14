@@ -1,4 +1,6 @@
-import Erdos408.Extraction.TypeII.Telescope
+module
+
+public import Erdos408.Extraction.TypeII.Telescope
 
 /-!
 # The endpoint bounds at one scale
@@ -7,6 +9,8 @@ The explicit size `𝒩 = (2/(1-q))^{K N'} S_B` of the remainders, with
 `S_B = (2T²⁰/c + 1)³ + (T + E₂ + 1)³` bounding `|f_𝔟 - C_𝔟|` on `[1, x²]`, and the bound
 `|P (f_𝔟 - C_𝔟)| ≤ 2^{K N'} (2/(1-q))^K 𝒩` on `[1, x²]`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

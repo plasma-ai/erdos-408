@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformTests
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformTests
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDegree
+
+@[expose] public section
 
 namespace OAI
 

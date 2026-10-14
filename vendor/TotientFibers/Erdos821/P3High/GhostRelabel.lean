@@ -1,8 +1,12 @@
-import Erdos821.P3High.EdgeRelabel
+module
+
+public import Erdos821.P3High.EdgeRelabel
 
 /-! Conditional ghost rows.  A valid ghost choice into a bounded target is the same as its
 deleted index sets and ordered birth batches (`GT`); constraining an ordered batch label to a
 prescribed value keeps the factorial divisor and replaces its tilted mass by a point mass. -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

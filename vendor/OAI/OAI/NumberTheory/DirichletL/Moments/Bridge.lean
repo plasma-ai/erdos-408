@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPoisson
-import OAI.NumberTheory.DirichletL.Moments.Primitive
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPoisson
+public import OAI.NumberTheory.DirichletL.Moments.Primitive
+
+@[expose] public section
 
 namespace OAI
 

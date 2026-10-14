@@ -1,8 +1,10 @@
-import Erdos408.OneSided.Analysis.Kloosterman
-import Erdos408.OneSided.RootResidue.Hyperbola
-import Erdos408.OneSided.RootResidue.Progression
-import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
-import Mathlib.NumberTheory.ArithmeticFunction.Moebius
+module
+
+public import Erdos408.OneSided.Analysis.Kloosterman
+public import Erdos408.OneSided.RootResidue.Hyperbola
+public import Erdos408.OneSided.RootResidue.Progression
+public import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
+public import Mathlib.NumberTheory.ArithmeticFunction.Moebius
 
 /-!
 # Root residues
@@ -36,6 +38,8 @@ case swaps roles, as at the end of PD's proof of Lemma 3.3 (`rootCount_le_swap`,
   `U = V → ∞` gives `∑_{(l, S) = 1} μ(l)/l² / S³ = c₂ / |SL₂(ℤ/S)|`
   (`coprimeDensity_div_eq`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

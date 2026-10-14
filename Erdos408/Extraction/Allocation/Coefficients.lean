@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Allocation.Strip
+module
+
+public import Erdos408.Extraction.Allocation.Strip
 
 /-!
 # The proxy coefficient and its core
@@ -12,6 +14,8 @@ so the allocation identity gives `A_j(v) = G_j(v) ρ_j(v)` with the core
 square divides `v`. The core depends only on `v̄`, so it is invariant
 under every candidate prime, active or not.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.OriginalHighReflectionOriginal
-import OAI.NumberTheory.DirichletL.Energy.ReferenceScalarReserve
-import OAI.NumberTheory.DirichletL.Energy.ReferenceProfileBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.OriginalHighReflectionOriginal
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceScalarReserve
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceProfileBudget
+
+@[expose] public section
 
 namespace OAI
 

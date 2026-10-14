@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.DivisorSlots
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DivisorSlots
+
+@[expose] public section
 
 namespace OAI
 

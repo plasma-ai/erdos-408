@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Moment.Edge.Gram
-import Mathlib.NumberTheory.DiophantineApproximation.Basic
+module
+
+public import Erdos408.OneSided.Moment.Edge.Gram
+public import Mathlib.NumberTheory.DiophantineApproximation.Basic
 
 /-!
 # The lattice shape
@@ -20,6 +22,8 @@ reduced basis of determinant one puts all relevant vectors into the box `|m₁| 
   `(h, l)` has new coordinates `m₁ = h l₂ - l h₂`, `m₂ = h₁ l - l₁ h` in the box. Since the
   change of basis has determinant one, `h l' - l h' = m₁ m₂' - m₂ m₁'`.
 -/
+
+@[expose] public section
 
 noncomputable section
 
@@ -124,7 +128,6 @@ private theorem int_abs_le_floor {m : ℤ} {r : ℝ} (h : |(m : ℝ)| ≤ r) : |
 private theorem sq_det_le (a b c d : ℝ) : (a * d - b * c) ^ 2 ≤ (a ^ 2 + b ^ 2) * (c ^ 2 + d ^ 2) := by
   nlinarith [sq_nonneg (a * c + b * d)]
 
-set_option maxHeartbeats 1000000 in
 /-- **The lattice shape** (PD `mem:lattice-shape`, M5). Suppose `1 ≤ Y`, `8c ≤ Y^{0.1}` and
 `‖l α‖ > Y^{-0.7}` for `1 ≤ l ≤ Y^{0.2}` (test (i)). Then there are integers
 `h₁ l₂ - l₁ h₂ = 1` and box sides `A' B' ≤ 6c²Y`, `A', B' ≤ Y^{0.9}` such that every integer
@@ -187,8 +190,11 @@ theorem exists_lattice_box {α Y c : ℝ} (hY : 1 ≤ Y) (hc : 0 < c)
         _ = 1 / Y := by rw [div_pow, hsq, one_pow]
     have h2 : ((k : ℝ) / Y) ^ 2 ≤ 4 / Y := by
       rw [div_pow, div_le_div_iff₀ (by positivity) hY0]
-      have : (k : ℝ) ^ 2 ≤ 4 * Y := by nlinarith
-      nlinarith
+      have : (k : ℝ) ^ 2 ≤ 4 * Y := by
+        calc (k : ℝ) ^ 2 ≤ (2 * Real.sqrt Y) ^ 2 := pow_le_pow_left₀ hk0'.le (by linarith) 2
+          _ = 4 * Y := by rw [mul_pow, hsq]; norm_num
+      have := mul_le_mul_of_nonneg_right this hY0.le
+      linarith
     have : Λ ≤ 5 / Y := by
       refine hle.trans ?_
       unfold latQ
@@ -306,8 +312,8 @@ theorem exists_lattice_box {α Y c : ℝ} (hY : 1 ≤ Y) (hc : 0 < c)
       push_cast
       ring
     rw [e, abs_mul, abs_of_pos hΛ0]
-    have := abs_sub_round (ip / Λ)
-    nlinarith
+    have := mul_le_mul_of_nonneg_left (abs_sub_round (ip / Λ)) hΛ0.le
+    linarith
   have hdetR : x₁ * y₂ - y₁ * x₂ = 1 / Y := by
     have hd : ((h₁ * l₂ - l₁ * h₂ : ℤ) : ℝ) = 1 := by exact_mod_cast hdet
     push_cast at hd
@@ -323,7 +329,7 @@ theorem exists_lattice_box {α Y c : ℝ} (hY : 1 ≤ Y) (hc : 0 < c)
     have := sq_abs (x₁ * x₂ + y₁ * y₂)
     have h2 : |x₁ * x₂ + y₁ * y₂| ^ 2 ≤ (Λ / 2) ^ 2 :=
       pow_le_pow_left₀ (abs_nonneg _) hip2 2
-    nlinarith
+    linarith
   -- the box sides
   set lam := Real.sqrt Λ with hlam
   have hlam0 : 0 < lam := Real.sqrt_pos.2 hΛ0
@@ -337,7 +343,9 @@ theorem exists_lattice_box {α Y c : ℝ} (hY : 1 ≤ Y) (hc : 0 < c)
   · -- `(4c/λ)² = 16c²/Λ ≤ 16 c² t^16 ≤ t^18`
     have hA : (4 * c / lam) ^ 2 ≤ (t ^ 9) ^ 2 := by
       rw [div_pow, hlam2, div_le_iff₀ hΛ0]
-      have h1 : (4 * c) ^ 2 ≤ t ^ 2 / 4 := by nlinarith
+      have h1 : (4 * c) ^ 2 ≤ t ^ 2 / 4 := by
+        have := pow_le_pow_left₀ (by positivity) hYc 2
+        linarith
       have h2 : t ^ 2 * 1 ≤ t ^ 2 * (t ^ 16 * Λ) :=
         mul_le_mul_of_nonneg_left hΛlow (by positivity)
       have e : (t ^ 9) ^ 2 * Λ = t ^ 2 * (t ^ 16 * Λ) := by ring
@@ -352,12 +360,14 @@ theorem exists_lattice_box {α Y c : ℝ} (hY : 1 ≤ Y) (hc : 0 < c)
         rw [← hlam2]
         ring
       rw [e]
-      have h1 : c ^ 2 ≤ t ^ 2 / 64 := by nlinarith
+      have h1 : c ^ 2 ≤ t ^ 2 / 64 := by
+        have := pow_le_pow_left₀ (by positivity) hYc 2
+        linarith
       have h2 : 9 / 4 * c ^ 2 * Y * (Y * Λ) ≤ 9 / 4 * c ^ 2 * Y * 5 :=
         mul_le_mul_of_nonneg_left hΛup (by positivity)
       have h3 : 9 / 4 * c ^ 2 * Y * 5 ≤ 9 / 4 * (t ^ 2 / 64) * Y * 5 := by
         have : 0 ≤ Y := hY0.le
-        nlinarith
+        gcongr
       have h4 : t ^ 12 ≤ t ^ 18 := pow_le_pow_right₀ ht1 (by norm_num)
       have e2 : 9 / 4 * (t ^ 2 / 64) * Y * 5 = 45 / 256 * t ^ 12 := by rw [hYt]; ring
       have e3 : (t ^ 9) ^ 2 = t ^ 18 := by ring
@@ -401,7 +411,7 @@ theorem exists_lattice_box {α Y c : ℝ} (hY : 1 ≤ Y) (hc : 0 < c)
         _ ≤ 2 * c ^ 2 * Y ^ 2 * (Λ ^ 2 / 4 + 1 / Y ^ 2) := by gcongr
         _ = 2 * c ^ 2 * ((Y * Λ) ^ 2 / 4 + 1) := by field_simp
         _ ≤ 2 * c ^ 2 * (5 ^ 2 / 4 + 1) := by gcongr
-        _ ≤ (4 * c) ^ 2 := by nlinarith
+        _ ≤ (4 * c) ^ 2 := by linarith [sq_nonneg c]
     · refine int_abs_le_floor ?_
       rw [hm₂, ← sq_le_sq₀ (abs_nonneg _) (by positivity), sq_abs]
       have hcs := sq_det_le x₁ y₁ X Yc

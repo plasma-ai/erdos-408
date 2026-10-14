@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.HeckeSlots
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.HeckeSlots
+
+@[expose] public section
 
 namespace OAI
 

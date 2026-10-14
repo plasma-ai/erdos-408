@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCountEndpoint
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCountEndpoint
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+
+@[expose] public section
 
 namespace OAI
 

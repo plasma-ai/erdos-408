@@ -1,5 +1,9 @@
-import Erdos821.Blueprint.Analytic
-import Erdos821.Blueprint.Classical
+module
+
+public import Erdos821.Blueprint.Analytic
+public import Erdos821.Blueprint.Classical
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

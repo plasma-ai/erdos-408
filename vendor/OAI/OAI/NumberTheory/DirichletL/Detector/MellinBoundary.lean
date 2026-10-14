@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrincipalMellinResidues
-import OAI.NumberTheory.DirichletL.ContinuationPolynomialContour
-import Mathlib.MeasureTheory.Group.Prod
+module
+
+public import OAI.NumberTheory.DirichletL.PrincipalMellinResidues
+public import OAI.NumberTheory.DirichletL.ContinuationPolynomialContour
+public import Mathlib.MeasureTheory.Group.Prod
+
+@[expose] public section
 
 namespace OAI
 

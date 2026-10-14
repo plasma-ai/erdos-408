@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorFixedAmplitudeCount
-import OAI.NumberTheory.DirichletL.Hecke.DetectorHighBatchCount
-import OAI.NumberTheory.DirichletL.Detector.CentralMixedMargins
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorFixedAmplitudeCount
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorHighBatchCount
+public import OAI.NumberTheory.DirichletL.Detector.CentralMixedMargins
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.SectorNormalized
-import OAI.NumberTheory.DirichletL.Reflection.ShellRows
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.SectorNormalized
+public import OAI.NumberTheory.DirichletL.Reflection.ShellRows
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthMoments
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthMoments
+
+@[expose] public section
 
 namespace OAI
 

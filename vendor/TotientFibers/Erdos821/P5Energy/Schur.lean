@@ -1,8 +1,12 @@
-import Erdos821.P5Energy.Mellin
+module
+
+public import Erdos821.P5Energy.Mellin
 
 /-! Schur bound for the weighted `u`-energy of the log-coordinate amplitude transform:
 expanding the square, Fubini, the Mellin kernel decay and AM–GM. No Plancherel or
 Minkowski inequality in `u` is needed. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ContDiff FourierTransform ComplexConjugate

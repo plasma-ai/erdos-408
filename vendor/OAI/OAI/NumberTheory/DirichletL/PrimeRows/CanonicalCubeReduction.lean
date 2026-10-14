@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalReduction
-import OAI.NumberTheory.DirichletL.PrimeRows.CubeFiniteIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalReduction
+public import OAI.NumberTheory.DirichletL.PrimeRows.CubeFiniteIntegral
+
+@[expose] public section
 
 namespace OAI
 

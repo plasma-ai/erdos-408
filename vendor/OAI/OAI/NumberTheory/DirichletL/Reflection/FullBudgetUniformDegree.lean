@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.FullBudget
-import OAI.NumberTheory.DirichletL.Reflection.OriginalFullUniformDegree
-import OAI.NumberTheory.DirichletL.Reflection.ActualSizeCapsUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.FullBudget
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalFullUniformDegree
+public import OAI.NumberTheory.DirichletL.Reflection.ActualSizeCapsUniformDegree
+
+@[expose] public section
 
 namespace OAI
 

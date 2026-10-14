@@ -1,5 +1,9 @@
-import Erdos821.P5.StrippedPhysicalLists
-import Erdos821.Leaves.MarkSup
+module
+
+public import Erdos821.P5.StrippedPhysicalLists
+public import Erdos821.Leaves.MarkSup
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

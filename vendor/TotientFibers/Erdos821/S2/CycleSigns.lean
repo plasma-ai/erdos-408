@@ -1,6 +1,11 @@
-import Erdos821.S2.CycleBlocks
+module
+
+public import Erdos821.S2.CycleBlocks
+public import Mathlib.GroupTheory.Perm.Cycle.Type
 
 /-! Equality rank and the signs of cycle decompositions. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

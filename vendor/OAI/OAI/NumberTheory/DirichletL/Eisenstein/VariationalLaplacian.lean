@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.PaddedPassage
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.PaddedPassage
+
+@[expose] public section
 
 namespace OAI
 

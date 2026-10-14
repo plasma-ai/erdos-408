@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondCanonicalFrequency
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondCanonicalFrequency
+
+@[expose] public section
 
 namespace OAI
 

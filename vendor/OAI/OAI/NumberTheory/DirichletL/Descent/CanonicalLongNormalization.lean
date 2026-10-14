@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongSource
-import OAI.NumberTheory.DirichletL.Descent.GeneratorTransport
-import OAI.NumberTheory.DirichletL.Descent.SecondNormalizedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongSource
+public import OAI.NumberTheory.DirichletL.Descent.GeneratorTransport
+public import OAI.NumberTheory.DirichletL.Descent.SecondNormalizedEnergy
+
+@[expose] public section
 
 namespace OAI
 

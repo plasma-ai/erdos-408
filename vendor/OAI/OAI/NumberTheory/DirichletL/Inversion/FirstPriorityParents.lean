@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstActualPriorityEnergy
-import OAI.NumberTheory.DirichletL.Descent.SecondAssignedSum
-import OAI.NumberTheory.DirichletL.Descent.SecondParentAssembly
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstActualPriorityEnergy
+public import OAI.NumberTheory.DirichletL.Descent.SecondAssignedSum
+public import OAI.NumberTheory.DirichletL.Descent.SecondParentAssembly
+
+@[expose] public section
 
 namespace OAI
 

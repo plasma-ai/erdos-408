@@ -1,9 +1,11 @@
-import Erdos408.OneSided.Moment.Chain
-import Erdos408.OneSided.Moment.Edge
-import Erdos408.OneSided.Moment.Phased.Edge
-import Erdos408.OneSided.Moment.Phased.Ghost
-import Erdos408.OneSided.Moment.Phased.HighRank
-import Erdos408.OneSided.Moment.Phased.History
+module
+
+public import Erdos408.OneSided.Moment.Chain
+public import Erdos408.OneSided.Moment.Edge
+public import Erdos408.OneSided.Moment.Phased.Edge
+public import Erdos408.OneSided.Moment.Phased.Ghost
+public import Erdos408.OneSided.Moment.Phased.HighRank
+public import Erdos408.OneSided.Moment.Phased.History
 
 /-!
 # Phased chains and the operator bounds
@@ -23,6 +25,8 @@ operation that creates each birth, so they are still choice operators on the cha
 
 The norms are `NormLe` for the chain measure at both ends, with a cap `B ≤ L³`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

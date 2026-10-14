@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
-import OAI.NumberTheory.DirichletL.Hecke.Dyadic
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
+public import OAI.NumberTheory.DirichletL.Hecke.Dyadic
+
+@[expose] public section
 
 namespace OAI
 

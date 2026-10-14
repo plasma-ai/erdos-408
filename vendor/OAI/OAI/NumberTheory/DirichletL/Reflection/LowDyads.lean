@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.LowFixedMember
-import OAI.NumberTheory.DirichletL.Reflection.DyadCompletionEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.LowFixedMember
+public import OAI.NumberTheory.DirichletL.Reflection.DyadCompletionEnergy
+
+@[expose] public section
 
 namespace OAI
 

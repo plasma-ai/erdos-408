@@ -1,5 +1,9 @@
-import Erdos821.S34.ScaleGrowth
-import Erdos821.S34.CellCount
+module
+
+public import Erdos821.S34.ScaleGrowth
+public import Erdos821.S34.CellCount
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

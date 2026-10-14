@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.ThetaRegularity
-import Mathlib.Analysis.Complex.PhragmenLindelof
+module
+
+public import OAI.NumberTheory.DirichletL.ThetaRegularity
+public import Mathlib.Analysis.Complex.PhragmenLindelof
+
+@[expose] public section
 
 namespace OAI
 

@@ -3,9 +3,13 @@ Adapted from PrimeNumberTheoremAnd by Alex Kontorovich and contributors.
 Licensed under the Apache License, Version 2.0; see the upstream LICENSE.
 This compatibility port retains the proven declarations used by this project.
 -/
-import Mathlib.Topology.ContinuousMap.Bounded.Basic
-import Mathlib.Analysis.Fourier.FourierTransformDeriv
-import PrimeNumberTheoremAnd.Sobolev
+module
+
+public import Mathlib.Topology.ContinuousMap.Bounded.Basic
+public import Mathlib.Analysis.Fourier.FourierTransformDeriv
+public import PrimeNumberTheoremAnd.Sobolev
+
+@[expose] public section
 
 open FourierTransform Real Complex MeasureTheory Filter Topology BoundedContinuousFunction
   SchwartzMap VectorFourier BigOperators

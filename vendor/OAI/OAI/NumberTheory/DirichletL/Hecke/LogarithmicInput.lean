@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrincipalStrip
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrincipalStrip
+
+@[expose] public section
 
 namespace OAI
 

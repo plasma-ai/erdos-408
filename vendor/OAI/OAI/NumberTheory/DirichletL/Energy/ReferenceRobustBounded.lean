@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceRobustOriginal
-import OAI.NumberTheory.DirichletL.Energy.StageReserveBounded
-import OAI.NumberTheory.DirichletL.Energy.ReferenceProfileBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceRobustOriginal
+public import OAI.NumberTheory.DirichletL.Energy.StageReserveBounded
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceProfileBudget
+
+@[expose] public section
 
 namespace OAI
 

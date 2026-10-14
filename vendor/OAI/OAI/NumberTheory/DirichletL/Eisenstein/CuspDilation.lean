@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.ArbitraryCuspPullback
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.ArbitraryCuspPullback
+
+@[expose] public section
 
 namespace OAI
 

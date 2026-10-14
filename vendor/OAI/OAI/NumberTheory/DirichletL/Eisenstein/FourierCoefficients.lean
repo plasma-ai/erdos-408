@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.HyperbolicSpace
-import OAI.NumberTheory.DirichletL.CubicSieve.RowMajorants
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.HyperbolicSpace
+public import OAI.NumberTheory.DirichletL.CubicSieve.RowMajorants
+
+@[expose] public section
 
 namespace OAI
 

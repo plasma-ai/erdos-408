@@ -3,10 +3,16 @@ Adapted from PrimeNumberTheoremAnd by Alex Kontorovich and contributors.
 Licensed under the Apache License, Version 2.0; see the upstream LICENSE.
 This compatibility port retains the proven declarations used by this project.
 -/
-import Mathlib.Analysis.Calculus.Deriv.Support
-import Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas
-import Mathlib.Analysis.Distribution.SchwartzSpace.Deriv
-import Mathlib.Order.Filter.ZeroAndBoundedAtFilter
+module
+
+public import Mathlib.Analysis.Calculus.Deriv.Support
+public import Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas
+public import Mathlib.Analysis.Distribution.SchwartzSpace.Deriv
+public import Mathlib.Order.Filter.ZeroAndBoundedAtFilter
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Classes
+
+@[expose] public section
 
 open Real Complex MeasureTheory Filter Topology BoundedContinuousFunction SchwartzMap  BigOperators
 open scoped ContDiff

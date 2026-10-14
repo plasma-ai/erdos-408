@@ -56,4 +56,12 @@ statement:
   `Mathlib.MeasureTheory.Function.Floor` privately, so `EulerMaclaurin`, whose
   `fun_prop` call needs that module's `Nat.floor` lemma, imports it directly.
 
+The 12 modules that upstream does not already write as modules also use the
+module system: each begins with `module`, imports with `public import`, and
+exposes its definitions with `@[expose] public section`. Six of them import
+Mathlib modules they use but no longer see, because a module sees only what
+its imports export. Mathlib does not expose the
+definition of the norm on `ℂ`, so `PerronFormula` rewrites with
+`Complex.norm_def` before applying `Real.sqrt_le_sqrt`, at both of its uses.
+
 No `sorry`, `axiom`, or heartbeat option was added.

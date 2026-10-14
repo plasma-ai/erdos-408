@@ -1,4 +1,11 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Defs
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Data.Finset.Powerset
+public import Mathlib.Data.Fintype.Prod
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

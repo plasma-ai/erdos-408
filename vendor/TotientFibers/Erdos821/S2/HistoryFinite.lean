@@ -1,6 +1,10 @@
-import Erdos821.S2.HistoryBirths
+module
+
+public import Erdos821.S2.HistoryBirths
 
 /-! Distinct birth histories have bounded memory independently of ghost batches. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

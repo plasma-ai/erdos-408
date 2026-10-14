@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.Canonical
-import OAI.NumberTheory.DirichletL.ResidueCharacter
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Canonical
+public import OAI.NumberTheory.DirichletL.ResidueCharacter
+
+@[expose] public section
 
 namespace OAI
 

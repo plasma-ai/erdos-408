@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialDetectorSource
-import OAI.NumberTheory.DirichletL.Inversion.SecondChildWindows
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialDetectorSource
+public import OAI.NumberTheory.DirichletL.Inversion.SecondChildWindows
+
+@[expose] public section
 
 namespace OAI
 

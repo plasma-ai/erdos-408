@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.Cross
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Cross
+
+@[expose] public section
 
 namespace OAI
 

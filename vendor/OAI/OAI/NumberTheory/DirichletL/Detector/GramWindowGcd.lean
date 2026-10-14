@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramFiniteGcd
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramFiniteGcd
+
+@[expose] public section
 
 namespace OAI
 

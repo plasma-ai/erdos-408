@@ -1,4 +1,8 @@
-import Erdos821.S34.Probability
+module
+
+public import Erdos821.S34.Probability
+
+@[expose] public section
 
 set_option autoImplicit false
 

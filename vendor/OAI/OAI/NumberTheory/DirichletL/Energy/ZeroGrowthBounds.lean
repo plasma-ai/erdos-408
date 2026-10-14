@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthReflection
-import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceError
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthReflection
+public import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceError
+
+@[expose] public section
 
 namespace OAI
 

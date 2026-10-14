@@ -74,11 +74,13 @@ Four vendored libraries live under `vendor/`, each under its own directory with 
 
 `blueprint/rectangle_input.md` states the graph-paper results, the analytic estimates and the extraction in prose, and records where each is proved; `blueprint/one_sided_type_ii.md` and `blueprint/two_sided_correlation.md` restate PD §§3–5 and §6 for the proofs of `OneSidedTypeII` and `TwoSidedCorrelation`.
 
-`Challenge.lean` and the files of `Erdos408/` that import only Mathlib use the module system. The vendored libraries do not, and a module cannot import an ordinary file, so the files that depend on them and `Solution.lean` are ordinary files.
+Every Lean file, the vendored libraries included, uses the module system: it begins with `module`, imports with `public import`, and exposes its definitions with `@[expose] public section`. No file imports all of Mathlib; each imports the Mathlib modules it uses.
 
 `paper/` holds the paper, `totient_iterates.tex` and its compiled `totient_iterates.pdf`.
 
 `formalization.yaml` records the mathematical sources, authorship, AI use, source fidelity, and review status for a registry submission.
+
+`scripts/` holds the checks of the [Palomar template](https://github.com/PalomarRegistry/PalomarTemplate), unchanged: `check-lean-sources.py` checks the module headers and the 10,000-line limit, `validate-formalization.rb` checks `formalization.yaml`, and `verify-comparator.sh` runs the toolchain's `lake comparator` with its bundled NanoDa and con-ron kernels, as Palomar does (it needs Linux and `bwrap`).
 
 The Lean and Mathlib versions are fixed by `lean-toolchain`, `lakefile.toml`, and `lake-manifest.json`.
 

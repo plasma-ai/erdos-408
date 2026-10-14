@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.Descent.IdealMasks
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.Descent.IdealMasks
+
+@[expose] public section
 
 namespace OAI
 

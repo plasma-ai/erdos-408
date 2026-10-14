@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedAllowance
-import OAI.NumberTheory.DirichletL.Moments.FirstExceptionalPrefactorActual
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedAllowance
+public import OAI.NumberTheory.DirichletL.Moments.FirstExceptionalPrefactorActual
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedFamily
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.SpectralSeparation
-import OAI.NumberTheory.DirichletL.Detector.PhysicalAnalytic
-import OAI.NumberTheory.DirichletL.Detector.Windows
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SpectralSeparation
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalAnalytic
+public import OAI.NumberTheory.DirichletL.Detector.Windows
+
+@[expose] public section
 
 namespace OAI
 

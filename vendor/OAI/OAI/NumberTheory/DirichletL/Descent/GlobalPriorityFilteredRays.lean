@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredEnergy
+
+@[expose] public section
 
 namespace OAI
 

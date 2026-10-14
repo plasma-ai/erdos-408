@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceInputTailUniform
-import OAI.NumberTheory.DirichletL.Moments.SourceInputFirstTailUniform
-import OAI.NumberTheory.DirichletL.Moments.SourceInputFirstSectorTailAggregate
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceInputTailUniform
+public import OAI.NumberTheory.DirichletL.Moments.SourceInputFirstTailUniform
+public import OAI.NumberTheory.DirichletL.Moments.SourceInputFirstSectorTailAggregate
+
+@[expose] public section
 
 namespace OAI
 

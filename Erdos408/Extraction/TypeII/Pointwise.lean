@@ -1,4 +1,6 @@
-import Erdos408.Extraction.TypeII.Data
+module
+
+public import Erdos408.Extraction.TypeII.Data
 
 /-!
 # The bound at one scale
@@ -7,6 +9,8 @@ At a fixed large `x`, `|Comp_j - Prox_j| ≤ j B₄ + j B₅`, with the explicit
 `abs_single_step_le` and E5 bound `B₅` of `abs_strip_step_le`, the factor sums bounded by
 `Q_ρ = ρ ∑_{x^γ < p ≤ M} 1/p + ∏_{Y < p ≤ M} (1 - ρ/p)⁻¹`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

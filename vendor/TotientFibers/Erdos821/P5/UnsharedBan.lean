@@ -1,5 +1,9 @@
-import Erdos821.P5.FreeSlotExclusion
-import Erdos821.P5.UnsharedMarks
+module
+
+public import Erdos821.P5.FreeSlotExclusion
+public import Erdos821.P5.UnsharedMarks
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

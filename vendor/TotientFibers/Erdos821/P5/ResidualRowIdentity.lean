@@ -1,5 +1,9 @@
-import Erdos821.P5.StrippedRowAlgebra
-import Erdos821.P5.PhysicalSharedExclusion
+module
+
+public import Erdos821.P5.StrippedRowAlgebra
+public import Erdos821.P5.PhysicalSharedExclusion
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

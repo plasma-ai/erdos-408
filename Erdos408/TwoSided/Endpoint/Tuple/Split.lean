@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Major.Characters
-import Erdos408.TwoSided.Endpoint.Tuple.Energy
-import Erdos408.TwoSided.Endpoint.Tuple.Sparse
-import Erdos821.P5MarkedEnergy.Factorization
+module
+
+public import Erdos408.OneSided.Major.Characters
+public import Erdos408.TwoSided.Endpoint.Tuple.Energy
+public import Erdos408.TwoSided.Endpoint.Tuple.Sparse
+public import Erdos821.P5MarkedEnergy.Factorization
 
 /-!
 # Boxes, classes, characters and separation (tuple part)
@@ -14,6 +16,8 @@ with the vendored `Erdos821.P5Marked.e_eq_sum_cchi` (`phase_eq_sum_boxSet`,
 `tripleSum_eq_sum_boxSet`). The cutoff `ψ₁(p_s p_l u/Y)` is
 separated by its Mellin density (`boxSum_eq_integral`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.TupleHigh
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.Marks
-import Mathlib.Data.Fintype.EquivFin
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.Marks
+public import Mathlib.Data.Fintype.EquivFin
+
+@[expose] public section
 
 namespace OAI
 

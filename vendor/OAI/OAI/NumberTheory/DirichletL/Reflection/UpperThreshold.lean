@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.AnnularExponent
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.AnnularExponent
+
+@[expose] public section
 
 namespace OAI
 

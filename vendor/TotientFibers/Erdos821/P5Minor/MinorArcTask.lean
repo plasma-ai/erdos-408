@@ -1,6 +1,14 @@
-import Erdos821.P5.MinorArcTask
-import Mathlib.NumberTheory.DiophantineApproximation.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+module
+
+public import Erdos821.P5.MinorArcTask
+public import Mathlib.NumberTheory.DiophantineApproximation.Basic
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Algebra.Ring.IsFormallyReal
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

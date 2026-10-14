@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralRectangle
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralRectangle
+
+@[expose] public section
 
 namespace OAI
 

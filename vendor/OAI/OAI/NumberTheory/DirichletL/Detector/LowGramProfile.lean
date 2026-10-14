@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowActualEnergies
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowActualEnergies
+
+@[expose] public section
 
 namespace OAI
 

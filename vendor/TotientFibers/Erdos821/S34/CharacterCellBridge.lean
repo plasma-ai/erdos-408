@@ -1,6 +1,10 @@
-import Erdos821.P4Cell.CharacterCellTask
-import Erdos821.P1.ClassicalInputs
-import Erdos821.S34.EventualFrame
+module
+
+public import Erdos821.P4Cell.CharacterCellTask
+public import Erdos821.P1.ClassicalInputs
+public import Erdos821.S34.EventualFrame
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

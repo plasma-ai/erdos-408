@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.RowTail
-import OAI.NumberTheory.DirichletL.Reflection.FamilyTailUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.RowTail
+public import OAI.NumberTheory.DirichletL.Reflection.FamilyTailUniformDegree
+
+@[expose] public section
 
 namespace OAI
 

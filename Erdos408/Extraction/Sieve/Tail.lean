@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Sieve.Presieve
+module
+
+public import Erdos408.Extraction.Sieve.Presieve
 
 /-!
 # The composite tail of the presieved sum (E3)
@@ -10,6 +12,8 @@ nonsquarefree (`O(x / z)`) or have `ω(n) > J` (Rankin, `O(x γ⁻² L⁻¹ 2^{-
 With `|Φ P (f_𝔟 - C_𝔟)| ≤ M₀ T⁶²`, the error is
 `≪ (x / L) (T⁶² L / z + T¹⁰⁶ 2^{-J})`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

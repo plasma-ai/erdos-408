@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.ActualSizeCaps
-import OAI.NumberTheory.DirichletL.Reflection.TailEnergyBudgetUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.ActualSizeCaps
+public import OAI.NumberTheory.DirichletL.Reflection.TailEnergyBudgetUniformDegree
+
+@[expose] public section
 
 namespace OAI
 

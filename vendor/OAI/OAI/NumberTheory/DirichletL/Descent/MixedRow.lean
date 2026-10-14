@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.ActiveCusp
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ActiveCusp
+
+@[expose] public section
 
 namespace OAI
 

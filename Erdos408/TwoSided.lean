@@ -1,5 +1,7 @@
-import Erdos408.TwoSided.Comparison
-import Erdos408.TwoSided.Graph
+module
+
+public import Erdos408.TwoSided.Comparison
+public import Erdos408.TwoSided.Graph
 
 /-!
 # The two-sided correlation from the graph transference
@@ -21,6 +23,8 @@ The groups of `TwoSidedCorrelation` are reindexed once (R1) by `ι = ↥(Sg ∪ 
 The step numbers S0–S19 and the lemma names G1–G5, C1–C3, E1–E10 in the docstrings of
 `Erdos408/TwoSided/` are those of the blueprint.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

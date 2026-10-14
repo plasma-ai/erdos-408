@@ -1,4 +1,6 @@
-import Erdos821.Prelim.SieveCountingLower
+module
+
+public import Erdos821.Prelim.SieveCountingLower
 
 /-!
 # Uniform counting bounds for the block sieve
@@ -8,6 +10,8 @@ counting bounds, together with the correction expectation estimate, give
 `eq:block-sieve`, uniformly in the number of blocks and in even `h`.
 The fixed choice `h = 2` gives the paper's upper bound at level `z^10`.
 -/
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

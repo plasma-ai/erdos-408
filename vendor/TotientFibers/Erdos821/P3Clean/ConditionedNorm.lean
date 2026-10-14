@@ -1,8 +1,12 @@
-import Erdos821.P3Clean.ControlledKernel
-import Erdos821.P3Clean.SymmetricFibre
-import Erdos821.P3Clean.MassPositivity
+module
+
+public import Erdos821.P3Clean.ControlledKernel
+public import Erdos821.P3Clean.SymmetricFibre
+public import Erdos821.P3Clean.MassPositivity
 
 /-! Transfer the symmetrized big Fourier bounds to the literal conditioned family. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

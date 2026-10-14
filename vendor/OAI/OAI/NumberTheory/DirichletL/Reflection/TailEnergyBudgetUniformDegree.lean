@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.TailEnergyBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.TailEnergyBudget
+
+@[expose] public section
 
 namespace OAI
 

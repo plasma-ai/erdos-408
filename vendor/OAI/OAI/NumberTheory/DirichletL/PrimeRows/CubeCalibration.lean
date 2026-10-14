@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalRayCube
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalRayCube
+
+@[expose] public section
 
 namespace OAI
 

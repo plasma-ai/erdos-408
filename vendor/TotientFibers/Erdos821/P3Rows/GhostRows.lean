@@ -1,4 +1,11 @@
-import Erdos821.S2.GhostTasks
+module
+
+public import Erdos821.S2.GhostTasks
+public import Mathlib.CategoryTheory.Countable
+public import Mathlib.Data.Finset.Interval
+public import Mathlib.Topology.Separation.CompletelyRegular
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

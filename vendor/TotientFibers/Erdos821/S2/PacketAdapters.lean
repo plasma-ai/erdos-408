@@ -1,7 +1,11 @@
-import Erdos821.S2.TransferenceAssemblyTask
-import Erdos821.P3Pair.PairingFromMoment
+module
+
+public import Erdos821.S2.TransferenceAssemblyTask
+public import Erdos821.P3Pair.PairingFromMoment
 
 /-! The exact local moment theorem supplies the transference package interfaces. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

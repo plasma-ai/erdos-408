@@ -1,7 +1,9 @@
-import Erdos408.Analytic.IntegerKernel
-import Erdos408.Analytic.PrimeTwist
-import Erdos408.Extraction.Allocation.Assembly
-import Erdos408.Extraction.Defs
+module
+
+public import Erdos408.Analytic.IntegerKernel
+public import Erdos408.Analytic.PrimeTwist
+public import Erdos408.Extraction.Allocation.Assembly
+public import Erdos408.Extraction.Defs
 
 /-!
 # The proxy sum is small
@@ -40,6 +42,8 @@ See `blueprint/rectangle_input.md` §4 (E6–E8) and §§6.3–6.4 of the paper
 *The normal order of the number of iterations of Euler's function* (Plasma AI,
 2026).
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondParentLists
-import OAI.NumberTheory.DirichletL.Descent.SecondModeCanonical
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondParentLists
+public import OAI.NumberTheory.DirichletL.Descent.SecondModeCanonical
+
+@[expose] public section
 
 namespace OAI
 

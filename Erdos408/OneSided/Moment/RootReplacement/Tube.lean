@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.RootReplacement.Config
+module
+
+public import Erdos408.OneSided.Moment.RootReplacement.Config
 
 /-!
 # The tube
@@ -14,6 +16,8 @@ box. Then `g z_j ∈ Ω` and `det(g z, g z') = det(z, z')`, so consecutive slope
 differ by at most `10 H / U²`, and `z_{j,2} = det(g e₁, g z_j)` is at most `2560 N H`
 (`tube_of_live`). Since `τ(z_j) ∈ [1/16, 16]`, also `|z_{j,1}| ≤ 2560 N H + 16`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

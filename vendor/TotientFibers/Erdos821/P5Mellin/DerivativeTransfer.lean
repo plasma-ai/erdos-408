@@ -1,4 +1,12 @@
-import Erdos821.Blueprint.Analytic
+module
+
+public import Erdos821.Blueprint.Analytic
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.Analysis.Calculus.IteratedDeriv.FaaDiBruno
+public import Mathlib.Analysis.SpecialFunctions.ExpDeriv
+
+@[expose] public section
 
 open MeasureTheory
 open scoped BigOperators ContDiff

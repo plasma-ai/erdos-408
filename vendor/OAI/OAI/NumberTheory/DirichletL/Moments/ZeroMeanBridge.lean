@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstLocalization
-import OAI.NumberTheory.DirichletL.Moments.ZeroMode
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstLocalization
+public import OAI.NumberTheory.DirichletL.Moments.ZeroMode
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationShortening
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationShortening
+
+@[expose] public section
 
 namespace OAI
 

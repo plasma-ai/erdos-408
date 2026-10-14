@@ -1,4 +1,9 @@
-import OAI.NumberTheory.DirichletL.ContinuationPolynomialContour
+module
+
+public import OAI.NumberTheory.DirichletL.ContinuationPolynomialContour
+public import Mathlib.Algebra.Order.Star.Real
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import Erdos821.S2.SpanLifecycle
+module
+
+public import Erdos821.S2.SpanLifecycle
 
 /-! Prime lookup in a memory with no repeated prime values. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,6 +1,8 @@
-import Erdos408.TwoSided.Endpoint.Factor.Bounds
-import Erdos408.TwoSided.Endpoint.Low
-import Mathlib.Data.Fin.Tuple.Finset
+module
+
+public import Erdos408.TwoSided.Endpoint.Factor.Bounds
+public import Erdos408.TwoSided.Endpoint.Low
+public import Mathlib.Data.Fin.Tuple.Finset
 
 /-!
 # Small-prime removal and the spare-slot factorization
@@ -24,6 +26,8 @@ The removal identity E3 and the scale separation are in `Factor/Identity.lean`; 
 bounds (U6; U7 and U9 are in `Setup.lean`) and the mean value theorem used for the exceptional
 positions are in `Factor/Bounds.lean`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

@@ -1,6 +1,10 @@
-import Erdos821.S2.RankSummability
+module
+
+public import Erdos821.S2.RankSummability
 
 /-! The actual truncated history sum admits the finite equality-rank expansion. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

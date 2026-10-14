@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.PrincipalMajorants
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.PrincipalMajorants
+
+@[expose] public section
 
 namespace OAI
 

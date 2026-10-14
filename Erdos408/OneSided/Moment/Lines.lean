@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Model
+module
+
+public import Erdos408.OneSided.Model
 
 /-!
 # Independent lines
@@ -7,6 +9,8 @@ The average over independent uniform lines at the band primes, and the root mome
 real root (`blueprint/one_sided_type_ii.md` §11). A line assignment gives each band prime `p`
 a line `ℓ p ∈ {0, …, p}`, encoding the projective line `ℙ¹(𝔽_p)`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

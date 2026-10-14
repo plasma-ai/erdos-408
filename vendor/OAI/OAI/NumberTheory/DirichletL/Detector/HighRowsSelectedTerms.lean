@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsFirstRamified
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsFirstRamified
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.FirstGaussianProfileWeights
-import OAI.NumberTheory.DirichletL.Energy.FirstHighNormalizedGaussianPowers
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.FirstGaussianProfileWeights
+public import OAI.NumberTheory.DirichletL.Energy.FirstHighNormalizedGaussianPowers
+
+@[expose] public section
 
 namespace OAI
 

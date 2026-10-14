@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.OneReflectionScaleEnergy
-import OAI.NumberTheory.DirichletL.Moments.ReflectionWeightedEnergy
-import OAI.NumberTheory.DirichletL.Moments.ReflectionRetainedLength
-import OAI.NumberTheory.DirichletL.Moments.ReflectionTailMass
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.OneReflectionScaleEnergy
+public import OAI.NumberTheory.DirichletL.Moments.ReflectionWeightedEnergy
+public import OAI.NumberTheory.DirichletL.Moments.ReflectionRetainedLength
+public import OAI.NumberTheory.DirichletL.Moments.ReflectionTailMass
+
+@[expose] public section
 
 namespace OAI
 

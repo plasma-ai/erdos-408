@@ -1,10 +1,12 @@
-import Erdos408.OneSided.Major.Energy.Mean
-import Erdos408.TwoSided.Endpoint.Tuple.Asymp
-import Erdos408.TwoSided.Endpoint.Tuple.Exceptional
-import Erdos408.TwoSided.Endpoint.Tuple.Gram
-import Erdos408.TwoSided.Endpoint.Tuple.Mark
-import Erdos408.TwoSided.Endpoint.Tuple.Mean
-import Erdos408.TwoSided.Endpoint.Tuple.Twist
+module
+
+public import Erdos408.OneSided.Major.Energy.Mean
+public import Erdos408.TwoSided.Endpoint.Tuple.Asymp
+public import Erdos408.TwoSided.Endpoint.Tuple.Exceptional
+public import Erdos408.TwoSided.Endpoint.Tuple.Gram
+public import Erdos408.TwoSided.Endpoint.Tuple.Mark
+public import Erdos408.TwoSided.Endpoint.Tuple.Mean
+public import Erdos408.TwoSided.Endpoint.Tuple.Twist
 
 /-!
 # The mean square of one box (tuple part)
@@ -23,6 +25,8 @@ and one character (PD (6.35)–(6.38)). The box polynomial is
 The bound under AP1 and AP2, `eventually_integral_boxPoly_le_of_twist`, is in
 `Tuple/Sparse.lean`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.TupleHigh
 

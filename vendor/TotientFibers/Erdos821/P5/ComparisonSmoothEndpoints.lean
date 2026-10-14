@@ -1,6 +1,10 @@
-import Erdos821.P5.PositiveSizeCutoffs
-import Erdos821.P5.ComparisonMellinAlgebra
-import Erdos821.P5.MarkedEnergyTask
+module
+
+public import Erdos821.P5.PositiveSizeCutoffs
+public import Erdos821.P5.ComparisonMellinAlgebra
+public import Erdos821.P5.MarkedEnergyTask
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical ContDiff

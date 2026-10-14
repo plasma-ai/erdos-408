@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.PathExpansion
+module
+
+public import Erdos408.OneSided.Moment.PathExpansion
 
 /-!
 # Configurations: the path expansion over a root-independent index set
@@ -29,6 +31,8 @@ the visit indicator (`freeRootModel_edgeOp_eq`), so the weight of a path is `c(�
 up to the mass and endpoint condition (`pathWeight_eq_prod_confKernel`). The configurations
 with a visit off the positions at `ϱ` have `A(ω, ϱ) = 0`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

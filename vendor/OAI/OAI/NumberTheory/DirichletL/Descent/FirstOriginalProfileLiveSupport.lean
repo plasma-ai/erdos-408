@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveCount
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveAggregate
-import OAI.NumberTheory.DirichletL.Descent.FirstLiveNorms
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveCount
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveAggregate
+public import OAI.NumberTheory.DirichletL.Descent.FirstLiveNorms
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.PoissonTails
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.PoissonTails
+
+@[expose] public section
 
 namespace OAI
 

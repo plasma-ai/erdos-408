@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalBudget
-import OAI.NumberTheory.DirichletL.Moments.FirstCanonicalAllowance
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalBudget
+public import OAI.NumberTheory.DirichletL.Moments.FirstCanonicalAllowance
+
+@[expose] public section
 
 namespace OAI
 

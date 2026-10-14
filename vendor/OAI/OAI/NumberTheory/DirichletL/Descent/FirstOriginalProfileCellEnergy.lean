@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfilePhysical
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileAssembly
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileWindows
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfilePhysical
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileAssembly
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileWindows
+
+@[expose] public section
 
 namespace OAI
 

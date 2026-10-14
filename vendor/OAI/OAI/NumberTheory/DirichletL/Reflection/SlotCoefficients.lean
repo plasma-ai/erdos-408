@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.SupportedChoices
-import OAI.NumberTheory.DirichletL.Reflection.TupleFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.SupportedChoices
+public import OAI.NumberTheory.DirichletL.Reflection.TupleFamily
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.AllocatedHomogeneous
-import OAI.NumberTheory.DirichletL.Energy.ChildState
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.AllocatedHomogeneous
+public import OAI.NumberTheory.DirichletL.Energy.ChildState
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondActualMass
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondActualMass
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionary
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRowwise
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicCutoff
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionary
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRowwise
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicCutoff
+
+@[expose] public section
 
 namespace OAI
 

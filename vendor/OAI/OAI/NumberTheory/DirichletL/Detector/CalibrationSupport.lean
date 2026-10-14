@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.Calibration
-import OAI.NumberTheory.DirichletL.Detector.PhysicalAnalytic
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.Calibration
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalAnalytic
+
+@[expose] public section
 
 namespace OAI
 

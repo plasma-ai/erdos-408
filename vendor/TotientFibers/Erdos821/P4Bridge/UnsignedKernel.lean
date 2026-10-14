@@ -1,5 +1,9 @@
-import Erdos821.P4Bridge.RawPairing
-import Erdos821.P4Probe.AuxTupleLaw
+module
+
+public import Erdos821.P4Bridge.RawPairing
+public import Erdos821.P4Probe.AuxTupleLaw
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

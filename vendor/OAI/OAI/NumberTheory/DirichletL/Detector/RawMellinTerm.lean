@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.InitialSubseries
-import OAI.NumberTheory.DirichletL.Detector.ContourShear
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.InitialSubseries
+public import OAI.NumberTheory.DirichletL.Detector.ContourShear
+
+@[expose] public section
 
 namespace OAI
 

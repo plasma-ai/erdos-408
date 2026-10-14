@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileCells
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileCells
+
+@[expose] public section
 
 namespace OAI
 

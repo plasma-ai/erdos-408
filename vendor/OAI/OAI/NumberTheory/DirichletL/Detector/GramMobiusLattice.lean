@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramIdealDilation
-import OAI.NumberTheory.DirichletL.Detector.GramLatticeSource
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramIdealDilation
+public import OAI.NumberTheory.DirichletL.Detector.GramLatticeSource
+
+@[expose] public section
 
 namespace OAI
 

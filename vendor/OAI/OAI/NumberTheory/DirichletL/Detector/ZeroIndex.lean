@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.PrincipalEulerIdentity
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PrincipalEulerIdentity
+
+@[expose] public section
 
 namespace OAI
 

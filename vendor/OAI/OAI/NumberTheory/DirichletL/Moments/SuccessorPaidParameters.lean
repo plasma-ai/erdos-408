@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstSecondLossParameters
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedMainError
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstSecondLossParameters
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedMainError
+
+@[expose] public section
 
 namespace OAI
 

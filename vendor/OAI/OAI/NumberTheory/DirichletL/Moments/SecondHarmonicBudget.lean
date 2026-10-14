@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSquarefreeBlock
-import OAI.NumberTheory.DirichletL.Moments.MobiusHarmonicMass
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSquarefreeBlock
+public import OAI.NumberTheory.DirichletL.Moments.MobiusHarmonicMass
+
+@[expose] public section
 
 namespace OAI
 

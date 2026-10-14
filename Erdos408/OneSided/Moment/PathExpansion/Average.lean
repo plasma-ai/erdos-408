@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.Lines
+module
+
+public import Erdos408.OneSided.Moment.Lines
 
 /-!
 # Averages of products over independent lines
@@ -7,6 +9,8 @@ The lines at distinct band primes are independent and uniform, so the line avera
 product over the band primes of functions of `ℓ p` is the product of the averages over
 `{0, …, p}` (`blueprint/one_sided_type_ii.md` §12, S1).
 -/
+
+@[expose] public section
 
 noncomputable section
 

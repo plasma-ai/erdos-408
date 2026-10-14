@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.Moments.Basic
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.Moments.Basic
+
+@[expose] public section
 
 namespace OAI
 

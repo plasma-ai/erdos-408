@@ -1,9 +1,13 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourcePool
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplificationChoice
-import OAI.NumberTheory.DirichletL.Moments.SourceAllocationEnergy
-import OAI.NumberTheory.DirichletL.Moments.LiveDomain
-import OAI.NumberTheory.DirichletL.Moments.CommonPuncture
-import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourcePool
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplificationChoice
+public import OAI.NumberTheory.DirichletL.Moments.SourceAllocationEnergy
+public import OAI.NumberTheory.DirichletL.Moments.LiveDomain
+public import OAI.NumberTheory.DirichletL.Moments.CommonPuncture
+public import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
+
+@[expose] public section
 
 namespace OAI
 

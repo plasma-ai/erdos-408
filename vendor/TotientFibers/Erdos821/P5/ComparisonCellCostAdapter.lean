@@ -1,5 +1,9 @@
-import Erdos821.P5CellCost.Proof
-import Erdos821.P5.ComparisonCellScales
+module
+
+public import Erdos821.P5CellCost.Proof
+public import Erdos821.P5.ComparisonCellScales
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

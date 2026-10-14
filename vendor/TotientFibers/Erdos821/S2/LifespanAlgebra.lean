@@ -1,6 +1,11 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Tactic.Ring.RingNF
 
 /-! Polynomial identities underlying the one-prime lifespan expansion. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

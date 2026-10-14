@@ -1,10 +1,14 @@
-import Erdos821.S56.BlueprintInvariant
-import Erdos821.Leaves.MarkSup
+module
+
+public import Erdos821.S56.BlueprintInvariant
+public import Erdos821.Leaves.MarkSup
 
 /-! Removal of one designated small mark (paper eq. small-mark-removal).
 Removing the designated slot of a small group is a bijection of ordered lists,
 exact for every `n`; the residual list sum is a function of the cofactor alone
 away from square multiples of the removed prime. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

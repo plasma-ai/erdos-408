@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.LogarithmicActual
-import OAI.NumberTheory.DirichletL.Hecke.ReciprocalGrowth
-import OAI.NumberTheory.DirichletL.Hecke.DetectorZeros
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.LogarithmicActual
+public import OAI.NumberTheory.DirichletL.Hecke.ReciprocalGrowth
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorZeros
+
+@[expose] public section
 
 namespace OAI
 

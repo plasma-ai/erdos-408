@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowMellinFubini
-import OAI.NumberTheory.DirichletL.Detector.LowRayAmplitude
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowMellinFubini
+public import OAI.NumberTheory.DirichletL.Detector.LowRayAmplitude
+
+@[expose] public section
 
 namespace OAI
 

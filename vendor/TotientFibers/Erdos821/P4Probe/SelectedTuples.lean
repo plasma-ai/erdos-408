@@ -1,6 +1,10 @@
-import Erdos821.P4Probe.BigAveraging
-import Erdos821.P4Probe.ProductMarginals
-import Erdos821.P4Probe.Bridge
+module
+
+public import Erdos821.P4Probe.BigAveraging
+public import Erdos821.P4Probe.ProductMarginals
+public import Erdos821.P4Probe.Bridge
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.BesselMellinTransform
-import OAI.NumberTheory.DirichletL.Eisenstein.TranslatedFourierResidues
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.BesselMellinTransform
+public import OAI.NumberTheory.DirichletL.Eisenstein.TranslatedFourierResidues
+
+@[expose] public section
 
 namespace OAI
 

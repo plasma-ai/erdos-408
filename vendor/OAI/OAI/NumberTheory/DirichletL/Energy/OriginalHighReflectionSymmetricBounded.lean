@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.OriginalHighReflectionSymmetric
-import OAI.NumberTheory.DirichletL.Energy.OriginalHighReflectionBounded
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.OriginalHighReflectionSymmetric
+public import OAI.NumberTheory.DirichletL.Energy.OriginalHighReflectionBounded
+
+@[expose] public section
 
 namespace OAI
 

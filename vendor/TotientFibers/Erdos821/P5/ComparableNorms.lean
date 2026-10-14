@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparableTargets
-import Erdos821.P5.EndpointRangeNorms
+module
+
+public import Erdos821.P5.ComparableTargets
+public import Erdos821.P5.EndpointRangeNorms
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

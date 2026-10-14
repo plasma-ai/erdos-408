@@ -1,7 +1,11 @@
-import Erdos821.S2.MemoryGhost
-import Erdos821.Blueprint.Transference
+module
+
+public import Erdos821.S2.MemoryGhost
+public import Erdos821.Blueprint.Transference
 
 /-! Frozen independently verifiable P3 helper tasks. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

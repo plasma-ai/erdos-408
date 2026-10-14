@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSourceRetained
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSourceRetained
+
+@[expose] public section
 
 namespace OAI
 

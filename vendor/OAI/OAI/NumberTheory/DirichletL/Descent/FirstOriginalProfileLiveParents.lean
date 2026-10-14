@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveEnergy
-import OAI.NumberTheory.DirichletL.Descent.OriginalCellPriority
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveEnergy
+public import OAI.NumberTheory.DirichletL.Descent.OriginalCellPriority
+
+@[expose] public section
 
 namespace OAI
 

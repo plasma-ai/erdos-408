@@ -1,6 +1,8 @@
-import Erdos408.TwoSided.Comparison.ArcsCore
-import Erdos408.TwoSided.Comparison.Multiplier
-import Erdos408.TwoSided.Comparison.Separation
+module
+
+public import Erdos408.TwoSided.Comparison.ArcsCore
+public import Erdos408.TwoSided.Comparison.Multiplier
+public import Erdos408.TwoSided.Comparison.Separation
 
 /-!
 # Parseval, the arcs and the local Mellin energy
@@ -18,6 +20,8 @@ The pieces live in `Comparison/ArcsFourier.lean` (shift identity, Parseval, the 
 labels, the four boxes) and `Comparison/ArcsCore.lean` (energies, minor arcs, the count); the
 crude U7 and U9 are in `Setup.lean`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

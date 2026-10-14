@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.SixthMask
-import OAI.NumberTheory.DirichletL.Detector.RawArithmetic
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SixthMask
+public import OAI.NumberTheory.DirichletL.Detector.RawArithmetic
+
+@[expose] public section
 
 namespace OAI
 

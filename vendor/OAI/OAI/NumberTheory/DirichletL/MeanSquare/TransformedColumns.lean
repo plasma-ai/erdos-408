@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.LogarithmicLoss
-import OAI.NumberTheory.DirichletL.CubicSieve.PooledRows
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.LogarithmicLoss
+public import OAI.NumberTheory.DirichletL.CubicSieve.PooledRows
+
+@[expose] public section
 
 namespace OAI
 

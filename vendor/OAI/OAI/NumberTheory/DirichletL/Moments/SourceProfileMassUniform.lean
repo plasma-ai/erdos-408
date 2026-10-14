@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceProfileMass
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceProfileMass
+
+@[expose] public section
 
 namespace OAI
 

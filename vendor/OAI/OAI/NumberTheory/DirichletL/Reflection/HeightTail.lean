@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.DyadicTail
-import OAI.NumberTheory.DirichletL.Inversion.KernelSourceUniform
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.DyadicTail
+public import OAI.NumberTheory.DirichletL.Inversion.KernelSourceUniform
+
+@[expose] public section
 
 namespace OAI
 

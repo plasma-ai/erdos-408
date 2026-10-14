@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSixthSource
-import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
-import OAI.NumberTheory.DirichletL.Moments.RadicalFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSixthSource
+public import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
+public import OAI.NumberTheory.DirichletL.Moments.RadicalFamily
+
+@[expose] public section
 
 namespace OAI
 

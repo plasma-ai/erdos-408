@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstWholeAssembly
-import OAI.NumberTheory.DirichletL.Moments.ReflectedChild
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstWholeAssembly
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedChild
+
+@[expose] public section
 
 namespace OAI
 

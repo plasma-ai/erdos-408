@@ -1,4 +1,8 @@
-import Erdos821.P5.PhysicalSchurPairing
+module
+
+public import Erdos821.P5.PhysicalSchurPairing
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

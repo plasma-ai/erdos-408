@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrincipalSlotEstimate
+module
+
+public import OAI.NumberTheory.DirichletL.PrincipalSlotEstimate
+
+@[expose] public section
 
 namespace OAI
 

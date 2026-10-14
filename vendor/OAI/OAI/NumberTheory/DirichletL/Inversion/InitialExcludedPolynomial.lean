@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedSource
-import OAI.NumberTheory.DirichletL.Inversion.InitialRawDictionary
-import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedSource
+public import OAI.NumberTheory.DirichletL.Inversion.InitialRawDictionary
+public import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
+
+@[expose] public section
 
 namespace OAI
 

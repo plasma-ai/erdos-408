@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.Structure
+module
+
+public import Erdos821.P3Clean.Structure
 
 /-! Splitting the fixed small labels from the variable big labels. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

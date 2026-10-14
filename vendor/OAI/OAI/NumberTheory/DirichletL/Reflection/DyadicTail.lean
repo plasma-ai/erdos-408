@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.FullDyadic
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.FullDyadic
+
+@[expose] public section
 
 namespace OAI
 

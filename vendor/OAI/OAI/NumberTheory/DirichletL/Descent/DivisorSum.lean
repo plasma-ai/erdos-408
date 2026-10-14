@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.DivisorExtraction
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.DivisorExtraction
+
+@[expose] public section
 
 namespace OAI
 

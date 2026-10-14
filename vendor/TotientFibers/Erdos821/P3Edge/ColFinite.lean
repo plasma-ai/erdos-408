@@ -1,4 +1,8 @@
-import Erdos821.P3Edge.ColBound
+module
+
+public import Erdos821.P3Edge.ColBound
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

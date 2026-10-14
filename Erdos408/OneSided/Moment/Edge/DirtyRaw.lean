@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.Edge.RawCol
+module
+
+public import Erdos408.OneSided.Moment.Edge.RawCol
 
 /-!
 # The dirty raw edges
@@ -16,6 +18,8 @@ most `L^{-G-1}` (`eventually_edgeRaw_normLe` in `Moment/Edge.lean`).
 * `eventually_rawChoiceOp_normLe`: with `ε = C_K (B/M^K + B^K e^{-L^{0.1}/4})`, `M ≥ L^{0.01}`,
   `B ≤ L³` and `K ≥ 200(G + 3)`, `√(C_K ε) ≤ L^{-G-1}` eventually.
 -/
+
+@[expose] public section
 
 noncomputable section
 

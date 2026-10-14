@@ -1,5 +1,9 @@
-import Erdos821.P5.SmoothComparisonIntegral
-import Erdos821.P5.FourierArcTask
+module
+
+public import Erdos821.P5.SmoothComparisonIntegral
+public import Erdos821.P5.FourierArcTask
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

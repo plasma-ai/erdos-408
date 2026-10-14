@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LocalWeights
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LocalWeights
+
+@[expose] public section
 
 namespace OAI
 

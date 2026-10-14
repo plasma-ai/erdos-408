@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstLiveActualStep
-import OAI.NumberTheory.DirichletL.Descent.FirstSecondHeightCost
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstLiveActualStep
+public import OAI.NumberTheory.DirichletL.Descent.FirstSecondHeightCost
+
+@[expose] public section
 
 namespace OAI
 

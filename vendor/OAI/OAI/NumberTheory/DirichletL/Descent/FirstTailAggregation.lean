@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstWholeCanonicalTail
-import OAI.NumberTheory.DirichletL.Descent.CubeSupportNorm
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstWholeCanonicalTail
+public import OAI.NumberTheory.DirichletL.Descent.CubeSupportNorm
+
+@[expose] public section
 
 namespace OAI
 

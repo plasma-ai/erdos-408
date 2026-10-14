@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ReflectionMass
-import OAI.NumberTheory.DirichletL.Moments.ReflectedAnnuli
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ReflectionMass
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedAnnuli
+
+@[expose] public section
 
 namespace OAI
 

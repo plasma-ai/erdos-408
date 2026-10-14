@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.IdealQuotients
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.IdealQuotients
+
+@[expose] public section
 
 namespace OAI
 

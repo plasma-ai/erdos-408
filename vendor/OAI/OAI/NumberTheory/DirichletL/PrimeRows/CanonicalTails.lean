@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.PhysicalPartition
-import OAI.NumberTheory.DirichletL.PrimeRows.PhysicalSmallTail
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.PhysicalPartition
+public import OAI.NumberTheory.DirichletL.PrimeRows.PhysicalSmallTail
+
+@[expose] public section
 
 namespace OAI
 

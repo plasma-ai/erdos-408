@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationRectangle
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationRectangle
+
+@[expose] public section
 
 namespace OAI
 

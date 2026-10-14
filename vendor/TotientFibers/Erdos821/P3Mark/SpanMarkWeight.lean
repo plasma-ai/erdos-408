@@ -1,7 +1,11 @@
-import Erdos821.S2.SpanMarkWeightTask
+module
+
+public import Erdos821.S2.SpanMarkWeightTask
 
 /-! The original mark coefficient, separated into its V normalization and
 the prime's single reciprocal baseline charge. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

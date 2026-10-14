@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowBands
-import OAI.NumberTheory.DirichletL.Energy.Reindex
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowBands
+public import OAI.NumberTheory.DirichletL.Energy.Reindex
+
+@[expose] public section
 
 namespace OAI
 

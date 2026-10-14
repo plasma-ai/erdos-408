@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Moment.Chain.Births
-import Erdos408.OneSided.Moment.Chain.Free
-import Erdos408.OneSided.Moment.Chain.Lifespan
+module
+
+public import Erdos408.OneSided.Moment.Chain.Births
+public import Erdos408.OneSided.Moment.Chain.Free
+public import Erdos408.OneSided.Moment.Chain.Lifespan
 
 /-!
 # The primes of a chain state
@@ -22,6 +24,8 @@ dead (born, but neither active nor pending), or unborn.
 * `prod_particles_ite`: a product over particles that is trivial except at one designated
   anchor per prime is a product over the band primes.
 -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.FirstLiveAdmission
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedRightTransport
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.FirstLiveAdmission
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedRightTransport
+
+@[expose] public section
 
 namespace OAI
 

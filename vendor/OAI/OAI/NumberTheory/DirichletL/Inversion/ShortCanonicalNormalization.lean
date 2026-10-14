@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ShortReflectedPower
-import OAI.NumberTheory.DirichletL.Descent.SecondNormalizedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ShortReflectedPower
+public import OAI.NumberTheory.DirichletL.Descent.SecondNormalizedEnergy
+
+@[expose] public section
 
 namespace OAI
 

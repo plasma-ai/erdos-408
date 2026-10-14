@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.RowCaps
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.RowCaps
+
+@[expose] public section
 
 namespace OAI
 

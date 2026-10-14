@@ -1,11 +1,13 @@
-import Mathlib.Algebra.Order.Antidiag.Nat
-import Mathlib.Analysis.InnerProductSpace.Calculus
-import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow.Complex
-import Mathlib.Data.ZMod.Basic
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
-import Mathlib.NumberTheory.Divisors
-import Mathlib.NumberTheory.Harmonic.Bounds
+module
+
+public import Mathlib.Algebra.Order.Antidiag.Nat
+public import Mathlib.Analysis.InnerProductSpace.Calculus
+public import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+public import Mathlib.Analysis.SpecialFunctions.Pow.Complex
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
+public import Mathlib.NumberTheory.Divisors
+public import Mathlib.NumberTheory.Harmonic.Bounds
 
 /-!
 # Divisor moments and mean values of Dirichlet polynomials
@@ -23,6 +25,8 @@ PD Lemma 2.2 and (3.9), with explicit constants.
 The constants do not depend on the coefficients. This matters in PD Lemma 5.3, where the
 polynomial is raised to a growing power.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

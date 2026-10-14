@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramSourceEstimate
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramSourceEstimate
+
+@[expose] public section
 
 namespace OAI
 

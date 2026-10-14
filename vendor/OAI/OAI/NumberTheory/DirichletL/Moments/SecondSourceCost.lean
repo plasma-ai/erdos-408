@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondLiveEnergy
-import OAI.NumberTheory.DirichletL.Moments.RestrictedSourceNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondLiveEnergy
+public import OAI.NumberTheory.DirichletL.Moments.RestrictedSourceNormalization
+
+@[expose] public section
 
 namespace OAI
 

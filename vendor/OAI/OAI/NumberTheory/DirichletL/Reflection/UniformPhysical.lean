@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Reflection.UniformFiltered
-import OAI.NumberTheory.DirichletL.Reflection.UniformMeasure
-import OAI.NumberTheory.DirichletL.Reflection.PhysicalEnergy
-import OAI.NumberTheory.DirichletL.Reflection.SurvivingEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.UniformFiltered
+public import OAI.NumberTheory.DirichletL.Reflection.UniformMeasure
+public import OAI.NumberTheory.DirichletL.Reflection.PhysicalEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.SurvivingEnergy
+
+@[expose] public section
 
 namespace OAI
 

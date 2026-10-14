@@ -1,4 +1,8 @@
-import Erdos821.P4Cancel.Flat
+module
+
+public import Erdos821.P4Cancel.Flat
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

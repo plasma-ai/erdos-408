@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.Local
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Local
+
+@[expose] public section
 
 namespace OAI
 

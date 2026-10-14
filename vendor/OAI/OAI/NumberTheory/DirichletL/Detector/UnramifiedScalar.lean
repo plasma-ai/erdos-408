@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.ScalarTable
-import OAI.NumberTheory.DirichletL.Detector.PrimeConstants
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.ScalarTable
+public import OAI.NumberTheory.DirichletL.Detector.PrimeConstants
+
+@[expose] public section
 
 namespace OAI
 

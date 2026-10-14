@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.FullImprovement
-import OAI.NumberTheory.DirichletL.HeathBrownIteration
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.FullImprovement
+public import OAI.NumberTheory.DirichletL.HeathBrownIteration
+
+@[expose] public section
 
 namespace OAI
 

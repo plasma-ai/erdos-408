@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerIntegral
+
+@[expose] public section
 
 namespace OAI
 

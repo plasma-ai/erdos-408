@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.SourceQuotient
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.SourceQuotient
+
+@[expose] public section
 
 namespace OAI
 

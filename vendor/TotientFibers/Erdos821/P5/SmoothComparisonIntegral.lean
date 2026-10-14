@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparisonSmoothEndpoints
-import Erdos821.P5.ComparisonCutoffSeparation
+module
+
+public import Erdos821.P5.ComparisonSmoothEndpoints
+public import Erdos821.P5.ComparisonCutoffSeparation
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

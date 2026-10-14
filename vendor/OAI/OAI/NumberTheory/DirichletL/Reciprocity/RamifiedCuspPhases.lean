@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.CubeResidueStrata
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.CubeResidueStrata
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceLiveAllocation
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceLiveAllocation
+
+@[expose] public section
 
 namespace OAI
 

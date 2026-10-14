@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerSupport
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerOpposite
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerSupport
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerOpposite
+
+@[expose] public section
 
 namespace OAI
 

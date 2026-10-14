@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ComparisonReflection
-import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ComparisonReflection
+public import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
+
+@[expose] public section
 
 namespace OAI
 

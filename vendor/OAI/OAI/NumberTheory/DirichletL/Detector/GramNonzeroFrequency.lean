@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramCanonicalSource
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramCanonicalSource
+
+@[expose] public section
 
 namespace OAI
 

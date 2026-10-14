@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.CoordinateLaplacian
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.CoordinateLaplacian
+
+@[expose] public section
 
 namespace OAI
 

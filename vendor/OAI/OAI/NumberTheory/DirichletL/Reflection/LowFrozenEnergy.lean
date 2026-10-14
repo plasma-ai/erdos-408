@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.LowInactiveEnergy
-import OAI.NumberTheory.DirichletL.Reflection.SourcePhysical
-import OAI.NumberTheory.DirichletL.Reflection.SourceBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.LowInactiveEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.SourcePhysical
+public import OAI.NumberTheory.DirichletL.Reflection.SourceBudget
+
+@[expose] public section
 
 namespace OAI
 

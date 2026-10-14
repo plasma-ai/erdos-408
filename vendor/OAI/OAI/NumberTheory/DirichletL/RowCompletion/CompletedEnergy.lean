@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.UnitNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.UnitNormalization
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalKernel
-import OAI.NumberTheory.DirichletL.Moments.SecondIdealBlockBound
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalKernel
+public import OAI.NumberTheory.DirichletL.Moments.SecondIdealBlockBound
+
+@[expose] public section
 
 namespace OAI
 

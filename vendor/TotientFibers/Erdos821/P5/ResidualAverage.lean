@@ -1,5 +1,9 @@
-import Erdos821.P5.LinearFreeBan
-import Erdos821.P5.ResidualRowSaving
+module
+
+public import Erdos821.P5.LinearFreeBan
+public import Erdos821.P5.ResidualRowSaving
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialTotalRows
-import OAI.NumberTheory.DirichletL.Inversion.InitialOverlapHeight
-import OAI.NumberTheory.DirichletL.Inversion.InitialMarkedInputEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialTotalRows
+public import OAI.NumberTheory.DirichletL.Inversion.InitialOverlapHeight
+public import OAI.NumberTheory.DirichletL.Inversion.InitialMarkedInputEnergy
+
+@[expose] public section
 
 namespace OAI
 

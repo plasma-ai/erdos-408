@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerWindowGeometry
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerClipping
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerWindowGeometry
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerClipping
+
+@[expose] public section
 
 namespace OAI
 

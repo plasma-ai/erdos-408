@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorWitnessRows
-import OAI.NumberTheory.DirichletL.Hecke.DetectorPhysicalSelection
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorWitnessRows
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorPhysicalSelection
+
+@[expose] public section
 
 namespace OAI
 

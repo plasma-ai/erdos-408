@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.FiniteConductor
+module
+
+public import OAI.NumberTheory.DirichletL.FiniteConductor
+
+@[expose] public section
 
 namespace OAI
 

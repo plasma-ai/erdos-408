@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.RamifiedTracePhase
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.RamifiedTracePhase
+
+@[expose] public section
 
 namespace OAI
 
@@ -257,7 +261,7 @@ end ShortDraftLatticeCount
 
 namespace AnalyticBridge
 
-private def CRTChoice.childPair (q : CRTChoice) : ℕ × ℕ :=
+def CRTChoice.childPair (q : CRTChoice) : ℕ × ℕ :=
   (q.d * q.e * q.kpp, q.J * q.C * q.e * q.v)
 
 theorem second_passage_weighted_fiber
@@ -373,7 +377,7 @@ end ShortDraftLatticeCount
 namespace IdealGaussCRT
 open AddChar MulChar
 
-private theorem leftAddChar_mulShift {T R S : Type*}
+theorem leftAddChar_mulShift {T R S : Type*}
     [CommRing T] [CommRing R] [CommRing S]
     (e : T ≃+* R × S) (ψ : AddChar T ℂ) (h : T) :
     leftAddChar e (ψ.mulShift h) =
@@ -384,7 +388,7 @@ private theorem leftAddChar_mulShift {T R S : Type*}
   apply e.injective
   ext <;> simp
 
-private theorem rightAddChar_mulShift {T R S : Type*}
+theorem rightAddChar_mulShift {T R S : Type*}
     [CommRing T] [CommRing R] [CommRing S]
     (e : T ≃+* R × S) (ψ : AddChar T ℂ) (h : T) :
     rightAddChar e (ψ.mulShift h) =

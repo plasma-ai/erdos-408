@@ -1,7 +1,11 @@
-import Erdos821.S2.FullNormTask
-import Erdos821.S2.NormTailAssembly
-import Erdos821.P3Rows.GhostRows
-import Erdos821.P3Edge.Absolute
+module
+
+public import Erdos821.S2.FullNormTask
+public import Erdos821.S2.NormTailAssembly
+public import Erdos821.P3Rows.GhostRows
+public import Erdos821.P3Edge.Absolute
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationEnergy
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowwisePlain
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationEnergy
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowwisePlain
+
+@[expose] public section
 
 namespace OAI
 

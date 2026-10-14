@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceSecondZeroEnergy
-import OAI.NumberTheory.DirichletL.Moments.CommonRadialData
-import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPair
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceSecondZeroEnergy
+public import OAI.NumberTheory.DirichletL.Moments.CommonRadialData
+public import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPair
+
+@[expose] public section
 
 namespace OAI
 

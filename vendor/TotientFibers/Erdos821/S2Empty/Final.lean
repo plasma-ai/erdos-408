@@ -1,5 +1,9 @@
-import Erdos821.S2Empty.BoundaryBound
-import Erdos821.S2.AnalyticParametersTasks
+module
+
+public import Erdos821.S2Empty.BoundaryBound
+public import Erdos821.S2.AnalyticParametersTasks
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

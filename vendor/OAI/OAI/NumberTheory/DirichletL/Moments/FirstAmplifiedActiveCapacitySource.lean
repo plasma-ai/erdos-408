@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedCapacitySource
-import OAI.NumberTheory.DirichletL.Moments.FirstSecondActiveErrorGates
-import OAI.NumberTheory.DirichletL.Moments.SecondCapacitySourceShift
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildSourceCaps
-import OAI.NumberTheory.DirichletL.Energy.InputParentCapacity
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedCapacitySource
+public import OAI.NumberTheory.DirichletL.Moments.FirstSecondActiveErrorGates
+public import OAI.NumberTheory.DirichletL.Moments.SecondCapacitySourceShift
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildSourceCaps
+public import OAI.NumberTheory.DirichletL.Energy.InputParentCapacity
+
+@[expose] public section
 
 namespace OAI
 

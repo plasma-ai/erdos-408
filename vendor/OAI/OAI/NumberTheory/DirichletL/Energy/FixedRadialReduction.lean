@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.FixedRadialEntry
-import OAI.NumberTheory.DirichletL.Moments.FirstSourceReduction
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.FixedRadialEntry
+public import OAI.NumberTheory.DirichletL.Moments.FirstSourceReduction
+
+@[expose] public section
 
 namespace OAI
 

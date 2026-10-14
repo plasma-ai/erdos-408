@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Detector.GlobalHolomorphic
-import OAI.NumberTheory.DirichletL.Detector.HighEulerRational
-import OAI.NumberTheory.DirichletL.Detector.PrincipalProduct
-import OAI.NumberTheory.DirichletL.Hecke.Euler
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GlobalHolomorphic
+public import OAI.NumberTheory.DirichletL.Detector.HighEulerRational
+public import OAI.NumberTheory.DirichletL.Detector.PrincipalProduct
+public import OAI.NumberTheory.DirichletL.Hecke.Euler
+
+@[expose] public section
 
 namespace OAI
 

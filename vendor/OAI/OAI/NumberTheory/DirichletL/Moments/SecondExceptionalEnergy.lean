@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalCount
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalCount
+
+@[expose] public section
 
 namespace OAI
 

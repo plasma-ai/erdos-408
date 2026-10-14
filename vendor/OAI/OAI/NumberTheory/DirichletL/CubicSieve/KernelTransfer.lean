@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.FullNorm
-import OAI.NumberTheory.DirichletL.CubicSieve.PairPoisson
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.FullNorm
+public import OAI.NumberTheory.DirichletL.CubicSieve.PairPoisson
+
+@[expose] public section
 
 namespace OAI
 

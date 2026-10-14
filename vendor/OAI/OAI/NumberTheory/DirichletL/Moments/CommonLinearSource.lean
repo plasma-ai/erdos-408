@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonRadialData
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalMaskedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonRadialData
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalMaskedSource
+
+@[expose] public section
 
 namespace OAI
 

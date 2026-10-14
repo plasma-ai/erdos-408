@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.CentralCubeNorm
-import OAI.NumberTheory.DirichletL.Detector.CentralExponent
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CentralCubeNorm
+public import OAI.NumberTheory.DirichletL.Detector.CentralExponent
+
+@[expose] public section
 
 namespace OAI
 

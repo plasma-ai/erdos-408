@@ -1,7 +1,11 @@
-import Erdos821.S2.MassDecomposition
-import Erdos821.S2.SpanMarkWeightTask
+module
+
+public import Erdos821.S2.MassDecomposition
+public import Erdos821.S2.SpanMarkWeightTask
 
 /-! Assemble per-prime lifespan costs across all big groups and operations. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

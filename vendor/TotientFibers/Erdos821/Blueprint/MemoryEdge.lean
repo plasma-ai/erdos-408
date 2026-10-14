@@ -1,5 +1,8 @@
-import Erdos821.Blueprint.Memory
+module
 
+public import Erdos821.Blueprint.Memory
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

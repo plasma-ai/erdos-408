@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Allocation.Coefficients
+module
+
+public import Erdos408.Extraction.Allocation.Coefficients
 
 /-!
 # Success coins and the signed expansions
@@ -17,6 +19,8 @@ a set `S` is `c₁^{|S|} W_{1,q₀}(w) W_{1,q₀}(w+1)` for the active groups `S
 The clustered inert polynomial likewise expands into monomials
 `∏_{(c,i) ∈ S} w_{c,i}`, each a marked weight of `|S|` bands.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

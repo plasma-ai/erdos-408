@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ChildRows
-import OAI.NumberTheory.DirichletL.Moments.PartitionNorm
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ChildRows
+public import OAI.NumberTheory.DirichletL.Moments.PartitionNorm
+
+@[expose] public section
 
 namespace OAI
 

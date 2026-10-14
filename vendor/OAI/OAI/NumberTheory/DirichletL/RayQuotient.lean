@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.RayOrthogonality
+module
+
+public import OAI.NumberTheory.DirichletL.RayOrthogonality
+
+@[expose] public section
 
 namespace OAI
 

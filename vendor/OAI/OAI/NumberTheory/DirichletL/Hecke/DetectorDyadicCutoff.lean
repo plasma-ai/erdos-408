@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicProfiles
-import OAI.NumberTheory.DirichletL.Hecke.DetectorProfilesCutoffs
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicProfiles
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorProfilesCutoffs
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.PairedEligibleEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PairedEligibleEnergy
+
+@[expose] public section
 
 namespace OAI
 

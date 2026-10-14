@@ -1,4 +1,10 @@
-import Erdos821.P5.Basic
+module
+
+public import Erdos821.P5.Basic
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.NumberTheory.Harmonic.Bounds
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

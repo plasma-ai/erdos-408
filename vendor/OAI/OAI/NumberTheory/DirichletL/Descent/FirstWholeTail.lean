@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.MarkedTails
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.MarkedTails
+
+@[expose] public section
 
 namespace OAI
 

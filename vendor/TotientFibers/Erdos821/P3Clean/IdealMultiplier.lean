@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.PatternAmplitude
-import Erdos821.P3Clean.ProbabilitySchur
+module
+
+public import Erdos821.P3Clean.PatternAmplitude
+public import Erdos821.P3Clean.ProbabilitySchur
 
 /-! Absolute control of signed ideal choices with a bounded local factor. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

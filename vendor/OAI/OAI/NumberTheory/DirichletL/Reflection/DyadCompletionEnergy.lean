@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.DyadReassembly
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.DyadReassembly
+
+@[expose] public section
 
 namespace OAI
 

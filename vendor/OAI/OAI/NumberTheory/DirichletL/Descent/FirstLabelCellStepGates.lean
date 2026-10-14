@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstDyadicCell
-import OAI.NumberTheory.DirichletL.Descent.GlobalRetainedGatesBudget
-import OAI.NumberTheory.DirichletL.Descent.GlobalRetainedGatesRank
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstDyadicCell
+public import OAI.NumberTheory.DirichletL.Descent.GlobalRetainedGatesBudget
+public import OAI.NumberTheory.DirichletL.Descent.GlobalRetainedGatesRank
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawEnergy
-import OAI.NumberTheory.DirichletL.Dictionary.InverseClippedUniform
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawEnergy
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseClippedUniform
+
+@[expose] public section
 
 namespace OAI
 

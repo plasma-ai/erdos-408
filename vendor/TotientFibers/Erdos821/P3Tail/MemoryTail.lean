@@ -1,5 +1,9 @@
-import Erdos821.S2.MemoryTailTask
-import Erdos821.P3Tail.PathBound
+module
+
+public import Erdos821.S2.MemoryTailTask
+public import Erdos821.P3Tail.PathBound
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Algebra.Order.Star.Int
 
 /-! The doubled-ghost memory tail estimate on the literal cutoff tail.
 
@@ -8,6 +12,8 @@ most `2^(n*M*#Big - B)` times the weight with every original ghost birth doubled
 the doubled weights over any finite set of valid histories is controlled by expanding the
 local choices for a fixed state path and then eliminating the state path chronologically
 with the explicit row bounds. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

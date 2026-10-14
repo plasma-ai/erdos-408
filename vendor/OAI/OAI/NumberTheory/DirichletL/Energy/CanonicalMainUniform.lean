@@ -1,9 +1,13 @@
-import OAI.NumberTheory.DirichletL.Energy.CanonicalMainPaid
-import OAI.NumberTheory.DirichletL.Energy.ChildEnvelopeFitting
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPaidReserve
-import OAI.NumberTheory.DirichletL.Energy.CanonicalUniformReference
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPaidAdmission
-import OAI.NumberTheory.DirichletL.Energy.AmplifiedRayDictionary
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalMainPaid
+public import OAI.NumberTheory.DirichletL.Energy.ChildEnvelopeFitting
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPaidReserve
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalUniformReference
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPaidAdmission
+public import OAI.NumberTheory.DirichletL.Energy.AmplifiedRayDictionary
+
+@[expose] public section
 
 namespace OAI
 

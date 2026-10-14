@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Mellin.ReflectedKernel
+module
+
+public import OAI.NumberTheory.DirichletL.Mellin.ReflectedKernel
+
+@[expose] public section
 
 namespace OAI
 

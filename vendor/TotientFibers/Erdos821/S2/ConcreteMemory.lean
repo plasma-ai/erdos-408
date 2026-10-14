@@ -1,13 +1,17 @@
-import Erdos821.S2.MemoryIdentity
-import Erdos821.P3Live.Anchors
-import Erdos821.P3Live.SpanMemory
-import Erdos821.P3Span.LifespanClassification
-import Erdos821.P3Birth.SpanBirthTask
-import Erdos821.P3GW.SpanGhostWeight
-import Erdos821.P3Mark.SpanMarkWeight
-import Erdos821.P3Sum.SpanSumTask
+module
+
+public import Erdos821.S2.MemoryIdentity
+public import Erdos821.P3Live.Anchors
+public import Erdos821.P3Live.SpanMemory
+public import Erdos821.P3Span.LifespanClassification
+public import Erdos821.P3Birth.SpanBirthTask
+public import Erdos821.P3GW.SpanGhostWeight
+public import Erdos821.P3Mark.SpanMarkWeight
+public import Erdos821.P3Sum.SpanSumTask
 
 /-! Instantiate all completed structural and local-weight leaves of the memory identity. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

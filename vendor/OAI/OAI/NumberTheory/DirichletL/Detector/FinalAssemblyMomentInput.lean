@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyData
-import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyMomentMono
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyData
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyMomentMono
+
+@[expose] public section
 
 namespace OAI
 

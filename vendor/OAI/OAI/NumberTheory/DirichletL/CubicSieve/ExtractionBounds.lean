@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.FullExtraction
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.FullExtraction
+
+@[expose] public section
 
 namespace OAI
 

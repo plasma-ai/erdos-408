@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialRawDictionary
-import OAI.NumberTheory.DirichletL.Hecke.DetectorCoefficientTransfer
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRelativePrime
-import OAI.NumberTheory.DirichletL.Detector.RayPoolGood
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialRawDictionary
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorCoefficientTransfer
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRelativePrime
+public import OAI.NumberTheory.DirichletL.Detector.RayPoolGood
+
+@[expose] public section
 
 namespace OAI
 

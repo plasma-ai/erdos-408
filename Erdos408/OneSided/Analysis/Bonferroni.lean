@@ -1,8 +1,10 @@
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Algebra.Order.BigOperators.Ring.Finset
-import Mathlib.Data.Finset.Powerset
-import Mathlib.Data.Nat.Choose.Sum
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Algebra.Order.BigOperators.Ring.Finset
+public import Mathlib.Data.Finset.Powerset
+public import Mathlib.Data.Nat.Choose.Sum
+public import Mathlib.Basic.Real.Basic
 
 /-!
 # Bonferroni truncation
@@ -14,6 +16,8 @@ elementary symmetric polynomial `e_T(x)`. On `{0, 1}^n` this is Bonferroni's ine
 one-sided inequalities are multilinear, so they extend from the vertices to the cube. The
 elementary symmetric polynomial is at most `(∑ x_i)^T / T!`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

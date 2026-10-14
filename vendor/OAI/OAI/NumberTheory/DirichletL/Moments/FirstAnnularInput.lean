@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAnnularAmplification
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAnnularAmplification
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
+
+@[expose] public section
 
 namespace OAI
 

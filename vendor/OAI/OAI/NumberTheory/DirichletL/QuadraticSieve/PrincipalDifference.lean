@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Fourier.LogDensity
-import OAI.NumberTheory.DirichletL.CubicSieve.TwistedProfiles
+module
+
+public import OAI.NumberTheory.DirichletL.Fourier.LogDensity
+public import OAI.NumberTheory.DirichletL.CubicSieve.TwistedProfiles
+
+@[expose] public section
 
 namespace OAI
 

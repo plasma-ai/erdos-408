@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SupportedCorrelation
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SupportedCorrelation
+
+@[expose] public section
 
 namespace OAI
 

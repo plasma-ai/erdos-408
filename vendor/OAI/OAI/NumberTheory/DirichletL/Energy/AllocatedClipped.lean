@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.AllocatedPaid
-import OAI.NumberTheory.DirichletL.Energy.AllocatedZero
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.AllocatedPaid
+public import OAI.NumberTheory.DirichletL.Energy.AllocatedZero
+
+@[expose] public section
 
 namespace OAI
 

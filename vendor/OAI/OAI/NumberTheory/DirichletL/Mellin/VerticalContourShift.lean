@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.BesselMellinTransform
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.BesselMellinTransform
+
+@[expose] public section
 
 namespace OAI
 

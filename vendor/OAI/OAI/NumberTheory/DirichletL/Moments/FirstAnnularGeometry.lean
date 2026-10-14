@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAnnularEnergy
-import OAI.NumberTheory.DirichletL.Moments.AmplifiedRetainedRadius
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAnnularEnergy
+public import OAI.NumberTheory.DirichletL.Moments.AmplifiedRetainedRadius
+
+@[expose] public section
 
 namespace OAI
 

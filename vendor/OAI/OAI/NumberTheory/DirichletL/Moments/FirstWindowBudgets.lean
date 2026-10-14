@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalAnnularCommonBound
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalAnnularCommonBound
+
+@[expose] public section
 
 namespace OAI
 

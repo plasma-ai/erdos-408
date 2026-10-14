@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialFiniteEnergy
-import OAI.NumberTheory.DirichletL.Inversion.InitialPhysicalLimit
-import OAI.NumberTheory.DirichletL.Inversion.InitialZeroModeBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialFiniteEnergy
+public import OAI.NumberTheory.DirichletL.Inversion.InitialPhysicalLimit
+public import OAI.NumberTheory.DirichletL.Inversion.InitialZeroModeBudget
+
+@[expose] public section
 
 namespace OAI
 

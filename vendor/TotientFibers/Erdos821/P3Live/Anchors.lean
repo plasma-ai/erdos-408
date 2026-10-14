@@ -1,8 +1,12 @@
-import Erdos821.S2.HistoryAnchors
-import Erdos821.S2.HistoryProjection
-import Erdos821.S2.LiveGrowth
-import Erdos821.S2.PhysicalCompatibility
-import Erdos821.P3Live.Conservation
+module
+
+public import Erdos821.S2.HistoryAnchors
+public import Erdos821.S2.HistoryProjection
+public import Erdos821.S2.LiveGrowth
+public import Erdos821.S2.PhysicalCompatibility
+public import Erdos821.P3Live.Conservation
+
+@[expose] public section
 
 set_option autoImplicit false
 

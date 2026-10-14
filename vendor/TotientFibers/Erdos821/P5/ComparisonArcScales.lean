@@ -1,6 +1,10 @@
-import Erdos821.P5.RationalArcCenters
-import Erdos821.P5.ComparisonScaleAsymptotics
-import Erdos821.P5.LongGrowth
+module
+
+public import Erdos821.P5.RationalArcCenters
+public import Erdos821.P5.ComparisonScaleAsymptotics
+public import Erdos821.P5.LongGrowth
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

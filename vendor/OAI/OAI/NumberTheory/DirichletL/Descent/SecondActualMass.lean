@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondTripleBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondTripleBounds
+
+@[expose] public section
 
 namespace OAI
 

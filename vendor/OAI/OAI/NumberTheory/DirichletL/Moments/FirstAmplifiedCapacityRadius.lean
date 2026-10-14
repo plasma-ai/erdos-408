@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedNormalizationActual
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedCommonRadius
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedNormalizationActual
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedCommonRadius
+
+@[expose] public section
 
 namespace OAI
 

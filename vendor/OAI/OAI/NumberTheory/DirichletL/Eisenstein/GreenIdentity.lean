@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.GreenIntegrals
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.GreenIntegrals
+
+@[expose] public section
 
 namespace OAI
 

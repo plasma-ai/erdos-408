@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailFiber
-import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailAggregate
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailFiber
+public import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailAggregate
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,11 @@
-import Erdos821.Blueprint.Graph
+module
+
+public import Erdos821.Blueprint.Graph
+public import Mathlib.Algebra.Order.Star.Real
 
 /-! Restricting both endpoint states preserves a nonnegative weighted norm bound. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

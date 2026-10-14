@@ -1,4 +1,6 @@
-import Erdos408.Graph.Encoding
+module
+
+public import Erdos408.Graph.Encoding
 
 /-!
 # Subtype labels against `ℕ`-valued lists
@@ -11,6 +13,8 @@ elsewhere. Summing over upstream labels is summing over their values
 `∏ μ_g` integrates out the slots outside `C g`, since `∑_p μ_g(p) = 1`
 (`sum_trim`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.Graph
 

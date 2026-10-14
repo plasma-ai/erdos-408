@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.ActiveDivisorShell
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ActiveDivisorShell
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.MarkedSource
-import OAI.NumberTheory.DirichletL.Descent.ReflectedDual
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedSource
+public import OAI.NumberTheory.DirichletL.Descent.ReflectedDual
+
+@[expose] public section
 
 namespace OAI
 

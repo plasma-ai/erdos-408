@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonLinearNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonLinearNormalization
+
+@[expose] public section
 
 namespace OAI
 

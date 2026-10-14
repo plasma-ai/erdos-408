@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstActualPriorityEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstActualPriorityEnergy
+
+@[expose] public section
 
 namespace OAI
 

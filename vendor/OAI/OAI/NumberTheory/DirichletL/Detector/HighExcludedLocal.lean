@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.HighExcludedEuler
-import OAI.NumberTheory.DirichletL.Detector.HighEulerLocal
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighExcludedEuler
+public import OAI.NumberTheory.DirichletL.Detector.HighEulerLocal
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.Moments.Basic
-import Mathlib.Analysis.Normed.Ring.Finite
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.Moments.Basic
+public import Mathlib.Analysis.Normed.Ring.Finite
+
+@[expose] public section
 
 namespace OAI
 

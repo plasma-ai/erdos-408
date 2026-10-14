@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSourcePoisson
-import OAI.NumberTheory.DirichletL.Moments.FirstWholeKernel
-import OAI.NumberTheory.DirichletL.Moments.FirstScale
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSourcePoisson
+public import OAI.NumberTheory.DirichletL.Moments.FirstWholeKernel
+public import OAI.NumberTheory.DirichletL.Moments.FirstScale
+
+@[expose] public section
 
 namespace OAI
 

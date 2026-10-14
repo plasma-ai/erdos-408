@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.Chain.EdgeStage
+module
+
+public import Erdos408.OneSided.Moment.Chain.EdgeStage
 
 /-!
 # The memory identity along the path
@@ -19,6 +21,8 @@ remaining edges:
   (`edge_stage`) for each free choice, and the free choices recombine into `A⁰` by the free
   expansion (`sum_edgeOp_mul_eq`).
 -/
+
+@[expose] public section
 
 noncomputable section
 

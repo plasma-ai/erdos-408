@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerState
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerRanges
-import OAI.NumberTheory.DirichletL.Descent.SecondNormalizedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerState
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerRanges
+public import OAI.NumberTheory.DirichletL.Descent.SecondNormalizedEnergy
+
+@[expose] public section
 
 namespace OAI
 

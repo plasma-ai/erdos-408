@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstJoint
-import OAI.NumberTheory.DirichletL.PrimeRows.DiskControl
-import OAI.NumberTheory.DirichletL.PrimeRows.BufferedBin
-import OAI.NumberTheory.DirichletL.Hecke.StripActual
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstJoint
+public import OAI.NumberTheory.DirichletL.PrimeRows.DiskControl
+public import OAI.NumberTheory.DirichletL.PrimeRows.BufferedBin
+public import OAI.NumberTheory.DirichletL.Hecke.StripActual
+
+@[expose] public section
 
 namespace OAI
 

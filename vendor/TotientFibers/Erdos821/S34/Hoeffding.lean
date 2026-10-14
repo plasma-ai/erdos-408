@@ -1,4 +1,10 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.MeanInequalities
+
+@[expose] public section
 
 set_option autoImplicit false
 

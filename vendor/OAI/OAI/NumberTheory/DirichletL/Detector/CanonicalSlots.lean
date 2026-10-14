@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.TuplePrime
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.TuplePrime
+
+@[expose] public section
 
 namespace OAI
 

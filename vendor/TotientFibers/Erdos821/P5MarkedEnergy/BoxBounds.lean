@@ -1,7 +1,11 @@
-import Erdos821.P5MarkedEnergy.BoxIdentity
-import Erdos821.P5MarkedEnergy.Weights
+module
+
+public import Erdos821.P5MarkedEnergy.BoxIdentity
+public import Erdos821.P5MarkedEnergy.Weights
 
 /-! Weighted mean values of box polynomials. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

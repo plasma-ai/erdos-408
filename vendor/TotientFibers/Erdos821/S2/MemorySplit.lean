@@ -1,7 +1,11 @@
-import Erdos821.S2.RankExpansion
-import Erdos821.P3Tail.MemoryTail
+module
+
+public import Erdos821.S2.RankExpansion
+public import Erdos821.P3Tail.MemoryTail
 
 /-! Exact cutoff decomposition with finite-support convergence and the concrete tail bound. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

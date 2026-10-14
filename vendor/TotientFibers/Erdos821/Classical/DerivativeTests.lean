@@ -1,8 +1,13 @@
-import Mathlib
-import Erdos821.Blueprint.Classical
-import OAI.NumberTheory.EgyptianFractions.DiscreteFirstDerivative
-import OAI.NumberTheory.EgyptianFractions.DiscreteSecondDerivative
-import OAI.NumberTheory.EgyptianFractions.SecondDifference
+module
+
+public import Erdos821.Blueprint.Classical
+public import OAI.NumberTheory.EgyptianFractions.DiscreteFirstDerivative
+public import OAI.NumberTheory.EgyptianFractions.DiscreteSecondDerivative
+public import OAI.NumberTheory.EgyptianFractions.SecondDifference
+public import Mathlib.Order.CompletePartialOrder
+public import Mathlib.RingTheory.Etale.Weakly
+public import Mathlib.RingTheory.Flat.TorsionFree
+public import Mathlib.RingTheory.TotallySplit
 
 /-!
 # Elementary derivative tests for exponential sums
@@ -11,6 +16,8 @@ This file copies the architect's interface while its Blueprint module is being
 merged.  The estimates below use the corresponding discrete proofs in OAI and
 translate their natural-indexed sums to the integer interval in the contract.
 -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

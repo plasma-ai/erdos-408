@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramJoint
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramJoint
+
+@[expose] public section
 
 namespace OAI
 

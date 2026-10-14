@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.ReflectionTailMass
-import OAI.NumberTheory.DirichletL.Moments.ReflectedTruncation
-import OAI.NumberTheory.DirichletL.Moments.TwistedReflection
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ReflectionTailMass
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedTruncation
+public import OAI.NumberTheory.DirichletL.Moments.TwistedReflection
+
+@[expose] public section
 
 namespace OAI
 

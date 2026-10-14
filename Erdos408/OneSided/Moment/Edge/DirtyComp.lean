@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Moment.Phased.Edge
-import Erdos408.OneSided.Moment.Edge.LineCount
+module
+
+public import Erdos408.OneSided.Moment.Phased.Edge
+public import Erdos408.OneSided.Moment.Edge.LineCount
 
 /-!
 # The dirty comparison edges
@@ -24,6 +26,8 @@ the weighted Schur test with weight `1`:
   side are at most `L^{-2G - 2}`. If `4Y ≤ L^E` the piece vanishes, since a label product
   exceeds every band prime.
 -/
+
+@[expose] public section
 
 noncomputable section
 

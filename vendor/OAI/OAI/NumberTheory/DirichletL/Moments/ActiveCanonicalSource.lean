@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Moments.ActiveSmoothedSource
-import OAI.NumberTheory.DirichletL.Moments.CanonicalRetainedSource
-import OAI.NumberTheory.DirichletL.Moments.SecondSourceCost
-import OAI.NumberTheory.DirichletL.Moments.SourceRectangle
-import OAI.NumberTheory.DirichletL.Moments.CommonRawScale
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ActiveSmoothedSource
+public import OAI.NumberTheory.DirichletL.Moments.CanonicalRetainedSource
+public import OAI.NumberTheory.DirichletL.Moments.SecondSourceCost
+public import OAI.NumberTheory.DirichletL.Moments.SourceRectangle
+public import OAI.NumberTheory.DirichletL.Moments.CommonRawScale
+
+@[expose] public section
 
 namespace OAI
 

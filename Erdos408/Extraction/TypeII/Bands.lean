@@ -1,5 +1,8 @@
-import Erdos408.Extraction.TypeII.Asymp
-import Erdos408.Mertens
+module
+
+public import Erdos408.Extraction.TypeII.Asymp
+public import Erdos408.Mertens
+public import Mathlib.Tactic.NormNum.Prime
 
 /-!
 # Bands and slots
@@ -14,6 +17,8 @@ Facts about the inert bands and the slot statistic used in E4.
   a small prime.
 * `0 ≤ f_𝔟(h) ≤ (2T²⁰/c)^{k+1}` for `1 ≤ h ≤ x²`, and `0 ≤ C_𝔟 ≤ (T + E)^{k+1}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

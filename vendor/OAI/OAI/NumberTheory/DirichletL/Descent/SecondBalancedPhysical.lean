@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondModeIntegral
-import OAI.NumberTheory.DirichletL.Descent.SecondBalancedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondModeIntegral
+public import OAI.NumberTheory.DirichletL.Descent.SecondBalancedSource
+
+@[expose] public section
 
 namespace OAI
 

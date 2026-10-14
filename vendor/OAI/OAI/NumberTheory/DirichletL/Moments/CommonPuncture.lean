@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonProfile
+
+@[expose] public section
 
 namespace OAI
 

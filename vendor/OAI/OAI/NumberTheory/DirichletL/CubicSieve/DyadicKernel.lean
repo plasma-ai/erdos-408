@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.MeanSquare.PoissonSource
-import OAI.NumberTheory.DirichletL.CubicSieve.QuantitativePassage
+module
+
+public import OAI.NumberTheory.DirichletL.MeanSquare.PoissonSource
+public import OAI.NumberTheory.DirichletL.CubicSieve.QuantitativePassage
+
+@[expose] public section
 
 namespace OAI
 

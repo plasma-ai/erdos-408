@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.SecondPoisson
-import OAI.NumberTheory.DirichletL.Poisson.PrincipalTruncation
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.SecondPoisson
+public import OAI.NumberTheory.DirichletL.Poisson.PrincipalTruncation
+
+@[expose] public section
 
 namespace OAI
 

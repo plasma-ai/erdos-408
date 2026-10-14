@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.MarkedSubset
-import OAI.NumberTheory.DirichletL.PrimeRows.FiniteNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.MarkedSubset
+public import OAI.NumberTheory.DirichletL.PrimeRows.FiniteNormalization
+
+@[expose] public section
 
 namespace OAI
 

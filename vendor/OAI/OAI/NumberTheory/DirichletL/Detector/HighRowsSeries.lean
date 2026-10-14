@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsWeights
-import OAI.NumberTheory.DirichletL.Detector.HighRowsRecurrence
-import OAI.NumberTheory.DirichletL.Detector.LocalSeries
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsWeights
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsRecurrence
+public import OAI.NumberTheory.DirichletL.Detector.LocalSeries
+
+@[expose] public section
 
 namespace OAI
 

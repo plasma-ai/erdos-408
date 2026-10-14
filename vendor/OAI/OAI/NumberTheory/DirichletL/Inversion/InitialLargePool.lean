@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialCommonTransform
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialCommonTransform
+
+@[expose] public section
 
 namespace OAI
 

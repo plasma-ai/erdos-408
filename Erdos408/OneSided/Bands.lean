@@ -1,5 +1,7 @@
-import Erdos408.Extraction.TypeII.Bands
-import Erdos408.OneSided.Setup
+module
+
+public import Erdos408.Extraction.TypeII.Bands
+public import Erdos408.OneSided.Setup
 
 /-!
 # Uniform band facts
@@ -16,6 +18,8 @@ fixed window. A band is `band x a = {p prime : exp(L^a) ≤ p ≤ exp(2 L^a)}` w
 * B5. A product of one prime from each band lies in
   `[exp(∑ L^{a_i}), exp(2 ∑ L^{a_i})]`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

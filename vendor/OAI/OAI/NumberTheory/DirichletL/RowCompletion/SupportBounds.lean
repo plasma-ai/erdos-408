@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.CompactEnergyFamilies
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.CompactEnergyFamilies
+
+@[expose] public section
 
 namespace OAI
 

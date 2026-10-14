@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstScale
-import Mathlib.Analysis.SpecialFunctions.Log.Base
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstScale
+public import Mathlib.Analysis.SpecialFunctions.Log.Base
+
+@[expose] public section
 
 namespace OAI
 

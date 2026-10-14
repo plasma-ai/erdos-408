@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CubeSource
-import OAI.NumberTheory.DirichletL.Descent.FirstWholeMarkedColumns
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CubeSource
+public import OAI.NumberTheory.DirichletL.Descent.FirstWholeMarkedColumns
+
+@[expose] public section
 
 namespace OAI
 

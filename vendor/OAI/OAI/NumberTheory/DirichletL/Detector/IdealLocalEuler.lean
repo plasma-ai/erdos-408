@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.HighSeries
-import OAI.NumberTheory.DirichletL.Detector.SourcePrimeFactor
-import OAI.NumberTheory.DirichletL.IdealEuler
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighSeries
+public import OAI.NumberTheory.DirichletL.Detector.SourcePrimeFactor
+public import OAI.NumberTheory.DirichletL.IdealEuler
+
+@[expose] public section
 
 namespace OAI
 

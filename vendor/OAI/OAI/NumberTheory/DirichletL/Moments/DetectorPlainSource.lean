@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.UncenteredTerminal
-import OAI.NumberTheory.DirichletL.Moments.SourceRectangleEnergy
-import OAI.NumberTheory.DirichletL.Moments.RetainedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.UncenteredTerminal
+public import OAI.NumberTheory.DirichletL.Moments.SourceRectangleEnergy
+public import OAI.NumberTheory.DirichletL.Moments.RetainedEnergy
+
+@[expose] public section
 
 namespace OAI
 

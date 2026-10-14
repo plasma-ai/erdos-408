@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondCanonicalLedger
-import OAI.NumberTheory.DirichletL.Moments.HeckeExceptionalEnergy
-import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondCanonicalLedger
+public import OAI.NumberTheory.DirichletL.Moments.HeckeExceptionalEnergy
+public import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalFamily
-import OAI.NumberTheory.DirichletL.Moments.SecondEnergySplit
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalKernel
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalFamily
+public import OAI.NumberTheory.DirichletL.Moments.SecondEnergySplit
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalKernel
+
+@[expose] public section
 
 namespace OAI
 

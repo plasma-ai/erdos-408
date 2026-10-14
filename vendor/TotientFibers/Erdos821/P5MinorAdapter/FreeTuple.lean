@@ -1,7 +1,11 @@
-import Erdos821.P5.ComparisonMinorArcAdapterTask
-import Erdos821.P4Probe.SelectedTuples
-import Erdos821.P4Probe.AuxTupleLaw
-import Erdos821.S34.AtomProof
+module
+
+public import Erdos821.P5.ComparisonMinorArcAdapterTask
+public import Erdos821.P4Probe.SelectedTuples
+public import Erdos821.P4Probe.AuxTupleLaw
+public import Erdos821.S34.AtomProof
+
+@[expose] public section
 
 set_option autoImplicit false
 

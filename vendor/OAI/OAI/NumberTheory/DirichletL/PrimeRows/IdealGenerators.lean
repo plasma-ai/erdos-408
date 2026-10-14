@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.SexticRadialPoisson
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.SexticRadialPoisson
+
+@[expose] public section
 
 namespace OAI
 

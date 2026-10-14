@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstDyadicRadius
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveParents
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstDyadicRadius
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveParents
+
+@[expose] public section
 
 namespace OAI
 

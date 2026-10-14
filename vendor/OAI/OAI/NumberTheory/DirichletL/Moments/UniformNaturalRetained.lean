@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.UniformRetainedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.UniformRetainedEnergy
+
+@[expose] public section
 
 namespace OAI
 

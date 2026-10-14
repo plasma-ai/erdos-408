@@ -1,4 +1,6 @@
-import Erdos408.Graph.Labels
+module
+
+public import Erdos408.Graph.Labels
 
 /-!
 # One pattern of the physical operator
@@ -17,6 +19,8 @@ of `physicalRaw` (`patternRaw`), between endpoints of the position alone, is
 * the target position `n' = n + D` is the only one in the sum over `S'` that
   contributes, and it lies in `S'` unless `g` vanishes there.
 -/
+
+@[expose] public section
 
 namespace Erdos408.Graph
 

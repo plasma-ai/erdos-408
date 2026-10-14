@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.Fourier
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Fourier
+
+@[expose] public section
 
 namespace OAI
 

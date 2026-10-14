@@ -1,9 +1,13 @@
-import Erdos821.P3High.Initial
-import Erdos821.S2High.MarkedAddresses
+module
+
+public import Erdos821.P3High.Initial
+public import Erdos821.S2High.MarkedAddresses
 
 /-! Prescribing the values of a finite set `U` of potential birth addresses: the literal
 truncated absolute history sum is controlled by the per-operation conditional rows, with one
 tilted point mass for every prescribed address. -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

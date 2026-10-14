@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationSource
+
+@[expose] public section
 
 namespace OAI
 

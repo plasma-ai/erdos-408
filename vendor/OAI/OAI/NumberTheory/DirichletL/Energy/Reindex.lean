@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.SlotHeight
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.SlotHeight
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.GramCommonSum
-import OAI.NumberTheory.DirichletL.Detector.GramCommonLinear
-import OAI.NumberTheory.DirichletL.Moments.SupportedCorrelation
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramCommonSum
+public import OAI.NumberTheory.DirichletL.Detector.GramCommonLinear
+public import OAI.NumberTheory.DirichletL.Moments.SupportedCorrelation
+
+@[expose] public section
 
 namespace OAI
 

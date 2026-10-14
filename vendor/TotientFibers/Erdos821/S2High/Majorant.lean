@@ -1,4 +1,8 @@
-import Erdos821.S2High.Baseline
+module
+
+public import Erdos821.S2High.Baseline
+
+@[expose] public section
 
 noncomputable section
 

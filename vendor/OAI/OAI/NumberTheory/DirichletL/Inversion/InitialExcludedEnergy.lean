@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedPolynomial
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedPolynomial
+
+@[expose] public section
 
 namespace OAI
 

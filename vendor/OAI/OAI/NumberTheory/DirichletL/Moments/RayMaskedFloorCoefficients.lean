@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.RayMaskedFloorSlots
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RayMaskedFloorSlots
+
+@[expose] public section
 
 namespace OAI
 

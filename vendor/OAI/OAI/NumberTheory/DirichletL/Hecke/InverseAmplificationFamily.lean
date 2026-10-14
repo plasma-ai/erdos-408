@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationEnergy
+
+@[expose] public section
 
 namespace OAI
 

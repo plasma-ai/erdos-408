@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.WeightedTuple
-import OAI.NumberTheory.DirichletL.PrimeRows.TupleBound
-import OAI.NumberTheory.DirichletL.PrimeRows.ScalarGrowth
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.WeightedTuple
+public import OAI.NumberTheory.DirichletL.PrimeRows.TupleBound
+public import OAI.NumberTheory.DirichletL.PrimeRows.ScalarGrowth
+
+@[expose] public section
 
 namespace OAI
 

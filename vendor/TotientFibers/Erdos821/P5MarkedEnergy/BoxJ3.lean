@@ -1,8 +1,12 @@
-import Erdos821.P5MarkedEnergy.BoxThree
-import Erdos821.P5MarkedEnergy.BoxInputs
-import Erdos821.P5MarkedEnergy.BoxBounds
+module
+
+public import Erdos821.P5MarkedEnergy.BoxThree
+public import Erdos821.P5MarkedEnergy.BoxInputs
+public import Erdos821.P5MarkedEnergy.BoxBounds
 
 /-! The three-range estimate for an actual box of the marked endpoint. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

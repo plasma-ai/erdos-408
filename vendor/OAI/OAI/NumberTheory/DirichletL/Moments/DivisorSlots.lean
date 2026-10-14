@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.DivisorTensor
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DivisorTensor
+
+@[expose] public section
 
 namespace OAI
 

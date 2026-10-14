@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalCubeBins
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalCubeBins
+
+@[expose] public section
 
 namespace OAI
 

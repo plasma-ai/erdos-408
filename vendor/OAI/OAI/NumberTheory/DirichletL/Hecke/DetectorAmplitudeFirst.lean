@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorAdaptiveCutoff
-import OAI.NumberTheory.DirichletL.Hecke.DetectorFiberPartition
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorAdaptiveCutoff
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorFiberPartition
+
+@[expose] public section
 
 namespace OAI
 

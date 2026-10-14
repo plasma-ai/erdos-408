@@ -1,5 +1,9 @@
-import Erdos821.P5.Moments
-import Erdos821.Classical.DirichletMean
+module
+
+public import Erdos821.P5.Moments
+public import Erdos821.Classical.DirichletMean
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

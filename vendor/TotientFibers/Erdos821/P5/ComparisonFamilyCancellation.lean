@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparisonPatternCancellation
-import Erdos821.P5.RawReduction
+module
+
+public import Erdos821.P5.ComparisonPatternCancellation
+public import Erdos821.P5.RawReduction
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Analysis.Divisor
-import Erdos408.OneSided.Setup
-import Mathlib.NumberTheory.DirichletCharacter.Bounds
+module
+
+public import Erdos408.OneSided.Analysis.Divisor
+public import Erdos408.OneSided.Setup
+public import Mathlib.NumberTheory.DirichletCharacter.Bounds
 
 /-!
 # A small prime factor and sparse frequencies
@@ -25,6 +27,8 @@ of PD (5.13)–(5.14). Let `PS` be a set of primes in `[P, 2P)`, with `P` betwee
 
 Both bounds are uniform in `ξ`, the characters, and the prime set.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

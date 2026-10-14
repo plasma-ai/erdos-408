@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedPool
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerWindow
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedPool
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerWindow
+
+@[expose] public section
 
 namespace OAI
 

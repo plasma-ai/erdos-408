@@ -1,6 +1,8 @@
-import Erdos408.Basic
-import Mathlib.NumberTheory.Bertrand
-import PrimeNumberTheoremAnd.IEANTN.Mertens
+module
+
+public import Erdos408.Basic
+public import Mathlib.NumberTheory.Bertrand
+public import PrimeNumberTheoremAnd.IEANTN.Mertens
 
 /-!
 # Mertens' theorems on intervals
@@ -11,6 +13,8 @@ The vendored `PrimeNumberTheoremAnd.IEANTN.Mertens` proves
 the interval forms below, which are all the prime-distribution input the
 deduction needs besides Chebyshev's upper bound for `π(x)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

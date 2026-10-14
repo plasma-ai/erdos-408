@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonWindowColumn
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalHeight
-import OAI.NumberTheory.DirichletL.Moments.LogDyadic
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalCanonical
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonWindowColumn
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalHeight
+public import OAI.NumberTheory.DirichletL.Moments.LogDyadic
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalCanonical
+
+@[expose] public section
 
 namespace OAI
 

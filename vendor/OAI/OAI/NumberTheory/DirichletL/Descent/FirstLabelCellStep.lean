@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstLabelCellStepPhysicalGates
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFixedChildStepUniform
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstLabelCellStepPhysicalGates
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFixedChildStepUniform
+
+@[expose] public section
 
 namespace OAI
 

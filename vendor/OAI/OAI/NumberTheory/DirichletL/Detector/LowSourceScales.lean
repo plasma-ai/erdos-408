@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.LowGramScale
-import OAI.NumberTheory.DirichletL.Detector.LowTupleGram
-import OAI.NumberTheory.DirichletL.Detector.PhysicalCrudeMass
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowGramScale
+public import OAI.NumberTheory.DirichletL.Detector.LowTupleGram
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalCrudeMass
+
+@[expose] public section
 
 namespace OAI
 

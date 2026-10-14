@@ -4,9 +4,11 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
 
-import RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.L2Compactness.Approximation
-import RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.Translation
-import Mathlib.MeasureTheory.Integral.Bochner.Basic
+module
+
+public import RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.L2Compactness.Approximation
+public import RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.Translation
+public import Mathlib.MeasureTheory.Integral.Bochner.Basic
 
 /-!
 # `L²` compactness criterion: bounding the translation-integral by a translation modulus
@@ -21,6 +23,8 @@ The core observation is that if `ψ` is supported in a neighborhood where the tr
 
 Tracking: Beads `lean-103.5.2.26.5.3.2.2.4`.
 -/
+
+@[expose] public section
 
 namespace RellichKondrachov
 namespace Analysis

@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.PermutationSplit
-import Erdos821.P3Clean.RawNormAssembly
+module
+
+public import Erdos821.P3Clean.PermutationSplit
+public import Erdos821.P3Clean.RawNormAssembly
 
 /-! Big symmetrization remains inside the exact conditioned family. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

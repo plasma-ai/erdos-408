@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.TerminalEnergy
-import OAI.NumberTheory.DirichletL.Moments.AbsoluteEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.TerminalEnergy
+public import OAI.NumberTheory.DirichletL.Moments.AbsoluteEnergy
+
+@[expose] public section
 
 namespace OAI
 

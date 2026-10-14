@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstExceptionalPrefactor
-import OAI.NumberTheory.DirichletL.Moments.FirstNonexceptionalPrefactor
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstExceptionalPrefactor
+public import OAI.NumberTheory.DirichletL.Moments.FirstNonexceptionalPrefactor
+
+@[expose] public section
 
 namespace OAI
 

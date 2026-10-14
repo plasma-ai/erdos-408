@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramClassification
-import OAI.NumberTheory.DirichletL.Detector.GramLatticeWindow
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramClassification
+public import OAI.NumberTheory.DirichletL.Detector.GramLatticeWindow
+
+@[expose] public section
 
 namespace OAI
 

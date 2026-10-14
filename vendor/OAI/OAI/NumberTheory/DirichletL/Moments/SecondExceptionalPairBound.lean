@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalPairDictionary
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalWindow
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalWindowHeight
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalPairDictionary
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalWindow
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalWindowHeight
+
+@[expose] public section
 
 namespace OAI
 

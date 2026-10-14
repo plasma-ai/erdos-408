@@ -1,4 +1,6 @@
-import Erdos408.Mertens
+module
+
+public import Erdos408.Mertens
 
 /-!
 # The dyadic renewal equations
@@ -33,6 +35,8 @@ function* (Plasma AI, 2026), §5, a discrete version of the renewal argument of
 Erdős, Granville, Pomerance and Spiro (1990, Section 2). Only Mertens' theorems
 and Chebyshev's bound are used, not a quantitative prime number theorem.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

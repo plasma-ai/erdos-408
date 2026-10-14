@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.SourceSum
-import OAI.NumberTheory.DirichletL.Descent.Quotients
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.SourceSum
+public import OAI.NumberTheory.DirichletL.Descent.Quotients
+
+@[expose] public section
 
 namespace OAI
 

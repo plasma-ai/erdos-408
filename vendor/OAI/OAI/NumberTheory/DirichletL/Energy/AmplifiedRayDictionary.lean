@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAnnularActiveInput
-import OAI.NumberTheory.DirichletL.Moments.AllocatedRayDictionary
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildSourceCaps
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAnnularActiveInput
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedRayDictionary
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildSourceCaps
+
+@[expose] public section
 
 namespace OAI
 

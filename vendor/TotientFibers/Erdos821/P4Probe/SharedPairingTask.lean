@@ -1,4 +1,8 @@
-import Erdos821.P4Probe.ProductMarginals
+module
+
+public import Erdos821.P4Probe.ProductMarginals
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RadialSourceDictionary
-import OAI.NumberTheory.DirichletL.Moments.ActiveCanonicalSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RadialSourceDictionary
+public import OAI.NumberTheory.DirichletL.Moments.ActiveCanonicalSource
+
+@[expose] public section
 
 namespace OAI
 

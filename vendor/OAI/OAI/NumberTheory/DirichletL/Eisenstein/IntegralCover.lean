@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.AffineCuspFourier
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.AffineCuspFourier
+
+@[expose] public section
 
 namespace OAI
 

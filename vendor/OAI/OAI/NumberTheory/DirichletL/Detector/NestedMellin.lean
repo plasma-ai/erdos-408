@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.PhysicalRadial
-import OAI.NumberTheory.DirichletL.Detector.OuterMellin
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalRadial
+public import OAI.NumberTheory.DirichletL.Detector.OuterMellin
+
+@[expose] public section
 
 namespace OAI
 

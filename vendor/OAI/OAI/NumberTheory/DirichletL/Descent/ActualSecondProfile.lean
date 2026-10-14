@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondWholeKernel
-import OAI.NumberTheory.DirichletL.Descent.SecondFiniteMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondWholeKernel
+public import OAI.NumberTheory.DirichletL.Descent.SecondFiniteMeasure
+
+@[expose] public section
 
 namespace OAI
 

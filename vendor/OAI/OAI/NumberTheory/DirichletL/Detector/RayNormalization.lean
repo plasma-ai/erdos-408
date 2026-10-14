@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.RaySlots
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RaySlots
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+
+@[expose] public section
 
 namespace OAI
 

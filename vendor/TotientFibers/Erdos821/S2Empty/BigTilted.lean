@@ -1,4 +1,8 @@
-import Erdos821.S2Empty.SmallMassBound
+module
+
+public import Erdos821.S2Empty.SmallMassBound
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.RawSourceIntegral
-import OAI.NumberTheory.DirichletL.Detector.SixthSeries
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RawSourceIntegral
+public import OAI.NumberTheory.DirichletL.Detector.SixthSeries
+
+@[expose] public section
 
 namespace OAI
 

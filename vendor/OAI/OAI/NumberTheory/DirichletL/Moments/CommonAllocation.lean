@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonSectors
-import OAI.NumberTheory.DirichletL.Moments.HeckeExpansion
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonSectors
+public import OAI.NumberTheory.DirichletL.Moments.HeckeExpansion
+
+@[expose] public section
 
 namespace OAI
 

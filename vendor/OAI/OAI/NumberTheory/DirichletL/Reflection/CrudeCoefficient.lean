@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.KernelBaseline
-import OAI.NumberTheory.DirichletL.Descent.MarkedPhase
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.KernelBaseline
+public import OAI.NumberTheory.DirichletL.Descent.MarkedPhase
+
+@[expose] public section
 
 namespace OAI
 

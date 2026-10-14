@@ -1,4 +1,8 @@
-import Erdos821.P5.ResidualRowIdentity
+module
+
+public import Erdos821.P5.ResidualRowIdentity
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

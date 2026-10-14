@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowCommonBound
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowCommonBound
+
+@[expose] public section
 
 namespace OAI
 

@@ -3,16 +3,21 @@ Adapted from PrimeNumberTheoremAnd by Alex Kontorovich and contributors.
 Licensed under the Apache License, Version 2.0; see the upstream LICENSE.
 This compatibility port retains the proven declarations used by this project.
 -/
-import Mathlib.Analysis.Fourier.RiemannLebesgueLemma
-import Mathlib.Analysis.Normed.Group.Tannery
-import Mathlib.Analysis.SumIntegralComparisons
-import Mathlib.NumberTheory.Chebyshev
-import Mathlib.NumberTheory.LSeries.PrimesInAP
-import Mathlib.NumberTheory.MulChar.Lemmas
-import PrimeNumberTheoremAnd.Fourier
-import PrimeNumberTheoremAnd.SmoothExistence
-import Mathlib.Analysis.Convolution
-import Mathlib.MeasureTheory.Group.Circle
+module
+
+public import Mathlib.Analysis.Fourier.RiemannLebesgueLemma
+public import Mathlib.Analysis.Normed.Group.Tannery
+public import Mathlib.Analysis.SumIntegralComparisons
+public import Mathlib.NumberTheory.Chebyshev
+public import Mathlib.NumberTheory.LSeries.PrimesInAP
+public import Mathlib.NumberTheory.MulChar.Lemmas
+public import PrimeNumberTheoremAnd.Fourier
+public import PrimeNumberTheoremAnd.SmoothExistence
+public import Mathlib.Analysis.Convolution
+public import Mathlib.MeasureTheory.Group.Circle
+public import Mathlib.Analysis.Asymptotics.SpecificAsymptotics
+
+@[expose] public section
 
 open Real BigOperators ArithmeticFunction MeasureTheory Filter Set FourierTransform LSeries
   Asymptotics SchwartzMap

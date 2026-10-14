@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.RestrictedWeights
+module
+
+public import OAI.NumberTheory.PrimeGaps.RestrictedWeights
+
+@[expose] public section
 
 namespace OAI
 

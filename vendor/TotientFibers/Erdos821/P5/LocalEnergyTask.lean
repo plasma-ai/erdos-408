@@ -1,4 +1,9 @@
-import Erdos821.Blueprint.Analytic
+module
+
+public import Erdos821.Blueprint.Analytic
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

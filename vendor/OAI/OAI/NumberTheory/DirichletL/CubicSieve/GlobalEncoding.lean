@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.SeedDefects
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.SeedDefects
+
+@[expose] public section
 
 namespace OAI
 

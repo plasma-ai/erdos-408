@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Bands
-import Erdos408.OneSided.Moment.RootReplacement.Bonferroni
-import Erdos408.OneSided.Moment.RootReplacement.Tube
+module
+
+public import Erdos408.OneSided.Bands
+public import Erdos408.OneSided.Moment.RootReplacement.Bonferroni
+public import Erdos408.OneSided.Moment.RootReplacement.Tube
 
 /-!
 # The combinatorial budgets of a configuration
@@ -22,6 +24,8 @@ or the coefficients `c(ω)` together.
   power `P^Z` with `Z L^{1/5} ≪_K L^{0.71}` (`sum_norm_confCoeff_le_of_bounds`,
   `budget_exponent_le`).
 -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,6 +1,8 @@
-import Erdos408.Extraction.Allocation.Failure.GroupBounds
-import Erdos408.Extraction.Allocation.Failure.Inner
-import Mathlib.NumberTheory.Harmonic.Bounds
+module
+
+public import Erdos408.Extraction.Allocation.Failure.GroupBounds
+public import Erdos408.Extraction.Allocation.Failure.Inner
+public import Mathlib.NumberTheory.Harmonic.Bounds
 
 /-!
 # Summing the free-factor bound
@@ -13,6 +15,8 @@ The free-factor bound summed over the candidate parts `d` and the factors
 * `∑_e ∏ b(e_i) / ∏ e_i = (∑_a b(a) / a)^{j - 1}`;
 * the tuples with `(A + 1) d ∏ e ≤ X` number at most `X/(A + 1) (1 + log X)^j`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

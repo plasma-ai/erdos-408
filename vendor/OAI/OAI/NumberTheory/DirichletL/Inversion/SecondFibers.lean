@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialFibers
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialFibers
+
+@[expose] public section
 
 namespace OAI
 

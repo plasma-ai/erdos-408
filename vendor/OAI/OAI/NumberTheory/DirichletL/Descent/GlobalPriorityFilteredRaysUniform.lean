@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredRays
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredEnergyUniform
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredRays
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredEnergyUniform
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredEnergy
+
+@[expose] public section
 
 namespace OAI
 

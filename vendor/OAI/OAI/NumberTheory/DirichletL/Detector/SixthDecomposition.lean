@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRows
-import OAI.NumberTheory.DirichletL.CenteredExceptionalCount
-import OAI.NumberTheory.DirichletL.Detector.HighAbsolute
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRows
+public import OAI.NumberTheory.DirichletL.CenteredExceptionalCount
+public import OAI.NumberTheory.DirichletL.Detector.HighAbsolute
+
+@[expose] public section
 
 namespace OAI
 

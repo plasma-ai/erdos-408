@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstEnergy
-import OAI.NumberTheory.DirichletL.Moments.FirstSectors
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstEnergy
+public import OAI.NumberTheory.DirichletL.Moments.FirstSectors
+
+@[expose] public section
 
 namespace OAI
 

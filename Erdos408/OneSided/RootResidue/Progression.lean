@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Analysis.Divisor
-import Mathlib.Analysis.PSeries
-import Mathlib.NumberTheory.ArithmeticFunction.Moebius
-import Mathlib.Topology.Algebra.InfiniteSum.Real
+module
+
+public import Erdos408.OneSided.Analysis.Divisor
+public import Mathlib.Analysis.PSeries
+public import Mathlib.NumberTheory.ArithmeticFunction.Moebius
+public import Mathlib.Topology.Algebra.InfiniteSum.Real
 
 /-!
 # Progressions and the Euler factor
@@ -16,6 +18,8 @@ The elementary counts of PD Lemma 3.3 (`blueprint/one_sided_type_ii.md` §5.2).
   `u ∈ [α, β)`, `u ≡ w (mod S)`, to `(β - α)/S · ∑_{(l, S) = 1} μ(l)/l²`, with error
   `3 + log(β + 1)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided.RootResidue
 

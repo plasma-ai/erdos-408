@@ -1,11 +1,13 @@
-import Erdos408.Analytic.IntegerKernel
-import Erdos408.Analytic.PNT
-import Erdos408.Analytic.PrimeTwist
-import Erdos408.Extraction.Defs
-import PrimeNumberTheoremAnd.IEANTN.Mertens
-import Mathlib.Data.Int.CardIntervalMod
-import Mathlib.NumberTheory.AbelSummation
-import Mathlib.NumberTheory.EulerProduct.Basic
+module
+
+public import Erdos408.Analytic.IntegerKernel
+public import Erdos408.Analytic.PNT
+public import Erdos408.Analytic.PrimeTwist
+public import Erdos408.Extraction.Defs
+public import PrimeNumberTheoremAnd.IEANTN.Mertens
+public import Mathlib.Data.Int.CardIntervalMod
+public import Mathlib.NumberTheory.AbelSummation
+public import Mathlib.NumberTheory.EulerProduct.Basic
 
 /-!
 # Twisted sums of primes minus the damped proxy
@@ -39,6 +41,8 @@ The damped weight is multiplicative, `g_j(n) = ∏_{p^e ∥ n} w_p^e`, so
 The only other input is Mertens' bound `∑_{p ≤ Y} 1/p ≤ log log Y + O(1)`,
 which gives `D_j⁻¹ ≪ L²` and Rankin's majorant `≪ L^{12}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

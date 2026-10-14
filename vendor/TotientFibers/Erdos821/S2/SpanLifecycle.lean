@@ -1,6 +1,10 @@
-import Erdos821.S2.HistoryAnchors
+module
+
+public import Erdos821.S2.HistoryAnchors
 
 /-! Finite prime lifespans and their before/after ghost occupancy. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

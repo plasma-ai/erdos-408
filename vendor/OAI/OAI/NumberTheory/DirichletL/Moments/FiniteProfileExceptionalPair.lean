@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalAmplitude
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalAmplitudePair
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalAmplitude
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalAmplitudePair
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

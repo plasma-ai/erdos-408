@@ -1,4 +1,8 @@
-import Erdos821.P5.EndpointSupport
+module
+
+public import Erdos821.P5.EndpointSupport
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

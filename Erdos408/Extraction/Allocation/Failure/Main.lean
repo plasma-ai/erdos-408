@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Allocation.Failure.Eventually
+module
+
+public import Erdos408.Extraction.Allocation.Failure.Eventually
 
 /-!
 # E6: the failure mass
@@ -8,6 +10,8 @@ With `c₁ = 1/4`, `θ = 1 - e⁻¹` and `a = θ / 4500`: for large `x` and
 `X/L (2 e^{aT/4} (e^{-aT} + e^{-T}) + e^{-T})`, the Chernoff factor is
 `e^{(a/4) T}`, and the failure mass is at most `20 κ (x/L) L^{-a/2}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

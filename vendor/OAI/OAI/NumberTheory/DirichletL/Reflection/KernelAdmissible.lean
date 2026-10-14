@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.PhysicalBranchMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.PhysicalBranchMeasure
+
+@[expose] public section
 
 namespace OAI
 

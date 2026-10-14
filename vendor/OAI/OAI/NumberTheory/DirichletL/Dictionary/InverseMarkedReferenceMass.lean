@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceEnergy
-import OAI.NumberTheory.DirichletL.Dictionary.InverseAssignedCount
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceEnergy
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseAssignedCount
+
+@[expose] public section
 
 namespace OAI
 

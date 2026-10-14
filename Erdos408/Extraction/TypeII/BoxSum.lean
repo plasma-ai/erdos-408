@@ -1,5 +1,7 @@
-import Erdos408.Extraction.TypeII.Grid
-import Erdos408.Extraction.TypeII.Endpoint
+module
+
+public import Erdos408.Extraction.TypeII.Grid
+public import Erdos408.Extraction.TypeII.Endpoint
 
 /-!
 # The main term of one box
@@ -10,6 +12,8 @@ into monomials `𝒲_S R_S`, write `R_S = 𝒩 F_S` with `F_S = clamp(R_S / 𝒩
 of a monomial satisfy the window and gap conditions by the cluster layout, and `F_S` is
 invariant under their primes.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

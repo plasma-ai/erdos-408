@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstChildBound
-import OAI.NumberTheory.DirichletL.Moments.FirstSectorTransform
-import OAI.NumberTheory.DirichletL.Moments.FirstChildProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstChildBound
+public import OAI.NumberTheory.DirichletL.Moments.FirstSectorTransform
+public import OAI.NumberTheory.DirichletL.Moments.FirstChildProfile
+
+@[expose] public section
 
 namespace OAI
 

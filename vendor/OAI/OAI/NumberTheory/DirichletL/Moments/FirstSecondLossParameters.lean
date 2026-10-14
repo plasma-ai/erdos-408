@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstSecondCapacityDefect
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstSecondCapacityDefect
+
+@[expose] public section
 
 namespace OAI
 

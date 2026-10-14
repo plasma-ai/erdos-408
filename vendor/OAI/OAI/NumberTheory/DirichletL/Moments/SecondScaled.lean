@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondDescent
-import OAI.NumberTheory.DirichletL.Moments.Partition
-import OAI.NumberTheory.DirichletL.Moments.ChildRows
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondDescent
+public import OAI.NumberTheory.DirichletL.Moments.Partition
+public import OAI.NumberTheory.DirichletL.Moments.ChildRows
+
+@[expose] public section
 
 namespace OAI
 

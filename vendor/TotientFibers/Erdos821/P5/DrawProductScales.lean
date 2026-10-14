@@ -1,7 +1,11 @@
-import Erdos821.P5.FreeDraws
-import Erdos821.P5.CompressedPairing
-import Erdos821.P5.GoodSharedDraws
-import Erdos821.P5.ListScales
+module
+
+public import Erdos821.P5.FreeDraws
+public import Erdos821.P5.CompressedPairing
+public import Erdos821.P5.GoodSharedDraws
+public import Erdos821.P5.ListScales
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

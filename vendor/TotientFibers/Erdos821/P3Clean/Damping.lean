@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.Structure
-import Erdos821.P3Clean.Contractions
+module
+
+public import Erdos821.P3Clean.Structure
+public import Erdos821.P3Clean.Contractions
 
 /-! The damping factors of a literal clean edge. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

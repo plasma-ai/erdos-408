@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedFourCoefficients
-import OAI.NumberTheory.DirichletL.Moments.SecondSourceSeededPowerDescent
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedFourCoefficients
+public import OAI.NumberTheory.DirichletL.Moments.SecondSourceSeededPowerDescent
+
+@[expose] public section
 
 namespace OAI
 

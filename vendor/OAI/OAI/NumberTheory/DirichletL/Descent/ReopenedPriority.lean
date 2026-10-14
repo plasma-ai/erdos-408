@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.ReopenedMarks
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ReopenedMarks
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.GreenIdentity
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.GreenIdentity
+
+@[expose] public section
 
 namespace OAI
 

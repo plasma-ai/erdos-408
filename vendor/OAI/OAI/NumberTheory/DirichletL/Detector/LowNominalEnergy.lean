@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowSelectedBound
-import OAI.NumberTheory.DirichletL.Detector.LowCentralGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowSelectedBound
+public import OAI.NumberTheory.DirichletL.Detector.LowCentralGeometry
+
+@[expose] public section
 
 namespace OAI
 

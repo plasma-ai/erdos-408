@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.FreshDensityFactor
+module
+
+public import Erdos821.P3Clean.FreshDensityFactor
 
 /-! Uniform bounds for the fresh density factors. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

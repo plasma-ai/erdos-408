@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.HeckeExpansion
-import OAI.NumberTheory.DirichletL.Moments.MobiusRegroup
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.HeckeExpansion
+public import OAI.NumberTheory.DirichletL.Moments.MobiusRegroup
+
+@[expose] public section
 
 namespace OAI
 

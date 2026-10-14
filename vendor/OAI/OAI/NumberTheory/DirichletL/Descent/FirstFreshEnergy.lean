@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstCommonChild
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstCommonChild
+
+@[expose] public section
 
 namespace OAI
 

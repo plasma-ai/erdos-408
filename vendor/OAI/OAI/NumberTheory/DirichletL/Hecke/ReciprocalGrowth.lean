@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.LogarithmicActual
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.LogarithmicActual
+
+@[expose] public section
 
 namespace OAI
 

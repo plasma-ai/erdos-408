@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyUnconditional
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyUnconditional
+
+@[expose] public section
 
 namespace OAI
 

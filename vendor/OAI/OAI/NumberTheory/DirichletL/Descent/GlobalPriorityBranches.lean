@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.WholePriorityBranches
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityPhysical
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.WholePriorityBranches
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityPhysical
+
+@[expose] public section
 
 namespace OAI
 

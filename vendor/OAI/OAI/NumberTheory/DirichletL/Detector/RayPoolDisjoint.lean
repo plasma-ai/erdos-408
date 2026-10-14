@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.RayNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RayNormalization
+
+@[expose] public section
 
 namespace OAI
 

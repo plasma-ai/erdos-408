@@ -1,6 +1,7 @@
-import Mathlib
-import Erdos821.Prelim.BlockSieve
-import Erdos821.Prelim.SieveExpectation
+module
+
+public import Erdos821.Prelim.BlockSieve
+public import Erdos821.Prelim.SieveExpectation
 
 /-!
 # Sieve products: weighted support sums factorize (`lem:sieve`)
@@ -13,6 +14,8 @@ For disjoint blocks `B_j`, `j ∈ J`, with caps `e_j` and densities `g`,
 and `prod_union` for `∏ g`), with ambient `J.biUnion B` (so base `J=∅`
 gives `{∅}`).
 -/
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

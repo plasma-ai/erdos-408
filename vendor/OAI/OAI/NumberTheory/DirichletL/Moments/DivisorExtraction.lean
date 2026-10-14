@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.DivisorAllocation
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DivisorAllocation
+
+@[expose] public section
 
 namespace OAI
 

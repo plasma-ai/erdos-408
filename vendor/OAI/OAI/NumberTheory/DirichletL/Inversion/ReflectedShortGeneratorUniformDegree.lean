@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.ShortCanonicalNormalization
-import OAI.NumberTheory.DirichletL.Inversion.ReflectedShortPowerUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.ShortCanonicalNormalization
+public import OAI.NumberTheory.DirichletL.Inversion.ReflectedShortPowerUniformDegree
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

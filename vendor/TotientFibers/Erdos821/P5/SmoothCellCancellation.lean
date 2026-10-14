@@ -1,8 +1,12 @@
-import Erdos821.P5.ComparisonMajorArcAdapter
-import Erdos821.P5.ComparisonArcNumerics
-import Erdos821.P5.SmoothCellSquareBound
-import Erdos821.P5.ComparisonFiniteMinorArcs
-import Erdos821.P5Minor.MinorArcTask
+module
+
+public import Erdos821.P5.ComparisonMajorArcAdapter
+public import Erdos821.P5.ComparisonArcNumerics
+public import Erdos821.P5.SmoothCellSquareBound
+public import Erdos821.P5.ComparisonFiniteMinorArcs
+public import Erdos821.P5Minor.MinorArcTask
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

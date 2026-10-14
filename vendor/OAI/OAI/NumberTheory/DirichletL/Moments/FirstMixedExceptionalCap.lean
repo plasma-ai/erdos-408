@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedChild
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedNormalizationActual
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedChild
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedNormalizationActual
+
+@[expose] public section
 
 namespace OAI
 

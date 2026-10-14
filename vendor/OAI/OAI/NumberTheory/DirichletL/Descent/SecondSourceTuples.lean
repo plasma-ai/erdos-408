@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialArithmetic
-import OAI.NumberTheory.DirichletL.Descent.SecondGenerator
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialArithmetic
+public import OAI.NumberTheory.DirichletL.Descent.SecondGenerator
+
+@[expose] public section
 
 namespace OAI
 

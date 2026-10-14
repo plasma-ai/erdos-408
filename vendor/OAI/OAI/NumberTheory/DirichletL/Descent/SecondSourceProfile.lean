@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondSeparatedColumns
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondSeparatedColumns
+
+@[expose] public section
 
 namespace OAI
 

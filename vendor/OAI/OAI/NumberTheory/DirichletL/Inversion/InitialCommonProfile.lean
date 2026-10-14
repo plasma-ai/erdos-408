@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialCommonLists
-import OAI.NumberTheory.DirichletL.Inversion.InitialCommonRatios
-import OAI.NumberTheory.DirichletL.Inversion.InitialOverlapIdealFourier
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialCommonLists
+public import OAI.NumberTheory.DirichletL.Inversion.InitialCommonRatios
+public import OAI.NumberTheory.DirichletL.Inversion.InitialOverlapIdealFourier
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplifiedChildWidth
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedActiveCapacitySource
-import OAI.NumberTheory.DirichletL.Energy.AmplifiedRayDictionary
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedCapacityCommon
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplifiedChildWidth
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedActiveCapacitySource
+public import OAI.NumberTheory.DirichletL.Energy.AmplifiedRayDictionary
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedCapacityCommon
+
+@[expose] public section
 
 namespace OAI
 

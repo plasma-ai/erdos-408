@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.BottomStage
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.BottomStage
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,8 +1,10 @@
-import Erdos408.Extraction.Unsmooth
-import Erdos408.FinalAssembly
-import Erdos408.Graph
-import Erdos408.OneSided
-import Erdos408.TwoSided
+module
+
+public import Erdos408.Extraction.Unsmooth
+public import Erdos408.FinalAssembly
+public import Erdos408.Graph
+public import Erdos408.OneSided
+public import Erdos408.TwoSided
 
 /-!
 # Proof of Erdős Problem 408: distribution of iterated totient heights
@@ -10,6 +12,8 @@ import Erdos408.TwoSided
 Comparator checks the three theorems in this module against the Mathlib-only
 statements in `Challenge.lean`.
 -/
+
+@[expose] public section
 
 open Filter
 open scoped Topology

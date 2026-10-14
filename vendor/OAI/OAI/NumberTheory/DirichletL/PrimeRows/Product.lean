@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.Ramified
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.Ramified
+
+@[expose] public section
 
 namespace OAI
 

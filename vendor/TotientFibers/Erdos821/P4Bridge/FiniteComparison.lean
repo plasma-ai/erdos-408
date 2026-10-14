@@ -1,5 +1,9 @@
-import Erdos821.P4Probe.FinitePairing
-import Erdos821.P4Probe.ConditionalBounds
+module
+
+public import Erdos821.P4Probe.FinitePairing
+public import Erdos821.P4Probe.ConditionalBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

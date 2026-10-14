@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.TupleScaling
-import OAI.NumberTheory.DirichletL.Detector.PhysicalNorms
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.TupleScaling
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalNorms
+
+@[expose] public section
 
 namespace OAI
 

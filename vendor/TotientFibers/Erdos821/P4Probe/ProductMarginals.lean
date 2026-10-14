@@ -1,4 +1,8 @@
-import Erdos821.P4Probe.ProductAverages
+module
+
+public import Erdos821.P4Probe.ProductAverages
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

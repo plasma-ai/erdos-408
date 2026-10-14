@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.Order.Star.Real
+
+@[expose] public section
 
 namespace OAI
 namespace Problem337

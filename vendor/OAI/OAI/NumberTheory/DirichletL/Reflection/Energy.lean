@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.ActualBounds
-import OAI.NumberTheory.DirichletL.Reflection.FamilyFactorization
-import OAI.NumberTheory.DirichletL.Descent.Sharp
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.ActualBounds
+public import OAI.NumberTheory.DirichletL.Reflection.FamilyFactorization
+public import OAI.NumberTheory.DirichletL.Descent.Sharp
+
+@[expose] public section
 
 namespace OAI
 

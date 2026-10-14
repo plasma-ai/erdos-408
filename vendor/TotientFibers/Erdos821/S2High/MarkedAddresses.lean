@@ -1,4 +1,8 @@
-import Erdos821.S2High.PivotAssignments
+module
+
+public import Erdos821.S2High.PivotAssignments
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

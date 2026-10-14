@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CoarseAmplitude
-import OAI.NumberTheory.DirichletL.PrimeRows.SliceIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CoarseAmplitude
+public import OAI.NumberTheory.DirichletL.PrimeRows.SliceIntegral
+
+@[expose] public section
 
 namespace OAI
 

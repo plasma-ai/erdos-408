@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.IdealMasks
-import Mathlib.Algebra.BigOperators.Group.Finset.Preimage
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.IdealMasks
+public import Mathlib.Algebra.BigOperators.Group.Finset.Preimage
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import Erdos821.P5.DrawProductScales
-import Erdos821.P5.ProgressionIntervals
-import Erdos821.P5.LiftedSharedRow
+module
+
+public import Erdos821.P5.DrawProductScales
+public import Erdos821.P5.ProgressionIntervals
+public import Erdos821.P5.LiftedSharedRow
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

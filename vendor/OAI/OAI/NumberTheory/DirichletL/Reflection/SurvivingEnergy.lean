@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.FilteredMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.FilteredMeasure
+
+@[expose] public section
 
 namespace OAI
 

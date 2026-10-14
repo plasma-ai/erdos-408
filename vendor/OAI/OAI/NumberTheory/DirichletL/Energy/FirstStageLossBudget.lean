@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.StageReserveSchedule
-import OAI.NumberTheory.DirichletL.Energy.FirstGaussianProfileWeights
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedFourCoefficients
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.StageReserveSchedule
+public import OAI.NumberTheory.DirichletL.Energy.FirstGaussianProfileWeights
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedFourCoefficients
+
+@[expose] public section
 
 namespace OAI
 

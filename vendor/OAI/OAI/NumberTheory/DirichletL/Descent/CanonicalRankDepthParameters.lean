@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalRankExistenceData
-import OAI.NumberTheory.DirichletL.Descent.RecursionParameters
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalRankExistenceData
+public import OAI.NumberTheory.DirichletL.Descent.RecursionParameters
+
+@[expose] public section
 
 namespace OAI
 

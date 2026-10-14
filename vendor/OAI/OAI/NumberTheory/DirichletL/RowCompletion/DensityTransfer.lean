@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.CubicReopening
-import OAI.NumberTheory.DirichletL.RowCompletion.CompletedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.CubicReopening
+public import OAI.NumberTheory.DirichletL.RowCompletion.CompletedEnergy
+
+@[expose] public section
 
 namespace OAI
 

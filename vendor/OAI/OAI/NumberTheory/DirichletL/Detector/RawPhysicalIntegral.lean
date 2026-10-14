@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.InitialProduct
-import OAI.NumberTheory.DirichletL.Detector.RawMellinTerm
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.InitialProduct
+public import OAI.NumberTheory.DirichletL.Detector.RawMellinTerm
+
+@[expose] public section
 
 namespace OAI
 

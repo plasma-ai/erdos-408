@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongBins
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongBins
+
+@[expose] public section
 
 namespace OAI
 

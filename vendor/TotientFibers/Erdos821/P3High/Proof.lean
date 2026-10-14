@@ -1,8 +1,12 @@
-import Erdos821.P3High.Assignments
-import Erdos821.S2Gpar.GhostAnalyticParameters
+module
+
+public import Erdos821.P3High.Assignments
+public import Erdos821.S2Gpar.GhostAnalyticParameters
 
 /-! Assembly of the high-rank equality contribution: conditional rows from the literal
 ghost/edge choices, the analytic ghost parameters, and the empty boundary mass. -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

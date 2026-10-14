@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongCaller
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongCaller
+
+@[expose] public section
 
 namespace OAI
 

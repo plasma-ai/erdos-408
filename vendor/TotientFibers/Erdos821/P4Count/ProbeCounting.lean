@@ -1,5 +1,10 @@
-import Erdos821.P4Probe.CountingTasks
-import Erdos821.S34.Hoeffding
+module
+
+public import Erdos821.P4Probe.CountingTasks
+public import Erdos821.S34.Hoeffding
+public import Mathlib.Logic.Equiv.Fintype
+
+@[expose] public section
 
 set_option autoImplicit false
 

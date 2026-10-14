@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.ProfileSymmetry
+module
+
+public import OAI.NumberTheory.PrimeGaps.ProfileSymmetry
+
+@[expose] public section
 
 namespace OAI
 

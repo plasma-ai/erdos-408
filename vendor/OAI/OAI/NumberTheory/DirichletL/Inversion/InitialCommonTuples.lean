@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialCommonForcing
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialCommonForcing
+
+@[expose] public section
 
 namespace OAI
 

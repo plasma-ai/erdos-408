@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianSummation
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianSummation
+
+@[expose] public section
 
 namespace OAI
 

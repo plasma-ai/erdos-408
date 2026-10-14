@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.PriorityRetainedMovingRadius
-import OAI.NumberTheory.DirichletL.Descent.GlobalPrioritySource
-import OAI.NumberTheory.DirichletL.Inversion.WholePriorityRetainedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.PriorityRetainedMovingRadius
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPrioritySource
+public import OAI.NumberTheory.DirichletL.Inversion.WholePriorityRetainedSource
+
+@[expose] public section
 
 namespace OAI
 

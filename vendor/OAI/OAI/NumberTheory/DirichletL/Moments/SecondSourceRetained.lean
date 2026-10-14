@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondRetainedPair
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondRetainedPair
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianFlow
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianFlow
+
+@[expose] public section
 
 namespace OAI
 

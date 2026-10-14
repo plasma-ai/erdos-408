@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.Static
-import OAI.NumberTheory.DirichletL.Descent.Hybrid
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Static
+public import OAI.NumberTheory.DirichletL.Descent.Hybrid
+
+@[expose] public section
 
 namespace OAI
 

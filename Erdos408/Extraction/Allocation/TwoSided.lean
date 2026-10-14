@@ -1,7 +1,9 @@
-import Erdos408.Analytic.IntegerKernel
-import Erdos408.Analytic.PrimeTwist
-import Erdos408.Extraction.Allocation.Cutoff
-import Erdos408.Extraction.Allocation.Endpoint
+module
+
+public import Erdos408.Analytic.IntegerKernel
+public import Erdos408.Analytic.PrimeTwist
+public import Erdos408.Extraction.Allocation.Cutoff
+public import Erdos408.Extraction.Allocation.Endpoint
 
 /-!
 # Applying the two-sided correlation
@@ -17,6 +19,8 @@ inert monomial, enumerated by `Fin |S|`; the given slots and coefficient;
 the clipped core `min(G_j, L^{B₀})`, invariant under all candidate primes;
 and the cutoff `Ψ(y) = y Φ(y)`, which turns `Ψ(w/x)/w` into `Φ(w/x)/x`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

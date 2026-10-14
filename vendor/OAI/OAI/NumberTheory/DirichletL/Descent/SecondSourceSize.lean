@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstSourceSize
-import OAI.NumberTheory.DirichletL.Descent.SecondCanonicalTail
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstSourceSize
+public import OAI.NumberTheory.DirichletL.Descent.SecondCanonicalTail
+
+@[expose] public section
 
 namespace OAI
 

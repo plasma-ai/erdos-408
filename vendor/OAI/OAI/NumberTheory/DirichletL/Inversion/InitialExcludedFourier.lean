@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedForcing
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedForcing
+
+@[expose] public section
 
 namespace OAI
 

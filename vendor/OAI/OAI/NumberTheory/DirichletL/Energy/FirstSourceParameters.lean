@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Energy.FirstActualFrequencyBudget
-import OAI.NumberTheory.DirichletL.Energy.FirstLiveAdmission
-import OAI.NumberTheory.DirichletL.Energy.WidthRanges
-import OAI.NumberTheory.DirichletL.Energy.StageMargins
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.FirstActualFrequencyBudget
+public import OAI.NumberTheory.DirichletL.Energy.FirstLiveAdmission
+public import OAI.NumberTheory.DirichletL.Energy.WidthRanges
+public import OAI.NumberTheory.DirichletL.Energy.StageMargins
+
+@[expose] public section
 
 namespace OAI
 

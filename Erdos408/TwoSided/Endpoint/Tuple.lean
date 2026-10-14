@@ -1,5 +1,7 @@
-import Erdos408.TwoSided.Endpoint.Factor
-import Erdos408.TwoSided.Endpoint.Tuple.General
+module
+
+public import Erdos408.TwoSided.Endpoint.Factor
+public import Erdos408.TwoSided.Endpoint.Tuple.General
 
 /-!
 # The tuple part at high times
@@ -16,6 +18,8 @@ The proof for a general coefficient is in `Tuple/`: the boxes, classes and chara
 facts (`Asymp`) and the assembly (`General`), with E7 (`Mean`), S16 (`Exceptional`), E8 (`Gram`)
 and E9 (`Twist`). The coefficient bounds are in `Tuple/Mark.lean` and `Setup.lean`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.HeckeColumnWindow
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.HeckeColumnWindow
+
+@[expose] public section
 
 namespace OAI
 

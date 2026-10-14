@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstReferenceEnergy
-import OAI.NumberTheory.DirichletL.Moments.FirstWindowBudgets
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstReferenceEnergy
+public import OAI.NumberTheory.DirichletL.Moments.FirstWindowBudgets
+
+@[expose] public section
 
 namespace OAI
 

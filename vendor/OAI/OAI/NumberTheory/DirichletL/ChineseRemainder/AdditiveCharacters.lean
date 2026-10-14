@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Mellin.LogProfiles
+module
+
+public import OAI.NumberTheory.DirichletL.Mellin.LogProfiles
+
+@[expose] public section
 
 namespace OAI
 
@@ -482,7 +486,7 @@ end Generic
 
 noncomputable def ω₃ : ℂ := ((-1 : ℂ) + (Real.sqrt 3 : ℝ) * Complex.I) / 2
 
-private theorem omega_sq : ω₃ ^ 2 = -ω₃ - 1 := by
+theorem omega_sq : ω₃ ^ 2 = -ω₃ - 1 := by
   have hs : (Real.sqrt 3 : ℝ) ^ 2 = 3 := Real.sq_sqrt (by norm_num)
   have hs' : ((Real.sqrt 3 : ℝ) : ℂ) ^ 2 = 3 := by
     norm_cast

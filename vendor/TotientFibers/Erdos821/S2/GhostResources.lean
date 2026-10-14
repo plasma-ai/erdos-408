@@ -1,7 +1,11 @@
-import Erdos821.S2.HistoryResourceTasks
-import Erdos821.S2.HistoryBirths
+module
+
+public import Erdos821.S2.HistoryResourceTasks
+public import Erdos821.S2.HistoryBirths
 
 /-! Termination removes precisely the selected old indices; births add fresh primes. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

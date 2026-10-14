@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstTailAggregate
-import OAI.NumberTheory.DirichletL.Moments.FirstEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstTailAggregate
+public import OAI.NumberTheory.DirichletL.Moments.FirstEnergy
+
+@[expose] public section
 
 namespace OAI
 

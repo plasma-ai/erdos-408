@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthChild
-import OAI.NumberTheory.DirichletL.Energy.ZeroReflectionSupport
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowControl
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthChild
+public import OAI.NumberTheory.DirichletL.Energy.ZeroReflectionSupport
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowControl
+
+@[expose] public section
 
 namespace OAI
 

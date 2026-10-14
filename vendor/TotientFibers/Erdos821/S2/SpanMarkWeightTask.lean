@@ -1,7 +1,11 @@
-import Erdos821.S2.SpanGhostWeightTask
-import Erdos821.S2.SpanEdge
+module
+
+public import Erdos821.S2.SpanGhostWeightTask
+public import Erdos821.S2.SpanEdge
 
 /-! Original active-mark costs and one reciprocal charge per prime lifespan. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

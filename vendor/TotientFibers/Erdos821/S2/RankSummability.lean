@@ -1,6 +1,10 @@
-import Erdos821.S2.HighRankTask
+module
+
+public import Erdos821.S2.HighRankTask
 
 /-! Every equality-rank expression at a finite cutoff is genuinely summable. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

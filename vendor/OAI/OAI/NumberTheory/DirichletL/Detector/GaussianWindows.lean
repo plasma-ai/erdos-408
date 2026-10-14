@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianPartition
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianPartition
+
+@[expose] public section
 
 namespace OAI
 

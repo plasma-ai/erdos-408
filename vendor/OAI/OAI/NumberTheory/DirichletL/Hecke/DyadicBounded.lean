@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DyadicPointwise
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicPointwise
+
+@[expose] public section
 
 namespace OAI
 

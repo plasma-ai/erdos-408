@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.GeneratorTransport
-import OAI.NumberTheory.DirichletL.Descent.SecondFreshAssembly
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GeneratorTransport
+public import OAI.NumberTheory.DirichletL.Descent.SecondFreshAssembly
+
+@[expose] public section
 
 namespace OAI
 

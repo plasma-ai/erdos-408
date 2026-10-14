@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.CappedWidthInduction
-import OAI.NumberTheory.DirichletL.Energy.StageMonotonicity
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CappedWidthInduction
+public import OAI.NumberTheory.DirichletL.Energy.StageMonotonicity
+
+@[expose] public section
 
 namespace OAI
 

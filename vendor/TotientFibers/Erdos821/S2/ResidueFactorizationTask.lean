@@ -1,7 +1,11 @@
-import Erdos821.S2.SpanEdgeValidity
-import Erdos821.S2.PrimeLifespans
+module
+
+public import Erdos821.S2.SpanEdgeValidity
+public import Erdos821.S2.PrimeLifespans
 
 /-! Separate small conditional damping from independent big-prime expectations. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

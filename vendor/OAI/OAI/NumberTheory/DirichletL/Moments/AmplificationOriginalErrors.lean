@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationActiveFamily
-import OAI.NumberTheory.DirichletL.Moments.AmplificationErrorEnergy
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationActiveFamily
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationErrorEnergy
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildEnergy
+
+@[expose] public section
 
 namespace OAI
 

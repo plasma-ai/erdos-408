@@ -1,6 +1,10 @@
-import Erdos821.S2.GhostResources
+module
+
+public import Erdos821.S2.GhostResources
 
 /-! Live prime multiplicities are bounded by the original performed births. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

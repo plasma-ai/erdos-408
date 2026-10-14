@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Detector.RadialMellin
-import OAI.NumberTheory.DirichletL.Detector.HighAbsolute
-import OAI.NumberTheory.DirichletL.Detector.FrequencySupport
-import Mathlib.MeasureTheory.Integral.DominatedConvergence
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RadialMellin
+public import OAI.NumberTheory.DirichletL.Detector.HighAbsolute
+public import OAI.NumberTheory.DirichletL.Detector.FrequencySupport
+public import Mathlib.MeasureTheory.Integral.DominatedConvergence
+
+@[expose] public section
 
 namespace OAI
 

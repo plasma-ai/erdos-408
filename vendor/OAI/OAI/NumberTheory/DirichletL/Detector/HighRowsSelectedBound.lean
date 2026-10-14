@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedTerms
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedTerms
+
+@[expose] public section
 
 namespace OAI
 

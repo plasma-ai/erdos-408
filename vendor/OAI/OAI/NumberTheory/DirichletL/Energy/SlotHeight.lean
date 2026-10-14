@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.Bands
-import OAI.NumberTheory.DirichletL.Moments.PrimeSlotShift
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.Bands
+public import OAI.NumberTheory.DirichletL.Moments.PrimeSlotShift
+
+@[expose] public section
 
 namespace OAI
 

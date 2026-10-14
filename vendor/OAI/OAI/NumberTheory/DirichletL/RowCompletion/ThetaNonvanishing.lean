@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.MobiusEulerCorrection
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.MobiusEulerCorrection
+
+@[expose] public section
 
 namespace OAI
 

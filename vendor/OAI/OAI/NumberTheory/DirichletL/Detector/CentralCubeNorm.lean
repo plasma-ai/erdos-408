@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CubeCommonProfile
-import OAI.NumberTheory.DirichletL.PrimeRows.RowCount
-import OAI.NumberTheory.DirichletL.PrimeRows.ProfileIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CubeCommonProfile
+public import OAI.NumberTheory.DirichletL.PrimeRows.RowCount
+public import OAI.NumberTheory.DirichletL.PrimeRows.ProfileIntegral
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalPairBound
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalPairBound
+
+@[expose] public section
 
 namespace OAI
 

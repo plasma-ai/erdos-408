@@ -1,7 +1,11 @@
-import Mathlib.Analysis.SpecificLimits.Normed
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Ring
+module
+
+public import Mathlib.Analysis.SpecificLimits.Normed
+public import Mathlib.Analysis.Complex.Basic
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Ring
+
+@[expose] public section
 
 namespace OAI
 

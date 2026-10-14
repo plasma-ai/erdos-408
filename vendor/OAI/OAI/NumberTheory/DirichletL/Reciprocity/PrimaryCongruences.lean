@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Cusp.ResiduesModThree
+module
+
+public import OAI.NumberTheory.DirichletL.Cusp.ResiduesModThree
+
+@[expose] public section
 
 namespace OAI
 

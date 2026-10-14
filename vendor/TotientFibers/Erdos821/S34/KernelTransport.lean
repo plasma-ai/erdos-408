@@ -1,5 +1,9 @@
-import Erdos821.S34.FrameBridge
-import Erdos821.S34.CellCosts
+module
+
+public import Erdos821.S34.FrameBridge
+public import Erdos821.S34.CellCosts
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

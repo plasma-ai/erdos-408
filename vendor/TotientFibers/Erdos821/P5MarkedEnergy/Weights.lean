@@ -1,7 +1,11 @@
-import Erdos821.P5MarkedEnergy.WeightedMean
+module
+
+public import Erdos821.P5MarkedEnergy.WeightedMean
 
 /-! The local-energy weight `(1+|h t|)^(-j)` and the split of its weighted
 integral into a medium time range and a weighted tail. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

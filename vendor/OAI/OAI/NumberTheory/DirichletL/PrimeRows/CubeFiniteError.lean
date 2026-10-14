@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CubeErrorSaving
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralFiniteError
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CubeErrorSaving
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralFiniteError
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

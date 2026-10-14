@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialFibers
-import OAI.NumberTheory.DirichletL.Descent.Fibers
-import OAI.NumberTheory.DirichletL.Descent.Sharp
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialFibers
+public import OAI.NumberTheory.DirichletL.Descent.Fibers
+public import OAI.NumberTheory.DirichletL.Descent.Sharp
+
+@[expose] public section
 
 namespace OAI
 

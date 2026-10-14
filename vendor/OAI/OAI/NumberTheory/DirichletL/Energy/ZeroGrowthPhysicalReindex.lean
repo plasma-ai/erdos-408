@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroBalancedAdmission
-import OAI.NumberTheory.DirichletL.Energy.SourceInputReindexGates
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroBalancedAdmission
+public import OAI.NumberTheory.DirichletL.Energy.SourceInputReindexGates
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPair
-import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalSource
-import OAI.NumberTheory.DirichletL.Dictionary.InverseUniformScale
-import OAI.NumberTheory.DirichletL.Moments.ReflectedAnnuli
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPair
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalSource
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseUniformScale
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedAnnuli
+
+@[expose] public section
 
 namespace OAI
 

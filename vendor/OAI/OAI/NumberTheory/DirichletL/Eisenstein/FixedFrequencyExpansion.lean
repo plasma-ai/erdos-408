@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Cusp.StaticReflectionPhases
+module
+
+public import OAI.NumberTheory.DirichletL.Cusp.StaticReflectionPhases
+
+@[expose] public section
 
 namespace OAI
 

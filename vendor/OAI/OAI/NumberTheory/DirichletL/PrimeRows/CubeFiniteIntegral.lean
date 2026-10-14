@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CubeFiniteError
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CubeFiniteError
+
+@[expose] public section
 
 namespace OAI
 

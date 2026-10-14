@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.ResidueCharacter
-import Mathlib.RingTheory.PrincipalIdealDomain
+module
+
+public import OAI.NumberTheory.DirichletL.ResidueCharacter
+public import Mathlib.RingTheory.PrincipalIdealDomain
+
+@[expose] public section
 
 namespace OAI
 

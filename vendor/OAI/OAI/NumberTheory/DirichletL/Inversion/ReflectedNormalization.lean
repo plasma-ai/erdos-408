@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.CommonMeasure
-import OAI.NumberTheory.DirichletL.Inversion.TerminalWidths
-import OAI.NumberTheory.DirichletL.Inversion.KernelSourceUniform
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CommonMeasure
+public import OAI.NumberTheory.DirichletL.Inversion.TerminalWidths
+public import OAI.NumberTheory.DirichletL.Inversion.KernelSourceUniform
+
+@[expose] public section
 
 namespace OAI
 

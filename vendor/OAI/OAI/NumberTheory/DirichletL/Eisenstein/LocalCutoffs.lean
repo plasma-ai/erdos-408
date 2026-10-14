@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.BranchScaling
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.BranchScaling
+
+@[expose] public section
 
 namespace OAI
 

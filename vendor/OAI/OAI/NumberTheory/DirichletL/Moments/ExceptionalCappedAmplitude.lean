@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDegree
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalEnergy
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalAllocationShell
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDegree
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalEnergy
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalAllocationShell
+
+@[expose] public section
 
 namespace OAI
 

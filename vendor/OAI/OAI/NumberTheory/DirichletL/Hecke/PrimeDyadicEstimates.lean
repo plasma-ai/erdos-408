@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadicContour
-import OAI.NumberTheory.DirichletL.Hecke.DyadicJoins
-import OAI.NumberTheory.DirichletL.Hecke.DyadicPointwise
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadicContour
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicJoins
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicPointwise
+
+@[expose] public section
 
 namespace OAI
 

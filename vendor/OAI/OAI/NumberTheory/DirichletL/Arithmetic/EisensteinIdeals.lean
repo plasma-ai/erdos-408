@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Arithmetic.EisensteinCoordinates
+module
+
+public import OAI.NumberTheory.DirichletL.Arithmetic.EisensteinCoordinates
+
+@[expose] public section
 
 namespace OAI
 
@@ -17,20 +21,20 @@ namespace ActualEisensteinSieve
 abbrev K := CyclotomicField 3 ℚ
 abbrev O := NumberField.RingOfIntegers K
 
-private instance : IsCyclotomicExtension {3} ℚ K :=
+instance : IsCyclotomicExtension {3} ℚ K :=
   CyclotomicField.isCyclotomicExtension 3 ℚ
 
-private instance : IsPrincipalIdealRing O :=
+instance : IsPrincipalIdealRing O :=
   IsCyclotomicExtension.Rat.three_pid K
 
 def omega : O :=
   (IsCyclotomicExtension.zeta_spec 3 ℚ K).toInteger
 
-private def lambda : O := omega - 1
+def lambda : O := omega - 1
 
-private def lambdaIdeal : Ideal O := Ideal.span {lambda}
+def lambdaIdeal : Ideal O := Ideal.span {lambda}
 
-private theorem lambda_prime : Prime lambda := by
+theorem lambda_prime : Prime lambda := by
   let : Fact (Nat.Prime 3) := ⟨Nat.prime_three⟩
   exact (IsCyclotomicExtension.zeta_spec 3 ℚ K).zeta_sub_one_prime'
 
@@ -52,13 +56,13 @@ theorem lambda_card : Nat.card (O ⧸ lambdaIdeal) = 3 := by
 example (P : Ideal O) [P.IsMaximal] : Field (O ⧸ P) := Ideal.Quotient.field P
 example (P : Ideal O) [P.IsMaximal] : Finite (O ⧸ P) := inferInstance
 
-private def localQuadratic (P : Ideal O) [P.IsMaximal] (x : O) : ℤ := by
+def localQuadratic (P : Ideal O) [P.IsMaximal] (x : O) : ℤ := by
   classical
   letI : Field (O ⧸ P) := Ideal.Quotient.field P
   letI : Fintype (O ⧸ P) := Fintype.ofFinite (O ⧸ P)
   exact quadraticChar (O ⧸ P) (Ideal.Quotient.mk P x)
 
-private theorem localQuadratic_one (P : Ideal O) [P.IsMaximal] :
+theorem localQuadratic_one (P : Ideal O) [P.IsMaximal] :
     localQuadratic P 1 = 1 := by
   classical
   let : Field (O ⧸ P) := Ideal.Quotient.field P
@@ -66,11 +70,11 @@ private theorem localQuadratic_one (P : Ideal O) [P.IsMaximal] :
   change quadraticChar (O ⧸ P) 1 = 1
   exact map_one _
 
-private theorem localQuadratic_mul (P : Ideal O) [P.IsMaximal] (x y : O) :
+theorem localQuadratic_mul (P : Ideal O) [P.IsMaximal] (x y : O) :
     localQuadratic P (x * y) = localQuadratic P x * localQuadratic P y := by
   simp [localQuadratic, map_mul]
 
-private theorem localQuadratic_zero_iff (P : Ideal O) [P.IsMaximal] (x : O) :
+theorem localQuadratic_zero_iff (P : Ideal O) [P.IsMaximal] (x : O) :
     localQuadratic P x = 0 ↔ x ∈ P := by
   classical
   let : Field (O ⧸ P) := Ideal.Quotient.field P
@@ -79,7 +83,7 @@ private theorem localQuadratic_zero_iff (P : Ideal O) [P.IsMaximal] (x : O) :
   rw [quadraticChar_eq_zero_iff]
   exact Ideal.Quotient.eq_zero_iff_mem
 
-private theorem exists_localQuadratic_neg_one (P : Ideal O) [P.IsMaximal]
+theorem exists_localQuadratic_neg_one (P : Ideal O) [P.IsMaximal]
     (hodd : ringChar (O ⧸ P) ≠ 2) :
     ∃ x : O, localQuadratic P x = -1 := by
   classical
@@ -121,7 +125,7 @@ theorem localQuadratic_cube_root_one (P : Ideal O) [P.IsMaximal]
   change quadraticChar (O ⧸ P) v = 1
   rwa [hv4] at hsq
 
-private theorem localQuadratic_trichotomy (P : Ideal O) [P.IsMaximal]
+theorem localQuadratic_trichotomy (P : Ideal O) [P.IsMaximal]
     (x : O) :
     localQuadratic P x = 0 ∨ localQuadratic P x = 1 ∨
       localQuadratic P x = -1 := by
@@ -133,7 +137,7 @@ private theorem localQuadratic_trichotomy (P : Ideal O) [P.IsMaximal]
     quadraticChar (O ⧸ P) (Ideal.Quotient.mk P x) = -1
   exact quadraticChar_isQuadratic (O ⧸ P) _
 
-private instance : lambdaIdeal.IsMaximal := lambda_maximal
+instance : lambdaIdeal.IsMaximal := lambda_maximal
 
 theorem lambda_residue_odd : ringChar (O ⧸ lambdaIdeal) ≠ 2 := by
   classical
@@ -148,7 +152,7 @@ theorem lambdaQuadratic_neg_one : localQuadratic lambdaIdeal (-1) = -1 := by
   rw [localQuadratic_neg_one lambdaIdeal lambda_residue_odd, lambda_card]
   rfl
 
-private theorem finite_prod_trichotomy {ι : Type*} (s : Finset ι)
+theorem finite_prod_trichotomy {ι : Type*} (s : Finset ι)
     (f : ι → ℤ)
     (hf : ∀ i ∈ s, f i = 0 ∨ f i = 1 ∨ f i = -1) :
     s.prod f = 0 ∨ s.prod f = 1 ∨ s.prod f = -1 := by
@@ -169,7 +173,7 @@ private theorem finite_prod_trichotomy {ι : Type*} (s : Finset ι)
         · right; right; simp [Finset.prod_insert his, hm, h1]
         · right; left; simp [Finset.prod_insert his, hm, hm']
 
-private theorem crt_pair (I J : Ideal O) (h : IsCoprime I J)
+theorem crt_pair (I J : Ideal O) (h : IsCoprime I J)
     (a : O ⧸ I) (b : O ⧸ J) :
     ∃ x : O, Ideal.Quotient.mk I x = a ∧ Ideal.Quotient.mk J x = b := by
   let e := Ideal.quotientMulEquivQuotientProd I J h
@@ -180,7 +184,7 @@ private theorem crt_pair (I J : Ideal O) (h : IsCoprime I J)
   · simpa [e] using congrArg Prod.fst he
   · simpa [e] using congrArg Prod.snd he
 
-private theorem localQuadratic_congr (P : Ideal O) [P.IsMaximal] (x y : O)
+theorem localQuadratic_congr (P : Ideal O) [P.IsMaximal] (x y : O)
     (h : Ideal.Quotient.mk P x = Ideal.Quotient.mk P y) :
     localQuadratic P x = localQuadratic P y := by
   simp only [localQuadratic, h]
@@ -191,7 +195,7 @@ theorem lambdaQuadratic_omega : localQuadratic lambdaIdeal omega = 1 := by
   apply Ideal.Quotient.eq.mpr
   exact Ideal.subset_span (by simp [lambda, omega])
 
-private theorem productQuadratic_detects_left
+theorem productQuadratic_detects_left
     (P Q : Ideal O) [P.IsMaximal] [Q.IsMaximal]
     (hcop : IsCoprime P Q) (hodd : ringChar (O ⧸ P) ≠ 2) :
     ∃ x : O,
@@ -267,23 +271,23 @@ theorem finiteQuadratic_detects_prime
   · simp_rw [hlocal]
     simp
 
-private def quadraticProduct
+def quadraticProduct
     {ι : Type*} [Fintype ι] (P : ι → Ideal O)
     [∀ i, (P i).IsMaximal] (x : O) : ℤ :=
   ∏ i : ι, localQuadratic (P i) x
 
-private theorem quadraticProduct_one
+theorem quadraticProduct_one
     {ι : Type*} [Fintype ι] (P : ι → Ideal O)
     [∀ i, (P i).IsMaximal] : quadraticProduct P 1 = 1 := by
   simp [quadraticProduct, localQuadratic_one]
 
-private theorem quadraticProduct_mul
+theorem quadraticProduct_mul
     {ι : Type*} [Fintype ι] (P : ι → Ideal O)
     [∀ i, (P i).IsMaximal] (x y : O) :
     quadraticProduct P (x * y) = quadraticProduct P x * quadraticProduct P y := by
   simp [quadraticProduct, localQuadratic_mul, Finset.prod_mul_distrib]
 
-private theorem quadraticProduct_neg_one_square
+theorem quadraticProduct_neg_one_square
     {ι : Type*} [Fintype ι] (P : ι → Ideal O)
     [∀ i, (P i).IsMaximal] : quadraticProduct P (-1) ^ 2 = 1 := by
   calc
@@ -343,7 +347,7 @@ theorem correctedQuadraticProduct_mul
       quadraticProduct_mul, localQuadratic_mul]
     ring
 
-private def correctedQuadraticHom
+def correctedQuadraticHom
     {ι : Type*} [Fintype ι] (P : ι → Ideal O)
     [∀ i, (P i).IsMaximal] : O →* ℤ where
   toFun := correctedQuadraticProduct P
@@ -444,22 +448,22 @@ noncomputable def correctedAssociatesHom
       correctedQuadraticProduct P a * correctedQuadraticProduct P b
     exact correctedQuadraticProduct_mul P a b
 
-private noncomputable def idealGeneratorClass (I : Ideal O) : Associates O :=
+noncomputable def idealGeneratorClass (I : Ideal O) : Associates O :=
   (Ideal.associatesMulEquivIsPrincipal O).symm
     ⟨I, IsPrincipalIdealRing.principal I⟩
 
-private theorem idealGeneratorClass_one : idealGeneratorClass (1 : Ideal O) = 1 := by
+theorem idealGeneratorClass_one : idealGeneratorClass (1 : Ideal O) = 1 := by
   apply (Ideal.associatesMulEquivIsPrincipal O).injective
   simp [idealGeneratorClass]
 
-private theorem idealGeneratorClass_mul (I J : Ideal O) :
+theorem idealGeneratorClass_mul (I J : Ideal O) :
     idealGeneratorClass (I * J) = idealGeneratorClass I * idealGeneratorClass J := by
   apply (Ideal.associatesMulEquivIsPrincipal O).injective
   simp [idealGeneratorClass]
   apply Subtype.ext
   rfl
 
-private theorem idealGeneratorClass_span (x : O) :
+theorem idealGeneratorClass_span (x : O) :
     idealGeneratorClass (Ideal.span {x}) = Associates.mk x := by
   apply (Ideal.associatesMulEquivIsPrincipal O).injective
   simp [idealGeneratorClass]
@@ -564,7 +568,7 @@ theorem finiteQuadratic_congr_mod_product
   apply Ideal.Quotient.eq.mpr
   exact (Ideal.prod_le_inf.trans (Finset.inf_le (Finset.mem_univ j))) hmem
 
-private def finiteQuadraticOnQuotient
+def finiteQuadraticOnQuotient
     {ι : Type*} [Fintype ι] (P : ι → Ideal O)
     [∀ i, (P i).IsMaximal]
     (z : O ⧸ Finset.univ.prod P) : ℤ :=
@@ -626,7 +630,7 @@ theorem finiteQuadratic_not_factor_subproduct
       _ = 1 := h1.symm
   norm_num at absurd
 
-private noncomputable def squarefreeCRT
+noncomputable def squarefreeCRT
     {ι : Type*} [Fintype ι] (P : ι → Ideal O)
     (hpair : Pairwise (Function.onFun IsCoprime P)) :
     (O ⧸ Finset.univ.prod P) ≃+* ((i : ι) → O ⧸ P i) := by
@@ -640,7 +644,7 @@ private noncomputable def squarefreeCRT
   exact (Ideal.quotEquivOfEq hprod).trans
     (Ideal.quotientInfRingEquivPiQuotient P hpair)
 
-private theorem squarefreeCRT_mk
+theorem squarefreeCRT_mk
     {ι : Type*} [Fintype ι] (P : ι → Ideal O)
     (hpair : Pairwise (Function.onFun IsCoprime P)) (x : O) :
     squarefreeCRT P hpair (Ideal.Quotient.mk (Finset.univ.prod P) x) =
@@ -652,14 +656,14 @@ private theorem squarefreeCRT_mk
     (Ideal.Quotient.mk (⨅ i, P i) x)) i = Ideal.Quotient.mk (P i) x
   rfl
 
-private noncomputable def localResidueChar (P : Ideal O) [P.IsMaximal] :
+noncomputable def localResidueChar (P : Ideal O) [P.IsMaximal] :
     MulChar (O ⧸ P) ℤ := by
   classical
   letI : Field (O ⧸ P) := Ideal.Quotient.field P
   letI : Fintype (O ⧸ P) := Fintype.ofFinite (O ⧸ P)
   exact quadraticChar (O ⧸ P)
 
-private theorem localResidueChar_zero_iff (P : Ideal O) [P.IsMaximal]
+theorem localResidueChar_zero_iff (P : Ideal O) [P.IsMaximal]
     (z : O ⧸ P) : localResidueChar P z = 0 ↔ z = 0 := by
   classical
   let : Field (O ⧸ P) := Ideal.Quotient.field P
@@ -667,7 +671,7 @@ private theorem localResidueChar_zero_iff (P : Ideal O) [P.IsMaximal]
   change quadraticChar (O ⧸ P) z = 0 ↔ z = 0
   exact quadraticChar_eq_zero_iff
 
-private noncomputable def squarefreePiChar
+noncomputable def squarefreePiChar
     {ι : Type*} [Fintype ι] (P : ι → Ideal O)
     [∀ i, (P i).IsMaximal] :
     MulChar ((i : ι) → O ⧸ P i) ℤ where

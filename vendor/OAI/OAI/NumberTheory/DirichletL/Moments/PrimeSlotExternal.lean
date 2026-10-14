@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.PrimeSlotShift
-import OAI.NumberTheory.DirichletL.Moments.PrimeSlotUniform
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PrimeSlotShift
+public import OAI.NumberTheory.DirichletL.Moments.PrimeSlotUniform
+
+@[expose] public section
 
 namespace OAI
 

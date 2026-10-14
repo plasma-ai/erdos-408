@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianCompletedSlots
-import OAI.NumberTheory.DirichletL.Detector.LowCompletion
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianCompletedSlots
+public import OAI.NumberTheory.DirichletL.Detector.LowCompletion
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.Phased.Rows
+module
+
+public import Erdos408.OneSided.Moment.Phased.Rows
 
 /-!
 # Ghost rows with prescribed births
@@ -20,6 +22,8 @@ coordinate costs one atom `|cre| ν v₀ ≤ c ν(p)`.
   row factor `exp(v₀ ∑_{hits} |cre| ν)`. A hitting particle is determined by its prime, so the
   required multiplicities live on the hitting particles.
 -/
+
+@[expose] public section
 
 noncomputable section
 

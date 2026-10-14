@@ -1,7 +1,11 @@
-import Erdos821.P3Edge.SmallFibres
-import Erdos821.P3Edge.PromoBound
-import Erdos821.P3Edge.LargeX
-import Erdos821.S2.MemoryIndices
+module
+
+public import Erdos821.P3Edge.SmallFibres
+public import Erdos821.P3Edge.PromoBound
+public import Erdos821.P3Edge.LargeX
+public import Erdos821.S2.MemoryIndices
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

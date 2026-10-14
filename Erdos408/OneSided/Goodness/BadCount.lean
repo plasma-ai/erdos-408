@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Goodness
-import Erdos408.OneSided.Goodness.RootBox
+module
+
+public import Erdos408.OneSided.Goodness
+public import Erdos408.OneSided.Goodness.RootBox
 
 /-!
 # Counting bad positions
@@ -17,6 +19,8 @@ counted positions have their ratio in any `[α, β] ⊆ [0, 1]` (`RootBox.lean`)
   `A e^{-L^{a₋}/4} + E N`, where `N = badIntervals` bounds the number of intervals. The main
   term repeats the bookkeeping of `eventually_volume_not_good`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

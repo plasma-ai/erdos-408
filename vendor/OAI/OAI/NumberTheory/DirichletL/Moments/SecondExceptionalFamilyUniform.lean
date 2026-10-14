@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalFamily
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceOriginalData
-import OAI.NumberTheory.DirichletL.Moments.SecondSectorColumns
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceOriginalData
+public import OAI.NumberTheory.DirichletL.Moments.SecondSectorColumns
+
+@[expose] public section
 
 namespace OAI
 

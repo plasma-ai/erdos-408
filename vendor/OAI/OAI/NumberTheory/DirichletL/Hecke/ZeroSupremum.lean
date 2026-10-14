@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.Euler
-import OAI.NumberTheory.DirichletL.Supremum
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Euler
+public import OAI.NumberTheory.DirichletL.Supremum
+
+@[expose] public section
 
 namespace OAI
 

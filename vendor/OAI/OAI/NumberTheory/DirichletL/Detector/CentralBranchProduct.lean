@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralExpansion
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralExpansion
+
+@[expose] public section
 
 namespace OAI
 

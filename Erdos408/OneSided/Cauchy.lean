@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Bands
-import Mathlib.Algebra.Order.Chebyshev
+module
+
+public import Erdos408.OneSided.Bands
+public import Mathlib.Algebra.Order.Chebyshev
 
 /-!
 # The Cauchy reduction
@@ -12,6 +14,8 @@ into label products `b₀`, one prime from each band. Replacing the damping by
 `Q_Y ≪ X Y L^{-D₁}` with `D₁ = 2D_* + 2` therefore bounds the sum by `X L^{-D_*}`, after
 summing the `O(L)` relevant dyads.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

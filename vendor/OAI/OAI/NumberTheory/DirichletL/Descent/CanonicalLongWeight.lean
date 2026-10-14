@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongNormalization
-import OAI.NumberTheory.DirichletL.Descent.TripleMass
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongNormalization
+public import OAI.NumberTheory.DirichletL.Descent.TripleMass
+
+@[expose] public section
 
 namespace OAI
 

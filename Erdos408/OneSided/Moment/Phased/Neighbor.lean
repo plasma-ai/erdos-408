@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Model
+module
+
+public import Erdos408.OneSided.Model
 
 /-!
 # Neighbors in the root box
@@ -14,6 +16,8 @@ PD `mem:neighbor` at a real root, for the crude edge bound (`exists_phasedEdge_n
   points `z` with `D ∣ e(z)` of `g(e(z)/D)`, for `g ≥ 0` supported in `[-M, M]`, is at most
   `16 ∑_{|t| ≤ M} g(t)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

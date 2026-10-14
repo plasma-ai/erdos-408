@@ -1,4 +1,10 @@
-import OAI.NumberTheory.PrimeGaps.ConductorBounds
+module
+
+public import OAI.NumberTheory.PrimeGaps.ConductorBounds
+public import Mathlib.NumberTheory.LSeries.Nonvanishing
+public import Mathlib.Tactic.NormNum.RealSqrt
+
+@[expose] public section
 
 namespace OAI
 

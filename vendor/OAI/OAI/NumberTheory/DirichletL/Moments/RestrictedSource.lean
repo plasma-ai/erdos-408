@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RestrictedDomain
-import OAI.NumberTheory.DirichletL.Moments.OriginalChildEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RestrictedDomain
+public import OAI.NumberTheory.DirichletL.Moments.OriginalChildEnergy
+
+@[expose] public section
 
 namespace OAI
 

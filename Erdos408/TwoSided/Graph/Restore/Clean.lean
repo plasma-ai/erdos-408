@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Graph.Restore.Mass
+module
+
+public import Erdos408.TwoSided.Graph.Restore.Mass
 
 /-!
 # The clean summands
@@ -17,6 +19,8 @@ labels avoid the shared labels and do not divide `w`), the two summands agree
   `∏ μ(s) · D_R · ∏ V^{-t}` (6.14);
 * `F(D_R w) = F(w)`, `G(D_R w') = G(w')` and `Ψ(n / (x D)) / n = D_R⁻¹ Ψ(w / (x D_C)) / w`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

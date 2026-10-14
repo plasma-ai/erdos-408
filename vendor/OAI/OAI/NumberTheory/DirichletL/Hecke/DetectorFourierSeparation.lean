@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorFourier
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorFourier
+
+@[expose] public section
 
 namespace OAI
 

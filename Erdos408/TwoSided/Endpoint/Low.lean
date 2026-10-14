@@ -1,5 +1,7 @@
-import Erdos408.TwoSided.Endpoint.DivisorModel
-import Erdos408.TwoSided.Endpoint.Low.Facts
+module
+
+public import Erdos408.TwoSided.Endpoint.DivisorModel
+public import Erdos408.TwoSided.Endpoint.Low.Facts
 
 /-!
 # Low frequencies
@@ -16,6 +18,8 @@ with an integral is needed. The pieces are in `Low/`.
 * `exists_integral_lowFrequency_le`: with `N ≥ A₀ + B' + 2`, the part of the mean square
   (6.24) over `|t| ≤ L^{B'}` is `O(L^{-A₀})`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationSourceError
-import OAI.NumberTheory.DirichletL.Moments.AmplificationErrorPool
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationSourceError
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationErrorPool
+
+@[expose] public section
 
 namespace OAI
 

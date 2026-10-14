@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainStateDictionary
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainCapacity
-import OAI.NumberTheory.DirichletL.Energy.Bands
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRawBranches
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainStateDictionary
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainCapacity
+public import OAI.NumberTheory.DirichletL.Energy.Bands
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRawBranches
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsTail
-import OAI.NumberTheory.DirichletL.Detector.HighRowsZero
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsTail
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsZero
+
+@[expose] public section
 
 namespace OAI
 

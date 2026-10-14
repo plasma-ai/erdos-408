@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.GammaZeroDetector
-import OAI.NumberTheory.DirichletL.Hecke.DetectorWitnessArithmetic
-import Mathlib.Analysis.MellinInversion
+module
+
+public import OAI.NumberTheory.DirichletL.GammaZeroDetector
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorWitnessArithmetic
+public import Mathlib.Analysis.MellinInversion
+
+@[expose] public section
 
 namespace OAI
 

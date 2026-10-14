@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsMultiplicative
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsMultiplicative
+
+@[expose] public section
 
 namespace OAI
 

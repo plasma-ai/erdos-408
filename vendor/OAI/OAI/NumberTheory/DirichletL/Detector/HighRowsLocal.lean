@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsExcluded
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsExcluded
+
+@[expose] public section
 
 namespace OAI
 

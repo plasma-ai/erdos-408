@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalInactiveEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalInactiveEnergy
+
+@[expose] public section
 
 namespace OAI
 

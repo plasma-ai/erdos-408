@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

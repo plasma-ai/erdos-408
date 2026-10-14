@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.DivisorSums
+module
+
+public import OAI.NumberTheory.PrimeGaps.DivisorSums
+
+@[expose] public section
 
 namespace OAI
 

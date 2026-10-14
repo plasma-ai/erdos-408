@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.InitialIntegral
-import OAI.NumberTheory.DirichletL.Detector.InitialScales
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.InitialIntegral
+public import OAI.NumberTheory.DirichletL.Detector.InitialScales
+
+@[expose] public section
 
 namespace OAI
 

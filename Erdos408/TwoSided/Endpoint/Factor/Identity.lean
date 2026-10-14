@@ -1,6 +1,8 @@
-import Erdos408.Extraction.Allocation.Groups
-import Erdos408.OneSided.Bands
-import Erdos408.TwoSided.Setup
+module
+
+public import Erdos408.Extraction.Allocation.Groups
+public import Erdos408.OneSided.Bands
+public import Erdos408.TwoSided.Setup
 
 /-!
 # Small-prime removal: the exact identities
@@ -16,6 +18,8 @@ Helpers for `Erdos408/TwoSided/Endpoint/Factor.lean`, E3 of
   `g_s`, then `W_S^b(w) = V_{g_s}⁻¹ ∑_{p_s ∈ P_{g_s}, p_s ∣ w} W_{S'}^b(w / p_s)`, with
   `S' g_s = ∅`, as long as no `p² ∣ w` with `p ∈ P_{g_s}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

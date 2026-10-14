@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstSecondInputGates
-import OAI.NumberTheory.DirichletL.Moments.FirstAnnularActiveInput
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstSecondInputGates
+public import OAI.NumberTheory.DirichletL.Moments.FirstAnnularActiveInput
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstFamily
-import OAI.NumberTheory.DirichletL.Moments.CanonicalFirst
-import OAI.NumberTheory.DirichletL.Moments.Primitive
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstFamily
+public import OAI.NumberTheory.DirichletL.Moments.CanonicalFirst
+public import OAI.NumberTheory.DirichletL.Moments.Primitive
+
+@[expose] public section
 
 namespace OAI
 

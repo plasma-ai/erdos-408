@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FixedRowMask
-import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FixedRowMask
+public import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
+
+@[expose] public section
 
 namespace OAI
 

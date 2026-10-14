@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.ExtractionBounds
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.ExtractionBounds
+
+@[expose] public section
 
 namespace OAI
 

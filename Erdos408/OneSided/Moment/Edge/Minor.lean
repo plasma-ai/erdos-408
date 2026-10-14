@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Moment.Edge.Gram
-import Erdos408.OneSided.Major.Mellin.Smooth
-import Mathlib.NumberTheory.DiophantineApproximation.Basic
-import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+module
+
+public import Erdos408.OneSided.Moment.Edge.Gram
+public import Erdos408.OneSided.Major.Mellin.Smooth
+public import Mathlib.NumberTheory.DiophantineApproximation.Basic
+public import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 
 /-!
 # Minor arcs
@@ -22,6 +24,8 @@ Write `P = L^{A₀}`, `δ = 2P/Y` and `Q₀ = ⌊P⌋`. The major arcs are `|θ 
   `|ψ̂(ξ)| ≤ C g(ξ)` and `|ψ̂(ξ)| ≤ (C/U) g(ξ)` for `|ξ| > U ≥ 1`, where
   `g(ξ) = (1 + (2πξ)²)⁻¹` has integral `1/2`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.BesselReflection
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.BesselReflection
+
+@[expose] public section
 
 namespace OAI
 

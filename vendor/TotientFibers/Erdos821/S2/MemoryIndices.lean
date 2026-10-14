@@ -1,6 +1,10 @@
-import Erdos821.S2.HistorySizes
+module
+
+public import Erdos821.S2.HistorySizes
 
 /-! Index multiplicities and zero counts used for local damping cancellation. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

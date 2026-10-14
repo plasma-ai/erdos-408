@@ -1,5 +1,7 @@
-import Erdos408.Extraction.TypeII.Euler
-import Mathlib.Data.Fin.Tuple.Finset
+module
+
+public import Erdos408.Extraction.TypeII.Euler
+public import Mathlib.Data.Fin.Tuple.Finset
 
 /-!
 # Sums over tuples
@@ -13,6 +15,8 @@ Sums over `r`-tuples `m ∈ S^r` of positive integers weighted by `∏ v_k(m_k)`
   `≤ c X ∏_{k ≥ 1} ∑ v_k(a)/a` if `∑_{a ≤ w} v_0(a) ≤ c w`.
 * The number of ordered factorizations `n = m_1 ⋯ m_r` is at most `r^{Ω(n)}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

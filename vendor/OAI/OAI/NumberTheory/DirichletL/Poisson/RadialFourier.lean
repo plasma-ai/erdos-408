@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.GaussSum.SexticRadialPoisson
-import OAI.NumberTheory.DirichletL.Fourier.PositiveLogProfiles
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.SexticRadialPoisson
+public import OAI.NumberTheory.DirichletL.Fourier.PositiveLogProfiles
+
+@[expose] public section
 
 namespace OAI
 

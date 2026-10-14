@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.FundamentalDomain
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.FundamentalDomain
+
+@[expose] public section
 
 namespace OAI
 

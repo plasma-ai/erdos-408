@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.IdealMangoldt
+module
+
+public import OAI.NumberTheory.DirichletL.IdealMangoldt
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.SupportNorms
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.SupportNorms
+
+@[expose] public section
 
 namespace OAI
 

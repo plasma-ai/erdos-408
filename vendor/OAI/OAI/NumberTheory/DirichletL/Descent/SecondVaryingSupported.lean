@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondVaryingLists
-import OAI.NumberTheory.DirichletL.Descent.SecondPuncture
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondVaryingLists
+public import OAI.NumberTheory.DirichletL.Descent.SecondPuncture
+
+@[expose] public section
 
 namespace OAI
 

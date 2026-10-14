@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.ConditionedKernel
+module
+
+public import Erdos821.P3Clean.ConditionedKernel
 
 /-! Separate the two small and two big endpoint permutation averages. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

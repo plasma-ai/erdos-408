@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.PriorityMovingRadius
-import OAI.NumberTheory.DirichletL.Descent.PrioritySourceBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.PriorityMovingRadius
+public import OAI.NumberTheory.DirichletL.Descent.PrioritySourceBudget
+
+@[expose] public section
 
 namespace OAI
 

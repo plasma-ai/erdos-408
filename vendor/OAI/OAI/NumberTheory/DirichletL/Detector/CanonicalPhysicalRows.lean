@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.CanonicalSlots
-import OAI.NumberTheory.DirichletL.PrimeRows.PhysicalDyad
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CanonicalSlots
+public import OAI.NumberTheory.DirichletL.PrimeRows.PhysicalDyad
+
+@[expose] public section
 
 namespace OAI
 

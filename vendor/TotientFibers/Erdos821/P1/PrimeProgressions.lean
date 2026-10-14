@@ -1,5 +1,9 @@
-import Erdos821.Blueprint.Classical
-import OAI.NumberTheory.PrimeGaps.Main
+module
+
+public import Erdos821.Blueprint.Classical
+public import OAI.NumberTheory.PrimeGaps.Main
+
+@[expose] public section
 
 open scoped BigOperators
 open Filter MeasureTheory

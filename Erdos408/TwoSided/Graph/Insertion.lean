@@ -1,7 +1,9 @@
-import Erdos408.TwoSided.Endpoint.Tuple.Exceptional
-import Erdos408.TwoSided.Graph.Absolute
-import Erdos408.TwoSided.Graph.Insertion.Identity
-import Erdos408.TwoSided.Graph.Insertion.MellinAdapter
+module
+
+public import Erdos408.TwoSided.Endpoint.Tuple.Exceptional
+public import Erdos408.TwoSided.Graph.Absolute
+public import Erdos408.TwoSided.Graph.Insertion.Identity
+public import Erdos408.TwoSided.Graph.Insertion.MellinAdapter
 
 /-!
 # Mellin insertion, dyads and transference
@@ -19,6 +21,8 @@ S2 of `blueprint/two_sided_correlation.md` §4.2 (PD §6.2, (6.13); WD §5.2; X6
 * Lemma G3 (`eventually_norm_cutoffPairing_family_le`): split each `ξ`-integral at
   `|ξ| = L^{C_f}`. Inside, `GraphTransference` applies by G1; the tail is bounded by G2a.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

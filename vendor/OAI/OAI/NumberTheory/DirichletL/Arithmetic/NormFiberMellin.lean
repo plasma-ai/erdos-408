@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Mellin.LocalNonvanishing
+module
+
+public import OAI.NumberTheory.DirichletL.Mellin.LocalNonvanishing
+
+@[expose] public section
 
 namespace OAI
 

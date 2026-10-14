@@ -1,7 +1,11 @@
-import Mathlib
+module
+
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
 
 /-! Scalar asymptotic absorption for the restored memory norm: the low-rank margin,
 the high-rank geometric tail, the rank cutoff `r0`, and eventual facts in `L x`. -/
+
+@[expose] public section
 
 noncomputable section
 

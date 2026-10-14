@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondActualWidth
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondActualWidth
+
+@[expose] public section
 
 namespace OAI
 

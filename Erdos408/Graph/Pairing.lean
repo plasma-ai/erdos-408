@@ -1,5 +1,9 @@
-import Erdos408.Graph.Pattern
-import Erdos821.Blueprint.Transference
+module
+
+public import Erdos408.Graph.Pattern
+public import Erdos821.Blueprint.Transference
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Algebra.Order.Star.Int
 
 /-!
 # Upstream's pairing for endpoints of the position alone
@@ -16,6 +20,8 @@ function on `S ⊆ [X, 2X)` (`extend`), `t = S' × (all labels)` (`targets`) and
 * and upstream's norms are the physical norms (`normOn_extend`,
   `normOn_targets`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.Graph
 

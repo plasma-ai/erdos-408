@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorProfilesBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorProfilesBounds
+
+@[expose] public section
 
 namespace OAI
 

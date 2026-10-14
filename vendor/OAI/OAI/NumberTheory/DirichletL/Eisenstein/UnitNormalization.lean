@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.FredholmAlternative
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.FredholmAlternative
+
+@[expose] public section
 
 namespace OAI
 

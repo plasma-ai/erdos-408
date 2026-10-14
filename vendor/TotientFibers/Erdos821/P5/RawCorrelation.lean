@@ -1,4 +1,8 @@
-import Erdos821.P5.FullResidualStripping
+module
+
+public import Erdos821.P5.FullResidualStripping
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

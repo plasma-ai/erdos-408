@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.ParametersDetectorScales
+module
+
+public import OAI.NumberTheory.DirichletL.ParametersDetectorScales
+
+@[expose] public section
 
 namespace OAI
 

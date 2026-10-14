@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.WholePair
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.WholePair
+
+@[expose] public section
 
 namespace OAI
 

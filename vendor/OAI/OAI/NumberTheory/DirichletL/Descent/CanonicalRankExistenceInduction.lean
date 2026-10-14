@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalRankExistenceSuccessor
-import OAI.NumberTheory.DirichletL.Descent.CanonicalRankDepthParameters
-import OAI.NumberTheory.DirichletL.Descent.CanonicalEnergyExistenceData
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalRankExistenceSuccessor
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalRankDepthParameters
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalEnergyExistenceData
+
+@[expose] public section
 
 namespace OAI
 

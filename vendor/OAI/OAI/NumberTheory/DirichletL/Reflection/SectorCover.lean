@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.SectorData
-import OAI.NumberTheory.DirichletL.Reflection.SectorAggregation
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.SectorData
+public import OAI.NumberTheory.DirichletL.Reflection.SectorAggregation
+
+@[expose] public section
 
 namespace OAI
 

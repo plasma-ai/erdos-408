@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.FixedRayFibers
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.FixedRayFibers
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.InactiveAggregation
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.InactiveAggregation
+
+@[expose] public section
 
 namespace OAI
 

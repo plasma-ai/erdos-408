@@ -1,4 +1,7 @@
-import Erdos408.TwoSided.Endpoint.Tuple.Split
+module
+
+public import Erdos408.TwoSided.Endpoint.Tuple.Split
+public import Mathlib.Analysis.Real.Pi.Bounds
 
 /-!
 # The tuple part at high times, for a general coefficient
@@ -17,6 +20,8 @@ spare primes `p_l ∈ (A, B]`, `x^ε ≤ A`, `B ≤ x^{1-ε}`, and any coefficie
 
 The assembly `exists_integral_tupleSum_high_le` is in `Tuple/General.lean`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.TupleHigh
 

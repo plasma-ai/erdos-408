@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorHighCount
-import OAI.NumberTheory.DirichletL.Hecke.DetectorBatchCount
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCountEndpoint
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorHighCount
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorBatchCount
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCountEndpoint
+
+@[expose] public section
 
 namespace OAI
 

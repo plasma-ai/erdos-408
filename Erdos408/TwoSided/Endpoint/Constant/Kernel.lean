@@ -1,4 +1,6 @@
-import Erdos408.Analytic.IntegerKernel
+module
+
+public import Erdos408.Analytic.IntegerKernel
 
 /-!
 # The model progression bound
@@ -11,6 +13,8 @@ Write the sum as `∑_d A_d d^{it} ∑_{v ≡ β d⁻¹} v^{it}` over `v ∈ (lo
 `IntegerKernel.norm_sum_filter_modEq_le` at the scale `H = R/d ≥ x^{0.99} e^{-2L^{0.47}}`,
 which has no upper scale bound.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.ConstHigh
 

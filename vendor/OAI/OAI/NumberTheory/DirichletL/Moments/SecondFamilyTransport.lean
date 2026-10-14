@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
-import OAI.NumberTheory.DirichletL.Moments.RestrictedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
+public import OAI.NumberTheory.DirichletL.Moments.RestrictedEnergy
+
+@[expose] public section
 
 namespace OAI
 

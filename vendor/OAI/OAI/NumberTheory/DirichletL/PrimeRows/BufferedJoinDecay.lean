@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.BufferedHeightGrowth
-import OAI.NumberTheory.DirichletL.PrimeRows.BufferedSlices
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.BufferedHeightGrowth
+public import OAI.NumberTheory.DirichletL.PrimeRows.BufferedSlices
+
+@[expose] public section
 
 namespace OAI
 

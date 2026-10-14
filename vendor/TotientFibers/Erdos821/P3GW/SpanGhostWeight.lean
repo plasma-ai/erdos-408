@@ -1,6 +1,10 @@
-import Erdos821.S2.SpanGhostWeightTask
+module
+
+public import Erdos821.S2.SpanGhostWeightTask
 
 /-! The factorial-normalized local ghost coefficient, factored by prime spans. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

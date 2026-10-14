@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.Static
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Static
+
+@[expose] public section
 
 namespace OAI
 

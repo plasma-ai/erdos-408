@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Cusp.WeylRepresentatives
+module
+
+public import OAI.NumberTheory.DirichletL.Cusp.WeylRepresentatives
+
+@[expose] public section
 
 namespace OAI
 

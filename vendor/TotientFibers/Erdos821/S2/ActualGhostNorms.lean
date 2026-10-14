@@ -1,9 +1,13 @@
-import Erdos821.S2.MemoryMassBounds
-import Erdos821.S2.NormProjection
-import Erdos821.P3Adj.Adjoint
-import Erdos821.P3Rows.GhostRows
+module
+
+public import Erdos821.S2.MemoryMassBounds
+public import Erdos821.S2.NormProjection
+public import Erdos821.P3Adj.Adjoint
+public import Erdos821.P3Rows.GhostRows
 
 /-! Concrete absolute ghost norm bounds, including local birth phases and cutoffs. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

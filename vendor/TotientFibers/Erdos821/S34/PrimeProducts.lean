@@ -1,4 +1,10 @@
-import Erdos821.S34.Probability
+module
+
+public import Erdos821.S34.Probability
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Data.Nat.Factorization.Defs
+
+@[expose] public section
 
 set_option autoImplicit false
 

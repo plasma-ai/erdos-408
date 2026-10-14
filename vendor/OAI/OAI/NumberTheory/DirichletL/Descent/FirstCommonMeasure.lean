@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstPhysicalCommon
-import OAI.NumberTheory.DirichletL.Descent.FirstFreshMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstPhysicalCommon
+public import OAI.NumberTheory.DirichletL.Descent.FirstFreshMeasure
+
+@[expose] public section
 
 namespace OAI
 

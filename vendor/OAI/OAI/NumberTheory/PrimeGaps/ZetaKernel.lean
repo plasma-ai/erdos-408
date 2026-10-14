@@ -1,4 +1,11 @@
-import OAI.NumberTheory.PrimeGaps.BoxMeans
+module
+
+public import OAI.NumberTheory.PrimeGaps.BoxMeans
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.NumberTheory.EulerProduct.DirichletLSeries
+public import Mathlib.NumberTheory.Harmonic.ZetaAsymp
+
+@[expose] public section
 
 namespace OAI
 

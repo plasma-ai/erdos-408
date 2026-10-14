@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ReflectedUniformPair
-import OAI.NumberTheory.DirichletL.Moments.TwistedReflection
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedUniformPair
+public import OAI.NumberTheory.DirichletL.Moments.TwistedReflection
+
+@[expose] public section
 
 namespace OAI
 

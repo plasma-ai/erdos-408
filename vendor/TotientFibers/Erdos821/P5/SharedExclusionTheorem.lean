@@ -1,6 +1,10 @@
-import Erdos821.P5.SharedProbability
-import Erdos821.P5.PrimeFactorCount
-import Erdos821.P5.ListScales
+module
+
+public import Erdos821.P5.SharedProbability
+public import Erdos821.P5.PrimeFactorCount
+public import Erdos821.P5.ListScales
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

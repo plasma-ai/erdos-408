@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.DyadSelection
-import OAI.NumberTheory.DirichletL.Reflection.InactiveRows
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.DyadSelection
+public import OAI.NumberTheory.DirichletL.Reflection.InactiveRows
+
+@[expose] public section
 
 namespace OAI
 

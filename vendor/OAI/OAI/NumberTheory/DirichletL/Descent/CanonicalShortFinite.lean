@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.CanonicalShortAttachment
-import OAI.NumberTheory.DirichletL.Inversion.ReflectedShortNormalizedUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.CanonicalShortAttachment
+public import OAI.NumberTheory.DirichletL.Inversion.ReflectedShortNormalizedUniformDegree
+
+@[expose] public section
 
 namespace OAI
 

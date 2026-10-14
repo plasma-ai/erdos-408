@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.PrimePowerGaussSums
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.PrimePowerGaussSums
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstCutoffScale
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstCutoffScale
+
+@[expose] public section
 
 namespace OAI
 

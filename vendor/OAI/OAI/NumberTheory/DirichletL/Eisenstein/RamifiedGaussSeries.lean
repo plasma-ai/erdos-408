@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.GaussFactorization
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.GaussFactorization
+
+@[expose] public section
 
 namespace OAI
 

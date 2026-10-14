@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Graph.Restore.Strip
+module
+
+public import Erdos408.TwoSided.Graph.Restore.Strip
 
 /-!
 # Label masses
@@ -12,6 +14,8 @@ two-slot marginals bound the suppressed restrictions of S4 (blueprint §4.4):
   (`sum_labelMass_mul_ite`);
 * two given slots of a group coincide with mass `∑_p μ_g(p)²` (`sum_labelMass_mul_ite_eq`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

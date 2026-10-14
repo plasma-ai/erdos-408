@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.NormFiberExtraction
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.NormFiberExtraction
+
+@[expose] public section
 
 namespace OAI
 

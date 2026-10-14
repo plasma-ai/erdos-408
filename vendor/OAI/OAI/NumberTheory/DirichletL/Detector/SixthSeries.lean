@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.SixthArray
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SixthArray
+
+@[expose] public section
 
 namespace OAI
 

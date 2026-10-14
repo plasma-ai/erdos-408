@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.GaussSum.SquarePhaseFactorization
-import OAI.NumberTheory.DirichletL.GaussSum.MixedConversion
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.SquarePhaseFactorization
+public import OAI.NumberTheory.DirichletL.GaussSum.MixedConversion
+
+@[expose] public section
 
 namespace OAI
 
@@ -314,7 +318,7 @@ private theorem prod_subtype_erase {ι M : Type*} [DecidableEq ι] [CommMonoid M
   · intro a ha
     rfl
 
-private theorem restricted_prime_coprime {ι : Type*} (p : ι → O)
+theorem restricted_prime_coprime {ι : Type*} (p : ι → O)
     (hcop : Pairwise (Function.onFun IsCoprime (fun i => Ideal.span {p i})))
     (A : Finset ι) :
     Pairwise (Function.onFun IsCoprime (fun i : A => Ideal.span {p i.val})) := by

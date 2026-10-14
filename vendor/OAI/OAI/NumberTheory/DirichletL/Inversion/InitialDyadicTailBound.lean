@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicTailGates
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicTailGates
+
+@[expose] public section
 
 namespace OAI
 

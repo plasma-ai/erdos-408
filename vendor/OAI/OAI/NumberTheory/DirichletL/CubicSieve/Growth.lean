@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.ExtractionOptimization
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.ExtractionOptimization
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.Chain
+module
+
+public import Erdos408.OneSided.Moment.Chain
 
 /-!
 # Changing the memory cap
@@ -20,6 +22,8 @@ histories of the cap-`B'` chain that leave the memories of size at most `B`.
 * `lt_of_not_staysBelow`: such a history from an empty memory has `B < K N + ∑_j |batch_j|`,
   since an edge stores at most `K` particles and a ghost adds its batch.
 -/
+
+@[expose] public section
 
 noncomputable section
 

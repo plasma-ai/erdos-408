@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.BufferedIntegral
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstTransport
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.BufferedIntegral
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstTransport
+
+@[expose] public section
 
 namespace OAI
 

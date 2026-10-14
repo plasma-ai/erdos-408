@@ -1,6 +1,8 @@
-import Erdos408.Extraction.Allocation.CoreMoment
-import Erdos408.Extraction.Allocation.Expansion
-import Erdos408.Extraction.Allocation.Failure.Main
+module
+
+public import Erdos408.Extraction.Allocation.CoreMoment
+public import Erdos408.Extraction.Allocation.Expansion
+public import Erdos408.Extraction.Allocation.Failure.Main
 
 /-!
 # The analytic inputs of E6 and E8
@@ -26,6 +28,8 @@ core `G_j(w + 1)` on `w ≤ κ x`, uniformly in `2 ≤ j ≤ J_c`.
   core has mean square at most `x L^{15}`; see
   `Erdos408.Extraction.Allocation.CoreMoment`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

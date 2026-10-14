@@ -1,7 +1,9 @@
-import Erdos408.Extraction.Unsmooth
-import Erdos408.OneSided.Bands
-import Erdos408.OneSided.Analysis.Divisor
-import Erdos408.TwoSided.Setup
+module
+
+public import Erdos408.Extraction.Unsmooth
+public import Erdos408.OneSided.Bands
+public import Erdos408.OneSided.Analysis.Divisor
+public import Erdos408.TwoSided.Setup
 
 /-!
 # Pointwise bounds for the constant part
@@ -12,6 +14,8 @@ there.
 * U6: `|C_B / V| ≤ (2L)^{d+1}/v₋ ≤ L^{d+3}`.
 * The primes of a divisor model exceed `k ≤ L^{C_m}`, so its support is coprime to `k`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.ConstHigh
 

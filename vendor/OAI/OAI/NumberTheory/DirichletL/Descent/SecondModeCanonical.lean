@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondSectorAssembly
-import OAI.NumberTheory.DirichletL.Descent.SecondInheritedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondSectorAssembly
+public import OAI.NumberTheory.DirichletL.Descent.SecondInheritedEnergy
+
+@[expose] public section
 
 namespace OAI
 

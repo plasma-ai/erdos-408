@@ -1,13 +1,17 @@
-import Erdos821.S2.FullNormTask
-import Erdos821.P3Restore.Restoration
-import Erdos821.P3Edge.Proof
-import Erdos821.P3Clean.Proof
-import Erdos821.P3LowRank.LowRank
-import Erdos821.S2Contr.Contraction
-import Erdos821.S2Gpar.GhostAnalyticParameters
-import Erdos821.S2Tail.TailAbsorption
+module
+
+public import Erdos821.S2.FullNormTask
+public import Erdos821.P3Restore.Restoration
+public import Erdos821.P3Edge.Proof
+public import Erdos821.P3Clean.Proof
+public import Erdos821.P3LowRank.LowRank
+public import Erdos821.S2Contr.Contraction
+public import Erdos821.S2Gpar.GhostAnalyticParameters
+public import Erdos821.S2Tail.TailAbsorption
 
 /-! Use all completed memory norm leaves while retaining the remaining proof inputs. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

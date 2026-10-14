@@ -1,4 +1,8 @@
-import Erdos821.P5.MomentNumerics
+module
+
+public import Erdos821.P5.MomentNumerics
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

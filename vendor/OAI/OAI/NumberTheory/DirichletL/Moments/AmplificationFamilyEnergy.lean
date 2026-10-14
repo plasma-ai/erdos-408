@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationFamily
-import OAI.NumberTheory.DirichletL.Moments.SourceSmoothedAllocation
-import OAI.NumberTheory.DirichletL.Moments.GaussNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationFamily
+public import OAI.NumberTheory.DirichletL.Moments.SourceSmoothedAllocation
+public import OAI.NumberTheory.DirichletL.Moments.GaussNormalization
+
+@[expose] public section
 
 namespace OAI
 

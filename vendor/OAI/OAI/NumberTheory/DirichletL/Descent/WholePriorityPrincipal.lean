@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondVariablePrincipal
-import OAI.NumberTheory.DirichletL.Descent.FirstWholeCubePriority
-import OAI.NumberTheory.DirichletL.Descent.FirstWholeMarkedColumns
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondVariablePrincipal
+public import OAI.NumberTheory.DirichletL.Descent.FirstWholeCubePriority
+public import OAI.NumberTheory.DirichletL.Descent.FirstWholeMarkedColumns
+
+@[expose] public section
 
 namespace OAI
 

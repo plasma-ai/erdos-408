@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.PeriodicRows
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.PeriodicRows
+
+@[expose] public section
 
 namespace OAI
 

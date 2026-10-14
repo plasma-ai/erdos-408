@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Analysis.Divisor
-import Erdos408.TwoSided.Setup
+module
+
+public import Erdos408.OneSided.Analysis.Divisor
+public import Erdos408.TwoSided.Setup
 
 /-!
 # The sparse Gram bound
@@ -13,6 +15,8 @@ by `IntegerKernelBound` at `k = 1`, `a = 0`, `H = lo = R`, `hi = 2R` they are at
 `|κ'| R (2 |j - j'|⁻¹ + exp(-L^{0.95}))`. The row sums are at most `9 (1 + |κ'|) R L / 2`, and
 `∑ |c_u|² ≤ 2 R L^{2C_U}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.TupleHigh
 

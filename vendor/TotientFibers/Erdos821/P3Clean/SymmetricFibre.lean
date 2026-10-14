@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.TiltedIdealKernel
-import Erdos821.P3Clean.BigAverage
+module
+
+public import Erdos821.P3Clean.TiltedIdealKernel
+public import Erdos821.P3Clean.BigAverage
 
 /-! Big endpoint averaging commutes with the finite cyclic Fourier reduction. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

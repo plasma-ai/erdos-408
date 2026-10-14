@@ -1,8 +1,12 @@
-import Erdos821.S2.ScalarAssembly
-import Erdos821.S2.ActualStructures
-import Erdos821.S2.HistoryDamping
+module
+
+public import Erdos821.S2.ScalarAssembly
+public import Erdos821.S2.ActualStructures
+public import Erdos821.S2.HistoryDamping
 
 /-! Exact complex history coefficients retain every signed factor and phase. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

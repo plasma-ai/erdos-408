@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighLFactorization
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighLFactorization
+
+@[expose] public section
 
 namespace OAI
 

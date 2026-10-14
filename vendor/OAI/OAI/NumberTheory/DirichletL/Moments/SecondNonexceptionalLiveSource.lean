@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalCost
-import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalAggregate
-import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalCost
+public import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalAggregate
+public import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
+
+@[expose] public section
 
 namespace OAI
 

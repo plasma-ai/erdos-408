@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Cauchy
-import Erdos408.OneSided.Decomposition.Count
+module
+
+public import Erdos408.OneSided.Cauchy
+public import Erdos408.OneSided.Decomposition.Count
 
 /-!
 # The two squares at fixed label products
@@ -13,6 +15,8 @@ For `a, b ∈ (Y, 4Y)`, `|E(a, b)| ≤ L^{4C} (∑_{h ≤ 4X/Y} τ(1 + ah) τ(1 
 `4 L^{3A₀}/Y` of the arcs and vanishes unless `|bmn - ars| < 5Y` (PD Lemma 1.2 and
 `mem:unshared-collisions`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

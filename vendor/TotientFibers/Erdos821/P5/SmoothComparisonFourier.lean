@@ -1,5 +1,9 @@
-import Erdos821.P5.IntegerComparisonSupport
-import Erdos821.P5.ComparisonFourierMultiplier
+module
+
+public import Erdos821.P5.IntegerComparisonSupport
+public import Erdos821.P5.ComparisonFourierMultiplier
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

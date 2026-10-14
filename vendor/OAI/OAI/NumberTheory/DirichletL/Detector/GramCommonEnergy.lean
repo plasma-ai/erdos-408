@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramEnergyNonzero
-import OAI.NumberTheory.DirichletL.Detector.GramWindowGcd
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramEnergyNonzero
+public import OAI.NumberTheory.DirichletL.Detector.GramWindowGcd
+
+@[expose] public section
 
 namespace OAI
 

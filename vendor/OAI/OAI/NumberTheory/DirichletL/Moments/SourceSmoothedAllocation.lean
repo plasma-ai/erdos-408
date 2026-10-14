@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceAllocationEnergy
-import OAI.NumberTheory.DirichletL.Moments.SmoothedWindowEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceAllocationEnergy
+public import OAI.NumberTheory.DirichletL.Moments.SmoothedWindowEnergy
+
+@[expose] public section
 
 namespace OAI
 

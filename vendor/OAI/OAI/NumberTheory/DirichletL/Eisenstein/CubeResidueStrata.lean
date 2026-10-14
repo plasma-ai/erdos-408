@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reciprocity.PrimaryCongruences
+module
+
+public import OAI.NumberTheory.DirichletL.Reciprocity.PrimaryCongruences
+
+@[expose] public section
 
 namespace OAI
 

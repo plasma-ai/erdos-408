@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralCancellation
-import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedUnramified
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralCancellation
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedUnramified
+
+@[expose] public section
 
 namespace OAI
 

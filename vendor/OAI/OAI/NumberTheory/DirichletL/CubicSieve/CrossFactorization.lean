@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Mellin.UniformKernelBounds
-import OAI.NumberTheory.DirichletL.QuadraticSieve.FiniteOperator
+module
+
+public import OAI.NumberTheory.DirichletL.Mellin.UniformKernelBounds
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.FiniteOperator
+
+@[expose] public section
 
 namespace OAI
 

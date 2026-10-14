@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialRayAttachment
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialRayAttachment
+
+@[expose] public section
 
 namespace OAI
 

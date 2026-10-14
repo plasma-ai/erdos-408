@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainExceptional
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainExceptional
+
+@[expose] public section
 
 namespace OAI
 

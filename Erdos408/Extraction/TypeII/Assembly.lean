@@ -1,4 +1,6 @@
-import Erdos408.Extraction.TypeII.Main
+module
+
+public import Erdos408.Extraction.TypeII.Main
 
 /-!
 # Assembly of E4–E5
@@ -6,6 +8,8 @@ import Erdos408.Extraction.TypeII.Main
 The counting input of E5 at one scale, and the bound `|Comp_j - Prox_j| ≤ C (x/L) L^{-1/20}`
 from the facts that hold at every large `x`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

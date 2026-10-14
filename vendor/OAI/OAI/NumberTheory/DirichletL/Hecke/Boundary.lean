@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.IdealEuler
-import Mathlib.RingTheory.UniqueFactorizationDomain.Multiplicative
+module
+
+public import OAI.NumberTheory.DirichletL.IdealEuler
+public import Mathlib.RingTheory.UniqueFactorizationDomain.Multiplicative
+
+@[expose] public section
 
 namespace OAI
 

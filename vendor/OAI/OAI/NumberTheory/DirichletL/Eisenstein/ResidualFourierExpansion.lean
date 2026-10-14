@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.ScatteringResidues
-import OAI.NumberTheory.DirichletL.Eisenstein.OppositeCusp
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.ScatteringResidues
+public import OAI.NumberTheory.DirichletL.Eisenstein.OppositeCusp
+
+@[expose] public section
 
 namespace OAI
 

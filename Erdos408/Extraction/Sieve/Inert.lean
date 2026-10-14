@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Sieve.Basic
-import Erdos408.Extraction.Sieve.Model
+module
+
+public import Erdos408.Extraction.Sieve.Basic
+public import Erdos408.Extraction.Sieve.Model
 
 /-!
 # The clustered inert polynomial
@@ -15,6 +17,8 @@ Facts about `P = ∏_{c < K} (1 - ∏_i (1 - c_w w_{c,i}))` at the damping
   is the number of bands per cluster: within a cluster the band weights are
   independent in the model, each with mean at least `e⁻¹`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

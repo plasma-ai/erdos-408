@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.ResidualFourierBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.ResidualFourierBounds
+
+@[expose] public section
 
 namespace OAI
 

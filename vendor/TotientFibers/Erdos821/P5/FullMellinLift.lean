@@ -1,4 +1,8 @@
-import Erdos821.P5.MellinPairingIntegral
+module
+
+public import Erdos821.P5.MellinPairingIntegral
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

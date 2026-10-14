@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowGaussEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowGaussEnergy
+
+@[expose] public section
 
 namespace OAI
 

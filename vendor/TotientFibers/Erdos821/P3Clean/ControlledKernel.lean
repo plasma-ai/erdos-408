@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.ActionLifting
+module
+
+public import Erdos821.P3Clean.ActionLifting
 
 /-! Kernel formulation of the finite weighted action norm bridge. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

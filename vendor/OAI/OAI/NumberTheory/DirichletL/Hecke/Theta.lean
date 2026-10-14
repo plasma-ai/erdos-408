@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.EisensteinTheta
-import Mathlib.Analysis.SpecialFunctions.Gamma.Beta
-import Mathlib.NumberTheory.LSeries.MellinEqDirichlet
+module
+
+public import OAI.NumberTheory.DirichletL.EisensteinTheta
+public import Mathlib.Analysis.SpecialFunctions.Gamma.Beta
+public import Mathlib.NumberTheory.LSeries.MellinEqDirichlet
+
+@[expose] public section
 
 namespace OAI
 

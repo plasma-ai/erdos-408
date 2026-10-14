@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedExceptionalCap
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedCommonRadius
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedNormalizationActual
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedExceptionalCap
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedCommonRadius
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedNormalizationActual
+
+@[expose] public section
 
 namespace OAI
 

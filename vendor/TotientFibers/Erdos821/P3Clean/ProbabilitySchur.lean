@@ -1,6 +1,10 @@
-import Erdos821.S2.CountableSchur
+module
+
+public import Erdos821.S2.CountableSchur
 
 /-! Schur control by a finite mixture of reversible probability transition laws. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

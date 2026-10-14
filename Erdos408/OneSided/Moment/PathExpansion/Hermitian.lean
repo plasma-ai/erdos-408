@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Model
+module
+
+public import Erdos408.OneSided.Model
 
 /-!
 # The edge operator is Hermitian
@@ -10,6 +12,8 @@ of the bands), negates `t`, swaps the last-slot products, and conjugates the arc
 The symmetrization and the good-state projection are real and symmetric, so `𝒜` is Hermitian.
 The damping factors out of the row operation at both ends (`rowOp_eq_damp`).
 -/
+
+@[expose] public section
 
 noncomputable section
 

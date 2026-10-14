@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.Primitive
-import OAI.NumberTheory.DirichletL.Hecke.Strip
-import OAI.NumberTheory.DirichletL.Hecke.ReciprocalBound
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Primitive
+public import OAI.NumberTheory.DirichletL.Hecke.Strip
+public import OAI.NumberTheory.DirichletL.Hecke.ReciprocalBound
+
+@[expose] public section
 
 namespace OAI
 

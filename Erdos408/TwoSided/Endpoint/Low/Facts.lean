@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Endpoint.Low.Model
+module
+
+public import Erdos408.TwoSided.Endpoint.Low.Model
 
 /-!
 # Inputs to the low-frequency bound
@@ -14,6 +16,8 @@ The remaining pieces of Lemma E2 (`blueprint/two_sided_correlation.md` §6.2).
 * The growth facts of O2: `3L^{0.47} ≤ (c/2) L/T²⁰`, `K L^C e^{2L^{0.47}} ≤ exp((c/2) L/T²⁰)`
   and `L ≤ x^{1 - c/T²⁰}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.LowFreq
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedHolomorphic
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstContinuation
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedHolomorphic
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstContinuation
+
+@[expose] public section
 
 namespace OAI
 

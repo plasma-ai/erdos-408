@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.ReopenedPhysicalSplit
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ReopenedPhysicalSplit
+
+@[expose] public section
 
 namespace OAI
 

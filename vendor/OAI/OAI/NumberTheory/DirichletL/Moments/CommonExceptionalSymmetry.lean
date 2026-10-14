@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalSource
+
+@[expose] public section
 
 namespace OAI
 

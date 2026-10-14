@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Lift
+module
+
+public import Erdos408.OneSided.Lift
 
 /-!
 # Position models
@@ -25,6 +27,8 @@ moment at a base position are defined once, for every model. Two instances matte
 The good-state tests are invariant under adding an integer to the ratio, so models are
 compared with ratios modulo `ℤ`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

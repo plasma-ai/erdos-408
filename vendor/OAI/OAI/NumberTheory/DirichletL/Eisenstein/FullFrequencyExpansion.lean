@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.SourceCuspKernels
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.SourceCuspKernels
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.CubeLabels
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.CubeLabels
+
+@[expose] public section
 
 namespace OAI
 

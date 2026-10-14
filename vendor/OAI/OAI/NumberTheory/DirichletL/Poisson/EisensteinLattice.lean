@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.SecondPoissonScale
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.SecondPoissonScale
+
+@[expose] public section
 
 namespace OAI
 

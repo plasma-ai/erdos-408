@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.TupleDyads
-import OAI.NumberTheory.DirichletL.Reflection.TupleMembers
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.TupleDyads
+public import OAI.NumberTheory.DirichletL.Reflection.TupleMembers
+
+@[expose] public section
 
 namespace OAI
 

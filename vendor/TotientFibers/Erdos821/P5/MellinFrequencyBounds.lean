@@ -1,4 +1,8 @@
-import Erdos821.P5.DyadicTransference
+module
+
+public import Erdos821.P5.DyadicTransference
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

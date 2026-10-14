@@ -1,4 +1,10 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.BigOperators.Field
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.Complex.Basic
+
+@[expose] public section
 
 namespace OAI
 open scoped BigOperators

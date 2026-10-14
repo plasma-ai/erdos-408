@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.ShellSource
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.ShellSource
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import Erdos821.S34.CellSup
-import Erdos821.S34.OwnedLeafProofs
+module
+
+public import Erdos821.S34.CellSup
+public import Erdos821.S34.OwnedLeafProofs
+
+@[expose] public section
 
 set_option autoImplicit false
 

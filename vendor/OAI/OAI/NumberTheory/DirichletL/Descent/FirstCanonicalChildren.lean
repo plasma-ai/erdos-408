@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstLabelCellStepChildren
-import OAI.NumberTheory.DirichletL.Descent.ActualDepthBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstLabelCellStepChildren
+public import OAI.NumberTheory.DirichletL.Descent.ActualDepthBudget
+
+@[expose] public section
 
 namespace OAI
 

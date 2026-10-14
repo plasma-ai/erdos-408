@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.LowDyads
-import OAI.NumberTheory.DirichletL.Reflection.DyadBudget
-import OAI.NumberTheory.DirichletL.Reflection.MemberChoiceTransport
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.LowDyads
+public import OAI.NumberTheory.DirichletL.Reflection.DyadBudget
+public import OAI.NumberTheory.DirichletL.Reflection.MemberChoiceTransport
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.Baseline
+module
+
+public import Erdos821.P3Clean.Baseline
 
 /-! Product laws with deterministic shared coordinates and fresh unshared coordinates. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

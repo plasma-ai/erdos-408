@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedCapacityRadius
-import OAI.NumberTheory.DirichletL.Moments.SecondCapacitySourceShift
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildSourceCaps
-import OAI.NumberTheory.DirichletL.Energy.InputParentCapacity
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedCapacityRadius
+public import OAI.NumberTheory.DirichletL.Moments.SecondCapacitySourceShift
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildSourceCaps
+public import OAI.NumberTheory.DirichletL.Energy.InputParentCapacity
+
+@[expose] public section
 
 namespace OAI
 

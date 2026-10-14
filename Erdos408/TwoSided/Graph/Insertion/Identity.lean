@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Graph.Endpoint
+module
+
+public import Erdos408.TwoSided.Graph.Endpoint
 
 /-!
 # The Mellin and dyad insertion identity
@@ -13,6 +15,8 @@ The ingredients of Lemma G2 of `blueprint/two_sided_correlation.md` §4.2 (PD §
 * the dyad partition of the support (`sum_Icc_cutoffTerm_eq_sum_dyads`): every nonzero term
   has `n ∈ [x/κ, x²]`, since `1 ≤ D ≤ x/κ` (U10).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.InsertionIdentity
 

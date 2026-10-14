@@ -1,6 +1,10 @@
-import Erdos821.S2.EdgeTasks
-import Erdos821.P3Edge.RowBound
-import Erdos821.P3Edge.ColumnBound
+module
+
+public import Erdos821.S2.EdgeTasks
+public import Erdos821.P3Edge.RowBound
+public import Erdos821.P3Edge.ColumnBound
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Defs
+module
+
+public import Erdos408.Extraction.Defs
 
 /-!
 # Bonferroni inequalities
@@ -13,6 +15,8 @@ The truncated inclusion–exclusion used by the sieve of E6.
 * Rankin's bound `∑_{|u| = k} x^u ≤ z^{-k} ∏ (1 + z x_i)`, the bound
   `∑_{|u| = 2} x^u ≤ (∑ x_i)² / 2`, and the count `#{u ⊆ S : |u| ≤ m} ≤ (|S| + 1)^m`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

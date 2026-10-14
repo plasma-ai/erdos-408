@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.OriginalCompletedEnergy
-import OAI.NumberTheory.DirichletL.Reflection.CompletedRowsEnergyUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalCompletedEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.CompletedRowsEnergyUniformDegree
+
+@[expose] public section
 
 namespace OAI
 

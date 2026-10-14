@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondRadicalColumns
-import OAI.NumberTheory.DirichletL.Moments.SecondFamilyTransport
-import OAI.NumberTheory.DirichletL.Moments.FixedRowMask
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondRadicalColumns
+public import OAI.NumberTheory.DirichletL.Moments.SecondFamilyTransport
+public import OAI.NumberTheory.DirichletL.Moments.FixedRowMask
+
+@[expose] public section
 
 namespace OAI
 

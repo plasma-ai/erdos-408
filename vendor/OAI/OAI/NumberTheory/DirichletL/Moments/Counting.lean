@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.Cancellation
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Cancellation
+
+@[expose] public section
 
 namespace OAI
 

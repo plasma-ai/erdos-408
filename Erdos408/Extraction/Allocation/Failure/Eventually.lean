@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Allocation.Failure.Final
-import Erdos408.Extraction.Allocation.Failure.GroupBounds
+module
+
+public import Erdos408.Extraction.Allocation.Failure.Final
+public import Erdos408.Extraction.Allocation.Failure.GroupBounds
 
 /-!
 # The numerical facts of E6 for large `x`
@@ -10,6 +12,8 @@ separations `L / T^{25} = log Y`, `γ L ≥ L / (C_γ T^{21})`, and the candidat
 primes `≤ exp(L^{0.46})`; the losses are powers of `T`, or `exp(O(s²))` from the
 `j - 1` free core factors.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

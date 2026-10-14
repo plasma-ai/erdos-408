@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramSourceDivisors
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramSourceDivisors
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Graph.Restore.Bound
+module
+
+public import Erdos408.TwoSided.Graph.Restore.Bound
 
 /-!
 # Restoring the suppressed restrictions
@@ -16,6 +18,8 @@ after (6.16)):
 
 The physical injectivity across shared and unshared slots is implied once (2) is excluded.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.Bands
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceCharacters
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.Bands
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceCharacters
+
+@[expose] public section
 
 namespace OAI
 

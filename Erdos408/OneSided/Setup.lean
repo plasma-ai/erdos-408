@@ -1,6 +1,8 @@
-import Erdos408.Hypotheses
-import Mathlib.Analysis.SpecialFunctions.SmoothTransition
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+module
+
+public import Erdos408.Hypotheses
+public import Mathlib.Analysis.SpecialFunctions.SmoothTransition
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 
 /-!
 # Setup for the one-sided Type II estimate
@@ -19,6 +21,8 @@ compared in the proof.
 * `majorSquare` is the major sum `Q_Y^maj` of PD (5.1), in which the equation
   `bmn - ars = b - a` is replaced by the major-arc kernel `𝓗_𝔐`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

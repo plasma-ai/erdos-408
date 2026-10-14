@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonHeightEnvelope
-import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalSource
-import OAI.NumberTheory.DirichletL.Moments.AmplificationFamilyEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonHeightEnvelope
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalSource
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationFamilyEnergy
+
+@[expose] public section
 
 namespace OAI
 

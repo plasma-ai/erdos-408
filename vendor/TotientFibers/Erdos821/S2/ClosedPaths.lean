@@ -1,6 +1,10 @@
-import Erdos821.S2.PhysicalPathTask
+module
+
+public import Erdos821.S2.PhysicalPathTask
 
 /-! Finite root averaging preserves the relative CRT error term by term. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

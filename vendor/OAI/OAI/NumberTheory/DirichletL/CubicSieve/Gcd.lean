@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.Dyadic
-import OAI.NumberTheory.DirichletL.Descent.IdealMasks
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.Dyadic
+public import OAI.NumberTheory.DirichletL.Descent.IdealMasks
+
+@[expose] public section
 
 namespace OAI
 

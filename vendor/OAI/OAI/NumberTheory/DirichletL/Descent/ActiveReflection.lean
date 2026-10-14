@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.MixedRow
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.MixedRow
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.ExtractedKernel
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.ExtractedKernel
+
+@[expose] public section
 
 namespace OAI
 

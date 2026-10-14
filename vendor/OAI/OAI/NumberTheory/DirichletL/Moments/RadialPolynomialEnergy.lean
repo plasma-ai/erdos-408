@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FrequencyScaleSupremum
-import OAI.NumberTheory.DirichletL.Moments.PositiveSummability
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FrequencyScaleSupremum
+public import OAI.NumberTheory.DirichletL.Moments.PositiveSummability
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowSpecialization
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowSpecialization
+
+@[expose] public section
 
 namespace OAI
 

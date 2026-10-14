@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.DeletedRobustGeometry
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowReflectionError
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowDirect
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.DeletedRobustGeometry
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowReflectionError
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowDirect
+
+@[expose] public section
 
 namespace OAI
 

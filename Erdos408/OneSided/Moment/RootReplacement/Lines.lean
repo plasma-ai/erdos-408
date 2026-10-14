@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Moment.Lines
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
+module
+
+public import Erdos408.OneSided.Moment.Lines
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
 
 /-!
 # The kernel lines of `SL₂(ℤ/S)` are independent and uniform
@@ -15,6 +17,8 @@ Every unimodular row `(u, c)` over `ℤ/S` is the first row of exactly `S` matri
 every `p ∣ S`, and each projective line mod `p` contains `p - 1` nonzero rows. So every
 assignment of lines at the primes of `P` comes from exactly `S ∏_{p ∈ P} (p - 1)` matrices.
 -/
+
+@[expose] public section
 
 noncomputable section
 

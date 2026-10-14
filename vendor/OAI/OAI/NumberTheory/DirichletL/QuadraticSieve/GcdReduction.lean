@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Fourier.TupleWeights
+module
+
+public import OAI.NumberTheory.DirichletL.Fourier.TupleWeights
+
+@[expose] public section
 
 namespace OAI
 

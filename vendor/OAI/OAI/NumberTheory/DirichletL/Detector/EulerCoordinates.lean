@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.CorrectionBounds
-import OAI.NumberTheory.DirichletL.Detector.Row
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CorrectionBounds
+public import OAI.NumberTheory.DirichletL.Detector.Row
+
+@[expose] public section
 
 namespace OAI
 

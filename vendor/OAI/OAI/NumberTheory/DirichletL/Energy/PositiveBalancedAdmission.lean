@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.PositiveHighParameters
-import OAI.NumberTheory.DirichletL.Energy.NaturalSourceAdmission
-import OAI.NumberTheory.DirichletL.Energy.OriginalProfileControl
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.PositiveHighParameters
+public import OAI.NumberTheory.DirichletL.Energy.NaturalSourceAdmission
+public import OAI.NumberTheory.DirichletL.Energy.OriginalProfileControl
+
+@[expose] public section
 
 namespace OAI
 

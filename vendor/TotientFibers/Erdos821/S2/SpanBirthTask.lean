@@ -1,6 +1,10 @@
-import Erdos821.S2.SpanHistory
+module
+
+public import Erdos821.S2.SpanHistory
 
 /-! A prime lifespan creates exactly one original birth in the inverse history. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

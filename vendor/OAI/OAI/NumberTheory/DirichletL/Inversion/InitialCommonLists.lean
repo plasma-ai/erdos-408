@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialCommonTuples
-import OAI.NumberTheory.DirichletL.Descent.CompleteMarkedPool
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialCommonTuples
+public import OAI.NumberTheory.DirichletL.Descent.CompleteMarkedPool
+
+@[expose] public section
 
 namespace OAI
 

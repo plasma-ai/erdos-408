@@ -1,4 +1,9 @@
-import OAI.NumberTheory.PrimeGaps.DirichletGrowth
+module
+
+public import OAI.NumberTheory.PrimeGaps.DirichletGrowth
+public import Mathlib.Analysis.Complex.TaylorSeries
+
+@[expose] public section
 
 namespace OAI
 

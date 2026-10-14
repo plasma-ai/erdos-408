@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstChildProfileControl
-import OAI.NumberTheory.DirichletL.Moments.SourceInputTailUniform
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstChildProfileControl
+public import OAI.NumberTheory.DirichletL.Moments.SourceInputTailUniform
+
+@[expose] public section
 
 namespace OAI
 

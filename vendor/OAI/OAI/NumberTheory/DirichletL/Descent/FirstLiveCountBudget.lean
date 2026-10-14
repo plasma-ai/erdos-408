@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveSupport
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveSupport
+
+@[expose] public section
 
 namespace OAI
 

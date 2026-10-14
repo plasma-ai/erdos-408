@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.LocalProductAssembly
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.LocalProductAssembly
+
+@[expose] public section
 
 namespace OAI
 
@@ -70,7 +74,7 @@ theorem traceLambda_ne_zero : traceLambda ≠ 0 := by
   rw [eisEmbedding_traceLambda, map_zero] at hh
   exact eisLam_ne_zero hh
 
-private theorem traceLambda_span_eq_lambda :
+theorem traceLambda_span_eq_lambda :
     Ideal.span {traceLambda} = Ideal.span {lambda} := by
   rw [traceLambda_eq_unit_mul_lambda]
   exact Ideal.span_singleton_mul_left_unit neg_omega_isUnit lambda
@@ -80,7 +84,7 @@ theorem traceLambda_quotient_card :
   rw [traceLambda_span_eq_lambda]
   exact ActualEisensteinSieve.lambda_card
 
-private theorem traceLambda_quotient_maximal :
+theorem traceLambda_quotient_maximal :
     (Ideal.span {traceLambda}).IsMaximal := by
   rw [traceLambda_span_eq_lambda]
   exact ActualEisensteinSieve.lambda_maximal
@@ -148,7 +152,7 @@ open scoped Classical
 def quotientUnitMask {R : Type*} [CommRing R] (z : R) : ℂ :=
   if IsUnit z then 1 else 0
 
-private theorem quotientUnitMask_mul {R : Type*} [CommRing R]
+theorem quotientUnitMask_mul {R : Type*} [CommRing R]
     (a b : R) :
     quotientUnitMask (a * b) =
       quotientUnitMask a * quotientUnitMask b := by
@@ -438,9 +442,9 @@ namespace ShortDraftCusp
 
 variable {R : Type*} [CommRing R]
 
-private def cuspMatrix (a b c d : R) : Matrix (Fin 2) (Fin 2) R := !![a,b;c,d]
-private def unramifiedH (u : R) : Matrix (Fin 2) (Fin 2) R := U u * E
-private def unramifiedHInv (u : R) : Matrix (Fin 2) (Fin 2) R := !![0,1;-1,u]
+def cuspMatrix (a b c d : R) : Matrix (Fin 2) (Fin 2) R := !![a,b;c,d]
+def unramifiedH (u : R) : Matrix (Fin 2) (Fin 2) R := U u * E
+def unramifiedHInv (u : R) : Matrix (Fin 2) (Fin 2) R := !![0,1;-1,u]
 
 theorem A3_principal_matrix (a b c d : R) :
     cuspMatrix a b c d * (1 : Matrix (Fin 2) (Fin 2) R) =

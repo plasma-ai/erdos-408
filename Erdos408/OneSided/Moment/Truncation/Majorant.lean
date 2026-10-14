@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Moment.Phased.Edge
-import Erdos408.OneSided.Moment.Phased.Rows
-import Erdos408.OneSided.Moment.Truncation.Cap
+module
+
+public import Erdos408.OneSided.Moment.Phased.Edge
+public import Erdos408.OneSided.Moment.Phased.Rows
+public import Erdos408.OneSided.Moment.Truncation.Cap
 
 /-!
 # The absolute majorant of the truncation error
@@ -24,6 +26,8 @@ histories by a weighted row iteration (`sum_history_le_of_rows`), with no use of
   most `R_G` and `R_E`, then
   `‖distinctSum(B') - distinctSum(B)‖ 2^{B+1} ≤ 2^{KN} R_G^{N+1} R_E^N ∑_s μ(s) |𝐛(s)|`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

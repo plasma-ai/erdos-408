@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSectorFrequency
-import OAI.NumberTheory.DirichletL.Moments.SecondLocalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSectorFrequency
+public import OAI.NumberTheory.DirichletL.Moments.SecondLocalization
+
+@[expose] public section
 
 namespace OAI
 

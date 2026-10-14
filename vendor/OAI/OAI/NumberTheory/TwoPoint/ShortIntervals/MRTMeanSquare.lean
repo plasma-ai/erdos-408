@@ -1,5 +1,9 @@
-import OAI.NumberTheory.TwoPoint.ShortIntervals.MRTMeanSquareKernel
-import OAI.NumberTheory.TwoPoint.ShortIntervals.MRTMeanSquareRows
+module
+
+public import OAI.NumberTheory.TwoPoint.ShortIntervals.MRTMeanSquareKernel
+public import OAI.NumberTheory.TwoPoint.ShortIntervals.MRTMeanSquareRows
+
+@[expose] public section
 
 namespace OAI
 

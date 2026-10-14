@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSixthReduction
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSixthReduction
+
+@[expose] public section
 
 namespace OAI
 

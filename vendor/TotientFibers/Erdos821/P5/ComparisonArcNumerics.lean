@@ -1,4 +1,8 @@
-import Erdos821.P5.ComparisonFourierArcBound
+module
+
+public import Erdos821.P5.ComparisonFourierArcBound
+
+@[expose] public section
 
 noncomputable section
 

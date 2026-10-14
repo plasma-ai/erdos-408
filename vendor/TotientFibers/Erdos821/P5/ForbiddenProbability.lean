@@ -1,4 +1,8 @@
-import Erdos821.P5.ProductProbability
+module
+
+public import Erdos821.P5.ProductProbability
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.GammaDetectorExpansion
-import OAI.NumberTheory.DirichletL.Hecke.DetectorBudget
+module
+
+public import OAI.NumberTheory.DirichletL.GammaDetectorExpansion
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorBudget
+
+@[expose] public section
 
 namespace OAI
 

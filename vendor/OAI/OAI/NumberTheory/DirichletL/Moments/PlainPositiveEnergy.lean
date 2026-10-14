@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.PlainPositiveScale
-import OAI.NumberTheory.DirichletL.Moments.OriginalRadialComparison
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PlainPositiveScale
+public import OAI.NumberTheory.DirichletL.Moments.OriginalRadialComparison
+
+@[expose] public section
 
 namespace OAI
 

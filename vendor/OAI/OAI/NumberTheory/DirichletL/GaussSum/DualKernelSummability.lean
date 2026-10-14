@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.SourceMellinInversion
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.SourceMellinInversion
+
+@[expose] public section
 
 namespace OAI
 

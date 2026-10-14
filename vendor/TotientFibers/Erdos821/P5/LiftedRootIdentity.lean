@@ -1,4 +1,8 @@
-import Erdos821.P5.LiftedPatternRow
+module
+
+public import Erdos821.P5.LiftedPatternRow
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

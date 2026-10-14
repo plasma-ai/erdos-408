@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.SelectedExponents
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.SelectedExponents
+
+@[expose] public section
 
 namespace OAI
 

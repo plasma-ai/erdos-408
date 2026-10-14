@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceFiberEnergy
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedUniform
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceFiberEnergy
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedUniform
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicGeometry
+
+@[expose] public section
 
 namespace OAI
 

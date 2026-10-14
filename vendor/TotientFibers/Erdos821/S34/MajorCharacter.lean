@@ -1,6 +1,10 @@
-import Erdos821.S34.RationalCharacterTasks
-import Erdos821.S34.CharacterReproduction
-import Erdos821.S34.MajorPointwise
+module
+
+public import Erdos821.S34.RationalCharacterTasks
+public import Erdos821.S34.CharacterReproduction
+public import Erdos821.S34.MajorPointwise
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowEmpty
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowEmpty
+
+@[expose] public section
 
 namespace OAI
 

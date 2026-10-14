@@ -1,4 +1,8 @@
-import Erdos821.S2Empty.BigTilted
+module
+
+public import Erdos821.S2Empty.BigTilted
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

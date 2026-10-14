@@ -1,5 +1,9 @@
-import Erdos821.S2.TailAbsorptionTask
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+module
+
+public import Erdos821.S2.TailAbsorptionTask
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+
+@[expose] public section
 
 open Filter
 

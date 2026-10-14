@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorBatch
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorBatch
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationBudget
+
+@[expose] public section
 
 namespace OAI
 

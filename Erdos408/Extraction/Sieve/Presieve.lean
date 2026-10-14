@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Sieve.Progression
+module
+
+public import Erdos408.Extraction.Sieve.Progression
 
 /-!
 # The presieve and mark removal (E0, E2, E10)
@@ -14,6 +16,8 @@ Put `z = x^γ` with `γ = (ε / 4) / (4h + 3)`. The presieved sum of a weight
   nonnegative weights `Φ f_𝔟 P` and `Φ P` separately; the main terms cancel
   and `|∑_{P⁻(u+1) > z} Φ P (f_𝔟 - C_𝔟)| ≪ (x / L) (T²⁶ e^{-h} + T⁴ / L)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.CompensatedTriple
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CompensatedTriple
+
+@[expose] public section
 
 namespace OAI
 

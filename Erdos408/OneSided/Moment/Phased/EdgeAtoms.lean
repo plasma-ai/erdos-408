@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Moment.Phased.Edge
-import Erdos408.OneSided.Moment.Phased.Rows
+module
+
+public import Erdos408.OneSided.Moment.Phased.Edge
+public import Erdos408.OneSided.Moment.Phased.Rows
 
 /-!
 # Edge rows with prescribed births
@@ -15,6 +17,8 @@ free group contributes `∑_p (2 S(p, ·) + ν(p)) ≤ 2B + 4`.
   indicators `∏_i [β_i = π_i]` of its labels, with weight `v₀^{size}`, are at most
   `v₀^K 2^K (2B + 4)^K 16 (1 + 52 L^{3A₀}) ∏_i atomCost(π_i) v₀^{size}`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

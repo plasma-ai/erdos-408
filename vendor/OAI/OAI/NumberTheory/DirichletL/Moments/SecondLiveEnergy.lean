@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSectorEnergy
-import OAI.NumberTheory.DirichletL.Moments.SecondSourceMask
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSectorEnergy
+public import OAI.NumberTheory.DirichletL.Moments.SecondSourceMask
+
+@[expose] public section
 
 namespace OAI
 

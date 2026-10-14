@@ -1,4 +1,8 @@
-import Erdos821.P4Probe.PatternBridgeTasks
+module
+
+public import Erdos821.P4Probe.PatternBridgeTasks
+
+@[expose] public section
 
 set_option autoImplicit false
 

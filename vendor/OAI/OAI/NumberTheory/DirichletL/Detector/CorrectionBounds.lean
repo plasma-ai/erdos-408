@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Detector.Euler
-import OAI.NumberTheory.DirichletL.Detector.Local
-import Mathlib.Analysis.SpecialFunctions.Pow.Deriv
-import Mathlib.Analysis.Complex.LocallyUniformLimit
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.Euler
+public import OAI.NumberTheory.DirichletL.Detector.Local
+public import Mathlib.Analysis.SpecialFunctions.Pow.Deriv
+public import Mathlib.Analysis.Complex.LocallyUniformLimit
+
+@[expose] public section
 
 namespace OAI
 

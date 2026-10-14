@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsRamified
-import OAI.NumberTheory.DirichletL.Detector.GlobalHolomorphic
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsRamified
+public import OAI.NumberTheory.DirichletL.Detector.GlobalHolomorphic
+
+@[expose] public section
 
 namespace OAI
 

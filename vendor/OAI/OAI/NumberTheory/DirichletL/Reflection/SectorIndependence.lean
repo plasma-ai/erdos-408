@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.Functions
-import OAI.NumberTheory.DirichletL.Reflection.Family
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Functions
+public import OAI.NumberTheory.DirichletL.Reflection.Family
+
+@[expose] public section
 
 namespace OAI
 

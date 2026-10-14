@@ -1,8 +1,10 @@
-import Erdos408.OneSided.Cauchy
-import Erdos408.OneSided.Decomposition.Lists
-import Erdos408.OneSided.Decomposition.Pair
-import Erdos408.OneSided.Goodness.RootBox
-import Erdos408.OneSided.Pairing.Geometry
+module
+
+public import Erdos408.OneSided.Cauchy
+public import Erdos408.OneSided.Decomposition.Lists
+public import Erdos408.OneSided.Decomposition.Pair
+public import Erdos408.OneSided.Goodness.RootBox
+public import Erdos408.OneSided.Pairing.Geometry
 
 /-!
 # The targets of a source
@@ -22,6 +24,8 @@ The edge counts of `eventually_badMass_le` (`blueprint/one_sided_type_ii.md` §1
 * `squarefree_listProd_mul`: the labels of a source and the new labels of a target are
   distinct primes, so their product is squarefree.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

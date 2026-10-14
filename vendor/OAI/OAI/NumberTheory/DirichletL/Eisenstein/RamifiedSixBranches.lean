@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.CorrespondencePullback
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.CorrespondencePullback
+
+@[expose] public section
 
 namespace OAI
 

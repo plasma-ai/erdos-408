@@ -1,6 +1,8 @@
-import Erdos408.Extraction.Sieve.Composite
-import Erdos408.Extraction.Sieve.Inert
-import Erdos408.Extraction.Sieve.Smooth
+module
+
+public import Erdos408.Extraction.Sieve.Composite
+public import Erdos408.Extraction.Sieve.Inert
+public import Erdos408.Extraction.Sieve.Smooth
 
 /-!
 # The independent divisor model in progressions (Kubilius)
@@ -23,6 +25,8 @@ Consequently, for every function `Ĥ` of the band set with `|Ĥ| ≤ 1`, the
 weighted progression sum `∑ f(u) Ĥ(bandSet u)` is `X M_𝔅(Ĥ)` up to the same
 error (`exists_abs_sum_bandSet_sub_le`).
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Allocation.Failure.Bonferroni
-import Erdos408.Extraction.Allocation.Failure.Residues
+module
+
+public import Erdos408.Extraction.Allocation.Failure.Bonferroni
+public import Erdos408.Extraction.Allocation.Failure.Residues
 
 /-!
 # Rough numbers in residue classes
@@ -17,6 +19,8 @@ By partial summation against a decreasing weight `w` with `w(A + 1) ≤ K w(e)`
 on `(A, B]`, the weighted sums `S_U` satisfy
 `|S_U - S_∅ / φ_U| ≤ δ S_∅ / φ_U + 4 N w(A + 1)` with `δ = 8 ε K / Π`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

@@ -1,5 +1,9 @@
-import Erdos821.S34.Bilinear
-import Erdos821.S34.IntegerLargeSieve
+module
+
+public import Erdos821.S34.Bilinear
+public import Erdos821.S34.IntegerLargeSieve
+
+@[expose] public section
 
 set_option autoImplicit false
 

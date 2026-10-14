@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalFrozenEnergy
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalInactiveEnergyUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalFrozenEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalInactiveEnergyUniformDegree
+
+@[expose] public section
 
 namespace OAI
 

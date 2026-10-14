@@ -1,8 +1,12 @@
-import Erdos821.P5.ShiftAssembly
-import Erdos821.P5FourierArcProof.FourierArc
-import Erdos821.P1.ClassicalInputs
-import Erdos821.Prelim.SieveInputsProof
-import Erdos821.S34.IdealInputs
+module
+
+public import Erdos821.P5.ShiftAssembly
+public import Erdos821.P5FourierArcProof.FourierArc
+public import Erdos821.P1.ClassicalInputs
+public import Erdos821.Prelim.SieveInputsProof
+public import Erdos821.S34.IdealInputs
+
+@[expose] public section
 
 set_option autoImplicit false
 

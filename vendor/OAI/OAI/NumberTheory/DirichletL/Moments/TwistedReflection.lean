@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalReflection
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicBridge
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalReflection
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicBridge
+
+@[expose] public section
 
 namespace OAI
 

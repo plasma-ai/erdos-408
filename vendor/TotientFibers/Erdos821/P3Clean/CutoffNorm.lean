@@ -1,8 +1,12 @@
-import Erdos821.P3Clean.SmallAverage
-import Erdos821.P3Clean.ConditionedNorm
-import Erdos821.P3Clean.Damping
+module
+
+public import Erdos821.P3Clean.SmallAverage
+public import Erdos821.P3Clean.ConditionedNorm
+public import Erdos821.P3Clean.Damping
 
 /-! The finite conditioned estimate controls the original projected clean memory kernel. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

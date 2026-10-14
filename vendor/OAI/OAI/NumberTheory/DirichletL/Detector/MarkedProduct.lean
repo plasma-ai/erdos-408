@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.MarkedLocal
-import OAI.NumberTheory.DirichletL.Detector.SourceExclusions
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.MarkedLocal
+public import OAI.NumberTheory.DirichletL.Detector.SourceExclusions
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,11 @@
-import Erdos821.S2.CycleBlocks
+module
+
+public import Erdos821.S2.CycleBlocks
+public import Mathlib.GroupTheory.Perm.Cycle.Concrete
 
 /-! Counting cycles on a prescribed support by fixing their first address. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

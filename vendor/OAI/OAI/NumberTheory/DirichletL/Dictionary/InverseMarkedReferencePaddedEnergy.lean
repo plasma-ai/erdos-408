@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceSourceEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceSourceEnergy
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedRoot
-import OAI.NumberTheory.DirichletL.Moments.FirstWindowBudgets
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedRoot
+public import OAI.NumberTheory.DirichletL.Moments.FirstWindowBudgets
+
+@[expose] public section
 
 namespace OAI
 

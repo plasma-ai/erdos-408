@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.WZTransport
-import OAI.NumberTheory.DirichletL.PrimeRows.XShift
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.WZTransport
+public import OAI.NumberTheory.DirichletL.PrimeRows.XShift
+
+@[expose] public section
 
 namespace OAI
 

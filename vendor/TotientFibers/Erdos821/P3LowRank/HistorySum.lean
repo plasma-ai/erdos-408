@@ -1,12 +1,16 @@
-import Erdos821.S2.LowRankTask
-import Erdos821.P3Tail.MemoryTail
-import Erdos821.P3LowRank.ChainBound
+module
+
+public import Erdos821.S2.LowRankTask
+public import Erdos821.P3Tail.MemoryTail
+public import Erdos821.P3LowRank.ChainBound
 
 /-! Truncated valid histories with local multipliers form an exact finite kernel chain.
 
 Fixing the bounded state path, the local ghost and edge choices factor into the literal
 memory kernels with the inserted multipliers; the state paths then form a path sum on the
 finite bounded state type, which the finite operator-norm composition controls. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstSourceSize
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstSourceSize
+
+@[expose] public section
 
 namespace OAI
 

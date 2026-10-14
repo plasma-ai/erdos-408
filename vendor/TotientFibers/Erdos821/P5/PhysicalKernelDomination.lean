@@ -1,5 +1,9 @@
-import Erdos821.P5.DyadicTransference
-import Erdos821.S2.CountableSchur
+module
+
+public import Erdos821.P5.DyadicTransference
+public import Erdos821.S2.CountableSchur
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

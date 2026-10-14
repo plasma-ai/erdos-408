@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.SpatialDerivatives
-import OAI.NumberTheory.DirichletL.CubicSieve.FirstCoreCutoff
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.SpatialDerivatives
+public import OAI.NumberTheory.DirichletL.CubicSieve.FirstCoreCutoff
+
+@[expose] public section
 
 namespace OAI
 

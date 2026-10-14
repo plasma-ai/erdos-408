@@ -1,8 +1,12 @@
-import Erdos821.S2.LifespanClassificationTask
-import Erdos821.P3Live.Anchors
-import Erdos821.S2.PrimeIndices
+module
+
+public import Erdos821.S2.LifespanClassificationTask
+public import Erdos821.P3Live.Anchors
+public import Erdos821.S2.PrimeIndices
 
 /-! The actual history has one contiguous lifetime for each big prime. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

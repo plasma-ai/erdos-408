@@ -1,5 +1,9 @@
-import Erdos821.P5.RootPairing
-import Erdos821.P5.FreeDraws
+module
+
+public import Erdos821.P5.RootPairing
+public import Erdos821.P5.FreeDraws
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

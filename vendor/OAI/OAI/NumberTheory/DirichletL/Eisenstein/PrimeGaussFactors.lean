@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.PrimeRecurrence
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.PrimeRecurrence
+
+@[expose] public section
 
 namespace OAI
 

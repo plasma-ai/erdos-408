@@ -1,4 +1,6 @@
-import Erdos408.Hypotheses
+module
+
+public import Erdos408.Hypotheses
 
 /-!
 # Reindexing the groups
@@ -9,6 +11,8 @@ norm (`physicalNormSq_reindex`) and the pattern pairing
 (`patternPairing_reindex`) are unchanged when the groups, the free slots, and
 the kernel's arguments are transported.
 -/
+
+@[expose] public section
 
 namespace Erdos408.Graph
 

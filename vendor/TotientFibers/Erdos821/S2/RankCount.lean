@@ -1,7 +1,11 @@
-import Erdos821.S2.BirthExpansion
-import Erdos821.S2.RankEncoding
+module
+
+public import Erdos821.S2.BirthExpansion
+public import Erdos821.S2.RankEncoding
 
 /-! The total absolute Möbius coefficient at equality rank r. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.MeanSquare.PolynomialHeight
-import OAI.NumberTheory.DirichletL.CubicSieve.RankMargins
+module
+
+public import OAI.NumberTheory.DirichletL.MeanSquare.PolynomialHeight
+public import OAI.NumberTheory.DirichletL.CubicSieve.RankMargins
+
+@[expose] public section
 
 namespace OAI
 

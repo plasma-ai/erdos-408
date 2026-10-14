@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeRow
-import OAI.NumberTheory.DirichletL.ConductorBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeRow
+public import OAI.NumberTheory.DirichletL.ConductorBounds
+
+@[expose] public section
 
 namespace OAI
 

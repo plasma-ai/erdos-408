@@ -1,6 +1,8 @@
-import Erdos408.Extraction.Allocation.Asymptotics
-import Erdos408.Extraction.Allocation.Coefficients
-import Erdos408.Mertens
+module
+
+public import Erdos408.Extraction.Allocation.Asymptotics
+public import Erdos408.Extraction.Allocation.Coefficients
+public import Erdos408.Mertens
 
 /-!
 # The candidate groups and the inert bands
@@ -21,6 +23,8 @@ and the inert bands, for large `x`.
   `K ⌈C_N s / K⌉ ≤ K + C_N s` bands. Each band has reciprocal mass at least
   `1/2`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

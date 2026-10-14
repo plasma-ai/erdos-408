@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.OriginalSource
-import OAI.NumberTheory.DirichletL.Moments.AllocatedRayDictionary
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.OriginalSource
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedRayDictionary
+
+@[expose] public section
 
 namespace OAI
 

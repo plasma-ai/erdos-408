@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.RelativeCapacityRemoval
-import OAI.NumberTheory.DirichletL.Energy.State
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFiber
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RelativeCapacityRemoval
+public import OAI.NumberTheory.DirichletL.Energy.State
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFiber
+
+@[expose] public section
 
 namespace OAI
 

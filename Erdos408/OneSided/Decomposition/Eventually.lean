@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Bands
-import Erdos408.OneSided.Lift
+module
+
+public import Erdos408.OneSided.Bands
+public import Erdos408.OneSided.Lift
 
 /-!
 # Growth facts for the decomposition
@@ -12,6 +14,8 @@ With `L = log x`, eventually in `x`:
 * `e^{2KJ L^{1/5}} < 2^{⌊L⌋ + 1}`, so every pad product lies in a dyad `k ≤ ⌊L⌋`;
 * `c L^E e^{-L^{a₋}} ≤ L^{-D'}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

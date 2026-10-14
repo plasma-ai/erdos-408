@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianTuple
-import OAI.NumberTheory.DirichletL.Detector.Windows
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianTuple
+public import OAI.NumberTheory.DirichletL.Detector.Windows
+
+@[expose] public section
 
 namespace OAI
 

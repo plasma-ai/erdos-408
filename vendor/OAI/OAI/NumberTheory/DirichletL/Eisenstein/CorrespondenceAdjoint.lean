@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.RamifiedSixBranches
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.RamifiedSixBranches
+
+@[expose] public section
 
 namespace OAI
 

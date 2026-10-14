@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.IdealFactorization
-import OAI.NumberTheory.DirichletL.Detector.IdealUnit
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.IdealFactorization
+public import OAI.NumberTheory.DirichletL.Detector.IdealUnit
+
+@[expose] public section
 
 namespace OAI
 

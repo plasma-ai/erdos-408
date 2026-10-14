@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.UniformReflectionChoices
-import OAI.NumberTheory.DirichletL.Moments.RetainedComparisonEnergy
-import OAI.NumberTheory.DirichletL.Moments.UniformReflectionApproximation
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.UniformReflectionChoices
+public import OAI.NumberTheory.DirichletL.Moments.RetainedComparisonEnergy
+public import OAI.NumberTheory.DirichletL.Moments.UniformReflectionApproximation
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.MaskDescent
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.MaskDescent
+
+@[expose] public section
 
 namespace OAI
 

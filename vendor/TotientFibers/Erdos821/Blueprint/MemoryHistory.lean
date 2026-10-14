@@ -1,6 +1,10 @@
-import Erdos821.Blueprint.ResiduePaths
+module
+
+public import Erdos821.Blueprint.ResiduePaths
 
 /-! Expanded histories record births before global distinctness is imposed. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

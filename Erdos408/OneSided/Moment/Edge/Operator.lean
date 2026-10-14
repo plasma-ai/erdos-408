@@ -1,6 +1,8 @@
-import Mathlib.Algebra.Order.BigOperators.Ring.Finset
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.Real.Sqrt
+module
+
+public import Mathlib.Algebra.Order.BigOperators.Ring.Finset
+public import Mathlib.Analysis.Complex.Basic
+public import Mathlib.Analysis.Real.Sqrt
 
 /-!
 # Kernel bounds on finite sets
@@ -22,6 +24,8 @@ Its operators are recorded as kernels `k : α → β → ℂ` acting from functi
 * `kerLe_of_schur`, `wkerLe_of_schur`: the Schur test with weight one.
 * `wkerLe_of_kerLe`: conjugation from weighted to counting measure.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

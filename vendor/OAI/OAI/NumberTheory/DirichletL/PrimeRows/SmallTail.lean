@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SmallSum
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SmallSum
+
+@[expose] public section
 
 namespace OAI
 

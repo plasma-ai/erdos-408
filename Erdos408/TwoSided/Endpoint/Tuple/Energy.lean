@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Major.Energy.Average
-import Erdos408.TwoSided.Endpoint.Tuple.Exceptional
-import Erdos821.Classical.FourierSeparation
-import Erdos821.P5Mellin.MellinCutoff
+module
+
+public import Erdos408.OneSided.Major.Energy.Average
+public import Erdos408.TwoSided.Endpoint.Tuple.Exceptional
+public import Erdos821.Classical.FourierSeparation
+public import Erdos821.P5Mellin.MellinCutoff
 
 /-!
 # Separation of the cutoff piece (tuple part)
@@ -19,6 +21,8 @@ S13 of `blueprint/two_sided_correlation.md` §6.3 (E6, separation; PD (6.32)).
   `OneSided.integral_sq_le_of_le_integral` (`Erdos408/OneSided/Major/Energy/Average.lean`)
   with the tail kept apart.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.TupleHigh
 

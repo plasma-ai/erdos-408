@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.Family
-import OAI.NumberTheory.DirichletL.ResidueCharacter
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Family
+public import OAI.NumberTheory.DirichletL.ResidueCharacter
+
+@[expose] public section
 
 namespace OAI
 

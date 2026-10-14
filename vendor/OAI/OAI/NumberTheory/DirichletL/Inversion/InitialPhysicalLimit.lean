@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialPhysicalReassembly
-import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailInfinite
-import OAI.NumberTheory.DirichletL.Inversion.InitialConjugateEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialPhysicalReassembly
+public import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailInfinite
+public import OAI.NumberTheory.DirichletL.Inversion.InitialConjugateEnergy
+
+@[expose] public section
 
 namespace OAI
 

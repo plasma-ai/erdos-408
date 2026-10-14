@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.MarkedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedSource
+
+@[expose] public section
 
 namespace OAI
 

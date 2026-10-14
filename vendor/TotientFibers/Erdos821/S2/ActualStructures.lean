@@ -1,8 +1,12 @@
-import Erdos821.S2.ConfigurationSum
-import Erdos821.P3Live.Anchors
-import Erdos821.P3Live.SpanMemory
+module
+
+public import Erdos821.S2.ConfigurationSum
+public import Erdos821.P3Live.Anchors
+public import Erdos821.P3Live.SpanMemory
 
 /-! Instantiate the accepted anchor and inverse edge-memory proofs. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalAllocated
-import OAI.NumberTheory.DirichletL.Moments.AllocatedDetectorAmplitude
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalAllocated
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedDetectorAmplitude
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

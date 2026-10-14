@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FixedRay
-import OAI.NumberTheory.DirichletL.CenteredExceptionalProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FixedRay
+public import OAI.NumberTheory.DirichletL.CenteredExceptionalProfile
+
+@[expose] public section
 
 namespace OAI
 

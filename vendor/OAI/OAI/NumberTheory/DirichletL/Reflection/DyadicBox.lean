@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.DyadicTail
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.DyadicTail
+
+@[expose] public section
 
 namespace OAI
 

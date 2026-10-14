@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.RamifiedNormWeights
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.RamifiedNormWeights
+
+@[expose] public section
 
 namespace OAI
 

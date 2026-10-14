@@ -1,4 +1,9 @@
-import OAI.NumberTheory.PrimeGaps.ZetaKernel
+module
+
+public import OAI.NumberTheory.PrimeGaps.ZetaKernel
+public import Mathlib.Analysis.LocallyConvex.AbsConvexOpen
+
+@[expose] public section
 
 namespace OAI
 

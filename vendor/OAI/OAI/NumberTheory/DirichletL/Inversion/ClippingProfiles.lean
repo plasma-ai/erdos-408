@@ -1,8 +1,12 @@
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
-import OAI.NumberTheory.DirichletL.Inversion.KernelSourceUniform
-import OAI.NumberTheory.DirichletL.CompactProfileFamily
-import OAI.NumberTheory.DirichletL.Descent.ActualProfiles
-import OAI.NumberTheory.DirichletL.Descent.DescentHeight
+module
+
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+public import OAI.NumberTheory.DirichletL.Inversion.KernelSourceUniform
+public import OAI.NumberTheory.DirichletL.CompactProfileFamily
+public import OAI.NumberTheory.DirichletL.Descent.ActualProfiles
+public import OAI.NumberTheory.DirichletL.Descent.DescentHeight
+
+@[expose] public section
 
 namespace OAI
 

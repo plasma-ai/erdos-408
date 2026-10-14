@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.IdealOperations
-import OAI.NumberTheory.DirichletL.Hecke.FiniteDeletion
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.IdealOperations
+public import OAI.NumberTheory.DirichletL.Hecke.FiniteDeletion
+
+@[expose] public section
 
 namespace OAI
 

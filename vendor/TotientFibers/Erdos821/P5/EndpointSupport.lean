@@ -1,4 +1,8 @@
-import Erdos821.P5.FullMellinLift
+module
+
+public import Erdos821.P5.FullMellinLift
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

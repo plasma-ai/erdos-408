@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Allocation.Euler
-import Erdos408.Extraction.Allocation.Failure.USide
+module
+
+public import Erdos408.Extraction.Allocation.Euler
+public import Erdos408.Extraction.Allocation.Failure.USide
 
 /-!
 # The `v`-side: the candidate part of `v`
@@ -15,6 +17,8 @@ weight is multiplicative over the disjoint groups, so the sum factors into
 local sums, and the local sum of a group of the family loses a fixed fraction:
 `∑_{d} [no lone prime in g] / d ≤ ∏_{p ∈ g} (1 - 1/p)⁻¹ - V_g`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

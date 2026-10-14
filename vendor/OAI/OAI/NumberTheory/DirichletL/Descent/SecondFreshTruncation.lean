@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.SecondPrincipalCaller
-import OAI.NumberTheory.DirichletL.Descent.SecondParentInput
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.SecondPrincipalCaller
+public import OAI.NumberTheory.DirichletL.Descent.SecondParentInput
+
+@[expose] public section
 
 namespace OAI
 

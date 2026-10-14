@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstWGrowth
-import OAI.NumberTheory.DirichletL.Hecke.StripActual
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstWGrowth
+public import OAI.NumberTheory.DirichletL.Hecke.StripActual
+
+@[expose] public section
 
 namespace OAI
 

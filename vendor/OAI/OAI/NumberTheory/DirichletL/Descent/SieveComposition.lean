@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.Fibers
-import Mathlib.Algebra.BigOperators.Group.Finset.Sigma
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.Fibers
+public import Mathlib.Algebra.BigOperators.Group.Finset.Sigma
+
+@[expose] public section
 
 namespace OAI
 

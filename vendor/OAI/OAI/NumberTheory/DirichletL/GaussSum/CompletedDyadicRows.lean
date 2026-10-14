@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.LocalCutoffs
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.LocalCutoffs
+
+@[expose] public section
 
 namespace OAI
 

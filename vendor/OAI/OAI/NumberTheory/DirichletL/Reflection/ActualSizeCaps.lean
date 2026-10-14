@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.TailEnergyBudget
-import OAI.NumberTheory.DirichletL.Reflection.PoolArithmetic
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.TailEnergyBudget
+public import OAI.NumberTheory.DirichletL.Reflection.PoolArithmetic
+
+@[expose] public section
 
 namespace OAI
 

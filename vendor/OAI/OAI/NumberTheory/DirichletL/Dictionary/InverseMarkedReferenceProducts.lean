@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceTuples
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceTuples
+
+@[expose] public section
 
 namespace OAI
 

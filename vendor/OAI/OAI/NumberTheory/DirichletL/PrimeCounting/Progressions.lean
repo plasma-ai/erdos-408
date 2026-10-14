@@ -1,4 +1,8 @@
-import PrimeNumberTheoremAnd.Wiener
+module
+
+public import PrimeNumberTheoremAnd.Wiener
+
+@[expose] public section
 
 namespace OAI
 

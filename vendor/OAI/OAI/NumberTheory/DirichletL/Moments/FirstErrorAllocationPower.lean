@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
-import OAI.NumberTheory.DirichletL.Moments.FirstChildProfileControl
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
+public import OAI.NumberTheory.DirichletL.Moments.FirstChildProfileControl
+
+@[expose] public section
 
 namespace OAI
 

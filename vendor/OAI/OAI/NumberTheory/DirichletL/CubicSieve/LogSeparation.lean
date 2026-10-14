@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.SupportBounds
-import OAI.NumberTheory.DirichletL.CubicSieve.ReopeningSeparation
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.SupportBounds
+public import OAI.NumberTheory.DirichletL.CubicSieve.ReopeningSeparation
+
+@[expose] public section
 
 namespace OAI
 

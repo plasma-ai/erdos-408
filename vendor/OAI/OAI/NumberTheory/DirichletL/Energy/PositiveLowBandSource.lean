@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.NaturalLowSourceBound
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowBands
-import OAI.NumberTheory.DirichletL.Energy.LowBandEmpty
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.NaturalLowSourceBound
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowBands
+public import OAI.NumberTheory.DirichletL.Energy.LowBandEmpty
+
+@[expose] public section
 
 namespace OAI
 

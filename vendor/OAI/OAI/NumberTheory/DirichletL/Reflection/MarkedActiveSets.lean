@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.MarkedInactive
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedInactive
+
+@[expose] public section
 
 namespace OAI
 

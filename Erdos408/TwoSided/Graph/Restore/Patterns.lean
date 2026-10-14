@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Graph.Restore.Eventually
+module
+
+public import Erdos408.TwoSided.Graph.Restore.Eventually
 
 /-!
 # The stripped correlations of the raw and the comparison patterns
@@ -15,6 +17,8 @@ The stripped correlation `stripSum` of a pattern `(C, K)` is, for the two kinds 
 
 Both kernels depend only on the unshared parts of the lists (`pad_invariant_*`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

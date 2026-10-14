@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.PrincipalNormalized
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PrincipalNormalized
+
+@[expose] public section
 
 namespace OAI
 

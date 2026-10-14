@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.LargeSaving
-import OAI.NumberTheory.DirichletL.PrimeRows.PhysicalDyad
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.LargeSaving
+public import OAI.NumberTheory.DirichletL.PrimeRows.PhysicalDyad
+
+@[expose] public section
 
 namespace OAI
 

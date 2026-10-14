@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondDeletedMovingEnergy
+module
 
-import OAI.NumberTheory.DirichletL.Descent.SecondDeletedPhysicalRecursive
-import OAI.NumberTheory.DirichletL.Descent.SecondBalancedSource
+public import OAI.NumberTheory.DirichletL.Descent.SecondDeletedMovingEnergy
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondDeletedPhysicalRecursive
+public import OAI.NumberTheory.DirichletL.Descent.SecondBalancedSource
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformHeight
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionarySlots
-import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyData
-import OAI.NumberTheory.DirichletL.Moments.RetainedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformHeight
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionarySlots
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyData
+public import OAI.NumberTheory.DirichletL.Moments.RetainedEnergy
+
+@[expose] public section
 
 namespace OAI
 
@@ -19,7 +23,7 @@ lemma conjugate_source_support (F:ProbeFinalAssembly.SourceData D):
   intro x hx
   exact F.complex_support (by simpa using hx)
 
-private lemma conjugate_source_smooth (F : ProbeFinalAssembly.SourceData D) :
+lemma conjugate_source_smooth (F : ProbeFinalAssembly.SourceData D) :
     ContDiff ℝ ∞ (fun x => conj (F.W x)) := by
   exact Complex.conjCLE.contDiff.comp (F.W.smooth ⊤)
 

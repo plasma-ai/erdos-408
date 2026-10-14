@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryProfiles
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicProfiles
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryProfiles
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicProfiles
+
+@[expose] public section
 
 namespace OAI
 

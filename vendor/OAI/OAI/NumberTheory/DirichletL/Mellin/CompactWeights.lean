@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Mellin.CompactScale
+module
+
+public import OAI.NumberTheory.DirichletL.Mellin.CompactScale
+
+@[expose] public section
 
 namespace OAI
 
@@ -494,11 +498,11 @@ theorem second_profile_logshape
   rw [Real.log_pow, Real.log_pow]
   ring
 
-private def firstCoeff : Fin 9 → ℝ
+def firstCoeff : Fin 9 → ℝ
   | 0 => 1 | 1 => 1 | 2 => -1 | 3 => -2 | 4 => -1
   | 5 => -2 | 6 => -1 | 7 => -1 | 8 => -1
 
-private noncomputable def firstLogs (K y d f E t c x₁ x₂ : ℝ) : Fin 9 → ℝ
+noncomputable def firstLogs (K y d f E t c x₁ x₂ : ℝ) : Fin 9 → ℝ
   | 0 => Real.log K | 1 => Real.log y | 2 => Real.log d
   | 3 => Real.log f | 4 => Real.log E | 5 => Real.log t
   | 6 => Real.log c | 7 => Real.log x₁ | 8 => Real.log x₂
@@ -512,11 +516,11 @@ theorem first_logsum
   simp [Fin.sum_univ_succ, firstCoeff, firstLogs]
   ring
 
-private def secondCoeff : Fin 7 → ℝ
+def secondCoeff : Fin 7 → ℝ
   | 0 => 1 | 1 => 1 | 2 => -1 | 3 => -2
   | 4 => -2 | 5 => -1 | 6 => -1
 
-private noncomputable def secondLogs (Y k d e v n₁ n₂ : ℝ) : Fin 7 → ℝ
+noncomputable def secondLogs (Y k d e v n₁ n₂ : ℝ) : Fin 7 → ℝ
   | 0 => Real.log Y | 1 => Real.log k | 2 => Real.log d
   | 3 => Real.log e | 4 => Real.log v
   | 5 => Real.log n₁ | 6 => Real.log n₂

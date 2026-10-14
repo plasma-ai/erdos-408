@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationLocal
-import OAI.NumberTheory.DirichletL.Moments.GaussEnergy
-import OAI.NumberTheory.DirichletL.Detector.PhysicalCRT
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationLocal
+public import OAI.NumberTheory.DirichletL.Moments.GaussEnergy
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalCRT
+
+@[expose] public section
 
 namespace OAI
 

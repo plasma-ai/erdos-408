@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Inversion.KernelSourceUniform
-import OAI.NumberTheory.DirichletL.Descent.WindowFourier
-import OAI.NumberTheory.DirichletL.Descent.DescentHeight
-import OAI.NumberTheory.DirichletL.Descent.FullProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.KernelSourceUniform
+public import OAI.NumberTheory.DirichletL.Descent.WindowFourier
+public import OAI.NumberTheory.DirichletL.Descent.DescentHeight
+public import OAI.NumberTheory.DirichletL.Descent.FullProfile
+
+@[expose] public section
 
 namespace OAI
 

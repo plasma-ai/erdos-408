@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.ReflectionFibers
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.ReflectionFibers
+
+@[expose] public section
 
 namespace OAI
 

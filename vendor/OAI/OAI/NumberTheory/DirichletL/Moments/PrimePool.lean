@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.RayPrimeNormalizer
-import OAI.NumberTheory.DirichletL.Moments.AmplificationCount
+module
+
+public import OAI.NumberTheory.DirichletL.RayPrimeNormalizer
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationCount
+
+@[expose] public section
 
 namespace OAI
 

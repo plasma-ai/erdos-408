@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstReferenceSource
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalOriginalMask
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalZeroRadius
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstReferenceSource
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalOriginalMask
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalZeroRadius
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.GaussianTheta
-import Mathlib.Analysis.Normed.Group.FunctionSeries
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
-import Mathlib.MeasureTheory.Function.LocallyIntegrable
+module
+
+public import OAI.NumberTheory.DirichletL.GaussianTheta
+public import Mathlib.Analysis.Normed.Group.FunctionSeries
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+public import Mathlib.MeasureTheory.Function.LocallyIntegrable
+
+@[expose] public section
 
 namespace OAI
 

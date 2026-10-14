@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.DetectorMomentData
-import OAI.NumberTheory.DirichletL.Hecke.DetectorBatch
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.DetectorMomentData
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorBatch
+
+@[expose] public section
 
 namespace OAI
 

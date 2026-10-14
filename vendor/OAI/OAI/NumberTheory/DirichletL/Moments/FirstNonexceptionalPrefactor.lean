@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceSupport
-import OAI.NumberTheory.DirichletL.Moments.FirstActiveRadicalBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceSupport
+public import OAI.NumberTheory.DirichletL.Moments.FirstActiveRadicalBudget
+
+@[expose] public section
 
 namespace OAI
 

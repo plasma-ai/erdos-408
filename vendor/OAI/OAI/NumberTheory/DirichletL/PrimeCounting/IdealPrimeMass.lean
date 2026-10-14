@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.IdealMangoldt
-import OAI.NumberTheory.DirichletL.PrimeCounting.PrimeMass
+module
+
+public import OAI.NumberTheory.DirichletL.IdealMangoldt
+public import OAI.NumberTheory.DirichletL.PrimeCounting.PrimeMass
+
+@[expose] public section
 
 namespace OAI
 

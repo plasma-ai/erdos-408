@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.MarkedHolomorphic
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.MarkedHolomorphic
+
+@[expose] public section
 
 namespace OAI
 

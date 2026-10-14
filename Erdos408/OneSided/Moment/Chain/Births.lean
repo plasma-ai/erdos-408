@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.Chain
+module
+
+public import Erdos408.OneSided.Moment.Chain
 
 /-!
 # Distinct births as a running condition
@@ -19,6 +21,8 @@ history sum can be peeled one visit at a time.
   `distinctSum = ∑_s μ(s) 𝐛(s) distinctFold N 0 s (initial labels of s)`
   (`distinctSum_eq_sum_distinctFold`).
 -/
+
+@[expose] public section
 
 noncomputable section
 

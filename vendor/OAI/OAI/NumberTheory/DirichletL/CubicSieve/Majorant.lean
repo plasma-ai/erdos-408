@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.FrequencyDyads
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.FrequencyDyads
+
+@[expose] public section
 
 namespace OAI
 

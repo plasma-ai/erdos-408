@@ -1,8 +1,12 @@
-import Erdos821.P3Clean.TwistedKernel
-import Erdos821.P3Clean.PermutationSplit
-import Erdos821.P3Clean.BigRefresh
+module
+
+public import Erdos821.P3Clean.TwistedKernel
+public import Erdos821.P3Clean.PermutationSplit
+public import Erdos821.P3Clean.BigRefresh
 
 /-! The signed big kernel at the character frequency, with literal density and ban changes. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

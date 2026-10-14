@@ -1,4 +1,6 @@
-import Erdos408.Graph.Kernel
+module
+
+public import Erdos408.Graph.Kernel
 
 /-!
 # Comparison patterns as sums of product terms
@@ -14,6 +16,8 @@ supremum (`inv_mul_inv_le_sSup`), and there are at most `ξ⁻² Q⁴` terms, so
 term weights of a comparison pattern sum to at most `ξ⁻² Q⁴` times its
 supremum (`sum_norm_termWeight_le`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.Graph
 

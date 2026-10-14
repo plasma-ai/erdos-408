@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Moment.Chain
-import Mathlib.Algebra.Field.ZMod
+module
+
+public import Erdos408.OneSided.Moment.Chain
+public import Mathlib.Algebra.Field.ZMod
 
 /-!
 # The line-free part of the chain edge
@@ -21,6 +23,8 @@ The chain coefficient is the free coefficient times the memory weights
 (`chainEdgeCoef_eq_mul`). The admissible free choices keep the line of every pad prime
 (`lineOf_eq_of_dvd_det`), since `p ∣ D ∣ det(z, z')` with `z, z'` primitive.
 -/
+
+@[expose] public section
 
 noncomputable section
 

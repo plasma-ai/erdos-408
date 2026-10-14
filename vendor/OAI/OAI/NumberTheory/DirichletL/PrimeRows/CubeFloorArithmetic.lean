@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CubeSlotExponent
-import OAI.NumberTheory.DirichletL.Detector.CentralCubeNorm
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CubeSlotExponent
+public import OAI.NumberTheory.DirichletL.Detector.CentralCubeNorm
+
+@[expose] public section
 
 namespace OAI
 
@@ -15,7 +19,7 @@ local instance : Finite (O ⧸ M) := Ring.HasFiniteQuotients.finiteQuotient (NeZ
 variable (H : Subgroup (O ⧸ M)ˣ) (hH : RayOrthogonality.globalUnits M≤H)
 
 omit [NeZero M] in
-private theorem floorPoolOutside (S : Finset (Ideal O)) (N : ℕ) (c b : ℝ) (Y : Fin N→ℝ) :
+theorem floorPoolOutside (S : Finset (Ideal O)) (N : ℕ) (c b : ℝ) (Y : Fin N→ℝ) :
     ∀j P,P∈pool (RayQuotient.identityClass M H) S c b (Y j) → P.val∉S :=
   fun j P hP=>(mem_pool _ S c b (Y j) P).mp hP |>.2.2.2
 

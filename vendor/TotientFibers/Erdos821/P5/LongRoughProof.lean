@@ -1,7 +1,11 @@
-import Erdos821.P5.LongTheorem
-import Erdos821.P5Log.LogPhaseSum
-import Erdos821.P2Rough.RoughPolynomial
-import Erdos821.P1.ClassicalInputs
+module
+
+public import Erdos821.P5.LongTheorem
+public import Erdos821.P5Log.LogPhaseSum
+public import Erdos821.P2Rough.RoughPolynomial
+public import Erdos821.P1.ClassicalInputs
+
+@[expose] public section
 
 noncomputable section
 

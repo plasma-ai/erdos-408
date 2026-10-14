@@ -1,8 +1,15 @@
-import Erdos821.P3Adj.Factor
-import Erdos821.P3Adj.Basic
-import Erdos821.P3Adj.Weight
-import Erdos821.P3Adj.FiberA
-import Erdos821.P3Adj.FiberP
+module
+
+public import Erdos821.P3Adj.Factor
+public import Erdos821.P3Adj.Basic
+public import Erdos821.P3Adj.Weight
+public import Erdos821.P3Adj.FiberA
+public import Erdos821.P3Adj.FiberP
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Algebra.Ring.IsFormallyReal
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,9 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.BigOperators.Group.Finset.Defs
+public import Mathlib.Basic.Finite.Prod
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

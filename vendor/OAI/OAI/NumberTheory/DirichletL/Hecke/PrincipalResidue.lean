@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.RayFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.RayFamily
+
+@[expose] public section
 
 namespace OAI
 

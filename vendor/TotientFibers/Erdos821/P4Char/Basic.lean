@@ -1,4 +1,11 @@
-import Erdos821.Blueprint.Analytic
+module
+
+public import Erdos821.Blueprint.Analytic
+public import Mathlib.Analysis.Complex.Polynomial.Basic
+public import Mathlib.NumberTheory.DirichletCharacter.Bounds
+public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
+
+@[expose] public section
 
 set_option autoImplicit false
 

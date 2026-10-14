@@ -1,5 +1,7 @@
-import Erdos408.TwoSided.Graph.BoundsDamping
-import Erdos408.TwoSided.Graph.Endpoint
+module
+
+public import Erdos408.TwoSided.Graph.BoundsDamping
+public import Erdos408.TwoSided.Graph.Endpoint
 
 /-!
 # The absolute pattern bound
@@ -10,6 +12,8 @@ on `J`. It is used only for the Mellin tail of S2, whose precision is chosen aft
 replaces WD Lemma 3.4. The generic bound is `GraphBounds.norm_patternPairing_le`
 (`Graph/BoundsDamping.lean`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

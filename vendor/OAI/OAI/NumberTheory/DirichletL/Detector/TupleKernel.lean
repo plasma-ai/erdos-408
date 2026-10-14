@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.TupleRows
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.TupleRows
+
+@[expose] public section
 
 namespace OAI
 

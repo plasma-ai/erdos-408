@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.GroupGain
-import Erdos821.P3Clean.SplitGroups
+module
+
+public import Erdos821.P3Clean.GroupGain
+public import Erdos821.P3Clean.SplitGroups
 
 /-! The aggregate conditioning map over all small groups. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

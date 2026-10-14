@@ -1,4 +1,6 @@
-import Erdos408.Extraction.TypeII.BoxSum
+module
+
+public import Erdos408.Extraction.TypeII.BoxSum
 
 /-!
 # Freezing the cutoff on a box
@@ -7,6 +9,8 @@ On a box `m ∈ (λ, λ(1+δ)]`, `n ∈ (μ, μ(1+δ)]` replace `Φ((mn - 1)/x)`
 `Φ(λμ/x)`. The difference is at most `D₁ (3δ(κx + 1) + 1)/x` by the mean value theorem, and
 vanishes unless `λμ ≤ κx + 1`, in which case `mn ≤ 4(κx + 1)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

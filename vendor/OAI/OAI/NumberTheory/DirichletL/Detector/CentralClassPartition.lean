@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.CentralClassArithmetic
-import OAI.NumberTheory.DirichletL.Hecke.DetectorAmplitudeFirst
-import OAI.NumberTheory.DirichletL.Hecke.DetectorClassBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CentralClassArithmetic
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorAmplitudeFirst
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorClassBudget
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,10 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.SourceBesselExpansion
-import OAI.NumberTheory.DirichletL.Eisenstein.InverseCuspCoordinates
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.SourceBesselExpansion
+public import OAI.NumberTheory.DirichletL.Eisenstein.InverseCuspCoordinates
+public import Mathlib.Analysis.Calculus.ContDiff.WithLp
+
+@[expose] public section
 
 namespace OAI
 

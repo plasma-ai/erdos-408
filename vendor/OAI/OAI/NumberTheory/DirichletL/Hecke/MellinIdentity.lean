@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Continuation
-import Mathlib.NumberTheory.LSeries.AbstractFuncEq
+module
+
+public import OAI.NumberTheory.DirichletL.Continuation
+public import Mathlib.NumberTheory.LSeries.AbstractFuncEq
+
+@[expose] public section
 
 namespace OAI
 

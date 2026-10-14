@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.ReflectionTails
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ReflectionTails
+
+@[expose] public section
 
 namespace OAI
 

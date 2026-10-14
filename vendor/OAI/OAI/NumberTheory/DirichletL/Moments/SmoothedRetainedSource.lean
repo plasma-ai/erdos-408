@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceRetainedEnergy
-import OAI.NumberTheory.DirichletL.Moments.PositiveSummability
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceRetainedEnergy
+public import OAI.NumberTheory.DirichletL.Moments.PositiveSummability
+
+@[expose] public section
 
 namespace OAI
 

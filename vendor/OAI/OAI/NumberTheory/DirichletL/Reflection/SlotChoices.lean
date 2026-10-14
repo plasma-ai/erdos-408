@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.InactiveEnergy
-import OAI.NumberTheory.DirichletL.Reflection.TupleFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.InactiveEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.TupleFamily
+
+@[expose] public section
 
 namespace OAI
 

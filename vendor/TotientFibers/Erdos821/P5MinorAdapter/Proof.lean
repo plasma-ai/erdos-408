@@ -1,5 +1,9 @@
-import Erdos821.P5MinorAdapter.FreeTuple
-import Erdos821.P5Minor.MinorArcTask
+module
+
+public import Erdos821.P5MinorAdapter.FreeTuple
+public import Erdos821.P5Minor.MinorArcTask
+
+@[expose] public section
 
 set_option autoImplicit false
 

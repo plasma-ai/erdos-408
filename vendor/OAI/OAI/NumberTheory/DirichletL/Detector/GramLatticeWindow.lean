@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramShell
-import OAI.NumberTheory.DirichletL.Detector.GramAnnularCount
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramShell
+public import OAI.NumberTheory.DirichletL.Detector.GramAnnularCount
+
+@[expose] public section
 
 namespace OAI
 

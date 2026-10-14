@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Hecke.IdealBridge
-import OAI.NumberTheory.DirichletL.Hecke.MellinIdentity
-import OAI.NumberTheory.DirichletL.GaussianTheta
-import OAI.NumberTheory.DirichletL.PeriodicThetaRegularity
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.IdealBridge
+public import OAI.NumberTheory.DirichletL.Hecke.MellinIdentity
+public import OAI.NumberTheory.DirichletL.GaussianTheta
+public import OAI.NumberTheory.DirichletL.PeriodicThetaRegularity
+
+@[expose] public section
 
 namespace OAI
 
@@ -12,10 +16,10 @@ open HeckeFamily
 
 variable (c : O) [NeZero c]
 
-private theorem span_ne_bot : Ideal.span ({c} : Set O) ≠ ⊥ := by
+theorem span_ne_bot : Ideal.span ({c} : Set O) ≠ ⊥ := by
   simpa only [ne_eq, Ideal.span_singleton_eq_bot] using NeZero.ne c
 
-private instance : Fintype (O ⧸ Ideal.span {c}) := by
+instance : Fintype (O ⧸ Ideal.span {c}) := by
   letI : Finite (O ⧸ Ideal.span {c}) := Ring.HasFiniteQuotients.finiteQuotient (span_ne_bot c)
   exact Fintype.ofFinite _
 

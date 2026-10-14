@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowBranchGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowBranchGeometry
+
+@[expose] public section
 
 namespace OAI
 

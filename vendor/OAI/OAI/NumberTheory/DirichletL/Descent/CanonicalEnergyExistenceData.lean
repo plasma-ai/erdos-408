@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalRankEnergyMonotone
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalRankEnergyMonotone
+
+@[expose] public section
 
 namespace OAI
 

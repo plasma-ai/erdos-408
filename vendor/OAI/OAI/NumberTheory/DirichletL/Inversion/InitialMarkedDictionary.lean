@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialDetectorSource
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialDetectorSource
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.DyadicKernel
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.DyadicKernel
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ReflectionLength
-import OAI.NumberTheory.DirichletL.Moments.ReflectedTruncation
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ReflectionLength
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedTruncation
+
+@[expose] public section
 
 namespace OAI
 

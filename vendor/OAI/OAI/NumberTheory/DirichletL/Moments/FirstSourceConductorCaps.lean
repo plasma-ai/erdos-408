@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedFamily
-import OAI.NumberTheory.DirichletL.Moments.AmplificationRadicalFamily
-import OAI.NumberTheory.DirichletL.Moments.SecondRadicalBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedFamily
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationRadicalFamily
+public import OAI.NumberTheory.DirichletL.Moments.SecondRadicalBudget
+
+@[expose] public section
 
 namespace OAI
 

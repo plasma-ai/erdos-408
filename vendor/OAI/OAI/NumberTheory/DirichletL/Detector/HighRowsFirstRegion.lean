@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsHolomorphic
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsHolomorphic
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DyadicMellin
-import OAI.NumberTheory.DirichletL.Hecke.LogDerivative
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicMellin
+public import OAI.NumberTheory.DirichletL.Hecke.LogDerivative
+
+@[expose] public section
 
 namespace OAI
 

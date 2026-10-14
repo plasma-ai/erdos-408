@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.Laws
-import Erdos821.Leaves.Arith
+module
+
+public import Erdos821.P3Clean.Laws
+public import Erdos821.Leaves.Arith
 
 /-! Positivity and a uniform density ratio for the tilted active laws. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

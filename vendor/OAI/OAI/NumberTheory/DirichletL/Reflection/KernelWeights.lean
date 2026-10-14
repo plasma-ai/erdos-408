@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.KernelSeparation
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.KernelSeparation
+
+@[expose] public section
 
 namespace OAI
 

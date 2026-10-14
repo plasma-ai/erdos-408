@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.LocalBrackets
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.LocalBrackets
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.PrincipalMask
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedFirst
-import OAI.NumberTheory.DirichletL.Detector.CompensatedRows
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.PrincipalMask
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedFirst
+public import OAI.NumberTheory.DirichletL.Detector.CompensatedRows
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.SecondProfileUniform
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.SecondProfileUniform
+
+@[expose] public section
 
 namespace OAI
 

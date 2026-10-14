@@ -1,5 +1,9 @@
-import Erdos821.P5.EndpointSup
-import Erdos821.P5.PhysicalNormTheorem
+module
+
+public import Erdos821.P5.EndpointSup
+public import Erdos821.P5.PhysicalNormTheorem
+
+@[expose] public section
 
 noncomputable section
 open Filter

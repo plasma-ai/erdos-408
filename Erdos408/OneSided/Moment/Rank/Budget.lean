@@ -1,4 +1,6 @@
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+module
+
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
 
 /-!
 # The rank budgets
@@ -17,6 +19,8 @@ and `r₀ L^{1/10} ≥ L^{11/20}` beats `N log L`.
   `KM = o(N)`, this is at most `L^{-GN + 2N} = L^{-(E₀ + 2) N}` for `G = E₀ + 4`.
 * `eventually_addrCount_le`: `Q = KM + NK + (N + 1)B ≤ L⁴` for `B ≤ L² + 1`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

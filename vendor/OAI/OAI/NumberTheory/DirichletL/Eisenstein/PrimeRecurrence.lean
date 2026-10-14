@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.ResidualOrthogonality
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.ResidualOrthogonality
+
+@[expose] public section
 
 namespace OAI
 

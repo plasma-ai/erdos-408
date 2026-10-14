@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Endpoint.Constant.Glue
+module
+
+public import Erdos408.TwoSided.Endpoint.Constant.Glue
 
 /-!
 # One box of the constant part
@@ -11,6 +13,8 @@ is bounded in mean square (E10.1), and the model part pointwise,
 `|B₀(t)| ≤ Λ (24/|t| + ε)` (E10.2): integrated as `t^{-2}` on the medium range `|t| ≤ X`
 (E10.3), and on the high range only over the exceptional unit intervals `𝒥` (E10.4).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.ConstHigh
 

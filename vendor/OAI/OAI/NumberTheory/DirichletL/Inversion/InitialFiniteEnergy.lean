@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialRetainedSum
-import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicTailBound
-import OAI.NumberTheory.DirichletL.Inversion.InitialProfileBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialRetainedSum
+public import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicTailBound
+public import OAI.NumberTheory.DirichletL.Inversion.InitialProfileBounds
+
+@[expose] public section
 
 namespace OAI
 

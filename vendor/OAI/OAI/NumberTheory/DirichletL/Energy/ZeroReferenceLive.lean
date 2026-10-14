@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroReferencePower
-import OAI.NumberTheory.DirichletL.Energy.LiveClippingDefect
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroReferencePower
+public import OAI.NumberTheory.DirichletL.Energy.LiveClippingDefect
+
+@[expose] public section
 
 namespace OAI
 

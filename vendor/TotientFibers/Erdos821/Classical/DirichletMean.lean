@@ -1,8 +1,16 @@
-import OAI.NumberTheory.TwoPoint.ShortIntervals.MRTMeanSquare
-import Erdos821.Blueprint.Classical
-import Mathlib
+module
+
+public import OAI.NumberTheory.TwoPoint.ShortIntervals.MRTMeanSquare
+public import Erdos821.Blueprint.Classical
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.InnerProductSpace.Calculus
+public import Mathlib.Analysis.LocallyConvex.AbsConvexOpen
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.DistLEIntegral
+public import Mathlib.Order.CompletePartialOrder
 
 /-! Dirichlet-polynomial mean squares from §1 of the source paper. -/
+
+@[expose] public section
 
 open scoped BigOperators
 open MeasureTheory

@@ -1,6 +1,12 @@
-import Mathlib
+module
+
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+public import Mathlib.Data.Fintype.Perm
 
 /-! Finite data for §2 of Weighted dilation graphs. No placeholder proofs. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

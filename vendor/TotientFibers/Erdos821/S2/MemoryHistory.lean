@@ -1,6 +1,10 @@
-import Erdos821.S2.MemoryEdge
+module
+
+public import Erdos821.S2.MemoryEdge
 
 /-! Expanded histories record births before global distinctness is imposed. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

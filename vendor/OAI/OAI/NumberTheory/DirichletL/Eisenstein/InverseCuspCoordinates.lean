@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.BesselDerivatives
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.BesselDerivatives
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.FredholmAlternative
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.FredholmAlternative
+
+@[expose] public section
 
 namespace OAI
 
@@ -184,7 +188,7 @@ lemma kernelRegularPencil_center_isUnit : IsUnit (kernelRegularPencil (8/9:ℂ))
       kernelThetaNull.starProjection_apply_mem u
     rw [hz,sub_zero]
 
-private abbrev endomorphismNormedSpace (E : Type*) [NormedAddCommGroup E]
+abbrev endomorphismNormedSpace (E : Type*) [NormedAddCommGroup E]
     [NormedSpace ℂ E] : NormedSpace ℂ (E →L[ℂ] E) := inferInstance
 
 local instance : NormedSpace ℂ (kernelThetaRegular →L[ℂ] kernelThetaRegular) :=
@@ -214,7 +218,7 @@ lemma kernelRegularInverse_analyticAt :
     (kernelRegularPencil (8/9)) kernelRegularPencil_center_isUnit
   exact hi.comp_of_eq (kernelRegularPencil_analyticAt (8/9)) rfl
 
-private def continuousLinearSandwich {H G : Type*}
+def continuousLinearSandwich {H G : Type*}
     [NormedAddCommGroup H] [NormedSpace ℂ H]
     [NormedAddCommGroup G] [NormedSpace ℂ G]
     (A : H →L[ℂ] G) (B : G →L[ℂ] H) :

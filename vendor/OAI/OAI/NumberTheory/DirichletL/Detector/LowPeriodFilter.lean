@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowPeriodSupport
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowPeriodSupport
+
+@[expose] public section
 
 namespace OAI
 

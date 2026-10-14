@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.FixedCuspBranches
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.FixedCuspBranches
+
+@[expose] public section
 
 namespace OAI
 

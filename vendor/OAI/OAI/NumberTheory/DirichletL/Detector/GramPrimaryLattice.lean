@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramGcdSource
-import OAI.NumberTheory.DirichletL.Detector.LowPuncture
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramGcdSource
+public import OAI.NumberTheory.DirichletL.Detector.LowPuncture
+
+@[expose] public section
 
 namespace OAI
 

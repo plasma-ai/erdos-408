@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.WidthRanges
-import OAI.NumberTheory.DirichletL.Energy.FirstLiveAdmission
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.WidthRanges
+public import OAI.NumberTheory.DirichletL.Energy.FirstLiveAdmission
+
+@[expose] public section
 
 namespace OAI
 

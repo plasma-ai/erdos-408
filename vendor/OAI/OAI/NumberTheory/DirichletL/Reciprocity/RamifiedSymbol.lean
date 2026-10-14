@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reciprocity.CubicJacobi
-import OAI.NumberTheory.DirichletL.GaussSum.ReflectionBrackets
+module
+
+public import OAI.NumberTheory.DirichletL.Reciprocity.CubicJacobi
+public import OAI.NumberTheory.DirichletL.GaussSum.ReflectionBrackets
+
+@[expose] public section
 
 namespace OAI
 

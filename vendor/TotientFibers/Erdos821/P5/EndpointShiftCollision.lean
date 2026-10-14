@@ -1,4 +1,8 @@
-import Erdos821.P5.EndpointCollision
+module
+
+public import Erdos821.P5.EndpointCollision
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

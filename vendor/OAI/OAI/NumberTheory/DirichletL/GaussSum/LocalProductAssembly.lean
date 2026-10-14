@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Cusp.MatrixPhases
-import OAI.NumberTheory.DirichletL.GaussSum.SexticNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Cusp.MatrixPhases
+public import OAI.NumberTheory.DirichletL.GaussSum.SexticNormalization
+
+@[expose] public section
 
 namespace OAI
 
@@ -296,7 +300,7 @@ section
 
 open AddChar MulChar
 
-private noncomputable def localA5Kernel (P : Ideal O) [P.IsMaximal]
+noncomputable def localA5Kernel (P : Ideal O) [P.IsMaximal]
     (hgood : lambda ∉ P) (ψ : AddChar (O ⧸ P) ℂ)
     (j : ℕ) (σ : (O ⧸ P)ˣ) (ε x h : O ⧸ P) : ℂ :=
   let χ := canonicalSextic P hgood
@@ -307,14 +311,14 @@ private noncomputable def localA5Kernel (P : Ideal O) [P.IsMaximal]
     (((χ⁻¹) ^ 2) ((σ : O ⧸ P) * h)) *
     ψ ((ε * x) * h⁻¹)
 
-private theorem localA5Kernel_zero (P : Ideal O) [P.IsMaximal]
+theorem localA5Kernel_zero (P : Ideal O) [P.IsMaximal]
     (hgood : lambda ∉ P) (ψ : AddChar (O ⧸ P) ℂ)
     (j : ℕ) (σ : (O ⧸ P)ˣ) (ε x : O ⧸ P) :
     localA5Kernel P hgood ψ j σ ε x 0 =
       if j = 0 then 1 - (Nat.card (O ⧸ P) : ℂ)⁻¹ else 0 := by
   simp [localA5Kernel]
 
-private theorem localA5Kernel_active_eq_raw (P : Ideal O) [P.IsMaximal]
+theorem localA5Kernel_active_eq_raw (P : Ideal O) [P.IsMaximal]
     (hgood : lambda ∉ P) (ψ : AddChar (O ⧸ P) ℂ)
     (j : ℕ) (σ : (O ⧸ P)ˣ) (ε x : O ⧸ P) :
     (∑ u : (O ⧸ P)ˣ, localA5Kernel P hgood ψ j σ ε x u) =
@@ -335,7 +339,7 @@ private theorem localA5Kernel_active_eq_raw (P : Ideal O) [P.IsMaximal]
     Units.val_inv_eq_inv_val]
   ring
 
-private noncomputable def localA5Output (P : Ideal O) [P.IsMaximal]
+noncomputable def localA5Output (P : Ideal O) [P.IsMaximal]
     (hgood : lambda ∉ P) (ψ : AddChar (O ⧸ P) ℂ)
     (j : ℕ) (σ : (O ⧸ P)ˣ) (ε x : O ⧸ P) : ℂ :=
   let χ := canonicalSextic P hgood
@@ -353,7 +357,7 @@ private noncomputable def localA5Output (P : Ideal O) [P.IsMaximal]
         gaussSum (χ ^ (j + 2)) ψ * (χ ^ (j + 2))⁻¹ ε) *
       (χ ^ (j + 2))⁻¹ x
 
-private theorem localA5Kernel_active_eq_output (P : Ideal O) [P.IsMaximal]
+theorem localA5Kernel_active_eq_output (P : Ideal O) [P.IsMaximal]
     (hgood : lambda ∉ P) (hchar : ringChar (O ⧸ P) ≠ 2)
     (ψ : AddChar (O ⧸ P) ℂ) (hψ : ψ ≠ 1)
     (j : ℕ) (hj6 : j < 6)
@@ -554,13 +558,13 @@ end ActualEisensteinCubic
 
 namespace PoissonFirstLocal
 
-private def localA (ε : Bool) (p : ℕ) : ℕ := if ε then p else 1
-private def localC (parityBit ε₁ ε₂ : Bool) (p : ℕ) : ℕ :=
+def localA (ε : Bool) (p : ℕ) : ℕ := if ε then p else 1
+def localC (parityBit ε₁ ε₂ : Bool) (p : ℕ) : ℕ :=
   if localE parityBit ε₁ ε₂ = 0 then 1 else p
-private def localCorrectionE (parityBit ε₁ ε₂ : Bool) (p : ℕ) : ℕ :=
+def localCorrectionE (parityBit ε₁ ε₂ : Bool) (p : ℕ) : ℕ :=
   if parityBit then localA ε₁ p * localA ε₂ p else 1
-private def localS (parityBit : Bool) (p : ℕ) : ℕ := if parityBit then p else 1
-private def localJ2 (parityBit ε₁ ε₂ : Bool) (p : ℕ) : ℕ :=
+def localS (parityBit : Bool) (p : ℕ) : ℕ := if parityBit then p else 1
+def localJ2 (parityBit ε₁ ε₂ : Bool) (p : ℕ) : ℕ :=
   if !parityBit && ε₁ && ε₂ then p else 1
 
 theorem first_poisson_local_scale_identity

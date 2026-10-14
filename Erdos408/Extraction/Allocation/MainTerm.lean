@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Allocation.TwoSided
+module
+
+public import Erdos408.Extraction.Allocation.TwoSided
 
 /-!
 # The signed expansion of the retained patterns
@@ -12,6 +14,8 @@ On the retained patterns the clipped-core sum
 are at most `4^{|𝒞|} · 2^K 2^{K N/K}` terms, each with coefficient at most
 `1` in absolute value.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

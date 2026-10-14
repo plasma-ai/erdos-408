@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.Counting
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Counting
+
+@[expose] public section
 
 namespace OAI
 

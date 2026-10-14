@@ -1,5 +1,9 @@
-import Erdos821.P4Probe.ProjectionSelector
-import Erdos821.P4Probe.ProjectionTasks
+module
+
+public import Erdos821.P4Probe.ProjectionSelector
+public import Erdos821.P4Probe.ProjectionTasks
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

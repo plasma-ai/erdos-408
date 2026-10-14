@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramCanonicalSource
-import OAI.NumberTheory.DirichletL.Moments.Tail
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramCanonicalSource
+public import OAI.NumberTheory.DirichletL.Moments.Tail
+
+@[expose] public section
 
 namespace OAI
 

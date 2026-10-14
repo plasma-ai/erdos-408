@@ -1,4 +1,9 @@
-import OAI.NumberTheory.PrimeGaps.AdditiveSieve
+module
+
+public import OAI.NumberTheory.PrimeGaps.AdditiveSieve
+public import Mathlib.Analysis.Fourier.ZMod
+
+@[expose] public section
 
 namespace OAI
 

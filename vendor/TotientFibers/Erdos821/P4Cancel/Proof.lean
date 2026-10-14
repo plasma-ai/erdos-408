@@ -1,5 +1,10 @@
-import Erdos821.P4Cancel.Reindex
-import Erdos821.P4Bridge.Bridge
+module
+
+public import Erdos821.P4Cancel.Reindex
+public import Erdos821.P4Bridge.Bridge
+public import Mathlib.Algebra.Order.Ring.Star
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

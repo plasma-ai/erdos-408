@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicAssembly
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplificationChoice
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicAssembly
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplificationChoice
+
+@[expose] public section
 
 namespace OAI
 

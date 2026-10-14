@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalScalar
-import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalLedger
-import OAI.NumberTheory.DirichletL.Moments.FirstSourceConductorCaps
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalScalar
+public import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalLedger
+public import OAI.NumberTheory.DirichletL.Moments.FirstSourceConductorCaps
+
+@[expose] public section
 
 namespace OAI
 

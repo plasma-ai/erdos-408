@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CompactProfileFamily
+module
+
+public import OAI.NumberTheory.DirichletL.CompactProfileFamily
+
+@[expose] public section
 
 namespace OAI
 

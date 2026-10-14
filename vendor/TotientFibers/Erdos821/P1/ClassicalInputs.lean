@@ -1,11 +1,15 @@
-import Erdos821.P1.PrimeProgressions
-import Erdos821.P1.Mertens
-import Erdos821.P1.LargeSieve
-import Erdos821.Classical.DirichletMean
-import Erdos821.Classical.FourierSeparation
-import Erdos821.Classical.DerivativeTests
-import Erdos821.Classical.DivisorMoments
-import Erdos821.Classical.HarmonicCharacters
+module
+
+public import Erdos821.P1.PrimeProgressions
+public import Erdos821.P1.Mertens
+public import Erdos821.P1.LargeSieve
+public import Erdos821.Classical.DirichletMean
+public import Erdos821.Classical.FourierSeparation
+public import Erdos821.Classical.DerivativeTests
+public import Erdos821.Classical.DivisorMoments
+public import Erdos821.Classical.HarmonicCharacters
+
+@[expose] public section
 
 namespace Erdos821.P1
 

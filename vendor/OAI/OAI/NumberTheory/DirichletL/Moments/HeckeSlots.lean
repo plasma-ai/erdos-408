@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.HeckeHeight
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.HeckeHeight
+
+@[expose] public section
 
 namespace OAI
 

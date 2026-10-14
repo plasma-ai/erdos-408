@@ -1,9 +1,13 @@
-import OAI.NumberTheory.DirichletL.ContinuationContour
-import OAI.NumberTheory.DirichletL.Hecke.Origin
-import OAI.NumberTheory.DirichletL.Hecke.RayFamily
-import OAI.NumberTheory.DirichletL.Detector.Physical
-import OAI.NumberTheory.DirichletL.Detector.RadialMellin
-import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+module
+
+public import OAI.NumberTheory.DirichletL.ContinuationContour
+public import OAI.NumberTheory.DirichletL.Hecke.Origin
+public import OAI.NumberTheory.DirichletL.Hecke.RayFamily
+public import OAI.NumberTheory.DirichletL.Detector.Physical
+public import OAI.NumberTheory.DirichletL.Detector.RadialMellin
+public import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+
+@[expose] public section
 
 namespace OAI
 

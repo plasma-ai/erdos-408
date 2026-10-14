@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.Conductor
-import OAI.NumberTheory.DirichletL.Hecke.LocalRamification
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.Conductor
+public import OAI.NumberTheory.DirichletL.Hecke.LocalRamification
+
+@[expose] public section
 
 namespace OAI
 

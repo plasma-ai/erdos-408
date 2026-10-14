@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Lift
-import Erdos408.OneSided.Moment.Edge.Operator
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds
-import Mathlib.NumberTheory.Harmonic.Bounds
+module
+
+public import Erdos408.OneSided.Lift
+public import Erdos408.OneSided.Moment.Edge.Operator
+public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds
+public import Mathlib.NumberTheory.Harmonic.Bounds
 
 /-!
 # The bilinear Gram bound
@@ -20,6 +22,8 @@ integers.
 * `kerLe_detPhase`: the determinant matrix `e(ϑ (h₁ l₂ - l₁ h₂))` on a box is a tensor product
   of two such matrices, so its norm is at most the product of their norms.
 -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Poisson.QuadraticProfiles
+module
+
+public import OAI.NumberTheory.DirichletL.Poisson.QuadraticProfiles
+
+@[expose] public section
 
 namespace OAI
 

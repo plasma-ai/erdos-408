@@ -1,7 +1,11 @@
-import Erdos821.P3High.Proof
-import Erdos821.S2Empty.Final
+module
+
+public import Erdos821.P3High.Proof
+public import Erdos821.S2Empty.Final
 
 /-! The exact frozen high-rank task. -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

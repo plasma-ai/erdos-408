@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedEnergy
-import OAI.NumberTheory.DirichletL.Moments.SecondDivisorSupport
-import OAI.NumberTheory.DirichletL.Moments.MobiusHarmonicMass
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
-import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedEnergy
+public import OAI.NumberTheory.DirichletL.Moments.SecondDivisorSupport
+public import OAI.NumberTheory.DirichletL.Moments.MobiusHarmonicMass
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
+public import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
+
+@[expose] public section
 
 namespace OAI
 

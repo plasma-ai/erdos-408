@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Defs
-import Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas
+module
+
+public import Erdos408.Extraction.Defs
+public import Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas
 
 /-!
 # The cutoff `Ψ(y) = y Φ(y)`
@@ -11,6 +13,8 @@ Leibniz, `Ψ^{(r+1)} = y Φ^{(r+1)} + (r + 1) Φ^{(r)}`. Since `Φ` vanishes off
 Hence `Ψ` lies in the cutoff class with `M'_r = κ M_r + r M_{r-1}` and
 `C_Ψ = max C_Φ 0`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

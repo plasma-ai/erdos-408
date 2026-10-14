@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.ReciprocityCRT
-import OAI.NumberTheory.DirichletL.Detector.CubicGaussCRT
-import OAI.NumberTheory.DirichletL.Detector.CompletedCRTPhase
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.ReciprocityCRT
+public import OAI.NumberTheory.DirichletL.Detector.CubicGaussCRT
+public import OAI.NumberTheory.DirichletL.Detector.CompletedCRTPhase
+
+@[expose] public section
 
 namespace OAI
 

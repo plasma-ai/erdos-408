@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalSource
-import OAI.NumberTheory.DirichletL.Moments.CommonHeightEnvelope
-import OAI.NumberTheory.DirichletL.Moments.HeckeWindowEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalSource
+public import OAI.NumberTheory.DirichletL.Moments.CommonHeightEnvelope
+public import OAI.NumberTheory.DirichletL.Moments.HeckeWindowEnergy
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonMass
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonGates
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalMass
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalGates
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonMass
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonGates
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalMass
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalGates
+
+@[expose] public section
 
 namespace OAI
 

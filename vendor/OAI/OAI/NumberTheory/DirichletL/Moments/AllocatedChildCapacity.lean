@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalSource
-import OAI.NumberTheory.DirichletL.Moments.CommonMaskChildCapacity
-import OAI.NumberTheory.DirichletL.Moments.CommonRawScale
-import OAI.NumberTheory.DirichletL.Moments.LiveCapacity
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalSource
+public import OAI.NumberTheory.DirichletL.Moments.CommonMaskChildCapacity
+public import OAI.NumberTheory.DirichletL.Moments.CommonRawScale
+public import OAI.NumberTheory.DirichletL.Moments.LiveCapacity
+
+@[expose] public section
 
 namespace OAI
 

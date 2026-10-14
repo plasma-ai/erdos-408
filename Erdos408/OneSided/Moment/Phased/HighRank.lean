@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Bands
-import Erdos408.OneSided.Moment.Phased.EdgeAtoms
-import Erdos408.OneSided.Moment.Phased.GhostAtoms
+module
+
+public import Erdos408.OneSided.Bands
+public import Erdos408.OneSided.Moment.Phased.EdgeAtoms
+public import Erdos408.OneSided.Moment.Phased.GhostAtoms
 
 /-!
 # The high-rank absolute bound
@@ -27,6 +29,8 @@ of every block carries a prescription (`blockPres`).
   `Δ ≤ 4 exp(-L^{α₋})`; with `B ≤ L³` the edge rows are `L^{O(1)}`, the ghost rows `O(1)`, and
   the initial slots `4^{K(M+1)}` with `M ≤ N`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

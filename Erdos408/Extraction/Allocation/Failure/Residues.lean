@@ -1,6 +1,8 @@
-import Erdos408.Extraction.Defs
-import Mathlib.Data.Int.CardIntervalMod
-import Mathlib.Data.Nat.ChineseRemainder
+module
+
+public import Erdos408.Extraction.Defs
+public import Mathlib.Data.Int.CardIntervalMod
+public import Mathlib.Data.Nat.ChineseRemainder
 
 /-!
 # Residue classes modulo products of distinct primes
@@ -10,6 +12,8 @@ import Mathlib.Data.Nat.ChineseRemainder
 * An interval `(A, t]` contains `(t - A)/M + O(1)` integers of each residue
   class modulo `M`; hence `(t - A)/∏_{p ∈ V} p + O(1)` solutions of each system.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

@@ -1,12 +1,16 @@
-import Erdos821.P5MarkedEnergy.FinalNumeric
-import Erdos821.P5MarkedEnergy.Decomposition
-import Erdos821.P5Energy.Final
-import Erdos821.P5.MellinCutoffBridge
-import Erdos821.P5.ExceptionalTheorem
-import Erdos821.P5.LongRoughProof
-import Erdos821.P1.ClassicalInputs
+module
+
+public import Erdos821.P5MarkedEnergy.FinalNumeric
+public import Erdos821.P5MarkedEnergy.Decomposition
+public import Erdos821.P5Energy.Final
+public import Erdos821.P5.MellinCutoffBridge
+public import Erdos821.P5.ExceptionalTheorem
+public import Erdos821.P5.LongRoughProof
+public import Erdos821.P1.ClassicalInputs
 
 /-! Proof of the frozen `MarkedEndpointEnergyTask`. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorZeros
-import OAI.NumberTheory.DirichletL.Hecke.Conjugation
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorZeros
+public import OAI.NumberTheory.DirichletL.Hecke.Conjugation
+
+@[expose] public section
 
 namespace OAI
 

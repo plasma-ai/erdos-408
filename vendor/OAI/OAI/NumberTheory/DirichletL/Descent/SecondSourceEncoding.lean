@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.CubeSource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CubeSource
+
+@[expose] public section
 
 namespace OAI
 

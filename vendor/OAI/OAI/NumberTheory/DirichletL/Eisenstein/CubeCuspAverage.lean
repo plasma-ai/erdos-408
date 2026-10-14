@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.CoverTrace
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.CoverTrace
+
+@[expose] public section
 
 namespace OAI
 

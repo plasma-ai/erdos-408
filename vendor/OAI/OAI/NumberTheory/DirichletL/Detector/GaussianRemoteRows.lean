@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianCrude
-import OAI.NumberTheory.DirichletL.Detector.GaussianTailBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianCrude
+public import OAI.NumberTheory.DirichletL.Detector.GaussianTailBudget
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,8 +1,12 @@
-import Erdos821.P3High.PerAssignment
+module
+
+public import Erdos821.P3High.PerAssignment
 
 /-! A birth event is covered by the prescriptions of block values (one value per block, in
 its pivot's group); summing the prescription bounds over the block values gives one tilted
 moment per block, hence `(C / Pstar) ^ rank`. -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

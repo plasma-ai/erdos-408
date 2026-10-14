@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationAggregate
-import OAI.NumberTheory.DirichletL.Moments.PrimePool
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationAggregate
+public import OAI.NumberTheory.DirichletL.Moments.PrimePool
+
+@[expose] public section
 
 namespace OAI
 

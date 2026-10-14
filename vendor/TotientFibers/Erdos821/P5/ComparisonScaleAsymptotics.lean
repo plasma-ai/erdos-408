@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparisonCellCounts
-import Erdos821.S34.ComparisonGeometry
+module
+
+public import Erdos821.P5.ComparisonCellCounts
+public import Erdos821.S34.ComparisonGeometry
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

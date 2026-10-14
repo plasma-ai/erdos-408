@@ -1,4 +1,8 @@
-import Erdos821.S34.ProbabilityPairing
+module
+
+public import Erdos821.S34.ProbabilityPairing
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

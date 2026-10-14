@@ -1,6 +1,10 @@
-import Erdos821.S2.SpanSumTask
+module
+
+public import Erdos821.S2.SpanSumTask
 
 /-! Sum independent finite prime lifespans and restore their baseline factors. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramCommonParam
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramCommonParam
+
+@[expose] public section
 
 namespace OAI
 

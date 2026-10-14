@@ -1,5 +1,9 @@
-import Erdos821.S34.OwnedLeafProofs
-import Erdos821.S34.AtomBound
+module
+
+public import Erdos821.S34.OwnedLeafProofs
+public import Erdos821.S34.AtomBound
+
+@[expose] public section
 
 set_option autoImplicit false
 

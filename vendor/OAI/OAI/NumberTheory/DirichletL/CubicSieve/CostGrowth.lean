@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.B2Growth
-import OAI.NumberTheory.DirichletL.CubicSieve.DescendantBounds
-import OAI.NumberTheory.DirichletL.CubicDyadicDecay
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.B2Growth
+public import OAI.NumberTheory.DirichletL.CubicSieve.DescendantBounds
+public import OAI.NumberTheory.DirichletL.CubicDyadicDecay
+
+@[expose] public section
 
 namespace OAI
 

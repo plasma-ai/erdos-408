@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.DivisorRawEnergy
-import OAI.NumberTheory.DirichletL.Moments.SlotRatios
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DivisorRawEnergy
+public import OAI.NumberTheory.DirichletL.Moments.SlotRatios
+
+@[expose] public section
 
 namespace OAI
 

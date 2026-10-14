@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalSource
-import OAI.NumberTheory.DirichletL.Moments.CommonMaskRadialEnergy
-import OAI.NumberTheory.DirichletL.Moments.SecondOriginalChildren
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalSource
+public import OAI.NumberTheory.DirichletL.Moments.CommonMaskRadialEnergy
+public import OAI.NumberTheory.DirichletL.Moments.SecondOriginalChildren
+
+@[expose] public section
 
 namespace OAI
 

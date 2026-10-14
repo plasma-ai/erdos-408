@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsPrime
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsPrime
+
+@[expose] public section
 
 namespace OAI
 

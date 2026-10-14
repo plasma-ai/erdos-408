@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceChildProfiles
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceChildProfiles
+
+@[expose] public section
 
 namespace OAI
 

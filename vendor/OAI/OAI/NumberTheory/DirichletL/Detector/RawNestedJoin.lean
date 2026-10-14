@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.RawRadialJoin
-import OAI.NumberTheory.DirichletL.Detector.OuterIndex
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RawRadialJoin
+public import OAI.NumberTheory.DirichletL.Detector.OuterIndex
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.HeckeWindowEnergy
-import OAI.NumberTheory.DirichletL.Moments.PlainEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.HeckeWindowEnergy
+public import OAI.NumberTheory.DirichletL.Moments.PlainEnergy
+
+@[expose] public section
 
 namespace OAI
 

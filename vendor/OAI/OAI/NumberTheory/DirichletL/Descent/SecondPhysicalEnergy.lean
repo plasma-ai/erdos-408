@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondAllIntegral
-import OAI.NumberTheory.DirichletL.Descent.SecondBalancedPhysical
-import OAI.NumberTheory.DirichletL.Descent.SecondBalancedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondAllIntegral
+public import OAI.NumberTheory.DirichletL.Descent.SecondBalancedPhysical
+public import OAI.NumberTheory.DirichletL.Descent.SecondBalancedSource
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,11 @@
-import Erdos821.Blueprint.Graph
+module
+
+public import Erdos821.Blueprint.Graph
+public import Mathlib.Algebra.Order.Star.Real
 
 /-! Schur bounds on arbitrary state spaces, proved on finite supports. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

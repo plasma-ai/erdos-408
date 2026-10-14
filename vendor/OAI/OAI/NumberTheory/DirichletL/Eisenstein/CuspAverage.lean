@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.RationalTranslations
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.RationalTranslations
+
+@[expose] public section
 
 namespace OAI
 

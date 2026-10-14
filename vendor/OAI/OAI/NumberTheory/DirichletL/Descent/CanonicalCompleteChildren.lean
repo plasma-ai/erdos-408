@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongCosts
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongHeightBin
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongCosts
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongHeightBin
+
+@[expose] public section
 
 namespace OAI
 

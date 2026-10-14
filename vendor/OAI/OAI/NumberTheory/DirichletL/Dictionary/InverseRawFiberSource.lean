@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialPhysicalSlots
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRawFiber
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialPhysicalSlots
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRawFiber
+
+@[expose] public section
 
 namespace OAI
 

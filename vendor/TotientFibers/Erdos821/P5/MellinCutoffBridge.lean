@@ -1,4 +1,8 @@
-import Erdos821.P5Mellin.MellinCutoff
+module
+
+public import Erdos821.P5Mellin.MellinCutoff
+
+@[expose] public section
 
 namespace Erdos821.P5Core
 

@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyChosenData
-import OAI.NumberTheory.DirichletL.Detector.DetectorInverseFields
-import OAI.NumberTheory.DirichletL.Detector.DetectorPlainMarkedFineField
-import OAI.NumberTheory.DirichletL.Detector.DetectorPlainUnmarkedRestrictedField
-import OAI.NumberTheory.DirichletL.Energy.CappedWidthInduction
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyChosenData
+public import OAI.NumberTheory.DirichletL.Detector.DetectorInverseFields
+public import OAI.NumberTheory.DirichletL.Detector.DetectorPlainMarkedFineField
+public import OAI.NumberTheory.DirichletL.Detector.DetectorPlainUnmarkedRestrictedField
+public import OAI.NumberTheory.DirichletL.Energy.CappedWidthInduction
+
+@[expose] public section
 
 namespace OAI
 

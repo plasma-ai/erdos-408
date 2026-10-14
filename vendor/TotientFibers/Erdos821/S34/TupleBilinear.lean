@@ -1,5 +1,9 @@
-import Erdos821.S34.ProbabilityDyads
-import Erdos821.S34.BilinearDecayArithmetic
+module
+
+public import Erdos821.S34.ProbabilityDyads
+public import Erdos821.S34.BilinearDecayArithmetic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

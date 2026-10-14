@@ -1,8 +1,12 @@
-import Erdos821.P5MarkedEnergy.FinalSimplify
-import Erdos821.P5MarkedEnergy.Sizes
+module
+
+public import Erdos821.P5MarkedEnergy.FinalSimplify
+public import Erdos821.P5MarkedEnergy.Sizes
 
 /-! The final numerical inequalities: every term of the piece bound is a
 monomial in `L x` of exponent below `-A` once the parameters are chosen. -/
+
+@[expose] public section
 
 noncomputable section
 open Filter Real

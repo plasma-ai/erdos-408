@@ -1,6 +1,10 @@
-import Erdos821.S2.GroupWeights
+module
+
+public import Erdos821.S2.GroupWeights
 
 /-! Literal inverse-edge factors and factorial-normalized ghost factors. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

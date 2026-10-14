@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.OrthantIntegrals
+module
+
+public import OAI.NumberTheory.PrimeGaps.OrthantIntegrals
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Analysis.Divisor
-import Erdos408.TwoSided.Endpoint.Factor.Identity
+module
+
+public import Erdos408.OneSided.Analysis.Divisor
+public import Erdos408.TwoSided.Endpoint.Factor.Identity
 
 /-!
 # Small-prime removal: the pointwise bounds and the mean value
@@ -12,6 +14,8 @@ crude but uniform constants. U7 and U9 are in `Setup.lean`.
 * `card_primeFactors_le_four_mul_log`: `ω(n) ≤ 4L` for `n ≤ x²`.
 * `integral_norm_twistedPoly_sq_le`: the mean value theorem for `twistedPoly`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

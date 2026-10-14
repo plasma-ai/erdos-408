@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.AmplifiedRayDictionary
-import OAI.NumberTheory.DirichletL.Moments.RadialEligibleEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.AmplifiedRayDictionary
+public import OAI.NumberTheory.DirichletL.Moments.RadialEligibleEnergy
+
+@[expose] public section
 
 namespace OAI
 

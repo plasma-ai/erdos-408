@@ -1,5 +1,9 @@
-import Erdos821.S2.TransferenceAssemblyTask
-import Erdos821.P3.PhysicalSchur
+module
+
+public import Erdos821.S2.TransferenceAssemblyTask
+public import Erdos821.P3.PhysicalSchur
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

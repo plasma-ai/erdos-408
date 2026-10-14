@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.CappedWidthInduction
-import OAI.NumberTheory.DirichletL.Energy.SourceCapSchedule
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CappedWidthInduction
+public import OAI.NumberTheory.DirichletL.Energy.SourceCapSchedule
+
+@[expose] public section
 
 namespace OAI
 

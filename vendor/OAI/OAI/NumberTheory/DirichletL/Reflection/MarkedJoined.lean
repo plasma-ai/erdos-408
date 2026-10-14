@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.MarkedOverlap
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedOverlap
+
+@[expose] public section
 
 namespace OAI
 

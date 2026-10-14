@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ActualSecondEnergy
-import OAI.NumberTheory.DirichletL.Descent.SecondFixedFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ActualSecondEnergy
+public import OAI.NumberTheory.DirichletL.Descent.SecondFixedFamily
+
+@[expose] public section
 
 namespace OAI
 

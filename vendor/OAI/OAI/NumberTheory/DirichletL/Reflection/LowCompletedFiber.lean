@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Reflection.LowFrozenEnergy
-import OAI.NumberTheory.DirichletL.Reflection.CompletedCanonicalEnergy
-import OAI.NumberTheory.DirichletL.Reflection.PunctureAbsorption
-import OAI.NumberTheory.DirichletL.Reflection.CompletedFiberSource
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalCellArithmetic
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.LowFrozenEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.CompletedCanonicalEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.PunctureAbsorption
+public import OAI.NumberTheory.DirichletL.Reflection.CompletedFiberSource
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalCellArithmetic
+
+@[expose] public section
 
 namespace OAI
 

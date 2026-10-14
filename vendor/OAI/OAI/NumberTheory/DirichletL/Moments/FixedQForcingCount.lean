@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalCount
-import OAI.NumberTheory.DirichletL.Moments.RankinRadical
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalCount
+public import OAI.NumberTheory.DirichletL.Moments.RankinRadical
+
+@[expose] public section
 
 namespace OAI
 

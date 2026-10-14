@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.CompletedRowsEnergy
-import OAI.NumberTheory.DirichletL.Reflection.PunctureLists
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CompletedRowsEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.PunctureLists
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.PriorityRetainedBound
-import OAI.NumberTheory.DirichletL.Inversion.WholePriorityRetainedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.PriorityRetainedBound
+public import OAI.NumberTheory.DirichletL.Inversion.WholePriorityRetainedSource
+
+@[expose] public section
 
 namespace OAI
 

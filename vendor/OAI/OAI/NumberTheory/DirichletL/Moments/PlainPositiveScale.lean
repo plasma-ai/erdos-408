@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.PlainGlobalEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PlainGlobalEnergy
+
+@[expose] public section
 
 namespace OAI
 

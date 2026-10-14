@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowMoments
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowWindow
-import OAI.NumberTheory.DirichletL.Energy.ReferenceHomogeneous
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowMoments
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowWindow
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceHomogeneous
+
+@[expose] public section
 
 namespace OAI
 

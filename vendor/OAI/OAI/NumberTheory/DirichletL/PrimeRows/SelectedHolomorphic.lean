@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedAnalytic
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedAnalytic
+
+@[expose] public section
 
 namespace OAI
 

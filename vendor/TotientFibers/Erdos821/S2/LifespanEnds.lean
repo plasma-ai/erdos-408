@@ -1,6 +1,11 @@
-import Erdos821.S2.PrimeLifespans
+module
+
+public import Erdos821.S2.PrimeLifespans
+public import Mathlib.Data.Fintype.BigOperators
 
 /-! A finite enumeration of the possible ghost endpoints of an active prime. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

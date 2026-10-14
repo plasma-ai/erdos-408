@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorPlainFiberCount
-import OAI.NumberTheory.DirichletL.Hecke.DetectorCoefficientTransfer
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRowwise
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorPlainFiberCount
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorCoefficientTransfer
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRowwise
+
+@[expose] public section
 
 namespace OAI
 

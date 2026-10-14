@@ -1,4 +1,9 @@
-import OAI.NumberTheory.DirichletL.GaussSum.GlobalScales
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.GlobalScales
+public import Mathlib.Analysis.SpecialFunctions.Log.Base
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondDeletedOriginalBound
-import OAI.NumberTheory.DirichletL.Descent.SecondSectorAssembly
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondDeletedOriginalBound
+public import OAI.NumberTheory.DirichletL.Descent.SecondSectorAssembly
+
+@[expose] public section
 
 namespace OAI
 

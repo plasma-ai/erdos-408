@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowSelectedSum
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowSelectedSum
+
+@[expose] public section
 
 namespace OAI
 

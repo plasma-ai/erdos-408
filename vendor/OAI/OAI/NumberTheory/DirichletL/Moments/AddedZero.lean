@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.ZeroMode
-import OAI.NumberTheory.DirichletL.Moments.GaussEnergy
-import OAI.NumberTheory.DirichletL.Moments.Tail
-import OAI.NumberTheory.DirichletL.Moments.Extraction
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ZeroMode
+public import OAI.NumberTheory.DirichletL.Moments.GaussEnergy
+public import OAI.NumberTheory.DirichletL.Moments.Tail
+public import OAI.NumberTheory.DirichletL.Moments.Extraction
+
+@[expose] public section
 
 namespace OAI
 

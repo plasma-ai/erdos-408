@@ -1,4 +1,6 @@
-import Erdos408.Extraction.TypeII.Taylor
+module
+
+public import Erdos408.Extraction.TypeII.Taylor
 
 /-!
 # One telescoping step of E4
@@ -12,6 +14,8 @@ with `α = [prime, > x^γ] - a_j^0`. Clip `β` at `L³` (the tail is controlled 
 square `∑ β²/n`), cut `(m, n)` into the cells of the grid `λ_a = x^γ (1 + δ)^a`, freeze the
 cutoff on each box, and bound each box by the Type II estimate.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

@@ -1,11 +1,15 @@
-import Erdos821.S2.EdgeTasks
-import Erdos821.S2.CountableSchur
-import Erdos821.S2.MemoryIndices
-import Erdos821.S2.PhysicalCompatibility
-import Erdos821.Leaves
-import Erdos821.P3Edge.RowBound
-import Erdos821.P3Edge.ColumnBound
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+module
+
+public import Erdos821.S2.EdgeTasks
+public import Erdos821.S2.CountableSchur
+public import Erdos821.S2.MemoryIndices
+public import Erdos821.S2.PhysicalCompatibility
+public import Erdos821.Leaves
+public import Erdos821.P3Edge.RowBound
+public import Erdos821.P3Edge.ColumnBound
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+
+@[expose] public section
 
 set_option autoImplicit false
 
@@ -3060,7 +3064,6 @@ theorem promotionContextKernel_sum {F : FixedData} {P : PrimeGroups}
     apply Finset.sum_congr rfl
     intro tr htr
     dsimp [edgeChoiceContextEquiv, f]
-    rfl
   have hsum :
       (∑ ctx : EdgeTransferContext A,
         ∑ πS : OmissionSmallFiber P J F.ell O,
@@ -3213,7 +3216,6 @@ theorem storeOnlyContextKernel_sum {F : FixedData} {P : PrimeGroups}
     intro tr htr
     dsimp [edgeChoiceTargetContextEquiv, edgeChoiceSourceTargetSwapEquiv,
       edgeChoiceContextEquiv, f]
-    rfl
   have hsum :
       (∑ ctx : EdgeTransferContext A,
         ∑ τS : OmissionSmallFiber P J F.ell O,

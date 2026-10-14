@@ -1,7 +1,11 @@
-import Erdos821.S2.LiveValues
-import Erdos821.P3Live.Conservation
+module
+
+public import Erdos821.S2.LiveValues
+public import Erdos821.P3Live.Conservation
 
 /-! A chronological multiset bound: stores and promotions do not create births. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

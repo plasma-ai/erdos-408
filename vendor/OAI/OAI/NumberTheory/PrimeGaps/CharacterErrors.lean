@@ -1,4 +1,13 @@
-import OAI.NumberTheory.PrimeGaps.DetectorMoments
+module
+
+public import OAI.NumberTheory.PrimeGaps.DetectorMoments
+public import Mathlib.Analysis.Complex.Polynomial.Basic
+public import Mathlib.Data.FunLike.Fintype
+public import Mathlib.NumberTheory.DirichletCharacter.Orthogonality
+public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
+public import Mathlib.RingTheory.SimpleRing.Principal
+
+@[expose] public section
 
 namespace OAI
 

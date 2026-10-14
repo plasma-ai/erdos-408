@@ -1,4 +1,7 @@
-import Erdos408.Extraction.Defs
+module
+
+public import Erdos408.Extraction.Defs
+public import Mathlib.Algebra.BigOperators.Field
 
 /-!
 # The decomposition of the proxy sum
@@ -13,6 +16,8 @@ where `G - A` is supported on the candidate-square multiples ("bad") and
 `G - min(G, Λ) ≤ G² / Λ`. The bad sum is bounded by Cauchy–Schwarz, and the
 candidate-square multiples are counted directly.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.IdealBridge
-import OAI.NumberTheory.DirichletL.IdealEuler
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.IdealBridge
+public import OAI.NumberTheory.DirichletL.IdealEuler
+
+@[expose] public section
 
 namespace OAI
 

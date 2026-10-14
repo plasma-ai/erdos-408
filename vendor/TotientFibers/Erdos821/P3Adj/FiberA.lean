@@ -1,6 +1,10 @@
-import Erdos821.P3Adj.Factor
-import Erdos821.P3Adj.Basic
-import Erdos821.P3Adj.Weight
+module
+
+public import Erdos821.P3Adj.Factor
+public import Erdos821.P3Adj.Basic
+public import Erdos821.P3Adj.Weight
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

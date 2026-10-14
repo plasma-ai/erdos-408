@@ -1,4 +1,9 @@
-import Erdos821.S34.BilinearDecayArithmetic
+module
+
+public import Erdos821.S34.BilinearDecayArithmetic
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+
+@[expose] public section
 
 set_option autoImplicit false
 

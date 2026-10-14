@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.LogarithmicControl
-import OAI.NumberTheory.DirichletL.Hecke.LogarithmicInput
+module
+
+public import OAI.NumberTheory.DirichletL.LogarithmicControl
+public import OAI.NumberTheory.DirichletL.Hecke.LogarithmicInput
+
+@[expose] public section
 
 namespace OAI
 

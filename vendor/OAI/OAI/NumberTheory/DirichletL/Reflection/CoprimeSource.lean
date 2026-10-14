@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.KernelActualSource
-import OAI.NumberTheory.DirichletL.Reflection.WeightedSourceSum
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.KernelActualSource
+public import OAI.NumberTheory.DirichletL.Reflection.WeightedSourceSum
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.OriginalSource
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowWindow
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowReflectionError
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.OriginalSource
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowWindow
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowReflectionError
+
+@[expose] public section
 
 namespace OAI
 

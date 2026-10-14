@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.Rows
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.Rows
+
+@[expose] public section
 
 namespace OAI
 

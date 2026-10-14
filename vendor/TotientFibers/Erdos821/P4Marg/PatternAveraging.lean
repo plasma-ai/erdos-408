@@ -1,6 +1,10 @@
-import Erdos821.P4Probe.PatternAveragingTask
-import Erdos821.P4Probe.PatternMasses
-import Erdos821.P4Probe.BigDuality
+module
+
+public import Erdos821.P4Probe.PatternAveragingTask
+public import Erdos821.P4Probe.PatternMasses
+public import Erdos821.P4Probe.BigDuality
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

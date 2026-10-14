@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.PairedDetectors
+module
+
+public import OAI.NumberTheory.PrimeGaps.PairedDetectors
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,8 @@
-import Erdos408.TwoSided.Defs
-import Erdos821.Classical.FourierSeparation
-import Erdos821.P5Mellin.MellinCutoff
+module
+
+public import Erdos408.TwoSided.Defs
+public import Erdos821.Classical.FourierSeparation
+public import Erdos821.P5Mellin.MellinCutoff
 
 /-!
 # The Mellin cutoff adapter
@@ -12,6 +14,8 @@ satisfies `CutoffBound` at `C = 1`, `lo = κ⁻¹`, `hi = κ`, `bounds j = max (
 `exists_mellinCutoff` (`Graph/Insertion.lean`) transports the densities to `ℝ` along
 `t ↦ (fun _ => t)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.InsertionMellin
 

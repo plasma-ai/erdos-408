@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.Dyadic
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.Dyadic
+
+@[expose] public section
 
 namespace OAI
 

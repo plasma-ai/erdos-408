@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.PlainWindowEnergy
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalKernel
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PlainWindowEnergy
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalKernel
+
+@[expose] public section
 
 namespace OAI
 

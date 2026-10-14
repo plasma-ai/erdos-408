@@ -1,7 +1,11 @@
-import Erdos821.S2.LiveGrowth
-import Erdos821.S2.ResiduePaths
+module
+
+public import Erdos821.S2.LiveGrowth
+public import Erdos821.S2.ResiduePaths
 
 /-! Forgetting a distinct memory history gives a compatible physical label path. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

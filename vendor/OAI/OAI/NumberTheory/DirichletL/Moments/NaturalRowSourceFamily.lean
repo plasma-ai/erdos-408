@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalRowSourceMask
-import OAI.NumberTheory.DirichletL.Moments.NonprincipalGate
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalRowSourceMask
+public import OAI.NumberTheory.DirichletL.Moments.NonprincipalGate
+
+@[expose] public section
 
 namespace OAI
 

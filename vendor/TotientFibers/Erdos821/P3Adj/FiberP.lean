@@ -1,5 +1,9 @@
-import Erdos821.P3Adj.Factor
-import Erdos821.P3Adj.Basic
+module
+
+public import Erdos821.P3Adj.Factor
+public import Erdos821.P3Adj.Basic
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

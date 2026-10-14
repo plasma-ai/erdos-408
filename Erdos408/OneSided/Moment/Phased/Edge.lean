@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Bands
-import Erdos408.OneSided.Decomposition.Pair
-import Erdos408.OneSided.Moment.Chain
-import Erdos408.OneSided.Moment.Phased.Neighbor
+module
+
+public import Erdos408.OneSided.Bands
+public import Erdos408.OneSided.Decomposition.Pair
+public import Erdos408.OneSided.Moment.Chain
+public import Erdos408.OneSided.Moment.Phased.Neighbor
 
 /-!
 # The crude edge bound
@@ -32,6 +34,8 @@ weight `1`.
 * `exists_edgeChoiceOp_normLe`: eventually, for `B ≤ L³` and `N = 2R`, the norm is at most
   `L^{C_e}` uniformly in the root box.
 -/
+
+@[expose] public section
 
 noncomputable section
 

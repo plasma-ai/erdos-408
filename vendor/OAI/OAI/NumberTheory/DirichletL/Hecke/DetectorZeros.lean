@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.BoundaryIntegration
-import OAI.NumberTheory.DirichletL.Detector
-import Mathlib.Analysis.Analytic.Order
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.BoundaryIntegration
+public import OAI.NumberTheory.DirichletL.Detector
+public import Mathlib.Analysis.Analytic.Order
+
+@[expose] public section
 
 namespace OAI
 

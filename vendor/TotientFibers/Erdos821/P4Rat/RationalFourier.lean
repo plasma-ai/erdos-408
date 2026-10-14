@@ -1,5 +1,9 @@
-import Erdos821.Blueprint.Analytic
-import OAI.NumberTheory.PrimeGaps.MultiplicativeSieve
+module
+
+public import Erdos821.Blueprint.Analytic
+public import OAI.NumberTheory.PrimeGaps.MultiplicativeSieve
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 1000000

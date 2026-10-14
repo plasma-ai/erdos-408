@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.InverseCorrespondence
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.InverseCorrespondence
+
+@[expose] public section
 
 namespace OAI
 

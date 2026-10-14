@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.ScatteringCoefficients
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.ScatteringCoefficients
+
+@[expose] public section
 
 namespace OAI
 

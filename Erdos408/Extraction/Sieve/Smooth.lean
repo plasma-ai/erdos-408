@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Sieve.Basic
-import Mathlib.Data.Int.CardIntervalMod
+module
+
+public import Erdos408.Extraction.Sieve.Basic
+public import Mathlib.Data.Int.CardIntervalMod
 
 /-!
 # Smooth sums in progressions
@@ -10,6 +12,8 @@ variation `∑ |f(m) - f(m-1)|`, uniformly in `q`. By the Chinese remainder
 theorem this applies to the conditions `r ∣ u + 1`, `d ∣ u` with `(r, d) = 1`.
 For a cutoff, `f(u) = Φ(u/x)` has total variation `≤ κ M₁ T^{C_Φ}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

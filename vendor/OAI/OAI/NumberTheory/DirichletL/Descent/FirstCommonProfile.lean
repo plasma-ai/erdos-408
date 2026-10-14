@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstNominal
-import OAI.NumberTheory.DirichletL.Descent.FirstCoupledReindex
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstNominal
+public import OAI.NumberTheory.DirichletL.Descent.FirstCoupledReindex
+
+@[expose] public section
 
 namespace OAI
 

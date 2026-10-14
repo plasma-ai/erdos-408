@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowGramPoisson
-import OAI.NumberTheory.DirichletL.Moments.SecondDiagonal
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowGramPoisson
+public import OAI.NumberTheory.DirichletL.Moments.SecondDiagonal
+
+@[expose] public section
 
 namespace OAI
 

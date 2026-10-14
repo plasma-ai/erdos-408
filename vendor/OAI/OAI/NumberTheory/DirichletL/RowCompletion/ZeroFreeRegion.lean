@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.BranchDecoding
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.BranchDecoding
+
+@[expose] public section
 
 namespace OAI
 

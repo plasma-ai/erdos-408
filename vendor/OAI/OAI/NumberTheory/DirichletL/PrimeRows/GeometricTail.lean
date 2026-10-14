@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.LargeDyad
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.LargeDyad
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,9 +1,13 @@
-import Mathlib.NumberTheory.MulChar.Lemmas
-import Mathlib.Analysis.Complex.Norm
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Tactic.Group
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.NormNum
+module
+
+public import Mathlib.NumberTheory.MulChar.Lemmas
+public import Mathlib.Analysis.Complex.Norm
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Tactic.Group
+public import Mathlib.Tactic.Ring
+public import Mathlib.Tactic.NormNum
+
+@[expose] public section
 
 namespace OAI
 

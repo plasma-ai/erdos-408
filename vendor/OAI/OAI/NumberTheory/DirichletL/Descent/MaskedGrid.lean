@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.ExtractedGrid
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ExtractedGrid
+
+@[expose] public section
 
 namespace OAI
 

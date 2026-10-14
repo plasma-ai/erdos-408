@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Detector.CorrectionBounds
-import Mathlib.Analysis.SpecialFunctions.Complex.LogDeriv
-import Mathlib.Analysis.SpecialFunctions.Complex.LogBounds
-import Mathlib.Analysis.SpecialFunctions.Exp
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CorrectionBounds
+public import Mathlib.Analysis.SpecialFunctions.Complex.LogDeriv
+public import Mathlib.Analysis.SpecialFunctions.Complex.LogBounds
+public import Mathlib.Analysis.SpecialFunctions.Exp
+
+@[expose] public section
 
 namespace OAI
 

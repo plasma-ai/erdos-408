@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.RayCoefficients
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.RayCoefficients
+
+@[expose] public section
 
 namespace OAI
 

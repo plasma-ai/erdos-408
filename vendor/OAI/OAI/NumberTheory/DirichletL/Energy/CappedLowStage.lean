@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.NaturalLowStage
-import OAI.NumberTheory.DirichletL.Energy.CappedRequests
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.NaturalLowStage
+public import OAI.NumberTheory.DirichletL.Energy.CappedRequests
+
+@[expose] public section
 
 namespace OAI
 

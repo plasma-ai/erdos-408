@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramMean
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramMean
+
+@[expose] public section
 
 namespace OAI
 

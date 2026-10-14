@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.PriorityProfile
-import OAI.NumberTheory.DirichletL.Inversion.SecondSourceBlocks
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.PriorityProfile
+public import OAI.NumberTheory.DirichletL.Inversion.SecondSourceBlocks
+
+@[expose] public section
 
 namespace OAI
 

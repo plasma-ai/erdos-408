@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.NonprincipalShift
-import OAI.NumberTheory.DirichletL.Detector.PrincipalSplit
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.NonprincipalShift
+public import OAI.NumberTheory.DirichletL.Detector.PrincipalSplit
+
+@[expose] public section
 
 namespace OAI
 

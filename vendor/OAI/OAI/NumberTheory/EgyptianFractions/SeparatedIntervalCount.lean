@@ -1,4 +1,9 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.Calculus.Deriv.MeanValue
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

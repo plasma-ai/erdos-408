@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighSeries
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighSeries
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialOverlapFourier
-import OAI.NumberTheory.DirichletL.Inversion.InitialRayAttachment
-import OAI.NumberTheory.DirichletL.Descent.SecondSeparatedColumns
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialOverlapFourier
+public import OAI.NumberTheory.DirichletL.Inversion.InitialRayAttachment
+public import OAI.NumberTheory.DirichletL.Descent.SecondSeparatedColumns
+
+@[expose] public section
 
 namespace OAI
 

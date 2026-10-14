@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.Initial
-import OAI.NumberTheory.DirichletL.Moments.Extraction
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Initial
+public import OAI.NumberTheory.DirichletL.Moments.Extraction
+
+@[expose] public section
 
 namespace OAI
 

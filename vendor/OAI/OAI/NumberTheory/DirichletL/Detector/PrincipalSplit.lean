@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.CompensatedRows
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CompensatedRows
+
+@[expose] public section
 
 namespace OAI
 

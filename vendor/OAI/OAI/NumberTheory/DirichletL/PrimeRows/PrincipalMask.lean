@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.Principal
-import OAI.NumberTheory.DirichletL.PrimeRows.MarkedHolomorphic
-import OAI.NumberTheory.DirichletL.Detector.CalibrationSupport
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.Principal
+public import OAI.NumberTheory.DirichletL.PrimeRows.MarkedHolomorphic
+public import OAI.NumberTheory.DirichletL.Detector.CalibrationSupport
+
+@[expose] public section
 
 namespace OAI
 

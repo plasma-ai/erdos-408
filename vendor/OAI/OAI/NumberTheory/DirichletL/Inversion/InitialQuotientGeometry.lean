@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialArithmetic
-import OAI.NumberTheory.DirichletL.Descent.TripleMass
-import OAI.NumberTheory.DirichletL.Descent.Basic
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialArithmetic
+public import OAI.NumberTheory.DirichletL.Descent.TripleMass
+public import OAI.NumberTheory.DirichletL.Descent.Basic
+
+@[expose] public section
 
 namespace OAI
 

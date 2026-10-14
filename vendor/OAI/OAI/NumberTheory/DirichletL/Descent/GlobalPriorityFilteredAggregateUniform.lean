@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredAggregate
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredRaysUniform
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityAggregate
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredRays
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityPhysical
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredAggregate
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredRaysUniform
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityAggregate
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredRays
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityPhysical
+
+@[expose] public section
 
 namespace OAI
 

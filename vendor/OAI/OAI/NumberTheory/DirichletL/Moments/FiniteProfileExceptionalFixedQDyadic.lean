@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalFixedQRows
-import OAI.NumberTheory.DirichletL.Moments.SecondDyadicRowSupport
-import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalBlock
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalKernel
-import OAI.NumberTheory.DirichletL.Moments.SecondDivisorSupport
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalFixedQRows
+public import OAI.NumberTheory.DirichletL.Moments.SecondDyadicRowSupport
+public import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalBlock
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalKernel
+public import OAI.NumberTheory.DirichletL.Moments.SecondDivisorSupport
+
+@[expose] public section
 
 namespace OAI
 

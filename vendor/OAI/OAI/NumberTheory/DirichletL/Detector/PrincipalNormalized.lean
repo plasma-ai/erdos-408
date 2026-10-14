@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.PrincipalPhysicalRemainder
-import OAI.NumberTheory.DirichletL.Detector.PrincipalResidueActual
-import OAI.NumberTheory.DirichletL.Detector.RayPoolThresholds
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PrincipalPhysicalRemainder
+public import OAI.NumberTheory.DirichletL.Detector.PrincipalResidueActual
+public import OAI.NumberTheory.DirichletL.Detector.RayPoolThresholds
+
+@[expose] public section
 
 namespace OAI
 

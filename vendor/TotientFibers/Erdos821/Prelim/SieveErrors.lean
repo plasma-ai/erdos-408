@@ -1,7 +1,9 @@
-import Mathlib
-import Erdos821.Prelim.SieveCalculus
-import Erdos821.Prelim.SieveExpectation
-import Erdos821.Prelim.SieveProduct
+module
+
+public import Erdos821.Prelim.SieveCalculus
+public import Erdos821.Prelim.SieveExpectation
+public import Erdos821.Prelim.SieveProduct
+public import Mathlib.Tactic.LinearCombination
 
 /-!
 # Sieve errors: `R_h` decay and product expectations (`lem:sieve`)
@@ -13,6 +15,8 @@ and block mass `≤ C`, `R_h = ∑ e_j/a_j ≤ K·e^{-h}` uniformly in `N`
 for even `h`). `e^{R}` avoided: `∏S-∏A ≤ E_corr ≤ …` directly with
 `R ≤ 1/2` from `1+h ≤ e^{h}`.
 -/
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

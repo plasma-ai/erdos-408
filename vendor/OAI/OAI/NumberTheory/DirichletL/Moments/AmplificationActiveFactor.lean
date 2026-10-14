@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationFamilyEnergy
-import OAI.NumberTheory.DirichletL.Moments.AmplificationSourcePool
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationFamilyEnergy
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationSourcePool
+
+@[expose] public section
 
 namespace OAI
 

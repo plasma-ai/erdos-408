@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.PrimeElements
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PrimeElements
+
+@[expose] public section
 
 namespace OAI
 

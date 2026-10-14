@@ -1,5 +1,9 @@
-import Erdos821.S2.AnalyticParametersTasks
-import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+module
+
+public import Erdos821.S2.AnalyticParametersTasks
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+
+@[expose] public section
 
 noncomputable section
 

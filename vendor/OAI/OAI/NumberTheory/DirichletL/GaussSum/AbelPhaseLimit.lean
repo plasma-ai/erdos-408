@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.RationalApproximation
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.RationalApproximation
+
+@[expose] public section
 
 namespace OAI
 

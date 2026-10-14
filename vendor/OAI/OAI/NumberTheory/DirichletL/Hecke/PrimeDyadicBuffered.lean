@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadicControl
-import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadicEstimates
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadicControl
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadicEstimates
+
+@[expose] public section
 
 namespace OAI
 

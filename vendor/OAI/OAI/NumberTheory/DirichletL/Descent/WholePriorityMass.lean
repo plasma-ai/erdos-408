@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.WholePriorityBranches
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.WholePriorityBranches
+
+@[expose] public section
 
 namespace OAI
 

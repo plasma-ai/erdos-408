@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedActual
-import OAI.NumberTheory.DirichletL.Hecke.DeletionBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedActual
+public import OAI.NumberTheory.DirichletL.Hecke.DeletionBounds
+
+@[expose] public section
 
 namespace OAI
 

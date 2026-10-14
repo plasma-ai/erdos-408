@@ -1,8 +1,12 @@
-import Erdos821.S2.ComplexAssembly
-import Erdos821.S2.LifespanSums
-import Erdos821.S2.ResidueFactorizationTask
+module
+
+public import Erdos821.S2.ComplexAssembly
+public import Erdos821.S2.LifespanSums
+public import Erdos821.S2.ResidueFactorizationTask
 
 /-! Assemble the exact memory identity from explicit structural and local inputs. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

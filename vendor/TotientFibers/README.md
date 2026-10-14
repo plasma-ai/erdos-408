@@ -63,6 +63,17 @@ follows a Lean change and keeps every statement:
   `P5/PhysicalKernelDomination.lean`, such a call also simplifies with
   `and_self`, as upstream's `P5MarkedEnergy/BoxInputs.lean` already does.
 
+All 647 modules also use the module system: each begins with `module`,
+imports with `public import`, and exposes its definitions with
+`@[expose] public section`. None imports all of Mathlib: of the 54 that did,
+35 import the Mathlib modules they use instead, and the other 19 see them
+through their other imports. Another 76 import Mathlib modules they use but no
+longer see, because a module sees only what its imports export.
+`P5Log/LogPhaseSum.lean` and `S2Phys/PhysicalPathExpansion.lean` drop
+`private` from declarations that a public statement mentions, since a module
+does not export its private declarations. In `P3Rare/Base.lean`, two `dsimp`
+calls now close their goals, and the `rfl` after each is removed.
+
 No `sorry`, `axiom`, or heartbeat option was added. Eighteen modules carry
 upstream's own `maxHeartbeats` or `synthInstance.maxHeartbeats` options, which
 are kept as they are.

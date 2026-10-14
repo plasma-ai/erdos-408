@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.RowNorm
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RowNorm
+
+@[expose] public section
 
 namespace OAI
 

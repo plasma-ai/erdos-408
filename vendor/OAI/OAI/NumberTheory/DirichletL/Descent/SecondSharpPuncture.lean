@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondAdmissible
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondAdmissible
+
+@[expose] public section
 
 namespace OAI
 

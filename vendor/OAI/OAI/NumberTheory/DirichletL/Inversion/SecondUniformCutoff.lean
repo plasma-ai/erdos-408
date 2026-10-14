@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondCutoffScale
-import OAI.NumberTheory.DirichletL.Descent.SecondCorrelatedCutoff
-import OAI.NumberTheory.DirichletL.Descent.ActualChildStateRadius
-import OAI.NumberTheory.DirichletL.Inversion.SecondSourceBlocks
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondCutoffScale
+public import OAI.NumberTheory.DirichletL.Descent.SecondCorrelatedCutoff
+public import OAI.NumberTheory.DirichletL.Descent.ActualChildStateRadius
+public import OAI.NumberTheory.DirichletL.Inversion.SecondSourceBlocks
+
+@[expose] public section
 
 namespace OAI
 

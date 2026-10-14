@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.MellinPoisson
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.MellinPoisson
+
+@[expose] public section
 
 namespace OAI
 

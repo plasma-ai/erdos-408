@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondLedger
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondLedger
+
+@[expose] public section
 
 namespace OAI
 

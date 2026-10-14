@@ -1,5 +1,9 @@
-import Erdos821.Blueprint.Classical
-import PrimeNumberTheoremAnd.Erdos970.MertensClassical
+module
+
+public import Erdos821.Blueprint.Classical
+public import PrimeNumberTheoremAnd.Erdos970.MertensClassical
+
+@[expose] public section
 
 open Filter Asymptotics
 

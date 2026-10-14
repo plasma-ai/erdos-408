@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.Detector.Phase
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.Detector.Phase
+
+@[expose] public section
 
 namespace OAI
 

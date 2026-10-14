@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Defs
+module
+
+public import Erdos408.Extraction.Defs
 
 /-!
 # Definitions for the two-sided correlation
@@ -16,6 +18,8 @@ reindexes `TwoSidedCorrelation`'s groups once, with `ι = ↥(Sg ∪ Bg)`.
   of `GraphTransference`'s family.
 * The first endpoint `endpointCoeff` of a comparison at scale `Y`, PD (6.28).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

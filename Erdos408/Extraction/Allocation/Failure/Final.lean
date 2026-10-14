@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Allocation.Failure.Params
+module
+
+public import Erdos408.Extraction.Allocation.Failure.Params
 
 /-!
 # E6 at one scale
@@ -7,6 +9,8 @@ The free-factor sum of a family, given the numerical facts at the scale `x`:
 `κ_j^j ∏_{p ∈ P} (1 - 1/p)⁻¹ ≤ 2`, `(1 - θ/300)^{|F|} ≤ e^{-aT}`, `δ ≤ e^{-T}`,
 `(2/(γ L)) H^{j-1} ≤ e^{aT/4}/L`, and a rounding term at most `X e^{-T}/L`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

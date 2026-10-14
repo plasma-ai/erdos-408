@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparisonProductBounds
-import Erdos821.P5.ComparisonCellPartition
+module
+
+public import Erdos821.P5.ComparisonProductBounds
+public import Erdos821.P5.ComparisonCellPartition
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

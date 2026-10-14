@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Moment.Chain.Identity
-import Erdos408.OneSided.Moment.Rank
-import Erdos408.OneSided.Moment.Truncation
-import Erdos408.OneSided.Bands
+module
+
+public import Erdos408.OneSided.Moment.Chain.Identity
+public import Erdos408.OneSided.Moment.Rank
+public import Erdos408.OneSided.Moment.Truncation
+public import Erdos408.OneSided.Bands
 
 /-!
 # The memory bound
@@ -19,6 +21,8 @@ the distinct-birth history sum `distinctSum` with the exact cap. Two statements 
 
 Together they give `eventually_norm_lineAverage_le`, the memory bound of blueprint §11.
 -/
+
+@[expose] public section
 
 noncomputable section
 

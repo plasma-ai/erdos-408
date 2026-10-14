@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.GlobalBudget
-import OAI.NumberTheory.DirichletL.Reflection.FullBudgetUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.GlobalBudget
+public import OAI.NumberTheory.DirichletL.Reflection.FullBudgetUniformDegree
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,9 +1,11 @@
-import Erdos408.CrossTerm
-import Erdos408.Cumulative
-import Erdos408.IntegerMoments
-import Erdos408.PrimeMoments
-import Erdos408.Renewal
-import Mathlib.Order.Interval.Set.Nat
+module
+
+public import Erdos408.CrossTerm
+public import Erdos408.Cumulative
+public import Erdos408.IntegerMoments
+public import Erdos408.PrimeMoments
+public import Erdos408.Renewal
+public import Mathlib.Order.Interval.Set.Nat
 
 /-!
 # Assembly of Erdős Problem 408: distribution of iterated totient heights
@@ -20,6 +22,8 @@ Since `∑_{n ≤ x} log²(x / n) = O(x)` and `|f n - F n| ≤ 1`, the same boun
 holds for `∑ (f n - α log n)²`. The exceptional counts and the two density
 statements follow by Chebyshev's inequality on `(√x, x]`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

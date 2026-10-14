@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialCommonTuples
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialCommonTuples
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.SpectralSupport
-import OAI.NumberTheory.DirichletL.Detector.HighAbsolute
-import OAI.NumberTheory.DirichletL.Detector.IdealUnit
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SpectralSupport
+public import OAI.NumberTheory.DirichletL.Detector.HighAbsolute
+public import OAI.NumberTheory.DirichletL.Detector.IdealUnit
+
+@[expose] public section
 
 namespace OAI
 

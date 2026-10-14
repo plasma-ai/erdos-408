@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.AnnularLifting
-import OAI.NumberTheory.DirichletL.QuadraticSieve.PoissonConstants
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.AnnularLifting
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.PoissonConstants
+
+@[expose] public section
 
 namespace OAI
 

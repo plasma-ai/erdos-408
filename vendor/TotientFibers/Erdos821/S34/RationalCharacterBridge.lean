@@ -1,6 +1,10 @@
-import Erdos821.P4Rat.RationalFourier
-import Erdos821.P4Rat.PrimitiveInduction
-import Erdos821.S34.RationalCharacterTasks
+module
+
+public import Erdos821.P4Rat.RationalFourier
+public import Erdos821.P4Rat.PrimitiveInduction
+public import Erdos821.S34.RationalCharacterTasks
+
+@[expose] public section
 
 set_option autoImplicit false
 

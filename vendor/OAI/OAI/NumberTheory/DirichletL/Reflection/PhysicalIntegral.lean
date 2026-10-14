@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.CoprimeSource
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CoprimeSource
+
+@[expose] public section
 
 namespace OAI
 

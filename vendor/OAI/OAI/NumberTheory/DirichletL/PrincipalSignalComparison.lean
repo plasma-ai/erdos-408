@@ -1,9 +1,13 @@
-import OAI.NumberTheory.DirichletL.PrincipalSlotEstimate
-import OAI.NumberTheory.DirichletL.PrincipalMellinResidues
-import OAI.NumberTheory.DirichletL.Hecke.SignalBounds
-import OAI.NumberTheory.DirichletL.Detector.SourceExclusions
-import OAI.NumberTheory.DirichletL.Detector.CompensationActual
-import OAI.NumberTheory.DirichletL.Detector.Basic
+module
+
+public import OAI.NumberTheory.DirichletL.PrincipalSlotEstimate
+public import OAI.NumberTheory.DirichletL.PrincipalMellinResidues
+public import OAI.NumberTheory.DirichletL.Hecke.SignalBounds
+public import OAI.NumberTheory.DirichletL.Detector.SourceExclusions
+public import OAI.NumberTheory.DirichletL.Detector.CompensationActual
+public import OAI.NumberTheory.DirichletL.Detector.Basic
+
+@[expose] public section
 
 namespace OAI
 

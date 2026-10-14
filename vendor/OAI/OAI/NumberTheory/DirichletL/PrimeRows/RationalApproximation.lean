@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Poisson.OscillatoryGaussian
+module
+
+public import OAI.NumberTheory.DirichletL.Poisson.OscillatoryGaussian
+
+@[expose] public section
 
 namespace OAI
 

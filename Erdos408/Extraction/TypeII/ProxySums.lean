@@ -1,6 +1,8 @@
-import Erdos408.Extraction.TypeII.Proxy
-import Erdos408.Extraction.TypeII.Rough
-import Mathlib.Algebra.Order.Field.GeomSum
+module
+
+public import Erdos408.Extraction.TypeII.Proxy
+public import Erdos408.Extraction.TypeII.Rough
+public import Mathlib.Algebra.Order.Field.GeomSum
 
 /-!
 # Sums of the damped weight
@@ -16,6 +18,8 @@ that `D_j = ∏_{p ≤ Y} (1 - 1/p) · Π_P(1/j)`.
   split `m = m̄ · m_P`, count the rough `m̄ ≤ W / m_P` by `roughCount_le`, and bound the
   number of `P`-numbers by Rankin's trick.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

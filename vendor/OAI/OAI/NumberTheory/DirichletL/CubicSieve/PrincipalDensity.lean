@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.RetainedDualBounds
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.RetainedDualBounds
+
+@[expose] public section
 
 namespace OAI
 

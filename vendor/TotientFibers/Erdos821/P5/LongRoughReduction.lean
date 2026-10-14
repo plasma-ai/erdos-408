@@ -1,5 +1,9 @@
-import Erdos821.P5.LongProgressions
-import Erdos821.P5.LongSieveEstimate
+module
+
+public import Erdos821.P5.LongProgressions
+public import Erdos821.P5.LongSieveEstimate
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

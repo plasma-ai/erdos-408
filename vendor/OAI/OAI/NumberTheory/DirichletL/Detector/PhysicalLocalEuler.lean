@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LocalPhysical
-import OAI.NumberTheory.DirichletL.Detector.SourceLocal
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LocalPhysical
+public import OAI.NumberTheory.DirichletL.Detector.SourceLocal
+
+@[expose] public section
 
 namespace OAI
 

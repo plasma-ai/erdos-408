@@ -1,4 +1,8 @@
-import Erdos821.S2.HighRankTask
+module
+
+public import Erdos821.S2.HighRankTask
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

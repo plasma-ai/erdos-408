@@ -1,8 +1,10 @@
-import Erdos408.Graph.Assembly
-import Erdos408.Graph.Family
-import Erdos821.P3Final.Transference
-import Erdos821.P3Rare.Proof
-import Erdos821.S34.IdealInputs
+module
+
+public import Erdos408.Graph.Assembly
+public import Erdos408.Graph.Family
+public import Erdos821.P3Final.Transference
+public import Erdos821.P3Rare.Proof
+public import Erdos821.S34.IdealInputs
 
 /-!
 # The graph transference input
@@ -24,6 +26,8 @@ residual family of WD Theorem 4.1 (`IdealConstruction`).
 * Upstream's pairing and norms are `GraphTransference`'s for endpoints of the
   position alone (`pairing_eq_sum`, `normOn_extend`, `normOn_targets`).
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

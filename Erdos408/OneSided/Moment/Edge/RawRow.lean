@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Moment.Chain
-import Erdos408.OneSided.Moment.Edge.Anchor
-import Erdos408.OneSided.Moment.Phased.Neighbor
+module
+
+public import Erdos408.OneSided.Moment.Chain
+public import Erdos408.OneSided.Moment.Edge.Anchor
+public import Erdos408.OneSided.Moment.Phased.Neighbor
 
 /-!
 # The rows of the dirty raw edges
@@ -22,6 +24,8 @@ coefficients bounded by `rawAmp`: the admissibility and raw determinant indicato
   damping `n ρ^{n-1} ≤ C_ρ` (`mem:index-damping`) absorbs the other promoted multiplicities. For
   the exceptional fresh draws, use the crude count `(2B)^{|I|}`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

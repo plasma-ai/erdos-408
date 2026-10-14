@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformLog
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformLog
+
+@[expose] public section
 
 namespace OAI
 

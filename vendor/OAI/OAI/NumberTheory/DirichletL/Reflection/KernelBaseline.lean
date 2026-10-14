@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.KernelActual
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.KernelActual
+
+@[expose] public section
 
 namespace OAI
 

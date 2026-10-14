@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainMarkedState
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainUnmarkedState
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainMarkedState
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainUnmarkedState
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstReferenceSource
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalLedger
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstReferenceSource
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalLedger
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.TupleGrowth
-import OAI.NumberTheory.DirichletL.PrimeRows.ReciprocalGrowth
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.TupleGrowth
+public import OAI.NumberTheory.DirichletL.PrimeRows.ReciprocalGrowth
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.RawMellinTerm
-import OAI.NumberTheory.DirichletL.Detector.NestedMellin
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RawMellinTerm
+public import OAI.NumberTheory.DirichletL.Detector.NestedMellin
+
+@[expose] public section
 
 namespace OAI
 

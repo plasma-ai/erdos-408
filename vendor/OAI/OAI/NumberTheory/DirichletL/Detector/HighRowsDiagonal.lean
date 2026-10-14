@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LocalSummation
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LocalSummation
+
+@[expose] public section
 
 namespace OAI
 

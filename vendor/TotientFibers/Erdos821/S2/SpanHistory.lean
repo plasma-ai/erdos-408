@@ -1,6 +1,10 @@
-import Erdos821.S2.SpanEdgeValidity
+module
+
+public import Erdos821.S2.SpanEdgeValidity
 
 /-! A literal history reconstructed from a residue path and prime lifespans. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

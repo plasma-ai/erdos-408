@@ -1,5 +1,7 @@
-import Erdos408.Hypotheses
-import Erdos821.Blueprint.Ideal
+module
+
+public import Erdos408.Hypotheses
+public import Erdos821.Blueprint.Ideal
 
 /-!
 # Encoding the active groups as upstream data
@@ -16,6 +18,8 @@ with a Boolean flag, and a `FixedData`. For groups indexed by `Fin n`:
 * `admissible` and `intervalBigGroups_primeGroups` are upstream's
   `Admissible` and `intervalBigGroups` from `GraphTransference`'s premises.
 -/
+
+@[expose] public section
 
 namespace Erdos408.Graph
 

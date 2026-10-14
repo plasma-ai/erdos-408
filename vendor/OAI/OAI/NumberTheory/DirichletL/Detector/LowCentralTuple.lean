@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowPhysicalInverseBound
-import OAI.NumberTheory.DirichletL.Detector.LowUnselectedMass
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowPhysicalInverseBound
+public import OAI.NumberTheory.DirichletL.Detector.LowUnselectedMass
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,8 +1,12 @@
-import Erdos821.P3Clean.BigAverage
-import Erdos821.P3Clean.ActiveSymmetry
-import Erdos821.P3Clean.NormTransport
+module
+
+public import Erdos821.P3Clean.BigAverage
+public import Erdos821.P3Clean.ActiveSymmetry
+public import Erdos821.P3Clean.NormTransport
 
 /-! Recover the full clean endpoint symmetrization after small conditioning. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

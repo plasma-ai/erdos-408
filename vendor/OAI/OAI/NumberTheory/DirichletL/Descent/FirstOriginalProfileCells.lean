@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileIdentity
-import OAI.NumberTheory.DirichletL.Descent.FirstChildWindowsLive
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileIdentity
+public import OAI.NumberTheory.DirichletL.Descent.FirstChildWindowsLive
+
+@[expose] public section
 
 namespace OAI
 

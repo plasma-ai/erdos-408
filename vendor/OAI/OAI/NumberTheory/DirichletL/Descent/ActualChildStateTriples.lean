@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ActualChildStateSupport
-import OAI.NumberTheory.DirichletL.Descent.ActualChildStateLabels
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ActualChildStateSupport
+public import OAI.NumberTheory.DirichletL.Descent.ActualChildStateLabels
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalRetainedGatesCaps
-import OAI.NumberTheory.DirichletL.Descent.GlobalRetainedGatesChildren
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalRetainedGatesCaps
+public import OAI.NumberTheory.DirichletL.Descent.GlobalRetainedGatesChildren
+
+@[expose] public section
 
 namespace OAI
 

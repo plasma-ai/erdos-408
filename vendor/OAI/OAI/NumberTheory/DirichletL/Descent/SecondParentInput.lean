@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondSourceAttachment
-import OAI.NumberTheory.DirichletL.Inversion.SecondPrincipalCaller
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondSourceAttachment
+public import OAI.NumberTheory.DirichletL.Inversion.SecondPrincipalCaller
+
+@[expose] public section
 
 namespace OAI
 

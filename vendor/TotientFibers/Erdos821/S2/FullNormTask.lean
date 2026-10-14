@@ -1,7 +1,11 @@
-import Erdos821.S2.RestorationTask
-import Erdos821.S2.TailAbsorptionTask
+module
+
+public import Erdos821.S2.RestorationTask
+public import Erdos821.S2.TailAbsorptionTask
 
 /-! The final tail integration preserves the transference parameter order. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

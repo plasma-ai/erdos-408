@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.UniformNaturalRetained
-import OAI.NumberTheory.DirichletL.Moments.UniformOriginalEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.UniformNaturalRetained
+public import OAI.NumberTheory.DirichletL.Moments.UniformOriginalEnergy
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.TailIntegral
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstTransport
-import OAI.NumberTheory.DirichletL.PrimeRows.CoarseAmplitude
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.TailIntegral
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstTransport
+public import OAI.NumberTheory.DirichletL.PrimeRows.CoarseAmplitude
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.CanonicalReferencePaid
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalReferencePaid
+
+@[expose] public section
 
 namespace OAI
 

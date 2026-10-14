@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstProduct
-import OAI.NumberTheory.DirichletL.Detector.HighRowsFirstHolomorphic
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstProduct
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsFirstHolomorphic
+
+@[expose] public section
 
 namespace OAI
 

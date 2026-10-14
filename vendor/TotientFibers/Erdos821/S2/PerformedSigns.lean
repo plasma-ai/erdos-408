@@ -1,6 +1,10 @@
-import Erdos821.S2.Births
+module
+
+public import Erdos821.S2.Births
 
 /-! Distinctness on performed addresses as a signed permutation sum. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

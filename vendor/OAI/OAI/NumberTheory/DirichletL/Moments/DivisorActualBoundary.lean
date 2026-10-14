@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.DivisorWitness
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DivisorWitness
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import Erdos821.P4Probe.RawLabels
-import Erdos821.P4Probe.FiniteSchur
+module
+
+public import Erdos821.P4Probe.RawLabels
+public import Erdos821.P4Probe.FiniteSchur
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

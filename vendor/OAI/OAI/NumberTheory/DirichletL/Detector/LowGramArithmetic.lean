@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowGramProfile
-import OAI.NumberTheory.DirichletL.Detector.LowPeriod
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowGramProfile
+public import OAI.NumberTheory.DirichletL.Detector.LowPeriod
+
+@[expose] public section
 
 namespace OAI
 

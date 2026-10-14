@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.Unramified
-import OAI.NumberTheory.DirichletL.Detector.SourceExclusions
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.Unramified
+public import OAI.NumberTheory.DirichletL.Detector.SourceExclusions
+
+@[expose] public section
 
 namespace OAI
 

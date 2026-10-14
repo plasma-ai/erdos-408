@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.Family
-import Mathlib.Data.ZMod.Basic
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Family
+public import Mathlib.Data.ZMod.Basic
+
+@[expose] public section
 
 namespace OAI
 

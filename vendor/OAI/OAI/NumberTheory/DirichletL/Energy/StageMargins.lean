@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.StageReserveSchedule
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.StageReserveSchedule
+
+@[expose] public section
 
 namespace OAI
 

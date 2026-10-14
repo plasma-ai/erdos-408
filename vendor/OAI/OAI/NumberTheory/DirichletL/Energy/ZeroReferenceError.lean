@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceHomogeneousError
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceHomogeneousError
+
+@[expose] public section
 
 namespace OAI
 

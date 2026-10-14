@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonSupport
-import OAI.NumberTheory.DirichletL.Moments.Mask
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonSupport
+public import OAI.NumberTheory.DirichletL.Moments.Mask
+
+@[expose] public section
 
 namespace OAI
 

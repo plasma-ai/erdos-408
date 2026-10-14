@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.SourceBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SourceBounds
+
+@[expose] public section
 
 namespace OAI
 

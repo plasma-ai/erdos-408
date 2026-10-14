@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplifiedRetainedRadius
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicRows
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplifiedRetainedRadius
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicRows
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,9 @@
-import Mathlib
-import OAI.NumberTheory.PrimeGaps.OrthantIntegrals
-import Erdos821.Blueprint.Classical
+module
+
+public import OAI.NumberTheory.PrimeGaps.OrthantIntegrals
+public import Erdos821.Blueprint.Classical
+
+@[expose] public section
 
 open scoped BigOperators
 

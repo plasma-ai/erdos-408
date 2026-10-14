@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeNonprincipal
-import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
-import OAI.NumberTheory.DirichletL.Hecke.DetectorFamilyInclusion
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeNonprincipal
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorFamilyInclusion
+
+@[expose] public section
 
 namespace OAI
 

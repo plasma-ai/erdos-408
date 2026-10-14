@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseUniformSource
-import OAI.NumberTheory.DirichletL.Descent.ClippedEnergy
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerClipping
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerUniform
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseUniformSource
+public import OAI.NumberTheory.DirichletL.Descent.ClippedEnergy
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerClipping
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerUniform
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralStrict
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralStrict
+
+@[expose] public section
 
 namespace OAI
 

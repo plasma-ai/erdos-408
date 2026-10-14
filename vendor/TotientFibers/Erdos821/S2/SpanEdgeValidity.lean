@@ -1,6 +1,10 @@
-import Erdos821.S2.SpanEdgeMemoryTask
+module
+
+public import Erdos821.S2.SpanEdgeMemoryTask
 
 /-! All inverse-edge gates follow once the pending-memory equality is known. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

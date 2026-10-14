@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniform
-import OAI.NumberTheory.DirichletL.Moments.Lattice
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniform
+public import OAI.NumberTheory.DirichletL.Moments.Lattice
+
+@[expose] public section
 
 namespace OAI
 

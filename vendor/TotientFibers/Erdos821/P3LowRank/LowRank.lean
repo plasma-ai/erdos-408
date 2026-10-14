@@ -1,5 +1,7 @@
-import Erdos821.P3LowRank.Fourier
-import Erdos821.P3LowRank.HistorySum
+module
+
+public import Erdos821.P3LowRank.Fourier
+public import Erdos821.P3LowRank.HistorySum
 
 /-! The low-rank equality contribution on literal valid truncated histories.
 
@@ -8,6 +10,8 @@ multiplier at a potential address depends only on the operation containing that 
 initial slots on the initial boundary state, ghost addresses on their ghost choice, fresh
 addresses on their birth-edge choice and target.  Edges without a fresh address in the
 support keep the unmodified signed kernel; at most `2 * rank` edges are affected. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

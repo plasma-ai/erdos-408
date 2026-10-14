@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ActualDepthBudget
-import OAI.NumberTheory.DirichletL.Descent.FirstTwoPassLowerRank
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ActualDepthBudget
+public import OAI.NumberTheory.DirichletL.Descent.FirstTwoPassLowerRank
+
+@[expose] public section
 
 namespace OAI
 

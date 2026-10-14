@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.Symmetry
-import Erdos821.P3Clean.Structure
+module
+
+public import Erdos821.P3Clean.Symmetry
+public import Erdos821.P3Clean.Structure
 
 /-! Active-list permutations preserve the literal memory measure. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

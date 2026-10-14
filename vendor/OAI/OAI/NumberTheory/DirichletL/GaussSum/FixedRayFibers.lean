@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.FixedThetaTwists
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.FixedThetaTwists
+
+@[expose] public section
 
 namespace OAI
 

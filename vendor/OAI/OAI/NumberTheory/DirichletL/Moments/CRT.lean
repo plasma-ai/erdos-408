@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.Correlation
-import Mathlib.RingTheory.Ideal.Quotient.Operations
-import Mathlib.Algebra.Group.Pi.Units
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Correlation
+public import Mathlib.RingTheory.Ideal.Quotient.Operations
+public import Mathlib.Algebra.Group.Pi.Units
+
+@[expose] public section
 
 namespace OAI
 

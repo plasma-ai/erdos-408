@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.TiltedIdealKernel
+module
+
+public import Erdos821.P3Clean.TiltedIdealKernel
 
 /-! The finite coefficient supremum used by the literal pattern-mass hypothesis. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

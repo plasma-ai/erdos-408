@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.OriginalSaving
-import OAI.NumberTheory.DirichletL.Reflection.RetainedCaps
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalSaving
+public import OAI.NumberTheory.DirichletL.Reflection.RetainedCaps
+
+@[expose] public section
 
 namespace OAI
 

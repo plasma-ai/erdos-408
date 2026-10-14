@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicAssembly
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicAssembly
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.HighKernelGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.HighKernelGeometry
+
+@[expose] public section
 
 namespace OAI
 

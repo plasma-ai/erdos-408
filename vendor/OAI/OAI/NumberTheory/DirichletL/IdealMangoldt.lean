@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.IdealEuler
-import PrimeNumberTheoremAnd.Wiener
+module
+
+public import OAI.NumberTheory.DirichletL.IdealEuler
+public import PrimeNumberTheoremAnd.Wiener
+
+@[expose] public section
 
 namespace OAI
 

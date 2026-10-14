@@ -1,4 +1,9 @@
-import OAI.NumberTheory.PrimeGaps.MultiplicativeSieve
+module
+
+public import OAI.NumberTheory.PrimeGaps.MultiplicativeSieve
+public import Mathlib.NumberTheory.Harmonic.Int
+
+@[expose] public section
 
 namespace OAI
 

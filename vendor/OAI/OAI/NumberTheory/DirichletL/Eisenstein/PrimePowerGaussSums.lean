@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.ResidualCuspDecay
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.ResidualCuspDecay
+
+@[expose] public section
 
 namespace OAI
 

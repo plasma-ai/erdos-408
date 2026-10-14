@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.WholeSlotDeletion
-import OAI.NumberTheory.DirichletL.Moments.RayNonprincipal
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.WholeSlotDeletion
+public import OAI.NumberTheory.DirichletL.Moments.RayNonprincipal
+
+@[expose] public section
 
 namespace OAI
 

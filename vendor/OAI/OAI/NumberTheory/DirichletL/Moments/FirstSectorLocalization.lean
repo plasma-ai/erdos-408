@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstLocalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstLocalization
+
+@[expose] public section
 
 namespace OAI
 

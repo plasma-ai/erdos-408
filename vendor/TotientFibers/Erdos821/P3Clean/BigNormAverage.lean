@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.PermutationSplit
-import Erdos821.P3Clean.Symmetry
+module
+
+public import Erdos821.P3Clean.PermutationSplit
+public import Erdos821.P3Clean.Symmetry
 
 /-! Big endpoint permutation averages are contractions in an invariant measure. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

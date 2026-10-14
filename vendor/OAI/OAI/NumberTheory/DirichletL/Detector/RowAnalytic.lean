@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.Row
-import Mathlib.Analysis.Normed.Group.FunctionSeries
-import Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.Row
+public import Mathlib.Analysis.Normed.Group.FunctionSeries
+public import Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral
+
+@[expose] public section
 
 namespace OAI
 

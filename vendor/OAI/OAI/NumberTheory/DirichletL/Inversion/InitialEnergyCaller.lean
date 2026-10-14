@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialQuotientGeometry
-import OAI.NumberTheory.DirichletL.Inversion.InitialClippedColumns
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialQuotientGeometry
+public import OAI.NumberTheory.DirichletL.Inversion.InitialClippedColumns
+
+@[expose] public section
 
 namespace OAI
 

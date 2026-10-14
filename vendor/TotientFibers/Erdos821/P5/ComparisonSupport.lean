@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparisonCellScales
-import Erdos821.P5.CutoffSupport
+module
+
+public import Erdos821.P5.ComparisonCellScales
+public import Erdos821.P5.CutoffSupport
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

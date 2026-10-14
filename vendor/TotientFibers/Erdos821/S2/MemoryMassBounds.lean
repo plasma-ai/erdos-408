@@ -1,7 +1,11 @@
-import Erdos821.S2.CountableSchur
-import Erdos821.S2.GhostTasks
+module
+
+public import Erdos821.S2.CountableSchur
+public import Erdos821.S2.GhostTasks
 
 /-! Nonnegative memory measures and the assembly of the two ghost estimates. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

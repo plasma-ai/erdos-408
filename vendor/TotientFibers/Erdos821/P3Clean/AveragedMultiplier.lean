@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.IdealMultiplier
+module
+
+public import Erdos821.P3Clean.IdealMultiplier
 
 /-! Averages of local multiplier magnitudes suffice for the ideal Schur estimate. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.Mobius
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.Mobius
+
+@[expose] public section
 
 namespace OAI
 

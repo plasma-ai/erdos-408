@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ActualProfiles
-import Mathlib.MeasureTheory.Integral.Pi
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ActualProfiles
+public import Mathlib.MeasureTheory.Integral.Pi
+
+@[expose] public section
 
 namespace OAI
 

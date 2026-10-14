@@ -1,6 +1,10 @@
-import Erdos821.P5.ComparisonFourierArcBound
-import Erdos821.P5.SmoothEndpointSquareTask
-import Erdos821.P5.SmoothComparisonParameters
+module
+
+public import Erdos821.P5.ComparisonFourierArcBound
+public import Erdos821.P5.SmoothEndpointSquareTask
+public import Erdos821.P5.SmoothComparisonParameters
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

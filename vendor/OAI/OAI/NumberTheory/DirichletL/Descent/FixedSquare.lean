@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.DyadicBlock
-import OAI.NumberTheory.DirichletL.Descent.MaskedGrid
-import OAI.NumberTheory.DirichletL.Descent.DivisorSum
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.DyadicBlock
+public import OAI.NumberTheory.DirichletL.Descent.MaskedGrid
+public import OAI.NumberTheory.DirichletL.Descent.DivisorSum
+
+@[expose] public section
 
 namespace OAI
 

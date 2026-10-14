@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.DualMiddleExpansion
-import OAI.NumberTheory.DirichletL.Eisenstein.SmoothCuspCutoffs
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.DualMiddleExpansion
+public import OAI.NumberTheory.DirichletL.Eisenstein.SmoothCuspCutoffs
+
+@[expose] public section
 
 namespace OAI
 

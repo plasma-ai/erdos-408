@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.RawIndexGrouping
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RawIndexGrouping
+
+@[expose] public section
 
 namespace OAI
 

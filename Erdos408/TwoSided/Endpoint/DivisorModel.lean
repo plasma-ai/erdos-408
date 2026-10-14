@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Allocation.Groups
-import Erdos408.TwoSided.Endpoint.DivisorModel.Lists
+module
+
+public import Erdos408.Extraction.Allocation.Groups
+public import Erdos408.TwoSided.Endpoint.DivisorModel.Lists
 
 /-!
 # The truncated divisor model
@@ -15,6 +17,8 @@ of the two marked weights in `DivisorModel/Lists.lean`. Here `DivModel.divisorMo
 assembles them under explicit size conditions, and `exists_divisorModel` checks the conditions
 eventually, with `C₈ = 2|C₀||v₊| + 2`, `C_N = 1` and depth `h₀ = ⌊L^{0.01}⌋`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.CentralDyadicWeight
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CentralDyadicWeight
+
+@[expose] public section
 
 namespace OAI
 

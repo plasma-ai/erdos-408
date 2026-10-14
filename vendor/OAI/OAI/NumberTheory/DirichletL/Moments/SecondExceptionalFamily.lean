@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondLiveFamily
-import OAI.NumberTheory.DirichletL.Moments.ReflectedSource
-import OAI.NumberTheory.DirichletL.Moments.SecondRadicalBudget
-import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondLiveFamily
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedSource
+public import OAI.NumberTheory.DirichletL.Moments.SecondRadicalBudget
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
+
+@[expose] public section
 
 namespace OAI
 

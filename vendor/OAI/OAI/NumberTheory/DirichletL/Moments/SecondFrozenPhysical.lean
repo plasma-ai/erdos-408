@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondFrozenSupported
-import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalPhysical
-import OAI.NumberTheory.DirichletL.Moments.SecondSupportedChildren
-import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalCost
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalAmplitudePair
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondFrozenSupported
+public import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalPhysical
+public import OAI.NumberTheory.DirichletL.Moments.SecondSupportedChildren
+public import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalCost
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalAmplitudePair
+
+@[expose] public section
 
 namespace OAI
 

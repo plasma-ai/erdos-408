@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.Detector.Row
-import OAI.NumberTheory.DirichletL.Detector.Compensation
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.Detector.Row
+public import OAI.NumberTheory.DirichletL.Detector.Compensation
+
+@[expose] public section
 
 namespace OAI
 

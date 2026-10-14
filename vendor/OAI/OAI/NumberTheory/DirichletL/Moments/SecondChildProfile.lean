@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstChildProfile
-import OAI.NumberTheory.DirichletL.Moments.SecondScaled
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstChildProfile
+public import OAI.NumberTheory.DirichletL.Moments.SecondScaled
+
+@[expose] public section
 
 namespace OAI
 

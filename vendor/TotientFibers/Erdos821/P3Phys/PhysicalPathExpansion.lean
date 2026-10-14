@@ -1,7 +1,11 @@
-import Erdos821.S2Phys.PhysicalPathExpansion
+module
+
+public import Erdos821.S2Phys.PhysicalPathExpansion
 
 /-! Identification of the literal root-moment path expansion with
 `closedPhysicalExpression`, and the proof of `PhysicalPathExpansionTask`. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

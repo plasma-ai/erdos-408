@@ -1,4 +1,6 @@
-import Erdos821.P5.ExceptionalTheorem
+module
+
+public import Erdos821.P5.ExceptionalTheorem
 
 /-!
 # The exceptional set
@@ -7,6 +9,8 @@ S16 of `blueprint/two_sided_correlation.md` §6.4 (PD (6.36); WD Lemma 5.2), fro
 `Erdos821.Blueprint.Analytic.exceptional_times` at `(a, b, A) = (0.27, 0.36, A + 1)`, with
 `coeff' p = coeff p · p/(2P)`, so that `primePolynomial s coeff' = P⁻¹ ∑ coeff(p) p^{it}/2`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.TupleHigh
 

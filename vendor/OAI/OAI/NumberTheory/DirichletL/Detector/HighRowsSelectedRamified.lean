@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedBound
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedBound
+
+@[expose] public section
 
 namespace OAI
 

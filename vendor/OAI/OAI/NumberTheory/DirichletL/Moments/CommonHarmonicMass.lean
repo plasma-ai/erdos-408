@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RankinLabels
-import OAI.NumberTheory.DirichletL.Moments.WholeDivisorShell
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RankinLabels
+public import OAI.NumberTheory.DirichletL.Moments.WholeDivisorShell
+
+@[expose] public section
 
 namespace OAI
 

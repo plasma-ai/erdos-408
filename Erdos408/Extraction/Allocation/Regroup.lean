@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Allocation.Coefficients
+module
+
+public import Erdos408.Extraction.Allocation.Coefficients
 
 /-!
 # Regrouping the proxy sum by the product
@@ -8,6 +10,8 @@ forces `x/κ ≤ w ≤ κ x`, so every factorization of `w + 1` lies in the box
 `[1, κ x + 1]^j`, and
 `Prox_j = ∑_{1 ≤ w ≤ κ x} Φ(w/x) P(w) (f_𝔟(w) - C_𝔟) A_j(w + 1)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

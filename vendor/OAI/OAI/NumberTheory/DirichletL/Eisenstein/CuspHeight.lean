@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.ReflectedBranches
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.ReflectedBranches
+
+@[expose] public section
 
 namespace OAI
 

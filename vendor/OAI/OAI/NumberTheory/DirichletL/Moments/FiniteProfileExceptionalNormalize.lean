@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalUnit
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalUnit
+
+@[expose] public section
 
 namespace OAI
 

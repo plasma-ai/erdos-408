@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileAssembly
-import OAI.NumberTheory.DirichletL.Descent.CubeSupportNorm
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileAssembly
+public import OAI.NumberTheory.DirichletL.Descent.CubeSupportNorm
+
+@[expose] public section
 
 namespace OAI
 

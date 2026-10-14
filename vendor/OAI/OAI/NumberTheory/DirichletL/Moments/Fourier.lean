@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.Support
-import OAI.NumberTheory.DirichletL.Detector.Physical
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Support
+public import OAI.NumberTheory.DirichletL.Detector.Physical
+
+@[expose] public section
 
 namespace OAI
 

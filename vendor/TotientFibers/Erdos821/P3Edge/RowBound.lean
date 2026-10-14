@@ -1,8 +1,12 @@
-import Erdos821.P3Edge.Absolute
-import Erdos821.P3Edge.RowSummable
-import Erdos821.P3Edge.RowSupport
-import Erdos821.P3Edge.BigFibres
-import Erdos821.P3Edge.Polylog
+module
+
+public import Erdos821.P3Edge.Absolute
+public import Erdos821.P3Edge.RowSummable
+public import Erdos821.P3Edge.RowSupport
+public import Erdos821.P3Edge.BigFibres
+public import Erdos821.P3Edge.Polylog
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

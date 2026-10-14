@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialKernelBridge
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialKernelBridge
+
+@[expose] public section
 
 namespace OAI
 

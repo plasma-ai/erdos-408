@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DyadicScale
-import OAI.NumberTheory.DirichletL.Hecke.DyadicTailBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicScale
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicTailBudget
+
+@[expose] public section
 
 namespace OAI
 

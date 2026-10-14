@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.GlobalBinLoss
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.GlobalBinLoss
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.RowAmplitudes
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.RowAmplitudes
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.ConstantDirichletSeries
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.ConstantDirichletSeries
+
+@[expose] public section
 
 namespace OAI
 

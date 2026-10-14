@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramWindowMobius
-import OAI.NumberTheory.DirichletL.Detector.GramPhysicalScale
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramWindowMobius
+public import OAI.NumberTheory.DirichletL.Detector.GramPhysicalScale
+
+@[expose] public section
 
 namespace OAI
 

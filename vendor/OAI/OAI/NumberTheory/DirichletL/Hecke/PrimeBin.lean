@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeAnnular
-import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadicSource
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeAnnular
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadicSource
+
+@[expose] public section
 
 namespace OAI
 

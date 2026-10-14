@@ -1,9 +1,13 @@
-import Erdos821.S2.TransferenceAssemblyTask
-import Erdos821.S2.MemoryParameters
-import Erdos821.S2.RootMemoryBound
-import Erdos821.S2.NormTailAssembly
-import Erdos821.P3Rows.GhostRows
-import Erdos821.P3Edge.Absolute
+module
+
+public import Erdos821.S2.TransferenceAssemblyTask
+public import Erdos821.S2.MemoryParameters
+public import Erdos821.S2.RootMemoryBound
+public import Erdos821.S2.NormTailAssembly
+public import Erdos821.P3Rows.GhostRows
+public import Erdos821.P3Edge.Absolute
+
+@[expose] public section
 
 noncomputable section
 

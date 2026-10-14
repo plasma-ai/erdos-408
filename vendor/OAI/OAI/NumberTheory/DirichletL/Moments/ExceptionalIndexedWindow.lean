@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalWindowPair
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalWindowPair
+
+@[expose] public section
 
 namespace OAI
 

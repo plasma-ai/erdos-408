@@ -1,8 +1,12 @@
-import Erdos821.P5.SmoothCellCancellation
-import Erdos821.P5.SmoothCellIntegrability
-import Erdos821.P5.SmoothComparisonSeparation
-import Erdos821.P5.MellinFrequencyBounds
-import Erdos821.P5.FullLiftNumerics
+module
+
+public import Erdos821.P5.SmoothCellCancellation
+public import Erdos821.P5.SmoothCellIntegrability
+public import Erdos821.P5.SmoothComparisonSeparation
+public import Erdos821.P5.MellinFrequencyBounds
+public import Erdos821.P5.FullLiftNumerics
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

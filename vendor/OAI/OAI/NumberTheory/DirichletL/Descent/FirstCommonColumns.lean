@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstCommonMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstCommonMeasure
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.ConjugateCuspProfiles
-import OAI.NumberTheory.DirichletL.Eisenstein.CuspDilation
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.ConjugateCuspProfiles
+public import OAI.NumberTheory.DirichletL.Eisenstein.CuspDilation
+
+@[expose] public section
 
 namespace OAI
 

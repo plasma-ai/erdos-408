@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.ParametersHighData
-import OAI.NumberTheory.DirichletL.ParametersProbeWindows
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstTail
+module
+
+public import OAI.NumberTheory.DirichletL.ParametersHighData
+public import OAI.NumberTheory.DirichletL.ParametersProbeWindows
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstTail
+
+@[expose] public section
 
 namespace OAI
 

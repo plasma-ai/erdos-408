@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CuspCongruence
-import OAI.NumberTheory.DirichletL.Descent.MarkedStratum
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CuspCongruence
+public import OAI.NumberTheory.DirichletL.Descent.MarkedStratum
+
+@[expose] public section
 
 namespace OAI
 

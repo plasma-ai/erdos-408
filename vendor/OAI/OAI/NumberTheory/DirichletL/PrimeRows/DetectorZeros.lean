@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.BufferedContour
-import OAI.NumberTheory.DirichletL.Hecke.DetectorZeros
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.BufferedContour
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorZeros
+
+@[expose] public section
 
 namespace OAI
 

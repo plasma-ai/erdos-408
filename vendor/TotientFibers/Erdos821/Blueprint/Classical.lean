@@ -1,6 +1,14 @@
-import Erdos821.Blueprint.Analytic
+module
+
+public import Erdos821.Blueprint.Analytic
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+public import Mathlib.NumberTheory.Harmonic.EulerMascheroni
 
 /-! Package P1. Each proposition spells out the needed uniformity. -/
+
+@[expose] public section
+
 noncomputable section
 open scoped BigOperators ContDiff
 open Filter MeasureTheory

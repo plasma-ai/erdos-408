@@ -1,6 +1,8 @@
-import Erdos408.Extraction.Allocation.Groups
-import Mathlib.NumberTheory.EulerProduct.Basic
-import Mathlib.NumberTheory.SmoothNumbers
+module
+
+public import Erdos408.Extraction.Allocation.Groups
+public import Mathlib.NumberTheory.EulerProduct.Basic
+public import Mathlib.NumberTheory.SmoothNumbers
 
 /-!
 # Reciprocal sums over factored numbers
@@ -13,6 +15,8 @@ Elementary Euler-product bounds used for the mean square of the core.
   bound), from `log(1 - t) ≥ -t - 2t²` on `[0, 1/2]` and Mertens' second
   theorem.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalCubeChoice
-import OAI.NumberTheory.DirichletL.Detector.RayCharacterFamily
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalCubeChoice
+public import OAI.NumberTheory.DirichletL.Detector.RayCharacterFamily
+
+@[expose] public section
 
 namespace OAI
 

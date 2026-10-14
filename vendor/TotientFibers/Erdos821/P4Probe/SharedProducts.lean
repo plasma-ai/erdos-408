@@ -1,4 +1,8 @@
-import Erdos821.P4Probe.GraphSharedPairing
+module
+
+public import Erdos821.P4Probe.GraphSharedPairing
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

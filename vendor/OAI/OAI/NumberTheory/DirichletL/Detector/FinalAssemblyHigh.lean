@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.HighFromMoments
-import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyCollected
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.HighFromMoments
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyCollected
+
+@[expose] public section
 
 namespace OAI
 

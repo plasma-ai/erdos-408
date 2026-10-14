@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.Coefficient
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Coefficient
+
+@[expose] public section
 
 namespace OAI
 

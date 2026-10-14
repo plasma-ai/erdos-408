@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.OriginalRadialComparison
-import OAI.NumberTheory.DirichletL.Moments.InductionEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.OriginalRadialComparison
+public import OAI.NumberTheory.DirichletL.Moments.InductionEnergy
+
+@[expose] public section
 
 namespace OAI
 

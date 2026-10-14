@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Arithmetic.EisensteinIdeals
-import OAI.NumberTheory.DirichletL.Mellin.LogProfiles
+module
+
+public import OAI.NumberTheory.DirichletL.Arithmetic.EisensteinIdeals
+public import OAI.NumberTheory.DirichletL.Mellin.LogProfiles
+
+@[expose] public section
 
 namespace OAI
 
@@ -194,7 +198,7 @@ theorem exponent_table (parityBit ε₁ ε₂ : Bool) :
 
 def mask (n p : ℕ) : ℂ := if n.Coprime p then 1 else 0
 
-private theorem mask_mul (n a b : ℕ) :
+theorem mask_mul (n a b : ℕ) :
     mask n (a * b) = mask n a * mask n b := by
   classical
   simp only [mask]
@@ -256,7 +260,7 @@ theorem first_local_identity (side parityBit ε₁ ε₂ : Bool)
     have hzero : q = 0 := MulChar.map_nonunit χ hnu
     simp [oldFactor, newFactor, mask, hcop, q, hzero]
 
-private theorem char_prod_four (n : ℕ) (χ : MulChar (ZMod n) ℂ)
+theorem char_prod_four (n : ℕ) (χ : MulChar (ZMod n) ℂ)
     (S : Finset ℕ) :
     (∏ p ∈ S, (χ (p : ZMod n)) ^ 4) =
       (χ ((∏ p ∈ S, p : ℕ) : ZMod n)) ^ 4 := by
@@ -266,7 +270,7 @@ private theorem char_prod_four (n : ℕ) (χ : MulChar (ZMod n) ℂ)
   | @insert p S hp ih =>
       simp [hp, ih, Nat.cast_mul, map_mul, mul_pow]
 
-private theorem mask_prod (n : ℕ) (S : Finset ℕ) :
+theorem mask_prod (n : ℕ) (S : Finset ℕ) :
     (∏ p ∈ S, mask n p) = mask n (∏ p ∈ S, p) := by
   classical
   induction S using Finset.induction_on with
@@ -374,7 +378,7 @@ namespace ActualCubicChar
 variable {R F : Type*} [CommRing R] [IsDomain R] [Field F]
 
 omit [IsDomain R] in
-private theorem cubic_roots_surjective (ρ : R →+* F) (ζ : R)
+theorem cubic_roots_surjective (ρ : R →+* F) (ζ : R)
     (hζ : IsPrimitiveRoot ζ 3) (hζF : IsPrimitiveRoot (ρ ζ) 3) :
     Function.Surjective (restrictRootsOfUnity ρ 3) := by
   intro η
@@ -388,7 +392,7 @@ private theorem cubic_roots_surjective (ρ : R →+* F) (ζ : R)
   rw [map_pow]
   exact hj
 
-private noncomputable def cubic_roots_equiv (ρ : R →+* F) (ζ : R)
+noncomputable def cubic_roots_equiv (ρ : R →+* F) (ζ : R)
     (hζ : IsPrimitiveRoot ζ 3) (hζF : IsPrimitiveRoot (ρ ζ) 3) :
     rootsOfUnity 3 R ≃* rootsOfUnity 3 F := by
   classical
@@ -403,7 +407,7 @@ private noncomputable def cubic_roots_equiv (ρ : R →+* F) (ζ : R)
 
 variable [Fintype F]
 
-private theorem euler_jacobi_sum_zero (m : ℕ)
+theorem euler_jacobi_sum_zero (m : ℕ)
     (hm : 2 * m < Fintype.card F - 1) :
     (∑ x : F, x ^ m * (1 - x) ^ m) = 0 := by
   classical
@@ -426,7 +430,7 @@ private theorem euler_jacobi_sum_zero (m : ℕ)
       ring
     _ = 0 := by rw [FiniteField.sum_pow_lt_card_sub_one F _ he]; ring
 
-private def euler_to_roots (m : ℕ) (hq : Fintype.card F - 1 = m * 3) :
+def euler_to_roots (m : ℕ) (hq : Fintype.card F - 1 = m * 3) :
     Fˣ →* rootsOfUnity 3 F where
   toFun u := rootsOfUnity.mkOfPowEq ((u : F) ^ m) (by
     rw [← pow_mul, ← hq]
@@ -438,7 +442,7 @@ private def euler_to_roots (m : ℕ) (hq : Fintype.card F - 1 = m * 3) :
     apply rootsOfUnity.coe_injective
     simp [mul_pow]
 
-private noncomputable def cubicResidueChar (ρ : R →+* F) (ζ : R)
+noncomputable def cubicResidueChar (ρ : R →+* F) (ζ : R)
     (hζ : IsPrimitiveRoot ζ 3) (hζF : IsPrimitiveRoot (ρ ζ) 3)
     (m : ℕ) (hq : Fintype.card F - 1 = m * 3) : MulChar F R :=
   MulChar.ofUnitHom <|
@@ -487,7 +491,7 @@ open NumberField
 abbrev K := CyclotomicField 3 ℚ
 abbrev O := NumberField.RingOfIntegers K
 
-private instance : IsCyclotomicExtension {3} ℚ K :=
+instance : IsCyclotomicExtension {3} ℚ K :=
   CyclotomicField.isCyclotomicExtension 3 ℚ
 
 def omega : O :=
@@ -723,7 +727,7 @@ theorem cubicJacobi_product (P : Ideal O) [P.IsMaximal]
     ← MulChar.ringHomComp_inv]
   simpa only [ψ, Nat.card_eq_fintype_card, map_natCast] using hprod
 
-private noncomputable def conjK : K ≃ₐ[ℚ] K :=
+noncomputable def conjK : K ≃ₐ[ℚ] K :=
   IsCyclotomicExtension.fromZetaAut
     ((IsCyclotomicExtension.zeta_spec 3 ℚ K).pow_of_coprime 2 (by decide))
     (Polynomial.cyclotomic.irreducible_rat (by decide))
@@ -739,7 +743,7 @@ theorem conjO_omega : conjO omega = omega ^ 2 := by
     ((IsCyclotomicExtension.zeta_spec 3 ℚ K).pow_of_coprime 2 (by decide))
     (Polynomial.cyclotomic.irreducible_rat (by decide))
 
-private theorem conjO_cubic_root (x : O) (hx : x ^ 3 = 1) :
+theorem conjO_cubic_root (x : O) (hx : x ^ 3 = 1) :
     conjO x = x ^ 2 := by
   obtain ⟨j, _, hj⟩ := omega_primitive.eq_pow_of_pow_eq_one hx
   rw [← hj, map_pow, conjO_omega]
@@ -783,7 +787,7 @@ theorem cubicJacobi_mul_conj (P : Ideal O) [P.IsMaximal]
 
 end
 
-private noncomputable def quadraticCharO (P : Ideal O) [P.IsMaximal] :
+noncomputable def quadraticCharO (P : Ideal O) [P.IsMaximal] :
     MulChar (O ⧸ P) O := by
   classical
   letI : Field (O ⧸ P) := Ideal.Quotient.field P
@@ -911,7 +915,7 @@ theorem cubicJacobi_eq_neg_primary_generator (P : Ideal O) [P.IsMaximal]
   · rw [hneg] at hJu
     simpa only [Units.val_neg, Units.val_one, mul_neg, mul_one] using hJu
 
-private theorem conjK_ne_refl : conjK ≠ AlgEquiv.refl := by
+theorem conjK_ne_refl : conjK ≠ AlgEquiv.refl := by
   intro he
   have hw : omega ^ 2 = omega := by
     have hc : conjO omega = omega := by
@@ -929,7 +933,7 @@ private theorem conjK_ne_refl : conjK ≠ AlgEquiv.refl := by
       _ = omega * 1 := by ring
   exact (omega_primitive.ne_one (by decide)) hw1
 
-private theorem galois_card_two : Fintype.card (K ≃ₐ[ℚ] K) = 2 := by
+theorem galois_card_two : Fintype.card (K ≃ₐ[ℚ] K) = 2 := by
   classical
   let : IsGalois ℚ K := IsCyclotomicExtension.isGalois {3} ℚ K
   rw [← Nat.card_eq_fintype_card, IsGalois.card_aut_eq_finrank ℚ K,
@@ -937,14 +941,14 @@ private theorem galois_card_two : Fintype.card (K ≃ₐ[ℚ] K) = 2 := by
       (Polynomial.cyclotomic.irreducible_rat (by decide))]
   decide
 
-private theorem galois_univ_pair [DecidableEq (K ≃ₐ[ℚ] K)] :
+theorem galois_univ_pair [DecidableEq (K ≃ₐ[ℚ] K)] :
     (Finset.univ : Finset (K ≃ₐ[ℚ] K)) = {(AlgEquiv.refl : K ≃ₐ[ℚ] K), conjK} := by
   symm
   apply Finset.eq_of_subset_of_card_le (Finset.subset_univ _)
   rw [Finset.card_univ, galois_card_two, Finset.card_pair]
   exact conjK_ne_refl.symm
 
-private theorem norm_eq_mul_conjK (p : O) :
+theorem norm_eq_mul_conjK (p : O) :
     ((Algebra.norm ℚ (p : K) : ℚ) : K) = (p : K) * conjK (p : K) := by
   classical
   let : IsGalois ℚ K := IsCyclotomicExtension.isGalois {3} ℚ K
@@ -960,7 +964,7 @@ theorem norm_int_eq_mul_conjO (p : O) :
   rw [← Algebra.coe_norm_int p] at h
   exact h
 
-private theorem generator_mul_conj_eq_sign_card (P : Ideal O) [P.IsMaximal]
+theorem generator_mul_conj_eq_sign_card (P : Ideal O) [P.IsMaximal]
     (p : O) (hP : P = Ideal.span {p}) :
     p * conjO p = (Nat.card (O ⧸ P) : O) ∨
       p * conjO p = -(Nat.card (O ⧸ P) : O) := by
@@ -1103,7 +1107,7 @@ theorem cubicJacobi_exists_primary_generator (P : Ideal O) [P.IsMaximal]
     rw [hJ]
     ring
 
-private theorem hgood_from_trace (P : Ideal O) (hgood : traceLambda ∉ P) :
+theorem hgood_from_trace (P : Ideal O) (hgood : traceLambda ∉ P) :
     lambda ∉ P := by
   intro h
   exact hgood ((traceLambda_mem_iff P).mpr h)
@@ -1176,7 +1180,7 @@ theorem cubicGauss_cube {E : Type*} [Field E] (ι : O →+* E)
     _ = (gaussSum ξ ψ * gaussSum ξ⁻¹ ψ) * jacobiSum ξ ξ := by ring
     _ = -(ι p) * (Nat.card (O ⧸ P) : E) := by rw [hgs, hJ]; ring
 
-private noncomputable def complexEmbedding : K →ₐ[ℚ] ℂ :=
+noncomputable def complexEmbedding : K →ₐ[ℚ] ℂ :=
   IsAlgClosed.lift
 
 noncomputable def ringComplex : O →+* ℂ :=
@@ -1185,7 +1189,7 @@ noncomputable def ringComplex : O →+* ℂ :=
 theorem ringComplex_injective : Function.Injective ringComplex :=
   complexEmbedding.injective.comp NumberField.RingOfIntegers.coe_injective
 
-private theorem ringComplex_conjO (x : O) :
+theorem ringComplex_conjO (x : O) :
     ringComplex (conjO x) = star (ringComplex x) := by
   let z := ringComplex omega
   have hz3 : z ^ 3 = 1 := by

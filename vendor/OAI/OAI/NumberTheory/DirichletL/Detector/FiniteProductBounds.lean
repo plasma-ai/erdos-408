@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.CompensationActual
-import OAI.NumberTheory.DirichletL.PrincipalMellinGrowth
-import OAI.NumberTheory.DirichletL.PrincipalSlotEstimate
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CompensationActual
+public import OAI.NumberTheory.DirichletL.PrincipalMellinGrowth
+public import OAI.NumberTheory.DirichletL.PrincipalSlotEstimate
+
+@[expose] public section
 
 namespace OAI
 

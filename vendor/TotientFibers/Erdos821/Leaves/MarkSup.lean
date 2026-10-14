@@ -1,5 +1,9 @@
-import Mathlib
-import Erdos821.Blueprint.Analytic
+module
+
+public import Erdos821.Blueprint.Analytic
+public import Mathlib.Analysis.CStarAlgebra.Classes
+
+@[expose] public section
 
 open scoped BigOperators
 open Filter Topology

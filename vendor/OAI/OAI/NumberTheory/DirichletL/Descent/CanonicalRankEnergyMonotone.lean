@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalRankExistenceData
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalRankExistenceData
+
+@[expose] public section
 
 namespace OAI
 

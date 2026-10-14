@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Major.Characters
-import Erdos408.OneSided.Major.Energy
-import Erdos408.OneSided.Major.Mellin
+module
+
+public import Erdos408.OneSided.Major.Characters
+public import Erdos408.OneSided.Major.Energy
+public import Erdos408.OneSided.Major.Mellin
 
 /-!
 # The major sum arc by arc
@@ -21,6 +23,8 @@ product `N_u = a_u m n` and the coefficient `c_u = η(a_u/Y) ∏ V_i⁻¹ α_m �
   modulo `k`, so it expands into products of three characters with coefficients of modulus at
   most one. Hence `|G(τ)| ≤ XY ∑_χ |B_λ^{χ₁} M^{χ₂} N^{χ₃}(τ)|`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

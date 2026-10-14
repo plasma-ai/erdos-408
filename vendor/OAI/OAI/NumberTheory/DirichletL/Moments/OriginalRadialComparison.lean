@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.OriginalComparisonEnergy
-import OAI.NumberTheory.DirichletL.Moments.RadialPolynomialEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.OriginalComparisonEnergy
+public import OAI.NumberTheory.DirichletL.Moments.RadialPolynomialEnergy
+
+@[expose] public section
 
 namespace OAI
 

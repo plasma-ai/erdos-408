@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.OriginalChoiceControl
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalChoiceControl
+
+@[expose] public section
 
 namespace OAI
 

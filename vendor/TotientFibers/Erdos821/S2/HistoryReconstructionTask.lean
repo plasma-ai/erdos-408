@@ -1,7 +1,11 @@
-import Erdos821.S2.HistoryOrders
-import Erdos821.S2.LifespanClassificationTask
+module
+
+public import Erdos821.S2.HistoryOrders
+public import Erdos821.S2.LifespanClassificationTask
 
 /-! Surjectivity of the lifespan construction, retaining ordered ghost fibers. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

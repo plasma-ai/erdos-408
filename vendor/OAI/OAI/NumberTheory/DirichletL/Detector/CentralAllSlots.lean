@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.CentralBranchProduct
-import OAI.NumberTheory.DirichletL.Detector.CentralRepeatedSubset
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralSlotSum
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CentralBranchProduct
+public import OAI.NumberTheory.DirichletL.Detector.CentralRepeatedSubset
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralSlotSum
+
+@[expose] public section
 
 namespace OAI
 

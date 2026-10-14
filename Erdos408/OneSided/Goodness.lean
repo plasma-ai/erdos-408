@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Bands
-import Erdos408.OneSided.Lift
-import Mathlib.MeasureTheory.Integral.Lebesgue.Markov
-import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
+module
+
+public import Erdos408.OneSided.Bands
+public import Erdos408.OneSided.Lift
+public import Mathlib.MeasureTheory.Integral.Lebesgue.Markov
+public import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
 
 /-!
 # Good ratios
@@ -24,6 +26,8 @@ in the lists and the varying data.
 * Uniformity. Both totals are at most `exp(-L^{a₋}/4)/2` once `L^g ≥ 32K` and
   `L^{a₋} ≥ 8(K + 2K L^{0.01} + 600)`, using `M ≤ exp(L^{0.01})`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

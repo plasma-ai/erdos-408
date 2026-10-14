@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthPhysicalReindex
-import OAI.NumberTheory.DirichletL.Energy.CanonicalHighPhysical
-import OAI.NumberTheory.DirichletL.Energy.FirstSourceParameters
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthSource
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthPhysicalReindex
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalHighPhysical
+public import OAI.NumberTheory.DirichletL.Energy.FirstSourceParameters
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthSource
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.RetainedWidth
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.RetainedWidth
+
+@[expose] public section
 
 namespace OAI
 

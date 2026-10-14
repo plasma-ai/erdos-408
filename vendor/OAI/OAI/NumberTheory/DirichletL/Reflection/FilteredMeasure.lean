@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.FilteredEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.FilteredEnergy
+
+@[expose] public section
 
 namespace OAI
 

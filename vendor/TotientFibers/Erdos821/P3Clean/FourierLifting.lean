@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.FiniteFourier
+module
+
+public import Erdos821.P3Clean.FiniteFourier
 
 /-! A finite residue translation lift preserves a uniform Fourier-fibre norm. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

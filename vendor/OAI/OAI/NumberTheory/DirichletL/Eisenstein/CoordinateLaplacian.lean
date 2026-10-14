@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.RadialProfiles
-import OAI.NumberTheory.DirichletL.CubicSieve.CanonicalLogEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.RadialProfiles
+public import OAI.NumberTheory.DirichletL.CubicSieve.CanonicalLogEnergy
+
+@[expose] public section
 
 namespace OAI
 

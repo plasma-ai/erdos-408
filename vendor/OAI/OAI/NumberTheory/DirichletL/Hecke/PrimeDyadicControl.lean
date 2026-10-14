@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DyadicControl
-import OAI.NumberTheory.DirichletL.Hecke.DeletionDerivative
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicControl
+public import OAI.NumberTheory.DirichletL.Hecke.DeletionDerivative
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerReference
-import OAI.NumberTheory.DirichletL.Descent.SecondSquarefree
-import OAI.NumberTheory.DirichletL.Descent.ChildCutoff
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerReference
+public import OAI.NumberTheory.DirichletL.Descent.SecondSquarefree
+public import OAI.NumberTheory.DirichletL.Descent.ChildCutoff
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceDeleted
-import OAI.NumberTheory.DirichletL.Energy.ReferenceDeletionEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceDeleted
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceDeletionEnergy
+
+@[expose] public section
 
 namespace OAI
 

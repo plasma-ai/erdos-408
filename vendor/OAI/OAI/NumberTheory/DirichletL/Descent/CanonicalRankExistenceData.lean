@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalCompleteRankNormalized
-import OAI.NumberTheory.DirichletL.Descent.CanonicalCompleteBudget
-import OAI.NumberTheory.DirichletL.Descent.CanonicalRankPuncture
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalCompleteRankNormalized
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalCompleteBudget
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalRankPuncture
+
+@[expose] public section
 
 namespace OAI
 

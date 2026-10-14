@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondDyadicPartition
-import OAI.NumberTheory.DirichletL.Moments.SecondRetainedRows
-import OAI.NumberTheory.DirichletL.Moments.ActiveSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondDyadicPartition
+public import OAI.NumberTheory.DirichletL.Moments.SecondRetainedRows
+public import OAI.NumberTheory.DirichletL.Moments.ActiveSource
+
+@[expose] public section
 
 namespace OAI
 

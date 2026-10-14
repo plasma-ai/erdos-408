@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Moment.Lines
-import Erdos408.OneSided.RootResidue
+module
+
+public import Erdos408.OneSided.Moment.Lines
+public import Erdos408.OneSided.RootResidue
 
 /-!
 # Reindexing the moment by integer roots
@@ -11,6 +13,8 @@ root `g = (u c; v d)`, with `c = rootC u v` and `u d - v c = 1`, so `g(ϱ)` at t
 `p ∣ (g z)₁ = u z₁ + c z₂` exactly when `[z]_p = ℓ_p`, and the ratios agree modulo `ℤ`. Hence
 the determinant moment is the sum of the root moments at the integer roots.
 -/
+
+@[expose] public section
 
 noncomputable section
 

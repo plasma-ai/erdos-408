@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDegree
+
+@[expose] public section
 
 namespace OAI
 

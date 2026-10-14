@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
+
+@[expose] public section
 
 namespace OAI
 

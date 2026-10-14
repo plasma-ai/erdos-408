@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowRay
-import OAI.NumberTheory.DirichletL.Detector.GaussianPartition
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowRay
+public import OAI.NumberTheory.DirichletL.Detector.GaussianPartition
+
+@[expose] public section
 
 namespace OAI
 

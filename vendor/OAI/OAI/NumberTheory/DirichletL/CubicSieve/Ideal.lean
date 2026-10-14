@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.CubicSieve.Algebra
-import OAI.NumberTheory.DirichletL.CubicSieve.Factorization
-import OAI.NumberTheory.DirichletL.CubicSieve.Blocks
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.CubicSieve.Algebra
+public import OAI.NumberTheory.DirichletL.CubicSieve.Factorization
+public import OAI.NumberTheory.DirichletL.CubicSieve.Blocks
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.DetectorMomentFiberGates
-import OAI.NumberTheory.DirichletL.Inversion.InitialPhysicalSlots
-import OAI.NumberTheory.DirichletL.Detector.RayPoolDisjoint
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.DetectorMomentFiberGates
+public import OAI.NumberTheory.DirichletL.Inversion.InitialPhysicalSlots
+public import OAI.NumberTheory.DirichletL.Detector.RayPoolDisjoint
+
+@[expose] public section
 
 namespace OAI
 

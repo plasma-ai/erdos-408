@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthPhysical
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthSourceControlled
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthContourBounded
-import OAI.NumberTheory.DirichletL.Energy.StageMonotonicity
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthPhysical
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthSourceControlled
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthContourBounded
+public import OAI.NumberTheory.DirichletL.Energy.StageMonotonicity
+
+@[expose] public section
 
 namespace OAI
 

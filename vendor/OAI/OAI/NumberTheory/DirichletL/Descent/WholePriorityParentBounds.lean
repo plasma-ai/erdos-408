@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.WholePriorityMass
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.WholePriorityMass
+
+@[expose] public section
 
 namespace OAI
 

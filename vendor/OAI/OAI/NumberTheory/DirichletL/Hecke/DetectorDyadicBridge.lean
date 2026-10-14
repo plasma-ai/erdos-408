@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorFourierActual
-import OAI.NumberTheory.DirichletL.Hecke.DyadicSource
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorFourierActual
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicSource
+
+@[expose] public section
 
 namespace OAI
 

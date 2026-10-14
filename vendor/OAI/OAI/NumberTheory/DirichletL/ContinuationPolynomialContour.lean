@@ -1,5 +1,10 @@
-import OAI.NumberTheory.DirichletL.ContinuationContour
-import Mathlib.Analysis.SpecialFunctions.Gaussian.PoissonSummation
+module
+
+public import OAI.NumberTheory.DirichletL.ContinuationContour
+public import Mathlib.Analysis.SpecialFunctions.Gaussian.PoissonSummation
+public import Mathlib.Analysis.CStarAlgebra.Classes
+
+@[expose] public section
 
 namespace OAI
 

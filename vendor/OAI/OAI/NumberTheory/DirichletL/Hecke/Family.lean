@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Hecke.Theta
-import Mathlib.NumberTheory.NumberField.Cyclotomic.Three
-import Mathlib.NumberTheory.MulChar.Lemmas
-import Mathlib.RingTheory.Ideal.Quotient.Operations
-import Mathlib.RingTheory.Ideal.Norm.AbsNorm
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Theta
+public import Mathlib.NumberTheory.NumberField.Cyclotomic.Three
+public import Mathlib.NumberTheory.MulChar.Lemmas
+public import Mathlib.RingTheory.Ideal.Quotient.Operations
+public import Mathlib.RingTheory.Ideal.Norm.AbsNorm
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstTwoPassEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstTwoPassEnergy
+
+@[expose] public section
 
 namespace OAI
 

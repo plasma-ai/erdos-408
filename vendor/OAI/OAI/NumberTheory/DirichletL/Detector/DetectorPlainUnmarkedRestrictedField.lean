@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.DetectorPlainUnmarkedField
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.DetectorPlainUnmarkedField
+
+@[expose] public section
 
 namespace OAI
 

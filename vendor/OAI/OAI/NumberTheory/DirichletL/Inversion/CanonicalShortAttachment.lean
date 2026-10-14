@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Descent.CompleteMarkedPool
-import OAI.NumberTheory.DirichletL.Descent.CompletionSplit
-import OAI.NumberTheory.DirichletL.Descent.ReopenedBins
-import OAI.NumberTheory.DirichletL.Inversion.ShortCanonicalNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CompleteMarkedPool
+public import OAI.NumberTheory.DirichletL.Descent.CompletionSplit
+public import OAI.NumberTheory.DirichletL.Descent.ReopenedBins
+public import OAI.NumberTheory.DirichletL.Inversion.ShortCanonicalNormalization
+
+@[expose] public section
 
 namespace OAI
 

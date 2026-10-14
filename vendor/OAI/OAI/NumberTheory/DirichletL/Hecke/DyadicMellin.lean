@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.Dyadic
-import OAI.NumberTheory.DirichletL.Hecke.StripActual
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Dyadic
+public import OAI.NumberTheory.DirichletL.Hecke.StripActual
+
+@[expose] public section
 
 namespace OAI
 

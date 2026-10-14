@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SlotSums
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SlotSums
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonMaskEnergy
-import OAI.NumberTheory.DirichletL.Moments.UniformRadialComparison
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonMaskEnergy
+public import OAI.NumberTheory.DirichletL.Moments.UniformRadialComparison
+
+@[expose] public section
 
 namespace OAI
 

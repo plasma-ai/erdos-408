@@ -1,4 +1,8 @@
-import Erdos821.P5.ExceptionalAsymptotics
+module
+
+public import Erdos821.P5.ExceptionalAsymptotics
+
+@[expose] public section
 
 noncomputable section
 open Filter

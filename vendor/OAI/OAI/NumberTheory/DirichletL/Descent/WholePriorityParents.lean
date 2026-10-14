@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.FirstPriorityParents
-import OAI.NumberTheory.DirichletL.Descent.FirstWholeCubePriority
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.FirstPriorityParents
+public import OAI.NumberTheory.DirichletL.Descent.FirstWholeCubePriority
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Moment.PrimeFactor
-import Erdos408.OneSided.Moment.PathExpansion.Average
-import Erdos408.OneSided.Moment.PathExpansion.Hermitian
-import Erdos408.OneSided.Moment.PathExpansion.Paths
+module
+
+public import Erdos408.OneSided.Moment.PrimeFactor
+public import Erdos408.OneSided.Moment.PathExpansion.Average
+public import Erdos408.OneSided.Moment.PathExpansion.Hermitian
+public import Erdos408.OneSided.Moment.PathExpansion.Paths
 
 /-!
 # The path expansion of the line average
@@ -26,6 +28,8 @@ factorization (`Hermitian.lean`), and averages of products over the lines (`Aver
 The edge factorization is `rootModel_edgeOp_eq`, and the line weights along a path give the
 line factors in `prod_lineWeight_eq`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

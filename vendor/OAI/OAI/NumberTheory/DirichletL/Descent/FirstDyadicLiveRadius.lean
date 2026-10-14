@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstDyadicCell
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLivePartition
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstDyadicCell
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLivePartition
+
+@[expose] public section
 
 namespace OAI
 

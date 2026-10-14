@@ -1,5 +1,8 @@
-import Erdos821.S2.MemoryEdge
-import Mathlib
+module
+
+public import Erdos821.S2.MemoryEdge
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

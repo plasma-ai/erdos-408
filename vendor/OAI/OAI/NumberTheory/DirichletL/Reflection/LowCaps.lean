@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.LowWidth
-import OAI.NumberTheory.DirichletL.Reflection.ActualSizeCaps
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.LowWidth
+public import OAI.NumberTheory.DirichletL.Reflection.ActualSizeCaps
+
+@[expose] public section
 
 namespace OAI
 

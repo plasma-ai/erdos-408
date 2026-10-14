@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalBlock
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalBlock
+
+@[expose] public section
 
 namespace OAI
 

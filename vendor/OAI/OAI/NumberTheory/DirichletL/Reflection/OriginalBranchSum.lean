@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.OriginalExponent
-import OAI.NumberTheory.DirichletL.Reflection.RetainedCaps
-import OAI.NumberTheory.DirichletL.Reflection.BranchCount
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalExponent
+public import OAI.NumberTheory.DirichletL.Reflection.RetainedCaps
+public import OAI.NumberTheory.DirichletL.Reflection.BranchCount
+
+@[expose] public section
 
 namespace OAI
 

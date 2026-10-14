@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonMaskExpansion
-import OAI.NumberTheory.DirichletL.Moments.NaturalRowSourceDictionary
-import OAI.NumberTheory.DirichletL.Moments.PositiveSummability
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonMaskExpansion
+public import OAI.NumberTheory.DirichletL.Moments.NaturalRowSourceDictionary
+public import OAI.NumberTheory.DirichletL.Moments.PositiveSummability
+
+@[expose] public section
 
 namespace OAI
 

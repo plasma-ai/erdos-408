@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceLowerSupport
-import OAI.NumberTheory.DirichletL.Moments.SecondActiveDyadic
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceLowerSupport
+public import OAI.NumberTheory.DirichletL.Moments.SecondActiveDyadic
+
+@[expose] public section
 
 namespace OAI
 

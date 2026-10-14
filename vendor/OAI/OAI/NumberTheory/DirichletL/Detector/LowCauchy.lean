@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowSeparated
-import OAI.NumberTheory.DirichletL.Moments.Cauchy
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowSeparated
+public import OAI.NumberTheory.DirichletL.Moments.Cauchy
+
+@[expose] public section
 
 namespace OAI
 

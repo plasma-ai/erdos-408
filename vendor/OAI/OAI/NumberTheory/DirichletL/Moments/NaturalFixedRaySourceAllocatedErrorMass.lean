@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceAllocatedProfile
-import OAI.NumberTheory.DirichletL.Moments.OriginalReflectionErrorMass
-import OAI.NumberTheory.DirichletL.Moments.OriginalRadialComparison
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceAllocatedProfile
+public import OAI.NumberTheory.DirichletL.Moments.OriginalReflectionErrorMass
+public import OAI.NumberTheory.DirichletL.Moments.OriginalRadialComparison
+
+@[expose] public section
 
 namespace OAI
 

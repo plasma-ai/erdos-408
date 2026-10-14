@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.IdealGenerators
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.IdealGenerators
+
+@[expose] public section
 
 namespace OAI
 

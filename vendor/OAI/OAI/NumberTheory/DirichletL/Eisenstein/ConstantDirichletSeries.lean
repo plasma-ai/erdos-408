@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.FrequencyCutoffs
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.FrequencyCutoffs
+
+@[expose] public section
 
 namespace OAI
 

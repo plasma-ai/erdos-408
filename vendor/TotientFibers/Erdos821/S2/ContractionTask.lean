@@ -1,7 +1,11 @@
-import Erdos821.S2.EdgeTasks
-import Erdos821.S2.CountableSchur
+module
+
+public import Erdos821.S2.EdgeTasks
+public import Erdos821.S2.CountableSchur
 
 /-! Quantifier-preserving parameter choice for whole truncated edge contraction. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

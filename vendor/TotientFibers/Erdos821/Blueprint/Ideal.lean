@@ -1,6 +1,11 @@
-import Erdos821.Blueprint.Transference
+module
+
+public import Erdos821.Blueprint.Transference
 
 /-! P4: an actual raw-plus-comparison model, independent of θ and ζ. -/
+
+@[expose] public section
+
 noncomputable section
 open scoped BigOperators
 open Filter

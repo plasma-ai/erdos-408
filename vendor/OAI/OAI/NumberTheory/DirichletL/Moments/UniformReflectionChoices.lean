@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.UniformReflectionScale
-import OAI.NumberTheory.DirichletL.Moments.ReflectedChoiceEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.UniformReflectionScale
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedChoiceEnergy
+
+@[expose] public section
 
 namespace OAI
 

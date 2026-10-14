@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstGlobalSourceSupport
-import OAI.NumberTheory.DirichletL.Descent.FirstGlobalSourceIndex
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstGlobalSourceSupport
+public import OAI.NumberTheory.DirichletL.Descent.FirstGlobalSourceIndex
+
+@[expose] public section
 
 namespace OAI
 

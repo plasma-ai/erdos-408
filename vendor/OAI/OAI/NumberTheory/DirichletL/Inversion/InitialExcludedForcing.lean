@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedOverlap
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedOverlap
+
+@[expose] public section
 
 namespace OAI
 

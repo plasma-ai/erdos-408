@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.ParametersSlotLengths
+module
+
+public import OAI.NumberTheory.DirichletL.ParametersSlotLengths
+
+@[expose] public section
 
 namespace OAI
 

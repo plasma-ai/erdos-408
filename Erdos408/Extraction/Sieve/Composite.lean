@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Sieve.Basic
-import Mathlib.Data.Nat.Squarefree
+module
+
+public import Erdos408.Extraction.Sieve.Basic
+public import Mathlib.Data.Nat.Squarefree
 
 /-!
 # The composite decomposition of the presieved sum (E3)
@@ -21,6 +23,8 @@ by `1 - a(n)` with `0 ≤ a(n) ≤ 1`.
 * `card_rough_le`: that sieve bound with `D = D₀ / log z`, from the upper
   form of `BlockSieve` with the primes up to `min(z, Y^{1/20})`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

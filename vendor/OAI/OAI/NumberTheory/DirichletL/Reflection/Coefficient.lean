@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.IdealBridge
-import OAI.NumberTheory.DirichletL.Reflection.Norms
-import OAI.NumberTheory.DirichletL.Reflection.FrozenSplit
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.IdealBridge
+public import OAI.NumberTheory.DirichletL.Reflection.Norms
+public import OAI.NumberTheory.DirichletL.Reflection.FrozenSplit
+
+@[expose] public section
 
 namespace OAI
 

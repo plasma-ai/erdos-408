@@ -1,5 +1,9 @@
-import Erdos821.S2.SpanSumTask
-import Erdos821.Leaves.OrphanExp
+module
+
+public import Erdos821.S2.SpanSumTask
+public import Erdos821.Leaves.OrphanExp
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

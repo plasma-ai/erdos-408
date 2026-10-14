@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.DetectorBins
-import OAI.NumberTheory.DirichletL.Hecke.DyadicControl
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.DetectorBins
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicControl
+
+@[expose] public section
 
 namespace OAI
 

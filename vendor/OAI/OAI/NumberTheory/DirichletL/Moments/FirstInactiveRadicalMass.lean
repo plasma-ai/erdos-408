@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondBlockRadicalHarmonicMass
-import OAI.NumberTheory.DirichletL.Moments.FirstDiscardedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondBlockRadicalHarmonicMass
+public import OAI.NumberTheory.DirichletL.Moments.FirstDiscardedEnergy
+
+@[expose] public section
 
 namespace OAI
 

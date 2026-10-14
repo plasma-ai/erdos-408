@@ -1,6 +1,11 @@
-import Erdos821.S2.EdgeTasks
+module
+
+public import Erdos821.S2.EdgeTasks
+public import Mathlib.Algebra.Order.Star.Real
 
 /-! Contractions in the finite-support formulation of the clean norm. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalPrincipalMassCount
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPrincipalMassCount
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GlobalRegion
-import OAI.NumberTheory.DirichletL.Detector.EulerHolomorphic
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GlobalRegion
+public import OAI.NumberTheory.DirichletL.Detector.EulerHolomorphic
+
+@[expose] public section
 
 namespace OAI
 

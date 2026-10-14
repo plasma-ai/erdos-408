@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstFamilySource
-import OAI.NumberTheory.DirichletL.Descent.FirstUnequalEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstFamilySource
+public import OAI.NumberTheory.DirichletL.Descent.FirstUnequalEnergy
+
+@[expose] public section
 
 namespace OAI
 

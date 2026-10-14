@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.RowCount
-import OAI.NumberTheory.DirichletL.PrimeRows.PhysicalLargeTail
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.RowCount
+public import OAI.NumberTheory.DirichletL.PrimeRows.PhysicalLargeTail
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.SlotChoices
-import OAI.NumberTheory.DirichletL.Reflection.OriginalMask
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.SlotChoices
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalMask
+
+@[expose] public section
 
 namespace OAI
 

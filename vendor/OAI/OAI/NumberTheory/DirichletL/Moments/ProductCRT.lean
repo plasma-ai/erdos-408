@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.HeterogeneousCRT
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.HeterogeneousCRT
+
+@[expose] public section
 
 namespace OAI
 

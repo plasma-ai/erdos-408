@@ -1,6 +1,11 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.Complex.Basic
 
 /-! Finite alternating kernel chains: path sums and weighted operator-norm composition. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

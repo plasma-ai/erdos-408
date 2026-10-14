@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationLiveEnergy
-import OAI.NumberTheory.DirichletL.Moments.AmplificationAllocationScale
-import OAI.NumberTheory.DirichletL.Moments.GaussNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationLiveEnergy
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationAllocationScale
+public import OAI.NumberTheory.DirichletL.Moments.GaussNormalization
+
+@[expose] public section
 
 namespace OAI
 

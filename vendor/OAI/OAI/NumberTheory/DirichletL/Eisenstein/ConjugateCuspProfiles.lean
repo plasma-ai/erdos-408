@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.ArbitraryCuspPullback
-import OAI.NumberTheory.DirichletL.Reciprocity.CubeCorrespondence
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.ArbitraryCuspPullback
+public import OAI.NumberTheory.DirichletL.Reciprocity.CubeCorrespondence
+
+@[expose] public section
 
 namespace OAI
 

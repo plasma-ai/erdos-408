@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.TensorProfiles
+module
+
+public import OAI.NumberTheory.PrimeGaps.TensorProfiles
+
+@[expose] public section
 
 namespace OAI
 

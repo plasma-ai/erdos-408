@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.CuspAverage
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.CuspAverage
+
+@[expose] public section
 
 namespace OAI
 

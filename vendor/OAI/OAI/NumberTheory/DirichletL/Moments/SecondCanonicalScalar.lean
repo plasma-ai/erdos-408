@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondCanonicalLedger
-import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondCanonicalLedger
+public import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
+
+@[expose] public section
 
 namespace OAI
 

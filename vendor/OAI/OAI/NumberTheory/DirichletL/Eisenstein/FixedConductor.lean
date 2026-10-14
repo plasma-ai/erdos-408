@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.ReflectionPool
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.ReflectionPool
+
+@[expose] public section
 
 namespace OAI
 

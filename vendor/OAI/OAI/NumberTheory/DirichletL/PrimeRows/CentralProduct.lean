@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralSplit
-import OAI.NumberTheory.DirichletL.PrimeRows.WeightedTuple
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralSplit
+public import OAI.NumberTheory.DirichletL.PrimeRows.WeightedTuple
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.Pullback
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Pullback
+
+@[expose] public section
 
 namespace OAI
 

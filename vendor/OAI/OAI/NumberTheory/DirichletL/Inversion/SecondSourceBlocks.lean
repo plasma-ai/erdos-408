@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.WholeRetainedSource
-import OAI.NumberTheory.DirichletL.Descent.SecondDeletedMovingMass
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.WholeRetainedSource
+public import OAI.NumberTheory.DirichletL.Descent.SecondDeletedMovingMass
+
+@[expose] public section
 
 namespace OAI
 

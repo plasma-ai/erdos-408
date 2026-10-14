@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.EulerProducts
+module
+
+public import OAI.NumberTheory.PrimeGaps.EulerProducts
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationConjugation
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationConjugation
+
+@[expose] public section
 
 namespace OAI
 

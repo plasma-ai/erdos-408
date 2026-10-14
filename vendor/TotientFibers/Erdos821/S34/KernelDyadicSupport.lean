@@ -1,5 +1,9 @@
-import Erdos821.S34.KernelTransport
-import Erdos821.S34.ProductSupport
+module
+
+public import Erdos821.S34.KernelTransport
+public import Erdos821.S34.ProductSupport
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

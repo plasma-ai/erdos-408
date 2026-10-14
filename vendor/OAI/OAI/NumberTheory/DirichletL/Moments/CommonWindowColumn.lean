@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalWholeWindow
-import OAI.NumberTheory.DirichletL.Moments.CommonPairedSource
-import OAI.NumberTheory.DirichletL.Moments.CommonHeightEnvelope
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalWholeWindow
+public import OAI.NumberTheory.DirichletL.Moments.CommonPairedSource
+public import OAI.NumberTheory.DirichletL.Moments.CommonHeightEnvelope
+
+@[expose] public section
 
 namespace OAI
 

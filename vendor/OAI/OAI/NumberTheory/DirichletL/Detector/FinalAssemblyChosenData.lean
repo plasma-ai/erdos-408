@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.FinalAssembly
-import OAI.NumberTheory.DirichletL.ParametersHighDataFine
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssembly
+public import OAI.NumberTheory.DirichletL.ParametersHighDataFine
+
+@[expose] public section
 
 namespace OAI
 

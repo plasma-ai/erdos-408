@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorSourceCount
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorSourceCount
+
+@[expose] public section
 
 namespace OAI
 

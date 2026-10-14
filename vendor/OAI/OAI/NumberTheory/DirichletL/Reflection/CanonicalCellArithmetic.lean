@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.CellArithmetic
-import OAI.NumberTheory.DirichletL.Reflection.OriginalRetainedSlots
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CellArithmetic
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalRetainedSlots
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import Erdos821.P4Probe.AlternatingProjections
+module
+
+public import Erdos821.P4Probe.AlternatingProjections
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

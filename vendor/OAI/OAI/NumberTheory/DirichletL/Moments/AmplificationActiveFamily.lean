@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationActiveFactor
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationActiveFactor
+
+@[expose] public section
 
 namespace OAI
 

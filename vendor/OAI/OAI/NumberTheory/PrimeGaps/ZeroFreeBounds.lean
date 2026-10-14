@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.SiegelBounds
+module
+
+public import OAI.NumberTheory.PrimeGaps.SiegelBounds
+
+@[expose] public section
 
 namespace OAI
 

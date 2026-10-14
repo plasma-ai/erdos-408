@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalRowSourceFamily
-import OAI.NumberTheory.DirichletL.Moments.RetainedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalRowSourceFamily
+public import OAI.NumberTheory.DirichletL.Moments.RetainedEnergy
+
+@[expose] public section
 
 namespace OAI
 

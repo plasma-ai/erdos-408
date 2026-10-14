@@ -1,4 +1,8 @@
-import Erdos821.P5.DyadicLiftIntegral
+module
+
+public import Erdos821.P5.DyadicLiftIntegral
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

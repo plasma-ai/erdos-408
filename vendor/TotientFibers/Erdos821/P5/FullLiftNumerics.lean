@@ -1,4 +1,8 @@
-import Erdos821.P5.MellinIntegralBound
+module
+
+public import Erdos821.P5.MellinIntegralBound
+
+@[expose] public section
 
 noncomputable section
 

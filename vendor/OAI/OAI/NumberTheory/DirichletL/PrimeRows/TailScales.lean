@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.DyadIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.DyadIntegral
+
+@[expose] public section
 
 namespace OAI
 

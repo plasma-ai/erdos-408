@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DyadicLossBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicLossBudget
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstGlobalSourceEnergy
-import OAI.NumberTheory.DirichletL.Descent.GlobalParentEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstGlobalSourceEnergy
+public import OAI.NumberTheory.DirichletL.Descent.GlobalParentEnergy
+
+@[expose] public section
 
 namespace OAI
 

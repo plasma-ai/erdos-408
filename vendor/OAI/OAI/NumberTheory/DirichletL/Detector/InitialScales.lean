@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.InitialMajorant
-import OAI.NumberTheory.DirichletL.Detector.MellinScaling
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.InitialMajorant
+public import OAI.NumberTheory.DirichletL.Detector.MellinScaling
+
+@[expose] public section
 
 namespace OAI
 

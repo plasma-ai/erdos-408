@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowGaussianSum
-import OAI.NumberTheory.DirichletL.Detector.RayPoolDisjoint
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowGaussianSum
+public import OAI.NumberTheory.DirichletL.Detector.RayPoolDisjoint
+
+@[expose] public section
 
 namespace OAI
 

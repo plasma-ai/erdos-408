@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FixedQForcingCount
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonSymmetry
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalAsymmetricCanonical
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FixedQForcingCount
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonSymmetry
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalAsymmetricCanonical
+
+@[expose] public section
 
 namespace OAI
 

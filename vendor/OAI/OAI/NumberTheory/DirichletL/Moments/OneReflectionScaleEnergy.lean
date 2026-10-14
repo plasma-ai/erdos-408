@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.ReflectedNormalization
-import OAI.NumberTheory.DirichletL.Moments.FrequencyScaleSupremum
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationConjugation
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedNormalization
+public import OAI.NumberTheory.DirichletL.Moments.FrequencyScaleSupremum
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationConjugation
+
+@[expose] public section
 
 namespace OAI
 

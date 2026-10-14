@@ -1,4 +1,11 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.BigOperators.Field
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds
+
+@[expose] public section
 
 namespace OAI
 open scoped BigOperators

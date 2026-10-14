@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramTruncation
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramTruncation
+
+@[expose] public section
 
 namespace OAI
 

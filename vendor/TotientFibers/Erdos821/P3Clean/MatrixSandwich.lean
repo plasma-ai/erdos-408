@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.Sandwich
+module
+
+public import Erdos821.P3Clean.Sandwich
 
 /-! Recover a conditioned bilinear form from an entrywise matrix factorization. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

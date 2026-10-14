@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicAssemblySourceCaps
-import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicAssemblyWindows
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicAssemblySourceCaps
+public import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicAssemblyWindows
+
+@[expose] public section
 
 namespace OAI
 

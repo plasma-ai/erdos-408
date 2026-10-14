@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.CubeSlots
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CubeSlots
+
+@[expose] public section
 
 namespace OAI
 

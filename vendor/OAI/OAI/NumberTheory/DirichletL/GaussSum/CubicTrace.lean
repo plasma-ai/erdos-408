@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.ActiveGaussFactorization
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.ActiveGaussFactorization
+
+@[expose] public section
 
 namespace OAI
 

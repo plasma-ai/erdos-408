@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorFiberSpikes
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationScaleSup
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowwisePlain
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorFiberSpikes
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationScaleSup
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowwisePlain
+
+@[expose] public section
 
 namespace OAI
 

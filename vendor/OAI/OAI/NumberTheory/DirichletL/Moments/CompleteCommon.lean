@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.Support
-import OAI.NumberTheory.DirichletL.Moments.RankinRadical
-import OAI.NumberTheory.DirichletL.CenteredExceptionalCount
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Support
+public import OAI.NumberTheory.DirichletL.Moments.RankinRadical
+public import OAI.NumberTheory.DirichletL.CenteredExceptionalCount
+
+@[expose] public section
 
 namespace OAI
 

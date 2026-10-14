@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.RayMaskedFloorShared
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalControl
-import OAI.NumberTheory.DirichletL.Moments.InductionEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RayMaskedFloorShared
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalControl
+public import OAI.NumberTheory.DirichletL.Moments.InductionEnergy
+
+@[expose] public section
 
 namespace OAI
 

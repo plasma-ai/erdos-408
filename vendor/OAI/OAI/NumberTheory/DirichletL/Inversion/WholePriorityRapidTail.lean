@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondRapidTail
-import OAI.NumberTheory.DirichletL.Descent.SecondCanonicalTail
-import OAI.NumberTheory.DirichletL.Descent.PrincipalSelectorMass
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondRapidTail
+public import OAI.NumberTheory.DirichletL.Descent.SecondCanonicalTail
+public import OAI.NumberTheory.DirichletL.Descent.PrincipalSelectorMass
+
+@[expose] public section
 
 namespace OAI
 

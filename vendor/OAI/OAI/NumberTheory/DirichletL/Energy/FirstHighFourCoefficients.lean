@@ -1,10 +1,14 @@
-import OAI.NumberTheory.DirichletL.Energy.FirstHighExceptionalPowers
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedFourCoefficients
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPowerBudget
-import OAI.NumberTheory.DirichletL.Moments.FirstCommonReferencePower
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedExceptionalDeclared
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedDiagonal
-import OAI.NumberTheory.DirichletL.Moments.SuccessorPaidParameters
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.FirstHighExceptionalPowers
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedFourCoefficients
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPowerBudget
+public import OAI.NumberTheory.DirichletL.Moments.FirstCommonReferencePower
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedExceptionalDeclared
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedDiagonal
+public import OAI.NumberTheory.DirichletL.Moments.SuccessorPaidParameters
+
+@[expose] public section
 
 namespace OAI
 

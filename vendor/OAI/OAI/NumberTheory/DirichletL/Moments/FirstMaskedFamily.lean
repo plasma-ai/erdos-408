@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationRadicalChoice
-import OAI.NumberTheory.DirichletL.Moments.FixedRowMask
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceBound
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationRadicalChoice
+public import OAI.NumberTheory.DirichletL.Moments.FixedRowMask
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceBound
+
+@[expose] public section
 
 namespace OAI
 

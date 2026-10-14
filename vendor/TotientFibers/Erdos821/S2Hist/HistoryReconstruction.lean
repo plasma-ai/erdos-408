@@ -1,4 +1,8 @@
-import Erdos821.S2.HistoryReconstructionTask
+module
+
+public import Erdos821.S2.HistoryReconstructionTask
+
+@[expose] public section
 
 noncomputable section
 

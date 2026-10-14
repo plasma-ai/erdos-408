@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationEnergy
-import OAI.NumberTheory.DirichletL.Moments.AmplificationMask
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationMask
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationEnergy
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationMask
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationMask
+
+@[expose] public section
 
 namespace OAI
 

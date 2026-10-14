@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Bands
-import Erdos408.OneSided.Lift
+module
+
+public import Erdos408.OneSided.Bands
+public import Erdos408.OneSided.Lift
 
 /-!
 # Pads, lists and states
@@ -16,6 +18,8 @@ The bookkeeping for the change of variables of PD Lemma 4.1
   as every common prime of `m` and `s` divides a nonzero `t` with `|t| < W`.
 * `rowEntry` is the entry of `𝒯` as a function of the underlying positions and lists.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

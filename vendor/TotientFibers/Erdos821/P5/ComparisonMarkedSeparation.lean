@@ -1,4 +1,8 @@
-import Erdos821.P5.ComparisonFactors
+module
+
+public import Erdos821.P5.ComparisonFactors
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

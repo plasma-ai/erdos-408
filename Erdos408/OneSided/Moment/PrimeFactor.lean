@@ -1,6 +1,8 @@
-import Mathlib.Algebra.BigOperators.Intervals
-import Mathlib.Algebra.Order.BigOperators.Ring.Finset
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Algebra.BigOperators.Intervals
+public import Mathlib.Algebra.Order.BigOperators.Ring.Finset
+public import Mathlib.Basic.Real.Basic
 
 /-!
 # The primewise identity
@@ -23,6 +25,8 @@ line `ℓ ∈ {0, …, p}`, the factor of `p` is
   `∏_{j < a} (1 - x_j) = 1 - ∑_{h < a} x_h ∏_{h < j < a} (1 - x_j)`, which attaches at most
   one ghost to each end of an active interval.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

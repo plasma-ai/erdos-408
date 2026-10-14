@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.NormalizedMass
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.NormalizedMass
+
+@[expose] public section
 
 namespace OAI
 

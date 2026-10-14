@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.CubicNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.CubicNormalization
+
+@[expose] public section
 
 namespace OAI
 

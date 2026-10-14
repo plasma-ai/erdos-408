@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.RayPrimeNormalizer
-import OAI.NumberTheory.DirichletL.Detector.PrincipalResidueActual
+module
+
+public import OAI.NumberTheory.DirichletL.RayPrimeNormalizer
+public import OAI.NumberTheory.DirichletL.Detector.PrincipalResidueActual
+
+@[expose] public section
 
 namespace OAI
 

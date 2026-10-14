@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.NormFiberExtraction
-import OAI.NumberTheory.DirichletL.Mellin.FiniteEulerRestoration
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.NormFiberExtraction
+public import OAI.NumberTheory.DirichletL.Mellin.FiniteEulerRestoration
+
+@[expose] public section
 
 namespace OAI
 

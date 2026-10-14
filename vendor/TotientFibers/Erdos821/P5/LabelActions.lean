@@ -1,4 +1,8 @@
-import Erdos821.Blueprint.Transference
+module
+
+public import Erdos821.Blueprint.Transference
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

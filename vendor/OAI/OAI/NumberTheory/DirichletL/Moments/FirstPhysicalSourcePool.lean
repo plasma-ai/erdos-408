@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSource
+
+@[expose] public section
 
 namespace OAI
 

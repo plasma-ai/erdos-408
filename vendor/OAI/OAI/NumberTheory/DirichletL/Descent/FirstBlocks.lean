@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstCommonColumns
-import OAI.NumberTheory.DirichletL.Descent.DensityAssembly
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstCommonColumns
+public import OAI.NumberTheory.DirichletL.Descent.DensityAssembly
+
+@[expose] public section
 
 namespace OAI
 

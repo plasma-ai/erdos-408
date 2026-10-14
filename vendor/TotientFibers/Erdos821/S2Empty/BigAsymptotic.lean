@@ -1,4 +1,9 @@
-import Erdos821.S2Empty.BigFactor
+module
+
+public import Erdos821.S2Empty.BigFactor
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

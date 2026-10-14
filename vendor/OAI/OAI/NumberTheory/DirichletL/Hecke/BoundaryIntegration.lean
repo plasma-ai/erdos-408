@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.Boundary
-import OAI.NumberTheory.DirichletL.Hecke.Euler
-import OAI.NumberTheory.DirichletL.Hecke.Operations
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Boundary
+public import OAI.NumberTheory.DirichletL.Hecke.Euler
+public import OAI.NumberTheory.DirichletL.Hecke.Operations
+
+@[expose] public section
 
 namespace OAI
 

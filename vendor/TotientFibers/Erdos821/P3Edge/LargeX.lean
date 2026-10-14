@@ -1,5 +1,10 @@
-import Erdos821.P3Edge.AuxSum
-import Erdos821.P3Edge.Analytic
+module
+
+public import Erdos821.P3Edge.AuxSum
+public import Erdos821.P3Edge.Analytic
+public import Mathlib.Analysis.Complex.ExponentialBounds
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Decomposition.Collision
+module
+
+public import Erdos408.OneSided.Decomposition.Collision
 
 /-!
 # The decomposition at one `x`
@@ -9,6 +11,8 @@ is the coprime-pair error of the lift. Then
 part. With `|E(a, b)| ≤ B` for `a, b ∈ (Y, 4Y)`, `∏V_i⁻² η(a/Y) η(b/Y) ≤ 16 Y² μ(p) μ(p')`,
 and the collision probabilities, it is at most `16 Y² B (K² + (KJ)² + 2KJ) ε`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

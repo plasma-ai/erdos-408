@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.SlotNormalization
-import OAI.NumberTheory.DirichletL.Moments.PrimeSlotShift
-import OAI.NumberTheory.DirichletL.Hecke.DetectorCoefficientTransfer
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationProfiles
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SlotNormalization
+public import OAI.NumberTheory.DirichletL.Moments.PrimeSlotShift
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorCoefficientTransfer
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationProfiles
+
+@[expose] public section
 
 namespace OAI
 

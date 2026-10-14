@@ -1,4 +1,8 @@
-import Erdos821.P5.MellinFrequencyBounds
+module
+
+public import Erdos821.P5.MellinFrequencyBounds
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

@@ -1,4 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.BarrierPotential
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.BarrierPotential
+public import Mathlib.Geometry.Manifold.Algebra.Structures
+
+@[expose] public section
 
 namespace OAI
 

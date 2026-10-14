@@ -1,5 +1,9 @@
-import Erdos821.S34.FrameTasks
-import Erdos821.S34.BilinearBlocks
+module
+
+public import Erdos821.S34.FrameTasks
+public import Erdos821.S34.BilinearBlocks
+
+@[expose] public section
 
 set_option autoImplicit false
 

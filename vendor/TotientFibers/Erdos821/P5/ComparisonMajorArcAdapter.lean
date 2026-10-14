@@ -1,6 +1,10 @@
-import Erdos821.P5.ComparisonEnergyExponents
-import Erdos821.P5.ComparisonArcScales
-import Erdos821.P5.SmoothComparisonParameters
+module
+
+public import Erdos821.P5.ComparisonEnergyExponents
+public import Erdos821.P5.ComparisonArcScales
+public import Erdos821.P5.SmoothComparisonParameters
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

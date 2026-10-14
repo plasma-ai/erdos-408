@@ -1,4 +1,16 @@
-import Erdos821.S2.GhostTasks
+module
+
+public import Erdos821.S2.GhostTasks
+public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+public import Mathlib.Analysis.InnerProductSpace.Positive
+public import Mathlib.Analysis.InnerProductSpace.Trace
+public import Mathlib.CategoryTheory.Countable
+public import Mathlib.RingTheory.Coalgebra.IsFrobenius
+public import Mathlib.RingTheory.HopfAlgebra.Basic
+
+@[expose] public section
 
 noncomputable section
 set_option maxHeartbeats 1000000

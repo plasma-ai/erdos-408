@@ -1,4 +1,8 @@
-import Erdos821.S2Empty.MassAssembly
+module
+
+public import Erdos821.S2Empty.MassAssembly
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.LowActualIdealLists
-import OAI.NumberTheory.DirichletL.Detector.LowCentralGeometry
-import OAI.NumberTheory.DirichletL.Detector.GaussianPhysicalMass
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowActualIdealLists
+public import OAI.NumberTheory.DirichletL.Detector.LowCentralGeometry
+public import OAI.NumberTheory.DirichletL.Detector.GaussianPhysicalMass
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,6 @@
-import Erdos408.Extraction.TypeII.Weights
+module
+
+public import Erdos408.Extraction.TypeII.Weights
 
 /-!
 # Regrouping the replacement sum
@@ -12,6 +14,8 @@ telescoping step.
 * The geometric grid `λ_a`: a sum over `[1, M]` of a function vanishing on `[1, λ_0]` and
   above `M` splits into the sums over the cells `(⌊λ_a⌋, ⌊λ_{a+1}⌋]`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

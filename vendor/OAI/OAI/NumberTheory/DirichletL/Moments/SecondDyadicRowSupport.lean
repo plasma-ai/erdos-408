@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondLiveBlock
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondLiveBlock
+
+@[expose] public section
 
 namespace OAI
 

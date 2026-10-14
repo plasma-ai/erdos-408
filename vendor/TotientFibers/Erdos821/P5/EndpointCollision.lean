@@ -1,5 +1,9 @@
-import Erdos821.P5.EndpointPrefix
-import Erdos821.P5.SharedLists
+module
+
+public import Erdos821.P5.EndpointPrefix
+public import Erdos821.P5.SharedLists
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

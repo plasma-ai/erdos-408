@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FixedSquare
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FixedSquare
+
+@[expose] public section
 
 namespace OAI
 

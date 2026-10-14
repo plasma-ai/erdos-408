@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowGramIntegrated
-import OAI.NumberTheory.DirichletL.Detector.LowInverseEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowGramIntegrated
+public import OAI.NumberTheory.DirichletL.Detector.LowInverseEnergy
+
+@[expose] public section
 
 namespace OAI
 

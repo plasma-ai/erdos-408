@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialZeroModePhysical
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialZeroModePhysical
+
+@[expose] public section
 
 namespace OAI
 

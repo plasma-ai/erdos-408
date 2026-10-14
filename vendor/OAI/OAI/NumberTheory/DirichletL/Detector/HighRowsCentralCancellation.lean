@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedCancellation
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsSelectedCancellation
+
+@[expose] public section
 
 namespace OAI
 

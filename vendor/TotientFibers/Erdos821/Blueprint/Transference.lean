@@ -1,8 +1,13 @@
-import Erdos821.Blueprint.Graph
-import Erdos821.Blueprint.MemoryHistory
-import Erdos821.Blueprint.Sieve
+module
+
+public import Erdos821.Blueprint.Graph
+public import Erdos821.Blueprint.MemoryHistory
+public import Erdos821.Blueprint.Sieve
 
 /-! P3 boundary on the literal finite row kernels of Graph.lean. -/
+
+@[expose] public section
+
 noncomputable section
 open scoped BigOperators
 open Filter

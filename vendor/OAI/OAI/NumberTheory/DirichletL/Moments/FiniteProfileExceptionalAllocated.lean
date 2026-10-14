@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalSlots
-import OAI.NumberTheory.DirichletL.Moments.AllocatedCenteredCapped
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalSlots
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedCenteredCapped
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

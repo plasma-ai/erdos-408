@@ -1,5 +1,7 @@
-import Mathlib
-import Erdos821.Blueprint.Sieve
+module
+
+public import Erdos821.Blueprint.Sieve
+public import Mathlib.Algebra.Order.Star.Real
 
 /-!
 # Sieve geometry: dyadic blocks `B_j = {p : Z_{j+1} < p ≤ Z_j}` (`lem:sieve`)
@@ -11,6 +13,8 @@ For `z > 1`, `Z_j = z^{1/2^j}` (`Real.rpow`), so `Z_0 = z`, `Z_j = (Z_{j+1})^2`,
 `≤ C`. The level exponent sum `∑ (j+1)/2^j ≤ 4` (`SieveCalculus.level_sum_le`)
 gives the paper's `z^{4h+2}` level.
 -/
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

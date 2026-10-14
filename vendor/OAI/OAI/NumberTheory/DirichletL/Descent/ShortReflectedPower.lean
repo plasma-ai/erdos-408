@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.ShortReflectedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ShortReflectedEnergy
+
+@[expose] public section
 
 namespace OAI
 

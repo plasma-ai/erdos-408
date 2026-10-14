@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.AllocatedCenteredCapped
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDetectorCapped
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedCenteredCapped
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDetectorCapped
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondLiveBlock
-import OAI.NumberTheory.DirichletL.Moments.SecondActivePhysicalDictionary
-import OAI.NumberTheory.DirichletL.Moments.RestrictedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondLiveBlock
+public import OAI.NumberTheory.DirichletL.Moments.SecondActivePhysicalDictionary
+public import OAI.NumberTheory.DirichletL.Moments.RestrictedEnergy
+
+@[expose] public section
 
 namespace OAI
 

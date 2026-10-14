@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.InitialFubini
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.InitialFubini
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.DualMiddleExpansion
-import OAI.NumberTheory.DirichletL.QuadraticSieve.MaskedPrincipalBounds
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.DualMiddleExpansion
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.MaskedPrincipalBounds
+
+@[expose] public section
 
 namespace OAI
 

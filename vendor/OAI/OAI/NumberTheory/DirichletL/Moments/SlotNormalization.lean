@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.WholeSlotDeletion
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.WholeSlotDeletion
+
+@[expose] public section
 
 namespace OAI
 

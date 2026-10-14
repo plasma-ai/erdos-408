@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondCellPhysical
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondCellPhysical
+
+@[expose] public section
 
 namespace OAI
 

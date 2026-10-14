@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorFourierWitness
-import OAI.NumberTheory.DirichletL.Hecke.DetectorProfilesCutoffs
-import OAI.NumberTheory.DirichletL.Hecke.DetectorCoefficientBounds
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicSupport
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorFourierWitness
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorProfilesCutoffs
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorCoefficientBounds
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicSupport
+
+@[expose] public section
 
 namespace OAI
 

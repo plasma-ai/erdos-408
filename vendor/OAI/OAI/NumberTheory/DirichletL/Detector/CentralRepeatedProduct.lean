@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.RowReflectedAllocation
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralSplit
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RowReflectedAllocation
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralSplit
+
+@[expose] public section
 
 namespace OAI
 

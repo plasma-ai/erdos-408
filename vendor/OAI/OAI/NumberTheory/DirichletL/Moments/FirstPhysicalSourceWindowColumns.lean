@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceCanonicalData
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceWindow
-import OAI.NumberTheory.DirichletL.Moments.ConjugateWindow
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceCanonicalData
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceWindow
+public import OAI.NumberTheory.DirichletL.Moments.ConjugateWindow
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussValuation
-import OAI.NumberTheory.DirichletL.Moments.Canonical
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussValuation
+public import OAI.NumberTheory.DirichletL.Moments.Canonical
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.Completion
-import OAI.NumberTheory.DirichletL.Descent.Poisson
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.Completion
+public import OAI.NumberTheory.DirichletL.Descent.Poisson
+
+@[expose] public section
 
 namespace OAI
 

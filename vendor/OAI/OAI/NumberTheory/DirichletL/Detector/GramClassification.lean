@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramCanonical
-import OAI.NumberTheory.DirichletL.CenteredExceptionalProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramCanonical
+public import OAI.NumberTheory.DirichletL.CenteredExceptionalProfile
+
+@[expose] public section
 
 namespace OAI
 

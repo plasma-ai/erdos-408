@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsFirstTerms
-import OAI.NumberTheory.DirichletL.Detector.HighRowsRamified
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsFirstTerms
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsRamified
+
+@[expose] public section
 
 namespace OAI
 

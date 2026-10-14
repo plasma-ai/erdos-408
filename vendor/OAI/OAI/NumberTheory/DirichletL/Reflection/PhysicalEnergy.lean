@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.KernelAdmissible
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.KernelAdmissible
+
+@[expose] public section
 
 namespace OAI
 

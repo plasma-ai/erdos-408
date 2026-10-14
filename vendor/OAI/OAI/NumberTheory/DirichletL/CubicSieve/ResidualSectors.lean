@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.SquareParts
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.SquareParts
+
+@[expose] public section
 
 namespace OAI
 

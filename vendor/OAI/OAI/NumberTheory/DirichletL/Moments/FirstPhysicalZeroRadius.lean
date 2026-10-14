@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalOriginalMask
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalOriginalMask
+
+@[expose] public section
 
 namespace OAI
 

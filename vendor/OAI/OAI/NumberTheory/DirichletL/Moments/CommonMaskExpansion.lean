@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.ReflectionMass
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ReflectionMass
+
+@[expose] public section
 
 namespace OAI
 

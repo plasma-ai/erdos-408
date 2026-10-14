@@ -1,4 +1,6 @@
-import Erdos408.Graph.Reindex
+module
+
+public import Erdos408.Graph.Reindex
 
 /-!
 # The family conclusion of `GraphTransference`
@@ -8,6 +10,8 @@ scale `x`: a family of comparison patterns with the transferred pairing
 bound. It transports along a reindexing of the groups (`FamilyBound.reindex`),
 so it suffices to construct it for groups indexed by `Fin n`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.Graph
 

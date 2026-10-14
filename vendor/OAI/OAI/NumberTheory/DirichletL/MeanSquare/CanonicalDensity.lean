@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.DualZeroMode
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.DualZeroMode
+
+@[expose] public section
 
 namespace OAI
 

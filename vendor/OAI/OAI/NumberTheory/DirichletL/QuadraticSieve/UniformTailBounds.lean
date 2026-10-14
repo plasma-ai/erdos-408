@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.ProductColumns
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.ProductColumns
+
+@[expose] public section
 
 namespace OAI
 

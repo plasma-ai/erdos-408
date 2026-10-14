@@ -1,8 +1,12 @@
-import Erdos821.P3Clean.ConditionedKernel
-import Erdos821.P3Clean.FibreSandwich
-import Erdos821.P3Clean.PhysicalConditioning
+module
+
+public import Erdos821.P3Clean.ConditionedKernel
+public import Erdos821.P3Clean.FibreSandwich
+public import Erdos821.P3Clean.PhysicalConditioning
 
 /-! Assemble the literal raw clean norm from its conditioned family. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.ClosedRecursion
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.ClosedRecursion
+
+@[expose] public section
 
 namespace OAI
 

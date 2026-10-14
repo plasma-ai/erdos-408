@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.RootReplacement.Bonferroni
+module
+
+public import Erdos408.OneSided.Moment.RootReplacement.Bonferroni
 
 /-!
 # The grid of cubes
@@ -16,6 +18,8 @@ For an archimedean indicator `A` that is constant on the roots of every cube out
 * `4 n⁻³ + C₀ min(U, V)^{-1/5}` on each bad cube, bounded absolutely;
 * `(16U + 2V + 2)/(UV)` from the upper faces.
 -/
+
+@[expose] public section
 
 noncomputable section
 

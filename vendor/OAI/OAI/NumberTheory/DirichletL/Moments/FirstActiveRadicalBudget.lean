@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstInactiveRadicalMass
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstInactiveRadicalMass
+
+@[expose] public section
 
 namespace OAI
 

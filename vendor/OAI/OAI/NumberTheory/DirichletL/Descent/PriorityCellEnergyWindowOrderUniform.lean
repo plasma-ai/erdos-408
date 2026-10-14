@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Descent.PriorityCellEnergyWindowOrder
-import OAI.NumberTheory.DirichletL.Descent.SecondBlockEnergyWindowOrderUniform
-import OAI.NumberTheory.DirichletL.Descent.SecondBlockEnergyWindowOrder
-import OAI.NumberTheory.DirichletL.Descent.SecondCellPhysical
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.PriorityCellEnergyWindowOrder
+public import OAI.NumberTheory.DirichletL.Descent.SecondBlockEnergyWindowOrderUniform
+public import OAI.NumberTheory.DirichletL.Descent.SecondBlockEnergyWindowOrder
+public import OAI.NumberTheory.DirichletL.Descent.SecondCellPhysical
+
+@[expose] public section
 
 namespace OAI
 

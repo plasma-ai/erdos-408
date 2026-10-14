@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonRadialPointwise
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonRadialPointwise
+
+@[expose] public section
 
 namespace OAI
 

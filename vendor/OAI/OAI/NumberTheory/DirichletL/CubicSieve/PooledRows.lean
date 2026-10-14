@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.LiteralSources
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.LiteralSources
+
+@[expose] public section
 
 namespace OAI
 

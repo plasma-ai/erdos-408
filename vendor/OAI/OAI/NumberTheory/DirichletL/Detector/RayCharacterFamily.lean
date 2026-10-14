@@ -1,10 +1,14 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.BufferedBin
-import OAI.NumberTheory.DirichletL.Detector.RayPhaseAmplitude
-import OAI.NumberTheory.DirichletL.PrimeRows.PrincipalMask
-import OAI.NumberTheory.DirichletL.PrimeRows.Conductor
-import OAI.NumberTheory.DirichletL.PrimeRows.RowPartition
-import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
-import OAI.NumberTheory.DirichletL.Hecke.PrimeNonprincipal
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.BufferedBin
+public import OAI.NumberTheory.DirichletL.Detector.RayPhaseAmplitude
+public import OAI.NumberTheory.DirichletL.PrimeRows.PrincipalMask
+public import OAI.NumberTheory.DirichletL.PrimeRows.Conductor
+public import OAI.NumberTheory.DirichletL.PrimeRows.RowPartition
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeNonprincipal
+
+@[expose] public section
 
 namespace OAI
 

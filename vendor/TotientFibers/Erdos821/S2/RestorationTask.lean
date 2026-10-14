@@ -1,8 +1,12 @@
-import Erdos821.S2.RankExpansion
-import Erdos821.S2.ContractionTask
-import Erdos821.S2.AnalyticParametersTasks
+module
+
+public import Erdos821.S2.RankExpansion
+public import Erdos821.S2.ContractionTask
+public import Erdos821.S2.AnalyticParametersTasks
 
 /-! Quantitative assembly of the high/low equality-rank restoration. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

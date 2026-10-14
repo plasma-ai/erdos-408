@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongAggregate
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongAggregate
+
+@[expose] public section
 
 namespace OAI
 

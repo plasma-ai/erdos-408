@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.PlainChildEnergy
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalReflection
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PlainChildEnergy
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalReflection
+
+@[expose] public section
 
 namespace OAI
 

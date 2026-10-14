@@ -1,8 +1,12 @@
-import Erdos821.P5MarkedEnergy.PieceCore
-import Erdos821.P5MarkedEnergy.PiecewiseIdentity
-import Erdos821.P5.LocalEnergyTask
+module
+
+public import Erdos821.P5MarkedEnergy.PieceCore
+public import Erdos821.P5MarkedEnergy.PiecewiseIdentity
+public import Erdos821.P5.LocalEnergyTask
 
 /-! The energy of one smooth piece and one character, at a fixed large `x`. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

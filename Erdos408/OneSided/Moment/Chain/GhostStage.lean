@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.Chain.Status
+module
+
+public import Erdos408.OneSided.Moment.Chain.Status
 
 /-!
 # The ghost step of the memory identity
@@ -23,6 +25,8 @@ product. The proof:
 * the sum of the product is the product of the per-particle sums (`sum_multBox_prod`), and
   each per-particle sum is a ghost identity of `Moment/Chain/Lifespan.lean` (`sum_ghostTerm`).
 -/
+
+@[expose] public section
 
 noncomputable section
 

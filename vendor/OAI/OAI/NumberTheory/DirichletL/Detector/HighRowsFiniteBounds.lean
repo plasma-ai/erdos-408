@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsTermBounds
-import OAI.NumberTheory.DirichletL.Detector.EulerRegion
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsTermBounds
+public import OAI.NumberTheory.DirichletL.Detector.EulerRegion
+
+@[expose] public section
 
 namespace OAI
 

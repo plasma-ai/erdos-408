@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstIdealFamily
-import OAI.NumberTheory.DirichletL.Moments.Smooth
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstIdealFamily
+public import OAI.NumberTheory.DirichletL.Moments.Smooth
+
+@[expose] public section
 
 namespace OAI
 

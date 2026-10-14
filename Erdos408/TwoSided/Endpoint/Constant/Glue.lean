@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Analysis.Divisor
-import Erdos408.TwoSided.Setup
+module
+
+public import Erdos408.OneSided.Analysis.Divisor
+public import Erdos408.TwoSided.Setup
 
 /-!
 # Elementary facts for the constant part at high times
@@ -12,6 +14,8 @@ Elementary facts used in S19 of `blueprint/two_sided_correlation.md` §6.6.
 * A sum over `(E 0, E I]` is the sum over the consecutive grid intervals `(E i, E (i + 1)]`.
 * A smooth `ψ` with `|ψ'| ≤ M` is `M`-Lipschitz; `∫_a^b t^{-2} ≤ 2/c` when `|t| ≥ c`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.ConstHigh
 

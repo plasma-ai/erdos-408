@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstNonexceptionalFixedWeightSum
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicCountSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstNonexceptionalFixedWeightSum
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicCountSource
+
+@[expose] public section
 
 namespace OAI
 

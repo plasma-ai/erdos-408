@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.TraceCharacter
-import OAI.NumberTheory.DirichletL.ConductorPresentation
+module
+
+public import OAI.NumberTheory.DirichletL.TraceCharacter
+public import OAI.NumberTheory.DirichletL.ConductorPresentation
+
+@[expose] public section
 
 namespace OAI
 

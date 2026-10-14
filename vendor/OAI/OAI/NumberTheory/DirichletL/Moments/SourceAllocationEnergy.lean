@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceLiveColumn
-import OAI.NumberTheory.DirichletL.Moments.GaussEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceLiveColumn
+public import OAI.NumberTheory.DirichletL.Moments.GaussEnergy
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstWholeKernel
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstWholeKernel
+
+@[expose] public section
 
 namespace OAI
 

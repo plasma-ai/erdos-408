@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorCollected
-import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyNormalized
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorCollected
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyNormalized
+
+@[expose] public section
 
 namespace OAI
 

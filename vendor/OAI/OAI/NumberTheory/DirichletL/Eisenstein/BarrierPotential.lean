@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.MeanSquare.UnitRows
-import OAI.NumberTheory.DirichletL.Eisenstein.CuspHeight
+module
+
+public import OAI.NumberTheory.DirichletL.MeanSquare.UnitRows
+public import OAI.NumberTheory.DirichletL.Eisenstein.CuspHeight
+
+@[expose] public section
 
 namespace OAI
 

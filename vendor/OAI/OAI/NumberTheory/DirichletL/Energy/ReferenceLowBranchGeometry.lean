@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceDeletionClipped
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceDeletionClipped
+
+@[expose] public section
 
 namespace OAI
 

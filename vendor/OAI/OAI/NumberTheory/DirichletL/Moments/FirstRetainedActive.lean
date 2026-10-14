@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstRetainedSector
-import OAI.NumberTheory.DirichletL.Moments.ActiveSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstRetainedSector
+public import OAI.NumberTheory.DirichletL.Moments.ActiveSource
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.HeckeVolume
-import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.HeckeVolume
+public import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
+
+@[expose] public section
 
 namespace OAI
 

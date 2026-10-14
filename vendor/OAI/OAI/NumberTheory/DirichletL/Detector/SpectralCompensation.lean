@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.MarkedProduct
-import OAI.NumberTheory.DirichletL.Detector.MarkedRational
-import Mathlib.Algebra.BigOperators.Ring.Finset
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.MarkedProduct
+public import OAI.NumberTheory.DirichletL.Detector.MarkedRational
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+
+@[expose] public section
 
 namespace OAI
 

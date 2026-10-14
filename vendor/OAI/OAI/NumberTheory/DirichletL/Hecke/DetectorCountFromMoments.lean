@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRawBranches
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRawBranches
+
+@[expose] public section
 
 namespace OAI
 

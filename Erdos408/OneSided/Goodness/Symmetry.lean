@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Lift
+module
+
+public import Erdos408.OneSided.Lift
 
 /-!
 # Slot symmetry of the lift
@@ -15,6 +17,8 @@ every vector that does not see that order (`blueprint/one_sided_type_ii.md` §14
 * `sum_symOp_mul`, `sum_mul_symOp_mulVec`: `𝒮` fixes a `SlotInvariant` vector, acting from
   either side.
 -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,10 +1,12 @@
-import Mathlib.Analysis.SpecialFunctions.Complex.Circle
-import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Data.Nat.Totient
-import Mathlib.Data.ZMod.Basic
-import Mathlib.NumberTheory.ArithmeticFunction.Misc
-import Mathlib.NumberTheory.Divisors
+module
+
+public import Mathlib.Analysis.SpecialFunctions.Complex.Circle
+public import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+public import Mathlib.Data.Nat.Totient
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.NumberTheory.ArithmeticFunction.Misc
+public import Mathlib.NumberTheory.Divisors
 
 /-!
 # A weak Kloosterman bound
@@ -27,6 +29,8 @@ PD `det:weak-kloosterman`: for every `ε > 0`,
 The sums are taken over `ZMod m` with the standard additive character, through
 `kloostermanZMod`, which agrees with `kloosterman` for `m ≥ 1`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

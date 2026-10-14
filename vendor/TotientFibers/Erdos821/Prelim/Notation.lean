@@ -1,5 +1,11 @@
-import Mathlib
+module
 
+public import Mathlib.Analysis.SpecialFunctions.Log.Basic
+public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
+public import Mathlib.Data.Nat.Totient
+public import Mathlib.NumberTheory.ArithmeticFunction.Moebius
+
+@[expose] public section
 
 namespace Erdos821
 namespace Prelim

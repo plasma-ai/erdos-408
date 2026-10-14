@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondModeCanonical
-import OAI.NumberTheory.DirichletL.Descent.SecondPhysicalRows
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondModeCanonical
+public import OAI.NumberTheory.DirichletL.Descent.SecondPhysicalRows
+
+@[expose] public section
 
 namespace OAI
 

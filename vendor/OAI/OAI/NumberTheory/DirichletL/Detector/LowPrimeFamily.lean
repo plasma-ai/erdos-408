@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.LowSlotMarks
-import OAI.NumberTheory.DirichletL.Detector.LowSlotWeights
-import OAI.NumberTheory.DirichletL.Reflection.Canonical
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowSlotMarks
+public import OAI.NumberTheory.DirichletL.Detector.LowSlotWeights
+public import OAI.NumberTheory.DirichletL.Reflection.Canonical
+
+@[expose] public section
 
 namespace OAI
 

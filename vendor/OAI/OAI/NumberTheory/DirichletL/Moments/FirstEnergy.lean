@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.CanonicalFirst
-import OAI.NumberTheory.DirichletL.Moments.SourceRow
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CanonicalFirst
+public import OAI.NumberTheory.DirichletL.Moments.SourceRow
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.CanonicalPaidSource
-import OAI.NumberTheory.DirichletL.Energy.AllocatedBound
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalPaidSource
+public import OAI.NumberTheory.DirichletL.Energy.AllocatedBound
+
+@[expose] public section
 
 namespace OAI
 

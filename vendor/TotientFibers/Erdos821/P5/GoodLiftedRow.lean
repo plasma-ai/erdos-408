@@ -1,5 +1,9 @@
-import Erdos821.P5.LiftedRootIdentity
-import Erdos821.P5.MarkCountIdentity
+module
+
+public import Erdos821.P5.LiftedRootIdentity
+public import Erdos821.P5.MarkCountIdentity
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

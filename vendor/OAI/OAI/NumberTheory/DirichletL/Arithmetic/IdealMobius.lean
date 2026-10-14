@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.CrossSeparation
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.CrossSeparation
+
+@[expose] public section
 
 namespace OAI
 

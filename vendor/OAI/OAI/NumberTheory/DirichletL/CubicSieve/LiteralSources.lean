@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.CompactProfiles
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.CompactProfiles
+
+@[expose] public section
 
 namespace OAI
 

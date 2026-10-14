@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.PrincipalContours
-import OAI.NumberTheory.DirichletL.ContinuationPolynomialContour
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PrincipalContours
+public import OAI.NumberTheory.DirichletL.ContinuationPolynomialContour
+
+@[expose] public section
 
 namespace OAI
 

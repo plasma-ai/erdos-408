@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSectorEnergy
-import OAI.NumberTheory.DirichletL.Moments.SecondFamilyTransport
-import OAI.NumberTheory.DirichletL.Moments.RestrictedWindow
-import OAI.NumberTheory.DirichletL.Moments.LogDyadic
-import OAI.NumberTheory.DirichletL.Moments.ConjugateWindow
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSectorEnergy
+public import OAI.NumberTheory.DirichletL.Moments.SecondFamilyTransport
+public import OAI.NumberTheory.DirichletL.Moments.RestrictedWindow
+public import OAI.NumberTheory.DirichletL.Moments.LogDyadic
+public import OAI.NumberTheory.DirichletL.Moments.ConjugateWindow
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import Erdos821.S2.AbsoluteRootTask
-import Erdos821.P3Tail.MemoryTail
+module
+
+public import Erdos821.S2.AbsoluteRootTask
+public import Erdos821.P3Tail.MemoryTail
 
 /-! Absolute bounds for the closed residue paths. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

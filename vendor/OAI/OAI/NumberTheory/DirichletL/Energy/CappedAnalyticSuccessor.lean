@@ -1,9 +1,13 @@
-import OAI.NumberTheory.DirichletL.Energy.CappedLowStage
-import OAI.NumberTheory.DirichletL.Energy.NaturalHighStage
-import OAI.NumberTheory.DirichletL.Energy.NaturalZeroStage
-import OAI.NumberTheory.DirichletL.Energy.CappedSuccessorPacking
-import OAI.NumberTheory.DirichletL.Energy.CappedRequests
-import OAI.NumberTheory.DirichletL.Energy.CappedBandTransport
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CappedLowStage
+public import OAI.NumberTheory.DirichletL.Energy.NaturalHighStage
+public import OAI.NumberTheory.DirichletL.Energy.NaturalZeroStage
+public import OAI.NumberTheory.DirichletL.Energy.CappedSuccessorPacking
+public import OAI.NumberTheory.DirichletL.Energy.CappedRequests
+public import OAI.NumberTheory.DirichletL.Energy.CappedBandTransport
+
+@[expose] public section
 
 namespace OAI
 

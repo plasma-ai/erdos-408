@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Allocation.Groups
-import Erdos408.TwoSided.Setup
+module
+
+public import Erdos408.Extraction.Allocation.Groups
+public import Erdos408.TwoSided.Setup
 
 /-!
 # Separation and endpoint energies
@@ -21,6 +23,8 @@ pattern `(A, B, φ, φ', ψ, ψ', U, U')`, `C = A ∪ B` and `Y₀ = x U U'`.
 The helpers live in the namespace `Separation`; the crude forms of U7 and U9 used for (6.19)
 are in `Setup.lean`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

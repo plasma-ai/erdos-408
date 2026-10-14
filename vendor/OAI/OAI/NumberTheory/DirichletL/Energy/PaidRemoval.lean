@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.PaidBands
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.PaidBands
+
+@[expose] public section
 
 namespace OAI
 

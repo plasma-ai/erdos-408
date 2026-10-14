@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.InitialRows
-import OAI.NumberTheory.DirichletL.Detector.TupleKernel
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.InitialRows
+public import OAI.NumberTheory.DirichletL.Detector.TupleKernel
+
+@[expose] public section
 
 namespace OAI
 

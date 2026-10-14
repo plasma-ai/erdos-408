@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.OriginalRetained
-import OAI.NumberTheory.DirichletL.Reflection.CountBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalRetained
+public import OAI.NumberTheory.DirichletL.Reflection.CountBudget
+
+@[expose] public section
 
 namespace OAI
 

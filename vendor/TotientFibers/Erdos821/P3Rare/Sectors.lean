@@ -1,8 +1,12 @@
-import Erdos821.P3Rare.Base
-import Erdos821.P3Edge.LargeX
-import Erdos821.P3Edge.Polylog
-import Erdos821.P3Edge.PromoBound
-import Erdos821.P3Edge.SmallFresh
+module
+
+public import Erdos821.P3Rare.Base
+public import Erdos821.P3Edge.LargeX
+public import Erdos821.P3Edge.Polylog
+public import Erdos821.P3Edge.PromoBound
+public import Erdos821.P3Edge.SmallFresh
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.Euler
-import OAI.NumberTheory.DirichletL.ConductorBounds
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.Euler
+public import OAI.NumberTheory.DirichletL.ConductorBounds
+
+@[expose] public section
 
 namespace OAI
 

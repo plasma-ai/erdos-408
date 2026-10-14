@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Major.Arcs
-import Erdos408.OneSided.Major.Regions
+module
+
+public import Erdos408.OneSided.Major.Arcs
+public import Erdos408.OneSided.Major.Regions
 
 /-!
 # One arc term
@@ -18,6 +20,8 @@ After the separation (`Major/Arcs.lean`) the arc term is `∫ K(q) G(q₁) \bar 
 * `norm_arcTerm_le`: by Cauchy's inequality over the characters, `g²` has energy and mean
   values `|χ|²` times those of one `Q_χ`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

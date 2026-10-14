@@ -1,5 +1,9 @@
-import Erdos821.P4Bridge.Properties
-import Erdos821.P4Bridge.FiniteComparison
+module
+
+public import Erdos821.P4Bridge.Properties
+public import Erdos821.P4Bridge.FiniteComparison
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

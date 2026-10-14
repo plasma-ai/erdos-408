@@ -1,11 +1,15 @@
-import Erdos821.P5MarkedEnergy.Factorization
-import Erdos821.P5MarkedEnergy.Collapse
-import Erdos821.P5.Exceptional
-import Erdos821.P5.MellinVectors
+module
+
+public import Erdos821.P5MarkedEnergy.Factorization
+public import Erdos821.P5MarkedEnergy.Collapse
+public import Erdos821.P5.Exceptional
+public import Erdos821.P5.MellinVectors
 
 /-! The arithmetic inputs of one box: the small-prime polynomial and its
 exceptional unit intervals, the long rough-integer polynomial, and the
 discrepancy-bearing `m` polynomial, all expressed as dyadic polynomials. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

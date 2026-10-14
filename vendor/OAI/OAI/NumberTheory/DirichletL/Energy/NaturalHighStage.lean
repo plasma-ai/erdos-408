@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Energy.PositiveHighPhysical
-import OAI.NumberTheory.DirichletL.Energy.PositiveBalancedAdmission
-import OAI.NumberTheory.DirichletL.Energy.PositiveHighSourceBound
-import OAI.NumberTheory.DirichletL.Energy.FirstSourceParameters
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.PositiveHighPhysical
+public import OAI.NumberTheory.DirichletL.Energy.PositiveBalancedAdmission
+public import OAI.NumberTheory.DirichletL.Energy.PositiveHighSourceBound
+public import OAI.NumberTheory.DirichletL.Energy.FirstSourceParameters
+
+@[expose] public section
 
 namespace OAI
 

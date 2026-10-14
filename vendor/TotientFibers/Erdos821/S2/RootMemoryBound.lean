@@ -1,8 +1,12 @@
-import Erdos821.S2.MemoryIdentity
-import Erdos821.S2.FourierClosure
-import Erdos821.P3Adj.Weight
+module
+
+public import Erdos821.S2.MemoryIdentity
+public import Erdos821.S2.FourierClosure
+public import Erdos821.P3Adj.Weight
 
 /-! The baseline and Fourier closure transfer a uniform memory bound to closed paths. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

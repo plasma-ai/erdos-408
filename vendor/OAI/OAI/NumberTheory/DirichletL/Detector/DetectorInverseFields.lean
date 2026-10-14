@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.DetectorInverseRawField
-import OAI.NumberTheory.DirichletL.Detector.DetectorInverseMarkedField
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.DetectorInverseRawField
+public import OAI.NumberTheory.DirichletL.Detector.DetectorInverseMarkedField
+
+@[expose] public section
 
 namespace OAI
 

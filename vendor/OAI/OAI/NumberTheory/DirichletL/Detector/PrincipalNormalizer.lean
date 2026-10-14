@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrincipalResidue
-import OAI.NumberTheory.DirichletL.PrincipalSignalComparison
-import OAI.NumberTheory.DirichletL.Detector.RadialMellin
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrincipalResidue
+public import OAI.NumberTheory.DirichletL.PrincipalSignalComparison
+public import OAI.NumberTheory.DirichletL.Detector.RadialMellin
+
+@[expose] public section
 
 namespace OAI
 

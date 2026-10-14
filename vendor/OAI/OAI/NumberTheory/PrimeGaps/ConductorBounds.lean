@@ -1,4 +1,9 @@
-import OAI.NumberTheory.PrimeGaps.DyadicMeans
+module
+
+public import OAI.NumberTheory.PrimeGaps.DyadicMeans
+public import Mathlib.Analysis.SpecialFunctions.Log.Base
+
+@[expose] public section
 
 namespace OAI
 

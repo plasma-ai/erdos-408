@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.LogarithmicSectors
-import OAI.NumberTheory.DirichletL.CubicSieve.PrincipalNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.LogarithmicSectors
+public import OAI.NumberTheory.DirichletL.CubicSieve.PrincipalNormalization
+
+@[expose] public section
 
 namespace OAI
 

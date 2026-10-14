@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Sieve.Kubilius
-import Mathlib.NumberTheory.Harmonic.Bounds
+module
+
+public import Erdos408.Extraction.Sieve.Kubilius
+public import Mathlib.NumberTheory.Harmonic.Bounds
 
 /-!
 # The progression lemma for the inert polynomial (E1)
@@ -27,6 +29,8 @@ constant `1` is the family with the single modulus `ℓ = 1`.
 `sum_powerset_rem_le` converts the bound to the sum over sets of sieving
 primes that `BlockSieve` requires.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

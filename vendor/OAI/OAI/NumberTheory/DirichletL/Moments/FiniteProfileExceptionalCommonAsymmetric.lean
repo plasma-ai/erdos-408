@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPair
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalAsymmetricSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPair
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalAsymmetricSource
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

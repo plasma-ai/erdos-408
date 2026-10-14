@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SliceIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SliceIntegral
+
+@[expose] public section
 
 namespace OAI
 

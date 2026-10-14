@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Energy.NaturalInputMatches
-import OAI.NumberTheory.DirichletL.Energy.OriginalHighReflectionSymmetric
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLivePower
-import OAI.NumberTheory.DirichletL.Energy.FixedRadialReduction
-import OAI.NumberTheory.DirichletL.Energy.PhysicalEntry
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.NaturalInputMatches
+public import OAI.NumberTheory.DirichletL.Energy.OriginalHighReflectionSymmetric
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLivePower
+public import OAI.NumberTheory.DirichletL.Energy.FixedRadialReduction
+public import OAI.NumberTheory.DirichletL.Energy.PhysicalEntry
+
+@[expose] public section
 
 namespace OAI
 

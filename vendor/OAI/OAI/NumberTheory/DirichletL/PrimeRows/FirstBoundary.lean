@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstNeighborhood
-import OAI.NumberTheory.DirichletL.PrimeRows.Origin
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstNeighborhood
+public import OAI.NumberTheory.DirichletL.PrimeRows.Origin
+
+@[expose] public section
 
 namespace OAI
 

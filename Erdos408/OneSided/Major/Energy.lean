@@ -1,8 +1,10 @@
-import Erdos408.OneSided.Major.Energy.Average
-import Erdos408.OneSided.Major.Energy.Isolated
-import Erdos408.OneSided.Major.Energy.Mean
-import Erdos408.OneSided.Major.Mellin
-import Mathlib.Data.Fin.Tuple.Finset
+module
+
+public import Erdos408.OneSided.Major.Energy.Average
+public import Erdos408.OneSided.Major.Energy.Isolated
+public import Erdos408.OneSided.Major.Energy.Mean
+public import Erdos408.OneSided.Major.Mellin
+public import Mathlib.Data.Fin.Tuple.Finset
 
 /-!
 # The energy of the separated major term
@@ -32,6 +34,8 @@ major term at one arc and one character tuple is controlled by the energy
 
 With no bands the only label product is `1`, below every dyad, and `B_λ = 0`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

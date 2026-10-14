@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedFamily
-import OAI.NumberTheory.DirichletL.Moments.FirstSourceReduction
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedFamily
+public import OAI.NumberTheory.DirichletL.Moments.FirstSourceReduction
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
+
+@[expose] public section
 
 namespace OAI
 

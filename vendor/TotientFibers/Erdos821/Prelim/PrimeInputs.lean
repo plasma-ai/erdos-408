@@ -1,6 +1,9 @@
-import OAI.NumberTheory.PrimeGaps.Main
-import OAI.NumberTheory.PrimeGaps.MultiplicativeSieve
+module
 
+public import OAI.NumberTheory.PrimeGaps.Main
+public import OAI.NumberTheory.PrimeGaps.MultiplicativeSieve
+
+@[expose] public section
 
 namespace Erdos821
 namespace Prelim

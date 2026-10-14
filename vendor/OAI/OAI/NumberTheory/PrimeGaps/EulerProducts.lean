@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.EulerFactors
+module
+
+public import OAI.NumberTheory.PrimeGaps.EulerFactors
+
+@[expose] public section
 
 namespace OAI
 

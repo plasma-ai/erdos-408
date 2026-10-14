@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.Contractions
+module
+
+public import Erdos821.P3Clean.Contractions
 
 /-! Endpoint reindexing and finite convex averaging for the clean symmetrizations. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialOverlapInputFourier
-import OAI.NumberTheory.DirichletL.Descent.CommonMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialOverlapInputFourier
+public import OAI.NumberTheory.DirichletL.Descent.CommonMeasure
+
+@[expose] public section
 
 namespace OAI
 

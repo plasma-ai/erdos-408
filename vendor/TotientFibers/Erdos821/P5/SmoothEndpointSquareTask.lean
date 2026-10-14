@@ -1,4 +1,8 @@
-import Erdos821.P5.ComparisonSmoothEndpoints
+module
+
+public import Erdos821.P5.ComparisonSmoothEndpoints
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

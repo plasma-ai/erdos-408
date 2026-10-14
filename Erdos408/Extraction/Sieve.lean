@@ -1,7 +1,9 @@
-import Erdos408.BlockSieve
-import Erdos408.Extraction.Allocation
-import Erdos408.Extraction.Sieve.Budget
-import Erdos408.Extraction.TypeII
+module
+
+public import Erdos408.BlockSieve
+public import Erdos408.Extraction.Allocation
+public import Erdos408.Extraction.Sieve.Budget
+public import Erdos408.Extraction.TypeII
 
 /-!
 # The smoothed rectangle statistic
@@ -34,6 +36,8 @@ coefficients `|𝔟| ≤ 1`, and cutoffs `Φ` in the class,
 * E11. With `h = 2 ⌈200 s⌉`, `J_c = ⌈1001 s⌉` and `N = ⌈30000 s⌉` bands per
   cluster, every error is `≤ T⁻³⁰⁰` (`Sieve.final_budget`).
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

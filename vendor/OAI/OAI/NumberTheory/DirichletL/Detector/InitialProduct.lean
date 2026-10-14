@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.InitialSubseries
-import Mathlib.MeasureTheory.Integral.Prod
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.InitialSubseries
+public import Mathlib.MeasureTheory.Integral.Prod
+
+@[expose] public section
 
 namespace OAI
 

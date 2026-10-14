@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonPairedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonPairedSource
+
+@[expose] public section
 
 namespace OAI
 

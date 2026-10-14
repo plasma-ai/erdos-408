@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramScaleLoss
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramScaleLoss
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.Smoothed
-import OAI.NumberTheory.DirichletL.CubicSieve.DescentEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.Smoothed
+public import OAI.NumberTheory.DirichletL.CubicSieve.DescentEnergy
+
+@[expose] public section
 
 namespace OAI
 

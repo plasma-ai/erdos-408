@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.NormalizedTransport
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.NormalizedTransport
+
+@[expose] public section
 
 namespace OAI
 
@@ -14,7 +18,7 @@ local instance : Finite (O ⧸ M) := Ring.HasFiniteQuotients.finiteQuotient (NeZ
 variable (H : Subgroup (O ⧸ M)ˣ) (hH : RayOrthogonality.globalUnits M≤H)
 
 omit [NeZero M] in
-private theorem transportSavingPoolOutside (S : Finset (Ideal O)) (K : ℕ) (a b : ℝ) (Y : Fin K→ℝ) :
+theorem transportSavingPoolOutside (S : Finset (Ideal O)) (K : ℕ) (a b : ℝ) (Y : Fin K→ℝ) :
     ∀j P,P∈pool (RayQuotient.identityClass M H) S a b (Y j) → P.val∉S :=
   fun j P hP=>(mem_pool _ S a b (Y j) P).mp hP |>.2.2.2
 

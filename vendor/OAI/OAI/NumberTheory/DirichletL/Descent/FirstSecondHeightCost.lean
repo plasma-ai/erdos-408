@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstHeightBudget
-import OAI.NumberTheory.DirichletL.Descent.FirstLabelCellStep
-import OAI.NumberTheory.DirichletL.Descent.FirstLiveCountBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstHeightBudget
+public import OAI.NumberTheory.DirichletL.Descent.FirstLabelCellStep
+public import OAI.NumberTheory.DirichletL.Descent.FirstLiveCountBudget
+
+@[expose] public section
 
 namespace OAI
 

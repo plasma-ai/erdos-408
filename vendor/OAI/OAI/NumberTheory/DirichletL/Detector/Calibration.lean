@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.Physical
-import Mathlib.Algebra.Group.Pi.Units
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.Physical
+public import Mathlib.Algebra.Group.Pi.Units
+
+@[expose] public section
 
 namespace OAI
 

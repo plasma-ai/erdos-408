@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CompletionSupport
-import OAI.NumberTheory.DirichletL.Descent.Canonical
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CompletionSupport
+public import OAI.NumberTheory.DirichletL.Descent.Canonical
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.RowReindex
-import OAI.NumberTheory.DirichletL.Reflection.TupleDyads
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.RowReindex
+public import OAI.NumberTheory.DirichletL.Reflection.TupleDyads
+
+@[expose] public section
 
 namespace OAI
 

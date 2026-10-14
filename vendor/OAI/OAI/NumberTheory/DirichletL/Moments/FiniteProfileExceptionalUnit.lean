@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalVolume
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalVolume
+
+@[expose] public section
 
 namespace OAI
 

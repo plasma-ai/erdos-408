@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.ChineseRemainder.PrimaryCompletions
+module
+
+public import OAI.NumberTheory.DirichletL.ChineseRemainder.PrimaryCompletions
+
+@[expose] public section
 
 namespace OAI
 

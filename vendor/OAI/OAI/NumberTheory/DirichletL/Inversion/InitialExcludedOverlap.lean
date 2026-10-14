@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedPool
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedPool
+
+@[expose] public section
 
 namespace OAI
 

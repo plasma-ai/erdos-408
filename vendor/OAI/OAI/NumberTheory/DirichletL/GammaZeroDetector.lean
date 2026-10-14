@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.Hecke.Dyadic
-import OAI.NumberTheory.DirichletL.Hecke.LogarithmicInput
-import OAI.NumberTheory.DirichletL.Hecke.DeletionBounds
-import Mathlib.Analysis.Complex.RemovableSingularity
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.Hecke.Dyadic
+public import OAI.NumberTheory.DirichletL.Hecke.LogarithmicInput
+public import OAI.NumberTheory.DirichletL.Hecke.DeletionBounds
+public import Mathlib.Analysis.Complex.RemovableSingularity
+
+@[expose] public section
 
 namespace OAI
 

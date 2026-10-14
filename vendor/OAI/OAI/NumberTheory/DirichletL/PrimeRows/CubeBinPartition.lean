@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CubeCalibration
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CubeCalibration
+
+@[expose] public section
 
 namespace OAI
 

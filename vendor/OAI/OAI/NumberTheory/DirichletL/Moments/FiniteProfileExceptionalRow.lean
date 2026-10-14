@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalRectangle
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalCappedAmplitude
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalRectangle
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalCappedAmplitude
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

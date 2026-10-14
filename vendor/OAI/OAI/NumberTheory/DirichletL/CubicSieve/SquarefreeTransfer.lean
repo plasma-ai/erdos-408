@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.LogarithmicSectors
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.LogarithmicSectors
+
+@[expose] public section
 
 namespace OAI
 

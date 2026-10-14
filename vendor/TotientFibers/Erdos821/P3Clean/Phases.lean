@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.FiniteFourier
+module
+
+public import Erdos821.P3Clean.FiniteFourier
 
 /-! Unit character factors can be absorbed into the ideal frequency. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

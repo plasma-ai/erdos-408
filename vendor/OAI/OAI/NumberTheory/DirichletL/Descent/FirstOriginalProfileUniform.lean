@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstUnequalPhysicalEnergy
-import OAI.NumberTheory.DirichletL.Descent.FirstGlobalPush
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstUnequalPhysicalEnergy
+public import OAI.NumberTheory.DirichletL.Descent.FirstGlobalPush
+
+@[expose] public section
 
 namespace OAI
 

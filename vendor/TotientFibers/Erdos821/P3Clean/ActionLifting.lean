@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.FourierLifting
+module
+
+public import Erdos821.P3Clean.FourierLifting
 
 /-! Transferring from the regular translation representation to finite weighted orbits. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

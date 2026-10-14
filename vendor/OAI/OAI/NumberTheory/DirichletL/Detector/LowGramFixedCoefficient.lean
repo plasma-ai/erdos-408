@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowGramArithmetic
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowGramArithmetic
+
+@[expose] public section
 
 namespace OAI
 

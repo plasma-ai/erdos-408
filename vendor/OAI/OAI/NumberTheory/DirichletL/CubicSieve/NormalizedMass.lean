@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.DivisorTargets
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.DivisorTargets
+
+@[expose] public section
 
 namespace OAI
 

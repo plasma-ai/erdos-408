@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramResidue
-import OAI.NumberTheory.DirichletL.Detector.GramPeriodicPoisson
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramResidue
+public import OAI.NumberTheory.DirichletL.Detector.GramPeriodicPoisson
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.FirstGlobalParents
-import OAI.NumberTheory.DirichletL.Descent.FirstChildWindowsLive
-import OAI.NumberTheory.DirichletL.Descent.FirstChildWindowsPhysical
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.FirstGlobalParents
+public import OAI.NumberTheory.DirichletL.Descent.FirstChildWindowsLive
+public import OAI.NumberTheory.DirichletL.Descent.FirstChildWindowsPhysical
+
+@[expose] public section
 
 namespace OAI
 

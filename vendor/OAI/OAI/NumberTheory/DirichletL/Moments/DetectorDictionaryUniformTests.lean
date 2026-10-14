@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformHeight
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformHeight
+
+@[expose] public section
 
 namespace OAI
 

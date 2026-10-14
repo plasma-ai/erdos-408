@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseUniformLog
-import OAI.NumberTheory.DirichletL.Dictionary.InverseUniformScale
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseUniformLog
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseUniformScale
+
+@[expose] public section
 
 namespace OAI
 

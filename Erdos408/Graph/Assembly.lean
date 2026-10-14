@@ -1,5 +1,7 @@
-import Erdos408.Graph.Comparison
-import Erdos408.Graph.Pairing
+module
+
+public import Erdos408.Graph.Comparison
+public import Erdos408.Graph.Pairing
 
 /-!
 # The expanded family
@@ -11,6 +13,8 @@ endpoints of the position alone is the raw pattern pairing plus the term
 pairings (`pairing_eq_family`), and the term weights sum to at most
 `ξ⁻² Q⁴` times the pattern mass (`sum_norm_termWeight_family_le`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.Graph
 

@@ -1,4 +1,10 @@
-import OAI.NumberTheory.EgyptianFractions.FourierSecondMoment
+module
+
+public import OAI.NumberTheory.EgyptianFractions.FourierSecondMoment
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Analysis.CStarAlgebra.Classes
+
+@[expose] public section
 
 namespace OAI
 open scoped BigOperators

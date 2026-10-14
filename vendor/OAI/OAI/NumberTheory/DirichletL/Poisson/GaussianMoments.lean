@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.GaussianFiberMass
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.GaussianFiberMass
+
+@[expose] public section
 
 namespace OAI
 

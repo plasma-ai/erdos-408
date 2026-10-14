@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Moment.Edge.Block
-import Erdos408.OneSided.Moment.Edge.Parseval
+module
+
+public import Erdos408.OneSided.Moment.Edge.Block
+public import Erdos408.OneSided.Moment.Edge.Parseval
 
 /-!
 # The core kernel of the clean edge
@@ -25,6 +27,8 @@ absolute constant `C₀`. The proof:
    approximation `exists_dirichlet_minor`, the Gram bound `kerLe_phaseBox`, the spacing bound
    `sum_dirBound_le` and the tensor step `kerLe_detPhase`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,4 +1,8 @@
-import Erdos821.S34.FrameBridge
+module
+
+public import Erdos821.S34.FrameBridge
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

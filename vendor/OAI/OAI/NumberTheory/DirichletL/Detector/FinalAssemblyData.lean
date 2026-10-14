@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.ParametersFixedSource
-import OAI.NumberTheory.DirichletL.Detector.FinalAssemblySource
-import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyCountParameters
+module
+
+public import OAI.NumberTheory.DirichletL.ParametersFixedSource
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssemblySource
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyCountParameters
+
+@[expose] public section
 
 namespace OAI
 

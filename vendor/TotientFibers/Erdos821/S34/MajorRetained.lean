@@ -1,6 +1,10 @@
-import Erdos821.S34.MajorCharacter
-import Erdos821.S34.DyadicMultiplier
-import Erdos821.S34.TupleBilinear
+module
+
+public import Erdos821.S34.MajorCharacter
+public import Erdos821.S34.DyadicMultiplier
+public import Erdos821.S34.TupleBilinear
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

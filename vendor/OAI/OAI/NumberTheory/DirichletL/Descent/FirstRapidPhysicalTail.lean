@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstTailAggregation
-import OAI.NumberTheory.DirichletL.Descent.FirstSourceTail
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstTailAggregation
+public import OAI.NumberTheory.DirichletL.Descent.FirstSourceTail
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.OriginalBranchSum
-import OAI.NumberTheory.DirichletL.Reflection.LiteralNormalized
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalBranchSum
+public import OAI.NumberTheory.DirichletL.Reflection.LiteralNormalized
+
+@[expose] public section
 
 namespace OAI
 

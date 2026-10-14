@@ -1,4 +1,8 @@
-import Erdos821.P5.GroupOmega
+module
+
+public import Erdos821.P5.GroupOmega
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

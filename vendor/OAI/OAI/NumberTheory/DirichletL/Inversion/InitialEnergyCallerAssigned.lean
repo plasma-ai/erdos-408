@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCaller
-import OAI.NumberTheory.DirichletL.Descent.SecondAssignedSum
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCaller
+public import OAI.NumberTheory.DirichletL.Descent.SecondAssignedSum
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceScalarReserve
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceScalarReserve
+
+@[expose] public section
 
 namespace OAI
 

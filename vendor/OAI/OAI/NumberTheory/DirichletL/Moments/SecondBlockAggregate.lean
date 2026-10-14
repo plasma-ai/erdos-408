@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondRetainedAggregate
-import OAI.NumberTheory.DirichletL.Moments.SecondRetainedRows
-import OAI.NumberTheory.DirichletL.Moments.SecondActiveDyadic
-import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalBlock
-import OAI.NumberTheory.DirichletL.Moments.ActiveSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondRetainedAggregate
+public import OAI.NumberTheory.DirichletL.Moments.SecondRetainedRows
+public import OAI.NumberTheory.DirichletL.Moments.SecondActiveDyadic
+public import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalBlock
+public import OAI.NumberTheory.DirichletL.Moments.ActiveSource
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,6 @@
-import Erdos408.SpareSlot
+module
+
+public import Erdos408.SpareSlot
 
 /-!
 # The dyadic prime moments
@@ -21,6 +23,8 @@ products. The spare-slot statistics with coefficients `F q`, `F(q)²` and
 `F q F r` then give the dyadic moments, and Mertens' first theorem bounds the
 harmonic tails outside the regions.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

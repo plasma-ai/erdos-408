@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedRoot
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedCommonRadius
-import OAI.NumberTheory.DirichletL.Moments.FirstCommonTransport
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedRoot
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedCommonRadius
+public import OAI.NumberTheory.DirichletL.Moments.FirstCommonTransport
+
+@[expose] public section
 
 namespace OAI
 

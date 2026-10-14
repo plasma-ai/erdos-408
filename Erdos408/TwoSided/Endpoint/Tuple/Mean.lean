@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Analysis.Divisor
+module
+
+public import Erdos408.OneSided.Analysis.Divisor
 
 /-!
 # The restricted mean value
@@ -7,6 +9,8 @@ E7 of `blueprint/two_sided_correlation.md` §6.3 (PD (6.35)). On the set where `
 bound `|P_s Q|² ≤ θ² |Q|²`, enlarge the set to `(a, b]` and apply the mean value theorem
 `OneSided.integral_norm_dirichlet_sq_le` to `Q`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.TupleHigh
 

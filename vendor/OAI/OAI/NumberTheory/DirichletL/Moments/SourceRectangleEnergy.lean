@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceRectangleMask
-import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
-import OAI.NumberTheory.DirichletL.Moments.RestrictedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceRectangleMask
+public import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
+public import OAI.NumberTheory.DirichletL.Moments.RestrictedSource
+
+@[expose] public section
 
 namespace OAI
 

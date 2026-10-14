@@ -1,7 +1,11 @@
-import Erdos821.Blueprint.Graph
-import Erdos821.S2.RankCount
+module
+
+public import Erdos821.Blueprint.Graph
+public import Erdos821.S2.RankCount
 
 /-! Exact P3 blueprint exports for the equality-rank combinatorics. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

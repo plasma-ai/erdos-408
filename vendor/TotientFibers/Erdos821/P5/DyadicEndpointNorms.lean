@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparableNorms
-import Erdos821.P5.EndpointVectorSup
+module
+
+public import Erdos821.P5.ComparableNorms
+public import Erdos821.P5.EndpointVectorSup
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

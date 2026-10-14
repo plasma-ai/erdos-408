@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ActualSecondUniform
-import OAI.NumberTheory.DirichletL.Descent.FreshWindows
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ActualSecondUniform
+public import OAI.NumberTheory.DirichletL.Descent.FreshWindows
+
+@[expose] public section
 
 namespace OAI
 

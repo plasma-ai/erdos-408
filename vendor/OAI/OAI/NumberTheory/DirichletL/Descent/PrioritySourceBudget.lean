@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.PriorityCellBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.PriorityCellBudget
+
+@[expose] public section
 
 namespace OAI
 

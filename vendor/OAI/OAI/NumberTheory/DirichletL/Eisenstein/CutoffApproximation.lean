@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.ThetaNonvanishing
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.ThetaNonvanishing
+
+@[expose] public section
 
 namespace OAI
 

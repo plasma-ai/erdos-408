@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.TargetPrincipal
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.TargetPrincipal
+
+@[expose] public section
 
 namespace OAI
 

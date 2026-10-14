@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowSlotScales
-import OAI.NumberTheory.DirichletL.Detector.GramIdealSummation
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowSlotScales
+public import OAI.NumberTheory.DirichletL.Detector.GramIdealSummation
+
+@[expose] public section
 
 namespace OAI
 

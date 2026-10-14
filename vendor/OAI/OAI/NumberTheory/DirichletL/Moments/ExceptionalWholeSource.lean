@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalSourceShell
-import OAI.NumberTheory.DirichletL.Moments.WholeDivisorShell
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalSourceShell
+public import OAI.NumberTheory.DirichletL.Moments.WholeDivisorShell
+
+@[expose] public section
 
 namespace OAI
 

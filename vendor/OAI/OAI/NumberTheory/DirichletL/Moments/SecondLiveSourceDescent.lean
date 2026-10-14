@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSourceRemainder
-import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalLiveSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSourceRemainder
+public import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalLiveSource
+
+@[expose] public section
 
 namespace OAI
 

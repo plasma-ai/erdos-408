@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.SixthDecomposition
-import OAI.NumberTheory.DirichletL.Detector.SpectralSupport
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SixthDecomposition
+public import OAI.NumberTheory.DirichletL.Detector.SpectralSupport
+
+@[expose] public section
 
 namespace OAI
 

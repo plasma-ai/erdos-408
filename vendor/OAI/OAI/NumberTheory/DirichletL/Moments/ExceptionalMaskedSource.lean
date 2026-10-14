@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalWholeSource
-import OAI.NumberTheory.DirichletL.Moments.SourceRectangleEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalWholeSource
+public import OAI.NumberTheory.DirichletL.Moments.SourceRectangleEnergy
+
+@[expose] public section
 
 namespace OAI
 

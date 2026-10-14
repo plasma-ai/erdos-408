@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.SourceCoefficient
-import OAI.NumberTheory.DirichletL.Detector.PhysicalLocalEuler
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SourceCoefficient
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalLocalEuler
+
+@[expose] public section
 
 namespace OAI
 

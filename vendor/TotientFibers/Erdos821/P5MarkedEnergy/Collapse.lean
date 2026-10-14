@@ -1,9 +1,13 @@
-import Erdos821.P5.Basic
-import Erdos821.Classical.DivisorMoments
+module
+
+public import Erdos821.P5.Basic
+public import Erdos821.Classical.DivisorMoments
 
 /-! Dyadic harmonic Dirichlet polynomials and their products. A product of
 `k` dyadic polynomials is one Dirichlet polynomial whose coefficient square sum
 is controlled by a fixed divisor moment. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

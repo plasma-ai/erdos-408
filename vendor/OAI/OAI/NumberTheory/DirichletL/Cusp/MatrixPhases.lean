@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.ChineseRemainder.AdditiveCharacters
-import OAI.NumberTheory.DirichletL.Arithmetic.EisensteinIdeals
+module
+
+public import OAI.NumberTheory.DirichletL.ChineseRemainder.AdditiveCharacters
+public import OAI.NumberTheory.DirichletL.Arithmetic.EisensteinIdeals
+
+@[expose] public section
 
 namespace OAI
 
@@ -438,13 +442,13 @@ end ShortDraftGaussianPhaseTable
 namespace ActualEisensteinCoordinates
 abbrev K := CyclotomicField 3 ℚ
 abbrev O := NumberField.RingOfIntegers K
-private instance : IsCyclotomicExtension {3} ℚ K := CyclotomicField.isCyclotomicExtension 3 ℚ
-private theorem hζ : IsPrimitiveRoot (IsCyclotomicExtension.zeta 3 ℚ K) 3 :=
+instance : IsCyclotomicExtension {3} ℚ K := CyclotomicField.isCyclotomicExtension 3 ℚ
+theorem hζ : IsPrimitiveRoot (IsCyclotomicExtension.zeta 3 ℚ K) 3 :=
   IsCyclotomicExtension.zeta_spec 3 ℚ K
 def omega : O := hζ.toInteger
-private def pb : PowerBasis ℤ O := hζ.integralPowerBasis
+def pb : PowerBasis ℤ O := hζ.integralPowerBasis
 
-private theorem pb_dim : pb.dim = 2 := by
+theorem pb_dim : pb.dim = 2 := by
   simp [pb, Nat.totient_prime Nat.prime_three]
 
 theorem pb_gen : pb.gen = omega := by
@@ -476,12 +480,12 @@ theorem exists_coordinates (x : O) :
   have hi1 : (i1 : ℕ) = 1 := rfl
   simpa [a, b, hi0, hi1, pb_gen, smul_eq_mul, mul_comm] using hsum.symm
 
-private def i0 : Fin pb.dim := ⟨0, by rw [pb_dim]; decide⟩
-private def i1 : Fin pb.dim := ⟨1, by rw [pb_dim]; decide⟩
+def i0 : Fin pb.dim := ⟨0, by rw [pb_dim]; decide⟩
+def i1 : Fin pb.dim := ⟨1, by rw [pb_dim]; decide⟩
 
 def eval (a b : ℤ) : O := (a : O) + (b : O) * omega
 
-private theorem eval_basis (a b : ℤ) :
+theorem eval_basis (a b : ℤ) :
     eval a b = a • pb.basis i0 + b • pb.basis i1 := by
   simp [eval, PowerBasis.basis_eq_pow, i0, i1, pb_gen, mul_comm]
 
@@ -499,7 +503,7 @@ theorem unique_coordinates {a b c d : ℤ}
       Finsupp.smul_apply, Finsupp.single_apply, ite_eq_left, ite_eq_right hne,
       smul_eq_mul, mul_one, mul_zero, zero_add] using h1
 
-private theorem omega_sq : omega ^ 2 = -omega - 1 := by
+theorem omega_sq : omega ^ 2 = -omega - 1 := by
   simpa [omega] using IsCyclotomicExtension.Rat.Three.eta_sq hζ
 
 theorem conventional_lambda_eq_neg_delta_square :
@@ -539,7 +543,7 @@ theorem eval_congr_mod_four {a b c d : ℤ}
   push_cast
   ring
 
-private theorem exists_pair (x : O) :
+theorem exists_pair (x : O) :
     ∃ p : ℤ × ℤ, eval p.1 p.2 = x := by
   obtain ⟨a, b, h⟩ := exists_coordinates x
   exact ⟨(a, b), h.symm⟩
@@ -613,17 +617,17 @@ theorem norm_squareclass_actual
   rw [residue_mul, residue_pow_two, residue_lift]
   exact EisensteinEPrimaryPhase.norm_squareclass e f (residue u) hu
 
-private theorem residue_two : residue (2 : O) = (2, 0) := by
+theorem residue_two : residue (2 : O) = (2, 0) := by
   have h : eval 2 0 = (2 : O) := by simp [eval]
   rw [← h, residue_eval]
   norm_num
 
-private theorem not_odd_mul_two (v : EisensteinEPrimaryPhase.Coord) :
+theorem not_odd_mul_two (v : EisensteinEPrimaryPhase.Coord) :
     ¬ EisensteinEPrimaryPhase.odd
       (EisensteinEPrimaryPhase.mul (2, 0) v) := by
   decide +revert
 
-private theorem not_odd_cast_zero (v : EisensteinEPrimaryPhase.Coord)
+theorem not_odd_cast_zero (v : EisensteinEPrimaryPhase.Coord)
     (h : ¬ EisensteinEPrimaryPhase.odd v) :
     (ZMod.cast v.1 : ZMod 2) = 0 ∧
       (ZMod.cast v.2 : ZMod 2) = 0 := by
@@ -667,16 +671,16 @@ theorem rayBits_mul (x y : O)
 def rayPhaseBits (a b : EisensteinEPrimaryPhase.Bit × EisensteinEPrimaryPhase.Bit) : ℤ :=
   (-1) ^ (a.1.val * b.2.val + a.2.val * b.1.val + a.2.val * b.2.val)
 
-private theorem rayPhaseBits_symmetric (a b : EisensteinEPrimaryPhase.Bit × EisensteinEPrimaryPhase.Bit) :
+theorem rayPhaseBits_symmetric (a b : EisensteinEPrimaryPhase.Bit × EisensteinEPrimaryPhase.Bit) :
     rayPhaseBits a b = rayPhaseBits b a := by
   decide +revert
 
-private theorem rayPhaseBits_mul_left
+theorem rayPhaseBits_mul_left
     (a b c : EisensteinEPrimaryPhase.Bit × EisensteinEPrimaryPhase.Bit) :
     rayPhaseBits (a+b) c = rayPhaseBits a c * rayPhaseBits b c := by
   decide +revert
 
-private theorem rayPhaseBits_mul_right
+theorem rayPhaseBits_mul_right
     (a b c : EisensteinEPrimaryPhase.Bit × EisensteinEPrimaryPhase.Bit) :
     rayPhaseBits a (b+c) = rayPhaseBits a b * rayPhaseBits a c := by
   decide +revert

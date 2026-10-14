@@ -1,5 +1,9 @@
-import Erdos821.P5.MellinCutoffTask
-import Erdos821.P5Mellin.FourierBridge
+module
+
+public import Erdos821.P5.MellinCutoffTask
+public import Erdos821.P5Mellin.FourierBridge
+
+@[expose] public section
 
 open MeasureTheory Filter
 open scoped BigOperators ContDiff

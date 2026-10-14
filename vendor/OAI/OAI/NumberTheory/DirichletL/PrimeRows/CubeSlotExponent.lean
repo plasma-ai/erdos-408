@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CubeFixedPrimes
-import OAI.NumberTheory.DirichletL.Hecke.DetectorPhysicalSelection
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CubeFixedPrimes
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorPhysicalSelection
+
+@[expose] public section
 
 namespace OAI
 

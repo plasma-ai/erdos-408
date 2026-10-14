@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.RawNormAssembly
-import Erdos821.P3Clean.Baseline
+module
+
+public import Erdos821.P3Clean.RawNormAssembly
+public import Erdos821.P3Clean.Baseline
 
 /-! Positivity of the between-map measure once all big baselines are positive. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

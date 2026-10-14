@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.LowFixedRadialEntry
-import OAI.NumberTheory.DirichletL.Energy.OriginalProfileControl
-import OAI.NumberTheory.DirichletL.Energy.InputParentCapacity
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.LowFixedRadialEntry
+public import OAI.NumberTheory.DirichletL.Energy.OriginalProfileControl
+public import OAI.NumberTheory.DirichletL.Energy.InputParentCapacity
+
+@[expose] public section
 
 namespace OAI
 

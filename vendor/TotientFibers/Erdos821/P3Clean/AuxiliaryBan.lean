@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.BigRefresh
-import Erdos821.P3Clean.IdealMultiplier
+module
+
+public import Erdos821.P3Clean.BigRefresh
+public import Erdos821.P3Clean.IdealMultiplier
 
 /-! Auxiliary-coordinate marginals and a uniform collision union bound. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

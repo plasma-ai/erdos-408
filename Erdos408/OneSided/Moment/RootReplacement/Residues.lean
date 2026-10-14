@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Moment.Reindex
-import Erdos408.OneSided.Moment.RootReplacement.Lines
+module
+
+public import Erdos408.OneSided.Moment.Reindex
+public import Erdos408.OneSided.Moment.RootReplacement.Lines
 
 /-!
 # Root equidistribution for functions of the lines
@@ -17,6 +19,8 @@ class: the main terms add up to `c₂ U V |box|` times the average over `SL₂(�
 independent line average by RR5; the errors add up to at most `|SL₂(ℤ/S)| ≤ S⁴` times one
 root-count error.
 -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Setup
+module
+
+public import Erdos408.TwoSided.Setup
 
 /-!
 # The stripping bijection
@@ -17,6 +19,8 @@ With `D_R = sharedProduct C s`, the cutoff pairing becomes a sum over the auxili
 `a`, the shared labels `s`, the unshared parts `l, l'` of the source and the target, and the
 stripped position `w = n / D_R` (`physSum_eq_sum_strip`); the target list shares `s`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

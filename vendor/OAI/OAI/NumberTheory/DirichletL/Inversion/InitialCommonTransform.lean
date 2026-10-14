@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialCommonCutoff
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialCommonCutoff
+
+@[expose] public section
 
 namespace OAI
 

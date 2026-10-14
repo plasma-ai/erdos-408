@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.ReopeningBounds
-import OAI.NumberTheory.DirichletL.CubicSieve.CutoffOrders
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.ReopeningBounds
+public import OAI.NumberTheory.DirichletL.CubicSieve.CutoffOrders
+
+@[expose] public section
 
 namespace OAI
 

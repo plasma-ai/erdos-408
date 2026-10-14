@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Cauchy
-import Erdos408.OneSided.Lift
+module
+
+public import Erdos408.OneSided.Cauchy
+public import Erdos408.OneSided.Lift
 
 /-!
 # Slope cells and the support of the lift
@@ -16,6 +18,8 @@ The geometric part of PD §3.3 (`blueprint/one_sided_type_ii.md` §5.1).
   positions is. A nonzero entry of `𝒯` has `|det(P, Q)| < 10 d₀ Y` and `d₀ Y` below its
   list product.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

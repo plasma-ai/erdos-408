@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.UnramifiedScalar
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.UnramifiedScalar
+
+@[expose] public section
 
 namespace OAI
 

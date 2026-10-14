@@ -1,5 +1,9 @@
-import Erdos821.P5.EndpointInvariance
-import Erdos821.P5.HarmonicLists
+module
+
+public import Erdos821.P5.EndpointInvariance
+public import Erdos821.P5.HarmonicLists
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

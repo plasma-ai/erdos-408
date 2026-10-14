@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianLogWindow
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianLogWindow
+
+@[expose] public section
 
 namespace OAI
 

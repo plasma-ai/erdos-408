@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Graph.BoundsLists
+module
+
+public import Erdos408.TwoSided.Graph.BoundsLists
 
 /-!
 # The physical endpoints at a dyad
@@ -14,6 +16,8 @@ Lemma G1: eventually `|f| ≤ 1`, `‖f‖²_phys ≤ 2X` and `‖g‖²_phys �
 `C₃ = max B₀ 0 + 1`. The clipped core makes PD's divisor moments unnecessary (X4). The list
 counts are in `Graph/BoundsLists.lean`, and the crude form `|F| ≤ L` of U7 in `Setup.lean`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

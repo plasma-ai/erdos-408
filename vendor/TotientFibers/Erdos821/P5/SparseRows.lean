@@ -1,5 +1,10 @@
-import Erdos821.P5.HarmonicRows
-import Erdos821.P5.Basic
+module
+
+public import Erdos821.P5.HarmonicRows
+public import Erdos821.P5.Basic
+public import Mathlib.Tactic.NormNum.RealSqrt
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

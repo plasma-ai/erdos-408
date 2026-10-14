@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.Canonical
-import OAI.NumberTheory.DirichletL.Moments.FullCorrelation
-import OAI.NumberTheory.DirichletL.Moments.Fourier
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Canonical
+public import OAI.NumberTheory.DirichletL.Moments.FullCorrelation
+public import OAI.NumberTheory.DirichletL.Moments.Fourier
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.SmallNormalization
-import Erdos821.P3Clean.ResidueAction
+module
+
+public import Erdos821.P3Clean.SmallNormalization
+public import Erdos821.P3Clean.ResidueAction
 
 /-! Exact coordinates and mass factors for a clean edge. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicAssembly
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicAssembly
+
+@[expose] public section
 
 namespace OAI
 

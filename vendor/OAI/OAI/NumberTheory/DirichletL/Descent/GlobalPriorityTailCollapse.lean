@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.WholePriorityParentBounds
-import OAI.NumberTheory.DirichletL.Descent.GlobalPrioritySource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.WholePriorityParentBounds
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPrioritySource
+
+@[expose] public section
 
 namespace OAI
 

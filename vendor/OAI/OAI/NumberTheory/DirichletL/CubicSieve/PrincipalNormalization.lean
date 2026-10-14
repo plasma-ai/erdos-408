@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.MaskedPrincipalBounds
-import OAI.NumberTheory.DirichletL.CubicSieve.GlobalEncoding
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.MaskedPrincipalBounds
+public import OAI.NumberTheory.DirichletL.CubicSieve.GlobalEncoding
+
+@[expose] public section
 
 namespace OAI
 

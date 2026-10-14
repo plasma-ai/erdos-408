@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.Coordinates
-import Erdos821.P3Clean.Laws
+module
+
+public import Erdos821.P3Clean.Coordinates
+public import Erdos821.P3Clean.Laws
 
 /-! Literal clean patterns after separating small prefixes and big labels. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

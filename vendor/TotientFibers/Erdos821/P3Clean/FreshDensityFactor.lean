@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.ActiveDensity
+module
+
+public import Erdos821.P3Clean.ActiveDensity
 
 /-! Shared density factors cancel under the square-root identification. -/
+
+@[expose] public section
 
 noncomputable section
 

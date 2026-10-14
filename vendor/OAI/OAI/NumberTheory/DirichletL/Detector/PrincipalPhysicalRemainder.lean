@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.PrincipalPhysical
-import OAI.NumberTheory.DirichletL.Detector.PrincipalRemainderBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PrincipalPhysical
+public import OAI.NumberTheory.DirichletL.Detector.PrincipalRemainderBounds
+
+@[expose] public section
 
 namespace OAI
 

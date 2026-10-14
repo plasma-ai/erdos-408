@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondFreshTruncation
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondFreshTruncation
+
+@[expose] public section
 
 namespace OAI
 

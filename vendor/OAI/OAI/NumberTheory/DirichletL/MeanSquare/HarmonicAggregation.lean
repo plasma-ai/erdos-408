@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.GaussSum.BranchScaling
-import OAI.NumberTheory.DirichletL.CubicSieve.RadialWindows
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.BranchScaling
+public import OAI.NumberTheory.DirichletL.CubicSieve.RadialWindows
+
+@[expose] public section
 
 namespace OAI
 

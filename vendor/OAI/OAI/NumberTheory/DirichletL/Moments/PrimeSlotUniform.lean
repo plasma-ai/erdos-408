@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.PrimeSlotBound
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PrimeSlotBound
+
+@[expose] public section
 
 namespace OAI
 

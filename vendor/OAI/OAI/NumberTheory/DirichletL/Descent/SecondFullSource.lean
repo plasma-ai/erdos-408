@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondParentRadial
-import OAI.NumberTheory.DirichletL.Descent.SecondCenterSector
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondParentRadial
+public import OAI.NumberTheory.DirichletL.Descent.SecondCenterSector
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Energy.WidthRanges
-import OAI.NumberTheory.DirichletL.Energy.WidthFloor
-import OAI.NumberTheory.DirichletL.Energy.StageReserveSchedule
-import OAI.NumberTheory.DirichletL.Energy.BandMonotonicity
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.WidthRanges
+public import OAI.NumberTheory.DirichletL.Energy.WidthFloor
+public import OAI.NumberTheory.DirichletL.Energy.StageReserveSchedule
+public import OAI.NumberTheory.DirichletL.Energy.BandMonotonicity
+
+@[expose] public section
 
 namespace OAI
 

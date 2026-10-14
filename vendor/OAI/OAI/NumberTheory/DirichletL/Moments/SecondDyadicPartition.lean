@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalWindow
-import OAI.NumberTheory.DirichletL.Moments.DyadicCount
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalWindow
+public import OAI.NumberTheory.DirichletL.Moments.DyadicCount
+
+@[expose] public section
 
 namespace OAI
 

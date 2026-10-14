@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceCapacity
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceInternal
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceCapacity
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceInternal
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorEnergyInitialState
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorEnergyInitialState
+
+@[expose] public section
 
 namespace OAI
 

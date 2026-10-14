@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceRobustPower
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceRobustPower
+
+@[expose] public section
 
 namespace OAI
 

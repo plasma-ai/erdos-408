@@ -1,8 +1,17 @@
-import Mathlib
+module
+
+public import Mathlib.Analysis.Calculus.IteratedDeriv.Defs
+public import Mathlib.Analysis.InnerProductSpace.Basic
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+public import Mathlib.NumberTheory.DirichletCharacter.Orthogonality
+public import Mathlib.MeasureTheory.MeasurableSpace.Defs
+public import Mathlib.RingTheory.SimpleRing.Principal
 
 /-! Planning interfaces for §§3–4. These declarations are deliberately not an
 acceptance artifact: lemma proofs are placeholders, definitions are complete.
 All divisions in analytic quantities take place in ℝ or ℂ. -/
+
+@[expose] public section
 
 open scoped BigOperators ContDiff
 open Filter MeasureTheory

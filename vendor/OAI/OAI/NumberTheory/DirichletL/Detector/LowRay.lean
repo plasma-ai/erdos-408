@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.PhysicalRows
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalRows
+
+@[expose] public section
 
 namespace OAI
 

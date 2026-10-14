@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.GramFrequencyConvergence
-import OAI.NumberTheory.DirichletL.Detector.GramNonzeroFrequency
-import OAI.NumberTheory.DirichletL.Detector.LowGramDiagonal
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramFrequencyConvergence
+public import OAI.NumberTheory.DirichletL.Detector.GramNonzeroFrequency
+public import OAI.NumberTheory.DirichletL.Detector.LowGramDiagonal
+
+@[expose] public section
 
 namespace OAI
 

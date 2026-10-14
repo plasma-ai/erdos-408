@@ -1,6 +1,12 @@
-import Erdos821.P5.Exceptional
-import Erdos821.P5.DiscreteMoments
-import Erdos821.P5.CoefficientSquare
+module
+
+public import Erdos821.P5.Exceptional
+public import Erdos821.P5.DiscreteMoments
+public import Erdos821.P5.CoefficientSquare
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Algebra.Order.Star.Int
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,6 +1,10 @@
-import Erdos821.P4Probe.SharedPairingTask
-import Erdos821.P4Probe.PatternMasses
-import Erdos821.P4Probe.BigAveraging
+module
+
+public import Erdos821.P4Probe.SharedPairingTask
+public import Erdos821.P4Probe.PatternMasses
+public import Erdos821.P4Probe.BigAveraging
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

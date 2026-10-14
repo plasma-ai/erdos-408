@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralProduct
-import OAI.NumberTheory.DirichletL.PrimeRows.BufferedBin
-import OAI.NumberTheory.DirichletL.PrimeRows.DiskControl
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstContinuation
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralProduct
+public import OAI.NumberTheory.DirichletL.PrimeRows.BufferedBin
+public import OAI.NumberTheory.DirichletL.PrimeRows.DiskControl
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstContinuation
+
+@[expose] public section
 
 namespace OAI
 

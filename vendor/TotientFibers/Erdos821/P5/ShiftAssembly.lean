@@ -1,7 +1,11 @@
-import Erdos821.P5.ComparisonFamilyCancellation
-import Erdos821.P5.RawCorrelationBound
-import Erdos821.P5SmoothSquare.Proof
-import Erdos821.Blueprint.Shift
+module
+
+public import Erdos821.P5.ComparisonFamilyCancellation
+public import Erdos821.P5.RawCorrelationBound
+public import Erdos821.P5SmoothSquare.Proof
+public import Erdos821.Blueprint.Shift
+
+@[expose] public section
 
 set_option autoImplicit false
 

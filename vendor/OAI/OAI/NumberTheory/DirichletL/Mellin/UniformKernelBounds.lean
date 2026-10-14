@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Mellin.InverseContour
+module
+
+public import OAI.NumberTheory.DirichletL.Mellin.InverseContour
+
+@[expose] public section
 
 namespace OAI
 

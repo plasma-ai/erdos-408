@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Energy.PositiveLowBandSource
-import OAI.NumberTheory.DirichletL.Energy.BandMonotonicity
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowBands
-import OAI.NumberTheory.DirichletL.Energy.LowBandEmpty
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.PositiveLowBandSource
+public import OAI.NumberTheory.DirichletL.Energy.BandMonotonicity
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowBands
+public import OAI.NumberTheory.DirichletL.Energy.LowBandEmpty
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,9 +1,13 @@
-import Erdos821.P5MarkedEnergy.MellinBox
-import Erdos821.P5MarkedEnergy.Weights
-import Erdos821.P5MarkedEnergy.Decomposition
+module
+
+public import Erdos821.P5MarkedEnergy.MellinBox
+public import Erdos821.P5MarkedEnergy.Weights
+public import Erdos821.P5MarkedEnergy.Decomposition
 
 /-! The energy of one smooth piece: local Mellin energy, Mellin-separated box
 sum, and the split of each box integral into the medium range and the tail. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialRayAttachment
-import OAI.NumberTheory.DirichletL.Descent.Marks
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialRayAttachment
+public import OAI.NumberTheory.DirichletL.Descent.Marks
+
+@[expose] public section
 
 namespace OAI
 

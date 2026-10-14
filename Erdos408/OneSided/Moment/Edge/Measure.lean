@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Moment.Chain
-import Erdos408.OneSided.Bands
+module
+
+public import Erdos408.OneSided.Moment.Chain
+public import Erdos408.OneSided.Bands
 
 /-!
 # Nonnegativity of the chain measure
@@ -12,6 +14,8 @@ primes. This holds once the band primes exceed `N = 2R`, which is eventually the
 * `eventually_chainMeasure_nonneg`: eventually the chain measure with `N = 2R` is
   nonnegative.
 -/
+
+@[expose] public section
 
 noncomputable section
 

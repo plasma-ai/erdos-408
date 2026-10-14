@@ -1,4 +1,6 @@
-import Erdos408.Mertens
+module
+
+public import Erdos408.Mertens
 
 /-!
 # The logarithmic grid and the staircase regions
@@ -18,6 +20,8 @@ Both regions are finite unions of cells, so a rectangle statistic applies to
 each piece exactly and no boundary strip arises. The model lower bounds below
 follow from Mertens' first theorem on each cell.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

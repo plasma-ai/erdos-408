@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.PositiveHighSource
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.PositiveHighSource
+
+@[expose] public section
 
 namespace OAI
 

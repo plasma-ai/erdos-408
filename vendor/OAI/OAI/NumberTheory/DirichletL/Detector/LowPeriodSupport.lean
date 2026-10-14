@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowPrimeFamily
-import OAI.NumberTheory.DirichletL.Hecke.RowClosure
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowPrimeFamily
+public import OAI.NumberTheory.DirichletL.Hecke.RowClosure
+
+@[expose] public section
 
 namespace OAI
 

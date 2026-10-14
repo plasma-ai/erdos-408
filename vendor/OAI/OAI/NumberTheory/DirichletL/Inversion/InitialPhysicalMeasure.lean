@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialConjugateEnergy
-import OAI.NumberTheory.DirichletL.Inversion.InitialClippedColumns
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialConjugateEnergy
+public import OAI.NumberTheory.DirichletL.Inversion.InitialClippedColumns
+
+@[expose] public section
 
 namespace OAI
 

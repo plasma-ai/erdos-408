@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.RadialSpectral
-import OAI.NumberTheory.DirichletL.Detector.Transformed
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RadialSpectral
+public import OAI.NumberTheory.DirichletL.Detector.Transformed
+
+@[expose] public section
 
 namespace OAI
 

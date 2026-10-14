@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ChildRows
-import OAI.NumberTheory.DirichletL.Hecke.UnitRows
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ChildRows
+public import OAI.NumberTheory.DirichletL.Hecke.UnitRows
+
+@[expose] public section
 
 namespace OAI
 

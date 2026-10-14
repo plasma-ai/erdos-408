@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailSource
-import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailGeometry
-import OAI.NumberTheory.DirichletL.Descent.FirstWholeMarkedColumns
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailSource
+public import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailGeometry
+public import OAI.NumberTheory.DirichletL.Descent.FirstWholeMarkedColumns
+
+@[expose] public section
 
 namespace OAI
 

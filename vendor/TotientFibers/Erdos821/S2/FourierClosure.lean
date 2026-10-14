@@ -1,7 +1,11 @@
-import Erdos821.S2.ClosedPaths
-import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+module
+
+public import Erdos821.S2.ClosedPaths
+public import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 
 /-! A unit-period Fourier integral enforces return of the physical position. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,7 @@
-import Erdos408.Mertens
+module
+
+public import Erdos408.Mertens
+public import Mathlib.Data.Nat.Prime.Factorial
 
 /-!
 # Integer moments of the additive companion
@@ -16,6 +19,8 @@ prime powers `q^e` with `e ≥ 2` contribute `O(x)` to the first sum and, since
 `O(θ(x) log x + ∑_{q r ≤ x} log q log r) = O(x log x)` in the second, and
 `F q ≤ log q / log 2` bounds every coefficient.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

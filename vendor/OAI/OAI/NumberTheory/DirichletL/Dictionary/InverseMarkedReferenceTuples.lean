@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceDivisors
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceDivisors
+
+@[expose] public section
 
 namespace OAI
 

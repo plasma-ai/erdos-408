@@ -1,4 +1,10 @@
-import OAI.NumberTheory.PrimeGaps.RieszBounds
+module
+
+public import OAI.NumberTheory.PrimeGaps.RieszBounds
+public import Mathlib.Analysis.MellinInversion
+public import Mathlib.Analysis.Real.Pi.Bounds
+
+@[expose] public section
 
 namespace OAI
 

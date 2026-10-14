@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.SignalIdentity
-import OAI.NumberTheory.DirichletL.Hecke.PrimitiveSupremum
-import OAI.NumberTheory.DirichletL.Hecke.Dirichlet
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.SignalIdentity
+public import OAI.NumberTheory.DirichletL.Hecke.PrimitiveSupremum
+public import OAI.NumberTheory.DirichletL.Hecke.Dirichlet
+
+@[expose] public section
 
 namespace OAI
 

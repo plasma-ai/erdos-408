@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadicScaled
-import OAI.NumberTheory.DirichletL.PrimeLogProfile
-import OAI.NumberTheory.DirichletL.Hecke.DyadicTailBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeDyadicScaled
+public import OAI.NumberTheory.DirichletL.PrimeLogProfile
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicTailBudget
+
+@[expose] public section
 
 namespace OAI
 

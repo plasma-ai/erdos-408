@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Major.Mellin.Smooth
-import Mathlib.MeasureTheory.Constructions.BorelSpace.Complex
-import Mathlib.MeasureTheory.Integral.Prod
+module
+
+public import Erdos408.OneSided.Major.Mellin.Smooth
+public import Mathlib.MeasureTheory.Constructions.BorelSpace.Complex
+public import Mathlib.MeasureTheory.Integral.Prod
 
 /-!
 # The Fourier transform on the plane
@@ -14,6 +16,8 @@ supported in the ball `‖(ζ, z)‖ ≤ R` (sup norm), built from the 1-D trans
 * `continuous_ft2`: `ft2 F` is jointly continuous.
 * `ft2_inversion`: `F(ζ, z) = ∫ e(ζ v) ∫ e(z s) ft2 F v s ds dv`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided.Mellin
 

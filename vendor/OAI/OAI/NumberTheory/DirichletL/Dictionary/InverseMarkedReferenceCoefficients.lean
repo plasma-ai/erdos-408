@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedPadding
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedPadding
+
+@[expose] public section
 
 namespace OAI
 

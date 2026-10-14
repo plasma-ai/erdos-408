@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.PrimePools
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.PrimePools
+
+@[expose] public section
 
 namespace OAI
 

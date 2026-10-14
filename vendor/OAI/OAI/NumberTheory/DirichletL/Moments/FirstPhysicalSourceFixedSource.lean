@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedFamily
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceWindowCanonical
-import OAI.NumberTheory.DirichletL.Moments.FirstNonexceptionalPrefactor
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedFamily
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceWindowCanonical
+public import OAI.NumberTheory.DirichletL.Moments.FirstNonexceptionalPrefactor
+
+@[expose] public section
 
 namespace OAI
 

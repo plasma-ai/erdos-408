@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.ReflectedDual
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ReflectedDual
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowSourceScales
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowSourceScales
+
+@[expose] public section
 
 namespace OAI
 

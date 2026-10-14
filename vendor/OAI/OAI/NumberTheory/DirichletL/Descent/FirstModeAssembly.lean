@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstModeColumns
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstModeColumns
+
+@[expose] public section
 
 namespace OAI
 

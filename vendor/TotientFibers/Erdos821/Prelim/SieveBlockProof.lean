@@ -1,6 +1,10 @@
-import Erdos821.Prelim.SievePolynomials
+module
+
+public import Erdos821.Prelim.SievePolynomials
 
 /-! The complete block-sieve field of the P2 interface. -/
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.Structure
+module
+
+public import Erdos821.P3Clean.Structure
 
 /-! The cutoff leaves a finite memory state space, without choosing ordered representatives. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

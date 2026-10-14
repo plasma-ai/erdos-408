@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.HighValuations
-import OAI.NumberTheory.DirichletL.Detector.EulerFinsupp
-import OAI.NumberTheory.DirichletL.Detector.IdealLocalEuler
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighValuations
+public import OAI.NumberTheory.DirichletL.Detector.EulerFinsupp
+public import OAI.NumberTheory.DirichletL.Detector.IdealLocalEuler
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import Erdos821.S2.CycleCounts
-import Erdos821.S2.CycleSigns
+module
+
+public import Erdos821.S2.CycleCounts
+public import Erdos821.S2.CycleSigns
 
 /-! The factorial fibers of the cycle-support map. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

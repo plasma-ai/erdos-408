@@ -1,4 +1,6 @@
-import Erdos408.Analytic.QuasiRH
+module
+
+public import Erdos408.Analytic.QuasiRH
 
 /-!
 # Dirichlet L-functions near the line `re s = 1`
@@ -19,6 +21,8 @@ These are the inputs of the contour shifts in `Erdos408.Analytic.Contracts`,
 as outlined in *The normal order of the number of iterations of Euler's
 function* (Plasma AI, 2026), §6.2. No zero of `L(s, χ)` is located or counted.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

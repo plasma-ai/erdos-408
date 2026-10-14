@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstCommonTransport
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstCommonTransport
+
+@[expose] public section
 
 namespace OAI
 

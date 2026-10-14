@@ -1,6 +1,10 @@
-import Erdos821.S2.SpanLifecycle
+module
+
+public import Erdos821.S2.SpanLifecycle
 
 /-! Prime lifespans are determined by their active and pending occupancies. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

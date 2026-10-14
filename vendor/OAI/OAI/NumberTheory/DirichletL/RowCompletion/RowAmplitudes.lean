@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.ResidualEquivalence
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.ResidualEquivalence
+
+@[expose] public section
 
 namespace OAI
 

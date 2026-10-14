@@ -1,4 +1,9 @@
-import Erdos821.S34.PrimeProducts
+module
+
+public import Erdos821.S34.PrimeProducts
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+
+@[expose] public section
 
 set_option autoImplicit false
 

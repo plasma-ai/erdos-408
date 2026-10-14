@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.DensityTransfer
-import OAI.NumberTheory.DirichletL.Eisenstein.SeedHeight
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.DensityTransfer
+public import OAI.NumberTheory.DirichletL.Eisenstein.SeedHeight
+
+@[expose] public section
 
 namespace OAI
 

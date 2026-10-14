@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicRows
-import OAI.NumberTheory.DirichletL.Moments.FirstAnnularMajorant
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceCommonBound
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicRows
+public import OAI.NumberTheory.DirichletL.Moments.FirstAnnularMajorant
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceCommonBound
+
+@[expose] public section
 
 namespace OAI
 

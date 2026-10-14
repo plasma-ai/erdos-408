@@ -1,5 +1,9 @@
-import Erdos821.S2.MemoryGhost
-import Erdos821.Blueprint.Graph
+module
+
+public import Erdos821.S2.MemoryGhost
+public import Erdos821.Blueprint.Graph
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

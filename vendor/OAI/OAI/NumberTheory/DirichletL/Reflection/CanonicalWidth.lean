@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalPool
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalPool
+
+@[expose] public section
 
 namespace OAI
 

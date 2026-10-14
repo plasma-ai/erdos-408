@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeCounting.Progressions
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeCounting.Progressions
+
+@[expose] public section
 
 namespace OAI
 

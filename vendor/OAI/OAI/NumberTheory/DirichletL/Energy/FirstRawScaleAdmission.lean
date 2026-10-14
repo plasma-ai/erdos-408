@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstChildLower
-import OAI.NumberTheory.DirichletL.Energy.AmplifiedRayDictionary
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstChildLower
+public import OAI.NumberTheory.DirichletL.Energy.AmplifiedRayDictionary
+
+@[expose] public section
 
 namespace OAI
 

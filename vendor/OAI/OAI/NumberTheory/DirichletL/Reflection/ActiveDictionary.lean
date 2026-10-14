@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.MarkedActiveSets
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedActiveSets
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.SourcePhysical
-import OAI.NumberTheory.DirichletL.Reflection.OriginalActiveReflection
-import OAI.NumberTheory.DirichletL.Reflection.FixedLevel
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.SourcePhysical
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalActiveReflection
+public import OAI.NumberTheory.DirichletL.Reflection.FixedLevel
+
+@[expose] public section
 
 namespace OAI
 

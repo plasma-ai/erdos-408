@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceSlots
-import OAI.NumberTheory.DirichletL.Moments.SlotNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceSlots
+public import OAI.NumberTheory.DirichletL.Moments.SlotNormalization
+
+@[expose] public section
 
 namespace OAI
 

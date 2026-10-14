@@ -1,8 +1,12 @@
-import Mathlib.Analysis.SpecialFunctions.Pow.Deriv
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Analysis.Calculus.FDeriv.Mul
-import Mathlib.Tactic.Positivity
-import Mathlib.Tactic.Linarith
+module
+
+public import Mathlib.Analysis.SpecialFunctions.Pow.Deriv
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+public import Mathlib.Analysis.Calculus.FDeriv.Mul
+public import Mathlib.Tactic.Positivity
+public import Mathlib.Tactic.Linarith
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstCanonicalPhysical
-import OAI.NumberTheory.DirichletL.Descent.FirstPhysicalCutoff
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstCanonicalPhysical
+public import OAI.NumberTheory.DirichletL.Descent.FirstPhysicalCutoff
+
+@[expose] public section
 
 namespace OAI
 

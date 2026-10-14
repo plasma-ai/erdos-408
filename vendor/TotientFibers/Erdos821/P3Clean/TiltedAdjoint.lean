@@ -1,8 +1,12 @@
-import Erdos821.P3Clean.TiltedComparison
-import Erdos821.P3Clean.Adjoint
-import Erdos821.P3Clean.MassPositivity
+module
+
+public import Erdos821.P3Clean.TiltedComparison
+public import Erdos821.P3Clean.Adjoint
+public import Erdos821.P3Clean.MassPositivity
 
 /-! The backward signed big kernel is the weighted adjoint at opposite frequency. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

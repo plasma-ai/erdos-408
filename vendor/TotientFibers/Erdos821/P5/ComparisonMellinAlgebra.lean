@@ -1,5 +1,9 @@
-import Erdos821.P5.ComparisonCellScales
-import Erdos821.P5.MellinPatternIntegral
+module
+
+public import Erdos821.P5.ComparisonCellScales
+public import Erdos821.P5.MellinPatternIntegral
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

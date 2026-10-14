@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.AllocatedChildCapacity
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedChildCapacity
+
+@[expose] public section
 
 namespace OAI
 

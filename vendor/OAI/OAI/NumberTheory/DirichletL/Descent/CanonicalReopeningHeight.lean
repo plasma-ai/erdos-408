@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.DescentHeight
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongSource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.DescentHeight
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongSource
+
+@[expose] public section
 
 namespace OAI
 

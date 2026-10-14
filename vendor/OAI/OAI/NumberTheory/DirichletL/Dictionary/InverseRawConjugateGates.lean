@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawInitialGates
-import OAI.NumberTheory.DirichletL.Inversion.InitialProfileBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawInitialGates
+public import OAI.NumberTheory.DirichletL.Inversion.InitialProfileBounds
+
+@[expose] public section
 
 namespace OAI
 

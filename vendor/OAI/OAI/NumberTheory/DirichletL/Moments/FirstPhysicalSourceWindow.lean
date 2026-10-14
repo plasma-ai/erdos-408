@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceOriginalColumn
-import OAI.NumberTheory.DirichletL.Moments.HeckeWindowEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceOriginalColumn
+public import OAI.NumberTheory.DirichletL.Moments.HeckeWindowEnergy
+
+@[expose] public section
 
 namespace OAI
 

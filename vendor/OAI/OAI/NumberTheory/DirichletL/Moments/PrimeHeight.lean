@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.PrimeGlobal
-import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PrimeGlobal
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
+
+@[expose] public section
 
 namespace OAI
 

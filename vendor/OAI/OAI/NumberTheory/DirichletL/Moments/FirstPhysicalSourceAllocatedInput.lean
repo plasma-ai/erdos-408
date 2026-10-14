@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedEnergy
-import OAI.NumberTheory.DirichletL.Moments.FirstAllocationGaussEnergy
-import OAI.NumberTheory.DirichletL.Moments.FirstMaskedInput
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedEnergy
+public import OAI.NumberTheory.DirichletL.Moments.FirstAllocationGaussEnergy
+public import OAI.NumberTheory.DirichletL.Moments.FirstMaskedInput
+
+@[expose] public section
 
 namespace OAI
 

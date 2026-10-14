@@ -1,6 +1,8 @@
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.LinearAlgebra.Matrix.ConjTranspose
+module
+
+public import Mathlib.Analysis.Complex.Basic
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.LinearAlgebra.Matrix.ConjTranspose
 
 /-!
 # Cells, compression and spectral Hölder
@@ -19,6 +21,8 @@ arbitrary complex matrix `A` on a finite index type, with the unnormalized inner
   `|⟨f, A f⟩|^{2R} ≤ (2w + 1)^R ‖f‖^{2(2R - 1)} N sup|f|² ∑_P ⟨u_P, B^R u_P⟩`, where `N`
   bounds the number of positions in a cell.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

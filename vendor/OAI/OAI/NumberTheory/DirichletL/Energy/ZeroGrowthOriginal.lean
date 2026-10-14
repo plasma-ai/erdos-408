@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthBounded
-import OAI.NumberTheory.DirichletL.Energy.ZeroRetainedError
-import OAI.NumberTheory.DirichletL.Energy.ReferenceDeletionEnergy
-import OAI.NumberTheory.DirichletL.Energy.ReferenceProfileBudget
-import OAI.NumberTheory.DirichletL.Energy.LiveClippingDefect
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthBounded
+public import OAI.NumberTheory.DirichletL.Energy.ZeroRetainedError
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceDeletionEnergy
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceProfileBudget
+public import OAI.NumberTheory.DirichletL.Energy.LiveClippingDefect
+
+@[expose] public section
 
 namespace OAI
 

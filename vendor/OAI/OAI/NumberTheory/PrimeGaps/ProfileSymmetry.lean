@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.WeightMoments
+module
+
+public import OAI.NumberTheory.PrimeGaps.WeightMoments
+
+@[expose] public section
 
 namespace OAI
 

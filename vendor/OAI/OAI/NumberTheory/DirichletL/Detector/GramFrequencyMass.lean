@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.GramWeightedFrequency
-import OAI.NumberTheory.DirichletL.Detector.GramCanonicalTrivial
-import OAI.NumberTheory.DirichletL.Detector.GramFrequencySummation
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramWeightedFrequency
+public import OAI.NumberTheory.DirichletL.Detector.GramCanonicalTrivial
+public import OAI.NumberTheory.DirichletL.Detector.GramFrequencySummation
+
+@[expose] public section
 
 namespace OAI
 

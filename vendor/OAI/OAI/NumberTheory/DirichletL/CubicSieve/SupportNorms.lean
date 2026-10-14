@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.SmoothSummands
-import OAI.NumberTheory.DirichletL.Poisson.LatticeEnvelopes
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.SmoothSummands
+public import OAI.NumberTheory.DirichletL.Poisson.LatticeEnvelopes
+
+@[expose] public section
 
 namespace OAI
 

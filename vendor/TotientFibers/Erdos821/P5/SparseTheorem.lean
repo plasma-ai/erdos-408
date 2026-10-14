@@ -1,5 +1,9 @@
-import Erdos821.P5.SparseResidual
-import Erdos821.P5Gram.Bridge
+module
+
+public import Erdos821.P5.SparseResidual
+public import Erdos821.P5Gram.Bridge
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

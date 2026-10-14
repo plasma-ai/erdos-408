@@ -1,4 +1,9 @@
-import Erdos821.S2Empty.SmallFactor
+module
+
+public import Erdos821.S2Empty.SmallFactor
+public import Mathlib.Algebra.Order.Star.Real
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

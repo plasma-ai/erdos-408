@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalRankMoments
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalRankMoments
+
+@[expose] public section
 
 namespace OAI
 

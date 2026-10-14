@@ -1,4 +1,8 @@
-import Erdos821.P5.MellinFamilySum
+module
+
+public import Erdos821.P5.MellinFamilySum
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

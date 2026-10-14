@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawInputBound
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawInitialEnergy
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawInput
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawRealRadial
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawCompact
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawInputBound
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawInitialEnergy
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawInput
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawRealRadial
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawCompact
+
+@[expose] public section
 
 namespace OAI
 

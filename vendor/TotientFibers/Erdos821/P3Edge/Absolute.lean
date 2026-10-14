@@ -1,6 +1,10 @@
-import Erdos821.P3Edge.CoeffBound
-import Erdos821.P3Edge.NormOsc
-import Erdos821.P3Edge.LargeX
+module
+
+public import Erdos821.P3Edge.CoeffBound
+public import Erdos821.P3Edge.NormOsc
+public import Erdos821.P3Edge.LargeX
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

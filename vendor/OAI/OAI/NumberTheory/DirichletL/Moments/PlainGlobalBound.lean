@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DyadicReflectedControl
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicReflectedControl
+
+@[expose] public section
 
 namespace OAI
 

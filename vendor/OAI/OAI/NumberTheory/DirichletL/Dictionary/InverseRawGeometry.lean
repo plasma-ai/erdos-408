@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialCanonicalState
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRaw
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialCanonicalState
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRaw
+
+@[expose] public section
 
 namespace OAI
 

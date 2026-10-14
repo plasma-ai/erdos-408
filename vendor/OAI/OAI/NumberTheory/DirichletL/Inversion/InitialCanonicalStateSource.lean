@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialCanonicalState
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialCanonicalState
+
+@[expose] public section
 
 namespace OAI
 

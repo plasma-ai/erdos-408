@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondBlockHarmonicMass
-import OAI.NumberTheory.DirichletL.Moments.CommonRadicalHarmonicMass
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondBlockHarmonicMass
+public import OAI.NumberTheory.DirichletL.Moments.CommonRadicalHarmonicMass
+
+@[expose] public section
 
 namespace OAI
 

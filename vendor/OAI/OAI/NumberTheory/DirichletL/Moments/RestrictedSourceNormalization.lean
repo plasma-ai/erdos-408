@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RestrictedSource
-import OAI.NumberTheory.DirichletL.Moments.CommonRawCost
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RestrictedSource
+public import OAI.NumberTheory.DirichletL.Moments.CommonRawCost
+
+@[expose] public section
 
 namespace OAI
 

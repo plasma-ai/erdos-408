@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalPair
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalKernel
-import OAI.NumberTheory.DirichletL.Moments.SecondDivisorSupport
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPhysicalPair
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalKernel
+public import OAI.NumberTheory.DirichletL.Moments.SecondDivisorSupport
+
+@[expose] public section
 
 namespace OAI
 

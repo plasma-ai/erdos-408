@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedUnramified
-import OAI.NumberTheory.DirichletL.Detector.SelectedPrimeSums
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedUnramified
+public import OAI.NumberTheory.DirichletL.Detector.SelectedPrimeSums
+
+@[expose] public section
 
 namespace OAI
 

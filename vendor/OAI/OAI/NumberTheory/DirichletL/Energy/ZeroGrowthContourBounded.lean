@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthConclusion
-import OAI.NumberTheory.DirichletL.Energy.BackwardSourceRanges
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroGrowthConclusion
+public import OAI.NumberTheory.DirichletL.Energy.BackwardSourceRanges
+
+@[expose] public section
 
 namespace OAI
 

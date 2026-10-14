@@ -1,12 +1,16 @@
-import Mathlib.NumberTheory.MulChar.Basic
-import Mathlib.Basic.NNReal.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow.Complex
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.Positivity
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Algebra.Group.Commute.Units
+module
+
+public import Mathlib.NumberTheory.MulChar.Basic
+public import Mathlib.Basic.NNReal.Basic
+public import Mathlib.Analysis.SpecialFunctions.Pow.Complex
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Ring
+public import Mathlib.Tactic.Positivity
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Algebra.Group.Commute.Units
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.Hecke.Family
-import OAI.NumberTheory.DirichletL.Detector.Completed
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.Hecke.Family
+public import OAI.NumberTheory.DirichletL.Detector.Completed
+
+@[expose] public section
 
 namespace OAI
 

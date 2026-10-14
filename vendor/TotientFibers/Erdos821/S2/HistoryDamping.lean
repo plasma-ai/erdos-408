@@ -1,6 +1,10 @@
-import Erdos821.S2.MemoryIndices
+module
+
+public import Erdos821.S2.MemoryIndices
 
 /-! The inserted memory damping parameter cancels over every valid history. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

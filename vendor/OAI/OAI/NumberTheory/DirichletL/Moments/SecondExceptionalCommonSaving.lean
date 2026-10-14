@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalPhysicalSaving
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalPhysicalSaving
+
+@[expose] public section
 
 namespace OAI
 

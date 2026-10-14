@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.PoolArithmetic
-import OAI.NumberTheory.DirichletL.Inversion.TerminalWidths
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.PoolArithmetic
+public import OAI.NumberTheory.DirichletL.Inversion.TerminalWidths
+
+@[expose] public section
 
 namespace OAI
 

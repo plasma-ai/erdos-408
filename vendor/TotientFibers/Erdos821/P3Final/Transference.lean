@@ -1,16 +1,20 @@
-import Erdos821.S2.ConcreteTransference
-import Erdos821.S2Empty.Final
-import Erdos821.P3High.Final
-import Erdos821.S2Full.FullMemoryNorm
-import Erdos821.S2Hist.HistoryReconstruction
-import Erdos821.S2Resid.ResidueFactorization
-import Erdos821.P3Phys.PhysicalPathExpansion
-import Erdos821.S2Root.AbsoluteClosedRootProof
-import Erdos821.P3.ResidueReplacement
-import Erdos821.S2Packet.AbsolutePhysicalPacket
-import Erdos821.S2Ltrans.TransferenceAssembly
+module
+
+public import Erdos821.S2.ConcreteTransference
+public import Erdos821.S2Empty.Final
+public import Erdos821.P3High.Final
+public import Erdos821.S2Full.FullMemoryNorm
+public import Erdos821.S2Hist.HistoryReconstruction
+public import Erdos821.S2Resid.ResidueFactorization
+public import Erdos821.P3Phys.PhysicalPathExpansion
+public import Erdos821.S2Root.AbsoluteClosedRootProof
+public import Erdos821.P3.ResidueReplacement
+public import Erdos821.S2Packet.AbsolutePhysicalPacket
+public import Erdos821.S2Ltrans.TransferenceAssembly
 
 /-! P3 assembled from all accepted task proofs; only the rare-edge task remains an input. -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,8 +1,10 @@
-import Erdos408.OneSided.Moment.Chain
-import Erdos408.OneSided.Moment.Edge.Measure
-import Erdos408.OneSided.Moment.Edge.Clean
-import Erdos408.OneSided.Moment.Edge.DirtyRaw
-import Erdos408.OneSided.Moment.Edge.DirtyComp
+module
+
+public import Erdos408.OneSided.Moment.Chain
+public import Erdos408.OneSided.Moment.Edge.Measure
+public import Erdos408.OneSided.Moment.Edge.Clean
+public import Erdos408.OneSided.Moment.Edge.DirtyRaw
+public import Erdos408.OneSided.Moment.Edge.DirtyComp
 
 /-!
 # The signed edge bound
@@ -23,6 +25,8 @@ edge choices by the set `S` of stored groups and the set `I` of promoted groups:
 There are at most `4^K` dirty pieces, so `‖ℰ‖ ≤ L^{-G}` (`eventually_chainEdge_normLe_of_parts`,
 which gives M9 in `Moment/Phased.lean`).
 -/
+
+@[expose] public section
 
 noncomputable section
 

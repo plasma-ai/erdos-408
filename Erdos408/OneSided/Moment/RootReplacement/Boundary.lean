@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Moment.RootReplacement.Tube
-import Erdos408.OneSided.Moment.RootReplacement.Grid
-import Erdos408.OneSided.Moment.RootReplacement.BoundaryCount
+module
+
+public import Erdos408.OneSided.Moment.RootReplacement.Tube
+public import Erdos408.OneSided.Moment.RootReplacement.Grid
+public import Erdos408.OneSided.Moment.RootReplacement.BoundaryCount
 
 /-!
 # Boundary cubes
@@ -23,6 +25,8 @@ in `BoundaryCount.lean`; here a bad cube is traced to one visit (`badCubes_subse
 counts are summed over the `N + 1` visits, with the sizes of `det:tube` (`tube_of_live`,
 `confCoeff_ne_zero_imp`).
 -/
+
+@[expose] public section
 
 noncomputable section
 

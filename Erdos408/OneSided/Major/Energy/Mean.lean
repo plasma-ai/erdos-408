@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Analysis.Divisor
+module
+
+public import Erdos408.OneSided.Analysis.Divisor
 
 /-!
 # The mean value of a product of two Dirichlet polynomials
@@ -9,6 +11,8 @@ is the Dirichlet polynomial of length `N = N₁ N₂` with coefficients
 `c_l = ∑_{mn = l} u_m v_n`. If `|u_m| ≤ U` and `|v_n| ≤ V`, then `|c_l| ≤ U V τ(l)`, and PD
 Lemma 2.2 gives `∫_a^b |·|² ≤ (b - a + 8N(1 + log N)) U² V² N (1 + log N)³`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

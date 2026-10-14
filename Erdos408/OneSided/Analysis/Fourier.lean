@@ -1,7 +1,11 @@
-import Mathlib.Analysis.Fourier.FourierTransformDeriv
-import Mathlib.Analysis.Fourier.Inversion
-import Mathlib.Analysis.Calculus.IteratedDeriv.Defs
-import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
+module
+
+public import Mathlib.Analysis.Fourier.FourierTransformDeriv
+public import Mathlib.Analysis.Fourier.Inversion
+public import Mathlib.Analysis.Calculus.IteratedDeriv.Defs
+public import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Classes
 
 /-!
 # Fourier transforms of smooth cutoffs
@@ -20,6 +24,8 @@ The transform is `ft f ξ = ∫ e(-x ξ) f(x) dx`, with `e(t) = exp(2πi t)`, wh
   `∫ |ft f| ≤ 4 R (M₀ + M₂)`.
 * `ft_inversion`: `f(x) = ∫ e(x ξ) ft f ξ dξ`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

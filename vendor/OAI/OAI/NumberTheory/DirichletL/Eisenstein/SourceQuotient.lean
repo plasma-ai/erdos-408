@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.SourceProjection
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.SourceProjection
+
+@[expose] public section
 
 namespace OAI
 

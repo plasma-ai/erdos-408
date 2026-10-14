@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.WeightedSourceSum
-import OAI.NumberTheory.DirichletL.Descent.CommonMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.WeightedSourceSum
+public import OAI.NumberTheory.DirichletL.Descent.CommonMeasure
+
+@[expose] public section
 
 namespace OAI
 

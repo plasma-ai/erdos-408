@@ -1,9 +1,13 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredEnergy
-import OAI.NumberTheory.DirichletL.Descent.PriorityRetainedMovingRadiusWindowOrderUniform
-import OAI.NumberTheory.DirichletL.Descent.PriorityRetainedMovingRadiusWindowOrder
-import OAI.NumberTheory.DirichletL.Descent.GlobalRetainedGatesGeometry
-import OAI.NumberTheory.DirichletL.Descent.GlobalPrioritySource
-import OAI.NumberTheory.DirichletL.Inversion.WholePriorityRetainedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredEnergy
+public import OAI.NumberTheory.DirichletL.Descent.PriorityRetainedMovingRadiusWindowOrderUniform
+public import OAI.NumberTheory.DirichletL.Descent.PriorityRetainedMovingRadiusWindowOrder
+public import OAI.NumberTheory.DirichletL.Descent.GlobalRetainedGatesGeometry
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPrioritySource
+public import OAI.NumberTheory.DirichletL.Inversion.WholePriorityRetainedSource
+
+@[expose] public section
 
 namespace OAI
 

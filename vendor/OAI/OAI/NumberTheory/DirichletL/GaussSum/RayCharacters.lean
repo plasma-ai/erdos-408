@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.CompletedExpansion
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.CompletedExpansion
+
+@[expose] public section
 
 namespace OAI
 

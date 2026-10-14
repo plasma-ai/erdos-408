@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.TailScales
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.TailScales
+
+@[expose] public section
 
 namespace OAI
 

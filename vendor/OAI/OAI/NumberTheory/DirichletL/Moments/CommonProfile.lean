@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonPrimeSlots
-import OAI.NumberTheory.DirichletL.Moments.SourceProfileMass
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonPrimeSlots
+public import OAI.NumberTheory.DirichletL.Moments.SourceProfileMass
+
+@[expose] public section
 
 namespace OAI
 

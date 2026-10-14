@@ -1,4 +1,8 @@
-import Erdos821.P5.ComparisonEnergyTransport
+module
+
+public import Erdos821.P5.ComparisonEnergyTransport
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

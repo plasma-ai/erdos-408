@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.MaskedVolume
-import OAI.NumberTheory.DirichletL.CenteredExceptionalProfile
-import OAI.NumberTheory.DirichletL.Hecke.Euler
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalPair
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.MaskedVolume
+public import OAI.NumberTheory.DirichletL.CenteredExceptionalProfile
+public import OAI.NumberTheory.DirichletL.Hecke.Euler
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalPair
+
+@[expose] public section
 
 namespace OAI
 

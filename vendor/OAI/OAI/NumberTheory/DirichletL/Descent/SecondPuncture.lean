@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondSquarefree
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondSquarefree
+
+@[expose] public section
 
 namespace OAI
 

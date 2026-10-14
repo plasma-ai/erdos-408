@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Defs
-import Erdos408.Mertens
+module
+
+public import Erdos408.Extraction.Defs
+public import Erdos408.Mertens
 
 /-!
 # Supporting estimates for the smoothed rectangle statistic
@@ -17,6 +19,8 @@ The elementary inputs of steps E0 and E11.
   `∏_{p ≤ y} (1 - 1/p) ≪ 1 / log y`, and the block mass bound
   `∑_{w < p ≤ w²} 1 / p = O(1)` required by `BlockSieve`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

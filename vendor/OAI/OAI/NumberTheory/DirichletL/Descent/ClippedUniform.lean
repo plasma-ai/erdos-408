@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.ClippedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ClippedEnergy
+
+@[expose] public section
 
 namespace OAI
 

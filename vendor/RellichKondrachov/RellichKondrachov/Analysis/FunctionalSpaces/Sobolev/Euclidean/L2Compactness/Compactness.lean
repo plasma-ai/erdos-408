@@ -4,11 +4,13 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
 
-import RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.L2Compactness.Smoothing
-import Mathlib.MeasureTheory.Function.LpSeminorm.CompareExp
-import Mathlib.MeasureTheory.Measure.Typeclasses.Finite
-import Mathlib.Topology.Algebra.Monoid
-import Mathlib.Topology.UniformSpace.HeineCantor
+module
+
+public import RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.L2Compactness.Smoothing
+public import Mathlib.MeasureTheory.Function.LpSeminorm.CompareExp
+public import Mathlib.MeasureTheory.Measure.Typeclasses.Finite
+public import Mathlib.Topology.Algebra.Monoid
+public import Mathlib.Topology.UniformSpace.HeineCantor
 
 /-!
 # `L²` compactness criterion: compact smoothing operator (Euclidean)
@@ -27,6 +29,8 @@ The Arzelà–Ascoli compactness statement for `smoothBCF` lives in
 
 This is tracked under Beads `lean-103.5.2.26.5.3.2.2.1`.
 -/
+
+@[expose] public section
 
 namespace RellichKondrachov
 namespace Analysis

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalRetainedEnergy
-import OAI.NumberTheory.DirichletL.Moments.OriginalReflectionEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalRetainedEnergy
+public import OAI.NumberTheory.DirichletL.Moments.OriginalReflectionEnergy
+
+@[expose] public section
 
 namespace OAI
 

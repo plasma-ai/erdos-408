@@ -1,5 +1,11 @@
-import Mathlib
-import Erdos821.Blueprint.Classical
+module
+
+public import Erdos821.Blueprint.Classical
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
+public import Mathlib.Topology.UniformSpace.Uniformizable
+
+@[expose] public section
 
 open MeasureTheory Filter
 open scoped FourierTransform SchwartzMap ContDiff

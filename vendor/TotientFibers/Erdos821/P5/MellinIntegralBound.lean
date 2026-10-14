@@ -1,5 +1,9 @@
-import Erdos821.P5.DyadicAbsoluteBound
-import Erdos821.P5.ResidualFamilyMainBound
+module
+
+public import Erdos821.P5.DyadicAbsoluteBound
+public import Erdos821.P5.ResidualFamilyMainBound
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

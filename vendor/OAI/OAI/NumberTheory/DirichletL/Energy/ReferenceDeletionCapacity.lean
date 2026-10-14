@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceDeletionBudget
-import OAI.NumberTheory.DirichletL.Energy.ReferenceState
-import OAI.NumberTheory.DirichletL.Energy.Bands
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceDeletionBudget
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceState
+public import OAI.NumberTheory.DirichletL.Energy.Bands
+
+@[expose] public section
 
 namespace OAI
 

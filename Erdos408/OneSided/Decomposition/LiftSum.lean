@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Decomposition.Lists
-import Erdos408.OneSided.Decomposition.Pair
+module
+
+public import Erdos408.OneSided.Decomposition.Lists
+public import Erdos408.OneSided.Decomposition.Pair
 
 /-!
 # The lift identity
@@ -18,6 +20,8 @@ the terms of the pad dyad `[2^k, 2^{k+1})` containing `D` with those of
 * `P` and `Q` are primitive: a common prime of `m` and `s` exceeds `W ≥ 5Y > |t|` and
   divides `t ≠ 0`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

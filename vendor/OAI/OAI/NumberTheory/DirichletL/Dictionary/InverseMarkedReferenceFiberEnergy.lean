@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceDeletedEnergy
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedPhysicalRows
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceDeletedEnergy
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedPhysicalRows
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonRadialSource
-import OAI.NumberTheory.DirichletL.Moments.CommonRadialCost
-import OAI.NumberTheory.DirichletL.Moments.RadialPointwiseUniform
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonRadialSource
+public import OAI.NumberTheory.DirichletL.Moments.CommonRadialCost
+public import OAI.NumberTheory.DirichletL.Moments.RadialPointwiseUniform
+
+@[expose] public section
 
 namespace OAI
 

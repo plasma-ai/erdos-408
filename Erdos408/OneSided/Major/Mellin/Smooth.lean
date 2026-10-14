@@ -1,5 +1,8 @@
-import Erdos408.OneSided.Analysis.Fourier
-import Erdos408.OneSided.Setup
+module
+
+public import Erdos408.OneSided.Analysis.Fourier
+public import Erdos408.OneSided.Setup
+public import Mathlib.Analysis.Calculus.ContDiff.Bounds
 
 /-!
 # Derivative bounds for the Mellin kernels
@@ -14,6 +17,8 @@ Tools for bounding iterated derivatives of the smooth kernels in
   `i` derivatives of `φ` are bounded by `P`.
 * `contDiff_plateau`: the plateau `ψ` is smooth.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided.Mellin
 

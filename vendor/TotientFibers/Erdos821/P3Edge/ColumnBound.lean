@@ -1,6 +1,10 @@
-import Erdos821.P3Edge.RowBound
-import Erdos821.P3Edge.ColReversal
-import Erdos821.P3Edge.ColSummable
+module
+
+public import Erdos821.P3Edge.RowBound
+public import Erdos821.P3Edge.ColReversal
+public import Erdos821.P3Edge.ColSummable
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

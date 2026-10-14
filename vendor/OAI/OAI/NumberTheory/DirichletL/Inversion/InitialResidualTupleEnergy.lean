@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialOriginalHeight
-import OAI.NumberTheory.DirichletL.Inversion.InitialInputReindex
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedFourier
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialOriginalHeight
+public import OAI.NumberTheory.DirichletL.Inversion.InitialInputReindex
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedFourier
+
+@[expose] public section
 
 namespace OAI
 

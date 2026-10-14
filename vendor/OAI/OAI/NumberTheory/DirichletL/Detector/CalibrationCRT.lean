@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPoisson
-import OAI.NumberTheory.DirichletL.Detector.CalibrationFourier
-import OAI.NumberTheory.DirichletL.Detector.PhysicalCoefficient
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPoisson
+public import OAI.NumberTheory.DirichletL.Detector.CalibrationFourier
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalCoefficient
+
+@[expose] public section
 
 namespace OAI
 

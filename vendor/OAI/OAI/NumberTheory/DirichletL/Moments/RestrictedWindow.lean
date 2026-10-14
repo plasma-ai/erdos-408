@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.PlainWindowEnergy
-import OAI.NumberTheory.DirichletL.Moments.RestrictedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PlainWindowEnergy
+public import OAI.NumberTheory.DirichletL.Moments.RestrictedEnergy
+
+@[expose] public section
 
 namespace OAI
 

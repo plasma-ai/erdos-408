@@ -1,10 +1,16 @@
-import Erdos821.Blueprint.Graph
+module
+
+public import Erdos821.Blueprint.Graph
+public import Mathlib.Algebra.BigOperators.Field
+public import Mathlib.RingTheory.SimpleRing.Principal
 
 /-! A birth event is an average of products of local modulus-at-most-one multipliers.
 
 Each block keeps a pivot; every other address of the block carries an additive character
 of `Fin Q`, and the pivot carries the opposite total frequency.  The performed indicator
 multiplies each local phase.  Distinct blocks use independent frequency families. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

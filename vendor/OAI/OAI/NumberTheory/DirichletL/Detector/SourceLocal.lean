@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.SpectralWeights
-import OAI.NumberTheory.DirichletL.Detector.ZeroIndex
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SpectralWeights
+public import OAI.NumberTheory.DirichletL.Detector.ZeroIndex
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondWholeTail
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondWholeTail
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstDivisorCommonBound
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedWindow
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstDivisorCommonBound
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedWindow
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.PartitionNorm
-import OAI.NumberTheory.DirichletL.Moments.Forcing
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PartitionNorm
+public import OAI.NumberTheory.DirichletL.Moments.Forcing
+
+@[expose] public section
 
 namespace OAI
 

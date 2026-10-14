@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ReopenedPhysicalSplit
-import OAI.NumberTheory.DirichletL.Descent.FirstGlobalPush
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ReopenedPhysicalSplit
+public import OAI.NumberTheory.DirichletL.Descent.FirstGlobalPush
+
+@[expose] public section
 
 namespace OAI
 

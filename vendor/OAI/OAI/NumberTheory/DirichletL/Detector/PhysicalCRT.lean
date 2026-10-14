@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.CalibrationRemoval
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CalibrationRemoval
+
+@[expose] public section
 
 namespace OAI
 

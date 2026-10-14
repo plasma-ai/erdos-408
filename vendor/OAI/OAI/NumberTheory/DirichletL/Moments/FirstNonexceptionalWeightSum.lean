@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstNonexceptionalPrefactor
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicCount
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstNonexceptionalPrefactor
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicCount
+
+@[expose] public section
 
 namespace OAI
 

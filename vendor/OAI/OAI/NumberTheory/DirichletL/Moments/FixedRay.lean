@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SupportedCorrelation
-import OAI.NumberTheory.DirichletL.Moments.Primary
-import OAI.NumberTheory.DirichletL.Hecke.RowClosure
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SupportedCorrelation
+public import OAI.NumberTheory.DirichletL.Moments.Primary
+public import OAI.NumberTheory.DirichletL.Hecke.RowClosure
+
+@[expose] public section
 
 namespace OAI
 

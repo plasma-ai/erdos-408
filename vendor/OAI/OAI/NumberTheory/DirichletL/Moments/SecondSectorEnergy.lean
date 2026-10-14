@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSectorChildren
-import OAI.NumberTheory.DirichletL.Moments.RestrictedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSectorChildren
+public import OAI.NumberTheory.DirichletL.Moments.RestrictedSource
+
+@[expose] public section
 
 namespace OAI
 

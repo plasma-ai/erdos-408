@@ -1,5 +1,11 @@
-import Erdos821.S2.AnalyticParametersTasks
-import Erdos821.S2Empty.FiniteProducts
+module
+
+public import Erdos821.S2.AnalyticParametersTasks
+public import Erdos821.S2Empty.FiniteProducts
+public import Mathlib.Algebra.Ring.IsFormallyReal
+public import Mathlib.Tactic.Positivity.Finset
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

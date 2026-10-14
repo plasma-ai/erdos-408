@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.CalibrationRemoval
-import OAI.NumberTheory.DirichletL.Detector.ScalarTable
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CalibrationRemoval
+public import OAI.NumberTheory.DirichletL.Detector.ScalarTable
+
+@[expose] public section
 
 namespace OAI
 

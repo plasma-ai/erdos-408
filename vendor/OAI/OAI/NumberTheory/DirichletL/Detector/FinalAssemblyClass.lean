@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorClass
-import OAI.NumberTheory.DirichletL.Detector.FinalAssemblySourceCount
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorClass
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssemblySourceCount
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalAsymmetricSource
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalCanonicalShell
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalAsymmetricSource
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalCanonicalShell
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import Erdos821.P5.SharedProbability
+module
+
+public import Erdos821.P5.SharedProbability
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

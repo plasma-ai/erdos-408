@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.DivisorRectangle
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DivisorRectangle
+
+@[expose] public section
 
 namespace OAI
 

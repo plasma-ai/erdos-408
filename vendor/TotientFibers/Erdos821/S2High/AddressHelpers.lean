@@ -1,4 +1,8 @@
-import Erdos821.S2High.PivotMoments
+module
+
+public import Erdos821.S2High.PivotMoments
+
+@[expose] public section
 
 noncomputable section
 

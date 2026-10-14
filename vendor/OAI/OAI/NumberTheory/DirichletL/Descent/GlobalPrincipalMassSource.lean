@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalPrincipalMassWeighted
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPrincipalMassWeighted
+
+@[expose] public section
 
 namespace OAI
 

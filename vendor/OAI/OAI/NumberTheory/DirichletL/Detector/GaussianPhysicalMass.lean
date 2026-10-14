@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianPhysicalTail
-import OAI.NumberTheory.DirichletL.Detector.PhysicalCrudeMass
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianPhysicalTail
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalCrudeMass
+
+@[expose] public section
 
 namespace OAI
 

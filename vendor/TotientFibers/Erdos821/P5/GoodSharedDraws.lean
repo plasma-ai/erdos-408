@@ -1,4 +1,8 @@
-import Erdos821.P5.LabelSplit
+module
+
+public import Erdos821.P5.LabelSplit
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

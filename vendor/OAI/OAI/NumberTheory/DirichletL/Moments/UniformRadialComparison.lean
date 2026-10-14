@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.UniformOriginalComparison
-import OAI.NumberTheory.DirichletL.Moments.OriginalRadialComparison
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.UniformOriginalComparison
+public import OAI.NumberTheory.DirichletL.Moments.OriginalRadialComparison
+
+@[expose] public section
 
 namespace OAI
 

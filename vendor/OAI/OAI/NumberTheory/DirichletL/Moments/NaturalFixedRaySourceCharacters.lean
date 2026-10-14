@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalRowSourceDictionary
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryRelativeSlots
-import OAI.NumberTheory.DirichletL.Moments.FixedRayInducingTransport
-import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalRowSourceDictionary
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryRelativeSlots
+public import OAI.NumberTheory.DirichletL.Moments.FixedRayInducingTransport
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
+
+@[expose] public section
 
 namespace OAI
 

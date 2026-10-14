@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.CoprimeBilinearBound
-import OAI.NumberTheory.DirichletL.CubicSieve.RayExpansion
-import OAI.NumberTheory.DirichletL.GaussSum.ReflectionBrackets
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.CoprimeBilinearBound
+public import OAI.NumberTheory.DirichletL.CubicSieve.RayExpansion
+public import OAI.NumberTheory.DirichletL.GaussSum.ReflectionBrackets
+
+@[expose] public section
 
 namespace OAI
 

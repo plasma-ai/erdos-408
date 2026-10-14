@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.TailAbsorption
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.TailAbsorption
+
+@[expose] public section
 
 namespace OAI
 

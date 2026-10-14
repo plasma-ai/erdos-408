@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonAllocationSum
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonAllocationSum
+
+@[expose] public section
 
 namespace OAI
 

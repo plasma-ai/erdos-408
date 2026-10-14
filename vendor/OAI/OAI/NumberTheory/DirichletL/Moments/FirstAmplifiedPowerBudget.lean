@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAnnularActiveInput
-import OAI.NumberTheory.DirichletL.Moments.AmplificationRadicalChoice
-import OAI.NumberTheory.DirichletL.Moments.FirstErrorAllocationPower
-import OAI.NumberTheory.DirichletL.Moments.FirstAnnularInputAmplification
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAnnularActiveInput
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationRadicalChoice
+public import OAI.NumberTheory.DirichletL.Moments.FirstErrorAllocationPower
+public import OAI.NumberTheory.DirichletL.Moments.FirstAnnularInputAmplification
+
+@[expose] public section
 
 namespace OAI
 

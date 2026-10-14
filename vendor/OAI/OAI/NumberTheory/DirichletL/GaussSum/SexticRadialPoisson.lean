@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Poisson.EisensteinLattice
+module
+
+public import OAI.NumberTheory.DirichletL.Poisson.EisensteinLattice
+
+@[expose] public section
 
 namespace OAI
 

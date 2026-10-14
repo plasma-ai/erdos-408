@@ -1,6 +1,8 @@
-import Erdos408.Basic
-import Erdos408.Hypotheses
-import Mathlib.Analysis.SpecialFunctions.Log.Base
+module
+
+public import Erdos408.Basic
+public import Erdos408.Hypotheses
+public import Mathlib.Analysis.SpecialFunctions.Log.Base
 
 /-!
 # Definitions for the extraction of the rectangle statistic
@@ -32,6 +34,8 @@ scale `x`: `L = log x`, `T = log L`, `s = log T`, margin `ε = c T⁻²⁰`.
 See `blueprint/rectangle_input.md` §4 and *The normal order of the number of
 iterations of Euler's function* (Plasma AI, 2026), §6.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

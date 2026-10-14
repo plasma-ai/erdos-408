@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Moment.Phased
-import Erdos408.OneSided.Moment.Rank.Budget
-import Erdos408.OneSided.Moment.Rank.Phase
-import Erdos408.OneSided.Bands
+module
+
+public import Erdos408.OneSided.Moment.Phased
+public import Erdos408.OneSided.Moment.Rank.Budget
+public import Erdos408.OneSided.Moment.Rank.Phase
+public import Erdos408.OneSided.Bands
 
 /-!
 # The rank expansion of the memory bound
@@ -25,6 +27,8 @@ birth distinctness") that `eventually_norm_distinctSum_le` assembles.
   crude norm `L^{C_e}`.
 * `wnormSq_chainInit_le`: `‖𝐛‖² ≤ 2^{KM}`, since `∑_{p ∈ 𝒫_i} ν(p) ≤ 2` once `b'_p ≥ 1/2`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

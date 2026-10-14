@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstBlockEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstBlockEnergy
+
+@[expose] public section
 
 namespace OAI
 

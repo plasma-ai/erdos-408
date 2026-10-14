@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.Contractions
-import Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality
+module
+
+public import Erdos821.P3Clean.Contractions
+public import Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality
 
 /-! Finite Fourier identities for the residue translations of a clean edge. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

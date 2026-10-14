@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SourceTransport
-import OAI.NumberTheory.DirichletL.PrimeRows.SmallDyad
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SourceTransport
+public import OAI.NumberTheory.DirichletL.PrimeRows.SmallDyad
+
+@[expose] public section
 
 namespace OAI
 

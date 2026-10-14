@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.FirstGlobalCaps
-import OAI.NumberTheory.DirichletL.Descent.FirstLiveNorms
-import OAI.NumberTheory.DirichletL.Descent.FirstFullRapidTail
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.FirstGlobalCaps
+public import OAI.NumberTheory.DirichletL.Descent.FirstLiveNorms
+public import OAI.NumberTheory.DirichletL.Descent.FirstFullRapidTail
+
+@[expose] public section
 
 namespace OAI
 

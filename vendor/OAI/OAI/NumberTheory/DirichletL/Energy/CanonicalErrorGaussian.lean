@@ -1,13 +1,17 @@
-import OAI.NumberTheory.DirichletL.Energy.CanonicalErrorUniform
-import OAI.NumberTheory.DirichletL.Moments.FirstNestedSeededGaussianPower
-import OAI.NumberTheory.DirichletL.Moments.FirstSecondInputGates
-import OAI.NumberTheory.DirichletL.Moments.SecondInputCapacitySource
-import OAI.NumberTheory.DirichletL.Energy.CanonicalErrorPaid
-import OAI.NumberTheory.DirichletL.Energy.ChildEnvelopeFitting
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPaidReserve
-import OAI.NumberTheory.DirichletL.Energy.CanonicalUniformReference
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPaidAdmission
-import OAI.NumberTheory.DirichletL.Energy.AmplifiedRayDictionary
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalErrorUniform
+public import OAI.NumberTheory.DirichletL.Moments.FirstNestedSeededGaussianPower
+public import OAI.NumberTheory.DirichletL.Moments.FirstSecondInputGates
+public import OAI.NumberTheory.DirichletL.Moments.SecondInputCapacitySource
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalErrorPaid
+public import OAI.NumberTheory.DirichletL.Energy.ChildEnvelopeFitting
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPaidReserve
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalUniformReference
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPaidAdmission
+public import OAI.NumberTheory.DirichletL.Energy.AmplifiedRayDictionary
+
+@[expose] public section
 
 namespace OAI
 

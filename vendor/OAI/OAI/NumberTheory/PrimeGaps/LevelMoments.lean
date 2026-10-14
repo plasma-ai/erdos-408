@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.ProfileVariance
+module
+
+public import OAI.NumberTheory.PrimeGaps.ProfileVariance
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.PhysicalCRT
-import OAI.NumberTheory.DirichletL.CubicSieve.Gauss
-import OAI.NumberTheory.DirichletL.Detector.PairPhase
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalCRT
+public import OAI.NumberTheory.DirichletL.CubicSieve.Gauss
+public import OAI.NumberTheory.DirichletL.Detector.PairPhase
+
+@[expose] public section
 
 namespace OAI
 

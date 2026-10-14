@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.CoefficientDirect
-import OAI.NumberTheory.DirichletL.Detector.SpectralSeparation
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CoefficientDirect
+public import OAI.NumberTheory.DirichletL.Detector.SpectralSeparation
+
+@[expose] public section
 
 namespace OAI
 

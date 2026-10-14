@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCountCrossing
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCountCrossing
+
+@[expose] public section
 
 namespace OAI
 

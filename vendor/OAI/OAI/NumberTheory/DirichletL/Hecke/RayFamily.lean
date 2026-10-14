@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.RayOrthogonality
-import OAI.NumberTheory.DirichletL.Hecke.LogDerivative
+module
+
+public import OAI.NumberTheory.DirichletL.RayOrthogonality
+public import OAI.NumberTheory.DirichletL.Hecke.LogDerivative
+
+@[expose] public section
 
 namespace OAI
 

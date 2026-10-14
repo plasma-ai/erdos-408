@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.PaidRemoval
-import OAI.NumberTheory.DirichletL.Moments.AllocatedRayDictionary
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.PaidRemoval
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedRayDictionary
+
+@[expose] public section
 
 namespace OAI
 

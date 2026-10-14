@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.RayMaskedFloorSlots
-import OAI.NumberTheory.DirichletL.Moments.PlainPositiveEnergy
-import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalRadial
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RayMaskedFloorSlots
+public import OAI.NumberTheory.DirichletL.Moments.PlainPositiveEnergy
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalRadial
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import Erdos821.P3Edge.ColFinite
-import Erdos821.P3Edge.RowSummable
+module
+
+public import Erdos821.P3Edge.ColFinite
+public import Erdos821.P3Edge.RowSummable
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

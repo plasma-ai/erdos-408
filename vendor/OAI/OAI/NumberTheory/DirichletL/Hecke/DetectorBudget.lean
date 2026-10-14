@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorFinite
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorFinite
+
+@[expose] public section
 
 namespace OAI
 

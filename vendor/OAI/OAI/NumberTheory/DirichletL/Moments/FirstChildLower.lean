@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildSourceCaps
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalGates
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildSourceCaps
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalGates
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import Erdos821.P5.RootShift
-import Erdos821.P5.RootMultiples
-import Erdos821.P5.SharedRowBound
-import Erdos821.P5.PhysicalNormTheorem
+module
+
+public import Erdos821.P5.RootShift
+public import Erdos821.P5.RootMultiples
+public import Erdos821.P5.SharedRowBound
+public import Erdos821.P5.PhysicalNormTheorem
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.AllocatedChildCapacity
-import OAI.NumberTheory.DirichletL.Energy.InputParentCapacity
-import OAI.NumberTheory.DirichletL.Moments.FirstSecondCapacityDefect
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedChildCapacity
+public import OAI.NumberTheory.DirichletL.Energy.InputParentCapacity
+public import OAI.NumberTheory.DirichletL.Moments.FirstSecondCapacityDefect
+
+@[expose] public section
 
 namespace OAI
 

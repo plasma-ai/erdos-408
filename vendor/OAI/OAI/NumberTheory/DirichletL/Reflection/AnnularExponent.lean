@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.ThresholdError
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.ThresholdError
+
+@[expose] public section
 
 namespace OAI
 

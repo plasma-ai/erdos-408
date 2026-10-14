@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.SecondFibers
-import OAI.NumberTheory.DirichletL.Descent.InitializationEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.SecondFibers
+public import OAI.NumberTheory.DirichletL.Descent.InitializationEnergy
+
+@[expose] public section
 
 namespace OAI
 

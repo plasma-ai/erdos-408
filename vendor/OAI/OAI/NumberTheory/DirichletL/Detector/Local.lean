@@ -1,7 +1,11 @@
-import Mathlib.Analysis.Complex.Norm
-import Mathlib.Tactic.FieldSimp
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.LinearCombination
+module
+
+public import Mathlib.Analysis.Complex.Norm
+public import Mathlib.Tactic.FieldSimp
+public import Mathlib.Tactic.Ring
+public import Mathlib.Tactic.LinearCombination
+
+@[expose] public section
 
 namespace OAI
 

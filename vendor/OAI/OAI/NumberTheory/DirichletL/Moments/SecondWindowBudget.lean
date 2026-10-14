@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondWindowSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondWindowSource
+
+@[expose] public section
 
 namespace OAI
 

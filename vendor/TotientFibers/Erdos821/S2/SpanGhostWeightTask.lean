@@ -1,6 +1,10 @@
-import Erdos821.S2.SpanGhost
+module
+
+public import Erdos821.S2.SpanGhost
 
 /-! Factorial-normalized ghost coefficients factor over distinct prime lifespans. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

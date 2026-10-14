@@ -1,8 +1,12 @@
-import Erdos821.P4Probe.RowBridge
-import Erdos821.P4Probe.Anova
-import Erdos821.P4Probe.CountingTasks
-import Erdos821.P4Probe.InvarianceTasks
-import Erdos821.P4Count.ProbeCounting
+module
+
+public import Erdos821.P4Probe.RowBridge
+public import Erdos821.P4Probe.Anova
+public import Erdos821.P4Probe.CountingTasks
+public import Erdos821.P4Probe.InvarianceTasks
+public import Erdos821.P4Count.ProbeCounting
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

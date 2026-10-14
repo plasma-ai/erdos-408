@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.PhysicalCRT
-import OAI.NumberTheory.DirichletL.Detector.PhasePowers
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalCRT
+public import OAI.NumberTheory.DirichletL.Detector.PhasePowers
+
+@[expose] public section
 
 namespace OAI
 

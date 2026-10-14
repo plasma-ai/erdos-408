@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.CompletedCoefficient
-import OAI.NumberTheory.DirichletL.Detector.CalibrationCancellation
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CompletedCoefficient
+public import OAI.NumberTheory.DirichletL.Detector.CalibrationCancellation
+
+@[expose] public section
 
 namespace OAI
 

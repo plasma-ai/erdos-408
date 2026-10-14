@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.ExtractedRow
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.ExtractedRow
+
+@[expose] public section
 
 namespace OAI
 

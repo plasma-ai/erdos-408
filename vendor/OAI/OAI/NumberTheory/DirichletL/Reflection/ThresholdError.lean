@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.TerminalThreshold
-import OAI.NumberTheory.DirichletL.Reflection.RamifiedWidth
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.TerminalThreshold
+public import OAI.NumberTheory.DirichletL.Reflection.RamifiedWidth
+
+@[expose] public section
 
 namespace OAI
 

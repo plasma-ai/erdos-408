@@ -1,4 +1,8 @@
-import Erdos821.S2High.AddressHelpers
+module
+
+public import Erdos821.S2High.AddressHelpers
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

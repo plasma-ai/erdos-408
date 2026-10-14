@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondBlockAggregate
-import OAI.NumberTheory.DirichletL.Moments.SecondRetainedWidth
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondBlockAggregate
+public import OAI.NumberTheory.DirichletL.Moments.SecondRetainedWidth
+
+@[expose] public section
 
 namespace OAI
 

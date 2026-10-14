@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Endpoint.Tuple.Assembly
+module
+
+public import Erdos408.TwoSided.Endpoint.Tuple.Assembly
 
 /-!
 # The tuple part at high times, for a general coefficient: the statement
@@ -12,6 +14,8 @@ E + B_min)` there is `C_T`, with the mean square over any interval of times
 `A_s = max((A₀ + D)/2, 1)`, `A' = (A₀ + D - 1)/2` and `A_t = max(A₀ + D - K₁, 1)` with
 `D = 6C_m + 2K₁ + 2C_U + 11`, and `B_min = max(C_m, C_sep) + 2`; `A'` does not depend on `E`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.TupleHigh
 

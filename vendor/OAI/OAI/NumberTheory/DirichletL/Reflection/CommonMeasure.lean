@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.WeightedMeasurable
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.WeightedMeasurable
+
+@[expose] public section
 
 namespace OAI
 

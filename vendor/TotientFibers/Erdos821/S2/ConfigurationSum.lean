@@ -1,8 +1,12 @@
-import Erdos821.S2.SpanConfigurations
-import Erdos821.S2.HistoryReconstructionTask
-import Erdos821.S2.HistoryFinite
+module
+
+public import Erdos821.S2.SpanConfigurations
+public import Erdos821.S2.HistoryReconstructionTask
+public import Erdos821.S2.HistoryFinite
 
 /-! The finite lifespan/history equivalence and its ordered factorial fibers. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

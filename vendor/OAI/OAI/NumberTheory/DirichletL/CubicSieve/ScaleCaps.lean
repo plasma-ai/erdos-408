@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.CommonMasks
-import OAI.NumberTheory.DirichletL.Eisenstein.QuotientTopology
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.CommonMasks
+public import OAI.NumberTheory.DirichletL.Eisenstein.QuotientTopology
+
+@[expose] public section
 
 namespace OAI
 

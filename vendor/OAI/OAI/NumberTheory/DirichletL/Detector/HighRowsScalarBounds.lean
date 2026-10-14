@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsRegion
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsRegion
+
+@[expose] public section
 
 namespace OAI
 

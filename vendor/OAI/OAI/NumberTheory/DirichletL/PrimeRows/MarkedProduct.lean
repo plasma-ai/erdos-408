@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.MarkedLocal
-import OAI.NumberTheory.DirichletL.PrimeRows.Euler
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.MarkedLocal
+public import OAI.NumberTheory.DirichletL.PrimeRows.Euler
+
+@[expose] public section
 
 namespace OAI
 

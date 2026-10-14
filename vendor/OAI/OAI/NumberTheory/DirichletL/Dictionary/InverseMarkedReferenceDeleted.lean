@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceFiber
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawConjugateGates
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceFiber
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawConjugateGates
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedEnergy
+
+@[expose] public section
 
 namespace OAI
 

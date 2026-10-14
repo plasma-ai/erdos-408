@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.MarkedProduct
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.MarkedProduct
+
+@[expose] public section
 
 namespace OAI
 

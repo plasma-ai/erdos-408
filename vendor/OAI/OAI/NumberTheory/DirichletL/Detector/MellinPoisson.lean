@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.SpectralPoisson
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SpectralPoisson
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.Brackets
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Brackets
+
+@[expose] public section
 
 namespace OAI
 

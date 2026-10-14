@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.Edge.RawRow
+module
+
+public import Erdos408.OneSided.Moment.Edge.RawRow
 
 /-!
 # The columns of the dirty raw edges by reversal
@@ -18,6 +20,8 @@ times the row of the piece `(I, S)` at `s'`.
   c^rev)`.
 * `sum_col_rawAmp_le`: the column bound.
 -/
+
+@[expose] public section
 
 noncomputable section
 

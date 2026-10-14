@@ -1,6 +1,8 @@
-import Erdos408.Analytic.IntegerKernel
-import Erdos408.Analytic.PNT
-import Erdos408.Analytic.PrimeTwist
+module
+
+public import Erdos408.Analytic.IntegerKernel
+public import Erdos408.Analytic.PNT
+public import Erdos408.Analytic.PrimeTwist
 
 /-!
 # Analytic contracts from the zero-free half-plane
@@ -21,3 +23,6 @@ bounds of `Erdos408.Analytic.Core`.
   principal integral. For larger `|u|`, shift `L(s, χ)` to `re s = 1 - d`,
   using `|L| ≤ exp(C √L)` there.
 -/
+
+@[expose] public section
+

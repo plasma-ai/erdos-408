@@ -1,4 +1,9 @@
-import Erdos821.Blueprint.Analytic
+module
+
+public import Erdos821.Blueprint.Analytic
+public import Mathlib.Algebra.Order.Ring.Star
+
+@[expose] public section
 
 set_option autoImplicit false
 

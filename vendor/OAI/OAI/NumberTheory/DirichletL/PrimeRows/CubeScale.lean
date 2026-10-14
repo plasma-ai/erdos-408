@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalRayCube
-import OAI.NumberTheory.DirichletL.Hecke.PrimeAmplitudeScale
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalRayCube
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeAmplitudeScale
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.KernelTransfer
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.KernelTransfer
+
+@[expose] public section
 
 namespace OAI
 

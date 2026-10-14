@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RetainedWeightedSource
-import OAI.NumberTheory.DirichletL.Moments.ReflectedChoiceEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RetainedWeightedSource
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedChoiceEnergy
+
+@[expose] public section
 
 namespace OAI
 

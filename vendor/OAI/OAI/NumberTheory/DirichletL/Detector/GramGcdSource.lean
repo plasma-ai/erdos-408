@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramFrequency
-import OAI.NumberTheory.DirichletL.Detector.LowGramPoisson
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramFrequency
+public import OAI.NumberTheory.DirichletL.Detector.LowGramPoisson
+
+@[expose] public section
 
 namespace OAI
 

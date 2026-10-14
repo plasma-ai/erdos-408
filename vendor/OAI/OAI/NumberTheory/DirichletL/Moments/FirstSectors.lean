@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonSectors
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonSectors
+
+@[expose] public section
 
 namespace OAI
 

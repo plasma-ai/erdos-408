@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.ChildTransfer
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.ChildTransfer
+
+@[expose] public section
 
 namespace OAI
 

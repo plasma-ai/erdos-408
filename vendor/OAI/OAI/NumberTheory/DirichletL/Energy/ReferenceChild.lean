@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceReflection
-import OAI.NumberTheory.DirichletL.Energy.AllocatedChildren
-import OAI.NumberTheory.DirichletL.Energy.SlotHeight
-import OAI.NumberTheory.DirichletL.Energy.Profiles
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceReflection
+public import OAI.NumberTheory.DirichletL.Energy.AllocatedChildren
+public import OAI.NumberTheory.DirichletL.Energy.SlotHeight
+public import OAI.NumberTheory.DirichletL.Energy.Profiles
+
+@[expose] public section
 
 namespace OAI
 

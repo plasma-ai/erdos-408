@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.QuadraticTrace
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.QuadraticTrace
+
+@[expose] public section
 
 namespace OAI
 
@@ -464,7 +468,7 @@ def fiberMap (c : O) (r : O ⧸ Ideal.span {c})
     (Ideal.Quotient.eq_zero_iff_mem).mpr (Ideal.subset_span (Set.mem_singleton c))
   rw [hc0, zero_mul, add_zero, hr]
 
-private theorem fiberMap_injective (c : O) (hc : c ≠ 0)
+theorem fiberMap_injective (c : O) (hc : c ≠ 0)
     (r : O ⧸ Ideal.span {c}) (r0 : O)
     (hr : Ideal.Quotient.mk (Ideal.span {c}) r0 = r) :
     Function.Injective (fiberMap c r r0 hr) := by
@@ -473,7 +477,7 @@ private theorem fiberMap_injective (c : O) (hc : c ≠ 0)
   change r0 + c*u = r0 + c*v at hval
   exact mul_left_cancel₀ hc (add_left_cancel hval)
 
-private theorem fiberMap_surjective (c : O)
+theorem fiberMap_surjective (c : O)
     (r : O ⧸ Ideal.span {c}) (r0 : O)
     (hr : Ideal.Quotient.mk (Ideal.span {c}) r0 = r) :
     Function.Surjective (fiberMap c r r0 hr) := by
@@ -708,7 +712,7 @@ private theorem first_poisson_slice {t : ℝ} (ht : 0 < t) (n : ℤ) :
       intro k
       exact first_transform_term ht k n
 
-private noncomputable def dualTerm (t : ℝ) (z : ℤ × ℤ) : ℂ :=
+noncomputable def dualTerm (t : ℝ) (z : ℤ × ℤ) : ℂ :=
   cg ((t⁻¹ : ℝ) : ℂ) z.1 *
     Complex.exp (-(Real.pi : ℂ) / (((3 * t) / 4 : ℝ) : ℂ) *
       ((z.2 : ℂ) + (z.1 : ℂ) / 2) ^ 2)

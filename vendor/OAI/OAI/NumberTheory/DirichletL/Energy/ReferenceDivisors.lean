@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceReflection
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceReflection
+
+@[expose] public section
 
 namespace OAI
 

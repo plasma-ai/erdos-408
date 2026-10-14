@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Bands
-import Erdos408.OneSided.Moment.PathExpansion.Hermitian
+module
+
+public import Erdos408.OneSided.Bands
+public import Erdos408.OneSided.Moment.PathExpansion.Hermitian
 
 /-!
 # The anchor congruence
@@ -21,6 +23,8 @@ product `D`, other promoted primes `Z` and fresh primes `T` has a target `z'` wi
 * `anchor_unique`: under the phase separation of the second good-state test, the omission
   tuple and the other promoted primes are unique.
 -/
+
+@[expose] public section
 
 noncomputable section
 

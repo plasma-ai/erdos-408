@@ -1,8 +1,12 @@
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Data.Finset.Powerset
-import Mathlib.Tactic.FinCases
-import Mathlib.Tactic.Ring
+module
+
+public import Mathlib.Analysis.Complex.Basic
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+public import Mathlib.Data.Finset.Powerset
+public import Mathlib.Tactic.FinCases
+public import Mathlib.Tactic.Ring
+
+@[expose] public section
 
 namespace OAI
 

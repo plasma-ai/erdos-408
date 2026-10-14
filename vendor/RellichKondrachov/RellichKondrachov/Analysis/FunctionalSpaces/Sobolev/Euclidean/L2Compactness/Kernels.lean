@@ -4,9 +4,11 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Adam Benenson
 -/
 
-import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
-import Mathlib.MeasureTheory.Integral.Bochner.Set
-import Mathlib.Topology.Algebra.Support
+module
+
+public import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
+public import Mathlib.MeasureTheory.Integral.Bochner.Set
+public import Mathlib.Topology.Algebra.Support
 
 /-!
 # `L²` compactness criterion: existence of small-support probability kernels (Euclidean)
@@ -24,6 +26,8 @@ by its (positive) integral.
 
 Tracking: Beads `lean-103.5.2.26.5.3.2.2.5`.
 -/
+
+@[expose] public section
 
 namespace RellichKondrachov
 namespace Analysis

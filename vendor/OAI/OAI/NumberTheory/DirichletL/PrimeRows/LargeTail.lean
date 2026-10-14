@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.GeometricTail
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.GeometricTail
+
+@[expose] public section
 
 namespace OAI
 

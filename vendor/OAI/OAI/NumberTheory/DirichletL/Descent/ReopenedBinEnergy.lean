@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.ReopenedIntegralEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ReopenedIntegralEnergy
+
+@[expose] public section
 
 namespace OAI
 

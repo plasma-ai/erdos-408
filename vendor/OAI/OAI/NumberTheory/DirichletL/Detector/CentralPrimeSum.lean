@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.CentralAllSlots
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralTargetCost
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CentralAllSlots
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralTargetCost
+
+@[expose] public section
 
 namespace OAI
 

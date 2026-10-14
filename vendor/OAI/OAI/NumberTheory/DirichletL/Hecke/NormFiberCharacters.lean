@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Arithmetic.NormFiberMellin
+module
+
+public import OAI.NumberTheory.DirichletL.Arithmetic.NormFiberMellin
+
+@[expose] public section
 
 namespace OAI
 

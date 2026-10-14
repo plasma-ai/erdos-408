@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.GramPhysicalScale
-import OAI.NumberTheory.DirichletL.Detector.GramShell
-import OAI.NumberTheory.DirichletL.Detector.GramJointProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramPhysicalScale
+public import OAI.NumberTheory.DirichletL.Detector.GramShell
+public import OAI.NumberTheory.DirichletL.Detector.GramJointProfile
+
+@[expose] public section
 
 namespace OAI
 

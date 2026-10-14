@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondBlockEnergyWindowOrder
-import OAI.NumberTheory.DirichletL.Descent.SecondDeletedMovingMassUniform
-import OAI.NumberTheory.DirichletL.Inversion.SecondChildWindows
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondBlockEnergyWindowOrder
+public import OAI.NumberTheory.DirichletL.Descent.SecondDeletedMovingMassUniform
+public import OAI.NumberTheory.DirichletL.Inversion.SecondChildWindows
+
+@[expose] public section
 
 namespace OAI
 

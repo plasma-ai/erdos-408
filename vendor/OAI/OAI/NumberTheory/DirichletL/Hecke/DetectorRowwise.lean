@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCount
-import Mathlib.Analysis.InnerProductSpace.Calculus
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCount
+public import Mathlib.Analysis.InnerProductSpace.Calculus
+
+@[expose] public section
 
 namespace OAI
 

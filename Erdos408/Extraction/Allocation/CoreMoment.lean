@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Allocation.Euler
-import Erdos408.Extraction.Allocation.Decomposition
+module
+
+public import Erdos408.Extraction.Allocation.Euler
+public import Erdos408.Extraction.Allocation.Decomposition
 
 /-!
 # The mean square of the core
@@ -21,6 +23,8 @@ but unoptimized log power: for large `x` and `2 ≤ j ≤ J_c`,
   multiples of `p²`, `p > Y`, `d_j(v̄)² ≤ T^{4 T^{25}}`; there are at most
   `x (25 s + 2) / Y` of them, and `Y = exp(L / T^{25})` beats the count.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

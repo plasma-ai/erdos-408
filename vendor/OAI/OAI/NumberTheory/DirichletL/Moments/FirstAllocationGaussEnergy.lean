@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceOriginalData
-import OAI.NumberTheory.DirichletL.Moments.CommonRawScale
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceOriginalData
+public import OAI.NumberTheory.DirichletL.Moments.CommonRawScale
+
+@[expose] public section
 
 namespace OAI
 

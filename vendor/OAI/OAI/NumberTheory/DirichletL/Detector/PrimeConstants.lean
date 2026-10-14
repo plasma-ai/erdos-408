@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.PrimePhase
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PrimePhase
+
+@[expose] public section
 
 namespace OAI
 

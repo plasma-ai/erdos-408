@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPaidAdmission
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPaidAdmission
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.Family
-import OAI.NumberTheory.DirichletL.Hecke.ThetaSeries
-import OAI.NumberTheory.DirichletL.Continuation
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Family
+public import OAI.NumberTheory.DirichletL.Hecke.ThetaSeries
+public import OAI.NumberTheory.DirichletL.Continuation
+
+@[expose] public section
 
 namespace OAI
 

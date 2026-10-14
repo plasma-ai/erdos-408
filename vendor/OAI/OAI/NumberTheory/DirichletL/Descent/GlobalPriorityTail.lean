@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityTailMass
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityTailCollapse
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityTailMass
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityTailCollapse
+
+@[expose] public section
 
 namespace OAI
 

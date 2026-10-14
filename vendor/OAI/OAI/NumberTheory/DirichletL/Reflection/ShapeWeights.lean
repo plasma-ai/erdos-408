@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.Shape
-import OAI.NumberTheory.DirichletL.CubicSieve.Ideal
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Shape
+public import OAI.NumberTheory.DirichletL.CubicSieve.Ideal
+
+@[expose] public section
 
 namespace OAI
 

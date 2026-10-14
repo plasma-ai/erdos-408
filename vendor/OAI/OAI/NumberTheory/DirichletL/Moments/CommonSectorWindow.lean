@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonSectorColumn
-import OAI.NumberTheory.DirichletL.Moments.CommonWindowColumn
-import OAI.NumberTheory.DirichletL.Moments.ReflectedSource
-import OAI.NumberTheory.DirichletL.Moments.SecondWindowSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonSectorColumn
+public import OAI.NumberTheory.DirichletL.Moments.CommonWindowColumn
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedSource
+public import OAI.NumberTheory.DirichletL.Moments.SecondWindowSource
+
+@[expose] public section
 
 namespace OAI
 

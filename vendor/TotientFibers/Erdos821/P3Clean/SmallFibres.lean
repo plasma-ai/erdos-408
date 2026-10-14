@@ -1,6 +1,11 @@
-import Erdos821.P3Clean.Damping
+module
+
+public import Erdos821.P3Clean.Damping
+public import Mathlib.Data.Fintype.CardEmbedding
 
 /-! Counting the ell-slot extensions of a fixed ordered small prefix. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

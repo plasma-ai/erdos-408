@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.MarkedCompensation
-import OAI.NumberTheory.DirichletL.PrimeRows.Continuation
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.MarkedCompensation
+public import OAI.NumberTheory.DirichletL.PrimeRows.Continuation
+
+@[expose] public section
 
 namespace OAI
 

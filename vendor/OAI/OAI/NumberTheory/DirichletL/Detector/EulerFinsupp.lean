@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.IdealFactorization
-import Mathlib.Analysis.Normed.Group.Tannery
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.IdealFactorization
+public import Mathlib.Analysis.Normed.Group.Tannery
+
+@[expose] public section
 
 namespace OAI
 

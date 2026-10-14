@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.CrudeCoefficient
-import OAI.NumberTheory.DirichletL.Reflection.RawTail
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CrudeCoefficient
+public import OAI.NumberTheory.DirichletL.Reflection.RawTail
+
+@[expose] public section
 
 namespace OAI
 

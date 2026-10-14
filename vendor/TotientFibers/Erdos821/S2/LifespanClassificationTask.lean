@@ -1,6 +1,10 @@
-import Erdos821.S2.SpanLifecycle
+module
+
+public import Erdos821.S2.SpanLifecycle
 
 /-! The forward classification of a literal distinct history into prime spans. -/
+
+@[expose] public section
 
 noncomputable section
 namespace Erdos821.S2Core

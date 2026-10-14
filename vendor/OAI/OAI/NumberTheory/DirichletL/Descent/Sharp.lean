@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.HybridBound
-import OAI.NumberTheory.DirichletL.CubicSieve.Sharp
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.HybridBound
+public import OAI.NumberTheory.DirichletL.CubicSieve.Sharp
+
+@[expose] public section
 
 namespace OAI
 

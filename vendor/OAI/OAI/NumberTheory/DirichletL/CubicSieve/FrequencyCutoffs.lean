@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.PrincipalTruncation
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.PrincipalTruncation
+
+@[expose] public section
 
 namespace OAI
 

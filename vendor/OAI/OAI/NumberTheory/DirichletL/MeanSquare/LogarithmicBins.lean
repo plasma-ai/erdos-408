@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.MeanSquare.SourceTransfer
+module
+
+public import OAI.NumberTheory.DirichletL.MeanSquare.SourceTransfer
+
+@[expose] public section
 
 namespace OAI
 

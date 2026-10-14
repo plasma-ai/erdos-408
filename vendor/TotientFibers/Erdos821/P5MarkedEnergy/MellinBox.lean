@@ -1,7 +1,14 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.Order.Chebyshev
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.MeasureTheory.Integral.Prod
 
 /-! The weighted energy of a finite sum of Mellin-separated box polynomials:
 Cauchy--Schwarz in the separation variable and Tonelli. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

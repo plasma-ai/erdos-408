@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
-import OAI.NumberTheory.DirichletL.Moments.SecondWholeKernel
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
+public import OAI.NumberTheory.DirichletL.Moments.SecondWholeKernel
+
+@[expose] public section
 
 namespace OAI
 

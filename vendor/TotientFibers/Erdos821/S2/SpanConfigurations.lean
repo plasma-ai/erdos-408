@@ -1,8 +1,12 @@
-import Erdos821.S2.HistoryOrders
-import Erdos821.S2.SpanBirthTask
-import Erdos821.S2.SpanUniqueness
+module
+
+public import Erdos821.S2.HistoryOrders
+public import Erdos821.S2.SpanBirthTask
+public import Erdos821.S2.SpanUniqueness
 
 /-! Finite configurations parameterize the full ordered lifespan construction. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

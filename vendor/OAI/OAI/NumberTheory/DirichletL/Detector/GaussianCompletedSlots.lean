@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianSlots
-import OAI.NumberTheory.DirichletL.Detector.GaussianDecomposition
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianSlots
+public import OAI.NumberTheory.DirichletL.Detector.GaussianDecomposition
+
+@[expose] public section
 
 namespace OAI
 

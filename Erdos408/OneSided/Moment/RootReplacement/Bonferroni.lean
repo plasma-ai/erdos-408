@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Analysis.Bonferroni
-import Erdos408.OneSided.Moment.PathExpansion.Average
-import Erdos408.OneSided.Moment.RootReplacement.Residues
+module
+
+public import Erdos408.OneSided.Analysis.Bonferroni
+public import Erdos408.OneSided.Moment.PathExpansion.Average
+public import Erdos408.OneSided.Moment.RootReplacement.Residues
 
 /-!
 # Root replacement on one box: Bonferroni and the monomial expansion
@@ -17,6 +19,8 @@ pointwise, with `e_T(X) = ∑_{|I| = T} ∏_{p ∈ I} X_p ≥ 0`. Each monomial 
 its line average. The model mean of the gap is `𝔼 e_T(X) ≤ σ^T / T!`, where
 `σ = ∑_{p ∉ act} 𝔼 X_p`, since the lines are independent.
 -/
+
+@[expose] public section
 
 noncomputable section
 

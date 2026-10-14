@@ -1,6 +1,8 @@
-import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
-import Mathlib.MeasureTheory.Group.Prod
-import Mathlib.MeasureTheory.Integral.Prod
+module
+
+public import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
+public import Mathlib.MeasureTheory.Group.Prod
+public import Mathlib.MeasureTheory.Integral.Prod
 
 /-!
 # The two regions of one arc term
@@ -21,6 +23,8 @@ every interval `I`, and energy at most `E` on `[-T, T]`.
 Only `τ` is split. The bound on `[-T, T]` is uniform in `s`, so no separate `s`-tail is
 needed.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.SlotCoefficients
-import OAI.NumberTheory.DirichletL.Reflection.ActiveProducts
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.SlotCoefficients
+public import OAI.NumberTheory.DirichletL.Reflection.ActiveProducts
+
+@[expose] public section
 
 namespace OAI
 

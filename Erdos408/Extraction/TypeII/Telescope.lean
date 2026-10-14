@@ -1,4 +1,6 @@
-import Erdos408.Extraction.TypeII.Strip
+module
+
+public import Erdos408.Extraction.TypeII.Strip
 
 /-!
 # The composite and proxy sums as telescoping sums
@@ -8,6 +10,8 @@ import Erdos408.Extraction.TypeII.Strip
 time turns `Comp_j - Prox_j^0` into `j` steps with coefficient `[prime, > x^γ] - a_j^0`, and
 `Prox_j^0 - Prox_j` into `j` steps with coefficient `a_j^0 - a_j`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

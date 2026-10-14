@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstScale
-import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
-import OAI.NumberTheory.DirichletL.Moments.FirstExtractedLedger
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstScale
+public import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
+public import OAI.NumberTheory.DirichletL.Moments.FirstExtractedLedger
+
+@[expose] public section
 
 namespace OAI
 

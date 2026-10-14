@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramNumerator
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramNumerator
+
+@[expose] public section
 
 namespace OAI
 

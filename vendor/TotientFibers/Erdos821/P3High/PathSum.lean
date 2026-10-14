@@ -1,6 +1,14 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Algebra.Order.BigOperators.GroupWithZero.Finset
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Ring.RingNF
 
 /-! Real nonnegative alternating path sums controlled by per-operation weighted row bounds. -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

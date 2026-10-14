@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.ActiveGaussFactorization
-import OAI.NumberTheory.DirichletL.Poisson.RadialFourier
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.ActiveGaussFactorization
+public import OAI.NumberTheory.DirichletL.Poisson.RadialFourier
+
+@[expose] public section
 
 namespace OAI
 

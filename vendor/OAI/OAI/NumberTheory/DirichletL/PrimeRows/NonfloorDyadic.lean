@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorNormalized
-import OAI.NumberTheory.DirichletL.PrimeRows.CubeFloorDyadic
-import OAI.NumberTheory.DirichletL.PrimeRows.CubeBinPartition
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.NonfloorNormalized
+public import OAI.NumberTheory.DirichletL.PrimeRows.CubeFloorDyadic
+public import OAI.NumberTheory.DirichletL.PrimeRows.CubeBinPartition
+
+@[expose] public section
 
 namespace OAI
 

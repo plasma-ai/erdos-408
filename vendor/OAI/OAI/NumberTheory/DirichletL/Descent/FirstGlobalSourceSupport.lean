@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstPhysicalFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstPhysicalFamily
+
+@[expose] public section
 
 namespace OAI
 

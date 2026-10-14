@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.PlainEnergy
-import OAI.NumberTheory.DirichletL.Moments.Cauchy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PlainEnergy
+public import OAI.NumberTheory.DirichletL.Moments.Cauchy
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,6 @@
-import OAI.NumberTheory.DirichletL.Nonvanishing
+module
+
+public import OAI.NumberTheory.DirichletL.Nonvanishing
 
 /-!
 # The seven-eighths zero-free half-plane
@@ -7,6 +9,8 @@ Every Dirichlet L-function is zero-free in `7 / 8 < re s`, apart from the
 principal character's pole at `s = 1`. This is Theorem 1.1 of OpenAI's
 *The Quasi-Riemann Hypothesis*, formalized in the vendored OAI library.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

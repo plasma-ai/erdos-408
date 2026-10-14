@@ -1,11 +1,15 @@
-import Erdos821.P5MarkedEnergy.Factorization
-import Erdos821.P5MarkedEnergy.Collapse
-import Erdos821.P5.MellinVectors
+module
+
+public import Erdos821.P5MarkedEnergy.Factorization
+public import Erdos821.P5MarkedEnergy.Collapse
+public import Erdos821.P5.MellinVectors
 
 /-! The Mellin box identity: a smoothly cut four-fold convolution, as a Dirichlet
 polynomial, is `Y` times a finite sum over relevant dyadic boxes of
 Mellin-separated products of four dyadic polynomials. Irrelevant boxes vanish
 exactly before separation. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

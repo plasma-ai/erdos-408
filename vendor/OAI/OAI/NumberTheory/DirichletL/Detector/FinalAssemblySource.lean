@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.LowNormalized
-import OAI.NumberTheory.DirichletL.Hecke.CommonProbe
-import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowNormalized
+public import OAI.NumberTheory.DirichletL.Hecke.CommonProbe
+public import OAI.NumberTheory.DirichletL.Hecke.ModulusRefinement
+
+@[expose] public section
 
 namespace OAI
 

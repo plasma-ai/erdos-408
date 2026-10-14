@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.FixedRadialSource
-import OAI.NumberTheory.DirichletL.Energy.ZeroComparison
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.FixedRadialSource
+public import OAI.NumberTheory.DirichletL.Energy.ZeroComparison
+
+@[expose] public section
 
 namespace OAI
 

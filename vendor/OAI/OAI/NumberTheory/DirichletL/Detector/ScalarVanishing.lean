@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LiftedFourier
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LiftedFourier
+
+@[expose] public section
 
 namespace OAI
 

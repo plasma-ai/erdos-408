@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.QuantitativeScales
-import Erdos821.P3Clean.UniformComparison
+module
+
+public import Erdos821.P3Clean.QuantitativeScales
+public import Erdos821.P3Clean.UniformComparison
 
 /-! Big-prime exponential separation makes the signed perturbation negligible. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

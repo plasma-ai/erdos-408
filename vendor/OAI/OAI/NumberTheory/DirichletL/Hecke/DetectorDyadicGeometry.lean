@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorSaturation
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorSaturation
+
+@[expose] public section
 
 namespace OAI
 

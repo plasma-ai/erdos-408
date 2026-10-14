@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowCompensation
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowCompensation
+
+@[expose] public section
 
 namespace OAI
 

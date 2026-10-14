@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ActualSecondProfile
-import OAI.NumberTheory.DirichletL.Descent.ProfileIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ActualSecondProfile
+public import OAI.NumberTheory.DirichletL.Descent.ProfileIntegral
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,10 +1,16 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 
 /-! Abstract three-range integral estimate (paper §4, completion): on a time
 range, a product of four continuous functions is controlled by
 (i) smallness of the second factor off finitely many unit intervals,
 (ii) smallness of the third factor at large times on those intervals, and
 (iii) smallness of the first factor at low times. -/
+
+@[expose] public section
 
 noncomputable section
 open MeasureTheory

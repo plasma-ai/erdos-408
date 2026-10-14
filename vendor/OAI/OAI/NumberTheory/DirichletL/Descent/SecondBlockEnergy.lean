@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.SecondChildWindows
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.SecondChildWindows
+
+@[expose] public section
 
 namespace OAI
 

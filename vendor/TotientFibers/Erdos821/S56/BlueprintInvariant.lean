@@ -1,4 +1,8 @@
-import Erdos821.Blueprint.TypeII
+module
+
+public import Erdos821.Blueprint.TypeII
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

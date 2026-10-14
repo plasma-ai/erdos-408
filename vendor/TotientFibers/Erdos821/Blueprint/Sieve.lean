@@ -1,6 +1,12 @@
-import Erdos821.Blueprint.Classical
+module
+
+public import Erdos821.Blueprint.Classical
+public import Mathlib.Data.Nat.Squarefree
 
 /-! P2: the block sieve, including its coefficient and level certificates. -/
+
+@[expose] public section
+
 noncomputable section
 open scoped BigOperators
 attribute [local instance] Classical.propDecidable

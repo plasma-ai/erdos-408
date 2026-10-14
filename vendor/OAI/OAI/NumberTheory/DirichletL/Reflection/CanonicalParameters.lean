@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalCaps
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalCaps
+
+@[expose] public section
 
 namespace OAI
 

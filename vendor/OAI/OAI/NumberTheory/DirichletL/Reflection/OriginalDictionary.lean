@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.OriginalFiber
-import OAI.NumberTheory.DirichletL.Reflection.ActiveDictionary
-import OAI.NumberTheory.DirichletL.Reflection.ReindexReflection
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalFiber
+public import OAI.NumberTheory.DirichletL.Reflection.ActiveDictionary
+public import OAI.NumberTheory.DirichletL.Reflection.ReindexReflection
+
+@[expose] public section
 
 namespace OAI
 

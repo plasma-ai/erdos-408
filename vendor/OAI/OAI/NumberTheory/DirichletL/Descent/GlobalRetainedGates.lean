@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.SecondUniformCutoff
-import OAI.NumberTheory.DirichletL.Descent.ActualChildStateTriples
-import OAI.NumberTheory.DirichletL.Descent.GlobalPrioritySource
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.SecondUniformCutoff
+public import OAI.NumberTheory.DirichletL.Descent.ActualChildStateTriples
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPrioritySource
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstSecondPaidLedger
-import OAI.NumberTheory.DirichletL.Moments.FirstSecondLossParameters
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstSecondPaidLedger
+public import OAI.NumberTheory.DirichletL.Moments.FirstSecondLossParameters
+
+@[expose] public section
 
 namespace OAI
 

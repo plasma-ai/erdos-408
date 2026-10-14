@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.EntireMellinProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.EntireMellinProfile
+
+@[expose] public section
 
 namespace OAI
 

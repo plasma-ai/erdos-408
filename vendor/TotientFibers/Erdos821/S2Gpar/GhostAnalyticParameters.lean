@@ -1,5 +1,9 @@
-import Erdos821.S2.AnalyticParametersTasks
-import Erdos821.S34.ScaleGrowth
+module
+
+public import Erdos821.S2.AnalyticParametersTasks
+public import Erdos821.S34.ScaleGrowth
+
+@[expose] public section
 
 noncomputable section
 open Filter

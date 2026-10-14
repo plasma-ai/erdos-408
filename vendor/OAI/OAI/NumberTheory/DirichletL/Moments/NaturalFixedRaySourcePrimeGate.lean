@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFreeExceptional
-import OAI.NumberTheory.DirichletL.Moments.PrimeHeight
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFreeExceptional
+public import OAI.NumberTheory.DirichletL.Moments.PrimeHeight
+
+@[expose] public section
 
 namespace OAI
 

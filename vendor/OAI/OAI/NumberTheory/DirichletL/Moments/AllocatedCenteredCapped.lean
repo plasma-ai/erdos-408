@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RadialCenteredEnergy
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalCappedAmplitude
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RadialCenteredEnergy
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalCappedAmplitude
+
+@[expose] public section
 
 namespace OAI
 

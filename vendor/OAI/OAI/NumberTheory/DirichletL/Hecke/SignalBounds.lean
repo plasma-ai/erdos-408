@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.SignalShift
-import OAI.NumberTheory.DirichletL.Hecke.ReciprocalGrowth
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.SignalShift
+public import OAI.NumberTheory.DirichletL.Hecke.ReciprocalGrowth
+
+@[expose] public section
 
 namespace OAI
 

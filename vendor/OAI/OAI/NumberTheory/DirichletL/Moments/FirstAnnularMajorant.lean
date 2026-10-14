@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.DyadicCount
-import OAI.NumberTheory.DirichletL.Energy.Profiles
-import OAI.NumberTheory.DirichletL.Moments.SmoothedWindowEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DyadicCount
+public import OAI.NumberTheory.DirichletL.Energy.Profiles
+public import OAI.NumberTheory.DirichletL.Moments.SmoothedWindowEnergy
+
+@[expose] public section
 
 namespace OAI
 

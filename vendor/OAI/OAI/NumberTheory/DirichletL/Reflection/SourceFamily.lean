@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.ActualExtractedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.ActualExtractedEnergy
+
+@[expose] public section
 
 namespace OAI
 

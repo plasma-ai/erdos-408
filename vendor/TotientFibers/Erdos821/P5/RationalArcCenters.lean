@@ -1,4 +1,8 @@
-import Erdos821.P5.IntegerComparisonSupport
+module
+
+public import Erdos821.P5.IntegerComparisonSupport
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

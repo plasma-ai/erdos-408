@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstDyadicTail
-import OAI.NumberTheory.DirichletL.Descent.OriginalZeroPhysical
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstDyadicTail
+public import OAI.NumberTheory.DirichletL.Descent.OriginalZeroPhysical
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.OriginalReflectionApproximation
-import OAI.NumberTheory.DirichletL.Moments.UniformReflectionProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.OriginalReflectionApproximation
+public import OAI.NumberTheory.DirichletL.Moments.UniformReflectionProfile
+
+@[expose] public section
 
 namespace OAI
 

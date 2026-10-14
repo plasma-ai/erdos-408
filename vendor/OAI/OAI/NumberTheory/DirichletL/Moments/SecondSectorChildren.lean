@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSectorColumns
-import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSectorColumns
+public import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
+
+@[expose] public section
 
 namespace OAI
 

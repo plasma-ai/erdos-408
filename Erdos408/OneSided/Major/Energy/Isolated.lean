@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Major.Sparse
+module
+
+public import Erdos408.OneSided.Major.Sparse
 
 /-!
 # The isolated energy
@@ -16,6 +18,8 @@ primes, and let `M` be continuous with `|M| ≤ ε` on `[-T, T]`, `T ≤ 2 X L^B
 The function `M` is generic. In `Major/Energy.lean` it is `M_α`, with `ε = c₄ L^{-A}` from P4,
 and the mean square of `M_α N_β` comes from `maj:product-mean`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

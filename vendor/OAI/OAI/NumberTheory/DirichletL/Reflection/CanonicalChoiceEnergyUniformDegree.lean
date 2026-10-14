@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalChoiceEnergy
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalDyadsUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalChoiceEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalDyadsUniformDegree
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,11 +1,12 @@
-import Mathlib
-import Erdos821.Prelim.BlockSieve
-import Erdos821.Prelim.SieveGeometry
-import Erdos821.Prelim.SieveExpectation
-import Erdos821.Prelim.SieveCounting
-import Erdos821.Prelim.SieveLevel
-import Erdos821.Prelim.SieveErrors
-import Erdos821.Blueprint.Sieve
+module
+
+public import Erdos821.Prelim.BlockSieve
+public import Erdos821.Prelim.SieveGeometry
+public import Erdos821.Prelim.SieveExpectation
+public import Erdos821.Prelim.SieveCounting
+public import Erdos821.Prelim.SieveLevel
+public import Erdos821.Prelim.SieveErrors
+public import Erdos821.Blueprint.Sieve
 
 /-!
 # Sieve counting, lower part (`lem:sieve`, `V` polynomial)
@@ -16,6 +17,8 @@ so `(-1)^{h_j+1} = -1`), hence
 `V = U - ∑ C = ∑_U + ∑_{corr}` with `|coeff| = 1`, level `≤ z^{4h+2}`
 (`corr_level_le`), and `sifted ≥ ∑ weight·Vval ≥ X·E[V] - remainderSum`.
 -/
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

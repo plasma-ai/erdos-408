@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstRetainedSector
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicAssembly
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourcePool
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstRetainedSector
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicAssembly
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourcePool
+
+@[expose] public section
 
 namespace OAI
 

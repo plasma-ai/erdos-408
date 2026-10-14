@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstDyadicRadius
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstDyadicRadius
+
+@[expose] public section
 
 namespace OAI
 

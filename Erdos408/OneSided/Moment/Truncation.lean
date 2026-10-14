@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Bands
-import Erdos408.OneSided.Moment.Truncation.Majorant
+module
+
+public import Erdos408.OneSided.Bands
+public import Erdos408.OneSided.Moment.Truncation.Majorant
 
 /-!
 # The memory truncation
@@ -18,6 +20,8 @@ to `B = ⌈L²⌉` changes the distinct-birth history sum by at most `exp(-L²/2
 * `log R_E = O(1 + L^{1/5})`, so the numerator is `exp(O(L))` (`log_bound_le`), far below
   `2^{L²} exp(-L²/2)`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstDiscardedEnergy
-import OAI.NumberTheory.DirichletL.Moments.SourceRow
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstDiscardedEnergy
+public import OAI.NumberTheory.DirichletL.Moments.SourceRow
+
+@[expose] public section
 
 namespace OAI
 

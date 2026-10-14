@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.ZBoundary
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.ZBoundary
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.QuotientColumns
-import OAI.NumberTheory.DirichletL.CubicSieve.Recurrence
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.QuotientColumns
+public import OAI.NumberTheory.DirichletL.CubicSieve.Recurrence
+
+@[expose] public section
 
 namespace OAI
 

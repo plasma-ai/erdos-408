@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceHomogeneous
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceAllocatedErrorMass
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceHomogeneous
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceAllocatedErrorMass
+
+@[expose] public section
 
 namespace OAI
 

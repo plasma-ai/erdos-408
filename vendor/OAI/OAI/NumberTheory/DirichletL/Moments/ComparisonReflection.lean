@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.Primitive
-import OAI.NumberTheory.DirichletL.Hecke.Dyadic
-import OAI.NumberTheory.DirichletL.Detector.RadialMellin
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Primitive
+public import OAI.NumberTheory.DirichletL.Hecke.Dyadic
+public import OAI.NumberTheory.DirichletL.Detector.RadialMellin
+
+@[expose] public section
 
 namespace OAI
 

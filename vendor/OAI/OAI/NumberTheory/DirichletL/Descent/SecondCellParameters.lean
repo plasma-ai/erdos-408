@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondCellPhysical
-import OAI.NumberTheory.DirichletL.Descent.PhysicalBlockBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondCellPhysical
+public import OAI.NumberTheory.DirichletL.Descent.PhysicalBlockBudget
+
+@[expose] public section
 
 namespace OAI
 

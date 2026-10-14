@@ -1,4 +1,9 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

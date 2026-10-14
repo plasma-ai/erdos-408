@@ -1,4 +1,8 @@
-import Erdos821.P3Edge.SmallZeros
+module
+
+public import Erdos821.P3Edge.SmallZeros
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourcePresentation
-import OAI.NumberTheory.DirichletL.Moments.FirstMaskedFamily
-import OAI.NumberTheory.DirichletL.Moments.SupportedZeroEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourcePresentation
+public import OAI.NumberTheory.DirichletL.Moments.FirstMaskedFamily
+public import OAI.NumberTheory.DirichletL.Moments.SupportedZeroEnergy
+
+@[expose] public section
 
 namespace OAI
 

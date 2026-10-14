@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstFrequency
-import OAI.NumberTheory.DirichletL.Moments.Scale
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstFrequency
+public import OAI.NumberTheory.DirichletL.Moments.Scale
+
+@[expose] public section
 
 namespace OAI
 

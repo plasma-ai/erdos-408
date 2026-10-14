@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.Growth
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.Growth
+
+@[expose] public section
 
 namespace OAI
 

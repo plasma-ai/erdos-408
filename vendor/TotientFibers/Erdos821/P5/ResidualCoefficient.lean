@@ -1,6 +1,10 @@
-import Erdos821.P5.GoodLiftedRow
-import Erdos821.P5.UnsharedBan
-import Erdos821.P5.SharedRemoval
+module
+
+public import Erdos821.P5.GoodLiftedRow
+public import Erdos821.P5.UnsharedBan
+public import Erdos821.P5.SharedRemoval
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

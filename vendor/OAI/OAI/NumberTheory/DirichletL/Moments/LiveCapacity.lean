@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.ActualLiveSlotRemoval
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ActualLiveSlotRemoval
+
+@[expose] public section
 
 namespace OAI
 

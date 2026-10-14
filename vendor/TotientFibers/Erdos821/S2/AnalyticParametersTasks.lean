@@ -1,6 +1,10 @@
-import Erdos821.S2.MemoryTailTask
+module
+
+public import Erdos821.S2.MemoryTailTask
 
 /-! Eventual analytic facts needed to instantiate the literal memory estimates. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.GaussFactorization
-import OAI.NumberTheory.DirichletL.Reciprocity.KubotaCharacter
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.GaussFactorization
+public import OAI.NumberTheory.DirichletL.Reciprocity.KubotaCharacter
+
+@[expose] public section
 
 namespace OAI
 

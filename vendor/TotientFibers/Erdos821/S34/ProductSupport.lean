@@ -1,5 +1,9 @@
-import Erdos821.S34.ProductLaws
-import Erdos821.S34.OwnedLeafProofs
+module
+
+public import Erdos821.S34.ProductLaws
+public import Erdos821.S34.OwnedLeafProofs
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

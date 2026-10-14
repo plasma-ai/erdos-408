@@ -1,6 +1,10 @@
-import Erdos821.S2.MemoryEdge
+module
+
+public import Erdos821.S2.MemoryEdge
 
 /-! Frozen statements of the three edge estimates in source §2. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

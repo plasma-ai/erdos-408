@@ -1,6 +1,10 @@
-import Erdos821.S2.ResiduePaths
+module
+
+public import Erdos821.S2.ResiduePaths
 
 /-! The finite physical path expansion before CRT replaces the root residue. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,6 +1,11 @@
-import Erdos821.S2.Definitions
+module
+
+public import Erdos821.S2.Definitions
+public import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
 
 /-! Equality-rank combinatorics for the distinct-birth expansion. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

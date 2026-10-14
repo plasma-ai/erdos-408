@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.SurvivingGate
-import OAI.NumberTheory.DirichletL.Reflection.OptionalWidth
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.SurvivingGate
+public import OAI.NumberTheory.DirichletL.Reflection.OptionalWidth
+
+@[expose] public section
 
 namespace OAI
 

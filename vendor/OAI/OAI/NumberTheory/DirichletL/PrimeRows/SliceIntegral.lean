@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.BufferedIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.BufferedIntegral
+
+@[expose] public section
 
 namespace OAI
 

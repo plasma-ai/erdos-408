@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondSeparatedColumns
-import OAI.NumberTheory.DirichletL.Descent.SecondFreshMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondSeparatedColumns
+public import OAI.NumberTheory.DirichletL.Descent.SecondFreshMeasure
+
+@[expose] public section
 
 namespace OAI
 

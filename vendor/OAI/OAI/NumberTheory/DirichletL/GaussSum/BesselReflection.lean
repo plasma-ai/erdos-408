@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.SourceMellinInversion
-import OAI.NumberTheory.DirichletL.Mellin.VerticalContourShift
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.SourceMellinInversion
+public import OAI.NumberTheory.DirichletL.Mellin.VerticalContourShift
+
+@[expose] public section
 
 namespace OAI
 

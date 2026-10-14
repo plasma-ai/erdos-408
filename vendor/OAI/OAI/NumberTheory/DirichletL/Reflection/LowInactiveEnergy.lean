@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.LowChoiceEnergy
-import OAI.NumberTheory.DirichletL.Reflection.InactiveSource
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.LowChoiceEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.InactiveSource
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.RayPoolGood
-import OAI.NumberTheory.DirichletL.Detector.RayPoolDisjoint
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RayPoolGood
+public import OAI.NumberTheory.DirichletL.Detector.RayPoolDisjoint
+
+@[expose] public section
 
 namespace OAI
 

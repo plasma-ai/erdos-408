@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.ZeroFreeBounds
+module
+
+public import OAI.NumberTheory.PrimeGaps.ZeroFreeBounds
+
+@[expose] public section
 
 namespace OAI
 

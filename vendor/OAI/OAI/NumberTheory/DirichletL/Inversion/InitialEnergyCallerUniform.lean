@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerClipping
-import OAI.NumberTheory.DirichletL.Descent.ClippedUniform
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerClipping
+public import OAI.NumberTheory.DirichletL.Descent.ClippedUniform
+
+@[expose] public section
 
 namespace OAI
 

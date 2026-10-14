@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.MobiusRegroup
-import OAI.NumberTheory.DirichletL.Moments.FixedRay
-import OAI.NumberTheory.DirichletL.Moments.RowNorm
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.MobiusRegroup
+public import OAI.NumberTheory.DirichletL.Moments.FixedRay
+public import OAI.NumberTheory.DirichletL.Moments.RowNorm
+
+@[expose] public section
 
 namespace OAI
 

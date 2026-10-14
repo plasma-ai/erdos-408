@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedActiveCapacitySource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedActiveCapacitySource
+
+@[expose] public section
 
 namespace OAI
 

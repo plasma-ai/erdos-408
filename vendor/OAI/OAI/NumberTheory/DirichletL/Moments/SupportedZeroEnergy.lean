@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ZeroMeanBridge
-import OAI.NumberTheory.DirichletL.Moments.SourceMass
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ZeroMeanBridge
+public import OAI.NumberTheory.DirichletL.Moments.SourceMass
+
+@[expose] public section
 
 namespace OAI
 

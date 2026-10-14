@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.Poisson
-import OAI.NumberTheory.DirichletL.CubicSieve.Algebra
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.Poisson
+public import OAI.NumberTheory.DirichletL.CubicSieve.Algebra
+
+@[expose] public section
 
 namespace OAI
 

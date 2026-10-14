@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.RamifiedGaussSeries
-import OAI.NumberTheory.DirichletL.Reciprocity.KubotaCharacter
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.RamifiedGaussSeries
+public import OAI.NumberTheory.DirichletL.Reciprocity.KubotaCharacter
+
+@[expose] public section
 
 namespace OAI
 

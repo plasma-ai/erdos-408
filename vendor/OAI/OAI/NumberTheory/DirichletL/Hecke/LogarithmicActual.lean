@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.Logarithmic
-import OAI.NumberTheory.DirichletL.Hecke.EulerLog
-import OAI.NumberTheory.DirichletL.Hecke.DeletionReciprocal
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Logarithmic
+public import OAI.NumberTheory.DirichletL.Hecke.EulerLog
+public import OAI.NumberTheory.DirichletL.Hecke.DeletionReciprocal
+
+@[expose] public section
 
 namespace OAI
 

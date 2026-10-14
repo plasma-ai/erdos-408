@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
-import Mathlib.Analysis.SpecialFunctions.Log.Base
-import Mathlib.Data.Int.Interval
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
+public import Mathlib.Analysis.SpecialFunctions.Log.Base
+public import Mathlib.Data.Int.Interval
+
+@[expose] public section
 
 namespace OAI
 

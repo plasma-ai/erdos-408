@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.CumulativeProfiles
+module
+
+public import OAI.NumberTheory.PrimeGaps.CumulativeProfiles
+
+@[expose] public section
 
 namespace OAI
 

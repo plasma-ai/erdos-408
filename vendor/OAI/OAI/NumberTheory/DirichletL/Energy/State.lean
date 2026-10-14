@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalMaskedFloor
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPair
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalMaskedFloor
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalPair
+
+@[expose] public section
 
 namespace OAI
 

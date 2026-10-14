@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramJointPeriod
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramJointPeriod
+
+@[expose] public section
 
 namespace OAI
 

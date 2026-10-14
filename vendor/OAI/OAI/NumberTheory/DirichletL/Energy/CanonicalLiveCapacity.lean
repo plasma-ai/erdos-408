@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.CanonicalLiveBound
-import OAI.NumberTheory.DirichletL.Energy.DeletedChildCapacity
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalLiveBound
+public import OAI.NumberTheory.DirichletL.Energy.DeletedChildCapacity
+
+@[expose] public section
 
 namespace OAI
 

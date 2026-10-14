@@ -1,5 +1,9 @@
-import RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.Rellich
-import OAI.NumberTheory.DirichletL.MeanSquare.PoissonSource
+module
+
+public import RellichKondrachov.Analysis.FunctionalSpaces.Sobolev.Euclidean.Rellich
+public import OAI.NumberTheory.DirichletL.MeanSquare.PoissonSource
+
+@[expose] public section
 
 namespace OAI
 

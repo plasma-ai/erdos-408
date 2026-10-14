@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalFrozenEnergy
-import OAI.NumberTheory.DirichletL.Reflection.CompletedFiberSource
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalCellArithmetic
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalFrozenEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.CompletedFiberSource
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalCellArithmetic
+
+@[expose] public section
 
 namespace OAI
 

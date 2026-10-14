@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.RetainedWidth
-import OAI.NumberTheory.DirichletL.Reflection.ShellDomains
-import OAI.NumberTheory.DirichletL.Reflection.Surviving
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.RetainedWidth
+public import OAI.NumberTheory.DirichletL.Reflection.ShellDomains
+public import OAI.NumberTheory.DirichletL.Reflection.Surviving
+
+@[expose] public section
 
 namespace OAI
 

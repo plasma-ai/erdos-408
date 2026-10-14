@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstProfileIdentity
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstProfileIdentity
+
+@[expose] public section
 
 namespace OAI
 

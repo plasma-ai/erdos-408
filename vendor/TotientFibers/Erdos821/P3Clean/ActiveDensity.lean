@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.BigRefresh
-import Erdos821.P3Clean.DensityIdentification
+module
+
+public import Erdos821.P3Clean.BigRefresh
+public import Erdos821.P3Clean.DensityIdentification
 
 /-! Density factors for the tilted active labels and their fresh integrations. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

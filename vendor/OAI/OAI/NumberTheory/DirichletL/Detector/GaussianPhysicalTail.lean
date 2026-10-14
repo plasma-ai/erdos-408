@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianRemoteRows
-import OAI.NumberTheory.DirichletL.Detector.GaussianPhysicalTuple
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianRemoteRows
+public import OAI.NumberTheory.DirichletL.Detector.GaussianPhysicalTuple
+
+@[expose] public section
 
 namespace OAI
 

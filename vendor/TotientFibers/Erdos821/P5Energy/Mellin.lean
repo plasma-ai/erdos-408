@@ -1,7 +1,12 @@
-import Erdos821.P5Energy.Kernel
+module
+
+public import Erdos821.P5Energy.Kernel
+public import Mathlib.Analysis.Real.Pi.Bounds
 
 /-! The Mellin kernel `M(t,t')`, its decay, and the Schur bound for the weighted
 `u`-energy of the log-coordinate amplitude transform. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ContDiff FourierTransform

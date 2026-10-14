@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.RamifiedTransform
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.RamifiedTransform
+
+@[expose] public section
 
 namespace OAI
 

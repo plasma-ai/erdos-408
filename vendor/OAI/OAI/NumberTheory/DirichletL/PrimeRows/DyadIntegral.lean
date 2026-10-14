@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.DyadBound
-import OAI.NumberTheory.DirichletL.PrimeRows.Measurable
-import OAI.NumberTheory.DirichletL.PrimeRows.ProfileIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.DyadBound
+public import OAI.NumberTheory.DirichletL.PrimeRows.Measurable
+public import OAI.NumberTheory.DirichletL.PrimeRows.ProfileIntegral
+
+@[expose] public section
 
 namespace OAI
 

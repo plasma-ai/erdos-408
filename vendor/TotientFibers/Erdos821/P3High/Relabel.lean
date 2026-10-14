@@ -1,7 +1,15 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Basic.Real.Basic
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Ring.RingNF
 
 /-! Constraining one fresh coordinate: an injective relabelling of that coordinate into all
 values multiplies the constrained mass by the total value mass. -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

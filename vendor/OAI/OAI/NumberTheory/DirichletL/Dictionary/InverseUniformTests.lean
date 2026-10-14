@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseUniformFamily
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicCutoff
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseUniformFamily
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicCutoff
+
+@[expose] public section
 
 namespace OAI
 

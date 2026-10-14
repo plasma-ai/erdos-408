@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.Moments
-import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalRayCube
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.Moments
+public import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalRayCube
+
+@[expose] public section
 
 namespace OAI
 

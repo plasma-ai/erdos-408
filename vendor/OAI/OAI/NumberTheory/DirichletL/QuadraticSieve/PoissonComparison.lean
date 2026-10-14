@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.ScaleCaps
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.ScaleCaps
+
+@[expose] public section
 
 namespace OAI
 

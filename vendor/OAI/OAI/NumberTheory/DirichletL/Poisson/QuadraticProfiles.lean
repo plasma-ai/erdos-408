@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reciprocity.RamifiedSymbol
-import OAI.NumberTheory.DirichletL.CubicSieve.KernelEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Reciprocity.RamifiedSymbol
+public import OAI.NumberTheory.DirichletL.CubicSieve.KernelEnergy
+
+@[expose] public section
 
 namespace OAI
 

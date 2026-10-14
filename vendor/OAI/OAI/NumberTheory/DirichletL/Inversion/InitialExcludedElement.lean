@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedPeriod
-import OAI.NumberTheory.DirichletL.Inversion.InitialRayAttachment
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialExcludedPeriod
+public import OAI.NumberTheory.DirichletL.Inversion.InitialRayAttachment
+
+@[expose] public section
 
 namespace OAI
 

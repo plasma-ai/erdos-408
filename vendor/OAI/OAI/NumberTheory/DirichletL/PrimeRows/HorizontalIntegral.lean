@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.BufferedJoinDecay
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.BufferedJoinDecay
+
+@[expose] public section
 
 namespace OAI
 

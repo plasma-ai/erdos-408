@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.Correlation
-import Mathlib.RingTheory.Ideal.Quotient.Operations
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Correlation
+public import Mathlib.RingTheory.Ideal.Quotient.Operations
+
+@[expose] public section
 
 namespace OAI
 

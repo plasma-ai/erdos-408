@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Allocation.Groups
+module
+
+public import Erdos408.Extraction.Allocation.Groups
 
 /-!
 # Sharper facts about the candidate groups
@@ -12,6 +14,8 @@ E6 needs two facts beyond `GroupFacts`:
   `⌊(b - a) T / log 2⌋` values of `i`, and distinct scales give disjoint
   nonempty groups.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

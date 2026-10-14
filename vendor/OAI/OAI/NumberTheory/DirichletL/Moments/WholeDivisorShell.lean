@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.MobiusRegroup
-import OAI.NumberTheory.DirichletL.Moments.DyadicCount
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.MobiusRegroup
+public import OAI.NumberTheory.DirichletL.Moments.DyadicCount
+
+@[expose] public section
 
 namespace OAI
 

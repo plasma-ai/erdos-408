@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Energy.NaturalInputMatches
-import OAI.NumberTheory.DirichletL.Energy.ZeroComparison
-import OAI.NumberTheory.DirichletL.Moments.FirstReferenceEnergy
-import OAI.NumberTheory.DirichletL.Moments.SourceInputTailUniform
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.NaturalInputMatches
+public import OAI.NumberTheory.DirichletL.Energy.ZeroComparison
+public import OAI.NumberTheory.DirichletL.Moments.FirstReferenceEnergy
+public import OAI.NumberTheory.DirichletL.Moments.SourceInputTailUniform
+
+@[expose] public section
 
 namespace OAI
 

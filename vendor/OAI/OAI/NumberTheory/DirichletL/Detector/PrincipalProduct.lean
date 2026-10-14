@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.EulerHolomorphic
-import OAI.NumberTheory.DirichletL.Detector.NormalProduct
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.EulerHolomorphic
+public import OAI.NumberTheory.DirichletL.Detector.NormalProduct
+
+@[expose] public section
 
 namespace OAI
 

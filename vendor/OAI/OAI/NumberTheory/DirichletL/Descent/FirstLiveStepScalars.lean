@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstLiveExponentCaps
-import OAI.NumberTheory.DirichletL.Descent.FirstLiveColumnScale
-import OAI.NumberTheory.DirichletL.Descent.FirstLiveRadiusPositive
-import OAI.NumberTheory.DirichletL.Descent.FirstStepScalarCaps
-import OAI.NumberTheory.DirichletL.Descent.FirstLabelCellStep
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstLiveExponentCaps
+public import OAI.NumberTheory.DirichletL.Descent.FirstLiveColumnScale
+public import OAI.NumberTheory.DirichletL.Descent.FirstLiveRadiusPositive
+public import OAI.NumberTheory.DirichletL.Descent.FirstStepScalarCaps
+public import OAI.NumberTheory.DirichletL.Descent.FirstLabelCellStep
+
+@[expose] public section
 
 namespace OAI
 

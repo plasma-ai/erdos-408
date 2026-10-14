@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstUnequalMovingEnergy
-import OAI.NumberTheory.DirichletL.Descent.FirstActualSecondEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstUnequalMovingEnergy
+public import OAI.NumberTheory.DirichletL.Descent.FirstActualSecondEnergy
+
+@[expose] public section
 
 namespace OAI
 

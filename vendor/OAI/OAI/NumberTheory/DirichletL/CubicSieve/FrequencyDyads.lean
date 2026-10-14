@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.DualShell
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.DualShell
+
+@[expose] public section
 
 namespace OAI
 

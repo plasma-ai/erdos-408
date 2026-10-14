@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.MarkedMoments
+module
+
+public import OAI.NumberTheory.PrimeGaps.MarkedMoments
+
+@[expose] public section
 
 namespace OAI
 

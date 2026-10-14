@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstNonexceptionalWeightSum
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstNonexceptionalWeightSum
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedFamily
+
+@[expose] public section
 
 namespace OAI
 

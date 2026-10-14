@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.WhittakerContinuation
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.WhittakerContinuation
+
+@[expose] public section
 
 namespace OAI
 

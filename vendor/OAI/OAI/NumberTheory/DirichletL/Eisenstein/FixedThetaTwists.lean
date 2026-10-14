@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.FixedFrequencyExpansion
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.FixedFrequencyExpansion
+
+@[expose] public section
 
 namespace OAI
 

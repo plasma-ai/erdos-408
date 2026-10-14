@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstChildWindowsCells
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstChildWindowsCells
+
+@[expose] public section
 
 namespace OAI
 

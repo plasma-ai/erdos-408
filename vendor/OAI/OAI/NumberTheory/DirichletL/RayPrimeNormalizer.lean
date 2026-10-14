@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.RayPrimes
-import OAI.NumberTheory.DirichletL.PrimeCounting.AnnularPrimeMass
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.RayPrimes
+public import OAI.NumberTheory.DirichletL.PrimeCounting.AnnularPrimeMass
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.Rankin
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Rankin
+
+@[expose] public section
 
 namespace OAI
 

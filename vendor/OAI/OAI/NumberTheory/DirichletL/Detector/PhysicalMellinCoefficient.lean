@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.PhysicalCoefficientScaling
-import OAI.NumberTheory.DirichletL.Detector.MellinPowers
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalCoefficientScaling
+public import OAI.NumberTheory.DirichletL.Detector.MellinPowers
+
+@[expose] public section
 
 namespace OAI
 

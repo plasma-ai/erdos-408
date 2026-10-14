@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.TupleMasks
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.TupleMasks
+
+@[expose] public section
 
 namespace OAI
 

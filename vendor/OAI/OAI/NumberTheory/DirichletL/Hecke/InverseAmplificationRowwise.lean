@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationProfiles
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowwiseMarked
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationProfiles
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowwiseMarked
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Moments.Correlation
-import Mathlib.NumberTheory.NumberField.Basic
-import Mathlib.RingTheory.Ideal.Norm.AbsNorm
-import Mathlib.RingTheory.Ideal.Quotient.PowTransition
-import Mathlib.RingTheory.Ideal.Quotient.Nilpotent
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Correlation
+public import Mathlib.NumberTheory.NumberField.Basic
+public import Mathlib.RingTheory.Ideal.Norm.AbsNorm
+public import Mathlib.RingTheory.Ideal.Quotient.PowTransition
+public import Mathlib.RingTheory.Ideal.Quotient.Nilpotent
+
+@[expose] public section
 
 namespace OAI
 

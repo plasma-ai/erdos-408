@@ -1,6 +1,10 @@
-import Erdos821.Leaves.Arith
+module
+
+public import Erdos821.Leaves.Arith
 
 /-! Unshared active entries cannot be factors of the dilation step. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

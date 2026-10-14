@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicAssemblyTail
-import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailAnnulus
-import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailRapid
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicAssemblyTail
+public import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailAnnulus
+public import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailRapid
+
+@[expose] public section
 
 namespace OAI
 

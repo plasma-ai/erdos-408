@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.PrincipalTransport
-import OAI.NumberTheory.DirichletL.PrincipalSignalComparison
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PrincipalTransport
+public import OAI.NumberTheory.DirichletL.PrincipalSignalComparison
+
+@[expose] public section
 
 namespace OAI
 

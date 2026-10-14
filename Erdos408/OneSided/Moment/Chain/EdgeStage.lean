@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.Chain.GhostStage
+module
+
+public import Erdos408.OneSided.Moment.Chain.GhostStage
 
 /-!
 # The edge step of the memory identity
@@ -22,6 +24,8 @@ primes `b_i` and the entering primes `a_i` of the free choice:
 The summand factors over the groups (`edge_summand_eq_prod`), and the sums over `St` and `fl`
 are products of per-group sums.
 -/
+
+@[expose] public section
 
 noncomputable section
 

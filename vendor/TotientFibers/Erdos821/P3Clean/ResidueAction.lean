@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.CyclicAction
-import Erdos821.P3Clean.Truncation
+module
+
+public import Erdos821.P3Clean.CyclicAction
+public import Erdos821.P3Clean.Truncation
 
 /-! Uniform small residues and cutoff multiset memory carry a finite translation action. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

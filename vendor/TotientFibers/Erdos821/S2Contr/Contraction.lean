@@ -1,4 +1,10 @@
-import Erdos821.S2.ContractionTask
+module
+
+public import Erdos821.S2.ContractionTask
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Tactic.NormNum.RealSqrt
+
+@[expose] public section
 
 open Filter
 open Erdos821.Blueprint.Graph

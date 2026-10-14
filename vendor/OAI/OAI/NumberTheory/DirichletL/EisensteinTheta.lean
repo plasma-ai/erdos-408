@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.ThetaProduct
-import Mathlib.Logic.Equiv.Fin.Basic
-import Mathlib.Tactic.FieldSimp
+module
+
+public import OAI.NumberTheory.DirichletL.ThetaProduct
+public import Mathlib.Logic.Equiv.Fin.Basic
+public import Mathlib.Tactic.FieldSimp
+
+@[expose] public section
 
 namespace OAI
 

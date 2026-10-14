@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Endpoint.Constant.High
+module
+
+public import Erdos408.TwoSided.Endpoint.Constant.High
 
 /-!
 # The constants of the constant part
@@ -9,6 +11,8 @@ bound of `integral_boxSum_le` is a sum of powers of `L` and of the absolute savi
 `x^{-1/100}`, `J_B x^{-1/150}`; times the `I⁴ ≤ 256 L^{4 + 4D}` boxes it is `O(L^{-A₀})` once
 the exponents are chosen as in `exists_integral_const_high_le`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.ConstHigh
 

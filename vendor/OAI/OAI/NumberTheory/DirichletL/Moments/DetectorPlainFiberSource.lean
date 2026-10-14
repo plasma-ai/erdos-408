@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainSource
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainSlotProfile
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFiber
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawRealRadial
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainSource
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainSlotProfile
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFiber
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawRealRadial
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceLiveColumn
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceLiveColumn
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SuccessorPaidParameters
-import OAI.NumberTheory.DirichletL.Moments.LiveCapacity
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SuccessorPaidParameters
+public import OAI.NumberTheory.DirichletL.Moments.LiveCapacity
+
+@[expose] public section
 
 namespace OAI
 

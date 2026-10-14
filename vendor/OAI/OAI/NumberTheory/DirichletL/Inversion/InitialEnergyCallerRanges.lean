@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerSourceMask
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerSourceMask
+
+@[expose] public section
 
 namespace OAI
 

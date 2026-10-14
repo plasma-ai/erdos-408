@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Sieve.Smooth
-import Erdos408.TwoSided.Setup
+module
+
+public import Erdos408.Extraction.Sieve.Smooth
+public import Erdos408.TwoSided.Setup
 
 /-!
 # Twisted sums over progressions
@@ -15,6 +17,8 @@ against `C_B` without comparing the full sum with an integral.
 * `LowFreq.sum_norm_sub_le`: the total variation of `w ↦ ψ₁(w/Y) w^{iτ}` on `[1, N]` is at
   most `N (M₁(1) + |τ| M₁(0)) / Y`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.LowFreq
 

@@ -1,5 +1,9 @@
-import Erdos821.P4Probe.RowBridge
-import Erdos821.P4Probe.CountingTasks
+module
+
+public import Erdos821.P4Probe.RowBridge
+public import Erdos821.P4Probe.CountingTasks
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

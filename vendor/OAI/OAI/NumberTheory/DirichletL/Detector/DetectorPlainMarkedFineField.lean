@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.ParametersHighDataFine
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainMomentParameters
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainRelativeClass
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainProfileControl
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.ParametersHighDataFine
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainMomentParameters
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainRelativeClass
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainProfileControl
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicGeometry
+
+@[expose] public section
 
 namespace OAI
 

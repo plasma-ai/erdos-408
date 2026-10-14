@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
-import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
-import OAI.NumberTheory.DirichletL.Moments.SecondLocalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
+public import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
+public import OAI.NumberTheory.DirichletL.Moments.SecondLocalization
+
+@[expose] public section
 
 namespace OAI
 

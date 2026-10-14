@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.SourceBatch
-import OAI.NumberTheory.DirichletL.Hecke.DetectorAmplitudeFirst
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SourceBatch
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorAmplitudeFirst
+
+@[expose] public section
 
 namespace OAI
 

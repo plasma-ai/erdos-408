@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.Signal
-import OAI.NumberTheory.DirichletL.Hecke.Origin
-import Mathlib.Analysis.Analytic.IsolatedZeros
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Signal
+public import OAI.NumberTheory.DirichletL.Hecke.Origin
+public import Mathlib.Analysis.Analytic.IsolatedZeros
+
+@[expose] public section
 
 namespace OAI
 

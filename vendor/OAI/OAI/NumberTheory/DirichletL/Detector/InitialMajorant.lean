@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.MellinGuarded
-import OAI.NumberTheory.DirichletL.Detector.RowAnalytic
-import OAI.NumberTheory.DirichletL.Detector.MellinBoundary
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.MellinGuarded
+public import OAI.NumberTheory.DirichletL.Detector.RowAnalytic
+public import OAI.NumberTheory.DirichletL.Detector.MellinBoundary
+
+@[expose] public section
 
 namespace OAI
 

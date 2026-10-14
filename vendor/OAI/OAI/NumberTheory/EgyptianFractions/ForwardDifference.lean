@@ -1,4 +1,10 @@
-import OAI.NumberTheory.EgyptianFractions.ReciprocalDerivatives
+module
+
+public import OAI.NumberTheory.EgyptianFractions.ReciprocalDerivatives
+public import Mathlib.Analysis.Calculus.Deriv.MeanValue
+public import Mathlib.Order.CompletePartialOrder
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicGeometry
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicLengths
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicGeometry
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicLengths
+
+@[expose] public section
 
 namespace OAI
 

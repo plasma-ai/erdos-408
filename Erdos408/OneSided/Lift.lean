@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Setup
-import Mathlib.Data.ZMod.Basic
-import Mathlib.LinearAlgebra.Matrix.ConjTranspose
+module
+
+public import Erdos408.OneSided.Setup
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.LinearAlgebra.Matrix.ConjTranspose
 
 /-!
 # The lift
@@ -24,6 +26,8 @@ fixed label dyad `Y` and pad dyad `d₀`.
 The damping exponent `q` of the lift is a free parameter: it equals one at the endpoints,
 so it affects only the moment.
 -/
+
+@[expose] public section
 
 noncomputable section
 

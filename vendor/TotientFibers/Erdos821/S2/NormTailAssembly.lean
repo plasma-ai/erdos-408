@@ -1,7 +1,11 @@
-import Erdos821.S2.MemorySplit
-import Erdos821.S2.MomentCRT
+module
+
+public import Erdos821.S2.MemorySplit
+public import Erdos821.S2.MomentCRT
 
 /-! Pointwise scalar assembly of cutoff, tail and physical CRT estimates. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

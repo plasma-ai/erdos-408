@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralSlots
-import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralQuotient
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralSlots
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralQuotient
+
+@[expose] public section
 
 namespace OAI
 

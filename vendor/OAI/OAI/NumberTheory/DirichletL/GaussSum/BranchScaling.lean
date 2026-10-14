@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.MeanSquare.ReflectedDyadicSeries
+module
+
+public import OAI.NumberTheory.DirichletL.MeanSquare.ReflectedDyadicSeries
+
+@[expose] public section
 
 namespace OAI
 

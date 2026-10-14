@@ -1,6 +1,8 @@
-import Erdos408.TwoSided.Endpoint.Constant.Bounds
-import Erdos408.TwoSided.Endpoint.Constant.Growth
-import Erdos408.TwoSided.Endpoint.Tuple
+module
+
+public import Erdos408.TwoSided.Endpoint.Constant.Bounds
+public import Erdos408.TwoSided.Endpoint.Constant.Growth
+public import Erdos408.TwoSided.Endpoint.Tuple
 
 /-!
 # The constant part at high times
@@ -21,6 +23,8 @@ elementary separation along a geometric grid in place of the Mellin cutoff (`Box
 (`Piece`, `High`), the size facts U6 (`Bounds`), elementary facts (`Glue`) and the exponents
 (`Growth`); U7 and U9 are in `Setup.lean`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalParentSource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalParentSource
+
+@[expose] public section
 
 namespace OAI
 

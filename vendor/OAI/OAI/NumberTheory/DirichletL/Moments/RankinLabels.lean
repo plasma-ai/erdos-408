@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RankinRadical
-import OAI.NumberTheory.DirichletL.Moments.RankinSubset
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RankinRadical
+public import OAI.NumberTheory.DirichletL.Moments.RankinSubset
+
+@[expose] public section
 
 namespace OAI
 

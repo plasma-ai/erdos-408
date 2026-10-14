@@ -1,6 +1,10 @@
-import Erdos821.S2.MemoryHistory
+module
+
+public import Erdos821.S2.MemoryHistory
 
 /-! Cardinal accounting for old indices, stores and original ghost births. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

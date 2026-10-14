@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.Hecke.FamilySeries
-import OAI.NumberTheory.DirichletL.Hecke.CharacterAnalytic
-import OAI.NumberTheory.DirichletL.IdealCharacter
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.Hecke.FamilySeries
+public import OAI.NumberTheory.DirichletL.Hecke.CharacterAnalytic
+public import OAI.NumberTheory.DirichletL.IdealCharacter
+
+@[expose] public section
 
 namespace OAI
 

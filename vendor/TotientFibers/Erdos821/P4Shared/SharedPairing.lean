@@ -1,4 +1,8 @@
-import Erdos821.P4Probe.SharedPairingTask
+module
+
+public import Erdos821.P4Probe.SharedPairingTask
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

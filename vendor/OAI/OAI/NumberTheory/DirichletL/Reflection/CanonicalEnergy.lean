@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.MemberGeometry
-import OAI.NumberTheory.DirichletL.Reflection.CanonicalParameters
-import OAI.NumberTheory.DirichletL.Reflection.OriginalCellBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.MemberGeometry
+public import OAI.NumberTheory.DirichletL.Reflection.CanonicalParameters
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalCellBounds
+
+@[expose] public section
 
 namespace OAI
 

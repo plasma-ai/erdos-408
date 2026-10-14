@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.WholePriorityParents
-import OAI.NumberTheory.DirichletL.Inversion.PrioritySecondSource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.WholePriorityParents
+public import OAI.NumberTheory.DirichletL.Inversion.PrioritySecondSource
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralSelected
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedBounds
-import OAI.NumberTheory.DirichletL.Detector.RayPoolGood
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsCentralSelected
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedBounds
+public import OAI.NumberTheory.DirichletL.Detector.RayPoolGood
+
+@[expose] public section
 
 namespace OAI
 

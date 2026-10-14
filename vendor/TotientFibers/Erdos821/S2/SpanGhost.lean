@@ -1,6 +1,10 @@
-import Erdos821.S2.PrimeIndices
+module
+
+public import Erdos821.S2.PrimeIndices
 
 /-! The visit choices reconstructed from finite prime lifespans. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

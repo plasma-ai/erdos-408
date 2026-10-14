@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralError
-import OAI.NumberTheory.DirichletL.PrimeRows.UniformJoins
-import OAI.NumberTheory.DirichletL.PrimeRows.UniformTail
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralError
+public import OAI.NumberTheory.DirichletL.PrimeRows.UniformJoins
+public import OAI.NumberTheory.DirichletL.PrimeRows.UniformTail
+
+@[expose] public section
 
 namespace OAI
 

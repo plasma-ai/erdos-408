@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstScale
-import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstScale
+public import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
+
+@[expose] public section
 
 namespace OAI
 

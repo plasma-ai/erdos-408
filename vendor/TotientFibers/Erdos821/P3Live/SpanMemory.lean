@@ -1,6 +1,10 @@
-import Erdos821.S2.SpanEdgeMemoryTask
-import Erdos821.S2.PhysicalCompatibility
-import Erdos821.S2.HistoryProjection
+module
+
+public import Erdos821.S2.SpanEdgeMemoryTask
+public import Erdos821.S2.PhysicalCompatibility
+public import Erdos821.S2.HistoryProjection
+
+@[expose] public section
 
 set_option autoImplicit false
 

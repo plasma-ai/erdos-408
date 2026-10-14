@@ -1,4 +1,8 @@
-import Erdos821.P5.RawCorrelation
+module
+
+public import Erdos821.P5.RawCorrelation
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

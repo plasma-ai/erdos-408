@@ -1,6 +1,10 @@
-import Mathlib.Algebra.Squarefree.Basic
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Lean.Elab.Tactic.Omega
+module
+
+public import Mathlib.Algebra.Squarefree.Basic
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Lean.Elab.Tactic.Omega
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.ReopenedSeparation
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ReopenedSeparation
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicCount
-import OAI.NumberTheory.DirichletL.Moments.SourceInputFirstTailScale
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalAmplitudePair
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicCount
+public import OAI.NumberTheory.DirichletL.Moments.SourceInputFirstTailScale
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalAmplitudePair
+
+@[expose] public section
 
 namespace OAI
 

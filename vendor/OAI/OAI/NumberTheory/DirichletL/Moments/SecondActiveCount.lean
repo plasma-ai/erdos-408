@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.ActiveSource
-import OAI.NumberTheory.DirichletL.Moments.RankinScale
-import OAI.NumberTheory.DirichletL.Moments.SecondSourceMask
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ActiveSource
+public import OAI.NumberTheory.DirichletL.Moments.RankinScale
+public import OAI.NumberTheory.DirichletL.Moments.SecondSourceMask
+
+@[expose] public section
 
 namespace OAI
 

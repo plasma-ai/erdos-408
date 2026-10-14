@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ShortReflectedEnergy
-import OAI.NumberTheory.DirichletL.Reflection.CubeCompletedEnergyUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ShortReflectedEnergy
+public import OAI.NumberTheory.DirichletL.Reflection.CubeCompletedEnergyUniformDegree
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

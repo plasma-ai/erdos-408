@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorFiberEnergy
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCount
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorFiberEnergy
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCount
+
+@[expose] public section
 
 namespace OAI
 

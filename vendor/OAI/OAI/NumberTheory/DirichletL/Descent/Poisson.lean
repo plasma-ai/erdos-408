@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.Descent.Marks
-import OAI.NumberTheory.DirichletL.Descent.LocalReflection
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.Descent.Marks
+public import OAI.NumberTheory.DirichletL.Descent.LocalReflection
+
+@[expose] public section
 
 namespace OAI
 

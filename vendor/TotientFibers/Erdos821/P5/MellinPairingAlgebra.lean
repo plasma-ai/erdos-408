@@ -1,5 +1,9 @@
-import Erdos821.P5.FullResidualStripping
-import Erdos821.P5.MellinCutoffBridge
+module
+
+public import Erdos821.P5.FullResidualStripping
+public import Erdos821.P5.MellinCutoffBridge
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FullCorrelation
-import OAI.NumberTheory.DirichletL.Moments.Canonical
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FullCorrelation
+public import OAI.NumberTheory.DirichletL.Moments.Canonical
+
+@[expose] public section
 
 namespace OAI
 

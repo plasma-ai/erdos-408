@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSixthSource
-import OAI.NumberTheory.DirichletL.Moments.SecondWindowSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSixthSource
+public import OAI.NumberTheory.DirichletL.Moments.SecondWindowSource
+
+@[expose] public section
 
 namespace OAI
 

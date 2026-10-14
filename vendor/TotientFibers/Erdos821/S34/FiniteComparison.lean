@@ -1,4 +1,8 @@
-import Erdos821.S34.EventPairing
+module
+
+public import Erdos821.S34.EventPairing
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

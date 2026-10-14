@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.Rectangle
-import OAI.NumberTheory.DirichletL.Moments.Support
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.Rectangle
+public import OAI.NumberTheory.DirichletL.Moments.Support
+
+@[expose] public section
 
 namespace OAI
 

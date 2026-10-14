@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongKeys
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongIntegral
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongKeys
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongIntegral
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.CentralRepeatedProduct
-import OAI.NumberTheory.DirichletL.PrimeRows.RowPartition
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CentralRepeatedProduct
+public import OAI.NumberTheory.DirichletL.PrimeRows.RowPartition
+
+@[expose] public section
 
 namespace OAI
 

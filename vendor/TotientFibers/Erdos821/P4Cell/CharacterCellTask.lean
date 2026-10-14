@@ -1,5 +1,10 @@
-import Erdos821.Blueprint.Classical
-import Mathlib.NumberTheory.MulChar.Lemmas
+module
+
+public import Erdos821.Blueprint.Classical
+public import Mathlib.NumberTheory.MulChar.Lemmas
+public import Mathlib.NumberTheory.DirichletCharacter.Bounds
+
+@[expose] public section
 
 set_option autoImplicit false
 

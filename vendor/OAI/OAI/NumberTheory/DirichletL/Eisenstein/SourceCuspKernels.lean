@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.RamifiedValuation
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.RamifiedValuation
+
+@[expose] public section
 
 namespace OAI
 

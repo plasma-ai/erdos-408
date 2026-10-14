@@ -1,5 +1,7 @@
-import Erdos408.TwoSided.Graph.Insertion
-import Erdos408.TwoSided.Graph.Restore.Patterns
+module
+
+public import Erdos408.TwoSided.Graph.Insertion
+public import Erdos408.TwoSided.Graph.Restore.Patterns
 
 /-!
 # Stripping the shared labels and restoring the restrictions
@@ -22,6 +24,8 @@ Both cases are the general pattern `(C, K)` case
 the identifications of `Graph/Restore/Patterns.lean`, a crude U7 (`|F| ≤ L`, `Setup.lean`)
 and U8 (`Graph/Restore/Core.lean`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

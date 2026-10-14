@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.DirichletForm
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.DirichletForm
+
+@[expose] public section
 
 namespace OAI
 

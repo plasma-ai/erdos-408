@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ReopenedBlocks
-import OAI.NumberTheory.DirichletL.Descent.FirstRetainedPhysical
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ReopenedBlocks
+public import OAI.NumberTheory.DirichletL.Descent.FirstRetainedPhysical
+
+@[expose] public section
 
 namespace OAI
 

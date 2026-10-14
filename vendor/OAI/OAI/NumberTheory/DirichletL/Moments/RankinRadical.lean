@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RankinCount
-import OAI.NumberTheory.DirichletL.Moments.SecondDiagonal
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RankinCount
+public import OAI.NumberTheory.DirichletL.Moments.SecondDiagonal
+
+@[expose] public section
 
 namespace OAI
 

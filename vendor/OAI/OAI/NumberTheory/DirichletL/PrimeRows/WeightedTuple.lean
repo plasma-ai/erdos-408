@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.TupleFactor
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.TupleFactor
+
+@[expose] public section
 
 namespace OAI
 

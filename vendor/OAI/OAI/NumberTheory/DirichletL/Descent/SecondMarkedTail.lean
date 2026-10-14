@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondWholeCutoff
-import OAI.NumberTheory.DirichletL.Inversion.SecondPrincipalCaller
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondWholeCutoff
+public import OAI.NumberTheory.DirichletL.Inversion.SecondPrincipalCaller
+
+@[expose] public section
 
 namespace OAI
 

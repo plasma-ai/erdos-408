@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.SourceCoefficient
-import OAI.NumberTheory.DirichletL.CubicSieve.GaussNorm
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SourceCoefficient
+public import OAI.NumberTheory.DirichletL.CubicSieve.GaussNorm
+
+@[expose] public section
 
 namespace OAI
 

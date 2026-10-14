@@ -1,6 +1,10 @@
-import Erdos821.P5.ProgressionIntervals
-import Erdos821.P5.LogBoundary
-import Erdos821.P5.LongSieve
+module
+
+public import Erdos821.P5.ProgressionIntervals
+public import Erdos821.P5.LogBoundary
+public import Erdos821.P5.LongSieve
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

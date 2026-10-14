@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.ReopenedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ReopenedSource
+
+@[expose] public section
 
 namespace OAI
 

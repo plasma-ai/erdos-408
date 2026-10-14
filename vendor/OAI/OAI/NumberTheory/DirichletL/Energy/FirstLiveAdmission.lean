@@ -1,11 +1,15 @@
-import OAI.NumberTheory.DirichletL.Energy.AmplifiedChildWidth
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedSource
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicRows
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedRadiusLower
-import OAI.NumberTheory.DirichletL.Moments.FirstSecondCommonGates
-import OAI.NumberTheory.DirichletL.Moments.FirstSourceConductorCaps
-import OAI.NumberTheory.DirichletL.Moments.SecondInputCapacitySource
-import OAI.NumberTheory.DirichletL.Energy.InputParentCapacity
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.AmplifiedChildWidth
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedSource
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalDyadicRows
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedRadiusLower
+public import OAI.NumberTheory.DirichletL.Moments.FirstSecondCommonGates
+public import OAI.NumberTheory.DirichletL.Moments.FirstSourceConductorCaps
+public import OAI.NumberTheory.DirichletL.Moments.SecondInputCapacitySource
+public import OAI.NumberTheory.DirichletL.Energy.InputParentCapacity
+
+@[expose] public section
 
 namespace OAI
 

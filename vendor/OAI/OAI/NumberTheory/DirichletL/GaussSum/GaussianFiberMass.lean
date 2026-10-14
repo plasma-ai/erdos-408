@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.GaussianDualLimit
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.GaussianDualLimit
+
+@[expose] public section
 
 namespace OAI
 

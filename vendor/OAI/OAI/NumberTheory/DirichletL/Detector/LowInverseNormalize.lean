@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowCentralGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowCentralGeometry
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstRetainedNorm
-import OAI.NumberTheory.DirichletL.Moments.SourceInputFirstRemainder
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstRetainedNorm
+public import OAI.NumberTheory.DirichletL.Moments.SourceInputFirstRemainder
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.ActualSecondMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ActualSecondMeasure
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowGaussianCentral
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowGaussianCentral
+
+@[expose] public section
 
 namespace OAI
 

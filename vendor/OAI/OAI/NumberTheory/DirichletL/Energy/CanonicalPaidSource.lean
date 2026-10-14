@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.CanonicalLiveCapacity
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalLiveCapacity
+
+@[expose] public section
 
 namespace OAI
 

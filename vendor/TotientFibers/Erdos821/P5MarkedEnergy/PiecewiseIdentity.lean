@@ -1,10 +1,14 @@
-import Erdos821.P5MarkedEnergy.BoxJ3
-import Erdos821.P5MarkedEnergy.SmoothPartition
-import Erdos821.P5MarkedEnergy.ErrorBound
-import Erdos821.P5.MarkedEnergyTask
+module
+
+public import Erdos821.P5MarkedEnergy.BoxJ3
+public import Erdos821.P5MarkedEnergy.SmoothPartition
+public import Erdos821.P5MarkedEnergy.ErrorBound
+public import Erdos821.P5.MarkedEnergyTask
 
 /-! The coefficientwise decomposition of the marked endpoint energy coefficient
 into smooth pieces and characters, plus the square-multiple error. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Endpoint.Tuple.Box
+module
+
+public import Erdos408.TwoSided.Endpoint.Tuple.Box
 
 /-!
 # The ordinary and exceptional times of one box (tuple part)
@@ -12,6 +14,8 @@ an interval of times `L^E ≤ |τ| ≤ 2T₀ - 2`:
   `|G|² ≤ (2/v₋)² (PNR/Y)² |N⁻¹ P_l|² |R⁻¹ R|² ≤ (2/v₋)² · 4 (4κ' L^{-A'})² s_j` by E9, and
   `∑_j s_j ≤ 9(1 + |κ'|) L^{2C_U + 4}` by E8.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.TupleHigh
 

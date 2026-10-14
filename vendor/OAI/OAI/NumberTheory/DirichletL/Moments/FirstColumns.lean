@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstNormalization
-import OAI.NumberTheory.DirichletL.Moments.FixedRay
-import OAI.NumberTheory.DirichletL.Moments.ChildAssembly
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstNormalization
+public import OAI.NumberTheory.DirichletL.Moments.FixedRay
+public import OAI.NumberTheory.DirichletL.Moments.ChildAssembly
+
+@[expose] public section
 
 namespace OAI
 

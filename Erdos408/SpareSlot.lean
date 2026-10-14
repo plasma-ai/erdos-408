@@ -1,4 +1,6 @@
-import Erdos408.Grid
+module
+
+public import Erdos408.Grid
 
 /-!
 # Removal of the spare slot
@@ -40,6 +42,8 @@ The argument is carried out once, for an arbitrary family of boxes
 (`SpareSlot.abs_sum_sigma_sub_le`), and then applied to the cells of `region₁`
 and to the cell pairs of `region₂`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

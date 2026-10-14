@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondDiagonal
-import OAI.NumberTheory.DirichletL.Moments.SourceZeroEnergy
-import OAI.NumberTheory.DirichletL.Moments.HeckeColumnWindow
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondDiagonal
+public import OAI.NumberTheory.DirichletL.Moments.SourceZeroEnergy
+public import OAI.NumberTheory.DirichletL.Moments.HeckeColumnWindow
+
+@[expose] public section
 
 namespace OAI
 

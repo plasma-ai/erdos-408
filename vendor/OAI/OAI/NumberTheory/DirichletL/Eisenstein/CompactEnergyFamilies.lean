@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.VariationalLaplacian
-import OAI.NumberTheory.DirichletL.CubicSieve.ReopenedFibers
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.VariationalLaplacian
+public import OAI.NumberTheory.DirichletL.CubicSieve.ReopenedFibers
+
+@[expose] public section
 
 namespace OAI
 

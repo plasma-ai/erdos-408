@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.Shape
-import OAI.NumberTheory.DirichletL.Reflection.Denominator
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Shape
+public import OAI.NumberTheory.DirichletL.Reflection.Denominator
+
+@[expose] public section
 
 namespace OAI
 

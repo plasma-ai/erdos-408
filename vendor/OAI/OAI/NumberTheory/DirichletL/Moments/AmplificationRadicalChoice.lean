@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationRadicalFamily
-import OAI.NumberTheory.DirichletL.Moments.AmplifiedRetainedRadius
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationRadicalFamily
+public import OAI.NumberTheory.DirichletL.Moments.AmplifiedRetainedRadius
+
+@[expose] public section
 
 namespace OAI
 

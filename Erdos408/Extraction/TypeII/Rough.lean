@@ -1,4 +1,6 @@
-import PrimeNumberTheoremAnd.IEANTN.Mertens
+module
+
+public import PrimeNumberTheoremAnd.IEANTN.Mertens
 
 /-!
 # Counting rough numbers
@@ -16,6 +18,8 @@ rough `b` divisible by `d = p^k` has `p > Y`, and `b / d` is rough. So
 by induction, using Mertens' first theorem `∑_{d ≤ y} Λ(d)/d = log y + O(1)`
 and `ψ(n) ≪ n`. This closes for `A = 2 (2 + C_ψ)` once `log Y ≥ 4E`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

@@ -1,4 +1,9 @@
-import Erdos821.P4Probe.AverageOrthogonality
+module
+
+public import Erdos821.P4Probe.AverageOrthogonality
+public import Mathlib.Algebra.BigOperators.Group.Finset.Powerset
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

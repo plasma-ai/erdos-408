@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.GcdReduction
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.GcdReduction
+
+@[expose] public section
 
 namespace OAI
 

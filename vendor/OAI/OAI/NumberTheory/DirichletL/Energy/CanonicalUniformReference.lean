@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.CanonicalReferencePaid
-import OAI.NumberTheory.DirichletL.Energy.BandSubtypeTransport
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalReferencePaid
+public import OAI.NumberTheory.DirichletL.Energy.BandSubtypeTransport
+
+@[expose] public section
 
 namespace OAI
 

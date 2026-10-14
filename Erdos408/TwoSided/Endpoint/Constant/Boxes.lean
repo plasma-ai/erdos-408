@@ -1,5 +1,7 @@
-import Erdos408.TwoSided.Endpoint.Constant.Glue
-import Erdos408.TwoSided.Endpoint.Constant.Kernel
+module
+
+public import Erdos408.TwoSided.Endpoint.Constant.Glue
+public import Erdos408.TwoSided.Endpoint.Constant.Kernel
 
 /-!
 # Boxes of the constant part
@@ -13,6 +15,8 @@ factors over the classes `n ≡ β (mod k)` as `W ∑_β A_β(t) B_β(t)`, with 
 polynomial `A_β(t) = e^{-jδ} ∑_{p} e(hpβ/k) p^{iσ} p^{it}` and the residual
 `B_β(t) = e^{-iδ} ∑_{n ≡ β} H(n) n^{iσ} n^{it}`, split by a divisor model as `B⁰ + B¹`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.ConstHigh
 

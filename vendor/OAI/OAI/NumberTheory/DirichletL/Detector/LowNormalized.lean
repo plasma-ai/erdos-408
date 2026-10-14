@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowWindowBound
-import OAI.NumberTheory.DirichletL.PrimeRows.CubeNormalizer
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowWindowBound
+public import OAI.NumberTheory.DirichletL.PrimeRows.CubeNormalizer
+
+@[expose] public section
 
 namespace OAI
 

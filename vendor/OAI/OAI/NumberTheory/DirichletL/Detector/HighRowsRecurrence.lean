@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsScalar
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsScalar
+
+@[expose] public section
 
 namespace OAI
 

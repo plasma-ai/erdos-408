@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Arithmetic.SquarefreeDivisors
+module
+
+public import OAI.NumberTheory.DirichletL.Arithmetic.SquarefreeDivisors
+
+@[expose] public section
 
 namespace OAI
 

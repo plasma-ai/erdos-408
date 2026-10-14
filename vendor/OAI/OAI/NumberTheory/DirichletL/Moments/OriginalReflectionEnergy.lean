@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.OriginalReflectionApproximation
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.OriginalReflectionApproximation
+
+@[expose] public section
 
 namespace OAI
 

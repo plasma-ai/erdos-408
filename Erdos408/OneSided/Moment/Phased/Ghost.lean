@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Moment.Chain
-import Erdos408.OneSided.Bands
+module
+
+public import Erdos408.OneSided.Moment.Chain
+public import Erdos408.OneSided.Bands
 
 /-!
 # The ghost bound on the chain states
@@ -18,6 +20,8 @@ PD `mem:ghost-norm`).
 * `sum_hits_le_sum_bandPrimes` and `sum_one_div_bandPrimes_le`: the hitting particles have at
   most one line per band prime, and `∑_{p band prime} 1/p ≤ ∑_i V_i ≤ K`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

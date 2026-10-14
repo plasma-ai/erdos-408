@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.PhysicalEnergy
-import OAI.NumberTheory.DirichletL.Inversion.TerminalWidths
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.PhysicalEnergy
+public import OAI.NumberTheory.DirichletL.Inversion.TerminalWidths
+
+@[expose] public section
 
 namespace OAI
 

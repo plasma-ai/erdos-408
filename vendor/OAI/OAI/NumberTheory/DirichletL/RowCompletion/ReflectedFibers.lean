@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.ActiveReindexing
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.ActiveReindexing
+
+@[expose] public section
 
 namespace OAI
 

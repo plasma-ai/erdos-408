@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.DetectorReady
-import OAI.NumberTheory.DirichletL.Hecke.DetectorSupportedWitness
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.DetectorReady
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorSupportedWitness
+
+@[expose] public section
 
 namespace OAI
 

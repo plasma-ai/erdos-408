@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.Physical
-import OAI.NumberTheory.DirichletL.Descent.Completion
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.Physical
+public import OAI.NumberTheory.DirichletL.Descent.Completion
+
+@[expose] public section
 
 namespace OAI
 

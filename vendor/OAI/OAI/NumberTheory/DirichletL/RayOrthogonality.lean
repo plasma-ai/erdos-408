@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.IdealCharacter
-import Mathlib.NumberTheory.MulChar.Duality
+module
+
+public import OAI.NumberTheory.DirichletL.IdealCharacter
+public import Mathlib.NumberTheory.MulChar.Duality
+
+@[expose] public section
 
 namespace OAI
 

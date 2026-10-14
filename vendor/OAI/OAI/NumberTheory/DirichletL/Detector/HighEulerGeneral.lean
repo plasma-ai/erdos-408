@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighEuler
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighEuler
+
+@[expose] public section
 
 namespace OAI
 

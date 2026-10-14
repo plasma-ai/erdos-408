@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.PuncturedMarks
-import OAI.NumberTheory.DirichletL.Reflection.SlotCoefficients
-import OAI.NumberTheory.DirichletL.Reflection.MarkedTuples
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.PuncturedMarks
+public import OAI.NumberTheory.DirichletL.Reflection.SlotCoefficients
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedTuples
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.ConditionedKernel
+module
+
+public import Erdos821.P3Clean.ConditionedKernel
 
 /-! The big dilation exponent gives a natural power of one fixed cyclic translation. -/
+
+@[expose] public section
 
 noncomputable section
 

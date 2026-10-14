@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorTail
-import OAI.NumberTheory.DirichletL.Hecke.DetectorPartition
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorTail
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorPartition
+
+@[expose] public section
 
 namespace OAI
 

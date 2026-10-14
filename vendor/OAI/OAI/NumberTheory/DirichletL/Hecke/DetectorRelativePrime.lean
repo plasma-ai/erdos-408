@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorPrimeFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorPrimeFamily
+
+@[expose] public section
 
 namespace OAI
 

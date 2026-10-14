@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.NonprincipalContour
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.NonprincipalContour
+
+@[expose] public section
 
 namespace OAI
 

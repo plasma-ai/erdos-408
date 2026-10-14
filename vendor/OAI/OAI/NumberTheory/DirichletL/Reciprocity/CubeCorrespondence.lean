@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.ReflectedCuspMellin
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.ReflectedCuspMellin
+
+@[expose] public section
 
 namespace OAI
 

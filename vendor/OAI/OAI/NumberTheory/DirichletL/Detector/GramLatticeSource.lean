@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramPrimaryLattice
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramPrimaryLattice
+
+@[expose] public section
 
 namespace OAI
 

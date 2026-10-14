@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.HighEulerGeneral
-import OAI.NumberTheory.DirichletL.Detector.SixthFrequency
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighEulerGeneral
+public import OAI.NumberTheory.DirichletL.Detector.SixthFrequency
+
+@[expose] public section
 
 namespace OAI
 

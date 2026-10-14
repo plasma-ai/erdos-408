@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondBlockCount
-import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondBlockCount
+public import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
+
+@[expose] public section
 
 namespace OAI
 

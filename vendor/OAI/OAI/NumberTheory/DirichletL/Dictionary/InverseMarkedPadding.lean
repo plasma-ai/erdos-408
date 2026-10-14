@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawRadial
-import OAI.NumberTheory.DirichletL.Dictionary.InverseRawFiberSource
-import OAI.NumberTheory.DirichletL.Descent.Basic
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawRadial
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseRawFiberSource
+public import OAI.NumberTheory.DirichletL.Descent.Basic
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianTuple
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianTuple
+
+@[expose] public section
 
 namespace OAI
 

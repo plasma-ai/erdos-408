@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedFourCoefficients
-import OAI.NumberTheory.DirichletL.Moments.FirstAnnularMajorant
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedFourCoefficients
+public import OAI.NumberTheory.DirichletL.Moments.FirstAnnularMajorant
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondBlockAggregate
-import OAI.NumberTheory.DirichletL.Moments.SecondActiveCount
-import OAI.NumberTheory.DirichletL.Moments.DyadicCount
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondBlockAggregate
+public import OAI.NumberTheory.DirichletL.Moments.SecondActiveCount
+public import OAI.NumberTheory.DirichletL.Moments.DyadicCount
+
+@[expose] public section
 
 namespace OAI
 

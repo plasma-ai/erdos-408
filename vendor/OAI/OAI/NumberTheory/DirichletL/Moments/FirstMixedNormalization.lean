@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedCommonRadius
-import OAI.NumberTheory.DirichletL.Moments.AmplificationErrorEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedCommonRadius
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationErrorEnergy
+
+@[expose] public section
 
 namespace OAI
 

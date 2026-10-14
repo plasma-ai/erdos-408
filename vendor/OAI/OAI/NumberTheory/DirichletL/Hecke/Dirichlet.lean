@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.Euler
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Euler
+
+@[expose] public section
 
 namespace OAI
 

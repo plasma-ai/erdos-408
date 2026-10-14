@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Arithmetic.EisensteinEmbedding
+module
+
+public import OAI.NumberTheory.DirichletL.Arithmetic.EisensteinEmbedding
+
+@[expose] public section
 
 namespace OAI
 

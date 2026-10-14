@@ -1,4 +1,8 @@
-import Erdos821.Blueprint.Adapters
+module
+
+public import Erdos821.Blueprint.Adapters
+
+@[expose] public section
 
 noncomputable section
 open Filter

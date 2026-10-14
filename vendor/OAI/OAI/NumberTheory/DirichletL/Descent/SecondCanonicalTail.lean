@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondMarkedTail
-import OAI.NumberTheory.DirichletL.Descent.SecondFreshTruncation
-import OAI.NumberTheory.DirichletL.Descent.SecondCutoffScale
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondMarkedTail
+public import OAI.NumberTheory.DirichletL.Descent.SecondFreshTruncation
+public import OAI.NumberTheory.DirichletL.Descent.SecondCutoffScale
+
+@[expose] public section
 
 namespace OAI
 

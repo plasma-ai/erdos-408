@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramCommonSource
-import OAI.NumberTheory.DirichletL.Detector.GramSourceBlock
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramCommonSource
+public import OAI.NumberTheory.DirichletL.Detector.GramSourceBlock
+
+@[expose] public section
 
 namespace OAI
 

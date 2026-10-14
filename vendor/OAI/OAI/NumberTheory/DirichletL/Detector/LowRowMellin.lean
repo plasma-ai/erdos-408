@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowMellin
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowMellin
+
+@[expose] public section
 
 namespace OAI
 

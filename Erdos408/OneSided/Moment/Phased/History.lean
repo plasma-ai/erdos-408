@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.Chain
+module
+
+public import Erdos408.OneSided.Moment.Chain
 
 /-!
 # The history expansion with visit-dependent coefficients
@@ -11,6 +13,8 @@ expands such products into histories.
   coefficients `E j` at each edge `j`, the product `𝒢^{G₀} ℰ^{E₀} 𝒢^{G₁} ⋯ ℰ^{E_{N-1}} 𝒢^{G_N}`
   applied to `f` at `s` is `∑_h ∏_j G_j(visit_j, h.1 j) ∏_j E_j(…, h.2 j) f(end(s, h))`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

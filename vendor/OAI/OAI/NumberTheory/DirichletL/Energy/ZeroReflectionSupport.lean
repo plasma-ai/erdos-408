@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.ReflectedChoiceEnergy
-import OAI.NumberTheory.DirichletL.Moments.UniformReflectionApproximation
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowWindow
-import OAI.NumberTheory.DirichletL.Energy.ReferenceDivisors
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedChoiceEnergy
+public import OAI.NumberTheory.DirichletL.Moments.UniformReflectionApproximation
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowWindow
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceDivisors
+
+@[expose] public section
 
 namespace OAI
 

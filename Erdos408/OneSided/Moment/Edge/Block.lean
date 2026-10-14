@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Model
-import Erdos408.OneSided.Moment.Edge.Lattice
-import Mathlib.Data.Nat.Squarefree
-import Mathlib.Algebra.Field.ZMod
+module
+
+public import Erdos408.OneSided.Model
+public import Erdos408.OneSided.Moment.Edge.Lattice
+public import Mathlib.Data.Nat.Squarefree
+public import Mathlib.Algebra.Field.ZMod
 
 /-!
 # Lattice blocks in the root box
@@ -20,6 +22,8 @@ root box have `τ(z) ∈ [1/16, 16]`.
   `det(z, z')/D` into the determinant of the coordinates. Hence the kernel has the norm of the
   determinant matrix `e(ϑ (m₁ m₂' - m₂ m₁'))` on such boxes.
 -/
+
+@[expose] public section
 
 noncomputable section
 

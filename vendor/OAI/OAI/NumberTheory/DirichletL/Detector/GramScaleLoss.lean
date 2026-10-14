@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramInfiniteEstimate
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramInfiniteEstimate
+
+@[expose] public section
 
 namespace OAI
 

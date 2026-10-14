@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondWholeCutoff
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondWholeCutoff
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import Erdos821.P5MarkedEnergy.Final
+module
+
+public import Erdos821.P5MarkedEnergy.Final
 
 /-! The exported proof of `Erdos821.P5Core.MarkedEndpointEnergyTask`. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.Smoothed
-import OAI.NumberTheory.DirichletL.CubicSieve.Majorant
-import OAI.NumberTheory.DirichletL.CubicSieve.ZeroMode
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.Smoothed
+public import OAI.NumberTheory.DirichletL.CubicSieve.Majorant
+public import OAI.NumberTheory.DirichletL.CubicSieve.ZeroMode
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,9 @@
-import OAI.NumberTheory.PrimeGaps.SingularSeries
+module
+
+public import OAI.NumberTheory.PrimeGaps.SingularSeries
+public import Mathlib.Algebra.Field.ZMod
+
+@[expose] public section
 
 namespace OAI
 

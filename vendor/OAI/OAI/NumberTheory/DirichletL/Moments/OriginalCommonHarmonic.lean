@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonRadialData
-import OAI.NumberTheory.DirichletL.Moments.SourceZeroEnergy
-import OAI.NumberTheory.DirichletL.Moments.CommonHarmonicMass
-import OAI.NumberTheory.DirichletL.Moments.SecondActiveCount
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonRadialData
+public import OAI.NumberTheory.DirichletL.Moments.SourceZeroEnergy
+public import OAI.NumberTheory.DirichletL.Moments.CommonHarmonicMass
+public import OAI.NumberTheory.DirichletL.Moments.SecondActiveCount
+
+@[expose] public section
 
 namespace OAI
 

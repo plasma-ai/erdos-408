@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstIntegral
-import OAI.NumberTheory.DirichletL.PrimeRows.SourceTransport
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstWShift
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstIntegral
+public import OAI.NumberTheory.DirichletL.PrimeRows.SourceTransport
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstWShift
+
+@[expose] public section
 
 namespace OAI
 

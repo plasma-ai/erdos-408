@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceWindowEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceWindowEnergy
+
+@[expose] public section
 
 namespace OAI
 

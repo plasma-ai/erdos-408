@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.ActualChildState
-import OAI.NumberTheory.DirichletL.Descent.SecondCutoffScale
-import OAI.NumberTheory.DirichletL.Descent.SecondPhysicalRows
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ActualChildState
+public import OAI.NumberTheory.DirichletL.Descent.SecondCutoffScale
+public import OAI.NumberTheory.DirichletL.Descent.SecondPhysicalRows
+
+@[expose] public section
 
 namespace OAI
 

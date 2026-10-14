@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstGlobalSourceEnergy
-import OAI.NumberTheory.DirichletL.Descent.PriorityProfile
-import OAI.NumberTheory.DirichletL.Descent.FirstChildWindowsCells
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstGlobalSourceEnergy
+public import OAI.NumberTheory.DirichletL.Descent.PriorityProfile
+public import OAI.NumberTheory.DirichletL.Descent.FirstChildWindowsCells
+
+@[expose] public section
 
 namespace OAI
 

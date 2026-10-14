@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.FirstGaussianCoefficients
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.FirstGaussianCoefficients
+
+@[expose] public section
 
 namespace OAI
 

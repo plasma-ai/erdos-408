@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondDeletedMovingMass
-import OAI.NumberTheory.DirichletL.Descent.PhysicalExponents
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondDeletedMovingMass
+public import OAI.NumberTheory.DirichletL.Descent.PhysicalExponents
+
+@[expose] public section
 
 namespace OAI
 

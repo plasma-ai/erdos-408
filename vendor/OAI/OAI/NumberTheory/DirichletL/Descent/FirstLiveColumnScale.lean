@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstDyadicLiveRadius
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileScales
-import OAI.NumberTheory.DirichletL.Descent.FirstLiveCaps
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstDyadicLiveRadius
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileScales
+public import OAI.NumberTheory.DirichletL.Descent.FirstLiveCaps
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import Erdos821.Blueprint.Graph
+module
+
+public import Erdos821.Blueprint.Graph
 
 /-! A common damping parameter and Schur weight for the memory evolution. -/
+
+@[expose] public section
 
 noncomputable section
 

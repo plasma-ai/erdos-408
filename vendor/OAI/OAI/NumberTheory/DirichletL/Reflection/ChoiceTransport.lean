@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.FixedTuples
-import OAI.NumberTheory.DirichletL.Reflection.OriginalTransport
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.FixedTuples
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalTransport
+
+@[expose] public section
 
 namespace OAI
 

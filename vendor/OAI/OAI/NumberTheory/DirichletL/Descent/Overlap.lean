@@ -1,7 +1,11 @@
-import Mathlib.RingTheory.UniqueFactorizationDomain.Moebius
-import Mathlib.Analysis.Complex.Basic
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.NormNum
+module
+
+public import Mathlib.RingTheory.UniqueFactorizationDomain.Moebius
+public import Mathlib.Analysis.Complex.Basic
+public import Mathlib.Tactic.Ring
+public import Mathlib.Tactic.NormNum
+
+@[expose] public section
 
 namespace OAI
 

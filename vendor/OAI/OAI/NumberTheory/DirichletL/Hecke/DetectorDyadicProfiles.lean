@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicSupport
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDyadicSupport
+
+@[expose] public section
 
 namespace OAI
 

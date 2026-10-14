@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceZeroEnergy
-import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalCost
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceZeroEnergy
+public import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalCost
+
+@[expose] public section
 
 namespace OAI
 

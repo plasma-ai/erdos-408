@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveSource
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileAssembly
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileLiveSource
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileAssembly
+
+@[expose] public section
 
 namespace OAI
 

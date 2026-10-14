@@ -1,4 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.PrincipalDensity
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.PrincipalDensity
+public import Mathlib.Analysis.Calculus.Deriv.Prod
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import Erdos821.P5MarkedEnergy.FinalPiece
+module
+
+public import Erdos821.P5MarkedEnergy.FinalPiece
 
 /-! The two square sums of the final assembly: the square-multiple error and
 the coefficient square sum of one piece. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

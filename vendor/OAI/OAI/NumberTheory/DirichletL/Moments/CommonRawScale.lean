@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.AllocationCost
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AllocationCost
+
+@[expose] public section
 
 namespace OAI
 

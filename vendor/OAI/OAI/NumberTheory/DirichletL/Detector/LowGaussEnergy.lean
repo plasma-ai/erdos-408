@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowRayAmplitude
-import OAI.NumberTheory.DirichletL.Moments.ReflectedChild
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowRayAmplitude
+public import OAI.NumberTheory.DirichletL.Moments.ReflectedChild
+
+@[expose] public section
 
 namespace OAI
 

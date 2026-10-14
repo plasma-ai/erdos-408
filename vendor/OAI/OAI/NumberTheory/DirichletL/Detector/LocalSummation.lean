@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LocalSeries
-import OAI.NumberTheory.DirichletL.Detector.Euler
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LocalSeries
+public import OAI.NumberTheory.DirichletL.Detector.Euler
+
+@[expose] public section
 
 namespace OAI
 

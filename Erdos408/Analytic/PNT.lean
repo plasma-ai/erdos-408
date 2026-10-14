@@ -1,9 +1,11 @@
-import Erdos408.Analytic.Core
-import Erdos408.Hypotheses
-import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt
-import Mathlib.NumberTheory.LSeries.Dirichlet
-import Mathlib.NumberTheory.LSeries.DirichletContinuation
-import PrimeNumberTheoremAnd.PerronFormula
+module
+
+public import Erdos408.Analytic.Core
+public import Erdos408.Hypotheses
+public import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt
+public import Mathlib.NumberTheory.LSeries.Dirichlet
+public import Mathlib.NumberTheory.LSeries.DirichletContinuation
+public import PrimeNumberTheoremAnd.PerronFormula
 
 /-!
 # The prime number theorem in progressions with a power saving
@@ -27,6 +29,8 @@ half-plane `re s > 7/8`.
   weighted sums `∑_{n ≤ z} Λ(n) χ(n) (z - n)` at `z = ⌊y⌋ + 1/2` and `z + h`,
   with `h ≈ y^{31/32}`, gives the theorem with `c = 1/64` and `C = O(1)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

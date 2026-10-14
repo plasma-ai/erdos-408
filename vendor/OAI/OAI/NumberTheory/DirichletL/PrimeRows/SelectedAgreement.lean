@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedUnramified
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedUnramified
+
+@[expose] public section
 
 namespace OAI
 

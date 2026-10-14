@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalSourceShell
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalCount
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalSourceShell
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalCount
+
+@[expose] public section
 
 namespace OAI
 

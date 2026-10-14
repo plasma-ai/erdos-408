@@ -1,4 +1,9 @@
-import Mathlib.NumberTheory.AbelSummation
+module
+
+public import Mathlib.NumberTheory.AbelSummation
+public import Mathlib.MeasureTheory.Function.Floor
+
+@[expose] public section
 
 namespace Erdos970
 

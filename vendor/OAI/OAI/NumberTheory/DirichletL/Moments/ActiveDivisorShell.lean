@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ActiveAllocation
-import OAI.NumberTheory.DirichletL.Moments.DivisorBoundary
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ActiveAllocation
+public import OAI.NumberTheory.DirichletL.Moments.DivisorBoundary
+
+@[expose] public section
 
 namespace OAI
 

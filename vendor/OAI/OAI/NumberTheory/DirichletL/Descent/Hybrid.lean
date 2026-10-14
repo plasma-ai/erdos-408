@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.IdealMasks
-import OAI.NumberTheory.DirichletL.Descent.Fibers
-import OAI.NumberTheory.DirichletL.CubicSieve.Ideal
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.IdealMasks
+public import OAI.NumberTheory.DirichletL.Descent.Fibers
+public import OAI.NumberTheory.DirichletL.CubicSieve.Ideal
+
+@[expose] public section
 
 namespace OAI
 

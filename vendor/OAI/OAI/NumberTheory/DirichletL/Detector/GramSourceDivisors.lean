@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramCommonEnergy
-import OAI.NumberTheory.DirichletL.Detector.GramIdealMass
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramCommonEnergy
+public import OAI.NumberTheory.DirichletL.Detector.GramIdealMass
+
+@[expose] public section
 
 namespace OAI
 

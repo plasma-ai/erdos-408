@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstDiscarded
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstDiscarded
+
+@[expose] public section
 
 namespace OAI
 

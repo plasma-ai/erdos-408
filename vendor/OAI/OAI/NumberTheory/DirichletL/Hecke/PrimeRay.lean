@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.PrimeBin
-import OAI.NumberTheory.DirichletL.Hecke.RayQuotient
-import OAI.NumberTheory.DirichletL.Hecke.IdealOperations
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeBin
+public import OAI.NumberTheory.DirichletL.Hecke.RayQuotient
+public import OAI.NumberTheory.DirichletL.Hecke.IdealOperations
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.LogarithmicTargets
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.LogarithmicTargets
+
+@[expose] public section
 
 namespace OAI
 

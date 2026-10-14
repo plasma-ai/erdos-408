@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Decomposition.Bound
-import Erdos408.OneSided.Decomposition.Eventually
+module
+
+public import Erdos408.OneSided.Decomposition.Bound
+public import Erdos408.OneSided.Decomposition.Eventually
 
 /-!
 # The lift identity and the collisions
@@ -25,6 +27,8 @@ The pieces are in `Decomposition/`: `Count` and `Pair` bound the pair error `E(a
 collision probabilities, `Bound` assembles them at one `x`, and `Eventually` supplies the
 growth facts.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

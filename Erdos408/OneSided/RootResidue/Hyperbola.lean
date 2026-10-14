@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Analysis.Kloosterman
-import Erdos408.OneSided.RootResidue.Fourier
+module
+
+public import Erdos408.OneSided.Analysis.Kloosterman
+public import Erdos408.OneSided.RootResidue.Fourier
 
 /-!
 # Exponential sums over a twisted modular hyperbola
@@ -15,6 +17,8 @@ so the weak Kloosterman bound `det:weak-kloosterman` gives
 `n = u S₁` with `S₁ = (u, S)`, `t = u` and `a = u d₀ - 1`; the condition `t x = t c₀`
 is `x ≡ c₀ (mod S₁)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided.RootResidue
 

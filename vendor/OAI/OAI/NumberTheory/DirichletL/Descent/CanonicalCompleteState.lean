@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalShortFinite
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongTotal
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalShortFinite
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongTotal
+
+@[expose] public section
 
 namespace OAI
 

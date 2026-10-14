@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalSource
-import OAI.NumberTheory.DirichletL.Moments.CommonHeightEnvelope
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalReflection
-import OAI.NumberTheory.DirichletL.Hecke.UnitRows
-import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalSource
+public import OAI.NumberTheory.DirichletL.Moments.CommonHeightEnvelope
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalReflection
+public import OAI.NumberTheory.DirichletL.Hecke.UnitRows
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeScale
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.FiniteProductBounds
-import OAI.NumberTheory.DirichletL.Hecke.Reciprocal
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.FiniteProductBounds
+public import OAI.NumberTheory.DirichletL.Hecke.Reciprocal
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Continuation
-import Mathlib.Analysis.MellinInversion
+module
+
+public import OAI.NumberTheory.DirichletL.Continuation
+public import Mathlib.Analysis.MellinInversion
+
+@[expose] public section
 
 namespace OAI
 

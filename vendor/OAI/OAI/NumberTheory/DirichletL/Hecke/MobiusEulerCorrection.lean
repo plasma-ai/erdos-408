@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Mellin.SixthPowerAverage
+module
+
+public import OAI.NumberTheory.DirichletL.Mellin.SixthPowerAverage
+
+@[expose] public section
 
 namespace OAI
 

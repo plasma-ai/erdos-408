@@ -1,7 +1,9 @@
-import Erdos408.TwoSided.Setup
-import Erdos821.P5Energy.Final
-import Erdos821.P5FourierArcProof.FourierArc
-import Erdos821.P5MarkedEnergy.Weights
+module
+
+public import Erdos408.TwoSided.Setup
+public import Erdos821.P5Energy.Final
+public import Erdos821.P5FourierArcProof.FourierArc
+public import Erdos821.P5MarkedEnergy.Weights
 
 /-!
 # Fourier identities and the arc energy
@@ -18,6 +20,8 @@ for additive polynomials `∑_{n ∈ s} a_n e(θn)` over `ℕ` (upstream's
   `|t| > T₀` bounded by the weighted mean value (upstream `weighted_mean_value`).
 * `norm_sum_star_mul_cpow`: the Mellin side is `Y` times a twisted polynomial (6.24).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.Arcs
 

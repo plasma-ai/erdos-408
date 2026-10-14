@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.CorrespondenceTests
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.CorrespondenceTests
+
+@[expose] public section
 
 namespace OAI
 

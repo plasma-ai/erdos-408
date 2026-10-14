@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.RowClosure
-import OAI.NumberTheory.DirichletL.Hecke.LocalRamification
-import OAI.NumberTheory.DirichletL.Hecke.ExceptionalRows
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.RowClosure
+public import OAI.NumberTheory.DirichletL.Hecke.LocalRamification
+public import OAI.NumberTheory.DirichletL.Hecke.ExceptionalRows
+
+@[expose] public section
 
 namespace OAI
 

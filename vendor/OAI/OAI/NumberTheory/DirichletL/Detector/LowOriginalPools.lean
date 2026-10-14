@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowSlotScales
-import OAI.NumberTheory.DirichletL.Detector.RayPoolGood
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowSlotScales
+public import OAI.NumberTheory.DirichletL.Detector.RayPoolGood
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GramFrequencyMass
-import OAI.NumberTheory.DirichletL.Detector.GramPrefactor
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramFrequencyMass
+public import OAI.NumberTheory.DirichletL.Detector.GramPrefactor
+
+@[expose] public section
 
 namespace OAI
 

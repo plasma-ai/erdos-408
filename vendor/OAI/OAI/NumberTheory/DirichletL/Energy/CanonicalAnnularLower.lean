@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.CanonicalAnnularPower
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalAnnularPower
+
+@[expose] public section
 
 namespace OAI
 

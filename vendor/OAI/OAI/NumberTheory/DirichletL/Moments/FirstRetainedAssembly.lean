@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstRetainedBlock
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstRetainedBlock
+
+@[expose] public section
 
 namespace OAI
 

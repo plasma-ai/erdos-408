@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.NonprincipalBoundary
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstWGrowth
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.NonprincipalBoundary
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstWGrowth
+
+@[expose] public section
 
 namespace OAI
 

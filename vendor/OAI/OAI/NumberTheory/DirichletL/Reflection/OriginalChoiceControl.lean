@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.OriginalSlotSupport
-import OAI.NumberTheory.DirichletL.Reflection.OriginalTransport
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalSlotSupport
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalTransport
+
+@[expose] public section
 
 namespace OAI
 

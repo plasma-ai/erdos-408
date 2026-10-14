@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.GlobalBudget
-import OAI.NumberTheory.DirichletL.Reflection.TupleMembers
-import OAI.NumberTheory.DirichletL.Reflection.GlobalEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.GlobalBudget
+public import OAI.NumberTheory.DirichletL.Reflection.TupleMembers
+public import OAI.NumberTheory.DirichletL.Reflection.GlobalEnergy
+
+@[expose] public section
 
 namespace OAI
 

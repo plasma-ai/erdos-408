@@ -1,4 +1,8 @@
-import Erdos821.P3Edge.RowSupport
+module
+
+public import Erdos821.P3Edge.RowSupport
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

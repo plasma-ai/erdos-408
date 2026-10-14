@@ -1,6 +1,10 @@
-import Erdos821.S2.BatchOrders
+module
+
+public import Erdos821.S2.BatchOrders
 
 /-! Full histories retain all ghost-batch orderings with the same weight. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

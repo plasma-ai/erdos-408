@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Cauchy
-import Erdos408.OneSided.Major
-import Erdos408.OneSided.Replacement
+module
+
+public import Erdos408.OneSided.Cauchy
+public import Erdos408.OneSided.Major
+public import Erdos408.OneSided.Replacement
 
 /-!
 # The one-sided Type II estimate
@@ -15,6 +17,8 @@ A proof of `OneSidedTypeII` (PD Theorem 3.1, extended), following PD §§3–5 a
   `Q_Y^maj` by `O(X Y L^{-D₁ - 1})`.
 * `eventually_majorSquare` (interface 3): under P4 and (G), `Q_Y^maj = O(X Y L^{-D₁ - 1})`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

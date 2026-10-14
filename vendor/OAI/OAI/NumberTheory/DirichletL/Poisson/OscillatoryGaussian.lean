@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Poisson.GaussianMoments
+module
+
+public import OAI.NumberTheory.DirichletL.Poisson.GaussianMoments
+
+@[expose] public section
 
 namespace OAI
 

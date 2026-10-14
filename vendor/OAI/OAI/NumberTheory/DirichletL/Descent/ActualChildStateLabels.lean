@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.ActualChildState
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ActualChildState
+
+@[expose] public section
 
 namespace OAI
 

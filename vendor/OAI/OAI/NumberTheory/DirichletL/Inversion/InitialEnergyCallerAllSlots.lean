@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerBranch
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerMass
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerBranch
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerMass
+
+@[expose] public section
 
 namespace OAI
 

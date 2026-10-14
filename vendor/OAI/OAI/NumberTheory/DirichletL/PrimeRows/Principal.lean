@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.Character
-import OAI.NumberTheory.DirichletL.Hecke.RowNonprincipal
-import OAI.NumberTheory.DirichletL.Hecke.UnitRows
-import OAI.NumberTheory.DirichletL.UnitSexticWitness
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.Character
+public import OAI.NumberTheory.DirichletL.Hecke.RowNonprincipal
+public import OAI.NumberTheory.DirichletL.Hecke.UnitRows
+public import OAI.NumberTheory.DirichletL.UnitSexticWitness
+
+@[expose] public section
 
 namespace OAI
 

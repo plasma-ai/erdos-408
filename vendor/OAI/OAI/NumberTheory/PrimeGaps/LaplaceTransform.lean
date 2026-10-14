@@ -1,4 +1,9 @@
-import OAI.NumberTheory.PrimeGaps.ContourIntegrals
+module
+
+public import OAI.NumberTheory.PrimeGaps.ContourIntegrals
+public import Mathlib.Algebra.Order.Archimedean.Real.Hom
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialOverlapFourier
-import OAI.NumberTheory.DirichletL.Inversion.InitialClippedColumns
-import OAI.NumberTheory.DirichletL.Inversion.SecondChildWindows
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialOverlapFourier
+public import OAI.NumberTheory.DirichletL.Inversion.InitialClippedColumns
+public import OAI.NumberTheory.DirichletL.Inversion.SecondChildWindows
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Graph.BoundsLists
+module
+
+public import Erdos408.TwoSided.Graph.BoundsLists
 
 /-!
 # The absolute bound of a pattern pairing
@@ -10,6 +12,8 @@ factor of `patternPairing` absolutely, keeping each damping with its list sum.
 * The auxiliary labels have mass exactly `1` (`sum_labelMass`, `Setup.lean`).
 * Hence `‖patternPairing‖ ≤ |S| κ_K sup|g| (β^{2M} c²)^s` with `β = max 1 v₋⁻¹`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

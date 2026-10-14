@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Detector.SpectralCoefficient
-import OAI.NumberTheory.DirichletL.Detector.PhysicalNorms
-import OAI.NumberTheory.DirichletL.Detector.RadialIdentity
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SpectralCoefficient
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalNorms
+public import OAI.NumberTheory.DirichletL.Detector.RadialIdentity
+
+@[expose] public section
 
 namespace OAI
 

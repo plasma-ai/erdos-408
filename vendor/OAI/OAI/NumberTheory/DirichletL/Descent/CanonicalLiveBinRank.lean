@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalRankCapChildren
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLongGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalRankCapChildren
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLongGeometry
+
+@[expose] public section
 
 namespace OAI
 

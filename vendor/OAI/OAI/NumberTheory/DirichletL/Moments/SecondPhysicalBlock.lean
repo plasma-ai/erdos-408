@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondRadicalBlock
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondRadicalBlock
+
+@[expose] public section
 
 namespace OAI
 

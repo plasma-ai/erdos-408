@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.Operator
-import Mathlib.Tactic.Positivity
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.Operator
+public import Mathlib.Tactic.Positivity
+
+@[expose] public section
 
 namespace OAI
 

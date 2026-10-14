@@ -1,8 +1,12 @@
-import Erdos821.S2.SpanLifecycle
-import Erdos821.S2.LifespanEnds
-import Erdos821.S2.OrphanResidues
+module
+
+public import Erdos821.S2.SpanLifecycle
+public import Erdos821.S2.LifespanEnds
+public import Erdos821.S2.OrphanResidues
 
 /-! The finite one-prime lifespan sum, including the absent and orphan cases. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

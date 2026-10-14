@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.CuspIntegration
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.CuspIntegration
+
+@[expose] public section
 
 namespace OAI
 

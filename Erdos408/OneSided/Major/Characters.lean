@@ -1,7 +1,9 @@
-import Mathlib.Analysis.Complex.Polynomial.Basic
-import Mathlib.NumberTheory.DirichletCharacter.Bounds
-import Mathlib.NumberTheory.DirichletCharacter.Orthogonality
-import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
+module
+
+public import Mathlib.Analysis.Complex.Polynomial.Basic
+public import Mathlib.NumberTheory.DirichletCharacter.Bounds
+public import Mathlib.NumberTheory.DirichletCharacter.Orthogonality
+public import Mathlib.RingTheory.RootsOfUnity.AlgebraicallyClosed
 
 /-!
 # Expansion into Dirichlet characters
@@ -13,6 +15,8 @@ units `b, m, n` modulo `k`. Expand it into products of three Dirichlet character
 `g(y) = ∑_χ ĝ(χ) χ(y)`, where `ĝ(χ) = φ(k)⁻¹ ∑_{u unit} g(u) χ̄(u)`, which follows from
 the orthogonality of characters. There are at most `k` characters modulo `k`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

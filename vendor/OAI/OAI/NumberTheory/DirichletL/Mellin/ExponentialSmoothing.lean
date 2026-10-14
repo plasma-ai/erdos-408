@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Arithmetic.EisensteinCoordinates
+module
+
+public import OAI.NumberTheory.DirichletL.Arithmetic.EisensteinCoordinates
+
+@[expose] public section
 
 namespace OAI
 
@@ -160,12 +164,12 @@ structure CRTChoice where
   kpp : ℕ
   deriving DecidableEq
 
-private def CRTChoice.coordinates (q : CRTChoice) :
+def CRTChoice.coordinates (q : CRTChoice) :
     (ℕ × ℕ × ℕ × ℕ) × (ℕ × ℕ × ℕ × ℕ) × (ℕ × ℕ × ℕ × ℕ) :=
   ((q.J, q.C, q.e, q.v), (q.s, q.J2, q.b1, q.b2),
     (q.A1, q.A2, q.d, q.kpp))
 
-private theorem CRTChoice.coordinates_injective :
+theorem CRTChoice.coordinates_injective :
     Function.Injective CRTChoice.coordinates := by
   intro x y h
   cases x
@@ -268,13 +272,13 @@ theorem b0_count_scale
     _ ≤ B ^ 2 * c := mul_le_mul_of_nonneg_left hsc (sq_nonneg _)
     _ = (B * Real.sqrt c) ^ 2 := by rw [mul_pow, Real.sq_sqrt hc]
 
-private def bit6 (b : Bool) : ZMod 6 := if b then 1 else 0
+def bit6 (b : Bool) : ZMod 6 := if b then 1 else 0
 def localExponent (π ε1 ε2 : Bool) : ZMod 6 :=
   bit6 ε1 - bit6 ε2 + 3 * bit6 π
 def finalExponent1 (π ε1 ε2 : Bool) : ZMod 6 :=
   let e := localExponent π ε1 ε2
   4 * bit6 ε1 + (if e = 0 then 0 else 1 + e) + bit6 π * (bit6 ε1 + bit6 ε2)
-private def finalExponent2 (π ε1 ε2 : Bool) : ZMod 6 :=
+def finalExponent2 (π ε1 ε2 : Bool) : ZMod 6 :=
   let e := localExponent π ε1 ε2
   4 * bit6 ε2 + (if e = 0 then 0 else 1 - e) + bit6 π * (bit6 ε1 + bit6 ε2)
 

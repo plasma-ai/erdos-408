@@ -1,5 +1,9 @@
-import Erdos821.S34.IdealFiniteAssembly
-import Erdos821.P4Cancel.Proof
+module
+
+public import Erdos821.S34.IdealFiniteAssembly
+public import Erdos821.P4Cancel.Proof
+
+@[expose] public section
 
 set_option autoImplicit false
 

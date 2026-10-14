@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.PoissonComparison
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.PoissonComparison
+
+@[expose] public section
 
 namespace OAI
 

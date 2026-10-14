@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.PlainGlobalBound
-import OAI.NumberTheory.DirichletL.Hecke.DyadicScale
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.PlainGlobalBound
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicScale
+
+@[expose] public section
 
 namespace OAI
 

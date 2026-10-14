@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstFamilyEnergy
-import OAI.NumberTheory.DirichletL.Descent.FirstBalancedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstFamilyEnergy
+public import OAI.NumberTheory.DirichletL.Descent.FirstBalancedSource
+
+@[expose] public section
 
 namespace OAI
 

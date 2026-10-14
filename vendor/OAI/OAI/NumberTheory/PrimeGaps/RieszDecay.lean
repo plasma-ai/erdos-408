@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.MellinSmoothing
+module
+
+public import OAI.NumberTheory.PrimeGaps.MellinSmoothing
+
+@[expose] public section
 
 namespace OAI
 

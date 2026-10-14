@@ -1,4 +1,9 @@
-import Erdos821.P5.Basic
+module
+
+public import Erdos821.P5.Basic
+public import Mathlib.Algebra.Order.Star.Real
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

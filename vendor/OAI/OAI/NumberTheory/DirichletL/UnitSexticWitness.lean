@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.IdealEuler
-import Mathlib.NumberTheory.LSeries.PrimesInAP
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.IdealEuler
+public import Mathlib.NumberTheory.LSeries.PrimesInAP
+
+@[expose] public section
 
 namespace OAI
 

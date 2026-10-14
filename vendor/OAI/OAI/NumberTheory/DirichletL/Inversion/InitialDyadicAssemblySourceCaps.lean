@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicAssemblyLive
-import OAI.NumberTheory.DirichletL.Inversion.InitialRetainedSupport
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicAssemblyLive
+public import OAI.NumberTheory.DirichletL.Inversion.InitialRetainedSupport
+
+@[expose] public section
 
 namespace OAI
 

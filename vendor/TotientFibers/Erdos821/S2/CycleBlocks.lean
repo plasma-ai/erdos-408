@@ -1,6 +1,11 @@
-import Erdos821.S2.Definitions
+module
+
+public import Erdos821.S2.Definitions
+public import Mathlib.GroupTheory.Perm.Cycle.Factors
 
 /-! Cycle supports as disjoint blocks of birth addresses. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

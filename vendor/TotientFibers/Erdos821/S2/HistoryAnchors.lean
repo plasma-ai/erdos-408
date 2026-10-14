@@ -1,7 +1,11 @@
-import Erdos821.S2.HistoryProjection
-import Erdos821.S2.HistoryFinite
+module
+
+public import Erdos821.S2.HistoryProjection
+public import Erdos821.S2.HistoryFinite
 
 /-! Each distinct birth fixes one prime's congruence anchor for its entire lifespan. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

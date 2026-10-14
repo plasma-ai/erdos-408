@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroReferencePhysical
-import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceLiveBounded
-import OAI.NumberTheory.DirichletL.Energy.FixedRadialReduction
-import OAI.NumberTheory.DirichletL.Energy.PhysicalEntry
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroReferencePhysical
+public import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceLiveBounded
+public import OAI.NumberTheory.DirichletL.Energy.FixedRadialReduction
+public import OAI.NumberTheory.DirichletL.Energy.PhysicalEntry
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ShortReflectedPower
-import OAI.NumberTheory.DirichletL.Inversion.ReflectedShortUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ShortReflectedPower
+public import OAI.NumberTheory.DirichletL.Inversion.ReflectedShortUniformDegree
+
+@[expose] public section
 
 namespace OAI
 noncomputable section

@@ -1,4 +1,8 @@
-import Erdos821.Blueprint.Classical
+module
+
+public import Erdos821.Blueprint.Classical
+
+@[expose] public section
 
 set_option autoImplicit false
 

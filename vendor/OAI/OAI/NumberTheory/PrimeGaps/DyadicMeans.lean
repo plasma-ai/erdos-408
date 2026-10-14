@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.VaughanBounds
+module
+
+public import OAI.NumberTheory.PrimeGaps.VaughanBounds
+
+@[expose] public section
 
 namespace OAI
 

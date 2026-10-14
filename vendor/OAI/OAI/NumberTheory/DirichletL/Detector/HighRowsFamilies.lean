@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsSummability
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsSummability
+
+@[expose] public section
 
 namespace OAI
 

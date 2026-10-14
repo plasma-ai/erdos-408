@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Allocation.Failure.Reduction
+module
+
+public import Erdos408.Extraction.Allocation.Failure.Reduction
 
 /-!
 # The free-factor sum at fixed `d` and `r`
@@ -15,6 +17,8 @@ divides `r d` exactly when it divides `d`.
 Also `S_∅ ≤ W (B (Π + 2ε) + N)` when `w ≤ W` on `(A, B]`, by the sifted count
 with `U = ∅`; above `x^γ` one may take `W = 1/(D_j γ L)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

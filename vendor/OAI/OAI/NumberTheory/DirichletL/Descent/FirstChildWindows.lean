@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.SecondChildWindows
-import OAI.NumberTheory.DirichletL.Descent.FirstUnequalRetainedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.SecondChildWindows
+public import OAI.NumberTheory.DirichletL.Descent.FirstUnequalRetainedEnergy
+
+@[expose] public section
 
 namespace OAI
 

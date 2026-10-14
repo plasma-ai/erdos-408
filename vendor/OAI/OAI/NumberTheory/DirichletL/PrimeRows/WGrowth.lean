@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.TupleGrowth
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedBounds
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.TupleGrowth
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedBounds
+
+@[expose] public section
 
 namespace OAI
 

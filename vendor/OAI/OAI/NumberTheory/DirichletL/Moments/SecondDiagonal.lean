@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.GaussEnergy
-import OAI.NumberTheory.DirichletL.IdealCharacter
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.GaussEnergy
+public import OAI.NumberTheory.DirichletL.IdealCharacter
+
+@[expose] public section
 
 namespace OAI
 

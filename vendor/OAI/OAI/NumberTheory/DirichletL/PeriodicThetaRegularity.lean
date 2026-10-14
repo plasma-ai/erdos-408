@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.Theta
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Theta
+
+@[expose] public section
 
 namespace OAI
 

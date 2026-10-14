@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondWholeKernel
-import OAI.NumberTheory.DirichletL.Descent.SecondPass
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondWholeKernel
+public import OAI.NumberTheory.DirichletL.Descent.SecondPass
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceSupportedTailUniform
-import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
-import OAI.NumberTheory.DirichletL.Moments.NaturalRadialCutoff
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalAmplitudePair
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceSupportedTailUniform
+public import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
+public import OAI.NumberTheory.DirichletL.Moments.NaturalRadialCutoff
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalAmplitudePair
+
+@[expose] public section
 
 namespace OAI
 

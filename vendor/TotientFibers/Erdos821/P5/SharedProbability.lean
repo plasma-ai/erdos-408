@@ -1,5 +1,9 @@
-import Erdos821.P5.ForbiddenProbability
-import Erdos821.P5.FreeCollisionTheorem
+module
+
+public import Erdos821.P5.ForbiddenProbability
+public import Erdos821.P5.FreeCollisionTheorem
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

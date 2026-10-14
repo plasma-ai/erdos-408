@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.CycleDisplacement
-import Erdos821.P3Clean.RawNormAssembly
+module
+
+public import Erdos821.P3Clean.CycleDisplacement
+public import Erdos821.P3Clean.RawNormAssembly
 
 /-! The regular cyclic lift of the literal conditioned kernel. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

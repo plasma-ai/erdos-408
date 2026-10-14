@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedAgreement
-import OAI.NumberTheory.DirichletL.PrimeRows.MarkedExclusions
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedAgreement
+public import OAI.NumberTheory.DirichletL.PrimeRows.MarkedExclusions
+
+@[expose] public section
 
 namespace OAI
 

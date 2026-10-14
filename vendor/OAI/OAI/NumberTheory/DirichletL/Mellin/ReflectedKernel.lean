@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.InitialBound
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.InitialBound
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonAllowance
-import OAI.NumberTheory.DirichletL.Moments.SecondCanonical
-import OAI.NumberTheory.DirichletL.Moments.FirstCanonicalFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonAllowance
+public import OAI.NumberTheory.DirichletL.Moments.SecondCanonical
+public import OAI.NumberTheory.DirichletL.Moments.FirstCanonicalFamily
+
+@[expose] public section
 
 namespace OAI
 

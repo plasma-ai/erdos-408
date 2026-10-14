@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionarySlots
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionarySlots
+
+@[expose] public section
 
 namespace OAI
 

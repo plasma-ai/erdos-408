@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CubeBinPartition
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CubeBinPartition
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Endpoint
+module
+
+public import OAI.NumberTheory.DirichletL.Endpoint
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.CalibrationCRT
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CalibrationCRT
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import Erdos821.P4Bridge.UnsignedKernel
+module
+
+public import Erdos821.P4Bridge.UnsignedKernel
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

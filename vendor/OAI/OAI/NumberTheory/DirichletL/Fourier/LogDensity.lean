@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.TruncatedSecondTransfer
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.TruncatedSecondTransfer
+
+@[expose] public section
 
 namespace OAI
 

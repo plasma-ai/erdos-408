@@ -1,5 +1,9 @@
-import Erdos821.S34.ComparisonKernel
-import Erdos821.S34.ProbeTasks
+module
+
+public import Erdos821.S34.ComparisonKernel
+public import Erdos821.S34.ProbeTasks
+
+@[expose] public section
 
 set_option autoImplicit false
 

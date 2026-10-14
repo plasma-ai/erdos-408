@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondTailAbsorption
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondTailAbsorption
+
+@[expose] public section
 
 namespace OAI
 

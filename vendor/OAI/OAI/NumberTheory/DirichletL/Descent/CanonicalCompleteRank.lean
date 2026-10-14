@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalCompleteChildren
-import OAI.NumberTheory.DirichletL.Descent.CanonicalLiveBinRank
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalCompleteChildren
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalLiveBinRank
+
+@[expose] public section
 
 namespace OAI
 

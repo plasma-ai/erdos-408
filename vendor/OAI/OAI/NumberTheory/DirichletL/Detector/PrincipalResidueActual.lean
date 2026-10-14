@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.PrincipalNormalizer
-import OAI.NumberTheory.DirichletL.Detector.FiniteProductBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PrincipalNormalizer
+public import OAI.NumberTheory.DirichletL.Detector.FiniteProductBounds
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import Erdos821.S34.KernelDyadicSupport
-import Erdos821.S34.LogMultiplier
-import Erdos821.S34.MajorPointwise
-import Erdos821.S34.RationalPhase
+module
+
+public import Erdos821.S34.KernelDyadicSupport
+public import Erdos821.S34.LogMultiplier
+public import Erdos821.S34.MajorPointwise
+public import Erdos821.S34.RationalPhase
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Arithmetic.EisensteinCoordinates
+module
+
+public import OAI.NumberTheory.DirichletL.Arithmetic.EisensteinCoordinates
+
+@[expose] public section
 
 namespace OAI
 

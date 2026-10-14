@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAllocationGaussEnergy
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
-import OAI.NumberTheory.DirichletL.Moments.AllocationCost
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAllocationGaussEnergy
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
+public import OAI.NumberTheory.DirichletL.Moments.AllocationCost
+
+@[expose] public section
 
 namespace OAI
 

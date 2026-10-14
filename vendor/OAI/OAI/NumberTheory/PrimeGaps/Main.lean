@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.RieszDecay
+module
+
+public import OAI.NumberTheory.PrimeGaps.RieszDecay
+
+@[expose] public section
 
 namespace OAI
 

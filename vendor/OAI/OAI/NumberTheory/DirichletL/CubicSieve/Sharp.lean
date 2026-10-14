@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.ExponentImprovement
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.ExponentImprovement
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,8 +1,12 @@
-import Erdos821.P5MarkedEnergy.Factorization
-import Erdos821.P5.EndpointMean
+module
+
+public import Erdos821.P5MarkedEnergy.Factorization
+public import Erdos821.P5.EndpointMean
 
 /-! The square-multiple error of small-mark removal (paper §4): the endpoint
 square sum over multiples of `p_s^2`, summed over the removed group. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

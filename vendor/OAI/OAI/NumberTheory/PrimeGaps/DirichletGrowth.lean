@@ -1,4 +1,10 @@
-import OAI.NumberTheory.PrimeGaps.LogParameters
+module
+
+public import OAI.NumberTheory.PrimeGaps.LogParameters
+public import Mathlib.MeasureTheory.Function.Floor
+public import Mathlib.NumberTheory.LSeries.SumCoeff
+
+@[expose] public section
 
 namespace OAI
 

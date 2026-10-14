@@ -1,5 +1,8 @@
-import Mathlib
-import Erdos821.Blueprint.Sieve
+module
+
+public import Erdos821.Blueprint.Sieve
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Algebra.Order.Star.Int
 
 /-!
 # Sieve transfer: finset prime sets ↔ squarefree divisors (`lem:sieve`)
@@ -10,6 +13,8 @@ is the inverse (via `Nat.prod_primeFactors_of_squarefree`). This bridges
 `Prelim.BlockSieve`/`SieveExpectation` (finsets) with `Blueprint.Sieve`
 (`ℕ` divisors, `products`, `polynomial`, `remainderSum`).
 -/
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

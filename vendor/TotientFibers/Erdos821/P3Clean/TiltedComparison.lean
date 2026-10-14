@@ -1,10 +1,14 @@
-import Erdos821.P3Clean.DensityBounds
-import Erdos821.P3Clean.AuxiliaryBan
-import Erdos821.P3Clean.AveragedMultiplier
-import Erdos821.P3Clean.BigNormAverage
-import Erdos821.P3Clean.TiltedIdealKernel
+module
+
+public import Erdos821.P3Clean.DensityBounds
+public import Erdos821.P3Clean.AuxiliaryBan
+public import Erdos821.P3Clean.AveragedMultiplier
+public import Erdos821.P3Clean.BigNormAverage
+public import Erdos821.P3Clean.TiltedIdealKernel
 
 /-! Density normalization and the quantitative signed ideal comparison. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

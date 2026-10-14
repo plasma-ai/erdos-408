@@ -1,7 +1,11 @@
-import Erdos821.P3High.GhostRelabel
+module
+
+public import Erdos821.P3High.GhostRelabel
 
 /-! The initial boundary with prescribed initial big labels: each prescribed slot replaces
 its total tilted mass by a point mass. -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

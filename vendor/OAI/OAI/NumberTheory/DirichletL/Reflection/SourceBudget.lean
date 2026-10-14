@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.SourceCost
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.SourceCost
+
+@[expose] public section
 
 namespace OAI
 

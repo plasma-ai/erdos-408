@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.MarkedProduct
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstBoundary
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.MarkedProduct
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstBoundary
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.SixthFrequency
-import OAI.NumberTheory.DirichletL.Detector.PhysicalLocalEuler
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.SixthFrequency
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalLocalEuler
+
+@[expose] public section
 
 namespace OAI
 

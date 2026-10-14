@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedFirstBounds
-import OAI.NumberTheory.DirichletL.PrimeRows.PrincipalMask
-import OAI.NumberTheory.DirichletL.Hecke.LogarithmicInput
-import OAI.NumberTheory.DirichletL.Hecke.DyadicReflectedFamily
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedFirstBounds
+public import OAI.NumberTheory.DirichletL.PrimeRows.PrincipalMask
+public import OAI.NumberTheory.DirichletL.Hecke.LogarithmicInput
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicReflectedFamily
+
+@[expose] public section
 
 namespace OAI
 

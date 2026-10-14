@@ -1,6 +1,10 @@
-import Erdos821.Blueprint.MemoryEdge
+module
+
+public import Erdos821.Blueprint.MemoryEdge
 
 /-! Literal finite alternating paths, before independent residues are averaged. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.ChineseRemainder.FrequencyLifts
+module
+
+public import OAI.NumberTheory.DirichletL.ChineseRemainder.FrequencyLifts
+
+@[expose] public section
 
 namespace OAI
 

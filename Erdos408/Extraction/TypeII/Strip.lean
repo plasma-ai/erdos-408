@@ -1,4 +1,6 @@
-import Erdos408.Extraction.TypeII.Single
+module
+
+public import Erdos408.Extraction.TypeII.Single
 
 /-!
 # Stripping the candidate primes (E5)
@@ -12,6 +14,8 @@ most `(g(m)/D) log(m/m̄) / (γ² L^{1.9})` above it. Summing against `1/m`, the
 telescoping step are counted by `∑_{m ≤ w} g(m)/(DγL) ≤ c w/(γL)`, which supplies the
 saving `1/L`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

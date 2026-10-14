@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceProfileMass
-import OAI.NumberTheory.DirichletL.Moments.FirstTailAggregate
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceProfileMass
+public import OAI.NumberTheory.DirichletL.Moments.FirstTailAggregate
+
+@[expose] public section
 
 namespace OAI
 

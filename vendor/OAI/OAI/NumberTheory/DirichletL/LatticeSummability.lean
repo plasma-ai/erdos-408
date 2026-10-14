@@ -1,5 +1,10 @@
-import OAI.NumberTheory.DirichletL.EisensteinTheta
-import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Summable
+module
+
+public import OAI.NumberTheory.DirichletL.EisensteinTheta
+public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Summable
+public import Mathlib.Algebra.Order.Star.Real
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAnnularInput
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAnnularInput
+
+@[expose] public section
 
 namespace OAI
 

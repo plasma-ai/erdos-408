@@ -1,11 +1,15 @@
-import Erdos821.P3High.RelabelState
-import Erdos821.S2High.AllowedMass
-import Erdos821.S2High.Majorant
+module
+
+public import Erdos821.P3High.RelabelState
+public import Erdos821.S2High.AllowedMass
+public import Erdos821.S2High.Majorant
 
 /-! Conditional edge rows: constraining fresh target slots to prescribed values costs one
 tilted point mass (times two, for the free-label ban) per slot.  The constrained slots are
 filled after stores, promotions and the step are fixed; the coefficient is replaced by its
 pattern supremum (the majorant model has the same pattern mass). -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

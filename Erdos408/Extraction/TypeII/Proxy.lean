@@ -1,5 +1,7 @@
-import Erdos408.Extraction.TypeII.Euler
-import Erdos408.Extraction.TypeII.PrimeSums
+module
+
+public import Erdos408.Extraction.TypeII.Euler
+public import Erdos408.Extraction.TypeII.PrimeSums
 
 /-!
 # The damped weight is completely multiplicative
@@ -10,6 +12,8 @@ candidate part, and `log n = log n̄ + ∑_{p ∈ P} v_p(n) log p`. The damped w
 with prime values `1/j` on candidate primes, `0` on the other primes `≤ Y`,
 and `1` above `Y`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

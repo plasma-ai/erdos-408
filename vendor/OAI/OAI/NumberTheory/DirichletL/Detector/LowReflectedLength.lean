@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowReflectedExponent
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowReflectedExponent
+
+@[expose] public section
 
 namespace OAI
 

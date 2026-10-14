@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.CuspCoercivity
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.CuspCoercivity
+
+@[expose] public section
 
 namespace OAI
 

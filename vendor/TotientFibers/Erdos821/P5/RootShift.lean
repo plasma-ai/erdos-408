@@ -1,4 +1,8 @@
-import Erdos821.P5.CompressedPairing
+module
+
+public import Erdos821.P5.CompressedPairing
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

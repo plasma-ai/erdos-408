@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Allocation.Failure.Coins
-import Erdos408.Extraction.Allocation.Failure.Sieve
+module
+
+public import Erdos408.Extraction.Allocation.Failure.Coins
+public import Erdos408.Extraction.Allocation.Failure.Sieve
 
 /-!
 # The `u`-side comparison
@@ -16,6 +18,8 @@ for `p ∤ c` and `π_p = 0` for `p ∣ c`. Summing the expansion:
 
 with `μ_g = ∑_{p ∈ g} π_p` and `e₂,g = ∑_{|K| = 2} π^K`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

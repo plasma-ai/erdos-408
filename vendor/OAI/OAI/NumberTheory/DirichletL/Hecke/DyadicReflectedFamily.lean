@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Hecke.DyadicReflection
-import OAI.NumberTheory.DirichletL.Hecke.Conjugation
-import OAI.NumberTheory.DirichletL.Hecke.DeletionBounds
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicReflection
+public import OAI.NumberTheory.DirichletL.Hecke.Conjugation
+public import OAI.NumberTheory.DirichletL.Hecke.DeletionBounds
+
+@[expose] public section
 
 namespace OAI
 

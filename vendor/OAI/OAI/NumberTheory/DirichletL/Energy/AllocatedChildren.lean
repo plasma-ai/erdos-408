@@ -1,8 +1,12 @@
-import OAI.NumberTheory.DirichletL.Energy.ChildState
-import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalRadial
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFiber
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformTests
-import OAI.NumberTheory.DirichletL.Moments.RayMaskedFloorSlots
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ChildState
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalRadial
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFiber
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformTests
+public import OAI.NumberTheory.DirichletL.Moments.RayMaskedFloorSlots
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,11 +1,12 @@
-import Mathlib
-import Erdos821.Prelim.BlockSieve
-import Erdos821.Prelim.SieveGeometry
-import Erdos821.Prelim.SieveExpectation
-import Erdos821.Prelim.SieveProduct
-import Erdos821.Prelim.SieveTransfer
-import Erdos821.Prelim.SieveLevel
-import Erdos821.Blueprint.Sieve
+module
+
+public import Erdos821.Prelim.BlockSieve
+public import Erdos821.Prelim.SieveGeometry
+public import Erdos821.Prelim.SieveExpectation
+public import Erdos821.Prelim.SieveProduct
+public import Erdos821.Prelim.SieveTransfer
+public import Erdos821.Prelim.SieveLevel
+public import Erdos821.Blueprint.Sieve
 
 /-!
 # Sieve counting, upper part (`lem:sieve`, `eq:block-sieve`)
@@ -18,6 +19,8 @@ For `S : SieveData`, `z > 1`, `Jmax` with `Z_Jmax < 2`, `J = range Jmax`,
 (`support_level_le`) so the support image lies in `S.products D`
 (`D = z^{4h+2}`).
 -/
+
+@[expose] public section
 
 noncomputable section
 attribute [local instance] Classical.propDecidable

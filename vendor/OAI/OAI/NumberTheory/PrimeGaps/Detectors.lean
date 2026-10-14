@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.EqualityPatterns
+module
+
+public import OAI.NumberTheory.PrimeGaps.EqualityPatterns
+
+@[expose] public section
 
 namespace OAI
 

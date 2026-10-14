@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.RayCharacterFamily
-import OAI.NumberTheory.DirichletL.Hecke.PrimeAmplitudeActual
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RayCharacterFamily
+public import OAI.NumberTheory.DirichletL.Hecke.PrimeAmplitudeActual
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileFiltered
-import OAI.NumberTheory.DirichletL.Descent.FirstHeightBudget
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileFiltered
+public import OAI.NumberTheory.DirichletL.Descent.FirstHeightBudget
+
+@[expose] public section
 
 namespace OAI
 

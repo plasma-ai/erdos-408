@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalRankExistenceData
-import OAI.NumberTheory.DirichletL.Descent.CanonicalRankFamilyGates
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalRankExistenceData
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalRankFamilyGates
+
+@[expose] public section
 
 namespace OAI
 

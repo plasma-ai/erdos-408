@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianMellin
-import OAI.NumberTheory.DirichletL.Detector.PhysicalAnalytic
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianMellin
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalAnalytic
+
+@[expose] public section
 
 namespace OAI
 

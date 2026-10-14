@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.Gauss
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.Gauss
+
+@[expose] public section
 
 namespace OAI
 

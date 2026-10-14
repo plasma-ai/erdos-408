@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.PriorityCellEnergy
-import OAI.NumberTheory.DirichletL.Descent.SecondCellParameters
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.PriorityCellEnergy
+public import OAI.NumberTheory.DirichletL.Descent.SecondCellParameters
+
+@[expose] public section
 
 namespace OAI
 

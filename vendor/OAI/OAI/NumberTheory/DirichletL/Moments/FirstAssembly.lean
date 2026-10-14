@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstColumns
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstColumns
+
+@[expose] public section
 
 namespace OAI
 

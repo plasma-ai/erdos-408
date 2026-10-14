@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.InitialMajorant
-import Mathlib.MeasureTheory.Integral.DominatedConvergence
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.InitialMajorant
+public import Mathlib.MeasureTheory.Integral.DominatedConvergence
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,10 @@
-import Erdos821.Blueprint.Classical
+module
+
+public import Erdos821.Blueprint.Classical
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.Real.Pi.Bounds
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

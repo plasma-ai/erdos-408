@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileUniform
-import OAI.NumberTheory.DirichletL.Descent.FirstGlobalPush
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstOriginalProfileUniform
+public import OAI.NumberTheory.DirichletL.Descent.FirstGlobalPush
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.DivisorRetained
-import OAI.NumberTheory.DirichletL.Moments.DivisorActualBoundary
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DivisorRetained
+public import OAI.NumberTheory.DirichletL.Moments.DivisorActualBoundary
+
+@[expose] public section
 
 namespace OAI
 

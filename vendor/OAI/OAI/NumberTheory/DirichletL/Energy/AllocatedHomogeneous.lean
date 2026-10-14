@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.AllocatedClipped
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.AllocatedClipped
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceNaturalPrime
-import OAI.NumberTheory.DirichletL.Moments.LiveCapacity
-import OAI.NumberTheory.DirichletL.Moments.SlotNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceNaturalPrime
+public import OAI.NumberTheory.DirichletL.Moments.LiveCapacity
+public import OAI.NumberTheory.DirichletL.Moments.SlotNormalization
+
+@[expose] public section
 
 namespace OAI
 

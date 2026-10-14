@@ -1,7 +1,10 @@
-import Mathlib
-import OAI.NumberTheory.PrimeGaps.Main
-import OAI.NumberTheory.PrimeGaps.MangoldtBounds
-import Erdos821.Blueprint.Classical
+module
+
+public import OAI.NumberTheory.PrimeGaps.Main
+public import OAI.NumberTheory.PrimeGaps.MangoldtBounds
+public import Erdos821.Blueprint.Classical
+
+@[expose] public section
 
 open scoped BigOperators
 open Filter MeasureTheory

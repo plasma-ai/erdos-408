@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondTail
-import OAI.NumberTheory.DirichletL.Moments.FirstTailAggregate
-import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondTail
+public import OAI.NumberTheory.DirichletL.Moments.FirstTailAggregate
+public import OAI.NumberTheory.DirichletL.Moments.SecondHeightFamily
+
+@[expose] public section
 
 namespace OAI
 

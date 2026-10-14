@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorCountFromMoments
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCountEndpoint
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorCountFromMoments
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCountEndpoint
+
+@[expose] public section
 
 namespace OAI
 

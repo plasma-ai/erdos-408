@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowPeriodFilter
-import OAI.NumberTheory.DirichletL.Reflection.PunctureAbsorption
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowPeriodFilter
+public import OAI.NumberTheory.DirichletL.Reflection.PunctureAbsorption
+
+@[expose] public section
 
 namespace OAI
 

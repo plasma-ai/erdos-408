@@ -1,10 +1,14 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSourceSeededPowerDescent
-import OAI.NumberTheory.DirichletL.Moments.SecondFrozenUniformSubset
-import OAI.NumberTheory.DirichletL.Moments.SourceInputTailSeed
-import OAI.NumberTheory.DirichletL.Moments.SecondChildPowerBudget
-import OAI.NumberTheory.DirichletL.Moments.SourceInputReindex
-import OAI.NumberTheory.DirichletL.Moments.SecondSourceRemainder
-import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalLiveSource
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSourceSeededPowerDescent
+public import OAI.NumberTheory.DirichletL.Moments.SecondFrozenUniformSubset
+public import OAI.NumberTheory.DirichletL.Moments.SourceInputTailSeed
+public import OAI.NumberTheory.DirichletL.Moments.SecondChildPowerBudget
+public import OAI.NumberTheory.DirichletL.Moments.SourceInputReindex
+public import OAI.NumberTheory.DirichletL.Moments.SecondSourceRemainder
+public import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalLiveSource
+
+@[expose] public section
 
 namespace OAI
 

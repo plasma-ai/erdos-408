@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.ChildEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ChildEnergy
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowTruePeriodPuncture
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowTruePeriodPuncture
+
+@[expose] public section
 
 namespace OAI
 

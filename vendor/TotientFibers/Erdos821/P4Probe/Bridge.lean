@@ -1,4 +1,8 @@
-import Erdos821.P4Probe.CancellationTasks
+module
+
+public import Erdos821.P4Probe.CancellationTasks
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

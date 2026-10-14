@@ -1,6 +1,10 @@
-import Mathlib
-import Erdos821.Blueprint.Graph
-import Erdos821.Blueprint.Analytic
+module
+
+public import Erdos821.Blueprint.Graph
+public import Erdos821.Blueprint.Analytic
+public import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+
+@[expose] public section
 
 open scoped BigOperators
 open MeasureTheory intervalIntegral

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.DivisorFullMask
-import OAI.NumberTheory.DirichletL.Moments.DivisorEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DivisorFullMask
+public import OAI.NumberTheory.DirichletL.Moments.DivisorEnergy
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCountOptimization
-import OAI.NumberTheory.DirichletL.Endpoint
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCountOptimization
+public import OAI.NumberTheory.DirichletL.Endpoint
+
+@[expose] public section
 
 namespace OAI
 

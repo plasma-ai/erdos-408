@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalCubeReduction
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalCubeReduction
+
+@[expose] public section
 
 namespace OAI
 

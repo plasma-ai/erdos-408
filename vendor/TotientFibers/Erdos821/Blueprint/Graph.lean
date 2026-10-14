@@ -1,7 +1,13 @@
-import Mathlib
+module
+
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+public import Mathlib.Data.Fintype.Perm
 
 /-! Exact finite data and leaf contracts for §2 of Weighted dilation graphs.
 Most theorem proofs are deferred; integrated proofs are audited in Audit.lean. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

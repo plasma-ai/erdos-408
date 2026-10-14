@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Allocation.Failure.Bound
+module
+
+public import Erdos408.Extraction.Allocation.Failure.Bound
 
 /-!
 # The parameters of E6 at large `x`
@@ -12,6 +14,8 @@ Bounds for the quantities of the free-factor bound in terms of `L = log x`,
   `#{K ⊆ g : |K| ≤ 2} ≤ (|g| + 1)²`;
 * `1/γ ≤ C_γ T^{21}` with `C_γ = 4 (8 |C_h| + 11) / c`, and `D_j γ L ≥ 1`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

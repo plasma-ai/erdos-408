@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedEnergy
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceBound
-import OAI.NumberTheory.DirichletL.Moments.SecondIdealBlockBound
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceFixedEnergy
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceBound
+public import OAI.NumberTheory.DirichletL.Moments.SecondIdealBlockBound
+
+@[expose] public section
 
 namespace OAI
 

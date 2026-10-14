@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.GaussSum.PowerfulParts
-import OAI.NumberTheory.DirichletL.MeanSquare.LogarithmicBins
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.PowerfulParts
+public import OAI.NumberTheory.DirichletL.MeanSquare.LogarithmicBins
+
+@[expose] public section
 
 namespace OAI
 

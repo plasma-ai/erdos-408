@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorSupportedWitness
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCountEndpoint
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorSupportedWitness
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRowCountEndpoint
+
+@[expose] public section
 
 namespace OAI
 

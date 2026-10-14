@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonLinearSource
-import OAI.NumberTheory.DirichletL.Moments.FixedRowMask
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonLinearSource
+public import OAI.NumberTheory.DirichletL.Moments.FixedRowMask
+
+@[expose] public section
 
 namespace OAI
 

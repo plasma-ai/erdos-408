@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.PhysicalEntry
-import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalRadial
-import OAI.NumberTheory.DirichletL.Moments.ReflectionRetainedLength
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.PhysicalEntry
+public import OAI.NumberTheory.DirichletL.Moments.AllocatedNaturalRadial
+public import OAI.NumberTheory.DirichletL.Moments.ReflectionRetainedLength
+
+@[expose] public section
 
 namespace OAI
 

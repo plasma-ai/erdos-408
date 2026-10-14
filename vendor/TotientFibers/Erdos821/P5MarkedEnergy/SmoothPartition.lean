@@ -1,8 +1,17 @@
-import Erdos821.Blueprint.Analytic
+module
+
+public import Erdos821.Blueprint.Analytic
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.Analysis.Calculus.ContDiff.Bounds
+public import Mathlib.Analysis.SpecialFunctions.SmoothTransition
+public import Mathlib.Topology.UniformSpace.Uniformizable
 
 /-! A fixed smooth partition of unity on `[lo, hi]` whose pieces have supports
 of ratio at most two, and the derivative bounds of the pieces of a cutoff
 multiplied by `y`. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ContDiff

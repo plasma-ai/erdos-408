@@ -1,9 +1,14 @@
-import Mathlib.NumberTheory.GaussSum
-import Mathlib.Algebra.Ring.NonZeroDivisors
-import Mathlib.RingTheory.Ideal.Span
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.LinearCombination
-import Mathlib.Tactic.ByContra
+module
+
+public import Mathlib.NumberTheory.GaussSum
+public import Mathlib.Algebra.Ring.NonZeroDivisors
+public import Mathlib.RingTheory.Ideal.Span
+public import Mathlib.Tactic.Ring
+public import Mathlib.Tactic.LinearCombination
+public import Mathlib.Tactic.ByContra
+public import Mathlib.NumberTheory.MulChar.Lemmas
+
+@[expose] public section
 
 namespace OAI
 

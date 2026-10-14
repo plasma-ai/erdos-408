@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.Moving
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Moving
+
+@[expose] public section
 
 namespace OAI
 

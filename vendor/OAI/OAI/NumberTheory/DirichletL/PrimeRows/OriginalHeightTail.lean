@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.TailIntegral
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstTransport
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.TailIntegral
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstTransport
+
+@[expose] public section
 
 namespace OAI
 

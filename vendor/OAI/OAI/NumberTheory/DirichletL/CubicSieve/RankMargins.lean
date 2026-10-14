@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.PolynomialHeight
-import OAI.NumberTheory.DirichletL.CubicSieve.DensityBudgets
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.PolynomialHeight
+public import OAI.NumberTheory.DirichletL.CubicSieve.DensityBudgets
+
+@[expose] public section
 
 namespace OAI
 

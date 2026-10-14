@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.WholeRetainedSource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.WholeRetainedSource
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.ScaleSupremum
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ScaleSupremum
+
+@[expose] public section
 
 namespace OAI
 

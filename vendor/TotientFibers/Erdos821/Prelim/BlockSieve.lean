@@ -1,5 +1,7 @@
-import Mathlib
-import Erdos821.Prelim.SieveCalculus
+module
+
+public import Erdos821.Prelim.SieveCalculus
+public import Mathlib.Data.Nat.Choose.Sum
 
 /-!
 # Block sieve, pointwise assembly (`lem:sieve`, "more precisely" part)
@@ -25,6 +27,8 @@ The expanded coefficient/support/level bounds (`|λ_d| ≤ 1` on squarefree
 the counting conclusion `eq:block-sieve`, and the rough-integer corollary
 follow next, using `Mertens` for the density products.
 -/
+
+@[expose] public section
 
 namespace Erdos821
 namespace Prelim

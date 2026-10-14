@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.Edge.Minor
+module
+
+public import Erdos408.OneSided.Moment.Edge.Minor
 
 /-!
 # Fourier in the product variable and in the cutoff
@@ -14,6 +16,8 @@ The two Fourier steps of PD §4 for the clean edge, as kernel bounds.
   kernel `H(p, p') ψ(T/Y) e(θ T)` has norm at most `C (n_min + n_triv/U)/2` if the twisted
   kernels `H e((θ + ξ/Y) T)` have norm at most `n_min` for `|ξ| ≤ U` and `n_triv` always.
 -/
+
+@[expose] public section
 
 noncomputable section
 

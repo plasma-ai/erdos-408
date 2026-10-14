@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.RayCharacters
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.RayCharacters
+
+@[expose] public section
 
 namespace OAI
 

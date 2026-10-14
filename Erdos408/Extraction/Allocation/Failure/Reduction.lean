@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Allocation.Failure.VSide
-import Mathlib.Data.Fin.Tuple.Finset
+module
+
+public import Erdos408.Extraction.Allocation.Failure.VSide
+public import Mathlib.Data.Fin.Tuple.Finset
 
 /-!
 # Reduction to one free core factor
@@ -17,6 +19,8 @@ expansion.
   `r = e₂ ⋯ e_j`. On the support `α_g(v) = α_g(d)`, as the factors carry no
   candidate prime.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RadialEligibleEnergy
-import OAI.NumberTheory.DirichletL.Moments.SourceRectangleEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RadialEligibleEnergy
+public import OAI.NumberTheory.DirichletL.Moments.SourceRectangleEnergy
+
+@[expose] public section
 
 namespace OAI
 

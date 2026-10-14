@@ -1,5 +1,9 @@
-import Erdos821.P5.SharedRootPairing
-import Erdos821.P5.MellinVectors
+module
+
+public import Erdos821.P5.SharedRootPairing
+public import Erdos821.P5.MellinVectors
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

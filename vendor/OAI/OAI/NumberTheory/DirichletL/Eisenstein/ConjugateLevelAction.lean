@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.ThetaNonvanishing
-import OAI.NumberTheory.DirichletL.Eisenstein.CuspResidues
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.ThetaNonvanishing
+public import OAI.NumberTheory.DirichletL.Eisenstein.CuspResidues
+
+@[expose] public section
 
 namespace OAI
 

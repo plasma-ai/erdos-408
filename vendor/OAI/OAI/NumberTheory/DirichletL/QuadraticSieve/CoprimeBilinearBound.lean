@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.CrossFactorization
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.CrossFactorization
+
+@[expose] public section
 
 namespace OAI
 

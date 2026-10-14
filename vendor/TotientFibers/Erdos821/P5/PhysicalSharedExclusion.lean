@@ -1,5 +1,9 @@
-import Erdos821.P5.SharedRowBound
-import Erdos821.P5.SharedRemoval
+module
+
+public import Erdos821.P5.SharedRowBound
+public import Erdos821.P5.SharedRemoval
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

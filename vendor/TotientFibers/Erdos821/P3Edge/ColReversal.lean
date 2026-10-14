@@ -1,5 +1,9 @@
-import Erdos821.P3Edge.BigFibres
-import Erdos821.P3Edge.MultisetSum
+module
+
+public import Erdos821.P3Edge.BigFibres
+public import Erdos821.P3Edge.MultisetSum
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

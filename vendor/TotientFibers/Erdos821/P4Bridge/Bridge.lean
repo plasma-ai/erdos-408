@@ -1,4 +1,8 @@
-import Erdos821.P4Bridge.SignedPairing
+module
+
+public import Erdos821.P4Bridge.SignedPairing
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

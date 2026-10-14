@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedBounds
-import OAI.NumberTheory.DirichletL.Detector.SelectedPrimeIndexed
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedBounds
+public import OAI.NumberTheory.DirichletL.Detector.SelectedPrimeIndexed
+
+@[expose] public section
 
 namespace OAI
 

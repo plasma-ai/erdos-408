@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondSupportedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondSupportedEnergy
+
+@[expose] public section
 
 namespace OAI
 

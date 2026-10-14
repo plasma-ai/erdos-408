@@ -1,7 +1,12 @@
-import Erdos821.P5Energy.Additive
+module
+
+public import Erdos821.P5Energy.Additive
+public import Mathlib.Analysis.Calculus.ContDiff.Bounds
 
 /-! Derivative bounds for the dilated Fourier amplitude and the resulting decay of the
 `u`-Fourier transform of the compact Mellin amplitude product. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ContDiff FourierTransform SchwartzMap Nat

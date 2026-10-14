@@ -1,4 +1,6 @@
-import Erdos408.Extraction.TypeII.Bands
+module
+
+public import Erdos408.Extraction.TypeII.Bands
 
 /-!
 # Expanding the endpoint into monomials
@@ -17,6 +19,8 @@ distinguished. The product of the `K` distinguished weights is the marked weight
 `R_S` is invariant under the primes of the distinguished bands, since the bands are disjoint
 and the slot primes are large.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

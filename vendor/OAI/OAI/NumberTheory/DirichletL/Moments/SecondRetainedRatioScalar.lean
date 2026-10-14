@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalScalar
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptionalScalar
+
+@[expose] public section
 
 namespace OAI
 

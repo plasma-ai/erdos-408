@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.ContinuationInversion
-import Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral
-import Mathlib.MeasureTheory.Integral.IntegralEqImproper
+module
+
+public import OAI.NumberTheory.DirichletL.ContinuationInversion
+public import Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral
+public import Mathlib.MeasureTheory.Integral.IntegralEqImproper
+
+@[expose] public section
 
 namespace OAI
 

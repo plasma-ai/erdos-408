@@ -1,7 +1,11 @@
-import OAI.NumberTheory.EgyptianFractions.DiscreteFirstDerivative
-import OAI.NumberTheory.EgyptianFractions.SeparatedIntervalCount
-import OAI.NumberTheory.EgyptianFractions.MonotoneBlocks
-import OAI.NumberTheory.EgyptianFractions.SecondDerivativeBudget
+module
+
+public import OAI.NumberTheory.EgyptianFractions.DiscreteFirstDerivative
+public import OAI.NumberTheory.EgyptianFractions.SeparatedIntervalCount
+public import OAI.NumberTheory.EgyptianFractions.MonotoneBlocks
+public import OAI.NumberTheory.EgyptianFractions.SecondDerivativeBudget
+
+@[expose] public section
 
 namespace OAI
 open scoped BigOperators

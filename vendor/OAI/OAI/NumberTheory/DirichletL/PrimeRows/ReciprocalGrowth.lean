@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.Conductor
-import OAI.NumberTheory.DirichletL.Hecke.ReciprocalGrowth
-import OAI.NumberTheory.DirichletL.Hecke.DyadicScale
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.Conductor
+public import OAI.NumberTheory.DirichletL.Hecke.ReciprocalGrowth
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicScale
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.CentralRepeatedProduct
-import OAI.NumberTheory.DirichletL.Detector.CentralRepeatedChoices
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CentralRepeatedProduct
+public import OAI.NumberTheory.DirichletL.Detector.CentralRepeatedChoices
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.ThreeBlocks
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.ThreeBlocks
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.LocalEulerIdentities
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.LocalEulerIdentities
+
+@[expose] public section
 
 namespace OAI
 

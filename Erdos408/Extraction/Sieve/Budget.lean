@@ -1,5 +1,7 @@
-import Erdos408.Extraction.Sieve.Tail
-import Mathlib.Analysis.Complex.ExponentialBounds
+module
+
+public import Erdos408.Extraction.Sieve.Tail
+public import Mathlib.Analysis.Complex.ExponentialBounds
 
 /-!
 # The error budget (E11)
@@ -14,6 +16,8 @@ With `h = 2 ⌈200 s⌉`, `J_c = ⌈1001 s⌉` and `N = ⌈30000 s⌉` bands per
 Each error term is a fixed constant times a power of `T` times one of these
 savings (`le_inv_pow_of_le`).
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

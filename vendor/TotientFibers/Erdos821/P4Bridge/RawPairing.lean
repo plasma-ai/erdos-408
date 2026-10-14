@@ -1,5 +1,9 @@
-import Erdos821.P4Bridge.AveragedTests
-import Erdos821.P4Probe.RawModel
+module
+
+public import Erdos821.P4Bridge.AveragedTests
+public import Erdos821.P4Probe.RawModel
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

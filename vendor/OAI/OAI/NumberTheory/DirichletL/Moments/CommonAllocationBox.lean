@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonAllocation
-import OAI.NumberTheory.DirichletL.Moments.FirstSectors
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonAllocation
+public import OAI.NumberTheory.DirichletL.Moments.FirstSectors
+
+@[expose] public section
 
 namespace OAI
 

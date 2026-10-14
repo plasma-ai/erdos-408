@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Bands
-import Erdos408.OneSided.Lift
-import Erdos408.OneSided.Pairing.Cells
+module
+
+public import Erdos408.OneSided.Bands
+public import Erdos408.OneSided.Lift
+public import Erdos408.OneSided.Pairing.Cells
 
 /-!
 # The endpoint vector
@@ -17,6 +19,8 @@ Lemma 4.2).
   `G` there are at most `32 U / G` first coordinates `P₁ = G m` with `α_m ≠ 0`, and
   `∏_i V_i^{-M} ∑_{lists} 1 / G ≤ 1`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

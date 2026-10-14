@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.RayPhaseBins
-import OAI.NumberTheory.DirichletL.PrimeRows.CubeScale
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.RayPhaseBins
+public import OAI.NumberTheory.DirichletL.PrimeRows.CubeScale
+
+@[expose] public section
 
 namespace OAI
 

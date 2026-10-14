@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsUnramified
-import OAI.NumberTheory.DirichletL.Detector.HighEulerRational
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsUnramified
+public import OAI.NumberTheory.DirichletL.Detector.HighEulerRational
+
+@[expose] public section
 
 namespace OAI
 

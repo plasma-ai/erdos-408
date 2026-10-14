@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.MarkedLocal
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.MarkedLocal
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.WholeRow
-import OAI.NumberTheory.DirichletL.Reflection.FamilyTail
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.WholeRow
+public import OAI.NumberTheory.DirichletL.Reflection.FamilyTail
+
+@[expose] public section
 
 namespace OAI
 

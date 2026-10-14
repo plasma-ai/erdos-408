@@ -1,7 +1,12 @@
-import Erdos821.P5MarkedEnergy.Numerics
+module
+
+public import Erdos821.P5MarkedEnergy.Numerics
+public import Mathlib.Algebra.Order.Star.Real
 
 /-! The scale conditions of the final assembly, uniform over the admissible
 `Y`, `H` and smooth pieces. -/
+
+@[expose] public section
 
 noncomputable section
 open Filter Real

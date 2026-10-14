@@ -1,4 +1,8 @@
-import Erdos821.P5.Schur
+module
+
+public import Erdos821.P5.Schur
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators InnerProductSpace ComplexConjugate

@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Moment.Lines
-import Erdos408.OneSided.Moment.RootReplacement.Assembly
-import Erdos408.OneSided.Moment.RootReplacement.Budget
-import Erdos408.OneSided.RootResidue
+module
+
+public import Erdos408.OneSided.Moment.Lines
+public import Erdos408.OneSided.Moment.RootReplacement.Assembly
+public import Erdos408.OneSided.Moment.RootReplacement.Budget
+public import Erdos408.OneSided.RootResidue
 
 /-!
 # The moment: root replacement
@@ -24,6 +26,8 @@ configurations (`Config.lean`), root equidistribution for functions of the lines
 (`Grid.lean`), the boundary cubes (`Boundary.lean`), the coefficient budget (`Mass.lean`) and
 the final budget (`Budget.lean`), put together in `Assembly.lean`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

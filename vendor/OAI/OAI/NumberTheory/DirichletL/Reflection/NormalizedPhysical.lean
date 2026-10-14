@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.ActualExponent
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.ActualExponent
+
+@[expose] public section
 
 namespace OAI
 

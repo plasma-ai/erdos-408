@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.GcdReduction
-import OAI.NumberTheory.DirichletL.CubicSieve.RowMajorants
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.GcdReduction
+public import OAI.NumberTheory.DirichletL.CubicSieve.RowMajorants
+
+@[expose] public section
 
 namespace OAI
 

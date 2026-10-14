@@ -1,6 +1,11 @@
-import Erdos821.P3Clean.DensityBounds
+module
+
+public import Erdos821.P3Clean.DensityBounds
+public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
 
 /-! Elementary scale estimates and exponential domination of fixed polynomials. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

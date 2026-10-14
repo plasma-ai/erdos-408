@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.ExhaustivePartition
-import OAI.NumberTheory.DirichletL.Detector.CanonicalPhysicalRows
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.ExhaustivePartition
+public import OAI.NumberTheory.DirichletL.Detector.CanonicalPhysicalRows
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.EulerRegion
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.EulerRegion
+
+@[expose] public section
 
 namespace OAI
 

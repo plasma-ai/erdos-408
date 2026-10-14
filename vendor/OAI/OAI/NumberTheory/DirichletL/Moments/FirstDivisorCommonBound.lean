@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstDivisorSupport
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalAnnularCommonBound
-import OAI.NumberTheory.DirichletL.Moments.SecondHarmonicBudget
-import OAI.NumberTheory.DirichletL.Moments.SourceSecondZeroEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstDivisorSupport
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalAnnularCommonBound
+public import OAI.NumberTheory.DirichletL.Moments.SecondHarmonicBudget
+public import OAI.NumberTheory.DirichletL.Moments.SourceSecondZeroEnergy
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,7 @@
-import Erdos408.TwoSided.Comparison.ArcsBound
-import Erdos408.TwoSided.Comparison.ArcsLabels
+module
+
+public import Erdos408.TwoSided.Comparison.ArcsBound
+public import Erdos408.TwoSided.Comparison.ArcsLabels
 
 /-!
 # The pieces of the comparison bound
@@ -12,6 +14,8 @@ comparison pattern, stated for the objects of `Defs.lean`:
 * `energy_le`: the main, tail and additive terms of the arc energy.
 * `div_le_of_arcs`: the final count of the Proof of C.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.Arcs
 

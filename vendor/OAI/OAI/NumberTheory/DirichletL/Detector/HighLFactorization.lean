@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.FixedEuler
-import OAI.NumberTheory.DirichletL.Detector.GlobalCorrection
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.FixedEuler
+public import OAI.NumberTheory.DirichletL.Detector.GlobalCorrection
+
+@[expose] public section
 
 namespace OAI
 

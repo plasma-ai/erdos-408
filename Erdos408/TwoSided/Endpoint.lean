@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Endpoint.Constant
+module
+
+public import Erdos408.TwoSided.Endpoint.Constant
 
 /-!
 # Package E: the endpoint mean square
@@ -16,6 +18,8 @@ at `L^{B'}`, with `B' = max(B_min, B_con) + |E|`:
 
 The premise precision `A'` comes from the tuple part and does not depend on `E` (§1.3).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

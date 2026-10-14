@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Comparison.ArcsFourier
+module
+
+public import Erdos408.TwoSided.Comparison.ArcsFourier
 
 /-!
 # One shifted bilinear form from the mean square
@@ -10,6 +12,8 @@ S8–S10 of `blueprint/two_sided_correlation.md` §§5.3–5.4 for abstract data
 `F`, which the local Mellin energy bounds by the mean square (6.24) of `f` at the centres
 `u/r`, `1 ≤ r ≤ R`, `-R ≤ u ≤ 2R`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.Arcs
 

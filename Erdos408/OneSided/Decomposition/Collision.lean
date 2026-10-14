@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Decomposition.LiftSum
-import Erdos408.OneSided.Decomposition.Measure
+module
+
+public import Erdos408.OneSided.Decomposition.LiftSum
+public import Erdos408.OneSided.Decomposition.Measure
 
 /-!
 # Shared labels and pad collisions
@@ -11,6 +13,8 @@ Label tuples and pads drawn independently with the harmonic laws `μ_i(p) = 1/(p
 * The pads fail to be distinct and disjoint from the labels with probability at most
   `((KJ)² + 2KJ) ε` (PD §4.9).
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

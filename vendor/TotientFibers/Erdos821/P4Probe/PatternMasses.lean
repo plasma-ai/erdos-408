@@ -1,4 +1,8 @@
-import Erdos821.P4Probe.PatternProducts
+module
+
+public import Erdos821.P4Probe.PatternProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

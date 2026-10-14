@@ -1,4 +1,8 @@
-import Erdos821.P5.ComparisonMarkedSeparation
+module
+
+public import Erdos821.P5.ComparisonMarkedSeparation
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

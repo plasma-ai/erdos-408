@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.RowCompletion.InitialDensity
+module
+
+public import OAI.NumberTheory.DirichletL.RowCompletion.InitialDensity
+
+@[expose] public section
 
 namespace OAI
 

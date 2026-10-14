@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Cauchy
-import Erdos408.OneSided.Major.Mellin.Kernel
-import Erdos408.OneSided.Major.Mellin.Plane
+module
+
+public import Erdos408.OneSided.Cauchy
+public import Erdos408.OneSided.Major.Mellin.Kernel
+public import Erdos408.OneSided.Major.Mellin.Plane
 
 /-!
 # Mellin separation of the major-arc kernel
@@ -21,6 +23,8 @@ The analytic inputs of `blueprint/one_sided_type_ii.md` §6.4.
 * `exists_bumpTwist_mellin`: `η(y) e(-λy) = ∫ g(ξ) y^{iξ} dξ` for `y > 0`, with
   `∫ |g| ≤ C₀ (1 + |λ|)²`. This is `ft_inversion` applied to `z ↦ η(e^z) e(-λ e^z)`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

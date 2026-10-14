@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalRankPuncture
-import OAI.NumberTheory.DirichletL.Descent.CanonicalRankMonotone
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalRankPuncture
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalRankMonotone
+
+@[expose] public section
 
 namespace OAI
 

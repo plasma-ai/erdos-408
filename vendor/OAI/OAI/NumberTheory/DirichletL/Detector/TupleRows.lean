@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.TupleMellin
-import OAI.NumberTheory.DirichletL.Detector.TupleProducts
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.TupleMellin
+public import OAI.NumberTheory.DirichletL.Detector.TupleProducts
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalFamily
-import OAI.NumberTheory.DirichletL.Moments.SecondDyadicRowSupport
-import OAI.NumberTheory.DirichletL.Moments.SecondWidthDrop
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalFamily
+public import OAI.NumberTheory.DirichletL.Moments.SecondDyadicRowSupport
+public import OAI.NumberTheory.DirichletL.Moments.SecondWidthDrop
+
+@[expose] public section
 
 namespace OAI
 

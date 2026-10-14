@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.Ramified
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Ramified
+
+@[expose] public section
 
 namespace OAI
 

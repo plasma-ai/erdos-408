@@ -1,9 +1,13 @@
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Algebra.Order.Archimedean.Basic
-import Mathlib.Analysis.Complex.Norm
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Positivity
-import Mathlib.Tactic.FieldSimp
+module
+
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+public import Mathlib.Algebra.Order.Archimedean.Basic
+public import Mathlib.Analysis.Complex.Norm
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Positivity
+public import Mathlib.Tactic.FieldSimp
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RowNorm
-import OAI.NumberTheory.DirichletL.CenteredExceptionalProfile
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RowNorm
+public import OAI.NumberTheory.DirichletL.CenteredExceptionalProfile
+
+@[expose] public section
 
 namespace OAI
 

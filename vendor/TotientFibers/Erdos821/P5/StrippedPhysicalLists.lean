@@ -1,4 +1,8 @@
-import Erdos821.P5.GoodSharedDraws
+module
+
+public import Erdos821.P5.GoodSharedDraws
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

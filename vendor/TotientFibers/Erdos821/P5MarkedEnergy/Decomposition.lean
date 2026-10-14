@@ -1,8 +1,12 @@
-import Erdos821.P5MarkedEnergy.Parseval
-import Erdos821.P5MarkedEnergy.MellinBox
+module
+
+public import Erdos821.P5MarkedEnergy.Parseval
+public import Erdos821.P5MarkedEnergy.MellinBox
 
 /-! Splitting the arc energy into finitely many pieces and a square-summable
 error. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

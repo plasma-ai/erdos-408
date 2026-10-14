@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationEnergy
-import OAI.NumberTheory.DirichletL.Moments.Extraction
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationEnergy
+public import OAI.NumberTheory.DirichletL.Moments.Extraction
+
+@[expose] public section
 
 namespace OAI
 

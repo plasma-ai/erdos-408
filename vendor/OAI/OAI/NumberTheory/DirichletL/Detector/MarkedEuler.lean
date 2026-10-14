@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.MarkedValuations
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.MarkedValuations
+
+@[expose] public section
 
 namespace OAI
 

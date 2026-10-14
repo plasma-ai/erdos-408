@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Goodness
-import Erdos408.OneSided.Goodness.BadMass
-import Erdos408.OneSided.Goodness.Symmetry
+module
+
+public import Erdos408.OneSided.Goodness
+public import Erdos408.OneSided.Goodness.BadMass
+public import Erdos408.OneSided.Goodness.Symmetry
 
 /-!
 # Removing the good-state projections
@@ -21,6 +23,8 @@ bad states.
   test (i) fails, and by Markov's inequality on those where test (ii) fails, as in
   Lemma 3.2. The lists then carry total mass at most one (PD `mem:one-edge-label-mass`).
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Analysis.Divisor
-import Erdos408.OneSided.Setup
+module
+
+public import Erdos408.OneSided.Analysis.Divisor
+public import Erdos408.OneSided.Setup
 
 /-!
 # Counting the solutions of the two equations
@@ -12,6 +14,8 @@ The absolute sizes of the two squares at fixed label products `a, b ≍ Y`
 * The near-solutions `|bmn - ars| ≤ 5Y` number at most `11 ∑_{k ≤ M} τ(k)²`: grouping by
   `k = mn` and `l = rs`, each `k` has at most `10Y/a + 1` partners `l`, and conversely.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.RowClosure
-import OAI.NumberTheory.DirichletL.Hecke.FiniteDeletion
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.RowClosure
+public import OAI.NumberTheory.DirichletL.Hecke.FiniteDeletion
+
+@[expose] public section
 
 namespace OAI
 
@@ -41,7 +45,7 @@ theorem unitSupplement_unit (u v : Oˣ) : unitSupplement u (v : O) = 1 := by
   change (if Supported (Ideal.span {(v : O)}) then idealRowHom (u : O) (Ideal.span {(v : O)}) else 0) = 1
   rw [hspan, ite_eq_left hs, map_one]
 
-private theorem unitSupplement_factorsModulo (u : Oˣ) :
+theorem unitSupplement_factorsModulo (u : Oˣ) :
     CanonicalCoefficientClass.FactorsModulo (Ideal.span {(36 : O)}) (unitSupplement u) :=
   unitSupplement_periodic u
 

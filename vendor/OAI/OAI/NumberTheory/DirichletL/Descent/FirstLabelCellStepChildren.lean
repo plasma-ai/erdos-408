@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstLabelCellStepSource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstLabelCellStepSource
+
+@[expose] public section
 
 namespace OAI
 

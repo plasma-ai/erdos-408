@@ -1,5 +1,7 @@
-import Erdos408.OneSided.RootResidue
-import Erdos408.OneSided.Pairing.Endpoint
+module
+
+public import Erdos408.OneSided.RootResidue
+public import Erdos408.OneSided.Pairing.Endpoint
 
 /-!
 # Root ratios in a box under a linear congruence
@@ -21,6 +23,8 @@ root residues (`RootResidue.lean`) count the positions of the box
   `3|z|` errors. On each piece of `I` where `⌊|z| r⌋` is constant the floor `⌊z r⌋` takes at
   most three values, and for each the condition is a unimodular congruence mod `G a` (CRT).
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

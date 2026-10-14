@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.RefreshLaws
-import Erdos821.P3Clean.CleanCoefficients
+module
+
+public import Erdos821.P3Clean.RefreshLaws
+public import Erdos821.P3Clean.CleanCoefficients
 
 /-! The product refresh laws in the literal big-label coordinates. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

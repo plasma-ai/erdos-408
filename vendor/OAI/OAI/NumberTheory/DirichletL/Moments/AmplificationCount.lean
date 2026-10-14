@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationGlobal
-import OAI.NumberTheory.DirichletL.CenteredExceptionalCount
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationGlobal
+public import OAI.NumberTheory.DirichletL.CenteredExceptionalCount
+
+@[expose] public section
 
 namespace OAI
 

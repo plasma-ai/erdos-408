@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.CappedAnalyticSuccessor
-import OAI.NumberTheory.DirichletL.Energy.CappedRadialTransport
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CappedAnalyticSuccessor
+public import OAI.NumberTheory.DirichletL.Energy.CappedRadialTransport
+
+@[expose] public section
 
 namespace OAI
 

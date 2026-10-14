@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GramShell
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GramShell
+
+@[expose] public section
 
 namespace OAI
 

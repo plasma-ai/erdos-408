@@ -1,11 +1,15 @@
-import Erdos821.S34.AtomProof
-import Erdos821.S34.CharacterCellBridge
-import Erdos821.S34.RationalCharacterBridge
-import Erdos821.S34.ComparisonGeometry
-import Erdos821.S34.MajorPrecision
-import Erdos821.S34.MinorDyadic
-import Erdos821.S34.DyadicPartition
-import Erdos821.S34.DirichletApproximation
+module
+
+public import Erdos821.S34.AtomProof
+public import Erdos821.S34.CharacterCellBridge
+public import Erdos821.S34.RationalCharacterBridge
+public import Erdos821.S34.ComparisonGeometry
+public import Erdos821.S34.MajorPrecision
+public import Erdos821.S34.MinorDyadic
+public import Erdos821.S34.DyadicPartition
+public import Erdos821.S34.DirichletApproximation
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

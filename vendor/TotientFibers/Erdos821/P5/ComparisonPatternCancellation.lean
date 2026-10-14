@@ -1,5 +1,9 @@
-import Erdos821.P5.MellinCellCancellation
-import Erdos821.P5.ComparisonSummationCosts
+module
+
+public import Erdos821.P5.MellinCellCancellation
+public import Erdos821.P5.ComparisonSummationCosts
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators Classical

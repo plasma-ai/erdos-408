@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Major.Assembly
+module
+
+public import Erdos408.OneSided.Major.Assembly
 
 /-!
 # The major term
@@ -17,6 +19,8 @@ arc by arc. `norm_arcTerm_le` (`Major/Assembly.lean`) bounds one arc term by the
 (`eventually_energy_le`) and the mean values, through the three regions of
 `Major/Regions.lean`. `arcBound_le` below does the parameter bookkeeping.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

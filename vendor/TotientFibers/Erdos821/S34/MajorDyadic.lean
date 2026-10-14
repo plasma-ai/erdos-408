@@ -1,7 +1,11 @@
-import Erdos821.S34.MajorRetained
-import Erdos821.S34.FiniteComparison
-import Erdos821.S34.DiscardedCells
-import Erdos821.S34.ProductLaws
+module
+
+public import Erdos821.S34.MajorRetained
+public import Erdos821.S34.FiniteComparison
+public import Erdos821.S34.DiscardedCells
+public import Erdos821.S34.ProductLaws
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Classical

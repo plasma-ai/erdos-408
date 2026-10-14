@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.TupleScaling
-import OAI.NumberTheory.DirichletL.Detector.SourceIntegrable
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.TupleScaling
+public import OAI.NumberTheory.DirichletL.Detector.SourceIntegrable
+
+@[expose] public section
 
 namespace OAI
 

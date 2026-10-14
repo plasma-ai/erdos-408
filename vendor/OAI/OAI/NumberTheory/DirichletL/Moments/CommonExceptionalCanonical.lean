@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalSymmetry
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalAsymmetricCanonical
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonExceptionalSymmetry
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalAsymmetricCanonical
+
+@[expose] public section
 
 namespace OAI
 

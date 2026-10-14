@@ -1,5 +1,6 @@
-import Mathlib
-import PrimeNumberTheoremAnd.Erdos970.MertensClassical
+module
+
+public import PrimeNumberTheoremAnd.Erdos970.MertensClassical
 
 /-!
 # Classical prime estimates I: Mertens (paper §1, `eq:mertens`)
@@ -22,6 +23,8 @@ consequences later sections need:
 * two-sided product bounds `≍ 1/log` used by the sieve main terms (§6:
   `eq:proxy-denominator`, `eq:presieve-mass`).
 -/
+
+@[expose] public section
 
 namespace Erdos821
 namespace Prelim

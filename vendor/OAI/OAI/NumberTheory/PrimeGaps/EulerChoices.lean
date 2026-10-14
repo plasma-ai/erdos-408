@@ -1,4 +1,9 @@
-import OAI.NumberTheory.PrimeGaps.FourierNormalization
+module
+
+public import OAI.NumberTheory.PrimeGaps.FourierNormalization
+public import Mathlib.Data.Nat.GCD.Prime
+
+@[expose] public section
 
 namespace OAI
 

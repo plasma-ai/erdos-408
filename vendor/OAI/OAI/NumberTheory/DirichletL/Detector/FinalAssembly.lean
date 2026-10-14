@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyFixedHigh
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.FinalAssemblyFixedHigh
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,8 @@
-import Erdos408.Extraction.TypeII.Box
-import Erdos408.Extraction.TypeII.ProxySums
-import Erdos408.Extraction.TypeII.Tuples
+module
+
+public import Erdos408.Extraction.TypeII.Box
+public import Erdos408.Extraction.TypeII.ProxySums
+public import Erdos408.Extraction.TypeII.Tuples
 
 /-!
 # The companion coefficient and its moments
@@ -16,6 +18,8 @@ With `G(n) = 1/n` and `G(n) = g_j(n) r^{Ω(n)}/n` this gives the log density and
 the Euler products of `Erdos408.Extraction.TypeII.ProxySums`, using `∏_{p ≤ Y}(1 - 1/p) γ L ≥ 1`
 to absorb the proxy normalization.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.EulerChoices
+module
+
+public import OAI.NumberTheory.PrimeGaps.EulerChoices
+
+@[expose] public section
 
 namespace OAI
 

@@ -3,8 +3,12 @@ Adapted from PrimeNumberTheoremAnd by Alex Kontorovich and contributors.
 Licensed under the Apache License, Version 2.0; see the upstream LICENSE.
 This compatibility port retains the proven declarations used by this project.
 -/
-import Mathlib.Geometry.Manifold.PartitionOfUnity
-import Mathlib.Tactic.Bound
+module
+
+public import Mathlib.Geometry.Manifold.PartitionOfUnity
+public import Mathlib.Tactic.Bound
+
+@[expose] public section
 
 open MeasureTheory Set Real
 open scoped ContDiff

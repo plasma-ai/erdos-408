@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.DetectorZeros
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.DetectorZeros
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.LowNominalGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowNominalGeometry
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Fourier.FrequencyTwists
+module
+
+public import OAI.NumberTheory.DirichletL.Fourier.FrequencyTwists
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralCosts
-import OAI.NumberTheory.DirichletL.PrimeRows.CentralRowCost
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralCosts
+public import OAI.NumberTheory.DirichletL.PrimeRows.CentralRowCost
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.ComparisonReflection
-import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.ComparisonReflection
+public import OAI.NumberTheory.DirichletL.Moments.SectorLocalization
+
+@[expose] public section
 
 namespace OAI
 

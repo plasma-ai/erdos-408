@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstSourceReduction
-import OAI.NumberTheory.DirichletL.Moments.SecondActivePhysicalDictionary
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstSourceReduction
+public import OAI.NumberTheory.DirichletL.Moments.SecondActivePhysicalDictionary
+
+@[expose] public section
 
 namespace OAI
 

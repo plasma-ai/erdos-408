@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondCanonical
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondCanonical
+
+@[expose] public section
 
 namespace OAI
 

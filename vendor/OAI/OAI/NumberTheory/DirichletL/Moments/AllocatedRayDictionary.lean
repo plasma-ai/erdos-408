@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.SlotHeight
-import OAI.NumberTheory.DirichletL.Energy.Reindex
-import OAI.NumberTheory.DirichletL.Moments.SlotClassTransport
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.SlotHeight
+public import OAI.NumberTheory.DirichletL.Energy.Reindex
+public import OAI.NumberTheory.DirichletL.Moments.SlotClassTransport
+
+@[expose] public section
 
 namespace OAI
 

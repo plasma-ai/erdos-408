@@ -1,10 +1,14 @@
-import Erdos408.Extraction.TypeII.Final
+module
+
+public import Erdos408.Extraction.TypeII.Final
 
 /-!
 # E4–E5 at large `x`
 
 The pointwise facts at one large scale, and the assembly of `|Comp_j - Prox_j|`.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

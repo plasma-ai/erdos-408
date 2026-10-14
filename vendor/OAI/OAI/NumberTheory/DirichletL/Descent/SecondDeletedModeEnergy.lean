@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondModeParentLists
-import OAI.NumberTheory.DirichletL.Descent.SecondVaryingSupported
-import OAI.NumberTheory.DirichletL.Descent.SecondPhysicalRows
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondModeParentLists
+public import OAI.NumberTheory.DirichletL.Descent.SecondVaryingSupported
+public import OAI.NumberTheory.DirichletL.Descent.SecondPhysicalRows
+
+@[expose] public section
 
 namespace OAI
 

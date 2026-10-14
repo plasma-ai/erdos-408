@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.NormalizedPhysical
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.NormalizedPhysical
+
+@[expose] public section
 
 namespace OAI
 

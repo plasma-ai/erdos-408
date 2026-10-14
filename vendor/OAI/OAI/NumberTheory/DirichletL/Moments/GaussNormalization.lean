@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.OriginalChildEnergy
-import OAI.NumberTheory.DirichletL.Moments.DivisorRawEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.OriginalChildEnergy
+public import OAI.NumberTheory.DirichletL.Moments.DivisorRawEnergy
+
+@[expose] public section
 
 namespace OAI
 

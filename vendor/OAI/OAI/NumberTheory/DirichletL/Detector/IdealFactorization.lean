@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.IdealMultiplicative
-import Mathlib.RingTheory.UniqueFactorizationDomain.Finsupp
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.IdealMultiplicative
+public import Mathlib.RingTheory.UniqueFactorizationDomain.Finsupp
+
+@[expose] public section
 
 namespace OAI
 

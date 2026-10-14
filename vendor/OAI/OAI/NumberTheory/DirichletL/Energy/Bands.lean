@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.Floor
-import OAI.NumberTheory.DirichletL.Moments.RayMaskedFloorState
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.Floor
+public import OAI.NumberTheory.DirichletL.Moments.RayMaskedFloorState
+
+@[expose] public section
 
 namespace OAI
 

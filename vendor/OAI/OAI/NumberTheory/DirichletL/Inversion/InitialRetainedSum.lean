@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialRetainedWindow
-import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicAssemblyRetained
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialRetainedWindow
+public import OAI.NumberTheory.DirichletL.Inversion.InitialDyadicAssemblyRetained
+
+@[expose] public section
 
 namespace OAI
 

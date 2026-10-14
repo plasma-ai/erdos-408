@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Setup
+module
+
+public import Erdos408.TwoSided.Setup
 
 /-!
 # Truncating a list expansion
@@ -18,6 +20,8 @@ subsets `|U| ≤ h₀` gives the divisor model `∑_{d ∣ n} A_d` with
 * `DivModel.sum_pow_card_divs_le`: `∑_{n ≤ N} z^{|D(n)|} ≤ N ∏_{p ∈ Q} (1 + (z - 1)/p)`, the
   bound (6.27).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.DivModel
 

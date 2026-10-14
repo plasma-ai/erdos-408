@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.Canonical
-import OAI.NumberTheory.DirichletL.Descent.SlotProducts
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Canonical
+public import OAI.NumberTheory.DirichletL.Descent.SlotProducts
+
+@[expose] public section
 
 namespace OAI
 

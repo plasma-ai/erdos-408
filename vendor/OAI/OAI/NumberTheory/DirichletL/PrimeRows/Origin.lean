@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.Series
-import OAI.NumberTheory.DirichletL.PrimeRows.FirstContinuation
-import OAI.NumberTheory.DirichletL.Hecke.Origin
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.Series
+public import OAI.NumberTheory.DirichletL.PrimeRows.FirstContinuation
+public import OAI.NumberTheory.DirichletL.Hecke.Origin
+
+@[expose] public section
 
 namespace OAI
 

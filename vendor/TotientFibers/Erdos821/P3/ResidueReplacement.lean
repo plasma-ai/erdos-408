@@ -1,5 +1,14 @@
-import Erdos821.Blueprint.Graph
-import Mathlib.Data.Int.CardIntervalMod
+module
+
+public import Erdos821.Blueprint.Graph
+public import Mathlib.Data.Int.CardIntervalMod
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.SpecialFunctions.Stirling
+public import Mathlib.Data.ZMod.QuotientRing
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

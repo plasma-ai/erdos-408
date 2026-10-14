@@ -1,4 +1,9 @@
-import OAI.NumberTheory.PrimeGaps.LevelMoments
+module
+
+public import OAI.NumberTheory.PrimeGaps.LevelMoments
+public import Mathlib.Algebra.Order.Star.Int
+
+@[expose] public section
 
 namespace OAI
 

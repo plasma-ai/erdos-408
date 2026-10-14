@@ -20,3 +20,9 @@ changed to build here. `memLp_indicator_iff_restrict` and
 `eLpNorm_indicator_eq_eLpNorm_restrict` now take a `NullMeasurableSet`, so
 `LpSpace/Restrict.lean` and `L2Compactness/Smoothing.lean` pass
 `hs.nullMeasurableSet` where they passed a `MeasurableSet`.
+
+All 15 modules also use the module system: each begins with `module`,
+imports with `public import`, and exposes its definitions with
+`@[expose] public section`. `L2Compactness/Approximation.lean` imports
+`Mathlib.Algebra.Order.Star.Real`, which it uses but no longer sees, because a
+module sees only what its imports export.

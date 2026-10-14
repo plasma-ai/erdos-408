@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.SmallNormalization
+module
+
+public import Erdos821.P3Clean.SmallNormalization
 
 /-! The physical conditioning map, in the original small mark measure. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

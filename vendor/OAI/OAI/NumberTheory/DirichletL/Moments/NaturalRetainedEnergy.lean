@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.RetainedComparisonEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RetainedComparisonEnergy
+
+@[expose] public section
 
 namespace OAI
 

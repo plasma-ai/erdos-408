@@ -1,6 +1,8 @@
-import Erdos408.Extraction.TypeII.Proxy
-import Erdos408.Extraction.TypeII.Asymp
-import Erdos408.Extraction.TypeII.PrimeSums
+module
+
+public import Erdos408.Extraction.TypeII.Proxy
+public import Erdos408.Extraction.TypeII.Asymp
+public import Erdos408.Extraction.TypeII.PrimeSums
 
 /-!
 # One box of the Type II estimate
@@ -20,6 +22,8 @@ of `γ`. Its premises come from:
 The two analytic premises are stated here as hypotheses, so that this file does not depend on
 their proofs.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TypeII
 

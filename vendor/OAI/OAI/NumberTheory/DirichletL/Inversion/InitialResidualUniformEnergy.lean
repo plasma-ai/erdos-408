@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialResidualTupleEnergy
-import OAI.NumberTheory.DirichletL.Inversion.InitialUniformFresh
-import OAI.NumberTheory.DirichletL.Inversion.InitialResidualPool
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialResidualTupleEnergy
+public import OAI.NumberTheory.DirichletL.Inversion.InitialUniformFresh
+public import OAI.NumberTheory.DirichletL.Inversion.InitialResidualPool
+
+@[expose] public section
 
 namespace OAI
 

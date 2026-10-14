@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.WidthRanges
-import OAI.NumberTheory.DirichletL.Energy.StageReserveBounded
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.WidthRanges
+public import OAI.NumberTheory.DirichletL.Energy.StageReserveBounded
+
+@[expose] public section
 
 namespace OAI
 

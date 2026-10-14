@@ -1,6 +1,8 @@
-import Mathlib.Algebra.Order.BigOperators.Ring.Finset
-import Mathlib.Data.Fintype.BigOperators
-import Mathlib.Basic.Real.Basic
+module
+
+public import Mathlib.Algebra.Order.BigOperators.Ring.Finset
+public import Mathlib.Data.Fintype.BigOperators
+public import Mathlib.Basic.Real.Basic
 
 /-!
 # Collision probabilities of independent draws
@@ -10,6 +12,8 @@ tuple `z` has probability `∏_e w_e(z_e)`. If every atom has mass at most `ε`,
 prescribed value at one coordinate, and a coincidence of two coordinates, each have
 probability at most `ε`. These bound the shared labels and the pad collisions of PD §4.9.
 -/
+
+@[expose] public section
 
 namespace Erdos408.OneSided
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.MiddleWindows
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.MiddleWindows
+
+@[expose] public section
 
 namespace OAI
 

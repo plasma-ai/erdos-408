@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.DyadicEstimates
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DyadicEstimates
+
+@[expose] public section
 
 namespace OAI
 

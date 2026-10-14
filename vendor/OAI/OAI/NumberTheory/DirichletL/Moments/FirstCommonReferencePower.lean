@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstCommonSourcePowerBudget
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedAllowance
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstCommonSourcePowerBudget
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedAllowance
+
+@[expose] public section
 
 namespace OAI
 

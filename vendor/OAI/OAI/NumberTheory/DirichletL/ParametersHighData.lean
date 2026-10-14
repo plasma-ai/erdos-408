@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.ParametersCentralBudget
+module
+
+public import OAI.NumberTheory.DirichletL.ParametersCentralBudget
+
+@[expose] public section
 
 namespace OAI
 

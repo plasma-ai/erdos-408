@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstAnnularMajorant
-import OAI.NumberTheory.DirichletL.Moments.GaussNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstAnnularMajorant
+public import OAI.NumberTheory.DirichletL.Moments.GaussNormalization
+
+@[expose] public section
 
 namespace OAI
 

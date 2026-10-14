@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedCommonRadius
-import OAI.NumberTheory.DirichletL.Moments.FirstExceptionalChildPaid
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedCommonRadius
+public import OAI.NumberTheory.DirichletL.Moments.FirstExceptionalChildPaid
+
+@[expose] public section
 
 namespace OAI
 

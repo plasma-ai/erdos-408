@@ -1,7 +1,11 @@
-import Erdos821.Blueprint.Analytic
-import Erdos821.S34.Hoeffding
-import Erdos821.S34.BilinearEstimate
-import Erdos821.S34.Probability
+module
+
+public import Erdos821.Blueprint.Analytic
+public import Erdos821.S34.Hoeffding
+public import Erdos821.S34.BilinearEstimate
+public import Erdos821.S34.Probability
+
+@[expose] public section
 
 set_option autoImplicit false
 

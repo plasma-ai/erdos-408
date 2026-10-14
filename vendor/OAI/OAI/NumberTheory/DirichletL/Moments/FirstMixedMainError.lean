@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstMixedNormalizationActual
-import OAI.NumberTheory.DirichletL.Moments.FirstSourceConductorCaps
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixedNormalizationActual
+public import OAI.NumberTheory.DirichletL.Moments.FirstSourceConductorCaps
+
+@[expose] public section
 
 namespace OAI
 

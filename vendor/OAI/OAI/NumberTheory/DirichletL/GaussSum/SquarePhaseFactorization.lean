@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.GaussSum.CubicTrace
-import OAI.NumberTheory.DirichletL.Fourier.PositiveLogProfiles
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.CubicTrace
+public import OAI.NumberTheory.DirichletL.Fourier.PositiveLogProfiles
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondTailCost
-import OAI.NumberTheory.DirichletL.Descent.ChildCutoff
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondTailCost
+public import OAI.NumberTheory.DirichletL.Descent.ChildCutoff
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import Erdos821.P5.LongGrowth
+module
+
+public import Erdos821.P5.LongGrowth
+
+@[expose] public section
 
 noncomputable section
 open Filter

@@ -1,6 +1,10 @@
-import Erdos821.P5.HarmonicLists
-import Erdos821.P5.EndpointLists
-import Erdos821.Blueprint.Transference
+module
+
+public import Erdos821.P5.HarmonicLists
+public import Erdos821.P5.EndpointLists
+public import Erdos821.Blueprint.Transference
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

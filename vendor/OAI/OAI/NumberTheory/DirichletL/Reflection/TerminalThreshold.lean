@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.AnnularNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.AnnularNormalization
+
+@[expose] public section
 
 namespace OAI
 

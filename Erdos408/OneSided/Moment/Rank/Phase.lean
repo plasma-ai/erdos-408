@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Memory.Partition
-import Mathlib.Data.Finset.Pairwise
-import Mathlib.RingTheory.RootsOfUnity.Complex
+module
+
+public import Erdos408.OneSided.Memory.Partition
+public import Mathlib.Data.Finset.Pairwise
+public import Mathlib.RingTheory.RootsOfUnity.Complex
 
 /-!
 # Local phases for a block system
@@ -20,6 +22,8 @@ modulus at most one. The pivot collects the frequencies of its block, so its pha
 
 A rank-`r` system has at most `2r` addresses (`card_biUnion_le_two_mul_blockRank`).
 -/
+
+@[expose] public section
 
 noncomputable section
 

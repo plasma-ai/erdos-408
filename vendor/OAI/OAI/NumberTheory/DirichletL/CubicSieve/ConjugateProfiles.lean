@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.QuadraticSieve.UnrestrictedCharacters
+module
+
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.UnrestrictedCharacters
+
+@[expose] public section
 
 namespace OAI
 

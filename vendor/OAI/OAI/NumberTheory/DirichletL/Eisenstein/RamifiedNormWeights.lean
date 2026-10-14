@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.ConjugateProfiles
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.ConjugateProfiles
+
+@[expose] public section
 
 namespace OAI
 

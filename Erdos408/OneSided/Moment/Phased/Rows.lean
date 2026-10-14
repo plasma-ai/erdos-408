@@ -1,4 +1,6 @@
-import Erdos408.OneSided.Moment.Chain
+module
+
+public import Erdos408.OneSided.Moment.Chain
 
 /-!
 # Prescribed births and row iteration
@@ -15,6 +17,8 @@ PD `mem:rank-absolute`).
   `R_G^{N+1} R_E^N h(s)`, with constants depending on the operation. Nothing is imposed at
   the end beyond `f ≤ h`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

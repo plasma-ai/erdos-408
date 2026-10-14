@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianLow
-import Mathlib.Analysis.Complex.Liouville
-import Mathlib.Analysis.Complex.RealDeriv
-import Mathlib.Analysis.SpecialFunctions.Complex.Analytic
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianLow
+public import Mathlib.Analysis.Complex.Liouville
+public import Mathlib.Analysis.Complex.RealDeriv
+public import Mathlib.Analysis.SpecialFunctions.Complex.Analytic
+
+@[expose] public section
 
 namespace OAI
 

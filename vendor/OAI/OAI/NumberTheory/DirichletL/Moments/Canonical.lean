@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.Moments.PrimePower
-import OAI.NumberTheory.DirichletL.Moments.CRT
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.Moments.PrimePower
+public import OAI.NumberTheory.DirichletL.Moments.CRT
+
+@[expose] public section
 
 namespace OAI
 
@@ -79,7 +83,7 @@ theorem canonicalPrimePowerCharacter_mk (P : Ideal O) [P.IsMaximal]
   rw [MulChar.pow_apply' _ (by omega), map_pow,
     CanonicalRowCompletion.idealRowHom_prime x P hg]
 
-private theorem pairwise_isCoprime_pow {ι : Type*}
+theorem pairwise_isCoprime_pow {ι : Type*}
     (P : ι → Ideal O) (c : ι → ℕ)
     (hcop : Pairwise (Function.onFun IsCoprime P)) :
     Pairwise (Function.onFun IsCoprime (fun i => P i ^ c i)) := by

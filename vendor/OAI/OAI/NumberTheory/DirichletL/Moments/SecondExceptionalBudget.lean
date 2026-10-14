@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalOriginalBlock
-import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalLedger
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalOriginalBlock
+public import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalLedger
+
+@[expose] public section
 
 namespace OAI
 

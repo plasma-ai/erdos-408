@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.FrequencySupport
-import OAI.NumberTheory.DirichletL.Detector.PhysicalReopen
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.FrequencySupport
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalReopen
+
+@[expose] public section
 
 namespace OAI
 

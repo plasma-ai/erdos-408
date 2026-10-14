@@ -1,4 +1,8 @@
-import OAI.NumberTheory.PrimeGaps.PrincipalGrowth
+module
+
+public import OAI.NumberTheory.PrimeGaps.PrincipalGrowth
+
+@[expose] public section
 
 namespace OAI
 

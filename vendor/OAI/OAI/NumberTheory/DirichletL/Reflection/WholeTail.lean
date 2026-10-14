@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.RowTail
-import OAI.NumberTheory.DirichletL.Reflection.ShapeWeights
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.RowTail
+public import OAI.NumberTheory.DirichletL.Reflection.ShapeWeights
+
+@[expose] public section
 
 namespace OAI
 

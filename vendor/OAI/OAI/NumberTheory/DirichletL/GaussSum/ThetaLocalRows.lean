@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.AbelPhaseLimit
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.AbelPhaseLimit
+
+@[expose] public section
 
 namespace OAI
 
@@ -402,15 +406,15 @@ theorem theta_counter_lambda_eq : ActualEisensteinCubic.lambda =
 
 open EisensteinEmbedding ConcreteTraceCRT ActualEisensteinCubic
 
-private noncomputable def pSeven : ActualEisensteinCubic.O := ActualEisensteinCoordinates.eval 1 3
-private noncomputable def PSeven : Ideal ActualEisensteinCubic.O := Ideal.span {pSeven}
+noncomputable def pSeven : ActualEisensteinCubic.O := ActualEisensteinCoordinates.eval 1 3
+noncomputable def PSeven : Ideal ActualEisensteinCubic.O := Ideal.span {pSeven}
 
-private theorem pSeven_norm : ShortDraftLatticeCount.qNat pSeven = 7 := by
+theorem pSeven_norm : ShortDraftLatticeCount.qNat pSeven = 7 := by
   unfold ShortDraftLatticeCount.qNat pSeven
   rw [ShortDraftLatticeCount.coords_eval]
   norm_num [ShortDraftLatticeCount.q]
 
-private theorem pSeven_ne : pSeven ≠ 0 := by
+theorem pSeven_ne : pSeven ≠ 0 := by
   intro h
   have hh : ActualEisensteinCoordinates.eval 1 3 = ActualEisensteinCoordinates.eval 0 0 := by
     simpa [pSeven, ActualEisensteinCoordinates.eval] using h
@@ -420,14 +424,14 @@ private theorem pSeven_ne : pSeven ≠ 0 := by
 private theorem PSeven_absNorm : Ideal.absNorm PSeven = 7 := by
   simpa only [PSeven, ActualEisensteinCubic.qNat_eq_absNorm_span] using pSeven_norm
 
-private theorem PSeven_maximal : PSeven.IsMaximal := by
+theorem PSeven_maximal : PSeven.IsMaximal := by
   have hprime : PSeven.IsPrime := Ideal.isPrime_of_irreducible_absNorm (by
     rw [PSeven_absNorm, Nat.irreducible_iff_nat_prime]
     exact (by decide : Nat.Prime 7))
   apply hprime.isMaximal
   exact Ideal.span_singleton_eq_bot.not.mpr pSeven_ne
 
-private theorem lambda7_norm :
+theorem lambda7_norm :
     ShortDraftLatticeCount.qNat (ActualEisensteinCoordinates.eval (-1) 1) = 3 := by
   unfold ShortDraftLatticeCount.qNat
   rw [ShortDraftLatticeCount.coords_eval]

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.Columns
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Columns
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,8 +1,12 @@
-import Mathlib.Analysis.PSeries
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Algebra.Order.Floor.Ring
-import Mathlib.Tactic
-import Mathlib.Data.Nat.Dist
+module
+
+public import Mathlib.Analysis.PSeries
+public import Mathlib.Analysis.SpecialFunctions.Log.Basic
+public import Mathlib.Algebra.Order.Floor.Ring
+public import Mathlib.Tactic
+public import Mathlib.Data.Nat.Dist
+
+@[expose] public section
 
 namespace OAI
 

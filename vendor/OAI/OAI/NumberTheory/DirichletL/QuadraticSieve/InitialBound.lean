@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Mellin.CompactWeights
-import OAI.NumberTheory.DirichletL.QuadraticSieve.CoefficientCancellation
+module
+
+public import OAI.NumberTheory.DirichletL.Mellin.CompactWeights
+public import OAI.NumberTheory.DirichletL.QuadraticSieve.CoefficientCancellation
+
+@[expose] public section
 
 namespace OAI
 

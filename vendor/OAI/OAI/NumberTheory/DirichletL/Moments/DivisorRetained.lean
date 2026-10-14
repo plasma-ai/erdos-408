@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RetainedEnergy
-import OAI.NumberTheory.DirichletL.Moments.DivisorRowEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RetainedEnergy
+public import OAI.NumberTheory.DirichletL.Moments.DivisorRowEnergy
+
+@[expose] public section
 
 namespace OAI
 

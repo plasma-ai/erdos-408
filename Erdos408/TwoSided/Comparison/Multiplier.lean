@@ -1,6 +1,8 @@
-import Erdos408.TwoSided.Setup
-import Erdos821.P5Minor.MinorArcTask
-import Erdos821.S34.OwnedLeafProofs
+module
+
+public import Erdos408.TwoSided.Setup
+public import Erdos821.P5Minor.MinorArcTask
+public import Erdos821.S34.OwnedLeafProofs
 
 /-!
 # The bilinear multiplier and the minor arcs
@@ -13,6 +15,8 @@ multiplier `𝔪(θ) = 𝔼_a b₁(D_A) b₂(D_B) e(θ D_A D_B)` is bilinear in 
 * Lemma C2 (`exists_minorArc_bound`): off the arcs of denominator `≤ L^{C_arc}`, each dyadic
   box of `𝔪` is `≤ K L^{-A_m}` (WD's `MinorArcTask`), replacing PD (6.20)–(6.21).
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.AmplificationSourceError
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationSourceError
+
+@[expose] public section
 
 namespace OAI
 

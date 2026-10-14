@@ -1,7 +1,11 @@
-import Erdos821.P5Energy.ErrorStep
-import Mathlib.Analysis.Complex.ExponentialBounds
+module
+
+public import Erdos821.P5Energy.ErrorStep
+public import Mathlib.Analysis.Complex.ExponentialBounds
 
 /-! Assembly of the local additive-to-Mellin energy bound `Erdos821.P5Core.LocalMellinEnergyTask`. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators ContDiff

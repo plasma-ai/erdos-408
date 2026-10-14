@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDetectorCancellation
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceDetectorCancellation
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.CongruenceScalar
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CongruenceScalar
+
+@[expose] public section
 
 namespace OAI
 

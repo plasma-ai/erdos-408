@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.LiveSupport
-import OAI.NumberTheory.DirichletL.Moments.SourceRow
-import OAI.NumberTheory.DirichletL.Moments.GaussEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.LiveSupport
+public import OAI.NumberTheory.DirichletL.Moments.SourceRow
+public import OAI.NumberTheory.DirichletL.Moments.GaussEnergy
+
+@[expose] public section
 
 namespace OAI
 

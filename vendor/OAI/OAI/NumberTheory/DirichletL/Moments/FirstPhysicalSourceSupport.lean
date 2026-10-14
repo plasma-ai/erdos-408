@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceNormalization
-import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
-import OAI.NumberTheory.DirichletL.Moments.SourceLowerSupport
-import OAI.NumberTheory.DirichletL.Moments.ExceptionalAmplitudePair
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSourceNormalization
+public import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
+public import OAI.NumberTheory.DirichletL.Moments.SourceLowerSupport
+public import OAI.NumberTheory.DirichletL.Moments.ExceptionalAmplitudePair
+
+@[expose] public section
 
 namespace OAI
 

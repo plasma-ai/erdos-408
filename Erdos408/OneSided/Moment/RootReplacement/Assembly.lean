@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Moment.RootReplacement.Boundary
-import Erdos408.OneSided.Moment.RootReplacement.Mass
+module
+
+public import Erdos408.OneSided.Moment.RootReplacement.Boundary
+public import Erdos408.OneSided.Moment.RootReplacement.Mass
 
 /-!
 # Assembly of the root replacement
@@ -11,6 +13,8 @@ per-configuration difference of `norm_sum_positions_sub_le`. Only live configura
 `D(ω) ≠ 0`, since the roots and the cube corners lie in the root box. So the difference is at
 most the live coefficient mass times the largest per-configuration error.
 -/
+
+@[expose] public section
 
 noncomputable section
 

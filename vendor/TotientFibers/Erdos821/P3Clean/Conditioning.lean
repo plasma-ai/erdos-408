@@ -1,8 +1,12 @@
-import Erdos821.P3Clean.Damping
-import Erdos821.P3Clean.SmallFibres
-import Erdos821.Leaves.Damped
+module
+
+public import Erdos821.P3Clean.Damping
+public import Erdos821.P3Clean.SmallFibres
+public import Erdos821.Leaves.Damped
 
 /-! The Cauchy estimate for a small-conditioning map, with its fibre count explicit. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,8 +1,12 @@
-import Erdos821.S2.HighRankTask
-import Erdos821.P3LowRank.LowRank
-import Erdos821.P3High.PathSum
+module
+
+public import Erdos821.S2.HighRankTask
+public import Erdos821.P3LowRank.LowRank
+public import Erdos821.P3High.PathSum
 
 /-! Absolute truncated history sums with real local multipliers are finite real path sums. -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

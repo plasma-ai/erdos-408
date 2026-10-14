@@ -1,5 +1,7 @@
-import Erdos408.OneSided.Model
-import Erdos408.OneSided.Bands
+module
+
+public import Erdos408.OneSided.Model
+public import Erdos408.OneSided.Bands
 
 /-!
 # Counting boundary cubes
@@ -24,6 +26,8 @@ The geometric counts behind RR6 (`Boundary.lean`, `blueprint/one_sided_type_ii.m
   `10⁷ N S⁹ n²` cubes bad (`card_filter_visitBad_le_pow`), and the `N + 1` visits together
   at most `n² exp(L^{1/2})`, eventually (`eventually_visits_le`).
 -/
+
+@[expose] public section
 
 noncomputable section
 

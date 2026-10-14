@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondCanonicalSplit
-import OAI.NumberTheory.DirichletL.Descent.SecondSupportedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondCanonicalSplit
+public import OAI.NumberTheory.DirichletL.Descent.SecondSupportedEnergy
+
+@[expose] public section
 
 namespace OAI
 

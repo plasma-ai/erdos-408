@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.Hybrid
-import OAI.NumberTheory.DirichletL.CubicSieve.Gcd
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.Hybrid
+public import OAI.NumberTheory.DirichletL.CubicSieve.Gcd
+
+@[expose] public section
 
 namespace OAI
 

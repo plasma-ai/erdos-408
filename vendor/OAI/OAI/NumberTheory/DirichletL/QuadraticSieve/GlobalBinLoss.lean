@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.HyperbolicVolume
-import OAI.NumberTheory.DirichletL.CubicSieve.UniformTransfer
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.HyperbolicVolume
+public import OAI.NumberTheory.DirichletL.CubicSieve.UniformTransfer
+
+@[expose] public section
 
 namespace OAI
 

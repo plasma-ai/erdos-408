@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstCanonicalEnergy
-import OAI.NumberTheory.DirichletL.Descent.FirstFamilySource
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstCanonicalEnergy
+public import OAI.NumberTheory.DirichletL.Descent.FirstFamilySource
+
+@[expose] public section
 
 namespace OAI
 

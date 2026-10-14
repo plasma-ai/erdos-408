@@ -1,6 +1,8 @@
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.NumberTheory.DiophantineApproximation.Basic
-import Erdos408.OneSided.Moment.Phased.Neighbor
+module
+
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.NumberTheory.DiophantineApproximation.Basic
+public import Erdos408.OneSided.Moment.Phased.Neighbor
 
 /-!
 # The line count
@@ -26,6 +28,8 @@ congruence `A · z ≡ 0 (mod p)`, hence `m ≡ c₀ t (mod p)` or `p ∣ t`. In
 * `card_filter_line_le`: the positions `z` of the box with `det(w, z) = D t`, `|t| ≤ M ≤ 6Y`,
   and `[z]_p = ℓ` number at most `2^13 (Y/p + Y^{0.8})`.
 -/
+
+@[expose] public section
 
 noncomputable section
 

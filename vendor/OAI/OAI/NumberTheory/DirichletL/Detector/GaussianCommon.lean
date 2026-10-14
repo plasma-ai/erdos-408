@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianSubset
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianSubset
+
+@[expose] public section
 
 namespace OAI
 

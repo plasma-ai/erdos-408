@@ -1,4 +1,12 @@
-import Mathlib
+module
+
+public import Mathlib.Algebra.BigOperators.Field
+public import Mathlib.Algebra.CharP.Defs
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Algebra.Ring.IsFormallyReal
+public import Mathlib.Analysis.Complex.Exponential
 
 /-!
 # Sieve calculus: one-block inclusion–exclusion and product telescoping
@@ -18,6 +26,8 @@ For one block with `t` bad conditions holding and (even) truncation degree
 product of nonnegative block factors gives the paper's
 `0 ≤ ∏ U_j - ∏ I_j ≤ ∑_j E_j ∏_{k≠j} U_k`.
 -/
+
+@[expose] public section
 
 namespace Erdos821
 namespace Prelim

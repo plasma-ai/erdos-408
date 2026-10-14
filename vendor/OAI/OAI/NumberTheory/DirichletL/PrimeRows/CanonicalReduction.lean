@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalTails
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.CanonicalTails
+
+@[expose] public section
 
 namespace OAI
 

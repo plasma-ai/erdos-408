@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerPool
-import OAI.NumberTheory.DirichletL.Inversion.InitialRawDictionary
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialEnergyCallerPool
+public import OAI.NumberTheory.DirichletL.Inversion.InitialRawDictionary
+
+@[expose] public section
 
 namespace OAI
 

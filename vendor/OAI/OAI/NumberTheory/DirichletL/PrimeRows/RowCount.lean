@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.PhysicalBound
-import OAI.NumberTheory.DirichletL.Detector.HighAbsolute
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.PhysicalBound
+public import OAI.NumberTheory.DirichletL.Detector.HighAbsolute
+
+@[expose] public section
 
 namespace OAI
 

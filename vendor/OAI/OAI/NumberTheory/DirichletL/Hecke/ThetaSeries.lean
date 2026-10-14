@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.Theta
-import OAI.NumberTheory.DirichletL.LatticeSummability
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Theta
+public import OAI.NumberTheory.DirichletL.LatticeSummability
+
+@[expose] public section
 
 namespace OAI
 

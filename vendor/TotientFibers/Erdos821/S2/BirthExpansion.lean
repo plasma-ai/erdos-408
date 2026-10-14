@@ -1,7 +1,11 @@
-import Erdos821.S2.CycleFibers
-import Erdos821.S2.PerformedSigns
+module
+
+public import Erdos821.S2.CycleFibers
+public import Erdos821.S2.PerformedSigns
 
 /-! The exact distinct-birth inclusion-exclusion expansion by equality rank. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

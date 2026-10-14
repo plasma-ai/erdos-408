@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainFiberSource
-import OAI.NumberTheory.DirichletL.Moments.DetectorEnergyInitialState
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFreeExceptional
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainFiberSource
+public import OAI.NumberTheory.DirichletL.Moments.DetectorEnergyInitialState
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceFreeExceptional
+
+@[expose] public section
 
 namespace OAI
 

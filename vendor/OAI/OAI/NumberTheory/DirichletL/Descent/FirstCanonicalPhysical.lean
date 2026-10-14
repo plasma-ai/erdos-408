@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstMarkedColumns
-import OAI.NumberTheory.DirichletL.Descent.FirstPhysicalCommon
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstMarkedColumns
+public import OAI.NumberTheory.DirichletL.Descent.FirstPhysicalCommon
+
+@[expose] public section
 
 namespace OAI
 

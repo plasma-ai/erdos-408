@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.MarkedRestriction
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedRestriction
+
+@[expose] public section
 
 namespace OAI
 

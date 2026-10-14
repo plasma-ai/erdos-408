@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.SelectedAgreement
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.SelectedAgreement
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondModeEnergy
-import OAI.NumberTheory.DirichletL.Inversion.InitialClippedColumns
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondModeEnergy
+public import OAI.NumberTheory.DirichletL.Inversion.InitialClippedColumns
+
+@[expose] public section
 
 namespace OAI
 

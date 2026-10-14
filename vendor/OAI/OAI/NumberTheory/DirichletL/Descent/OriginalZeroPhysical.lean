@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.ReopenedZeroEnergy
-import OAI.NumberTheory.DirichletL.Descent.PhysicalExponents
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.ReopenedZeroEnergy
+public import OAI.NumberTheory.DirichletL.Descent.PhysicalExponents
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.QuadraticNormalization
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.QuadraticNormalization
+
+@[expose] public section
 
 namespace OAI
 

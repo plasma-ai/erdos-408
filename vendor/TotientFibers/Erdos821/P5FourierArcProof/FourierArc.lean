@@ -1,6 +1,11 @@
-import Erdos821.P5.FourierArcTask
-import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
-import Mathlib.Analysis.SpecialFunctions.Exponential
+module
+
+public import Erdos821.P5.FourierArcTask
+public import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+public import Mathlib.Analysis.SpecialFunctions.Exponential
+public import Mathlib.Algebra.Order.Star.Real
+
+@[expose] public section
 
 set_option autoImplicit false
 

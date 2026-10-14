@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.MemberGeometry
-import OAI.NumberTheory.DirichletL.Reflection.MemberBudgetUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.MemberGeometry
+public import OAI.NumberTheory.DirichletL.Reflection.MemberBudgetUniformDegree
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CenteredExceptionalCount
+module
+
+public import OAI.NumberTheory.DirichletL.CenteredExceptionalCount
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,8 +1,12 @@
-import Erdos821.P5.SparseRows
-import Erdos821.P5.MellinVectors
-import Erdos821.P5.IntervalMaxima
-import Erdos821.P5.Tasks
-import Erdos821.Classical.DerivativeTests
+module
+
+public import Erdos821.P5.SparseRows
+public import Erdos821.P5.MellinVectors
+public import Erdos821.P5.IntervalMaxima
+public import Erdos821.P5.Tasks
+public import Erdos821.Classical.DerivativeTests
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators InnerProductSpace

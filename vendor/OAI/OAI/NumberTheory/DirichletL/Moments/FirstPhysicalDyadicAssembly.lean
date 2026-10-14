@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSource
-import OAI.NumberTheory.DirichletL.Moments.SecondDyadicPartition
-import OAI.NumberTheory.DirichletL.Moments.SecondRetainedRows
-import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstPhysicalSource
+public import OAI.NumberTheory.DirichletL.Moments.SecondDyadicPartition
+public import OAI.NumberTheory.DirichletL.Moments.SecondRetainedRows
+public import OAI.NumberTheory.DirichletL.Moments.OriginalCommonHarmonic
+
+@[expose] public section
 
 namespace OAI
 

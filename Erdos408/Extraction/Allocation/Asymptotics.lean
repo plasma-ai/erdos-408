@@ -1,4 +1,6 @@
-import Erdos408.Extraction.Defs
+module
+
+public import Erdos408.Extraction.Defs
 
 /-!
 # Scale comparisons
@@ -7,6 +9,8 @@ The comparisons between `L = log x`, `T = log L` and `s = log T` used in
 E6–E8: `s = o(T)`, every fixed power of `T` is at most every fixed positive
 power of `L`, and `exp(-L^a)` is below every fixed negative power of `L`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

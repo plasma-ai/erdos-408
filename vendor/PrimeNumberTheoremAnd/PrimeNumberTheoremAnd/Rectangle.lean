@@ -1,7 +1,11 @@
-import Mathlib.Analysis.Complex.Convex
-import Mathlib.Analysis.InnerProductSpace.Basic
-import Mathlib.Analysis.Normed.Order.Lattice
-import Mathlib.Order.Interval.Set.Monotone
+module
+
+public import Mathlib.Analysis.Complex.Convex
+public import Mathlib.Analysis.InnerProductSpace.Basic
+public import Mathlib.Analysis.Normed.Order.Lattice
+public import Mathlib.Order.Interval.Set.Monotone
+
+@[expose] public section
 
 open Complex Set Topology
 

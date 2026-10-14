@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.FixedProfiles
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.FixedProfiles
+
+@[expose] public section
 
 namespace OAI
 

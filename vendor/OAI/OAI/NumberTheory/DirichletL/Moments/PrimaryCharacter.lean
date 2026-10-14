@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.FixedRay
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FixedRay
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.FamilyTail
-import OAI.NumberTheory.DirichletL.Inversion.ReflectedArithmeticHeight
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.FamilyTail
+public import OAI.NumberTheory.DirichletL.Inversion.ReflectedArithmeticHeight
+
+@[expose] public section
 
 namespace OAI
 

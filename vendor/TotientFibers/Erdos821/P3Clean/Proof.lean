@@ -1,7 +1,11 @@
-import Erdos821.P3Clean.CutoffNorm
-import Erdos821.P3Clean.EventualComparison
+module
+
+public import Erdos821.P3Clean.CutoffNorm
+public import Erdos821.P3Clean.EventualComparison
 
 /-! The frozen signed clean-memory norm task. -/
+
+@[expose] public section
 
 noncomputable section
 

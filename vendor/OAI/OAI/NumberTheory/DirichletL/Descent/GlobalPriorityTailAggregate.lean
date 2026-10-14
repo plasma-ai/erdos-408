@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityTail
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityTail
+
+@[expose] public section
 
 namespace OAI
 

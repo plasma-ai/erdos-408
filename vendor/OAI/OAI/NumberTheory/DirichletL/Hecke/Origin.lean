@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.Reciprocal
-import OAI.NumberTheory.DirichletL.Hecke.MellinIdentity
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.Reciprocal
+public import OAI.NumberTheory.DirichletL.Hecke.MellinIdentity
+
+@[expose] public section
 
 namespace OAI
 

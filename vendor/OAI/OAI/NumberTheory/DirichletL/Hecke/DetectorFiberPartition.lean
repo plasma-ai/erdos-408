@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.DetectorRawFiber
-import OAI.NumberTheory.DirichletL.Hecke.DetectorDynamicSelection
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorRawFiber
+public import OAI.NumberTheory.DirichletL.Hecke.DetectorDynamicSelection
+
+@[expose] public section
 
 namespace OAI
 

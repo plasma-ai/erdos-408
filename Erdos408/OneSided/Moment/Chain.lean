@@ -1,6 +1,8 @@
-import Erdos408.OneSided.Moment.PathExpansion
-import Erdos408.OneSided.Memory.Ghost
-import Erdos408.OneSided.Memory.Partition
+module
+
+public import Erdos408.OneSided.Moment.PathExpansion
+public import Erdos408.OneSided.Memory.Ghost
+public import Erdos408.OneSided.Memory.Partition
 
 /-!
 # The memory chain
@@ -35,6 +37,8 @@ The memory identity S3, `lineAverage_rootMoment_eq_chain` in `Moment/Chain/Ident
 `𝔼_ℓ rootMoment = (∏_p b'_p) ∑ [𝐛_init] w(history) [𝐛_fin]`, over histories with distinct
 births and with the cap `B` the number of band primes.
 -/
+
+@[expose] public section
 
 noncomputable section
 

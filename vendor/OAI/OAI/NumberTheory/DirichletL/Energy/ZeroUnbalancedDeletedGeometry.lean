@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroReferenceGeometry
+
+@[expose] public section
 
 namespace OAI
 

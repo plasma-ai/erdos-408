@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.HighRowsPrime
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRows
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.HighRowsPrime
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationRows
+
+@[expose] public section
 
 namespace OAI
 

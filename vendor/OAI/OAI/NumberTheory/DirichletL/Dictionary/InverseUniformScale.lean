@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformTests
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.DetectorDictionaryUniformTests
+
+@[expose] public section
 
 namespace OAI
 

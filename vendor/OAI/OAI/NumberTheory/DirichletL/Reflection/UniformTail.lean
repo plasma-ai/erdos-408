@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.HeightTail
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.HeightTail
+
+@[expose] public section
 
 namespace OAI
 

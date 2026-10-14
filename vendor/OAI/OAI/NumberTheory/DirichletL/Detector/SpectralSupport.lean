@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.PhysicalMellinCoefficient
-import OAI.NumberTheory.DirichletL.Detector.RadialSpectral
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalMellinCoefficient
+public import OAI.NumberTheory.DirichletL.Detector.RadialSpectral
+
+@[expose] public section
 
 namespace OAI
 

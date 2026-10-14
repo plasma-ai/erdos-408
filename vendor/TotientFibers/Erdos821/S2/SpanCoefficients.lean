@@ -1,6 +1,10 @@
-import Erdos821.S2.SpanHistory
+module
+
+public import Erdos821.S2.SpanHistory
 
 /-! Signed coefficients and phases are unchanged by the lifespan construction. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

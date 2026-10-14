@@ -1,6 +1,10 @@
-import Erdos821.P3Clean.MatrixSandwich
+module
+
+public import Erdos821.P3Clean.MatrixSandwich
 
 /-! Sparse coefficients for conditioning a finite fibre at each residue state. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

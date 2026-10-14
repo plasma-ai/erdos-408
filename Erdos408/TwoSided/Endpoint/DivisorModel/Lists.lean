@@ -1,4 +1,6 @@
-import Erdos408.TwoSided.Endpoint.DivisorModel.Truncation
+module
+
+public import Erdos408.TwoSided.Endpoint.DivisorModel.Truncation
 
 /-!
 # The marked weights in list form
@@ -14,6 +16,8 @@ forms in the sense of `DivModel.listForm`.
 With the weight sums `∑_j [R_j ⊆ D(n)] |c_j|` (the normalized list counts of step 5) and the
 masses `∑_j |c_j| / ∏ R_j` (the brackets of step 4) of both forms.
 -/
+
+@[expose] public section
 
 namespace Erdos408.TwoSided.DivModel
 

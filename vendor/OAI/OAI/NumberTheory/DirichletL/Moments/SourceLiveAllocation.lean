@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.RemainingBox
-import OAI.NumberTheory.DirichletL.Moments.CommonPuncture
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.RemainingBox
+public import OAI.NumberTheory.DirichletL.Moments.CommonPuncture
+
+@[expose] public section
 
 namespace OAI
 

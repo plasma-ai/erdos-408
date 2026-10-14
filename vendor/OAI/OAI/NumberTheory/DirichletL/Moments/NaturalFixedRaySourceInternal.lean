@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceCharacters
-import OAI.NumberTheory.DirichletL.Moments.HeckeExceptionalEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalFixedRaySourceCharacters
+public import OAI.NumberTheory.DirichletL.Moments.HeckeExceptionalEnergy
+
+@[expose] public section
 
 namespace OAI
 

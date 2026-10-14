@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceDeleted
-import OAI.NumberTheory.DirichletL.Detector.DetectorMomentPrimeGeometry
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceDeleted
+public import OAI.NumberTheory.DirichletL.Detector.DetectorMomentPrimeGeometry
+
+@[expose] public section
 
 namespace OAI
 

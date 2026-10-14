@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialTotalFourier
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialTotalFourier
+
+@[expose] public section
 
 namespace OAI
 

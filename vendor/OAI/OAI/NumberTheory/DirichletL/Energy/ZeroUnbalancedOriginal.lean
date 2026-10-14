@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ZeroUnbalancedOriginalPower
-import OAI.NumberTheory.DirichletL.Energy.ZeroUnbalancedOriginalGates
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ZeroUnbalancedOriginalPower
+public import OAI.NumberTheory.DirichletL.Energy.ZeroUnbalancedOriginalGates
+
+@[expose] public section
 
 namespace OAI
 

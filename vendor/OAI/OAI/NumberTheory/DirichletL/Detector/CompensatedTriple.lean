@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.TuplePrincipal
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.TuplePrincipal
+
+@[expose] public section
 
 namespace OAI
 

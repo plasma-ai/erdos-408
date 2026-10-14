@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.FourierCoefficients
-import OAI.NumberTheory.DirichletL.CubicSieve.FrequencyBlocks
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.FourierCoefficients
+public import OAI.NumberTheory.DirichletL.CubicSieve.FrequencyBlocks
+
+@[expose] public section
 
 namespace OAI
 

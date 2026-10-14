@@ -1,5 +1,11 @@
-import Erdos821.P4Char.Basic
-import Erdos821.S34.CharacterTasks
+module
+
+public import Erdos821.P4Char.Basic
+public import Erdos821.S34.CharacterTasks
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Classes
+
+@[expose] public section
 
 set_option autoImplicit false
 

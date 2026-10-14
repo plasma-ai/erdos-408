@@ -1,7 +1,9 @@
-import Erdos408.OneSided.Moment.Edge.Core
-import Erdos408.OneSided.Moment.Phased.Edge
-import Erdos408.OneSided.Goodness.Symmetry
-import Erdos408.OneSided.Cauchy
+module
+
+public import Erdos408.OneSided.Moment.Edge.Core
+public import Erdos408.OneSided.Moment.Phased.Edge
+public import Erdos408.OneSided.Goodness.Symmetry
+public import Erdos408.OneSided.Cauchy
 
 /-!
 # The clean signed edge
@@ -29,6 +31,8 @@ The reduction to the core kernel of `Moment/Edge/Core.lean` follows PD §4.
   `4^K C₀ (1 + log 4Y)(L^{-A₀} + Y^{-0.1}) + 1024 K 4^K (1 + 52 L^{3A₀}) e^{-L^{a₋}}` is at most
   `L^{-G-1/2}`, since `A₀ = G + 1`, `log Y ≪_K L^{0.2}` and `Y ≥ e^{L^{0.1}}/4`.
 -/
+
+@[expose] public section
 
 noncomputable section
 
@@ -1021,7 +1025,6 @@ def cleanBound (K : ℕ) (C₀ A₀ alo x Y : ℝ) : ℝ :=
   4 ^ K * C₀ * (1 + Real.log (4 * Y)) * ((Real.log x ^ A₀)⁻¹ + Y ^ (-(1 / 10 : ℝ))) +
     1024 * K * 4 ^ K * (1 + 52 * Real.log x ^ (3 * A₀)) * Real.exp (-Real.log x ^ alo)
 
-set_option maxHeartbeats 400000 in
 open scoped Classical in
 /-- **The clean block bound** in a block with pad product in `[d₀, 2d₀)` and size conditions at
 `Y`: the block kernel has weighted norm at most `M!^{-2K} E`. -/

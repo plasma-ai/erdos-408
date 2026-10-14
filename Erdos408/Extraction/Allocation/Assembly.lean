@@ -1,8 +1,10 @@
-import Erdos408.Extraction.Allocation.Analytic
-import Erdos408.Extraction.Allocation.Budget
-import Erdos408.Extraction.Allocation.Decomposition
-import Erdos408.Extraction.Allocation.MainTerm
-import Erdos408.Extraction.Allocation.Regroup
+module
+
+public import Erdos408.Extraction.Allocation.Analytic
+public import Erdos408.Extraction.Allocation.Budget
+public import Erdos408.Extraction.Allocation.Decomposition
+public import Erdos408.Extraction.Allocation.MainTerm
+public import Erdos408.Extraction.Allocation.Regroup
 
 /-!
 # Assembly of E6–E8 at one scale
@@ -17,6 +19,8 @@ decomposition are each `O((x/L) L^{-c'})`:
 * the candidate squares: `L^{c'} √(x L^{-2-4c'-C₅} · x L^{C₅})`;
 * the failed patterns: `L^{c'} · C₃ (x/L) L^{-2c'}`.
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

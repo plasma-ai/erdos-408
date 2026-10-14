@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstCommonFourierTransport
-import OAI.NumberTheory.DirichletL.Moments.FirstSectorTransform
-import OAI.NumberTheory.DirichletL.Moments.SecondSectorColumns
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstCommonFourierTransport
+public import OAI.NumberTheory.DirichletL.Moments.FirstSectorTransform
+public import OAI.NumberTheory.DirichletL.Moments.SecondSectorColumns
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondSourceFrequency
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondSourceFrequency
+
+@[expose] public section
 
 namespace OAI
 

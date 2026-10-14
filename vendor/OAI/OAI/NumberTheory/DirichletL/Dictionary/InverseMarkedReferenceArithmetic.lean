@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceReindex
-import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceDeleted
+module
+
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceReindex
+public import OAI.NumberTheory.DirichletL.Dictionary.InverseMarkedReferenceDeleted
+
+@[expose] public section
 
 namespace OAI
 

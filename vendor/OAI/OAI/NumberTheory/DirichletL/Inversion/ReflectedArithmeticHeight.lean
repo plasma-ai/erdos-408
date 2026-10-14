@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.UniformMeasure
-import OAI.NumberTheory.DirichletL.Reflection.UniformTail
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.UniformMeasure
+public import OAI.NumberTheory.DirichletL.Reflection.UniformTail
+
+@[expose] public section
 
 namespace OAI
 

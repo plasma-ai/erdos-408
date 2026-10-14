@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonLiveFrozen
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonLiveFrozen
+
+@[expose] public section
 
 namespace OAI
 

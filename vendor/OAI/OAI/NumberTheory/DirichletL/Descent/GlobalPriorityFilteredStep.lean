@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredAggregate
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFullAggregate
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFilteredAggregate
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFullAggregate
+
+@[expose] public section
 
 namespace OAI
 

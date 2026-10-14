@@ -1,7 +1,11 @@
-import Erdos821.S2.HistorySizes
-import Erdos821.S2.BlueprintBirths
+module
+
+public import Erdos821.S2.HistorySizes
+public import Erdos821.S2.BlueprintBirths
 
 /-! Global distinctness is exactly injectivity on the performed addresses. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

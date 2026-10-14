@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.OriginalRetained
-import OAI.NumberTheory.DirichletL.Reflection.OriginalSectorUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalRetained
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalSectorUniformDegree
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Energy.State
-import OAI.NumberTheory.DirichletL.Moments.FirstSourceReduction
-import OAI.NumberTheory.DirichletL.Moments.DetectorPlainSource
-import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.State
+public import OAI.NumberTheory.DirichletL.Moments.FirstSourceReduction
+public import OAI.NumberTheory.DirichletL.Moments.DetectorPlainSource
+public import OAI.NumberTheory.DirichletL.Moments.AmplificationChildInput
+
+@[expose] public section
 
 namespace OAI
 

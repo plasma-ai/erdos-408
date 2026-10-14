@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.PowerfulBudget
-import OAI.NumberTheory.DirichletL.Reflection.RowReindex
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.PowerfulBudget
+public import OAI.NumberTheory.DirichletL.Reflection.RowReindex
+
+@[expose] public section
 
 namespace OAI
 

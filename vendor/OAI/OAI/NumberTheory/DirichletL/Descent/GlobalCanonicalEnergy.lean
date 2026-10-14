@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Inversion.FirstGlobalParents
-import OAI.NumberTheory.DirichletL.Descent.GlobalParentEnergy
-import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFullAggregate
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.FirstGlobalParents
+public import OAI.NumberTheory.DirichletL.Descent.GlobalParentEnergy
+public import OAI.NumberTheory.DirichletL.Descent.GlobalPriorityFullAggregate
+
+@[expose] public section
 
 namespace OAI
 

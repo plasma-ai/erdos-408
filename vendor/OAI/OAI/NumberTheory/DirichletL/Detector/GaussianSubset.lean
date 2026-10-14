@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianCompensation
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianCompensation
+
+@[expose] public section
 
 namespace OAI
 

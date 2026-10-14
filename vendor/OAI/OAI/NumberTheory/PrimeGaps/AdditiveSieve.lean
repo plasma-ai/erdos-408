@@ -1,4 +1,10 @@
-import OAI.NumberTheory.PrimeGaps.CharacterErrors
+module
+
+public import OAI.NumberTheory.PrimeGaps.CharacterErrors
+public import Mathlib.Algebra.Order.Star.Rat
+public import Mathlib.Analysis.CStarAlgebra.Module.Constructions
+
+@[expose] public section
 
 namespace OAI
 

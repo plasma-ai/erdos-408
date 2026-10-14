@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondPhysicalRecursive
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondPhysicalRecursive
+
+@[expose] public section
 
 namespace OAI
 

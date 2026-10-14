@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.NaturalPrimitive
-import OAI.NumberTheory.DirichletL.Moments.ReflectionDeletion
-import OAI.NumberTheory.DirichletL.Hecke.Conjugation
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.NaturalPrimitive
+public import OAI.NumberTheory.DirichletL.Moments.ReflectionDeletion
+public import OAI.NumberTheory.DirichletL.Hecke.Conjugation
+
+@[expose] public section
 
 namespace OAI
 

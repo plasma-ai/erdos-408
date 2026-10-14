@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianSeminorm
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianSeminorm
+
+@[expose] public section
 
 namespace OAI
 

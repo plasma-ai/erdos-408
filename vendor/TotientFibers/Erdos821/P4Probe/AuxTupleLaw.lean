@@ -1,5 +1,9 @@
-import Erdos821.P4Probe.SelectedTuples
-import Erdos821.P4Independent.DisjointMarginal
+module
+
+public import Erdos821.P4Probe.SelectedTuples
+public import Erdos821.P4Independent.DisjointMarginal
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

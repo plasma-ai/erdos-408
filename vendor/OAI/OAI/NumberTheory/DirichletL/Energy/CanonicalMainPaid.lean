@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Energy.CanonicalUniformReference
-import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPaidAdmission
-import OAI.NumberTheory.DirichletL.Energy.AmplifiedRayDictionary
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.CanonicalUniformReference
+public import OAI.NumberTheory.DirichletL.Moments.FirstAmplifiedPaidAdmission
+public import OAI.NumberTheory.DirichletL.Energy.AmplifiedRayDictionary
+
+@[expose] public section
 
 namespace OAI
 

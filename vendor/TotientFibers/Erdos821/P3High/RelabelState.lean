@@ -1,7 +1,11 @@
-import Erdos821.P3High.HistoryPath
-import Erdos821.P3High.Relabel
+module
+
+public import Erdos821.P3High.HistoryPath
+public import Erdos821.P3High.Relabel
 
 /-! Replacing one big active label of a memory state, and its effect on tilted products. -/
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.UniformNormalized
-import OAI.NumberTheory.DirichletL.Reflection.UniformPhysicalUniformDegree
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.UniformNormalized
+public import OAI.NumberTheory.DirichletL.Reflection.UniformPhysicalUniformDegree
+
+@[expose] public section
 
 namespace OAI
 

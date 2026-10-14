@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.FirstMixed
-import OAI.NumberTheory.DirichletL.Moments.Active
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.FirstMixed
+public import OAI.NumberTheory.DirichletL.Moments.Active
+
+@[expose] public section
 
 namespace OAI
 

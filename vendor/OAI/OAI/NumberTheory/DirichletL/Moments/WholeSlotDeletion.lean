@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.SlotRemoval
-import OAI.NumberTheory.DirichletL.Moments.RetainedEnergy
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SlotRemoval
+public import OAI.NumberTheory.DirichletL.Moments.RetainedEnergy
+
+@[expose] public section
 
 namespace OAI
 

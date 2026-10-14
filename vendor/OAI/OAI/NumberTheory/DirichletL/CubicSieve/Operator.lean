@@ -1,5 +1,9 @@
-import Mathlib.Analysis.CStarAlgebra.Matrix
-import Mathlib.Tactic.Ring
+module
+
+public import Mathlib.Analysis.CStarAlgebra.Matrix
+public import Mathlib.Tactic.Ring
+
+@[expose] public section
 
 namespace OAI
 

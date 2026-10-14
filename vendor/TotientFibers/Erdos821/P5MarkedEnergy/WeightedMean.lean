@@ -1,8 +1,14 @@
-import Erdos821.P5.Basic
-import Erdos821.Classical.DirichletMean
+module
+
+public import Erdos821.P5.Basic
+public import Erdos821.Classical.DirichletMean
+public import Mathlib.Algebra.Order.Chebyshev
+public import Mathlib.Algebra.Order.Ring.Star
 
 /-! A weighted mean value for Dirichlet polynomials, uniform under shifts,
 from the proved mean-square input on unit-scale intervals. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.Matrices
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.Matrices
+
+@[expose] public section
 
 namespace OAI
 

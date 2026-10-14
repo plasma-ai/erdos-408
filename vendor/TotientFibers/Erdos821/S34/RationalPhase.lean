@@ -1,5 +1,9 @@
-import Erdos821.S34.LogMultiplier
-import Erdos821.P5.Basic
+module
+
+public import Erdos821.S34.LogMultiplier
+public import Erdos821.P5.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 

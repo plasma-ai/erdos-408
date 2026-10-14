@@ -1,5 +1,10 @@
-import Erdos821.P4Probe.Blocks
-import Erdos821.P4Probe.Costs
+module
+
+public import Erdos821.P4Probe.Blocks
+public import Erdos821.P4Probe.Costs
+public import Mathlib.Algebra.Order.Ring.Star
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

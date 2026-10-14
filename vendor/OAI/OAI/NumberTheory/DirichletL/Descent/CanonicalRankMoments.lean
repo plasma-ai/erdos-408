@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalChildSupport
-import OAI.NumberTheory.DirichletL.Descent.FirstLabelCellStep
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalChildSupport
+public import OAI.NumberTheory.DirichletL.Descent.FirstLabelCellStep
+
+@[expose] public section
 
 namespace OAI
 

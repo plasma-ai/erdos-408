@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Hecke.StripActual
-import OAI.NumberTheory.DirichletL.CharacterTransport
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.StripActual
+public import OAI.NumberTheory.DirichletL.CharacterTransport
+
+@[expose] public section
 
 namespace OAI
 

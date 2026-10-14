@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.FamilyTail
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.FamilyTail
+
+@[expose] public section
 
 namespace OAI
 

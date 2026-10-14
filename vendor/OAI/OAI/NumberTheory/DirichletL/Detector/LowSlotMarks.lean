@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.LowSlotPolynomial
-import OAI.NumberTheory.DirichletL.Detector.CanonicalSlots
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.LowSlotPolynomial
+public import OAI.NumberTheory.DirichletL.Detector.CanonicalSlots
+
+@[expose] public section
 
 namespace OAI
 

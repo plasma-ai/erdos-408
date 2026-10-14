@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalWindow
-import OAI.NumberTheory.DirichletL.Moments.SecondCanonicalScalar
-import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptional
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalWindow
+public import OAI.NumberTheory.DirichletL.Moments.SecondCanonicalScalar
+public import OAI.NumberTheory.DirichletL.Moments.SecondNonexceptional
+
+@[expose] public section
 
 namespace OAI
 

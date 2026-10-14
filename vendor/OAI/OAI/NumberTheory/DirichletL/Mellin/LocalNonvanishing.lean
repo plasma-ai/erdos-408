@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.GaussSum.ThetaLocalRows
+module
+
+public import OAI.NumberTheory.DirichletL.GaussSum.ThetaLocalRows
+
+@[expose] public section
 
 namespace OAI
 

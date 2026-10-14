@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationColumn
+module
+
+public import OAI.NumberTheory.DirichletL.Hecke.InverseAmplificationColumn
+
+@[expose] public section
 
 namespace OAI
 

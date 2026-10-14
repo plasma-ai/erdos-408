@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.BoundedTemplates
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.BoundedTemplates
+
+@[expose] public section
 
 namespace OAI
 

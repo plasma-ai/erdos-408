@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Moments.SourceInputFirstSectorTailUniform
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SourceInputFirstSectorTailUniform
+
+@[expose] public section
 
 namespace OAI
 

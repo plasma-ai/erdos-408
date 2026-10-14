@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalFamily
-import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalCost
-import OAI.NumberTheory.DirichletL.Moments.SourceBlockWindows
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.SecondExceptionalFamily
+public import OAI.NumberTheory.DirichletL.Moments.SecondPhysicalCost
+public import OAI.NumberTheory.DirichletL.Moments.SourceBlockWindows
+
+@[expose] public section
 
 namespace OAI
 

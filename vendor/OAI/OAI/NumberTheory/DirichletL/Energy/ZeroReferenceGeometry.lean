@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Energy.ReferenceDivisors
-import OAI.NumberTheory.DirichletL.Energy.ReferenceLowBands
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceDivisors
+public import OAI.NumberTheory.DirichletL.Energy.ReferenceLowBands
+
+@[expose] public section
 
 namespace OAI
 

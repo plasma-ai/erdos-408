@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailScale
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialHighFrequencyTailScale
+
+@[expose] public section
 
 namespace OAI
 

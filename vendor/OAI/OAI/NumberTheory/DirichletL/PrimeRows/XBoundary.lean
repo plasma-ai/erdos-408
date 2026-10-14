@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.XGrowth
-import OAI.NumberTheory.DirichletL.PrimeRows.BufferedContour
-import OAI.NumberTheory.DirichletL.ContinuationShiftedGaussian
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.XGrowth
+public import OAI.NumberTheory.DirichletL.PrimeRows.BufferedContour
+public import OAI.NumberTheory.DirichletL.ContinuationShiftedGaussian
+
+@[expose] public section
 
 namespace OAI
 

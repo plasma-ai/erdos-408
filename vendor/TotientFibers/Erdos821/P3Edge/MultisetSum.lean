@@ -1,4 +1,11 @@
-import Erdos821.P3Edge.BoundedMem
+module
+
+public import Erdos821.P3Edge.BoundedMem
+public import Mathlib.Algebra.BigOperators.Field
+public import Mathlib.Analysis.Normed.Field.Basic
+public import Mathlib.Data.Nat.Choose.Sum
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

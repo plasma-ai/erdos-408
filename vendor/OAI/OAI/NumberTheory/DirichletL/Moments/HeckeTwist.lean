@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Moments.HeckeCancellation
-import OAI.NumberTheory.DirichletL.Moments.Height
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.HeckeCancellation
+public import OAI.NumberTheory.DirichletL.Moments.Height
+
+@[expose] public section
 
 namespace OAI
 

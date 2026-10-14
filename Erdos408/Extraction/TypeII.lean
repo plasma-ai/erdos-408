@@ -1,6 +1,8 @@
-import Erdos408.Analytic.IntegerKernel
-import Erdos408.Analytic.ProxyTwist
-import Erdos408.Extraction.TypeII.Eventually
+module
+
+public import Erdos408.Analytic.IntegerKernel
+public import Erdos408.Analytic.ProxyTwist
+public import Erdos408.Extraction.TypeII.Eventually
 
 /-!
 # Replacing primes by the damped proxy
@@ -31,6 +33,8 @@ See `blueprint/rectangle_input.md` §4 (E4–E5) and §6.3 of the paper
 *The normal order of the number of iterations of Euler's function* (Plasma AI,
 2026).
 -/
+
+@[expose] public section
 
 namespace Erdos408
 

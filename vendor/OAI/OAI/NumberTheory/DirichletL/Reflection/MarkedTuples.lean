@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.ActualSelected
-import OAI.NumberTheory.DirichletL.Reflection.OriginalWeights
-import OAI.NumberTheory.DirichletL.Reflection.WholePair
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.ActualSelected
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalWeights
+public import OAI.NumberTheory.DirichletL.Reflection.WholePair
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import Erdos821.P4Probe.RawKernel
+module
+
+public import Erdos821.P4Probe.RawKernel
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

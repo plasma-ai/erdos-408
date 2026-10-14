@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Descent.CanonicalPunctureMask
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.CanonicalPunctureMask
+
+@[expose] public section
 
 namespace OAI
 

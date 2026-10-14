@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialCommonProfile
-import OAI.NumberTheory.DirichletL.Inversion.InitialOverlapSource
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialCommonProfile
+public import OAI.NumberTheory.DirichletL.Inversion.InitialOverlapSource
+
+@[expose] public section
 
 namespace OAI
 

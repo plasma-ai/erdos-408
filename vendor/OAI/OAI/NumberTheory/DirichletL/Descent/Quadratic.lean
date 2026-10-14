@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Foundation
-import OAI.NumberTheory.DirichletL.Descent.IdealMasks
-import OAI.NumberTheory.DirichletL.Descent.SieveComposition
+module
+
+public import OAI.NumberTheory.DirichletL.Foundation
+public import OAI.NumberTheory.DirichletL.Descent.IdealMasks
+public import OAI.NumberTheory.DirichletL.Descent.SieveComposition
+
+@[expose] public section
 
 namespace OAI
 

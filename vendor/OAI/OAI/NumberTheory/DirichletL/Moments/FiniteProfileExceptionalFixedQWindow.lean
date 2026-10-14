@@ -1,7 +1,11 @@
-import OAI.NumberTheory.DirichletL.Moments.CommonWindowColumn
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonHeight
-import OAI.NumberTheory.DirichletL.Moments.LogDyadic
-import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalFixedQCanonical
+module
+
+public import OAI.NumberTheory.DirichletL.Moments.CommonWindowColumn
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalCommonHeight
+public import OAI.NumberTheory.DirichletL.Moments.LogDyadic
+public import OAI.NumberTheory.DirichletL.Moments.FiniteProfileExceptionalFixedQCanonical
+
+@[expose] public section
 
 namespace OAI
 

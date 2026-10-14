@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.TerminalWidths
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.TerminalWidths
+
+@[expose] public section
 
 namespace OAI
 

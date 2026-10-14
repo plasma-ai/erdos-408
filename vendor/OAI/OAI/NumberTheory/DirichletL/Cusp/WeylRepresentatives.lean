@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Eisenstein.FixedCuspArrays
+module
+
+public import OAI.NumberTheory.DirichletL.Eisenstein.FixedCuspArrays
+
+@[expose] public section
 
 namespace OAI
 

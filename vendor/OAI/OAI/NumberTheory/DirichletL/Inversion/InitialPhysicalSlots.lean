@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Inversion.InitialMarkedDictionary
+module
+
+public import OAI.NumberTheory.DirichletL.Inversion.InitialMarkedDictionary
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,6 +1,10 @@
-import OAI.NumberTheory.DirichletL.Reflection.ActiveProducts
-import OAI.NumberTheory.DirichletL.Reflection.SlotCoefficients
-import OAI.NumberTheory.DirichletL.Reflection.OriginalTransport
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.ActiveProducts
+public import OAI.NumberTheory.DirichletL.Reflection.SlotCoefficients
+public import OAI.NumberTheory.DirichletL.Reflection.OriginalTransport
+
+@[expose] public section
 
 namespace OAI
 

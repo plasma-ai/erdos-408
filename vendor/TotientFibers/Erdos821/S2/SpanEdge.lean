@@ -1,7 +1,11 @@
-import Erdos821.S2.SpanGhost
-import Erdos821.S2.PhysicalCompatibility
+module
+
+public import Erdos821.S2.SpanGhost
+public import Erdos821.S2.PhysicalCompatibility
 
 /-! Transfer masks and old-index injections reconstructed from prime lifespans. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

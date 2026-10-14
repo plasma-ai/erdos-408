@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.FirstChildWindowsActual
-import OAI.NumberTheory.DirichletL.Inversion.SecondSourceBlocks
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.FirstChildWindowsActual
+public import OAI.NumberTheory.DirichletL.Inversion.SecondSourceBlocks
+
+@[expose] public section
 
 namespace OAI
 

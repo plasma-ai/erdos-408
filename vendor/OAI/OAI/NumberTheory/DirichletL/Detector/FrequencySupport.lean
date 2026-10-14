@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.CalibrationCRT
-import OAI.NumberTheory.DirichletL.Detector.PhysicalPoisson
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.CalibrationCRT
+public import OAI.NumberTheory.DirichletL.Detector.PhysicalPoisson
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Energy.OriginalSource
+module
+
+public import OAI.NumberTheory.DirichletL.Energy.OriginalSource
+
+@[expose] public section
 
 namespace OAI
 

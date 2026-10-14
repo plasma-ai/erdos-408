@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.PrimeRows.Character
+module
+
+public import OAI.NumberTheory.DirichletL.PrimeRows.Character
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Descent.SecondSourceEncoding
-import OAI.NumberTheory.DirichletL.Descent.SecondCauchy
+module
+
+public import OAI.NumberTheory.DirichletL.Descent.SecondSourceEncoding
+public import OAI.NumberTheory.DirichletL.Descent.SecondCauchy
+
+@[expose] public section
 
 namespace OAI
 

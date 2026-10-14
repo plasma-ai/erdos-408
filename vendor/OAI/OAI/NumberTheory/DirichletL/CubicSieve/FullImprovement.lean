@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.CubicSieve.AnnularImprovement
+module
+
+public import OAI.NumberTheory.DirichletL.CubicSieve.AnnularImprovement
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Reflection.SumMeasure
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.SumMeasure
+
+@[expose] public section
 
 namespace OAI
 

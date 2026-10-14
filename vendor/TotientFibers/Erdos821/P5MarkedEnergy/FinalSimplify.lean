@@ -1,6 +1,10 @@
-import Erdos821.P5MarkedEnergy.FinalAux
+module
+
+public import Erdos821.P5MarkedEnergy.FinalAux
 
 /-! Uniform simplifications of the piece bound. -/
+
+@[expose] public section
 
 noncomputable section
 open scoped BigOperators

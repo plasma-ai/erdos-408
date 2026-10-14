@@ -1,6 +1,10 @@
-import Erdos821.S2.HistoryResourceTasks
-import Erdos821.S2.MemoryEdge
-import Erdos821.S2.MemoryIndices
+module
+
+public import Erdos821.S2.HistoryResourceTasks
+public import Erdos821.S2.MemoryEdge
+public import Erdos821.S2.MemoryIndices
+
+@[expose] public section
 
 set_option autoImplicit false
 

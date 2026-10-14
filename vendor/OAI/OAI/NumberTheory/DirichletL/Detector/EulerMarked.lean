@@ -1,4 +1,8 @@
-import OAI.NumberTheory.DirichletL.Detector.EulerFinsupp
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.EulerFinsupp
+
+@[expose] public section
 
 namespace OAI
 

@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Reflection.SelectedExpansion
-import OAI.NumberTheory.DirichletL.Reflection.MarkedActualSource
+module
+
+public import OAI.NumberTheory.DirichletL.Reflection.SelectedExpansion
+public import OAI.NumberTheory.DirichletL.Reflection.MarkedActualSource
+
+@[expose] public section
 
 namespace OAI
 

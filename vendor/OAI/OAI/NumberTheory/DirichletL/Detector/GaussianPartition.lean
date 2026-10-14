@@ -1,5 +1,9 @@
-import OAI.NumberTheory.DirichletL.Detector.GaussianCompletion
-import Mathlib.Analysis.SpecialFunctions.SmoothTransition
+module
+
+public import OAI.NumberTheory.DirichletL.Detector.GaussianCompletion
+public import Mathlib.Analysis.SpecialFunctions.SmoothTransition
+
+@[expose] public section
 
 namespace OAI
 
