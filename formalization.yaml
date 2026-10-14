@@ -45,8 +45,8 @@ sources:
     type: "paper"
     relationship: "formalizes"
     note: >-
-      Unpublished draft manuscript, not yet released or refereed; it follows
-      the argument formalized here. Theorem 1.1 is Erdos408.normal_order_rate,
+      The manuscript accompanying this repository, in paper/; not refereed.
+      It follows the argument formalized here. Theorem 1.1 is Erdos408.normal_order_rate,
       and Theorem 2.1 (the quantitative rectangle estimate) is
       Erdos408.RectangleInput.
       The Lean deduction from RectangleInput follows Sections 3–5 (spare-slot
@@ -76,7 +76,7 @@ sources:
     authors: ["OpenAI"]
     id: "https://github.com/openai/math/blob/main/preprints/Weighted-Dilation-Graphs-Smooth-Shifted-Primes-and-Totient-Fibers-September-24-2026/paper.pdf"
     type: "paper"
-    relationship: "uses"
+    relationship: "background"
     note: >-
       Lemma 3.4, Theorem 3.5, Corollary 3.11, Theorem 4.1 and Lemma 4.3 (the
       dilation-graph transference and ideal kernels) give PD Propositions 6.2
@@ -86,7 +86,7 @@ sources:
     authors: ["OpenAI"]
     id: "https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/paper.pdf"
     type: "paper"
-    relationship: "uses"
+    relationship: "background"
     note: >-
       Theorem 1.1, the zero-free half-plane for Dirichlet L-functions, from
       which the analytic premises of the graph results and the prime number
@@ -126,7 +126,7 @@ status:
     Comparator checks three theorems, with no hypotheses: the normal order
     with its rate and exceptional count, and formal-conjectures'
     erdos_408.parts.i and erdos_408.parts.ii. The third question of the
-    problem is not addressed.
+    problem, which the paper discusses, is not formalized.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: ["propext", "Quot.sound", "Classical.choice"]
@@ -138,7 +138,7 @@ automation:
       framework: "Claude Code"
       tool_setup: "Lean 4.35.0, Mathlib, and Lake."
       prompting_notes: >-
-        Asked to formalize the normal-order argument of the draft paper above,
+        Asked to formalize the normal-order argument of the paper above,
         first conditional on the graph papers and then outright, and to vendor
         the quasi-Riemann hypothesis formalization and, once found, Yao Xu's
         formalization of the weighted dilation graphs paper. Claude Code
@@ -156,7 +156,7 @@ fidelity:
   divergences: >-
     formal-conjectures defines f(n) as the least k ≥ 1 with φ_k(n) = 1, so
     f(1) = 1; this does not affect densities or the normal order. The Lean
-    proof follows the route of the draft paper The normal order of the
+    proof follows the route of the paper The normal order of the
     number of iterations of Euler's function, and the theorem proved is its
     Theorem 1.1.
 

@@ -34,8 +34,7 @@ of the WD results (Yao Xu's totient-fibers-lean4).
 (`FormalConjectures/ErdosProblems/408.lean`, commit `7db2ea3b91`), and
 `erdos_408.parts.i` and `erdos_408.parts.ii` are its statements of the same
 names verbatim, with its `Set.HasDensity` written as `HasDensity`, which
-inlines it relative to all of `ℕ`.
-Thomas F. Bloom catalogs the questions as
+inlines it relative to all of `ℕ`. Thomas F. Bloom catalogs the questions as
 [Erdős Problem 408](https://www.erdosproblems.com/408).
 
 The three theorems below have deliberate proof holes. `Solution.lean` supplies

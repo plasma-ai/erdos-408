@@ -76,6 +76,8 @@ Four vendored libraries live under `vendor/`, each under its own directory with 
 
 `Challenge.lean` and the files of `Erdos408/` that import only Mathlib use the module system. The vendored libraries do not, and a module cannot import an ordinary file, so the files that depend on them and `Solution.lean` are ordinary files.
 
+`paper/` holds the paper, `totient_iterates.tex` and its compiled `totient_iterates.pdf`.
+
 `formalization.yaml` records the mathematical sources, authorship, AI use, source fidelity, and review status for a registry submission.
 
 The Lean and Mathlib versions are fixed by `lean-toolchain`, `lakefile.toml`, and `lake-manifest.json`.
