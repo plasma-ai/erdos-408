@@ -35,11 +35,11 @@ theorem performed_value_preserving_sign_sum {α : Type*} [Fintype α] [Decidable
               exact hv hr hc he
             · rintro rfl
               exact ⟨hc, rfl⟩
-          simp only [M, if_pos hc, he, Matrix.one_apply]
-        · simp only [M, if_neg hc, Matrix.one_apply]
+          simp only [M, ite_eq_left hc, he, Matrix.one_apply]
+        · simp only [M, ite_eq_right hc, Matrix.one_apply]
       simp [hv, hM]
     · change ¬ (∀ r ∈ performed, ∀ c ∈ performed, value r = value c → r = c) at hv
-      push_neg at hv
+      push Not at hv
       obtain ⟨r, hr, c, hc, he, hrc⟩ := hv
       have hrows : M r = M c := by
         funext k
@@ -60,13 +60,13 @@ theorem performed_value_preserving_sign_sum {α : Type*} [Fintype α] [Decidable
       constructor
       · intro i hi
         by_contra hn
-        have hfix : σ i = i := by simpa only [cond, if_neg hn] using h i
+        have hfix : σ i = i := by simpa only [cond, ite_eq_right hn] using h i
         exact Equiv.Perm.mem_support.mp hi hfix
       · intro i
         by_cases hi : i ∈ performed
         · exact (show σ i ∈ performed ∧ value (σ i) = value i from by
-            simpa only [cond, if_pos hi] using h i).2
-        · have hfix : σ i = i := by simpa only [cond, if_neg hi] using h i
+            simpa only [cond, ite_eq_left hi] using h i).2
+        · have hfix : σ i = i := by simpa only [cond, ite_eq_right hi] using h i
           rw [hfix]
     · rintro ⟨hs, hv⟩ i
       by_cases hi : i ∈ performed
@@ -74,9 +74,9 @@ theorem performed_value_preserving_sign_sum {α : Type*} [Fintype α] [Decidable
           by_cases hfix : σ i = i
           · simpa only [hfix] using hi
           · exact hs (Equiv.Perm.apply_mem_support.mpr (Equiv.Perm.mem_support.mpr hfix))
-        exact (show cond σ i from by simpa only [cond, if_pos hi] using And.intro ho (hv i))
+        exact (show cond σ i from by simpa only [cond, ite_eq_left hi] using And.intro ho (hv i))
       · have hfix : σ i = i := Equiv.Perm.notMem_support.mp (fun h => hi (hs h))
-        simpa only [cond, if_neg hi] using hfix
+        simpa only [cond, ite_eq_right hi] using hfix
   have hentry (σ : Equiv.Perm α) (i : α) :
       M (σ i) i = if cond σ i then (1 : ℤ) else 0 := by
     by_cases hi : i ∈ performed <;> simp only [M, cond, hi, ↓reduceIte]
@@ -85,17 +85,17 @@ theorem performed_value_preserving_sign_sum {α : Type*} [Fintype α] [Decidable
         if σ.support ⊆ performed ∧ ∀ i, value (σ i) = value i then (1 : ℤ) else 0 := by
     by_cases he : σ.support ⊆ performed ∧ ∀ i, value (σ i) = value i
     · have hc := (hcond σ).mpr he
-      rw [if_pos he]
+      rw [ite_eq_left he]
       apply Finset.prod_eq_one
       intro i _
       rw [hentry]
-      exact if_pos (hc i)
+      exact ite_eq_left (hc i)
     · have hc : ¬ ∀ i, cond σ i := fun h => he ((hcond σ).mp h)
       obtain ⟨i, hi⟩ := not_forall.mp hc
-      rw [if_neg he]
+      rw [ite_eq_right he]
       apply Finset.prod_eq_zero (Finset.mem_univ i)
       rw [hentry]
-      exact if_neg hi
+      exact ite_eq_right hi
 
   calc
     _ = M.det := hdet

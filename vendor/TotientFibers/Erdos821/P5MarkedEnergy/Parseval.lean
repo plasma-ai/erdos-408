@@ -84,12 +84,12 @@ theorem parseval_unit (s : Finset ℕ) (c : ℕ → ℂ) (a : ℝ) :
   rw [intervalIntegral.integral_finsetSum (fun m _ => (hcont n m).intervalIntegrable _ _)]
   simp_rw [intervalIntegral.integral_const_mul, integral_e_int]
   rw [Finset.sum_eq_single n]
-  · simp only [sub_self, if_true, mul_one]
+  · simp only [sub_self, ite_true, mul_one]
     rw [Complex.mul_conj, Complex.normSq_eq_norm_sq]
   · intro m _ hmn
     have : ((n : ℤ) - m : ℤ) ≠ 0 := by
       intro h; apply hmn; omega
-    rw [if_neg this, mul_zero]
+    rw [ite_eq_right this, mul_zero]
   · intro h; exact absurd hn h
 
 /-- Parseval as an upper bound on any interval of length at most one. -/

@@ -65,7 +65,7 @@ theorem goodSharedDraw_iff {P : PrimeGroups} {J ell m : ℕ}
 
 theorem sharedDrawProduct_pos {P : PrimeGroups} {J ell m : ℕ}
     (ν : Pattern P J ell m) (z : SharedDraw ν) : 0 < sharedDrawProduct ν z :=
-  Finset.prod_pos (fun i hi => (P.prime i.1 _ (z i).property).pos)
+  Finset.prod_pos (fun i _ => (P.prime i.1 _ (z i).property).pos)
 
 theorem sharedDrawProduct_coprime {P : PrimeGroups} {J ell m : ℕ}
     (ν : Pattern P J ell m) (z : SharedDraw ν) (n : ℕ)

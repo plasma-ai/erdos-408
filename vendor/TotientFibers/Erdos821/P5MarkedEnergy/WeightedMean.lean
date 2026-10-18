@@ -86,7 +86,6 @@ theorem sum_inv_succ_sq_le_two (n : ℕ) :
       have hk : (0 : ℝ) ≤ k := Nat.cast_nonneg k
       have h1 : (((k + 1 : ℕ) : ℝ) + 1) = (k : ℝ) + 2 := by push_cast; ring
       rw [h1]
-      push_cast
       have hstep : (((k : ℝ) + 2) ^ 2)⁻¹ ≤ ((k : ℝ) + 1)⁻¹ - ((k : ℝ) + 2)⁻¹ := by
         have e : ((k : ℝ) + 1)⁻¹ - ((k : ℝ) + 2)⁻¹ = (((k : ℝ) + 1) * ((k : ℝ) + 2))⁻¹ := by
           field_simp; ring
@@ -242,13 +241,13 @@ theorem weighted_mean_value : ∃ K : ℝ, 0 < K ∧ ∀ (N : ℕ) (g : ℕ → 
       apply Finset.sum_congr rfl
       intro k hk
       have hk' := Finset.mem_range.mp hk
-      simp only [sk, d, if_neg (show ¬ n ≤ k by omega)]
+      simp only [sk, d, ite_eq_right (show ¬ n ≤ k by omega)]
       ring_nf
     have e2 : ∑ k ∈ Finset.range n, sk (n + k) =
         ∑ k ∈ Finset.range n, (((k : ℝ) + 1) ^ 2)⁻¹ := by
       apply Finset.sum_congr rfl
       intro k _
-      simp only [sk, d, if_pos (show n ≤ n + k by omega), Nat.add_sub_cancel_left]
+      simp only [sk, d, ite_eq_left (show n ≤ n + k by omega), Nat.add_sub_cancel_left]
       ring_nf
     rw [e1, e2]
     linarith [sum_inv_succ_sq_le_two n]

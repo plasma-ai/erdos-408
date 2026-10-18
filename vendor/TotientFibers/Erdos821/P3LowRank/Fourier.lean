@@ -126,9 +126,9 @@ theorem prod_ite_mem_univ {α M : Type*} [Fintype α] [CommMonoid M] (s : Finset
 /-- A performed-address gate, kept opaque so decidability instances never need to agree. -/
 def gate (P : Prop) (z : ℂ) : ℂ := if P then z else 0
 
-theorem gate_pos {P : Prop} (h : P) (z : ℂ) : gate P z = z := if_pos h
+theorem gate_pos {P : Prop} (h : P) (z : ℂ) : gate P z = z := ite_eq_left h
 
-theorem gate_neg {P : Prop} (h : ¬ P) (z : ℂ) : gate P z = 0 := if_neg h
+theorem gate_neg {P : Prop} (h : ¬ P) (z : ℂ) : gate P z = 0 := ite_eq_right h
 
 theorem norm_gate_le (P : Prop) {z : ℂ} (hz : ‖z‖ ≤ 1) : ‖gate P z‖ ≤ 1 := by
   by_cases h : P
@@ -163,12 +163,12 @@ theorem block_rep {a : ℕ} (Q : ℕ) (hQ : 0 < Q) (B : Finset (Fin a)) (hB : B.
       congr 1
       rw [← Finset.add_sum_erase B _ hp]
       have hcp : ((cf ξ p : ℤ) : ℝ) = -(∑ k ∈ B.erase p, ((ξ k : ℕ) : ℝ)) := by
-        simp only [cf, if_pos rfl]
+        simp only [cf, ite_eq_left rfl]
         push_cast
         rfl
       have hcf : ∀ k ∈ B.erase p, ((cf ξ k : ℤ) : ℝ) = ((ξ k : ℕ) : ℝ) := by
         intro k hk
-        simp only [cf, if_neg (Finset.ne_of_mem_erase hk)]
+        simp only [cf, ite_eq_right (Finset.ne_of_mem_erase hk)]
         push_cast
         rfl
       have e1 : ∑ x ∈ B.erase p, ((cf ξ x : ℤ) : ℝ) * ((value x : ℕ) : ℝ) / (Q : ℝ) =
@@ -187,12 +187,12 @@ theorem block_rep {a : ℕ} (Q : ℕ) (hQ : 0 < Q) (B : Finset (Fin a)) (hB : B.
           (Q : ℂ) * (if (k ∈ B.erase p → value k = value p) then 1 else 0) := by
       intro k
       by_cases hkB : k ∈ B.erase p
-      · simp only [if_pos hkB, D]
+      · simp only [ite_eq_left hkB, D]
         rw [sum_phase Q hQ]
         by_cases he : value k = value p
-        · rw [if_pos ((dvd_sub_iff_eq Q _ _ (hv k) (hv p)).mpr he)]
+        · rw [ite_eq_left ((dvd_sub_iff_eq Q _ _ (hv k) (hv p)).mpr he)]
           simp [he]
-        · rw [if_neg (fun h => he ((dvd_sub_iff_eq Q _ _ (hv k) (hv p)).mp h))]
+        · rw [ite_eq_right (fun h => he ((dvd_sub_iff_eq Q _ _ (hv k) (hv p)).mp h))]
           simp [he, hkB]
       · simp [hkB]
     have hiff : (B ⊆ perf ∧ ∀ i ∈ B, ∀ j ∈ B, value i = value j) ↔
@@ -219,11 +219,11 @@ theorem block_rep {a : ℕ} (Q : ℕ) (hQ : 0 < Q) (B : Finset (Fin a)) (hB : B.
       Finset.prod_boole]
     rw [← mul_assoc, inv_mul_cancel₀ (pow_ne_zero a hQ'), one_mul]
     by_cases hall : ∀ k, k ∈ B.erase p → value k = value p
-    · rw [if_pos (hiff.mpr hall), if_pos (fun k _ => hall k)]
-    · rw [if_neg (fun h => hall (hiff.mp h)),
-        if_neg (fun h => hall (fun k => h k (Finset.mem_univ k)))]
+    · rw [ite_eq_left (hiff.mpr hall), ite_eq_left (fun k _ => hall k)]
+    · rw [ite_eq_right (fun h => hall (hiff.mp h)),
+        ite_eq_right (fun h => hall (fun k => h k (Finset.mem_univ k)))]
   · obtain ⟨j, hjB, hjp⟩ := Finset.not_subset.mp hsub
-    rw [if_neg (fun h => hsub h.1)]
+    rw [ite_eq_right (fun h => hsub h.1)]
     have h0 : ∀ ξ : Fin a → Fin Q,
         ∏ j ∈ B, gate (j ∈ perf) (phase ((cf ξ j : ℝ) * (value j : ℝ) / Q)) = 0 :=
       fun ξ => Finset.prod_eq_zero hjB (gate_neg hjp _)
@@ -269,9 +269,9 @@ theorem exists_represents {a : ℕ} (Q : ℕ) (hQ : 0 < Q) (π : Finset (Finset 
               (if birthEvent perf value π then (1 : ℂ) else 0) := by
           by_cases h1 : B ⊆ perf ∧ ∀ i ∈ B, ∀ j ∈ B, value i = value j
           · by_cases h2 : birthEvent perf value π
-            · rw [if_pos (hev.mpr ⟨h1, h2⟩), if_pos h1, if_pos h2, one_mul]
-            · rw [if_neg (fun h => h2 (hev.mp h).2), if_neg h2, mul_zero]
-          · rw [if_neg (fun h => h1 (hev.mp h).1), if_neg h1, zero_mul]
+            · rw [ite_eq_left (hev.mpr ⟨h1, h2⟩), ite_eq_left h1, ite_eq_left h2, one_mul]
+            · rw [ite_eq_right (fun h => h2 (hev.mp h).2), ite_eq_right h2, mul_zero]
+          · rw [ite_eq_right (fun h => h1 (hev.mp h).1), ite_eq_right h1, zero_mul]
         rw [hL, hrepB perf value hv, hrep' perf value hv]
         have hsplit : ∀ ξ : (Fin a → Fin Q) × Ξ,
             (∏ j ∈ B ∪ π.biUnion id,
@@ -281,9 +281,9 @@ theorem exists_represents {a : ℕ} (Q : ℕ) (hQ : 0 < Q) (π : Finset (Finset 
           intro ξ
           rw [Finset.prod_union hdU]
           congr 1
-          · exact Finset.prod_congr rfl fun j hj => if_pos hj
+          · exact Finset.prod_congr rfl fun j hj => ite_eq_left hj
           · exact Finset.prod_congr rfl fun j hj =>
-              if_neg (Finset.disjoint_right.mp hdU hj)
+              ite_eq_right (Finset.disjoint_right.mp hdU hj)
         rw [Finset.biUnion_insert, id_eq]
         simp only [hsplit]
         rw [Fintype.sum_prod_type]

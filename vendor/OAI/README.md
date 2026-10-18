@@ -80,4 +80,9 @@ A module does not export its private declarations, so 31 modules drop
 mentions, or that a later module uses: `PrimeRows/Measurable.lean` relies on
 the `Countable (Ideal O)` instance of `Hecke/Dyadic.lean`.
 
+Fifteen modules were also changed to build without warnings.
+`Detector/PhysicalCoefficient.lean` replaces the deprecated `MonoidHom.coe_coe`
+by `MonoidHom.coe_ofClass`, and the others remove the tactics and `first`
+alternatives that the linter reports as doing nothing.
+
 No `sorry`, `axiom`, or heartbeat option was added.

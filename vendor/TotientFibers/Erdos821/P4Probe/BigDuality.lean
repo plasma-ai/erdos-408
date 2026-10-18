@@ -35,14 +35,14 @@ lemma bigCoordinateAverage_duality (P : PrimeGroups) (M : ℕ)
     apply Fintype.sum_equiv (flattenBig P M)
     intro a
     rw [bigFlatWeight_eq, bigFlat_average]
-    simp [ff, gg]
+    simp [ff]
   have hr : (∑ a, (P.idealMass a : ℂ) * star (bigCoordinateAverage P M S f a) * g a) =
       ∑ x : ProductSample (BigAlphabet P M), (productWeight (bigFlatWeight P M) x : ℂ) *
         star (productAverage (bigFlatWeight P M) (bigFlatSet P M S) ff x) * gg x := by
     apply Fintype.sum_equiv (flattenBig P M)
     intro a
     rw [bigFlatWeight_eq, bigFlat_average]
-    simp [ff, gg]
+    simp [gg]
   rw [hl, hr]
   exact productAverage_duality (bigFlatWeight P M) (bigFlatSet P M S) ff gg
 

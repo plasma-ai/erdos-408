@@ -103,7 +103,6 @@ theorem eventually_big_deficit_budget (F : FixedData) (M : ℕ) :
       div_le_div_of_nonneg_right hnum (Real.exp_pos _).le
     _ = (5 * (M : ℝ) * F.C₀) * ((L x) ^ (2 : ℕ) * Real.exp (-((L x) ^ F.c))) := by
       rw [div_eq_mul_inv, Real.exp_neg]
-      push_cast
       ring_nf
     _ ≤ 1 / 2 := le_of_lt hsmall
 

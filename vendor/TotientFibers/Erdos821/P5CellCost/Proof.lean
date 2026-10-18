@@ -34,9 +34,9 @@ lemma selectedEndpoint_extendAux {G : Blueprint.Graph.PrimeGroups} {J ell m : �
   apply Finset.prod_congr rfl
   intro i hi
   by_cases hc : block g = side ∧ i ∈ ν.changed g.val
-  · simp only [if_pos hc]
+  · simp only [ite_eq_left hc]
     exact congrArg Subtype.val (extendAux_slot ν a₀ u g i)
-  · simp only [if_neg hc]
+  · simp only [ite_eq_right hc]
 
 lemma diagonalCharacterSum_re_ge_one {Q : ℕ} (hQ : 1 ≤ Q) (n : ℕ) :
     1 ≤ (∑ χ ∈ primitiveCharacters Q,
@@ -50,7 +50,7 @@ lemma diagonalCharacterSum_re_ge_one {Q : ℕ} (hQ : 1 ≤ Q) (n : ℕ) :
     exact DirichletCharacter.isPrimitive_one_level_one
   have hval : charValue χ₀ n = 1 := by
     change (1 : DirichletCharacter ℂ 1) (n : ZMod 1) = 1
-    letI : Subsingleton (ZMod 1) := (ZMod.subsingleton_iff).2 rfl
+    let : Subsingleton (ZMod 1) := (ZMod.subsingleton_iff).2 rfl
     rw [show (n : ZMod 1) = 1 from Subsingleton.elim _ _]
     simp
   have hterm (χ : CharacterIndex Q) :

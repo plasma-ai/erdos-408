@@ -87,8 +87,8 @@ theorem clean_norm_from_entry (F : FixedData) :
     by_cases hs : a.1 ∈ smallArrayStates P (J + F.ell) a.2.2.val.1 ∧
         b.1 ∈ smallArrayStates P (J + F.ell) b.2.2.val.1 ∧
         smallArrayPrefix J F.ell a.1 = smallArrayPrefix J F.ell b.1
-    · simpa only [if_pos hs] using h
-    · simpa only [if_neg hs] using h
+    · simpa only [ite_eq_left hs] using h
+    · simpa only [ite_eq_right hs] using h
 
 theorem raw_clean_norm_from_conditioned (F : FixedData) :
     ∃ Cs : ℝ, ∀ (x : ℝ) (P : PrimeGroups), P.Admissible F x → 0 < L x →
@@ -116,13 +116,13 @@ theorem raw_clean_norm_from_conditioned (F : FixedData) :
     have h := rawCleanKernel_coordinates A n theta forward a.1 b.1 a.2.1 b.2.1
       a.2.2.val b.2.2.val hV
     by_cases hs : smallCleanGate J F.ell a.1 b.1 a.2.2.val b.2.2.val
-    · rw [if_pos hs] at h
+    · rw [ite_eq_left hs] at h
       simp only [smallCleanGate] at hs
-      rw [if_pos hs]
+      rw [ite_eq_left hs]
       exact h
-    · rw [if_neg hs] at h
+    · rw [ite_eq_right hs] at h
       simp only [smallCleanGate] at hs
-      rw [if_neg hs]
+      rw [ite_eq_right hs]
       exact h
 
 

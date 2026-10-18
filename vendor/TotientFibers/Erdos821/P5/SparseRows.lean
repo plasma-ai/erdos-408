@@ -90,6 +90,6 @@ theorem sparse_gram_rows (K Y U : ℝ) (E : Finset ℤ) (t : ℤ → ℝ)
       have h : 16 * U * Real.log (2 * Y) + 2 * U ≤ 20 * U * Real.log (2 * Y) := by
         nlinarith only [hscale, hUpos]
       have h' := mul_le_mul_of_nonneg_left h hK.le
-      convert h' using 1 <;> ring
+      convert h' using 1; ring
 
 end Erdos821.P5Core

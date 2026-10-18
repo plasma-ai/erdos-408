@@ -394,7 +394,7 @@ theorem unmarked_average_uniform_asymptotic {n : ℕ}
       (unmarked_arithmetic_error_exponential hX hL hrho hbudget hM hbound b)
       (pow_nonneg (by linarith : 0≤Real.log X) t)
     convert hh using 1
-    all_goals first | rfl | (simp only [err,pow_add]; ring)
+    all_goals (simp only [err,pow_add]; ring)
   apply le_trans ?_ (add_le_add hcomp hden)
   simpa only [dist_eq_norm] using (dist_triangle
     ((Real.log X:ℂ)^t*(average X (fun m => divisorSum X F m b):ℂ))
@@ -454,7 +454,7 @@ theorem marked_average_uniform_asymptotic (hBV : BombieriVinogradov) {n : ℕ}
       abs_of_nonneg (log_pos_of_two_le hX).le]
     have hh := mul_le_mul_of_nonneg_left he' (pow_nonneg (log_pos_of_two_le hX).le t)
     convert hh using 1
-    all_goals first | rfl | (simp only [err]; ring)
+    all_goals (simp only [err]; ring)
   apply le_trans ?_ (add_le_add hcomp hden)
   simpa only [dist_eq_norm] using (dist_triangle
     ((Real.log X:ℂ)^t*(average X (fun m => divisorSum X F m b*theta (m+a)):ℂ))

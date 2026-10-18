@@ -85,7 +85,7 @@ theorem local_rho_cancellation (rho q eta V : ℝ) (hρ : rho ≠ 0)
       (-eta) ^ t * q ^ (Z - t) * (-eta * V) ^ b := by
   have hZ : Z = (Z - t) + t := (Nat.sub_add_cancel ht).symm
   rw [show rho ^ Z = rho ^ (Z - t) * rho ^ t by rw [← pow_add, ← hZ]]
-  simp only [div_pow, pow_mul, pow_add]
+  simp only [div_pow, pow_add]
   field_simp [hρ]
   ring
 

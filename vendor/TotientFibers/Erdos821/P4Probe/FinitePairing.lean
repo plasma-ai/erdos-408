@@ -40,9 +40,8 @@ def finiteRestrict {β : Type*} (s : Finset β) (f : β → ℂ) (z : β) : ℂ 
 lemma finiteRestrict_sqNorm {β : Type*} [Fintype β] (w : β → ℝ)
     (s : Finset β) (f : β → ℂ) :
     (∑ z, w z * ‖finiteRestrict s f z‖ ^ 2) = ∑ z ∈ s, w z * ‖f z‖ ^ 2 := by
-  simp only [finiteRestrict, apply_ite, norm_zero, zero_pow (by norm_num : (2 : ℕ) ≠ 0),
-    mul_ite, mul_zero]
-  simpa using Finset.sum_ite_mem (Finset.univ : Finset β) s (fun z => w z * ‖f z‖ ^ 2)
+  simp only [finiteRestrict, apply_ite, norm_zero]
+  simp
 
 lemma normBound_of_full_pair {β : Type*} [Fintype β] (w : β → ℝ)
     (K : β → β → ℂ) (C : ℝ)
@@ -55,7 +54,7 @@ lemma normBound_of_full_pair {β : Type*} [Fintype β] (w : β → ℝ)
   rw [finiteRestrict_sqNorm, finiteRestrict_sqNorm] at h
   have hp : (∑ a, ∑ b, (w a : ℂ) * star (finiteRestrict s f a) * K a b * finiteRestrict t g b) =
       ∑ a ∈ s, ∑ b ∈ t, (w a : ℂ) * star (f a) * K a b * g b := by
-    simp only [finiteRestrict, apply_ite, star_zero, mul_ite, ite_mul, mul_zero, zero_mul]
+    simp only [finiteRestrict, apply_ite, star_zero, ite_mul, mul_zero, zero_mul]
     simp
   rw [hp] at h
   exact h

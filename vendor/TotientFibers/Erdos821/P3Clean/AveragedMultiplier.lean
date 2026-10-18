@@ -27,7 +27,7 @@ theorem idealMultiplierRaw_norm_le_average (A : Model F P J m) (theta delta : �
   refine (norm_sum_le _ _).trans (Finset.sum_le_sum ?_)
   intro v _
   by_cases h : (A.pattern v).matchesBig a b
-  · simp only [if_pos h]
+  · simp only [ite_eq_left h]
     calc
       _ ≤ ∑ u : P.BigAux J, ‖((A.pattern v).bigAuxMass u * (A.pattern v).freshMass b : ℝ) *
           (A.pattern v).coefficient a b u * imaginaryPower ((A.pattern v).DBig a u) A.zeta *
@@ -49,7 +49,7 @@ theorem idealMultiplierRaw_norm_le_average (A : Model F P J m) (theta delta : �
         mul_le_mul_of_nonneg_right (hw v a b)
           (mul_nonneg (patternAmplitude_nonneg A v) (freshMass_nonneg (A.pattern v) b))
       _ = _ := by ring
-  · simp only [if_neg h, Finset.sum_const_zero, norm_zero, mul_zero, le_refl]
+  · simp only [ite_eq_right h, Finset.sum_const_zero, norm_zero, mul_zero, le_refl]
 
 theorem normBound_idealMultiplierRaw_average (A : Model F P J m) (theta delta : ℝ) (hd : 0 ≤ delta)
     (w : Fin A.patternCount → P.BigLabels (J + F.ell) → P.BigLabels (J + F.ell) → P.BigAux J → ℂ)
@@ -76,9 +76,9 @@ theorem normBound_idealMultiplierRaw_average (A : Model F P J m) (theta delta : 
       unfold Pattern.matchesBig
       exact forall_congr' (fun g => forall_congr' (fun i => imp_congr_right (fun _ => eq_comm)))
     by_cases h : (A.pattern v).matchesBig a b
-    · simp only [R, if_pos h, if_pos (hs.mp h)]
+    · simp only [R, ite_eq_left h, ite_eq_left (hs.mp h)]
       exact bigFreshMass_reversal (A.pattern v) (fun g p => P.mu g.val p) a b h
-    · simp only [R, if_neg h, if_neg (fun hh => h (hs.mpr hh)), mul_zero]
+    · simp only [R, ite_eq_right h, ite_eq_right (fun hh => h (hs.mpr hh)), mul_zero]
   have h := normBound_probability_mixture P.idealMass R (fun v => delta * patternAmplitude A v)
     (idealMultiplierRaw A theta w) hm hR
     (fun v => mul_nonneg hd (patternAmplitude_nonneg A v)) hrow hrev

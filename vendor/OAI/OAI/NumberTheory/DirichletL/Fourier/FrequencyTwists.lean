@@ -589,7 +589,7 @@ theorem secondPreColumn_norm_le
     columnCoefficient_norm_one p hp hcop hg hc S]
   calc
     _ ≤ 1 * ‖Ψ (∏ i ∈ S, p i)‖ * 1 * 1 ^ 4 * 1 * 1 * 1 * 1 := by
-      gcongr <;> first | exact hm | exact finiteSquarefreeRow_norm_le_one _ hg S _
+      gcongr <;> exact finiteSquarefreeRow_norm_le_one _ hg S _
     _ = _ := by ring
 
 theorem secondCommonWeight_norm_le

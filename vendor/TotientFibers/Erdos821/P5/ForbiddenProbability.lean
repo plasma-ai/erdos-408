@@ -66,16 +66,16 @@ theorem productLaw_union_bound {ι κ : Type*} [Fintype ι] [Fintype κ]
       (if ∃ k, event k z then productLaw w z else 0) ≤
         ∑ k, if event k z then productLaw w z else 0 := by
     by_cases hz : ∃ k, event k z
-    · rw [if_pos hz]
+    · rw [ite_eq_left hz]
       obtain ⟨k, hk⟩ := hz
       have h := Finset.single_le_sum
         (f := fun k => if event k z then productLaw w z else 0)
         (fun k hk => by split_ifs <;> first | exact productLaw_nonneg w hw z | exact le_rfl)
         (Finset.mem_univ k)
-      simpa only [if_pos hk] using h
+      simpa only [ite_eq_left hk] using h
     · have hnone : ∀ k, ¬event k z := not_exists.mp hz
-      rw [if_neg hz]
-      simp only [hnone, if_false, Finset.sum_const_zero, le_refl]
+      rw [ite_eq_right hz]
+      simp only [hnone, ite_false, Finset.sum_const_zero, le_refl]
   calc
     _ ≤ ∑ z : ∀ i, α i, ∑ k, if event k z then productLaw w z else 0 :=
       Finset.sum_le_sum (fun z hz => hpoint z)
@@ -100,14 +100,14 @@ theorem productLaw_any_forbidden {ι : Type*} [Fintype ι] [DecidableEq ι] {α 
       convert hi using 1
       apply Finset.sum_congr rfl
       intro z hz
-      by_cases hp : value i (z i) ∈ F i (fun j => z j.val) <;> simp only [hp, if_true, if_false])
+      by_cases hp : value i (z i) ∈ F i (fun j => z j.val) <;> simp only [hp, ite_true, ite_false])
   have h' : (∑ z : ∀ i, α i,
       if ∃ i, value i (z i) ∈ F i (fun j => z j.val) then productLaw w z else 0) ≤
         ∑ i : ι, (N : ℝ) * ε := by
     convert h using 1
     apply Finset.sum_congr rfl
     intro z hz
-    by_cases hp : ∃ i, value i (z i) ∈ F i (fun j => z j.val) <;> simp only [hp, if_true, if_false]
+    by_cases hp : ∃ i, value i (z i) ∈ F i (fun j => z j.val) <;> simp only [hp, ite_true, ite_false]
   simpa only [Finset.sum_const, Finset.card_univ, nsmul_eq_mul, mul_assoc] using h'
 
 end Erdos821.P5Core

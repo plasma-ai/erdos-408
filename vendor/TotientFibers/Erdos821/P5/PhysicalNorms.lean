@@ -89,7 +89,7 @@ theorem physical_endpoint_square_sum :
   apply Finset.sum_le_sum
   intro a ha
   by_cases hinj : ∀ g, Function.Injective (a g)
-  · rw [if_pos hinj]
+  · rw [ite_eq_left hinj]
     calc
       _ = G.graph.markMass (J + F.ell) *
           ∑ n ∈ (Blueprint.Graph.dyad X).filter (fun n => G.graph.physical (J + F.ell) n a),
@@ -102,11 +102,11 @@ theorem physical_endpoint_square_sum :
       _ ≤ _ := mul_le_mul_of_nonneg_left
         (physical_dyad_square_sum G _ X a hX (endpoint G x E))
         (markMass_nonneg G.graph _ hVG)
-  · rw [if_neg hinj]
+  · rw [ite_eq_right hinj]
     have hnot (n : ℤ) : ¬ G.graph.physical (J + F.ell) n a := by
       intro hp
       exact hinj (fun g => (hp g).1)
-    simp only [Blueprint.Graph.Model.stateMass, hnot, if_false, zero_mul, Finset.sum_const_zero,
+    simp only [Blueprint.Graph.Model.stateMass, hnot, ite_false, zero_mul, Finset.sum_const_zero,
       le_refl]
 
 end Erdos821.P5Core

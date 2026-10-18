@@ -53,7 +53,7 @@ theorem error_total : ∃ c K : ℝ, 0 ≤ c ∧ 0 < K ∧
             exact mul_le_mul (mul_le_mul_of_nonneg_right h1 (norm_nonneg _)) h2 (norm_nonneg _)
               (by positivity)
         _ = (M0 * Mw) ^ 2 * ‖endpoint G x E n‖ ^ 2 := by ring
-    · push_neg at hbadn
+    · push Not at hbadn
       rw [epsf_eq_zero_of_good P G x Y v E t b Ψ gs ls r u hgs hb hmass n hbadn]
       simp
   refine (Finset.sum_le_sum hpt).trans ?_

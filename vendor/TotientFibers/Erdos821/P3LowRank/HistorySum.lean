@@ -109,46 +109,46 @@ theorem choice_sum (A : Model F P J m) (n : ℕ) (rho theta : ℝ)
             ghostChoiceValid (c1 i)
         · by_cases he : ∀ i, edgeChoiceValid A .all i (af i.castSucc) (bf i.succ) (c2 i)
           · have hV : (⟨bf, af, c1, c2⟩ : MemoryHistory A n).Valid := ⟨h0, hn, hg, he⟩
-            rw [if_pos hV, hX0, hY0, if_pos h0, if_pos hn]
+            rw [ite_eq_left hV, hX0, hY0, ite_eq_left h0, ite_eq_left hn]
             have hgT : ∀ i, gT i (c1 i) =
                 (ghostChoiceWeight F n rho i (c1 i) : ℂ) * φG i (bf i) (af i) (c1 i) :=
-              fun i => if_pos (hg i)
+              fun i => ite_eq_left (hg i)
             have heT : ∀ i, eT i (c2 i) = (edgeSymmetryFactor P (J + F.ell) : ℂ) *
                 edgeChoiceCoefficient A n rho theta i (af i.castSucc) (bf i.succ) (c2 i) *
                   φE i (af i.castSucc) (bf i.succ) (c2 i) :=
-              fun i => if_pos (he i)
+              fun i => ite_eq_left (he i)
             simp only [hgT, heT, MemoryHistory.Weight, localFactor, Finset.prod_mul_distrib]
             ring
           · have hV : ¬ (⟨bf, af, c1, c2⟩ : MemoryHistory A n).Valid := fun hV => he hV.2.2.2
             obtain ⟨i, hi⟩ := not_forall.mp he
-            rw [if_neg hV, Finset.prod_eq_zero (Finset.mem_univ i) (if_neg hi)]
+            rw [ite_eq_right hV, Finset.prod_eq_zero (Finset.mem_univ i) (ite_eq_right hi)]
             ring
         · have hV : ¬ (⟨bf, af, c1, c2⟩ : MemoryHistory A n).Valid := fun hV => hg hV.2.2.1
           obtain ⟨i, hi⟩ := not_forall.mp hg
-          rw [if_neg hV, Finset.prod_eq_zero (Finset.mem_univ i) (if_neg hi)]
+          rw [ite_eq_right hV, Finset.prod_eq_zero (Finset.mem_univ i) (ite_eq_right hi)]
           ring
       · have hV : ¬ (⟨bf, af, c1, c2⟩ : MemoryHistory A n).Valid := fun hV => hn hV.2.1
-        rw [if_neg hV, hY0, if_neg hn]
+        rw [ite_eq_right hV, hY0, ite_eq_right hn]
         ring
     · have hV : ¬ (⟨bf, af, c1, c2⟩ : MemoryHistory A n).Valid := fun hV => h0 hV.1
-      rw [if_neg hV, hX0, if_neg h0]
+      rw [ite_eq_right hV, hX0, ite_eq_right h0]
       ring
   have hG : ∀ i, ∑ c, gT i c = memoryGhostKernel F J n rho i (φG i) (bf i) (af i) := by
     intro i
     unfold memoryGhostKernel
     by_cases hag : (bf i).1 = (af i).1 ∧ (bf i).2.1 = (af i).2.1
-    · rw [if_pos hag]
+    · rw [ite_eq_left hag]
       apply Finset.sum_congr rfl
       intro c _
       by_cases hc : ghostChoiceValid c
-      · rw [if_pos hc]
-        exact if_pos ⟨hag.1, hag.2, hc⟩
-      · rw [if_neg hc]
-        exact if_neg (fun h => hc h.2.2)
-    · rw [if_neg hag]
+      · rw [ite_eq_left hc]
+        exact ite_eq_left ⟨hag.1, hag.2, hc⟩
+      · rw [ite_eq_right hc]
+        exact ite_eq_right (fun h => hc h.2.2)
+    · rw [ite_eq_right hag]
       apply Finset.sum_eq_zero
       intro c _
-      exact if_neg (fun h => hag ⟨h.1, h.2.1⟩)
+      exact ite_eq_right (fun h => hag ⟨h.1, h.2.1⟩)
   have hE : ∀ i, ∑ c, eT i c =
       memoryEdgeKernel A n rho theta i .all (φE i) (af i.castSucc) (bf i.succ) := by
     intro i
@@ -157,11 +157,11 @@ theorem choice_sum (A : Model F P J m) (n : ℕ) (rho theta : ℝ)
     apply Finset.sum_congr rfl
     intro c _
     by_cases hc : edgeChoiceValid A .all i (af i.castSucc) (bf i.succ) c
-    · rw [if_pos hc]
-      simp only [eT, if_pos hc]
+    · rw [ite_eq_left hc]
+      simp only [eT, ite_eq_left hc]
       ring
-    · rw [if_neg hc]
-      simp only [eT, if_neg hc, mul_zero]
+    · rw [ite_eq_right hc]
+      simp only [eT, ite_eq_right hc, mul_zero]
   have hsplit : ∀ c1 : (i : Fin (n + 1)) → GhostChoice (bf i) (af i),
       ∑ c2 : (i : Fin n) → EdgeChoice A (af i.castSucc),
         X0 * (∏ i, gT i (c1 i)) * (∏ i, eT i (c2 i)) * Y0 =
@@ -187,10 +187,10 @@ theorem finNormBound_of_normBound {α : Type*} (keep : α → Prop) [Fintype {x 
   let f' : α → ℂ := fun x => if hx : keep x then f ⟨x, hx⟩ else 0
   let g' : α → ℂ := fun x => if hx : keep x then g ⟨x, hx⟩ else 0
   have h1 := h S S f' g'
-  have hf' : ∀ s : {x // keep x}, f' s.val = f s := fun s => dif_pos s.property
-  have hg' : ∀ s : {x // keep x}, g' s.val = g s := fun s => dif_pos s.property
+  have hf' : ∀ s : {x // keep x}, f' s.val = f s := fun s => dite_eq_left s.property
+  have hg' : ∀ s : {x // keep x}, g' s.val = g s := fun s => dite_eq_left s.property
   have hp : ∀ s t : {x // keep x}, projectKernel keep K s.val t.val = K s.val t.val :=
-    fun s t => if_pos ⟨s.property, t.property⟩
+    fun s t => ite_eq_left ⟨s.property, t.property⟩
   simp only [S, Finset.sum_map, Function.Embedding.coe_subtype, hf', hg', hp] at h1
   exact h1
 
@@ -272,22 +272,22 @@ theorem local_history_bound (A : Model F P J m) (n B : ℕ) (rho theta CG : ℝ)
     refine le_trans (Finset.sum_le_sum fun s _ => ?_) hbd
     show mass' s * ‖f s‖ ^ 2 ≤ if ∀ g, s.val.2.2 g = 0 then P.memoryMass F J n s.val else 0
     by_cases hs : ∀ g, s.val.2.2 g = 0
-    · simp only [f, if_pos hs, norm_star]
+    · simp only [f, ite_eq_left hs, norm_star]
       have h1 : ‖Φ0 s.val‖ ^ 2 ≤ 1 := by
         have := hΦ0 s.val
         have h0 := norm_nonneg (Φ0 s.val)
         nlinarith
       calc mass' s * ‖Φ0 s.val‖ ^ 2 ≤ mass' s * 1 := mul_le_mul_of_nonneg_left h1 (hmass' s)
         _ = _ := mul_one _
-    · simp only [f, if_neg hs, norm_zero]
+    · simp only [f, ite_eq_right hs, norm_zero]
       simp
   have hv : wnorm mass' v ≤ Real.sqrt M := by
     apply Real.sqrt_le_sqrt
     refine le_trans (le_of_eq (Finset.sum_congr rfl fun s _ => ?_)) hbd
     by_cases hs : ∀ g, s.val.2.2 g = 0
-    · simp only [v, if_pos hs, norm_one]
+    · simp only [v, ite_eq_left hs, norm_one]
       simp [mass']
-    · simp only [v, if_neg hs, norm_zero]
+    · simp only [v, ite_eq_right hs, norm_zero]
       simp
   have hK : 0 ≤ CG ^ (n + 1) * ∏ i, c i :=
     mul_nonneg (pow_nonneg hCG _) (Finset.prod_nonneg fun i _ => hc i)

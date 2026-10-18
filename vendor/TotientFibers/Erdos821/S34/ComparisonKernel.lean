@@ -80,7 +80,7 @@ theorem comparison_kernel_proof : Erdos821.Blueprint.Analytic.comparison_kernel_
   have hCB : (occupiedProductCells G b h : ℝ) ≤ L x ^ (P.d + 1 + hExp) := hCells G hG b hb
   have hmajorPower := major_power_precision (L x) K B q P.d C₄ hExp ξExp DExp ζ
     (occupiedProductCells G a h) (occupiedProductCells G b h) Q
-    hL3 hK hCharK hπ hB.le hq.le hd.le hC₄ rfl rfl rfl hQ hζ hCA hCB
+    hL3 hK hCharK hπ hB.le hq.le hC₄ rfl rfl rfl hQ hζ hCA hCB
   have hE : 0 ≤ L x ^ (-B) := Real.rpow_nonneg hLp.le _
   have hdyadic : ∀ j ∈ occupiedDyads G a, ∀ k ∈ occupiedDyads G b,
       ‖comparisonError G a b Q h ξ θ ζ (dyadRestriction G b k f) (dyadRestriction G a j g)‖ ≤

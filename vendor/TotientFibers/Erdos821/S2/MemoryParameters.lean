@@ -38,7 +38,7 @@ theorem memory_parameters_exist_proof : Erdos821.Blueprint.Graph.memory_paramete
   have hv0 : 0 < v := lt_trans zero_lt_one hv1
   have hcross : delta * (rho * v) = 2 * M + 2 * (rho * delta) := by
     dsimp only [v]
-    field_simp [ne_of_gt hrho0, ne_of_gt hd0] <;> ring
+    field_simp [ne_of_gt hrho0, ne_of_gt hd0]; ring
   have hfrac : 2 * M / (rho * v) < delta := by
     apply (div_lt_iff₀ (mul_pos hrho0 hv0)).mpr
     rw [hcross]

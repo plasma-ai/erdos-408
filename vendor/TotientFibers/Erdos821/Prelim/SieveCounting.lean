@@ -40,13 +40,13 @@ theorem mem_badFinset (α : Type) (S : Erdos821.Blueprint.SieveData α)
 
 /-- Covering: every bad prime lies in some block. -/
 theorem badFinset_covered (α : Type) (S : Erdos821.Blueprint.SieveData α)
-    (z : ℝ) (hz : 1 < z) (Jmax : ℕ) (hJ : Zscale z Jmax < 2)
+    (z : ℝ) (Jmax : ℕ) (hJ : Zscale z Jmax < 2)
     (η C : ℝ) (hdb : S.densityBounds z η C) (a : α) :
     badFinset α S a ⊆ (Finset.range Jmax).biUnion (fun j => Block α S z j) := by
   intro p hp
   have hpmem : p ∈ S.primes := (Finset.mem_filter.mp hp).1
   have hple : (p : ℝ) ≤ z := (hdb.2.2.1 p hpmem).1
-  obtain ⟨j, hjJ, hjB⟩ := Block_cover α S z hz Jmax hJ p hpmem hple
+  obtain ⟨j, hjJ, hjB⟩ := Block_cover α S z Jmax hJ p hpmem hple
   exact Finset.mem_biUnion.mpr ⟨j, Finset.mem_range.mpr hjJ, hjB⟩
 
 /-- Sifted indicator equals `badFinset = ∅` indicator. -/
@@ -60,8 +60,8 @@ theorem sifted_term_eq (α : Type) (S : Erdos821.Blueprint.SieveData α) (a : α
       intro p hp
       exact h p hp
     have hif : (if badFinset α S a = ∅ then (1 : ℝ) else 0) = 1 :=
-      if_pos hempty
-    rw [if_pos h, hif, mul_one]
+      ite_eq_left hempty
+    rw [ite_eq_left h, hif, mul_one]
   · have hne : badFinset α S a ≠ ∅ := by
       intro hempty
       apply h
@@ -70,19 +70,19 @@ theorem sifted_term_eq (α : Type) (S : Erdos821.Blueprint.SieveData α) (a : α
       simp [badFinset] at this
       exact this hp
     have hif : (if badFinset α S a = ∅ then (1 : ℝ) else 0) = 0 :=
-      if_neg hne
-    rw [if_neg h, hif, mul_zero]
+      ite_eq_right hne
+    rw [ite_eq_right h, hif, mul_zero]
 
 /-- Pointwise upper: sifted term `≤ weight·Uval`. -/
 theorem sifted_term_le_Uval (α : Type) (S : Erdos821.Blueprint.SieveData α)
-    (z : ℝ) (hz : 1 < z) (Jmax : ℕ) (hJ : Zscale z Jmax < 2)
+    (z : ℝ) (Jmax : ℕ) (hJ : Zscale z Jmax < 2)
     (η C : ℝ) (hdb : S.densityBounds z η C)
     (h : ℕ) (he : Even h) (a : α) (ha : a ∈ S.objects) :
     (if ∀ p ∈ S.primes, ¬ S.bad p a then S.weight a else 0)
       ≤ S.weight a * Prelim.BlockSieve.Uval (Finset.range Jmax)
         (fun j => Block α S z j) (fun j => (j + 1) * h) (badFinset α S a) := by
   rw [sifted_term_eq]
-  have hcov := badFinset_covered α S z hz Jmax hJ η C hdb a
+  have hcov := badFinset_covered α S z Jmax hJ η C hdb a
   have heJ : ∀ j ∈ Finset.range Jmax, Even ((j + 1) * h) :=
     fun j _ => he.mul_left _
   have hUI := Prelim.BlockSieve.Uval_ge_avoid (Finset.range Jmax)
@@ -90,7 +90,7 @@ theorem sifted_term_le_Uval (α : Type) (S : Erdos821.Blueprint.SieveData α)
   have hw := S.nonneg a ha
   by_cases hempty : badFinset α S a = ∅
   · have hif : (if badFinset α S a = ∅ then (1 : ℝ) else 0) = 1 :=
-      if_pos hempty
+      ite_eq_left hempty
     have hUI1 : (1 : ℝ) ≤ Prelim.BlockSieve.Uval (Finset.range Jmax)
         (fun j => Block α S z j) (fun j => (j + 1) * h) (badFinset α S a) := by
       have h2 := hUI
@@ -101,7 +101,7 @@ theorem sifted_term_le_Uval (α : Type) (S : Erdos821.Blueprint.SieveData α)
     rw [hgoal]
     exact mul_le_mul_of_nonneg_left hUI1 hw
   · have hif : (if badFinset α S a = ∅ then (1 : ℝ) else 0) = 0 :=
-      if_neg hempty
+      ite_eq_right hempty
     have hgoal : S.weight a * (if badFinset α S a = ∅ then (1 : ℝ) else 0)
         = 0 := by rw [hif, mul_zero]
     rw [hgoal]
@@ -109,7 +109,7 @@ theorem sifted_term_le_Uval (α : Type) (S : Erdos821.Blueprint.SieveData α)
 
 /-- Global upper: `sifted ≤ ∑ weight·Uval`. -/
 theorem sifted_le_sum_Uval (α : Type) (S : Erdos821.Blueprint.SieveData α)
-    (z : ℝ) (hz : 1 < z) (Jmax : ℕ) (hJ : Zscale z Jmax < 2)
+    (z : ℝ) (Jmax : ℕ) (hJ : Zscale z Jmax < 2)
     (η C : ℝ) (hdb : S.densityBounds z η C)
     (h : ℕ) (he : Even h) :
     S.sifted ≤ ∑ a ∈ S.objects, S.weight a * Prelim.BlockSieve.Uval
@@ -118,7 +118,7 @@ theorem sifted_le_sum_Uval (α : Type) (S : Erdos821.Blueprint.SieveData α)
   unfold Erdos821.Blueprint.SieveData.sifted
   apply Finset.sum_le_sum
   intro a ha
-  exact sifted_term_le_Uval α S z hz Jmax hJ η C hdb h he a ha
+  exact sifted_term_le_Uval α S z Jmax hJ η C hdb h he a ha
 
 /-- `Uval` equals the real signed support sum (cast of `sieveSupport_sum_eq`). -/
 theorem Uval_eq_support_sum (α : Type) (S : Erdos821.Blueprint.SieveData α)
@@ -131,7 +131,7 @@ theorem Uval_eq_support_sum (α : Type) (S : Erdos821.Blueprint.SieveData α)
         ((Finset.range Jmax).biUnion (fun j => Block α S z j))
         (Finset.range Jmax) (fun j => Block α S z j) (fun j => (j + 1) * h)).filter
         (· ⊆ badFinset α S a), (-1 : ℝ) ^ s.card := by
-  have hcov := badFinset_covered α S z hz Jmax hJ η C hdb a
+  have hcov := badFinset_covered α S z Jmax hJ η C hdb a
   have hdisj : ∀ j₁ ∈ Finset.range Jmax, ∀ j₂ ∈ Finset.range Jmax, j₁ ≠ j₂ →
       Disjoint (Block α S z j₁) (Block α S z j₂) := by
     intro j₁ _ j₂ _ hne
@@ -371,7 +371,7 @@ theorem sifted_le_main_add_remainder (α : Type)
     S.sifted ≤ S.X * (∏ j ∈ Finset.range Jmax,
         blockExpS (Block α S z j) S.density ((j + 1) * h))
       + S.remainderSum (z ^ (4 * h + 2 : ℕ)) := by
-  have hsupp_le := sifted_le_sum_Uval α S z hz Jmax hJ η C hdb h he
+  have hsupp_le := sifted_le_sum_Uval α S z Jmax hJ η C hdb h he
   have hdouble := sum_Uval_eq_double α S z hz Jmax hJ η C hdb h
   -- rewrite `∑ w·Uval` as `∑_s ∑_a`
   have hsupp : Prelim.BlockSieve.SieveSupport

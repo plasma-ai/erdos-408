@@ -69,7 +69,7 @@ theorem EmptyBoundaryMassTask_proof : Erdos821.S2Core.EmptyBoundaryMassTask := b
       _ ≤ 1 / 2 := by
         simpa [M, Nat.cast_add] using hbudgetRaw
   exact initial_boundary_mass_le_two_of_budget F P J m (N x) A e
-    he0 hehalf hbudget hV hfloor
+    hehalf hbudget hV hfloor
 
 
 end Erdos821.S2Empty

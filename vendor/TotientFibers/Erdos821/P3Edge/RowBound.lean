@@ -32,7 +32,7 @@ lemma patternSup_nonneg (A : Model F P J m) (v : Fin A.patternCount) :
       P.BigLabels (J + F.ell) × P.BigAux J =>
       ‖(A.pattern v).coefficient z.1 z.2.1 z.2.2‖)) with h | h
   · rw [h]
-    simp [csSup_empty]
+    simp
   · obtain ⟨y, hy⟩ := h
     obtain ⟨z, rfl⟩ := Set.mem_range.mp hy
     exact le_trans (norm_nonneg _) (le_csSup (Set.finite_range _).bddAbove (Set.mem_range_self z))
@@ -82,7 +82,7 @@ lemma edgeChoiceCoefficient_norm_le_patternSup (A : Model F P J m) (n : ℕ) (rh
     rw [norm_mul, norm_mul, Complex.norm_real, Real.norm_eq_abs, hphase, mul_one,
       mul_comm (patternSup A c.2.2.1) _]
     exact mul_le_mul_of_nonneg_left hz (abs_nonneg _)
-  · rw [if_neg hf] at ⊢
+  · rw [ite_eq_right hf] at ⊢
     have hz := hcoeff (P.restrictBig (permuteActive c.2.1 t).2.1)
       (P.restrictBig (permuteActive c.1 s).2.1) (fun g => c.2.2.2.1 g.val)
     rw [norm_mul, norm_mul, norm_star, Complex.norm_real, Real.norm_eq_abs,
@@ -157,13 +157,13 @@ lemma sum_labels_split
       F_all g.val b_g = F_big g b_g := by
     intro g b_g
     dsimp [F_all]
-    rw [dif_pos g.property]
+    rw [dite_eq_left g.property]
   have hsmall : ∀ (g : P.SmallGroup) (b_g : Fin (J + F.ell) → P.Prime g.val),
       F_all g.val b_g = F_small g b_g := by
     intro g b_g
     dsimp [F_all]
     have hnot : ¬ P.big g.val = true := by rw [g.property]; decide
-    rw [dif_neg hnot]
+    rw [dite_eq_right hnot]
   have hterm : ∀ b : P.Labels (J + F.ell),
       (∏ g : P.BigGroup, F_big g (b g.val)) * (∏ g : P.SmallGroup, F_small g (b g.val)) =
       ∏ g : P.Group, F_all g (b g) := by
@@ -284,7 +284,7 @@ lemma rawEdgeWeight_mul_weight_le (r : MemoryParameters F) (n : ℕ)
             (tr.1 g) (tr.2.1 g) (tr.2.2 g) (tt.2.1 g.val) := by
       apply Finset.prod_congr rfl
       intro g _
-      rw [if_pos (hbg g)]
+      rw [ite_eq_left (hbg g)]
     rw [h1]
     unfold bigGroupWeight freshBigFactor
     rw [Finset.prod_mul_distrib, Finset.prod_mul_distrib, Finset.prod_mul_distrib,
@@ -304,7 +304,7 @@ lemma rawEdgeWeight_mul_weight_le (r : MemoryParameters F) (n : ℕ)
     have h1 : S_prod = ∏ g : P.SmallGroup, smallGroupWeight F J g (tt.1 g) := by
       apply Finset.prod_congr rfl
       intro g _
-      rw [if_pos (hsg g), hvalid.2.2.2.2.1]
+      rw [ite_eq_left (hsg g), hvalid.2.2.2.2.1]
     rw [h1, prod_smallGroupWeight_eq]
   have hw_eq : P.memoryWeight r.v tt =
       P.memoryWeight r.v ss * ∏ g : P.BigGroup, (r.v ^ (tr.1 g).card / r.v ^ (tr.2.1 g).card) := by
@@ -326,11 +326,11 @@ lemma rawEdgeWeight_mul_weight_le (r : MemoryParameters F) (n : ℕ)
     ring
   have hB_nn : 0 ≤ B_prod := by
     apply Finset.prod_nonneg (fun g _ => ?_)
-    rw [if_pos (hbg g)]
+    rw [ite_eq_left (hbg g)]
     exact bigGroupWeight_nonneg F r n ν delta g (hV g.val) (htilted g) _ _ _ _ _ _
   have hS_nn : 0 ≤ S_prod := by
     apply Finset.prod_nonneg (fun g _ => ?_)
-    rw [if_pos (hsg g)]
+    rw [ite_eq_left (hsg g)]
     exact smallGroupWeight_nonneg F J g (hV g.val) _
   have haux_nn : 0 ≤ ν.auxMass u := by
     unfold Pattern.auxMass
@@ -398,7 +398,7 @@ lemma prod_le_const_pow {α : Type*} [Fintype α] (f : α → ℝ) (C : ℝ)
 /-- Sum over `(tr, b)` of the factorized group products is bounded by
 `Cbig ^ card BigGroup * Csmall ^ card SmallGroup`. -/
 lemma sum_transfer_labels_le (F : FixedData) (r : MemoryParameters F) (n : ℕ)
-    (Cprom Csmall0 : ℝ) (hCsmall0_pos : 0 < Csmall0)
+    (Cprom Csmall0 : ℝ)
     (hCprom : ∀ Z' a : ℕ, a ≤ F.ell + m → (Z' : ℝ) ^ a * r.rho ^ (Z' - a) ≤ Cprom)
     (hCsmall0 : ∀ Y : ℕ, F.ell ≤ Y →
       (Y : ℝ) ^ F.ell * F.q ^ ((((Y - F.ell : ℕ)) : ℝ) / 2) ≤ Csmall0)
@@ -523,7 +523,7 @@ lemma sum_transfer_labels_le (F : FixedData) (r : MemoryParameters F) (n : ℕ)
       · exact smallGroupWeight_nonneg F J g (hVpos g.val) _
       · exact le_refl 0
     · intro g
-      exact smallPrefixFibre_sum_le F J m Csmall0 hCsmall0_pos hCsmall0 g (hVlo g.val) _ _
+      exact smallPrefixFibre_sum_le F J m Csmall0 hCsmall0 g (hVlo g.val) _ _
   apply mul_le_mul hbig_prod_le hsmall_prod_le
   · refine Finset.prod_nonneg (fun g _ => Finset.sum_nonneg (fun b_g _ => ?_))
     dsimp [F_small]
@@ -752,7 +752,7 @@ theorem row_tsum_le (F : FixedData) (r : MemoryParameters F) (m : ℕ) (C₁ : �
       have hnot : b ∉ {t : P.MemoryState (J + F.ell) |
           absoluteMemoryEdgeKernel A (N x) r.rho theta i .all s t ≠ 0} :=
         fun hcon => hb (hfin.mem_toFinset.mpr hcon)
-      simp only [Set.mem_setOf_eq, ne_eq, not_not] at hnot
+      simp only [Set.mem_ofPred_eq, ne_eq, not_not] at hnot
       rw [norm_cast_absolute, hnot, zero_mul]
   let P_all : ℝ := Cbig ^ Fintype.card P.BigGroup * Csmall ^ Fintype.card P.SmallGroup
   have hP_all_nn : 0 ≤ P_all :=
@@ -855,7 +855,7 @@ theorem row_tsum_le (F : FixedData) (r : MemoryParameters F) (m : ℕ) (C₁ : �
             apply Finset.sum_le_sum (fun π _ => Finset.sum_le_sum (fun τ _ =>
               Finset.sum_le_sum (fun v _ => Finset.sum_le_sum (fun u _ => ?_))))
             apply mul_le_mul_of_nonneg_left
-              (sum_transfer_labels_le F r (N x) Cprom Csmall0 hCsmall0_pos hCprom hCsmall0
+              (sum_transfer_labels_le F r (N x) Cprom Csmall0 hCprom hCsmall0
                 hVlo htilted_nn htilted_sum (A.pattern v)
                 (edgeDelta A (A.pattern v) (edgeForward i) (permuteActive π s).2.1 u)
                 (permuteActive π s))

@@ -103,14 +103,12 @@ theorem markedPhysicalProbe_eq_rows (η : HeckeFamily.Character) (C : Calibratio
   intro s
   by_cases hc : ∀P∈C.excluded,¬P∣s.val
   · simp only [physicalRowWeight,physicalRowMonoid]
-    try dsimp only
     simp only [ite_eq_left hc]
     rw [←tsum_mul_left,←tsum_mul_left]
     apply tsum_congr
     intro m
     ring
   · simp only [physicalRowWeight]
-    try dsimp only
     simp only [ite_eq_right hc,zero_mul,mul_zero,tsum_zero]
 
 theorem markedPhysicalProbe_eq_gaussian_rows (η : HeckeFamily.Character) (C : CalibrationData)

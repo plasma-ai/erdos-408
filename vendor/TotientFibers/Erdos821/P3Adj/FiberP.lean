@@ -47,7 +47,7 @@ lemma fiberP_card :
   | zero =>
     simp only [fiberP]
     by_cases h : birthValid (P := P) (g := g) m 0
-    · rw [if_pos h]
+    · rw [ite_eq_left h]
       have hcard : m.card = 0 := h.1
       have hm0 : m = 0 := Multiset.card_eq_zero.mp hcard
       rw [hm0]
@@ -65,7 +65,7 @@ lemma fiberP_card :
         exact hof p
       rw [hfilter]
       simp
-    · rw [if_neg h]
+    · rw [ite_eq_right h]
       by_cases hcard : m.card = 0
       · have hm0 : m = 0 := Multiset.card_eq_zero.mp hcard
         rw [hm0] at h
@@ -89,7 +89,7 @@ lemma fiberP_card :
   | succ b ih =>
     simp only [fiberP]
     by_cases h : birthValid (P := P) (g := g) m (b + 1)
-    · rw [if_pos h]
+    · rw [ite_eq_left h]
       obtain ⟨hcard, hzero⟩ := h
       -- Head particle of a valid batch lies in m.toFinset
       have hhead : ∀ p : Fin (b + 1) → P.Prime g.val,
@@ -107,7 +107,7 @@ lemma fiberP_card :
         have hmem_multi : (⟨p 0, 0⟩ : P.Particle g.val) ∈
             (zeroBirthBatch (P := P) (g := g.val) p) := by
           unfold zeroBirthBatch
-          simpa using hmem_list
+          simp
         rw [hp] at hmem_multi
         exact Multiset.mem_toFinset.mpr hmem_multi
       -- Tail batch gives the erased multiset
@@ -166,7 +166,7 @@ lemma fiberP_card :
             have hmem_multi : (⟨p 0, 0⟩ : P.Particle g.val) ∈
                 (zeroBirthBatch (P := P) (g := g.val) p) := by
               unfold zeroBirthBatch
-              simpa using hmem_list
+              simp
             rw [hp] at hmem_multi
             exact hmem_multi
           exact ⟨(⟨p 0, 0⟩ : P.Particle g.val), hv_mem, rfl,
@@ -288,7 +288,7 @@ lemma fiberP_card :
           = b.factorial / ∏ w : P.Particle g.val, ((m.erase v).count w).factorial := by
         intro v hv
         have hih := ih (m.erase v)
-        rw [if_pos (herase_valid v hv)] at hih
+        rw [ite_eq_left (herase_valid v hv)] at hih
         exact hih
       have hsum_rw : (m.toFinset.biUnion (fun v =>
           Finset.univ.filter (fun p : Fin (b + 1) → P.Prime g.val =>
@@ -373,12 +373,12 @@ lemma fiberP_card :
         Nat.mul_div_cancel' hDvd
       have hcancel := hmul.trans hfin.symm
       exact mul_left_cancel₀ (ne_of_gt hDpos) hcancel
-    · rw [if_neg h]
+    · rw [ite_eq_right h]
       by_cases hcard : m.card = b + 1
       · have hzero_neg : ¬ ∀ v : P.Particle g.val, v.2 ≠ 0 → m.count v = 0 := by
           intro hzero'
           exact h ⟨hcard, hzero'⟩
-        push_neg at hzero_neg
+        push Not at hzero_neg
         obtain ⟨v, hv1, hv2⟩ := hzero_neg
         have hpos : 0 < m.count v := Nat.pos_of_ne_zero hv2
         have hmem : v ∈ m := Multiset.count_pos.mp hpos

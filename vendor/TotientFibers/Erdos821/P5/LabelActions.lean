@@ -54,9 +54,9 @@ theorem stateMass_mul_physicalRaw {F : FixedData} {P : PrimeGroups} {J m : ℕ}
     (A.stateMass z : ℂ) * A.physicalRaw absolute z z' =
       (P.markMass (J + F.ell) : ℂ) * A.physicalRaw absolute z z' := by
   by_cases hz : P.physical (J + F.ell) z.1 z.2
-  · simp only [Model.stateMass, hz, if_true]
+  · simp only [Model.stateMass, hz, ite_true]
   · have hraw : A.physicalRaw absolute z z' = 0 := by
-      simp only [Model.physicalRaw, hz, false_and, if_false]
+      simp only [Model.physicalRaw, hz, false_and, ite_false]
     rw [hraw, mul_zero, mul_zero]
 
 end Erdos821.P5Core

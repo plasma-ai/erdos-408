@@ -52,7 +52,7 @@ theorem comparison_cutoff_separation (hsep : Blueprint.FourierSeparation)
             (∫ ξ in {ξ : Fin 1 → ℝ | L x ^ Cf < ‖ξ‖}, ‖α ξ‖) ≤ KA * L x ^ (-A) ∧
             ∀ (P : Geometry) (G : PrimeGroups) (J m Q : ℕ)
               (ν : Pattern G.graph J P.ell m) (block : G.graph.BigGroup → Bool)
-              (h : ℝ) (j : ℤ × ℤ) (χA χB : CharacterIndex Q) (z : SharedDraw ν)
+              (h : ℝ) (j : ℤ × ℤ) (χA χB : CharacterIndex Q) (_ : SharedDraw ν)
               (Z a₁ a₂ : ℝ) (E H : Endpoint) (k : ℤ),
               0 < h → Real.exp (2 * h) ≤ 2 → 0 < Z → |(k : ℝ)| ≤ lo * Z / 8 →
               comparisonCellCorrelation ν block h j χA χB x Z a₁ a₂ E H Ψ k

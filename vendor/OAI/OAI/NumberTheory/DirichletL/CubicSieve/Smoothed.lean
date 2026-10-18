@@ -97,7 +97,6 @@ lemma cubicDualRow_tsum {n : Type*} [Fintype n]
     rw [show M / ((Ideal.absNorm (cols j) : ℝ) * (Ideal.absNorm (cols k) : ℝ)) *
       (Ideal.absNorm (Ideal.span {z}) : ℝ) = M * (Ideal.absNorm (Ideal.span {z}) : ℝ) /
         ((Ideal.absNorm (cols j) : ℝ) * (Ideal.absNorm (cols k) : ℝ)) by ring]
-    try simp only [mul_assoc]
   unfold cubicDualRow
   rw [Summable.tsum_finsetSum (fun j hj => summable_sum (fun k hk => by
     split_ifs

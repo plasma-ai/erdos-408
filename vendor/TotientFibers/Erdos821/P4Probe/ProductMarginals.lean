@@ -22,11 +22,13 @@ def partialProductWeight (w : ∀ i, α i → ℝ) (S : Finset ι)
 def fillCoords (S : Finset ι) (x : ProductSample α) (a : PartialSample S α) :
     ProductSample α := fun i => if hi : i ∈ S then a ⟨i, hi⟩ else x i
 
+omit [Fintype ι] [(i : ι) → Fintype (α i)] in
 lemma fillCoords_restrict (S : Finset ι) (x y : ProductSample α) :
     fillCoords S x (fun i => y i.val) = mixCoords S x y := by
   funext i
   by_cases hi : i ∈ S <;> simp [fillCoords, mixCoords, hi]
 
+omit [(i : ι) → Fintype (α i)] in
 lemma productWeight_split (w : ∀ i, α i → ℝ) (S : Finset ι) (y : ProductSample α) :
     productWeight w y = partialProductWeight w S (fun i => y i.val) *
       productWeight (fun i : {i // i ∉ S} => w i.val) (fun i => y i.val) := by
@@ -55,7 +57,7 @@ lemma productAverage_marginal (w : ∀ i, α i → ℝ)
     have ht : (∑ b : ∀ i : {i // i ∉ S}, α i.val,
         productWeight (fun i : {i // i ∉ S} => w i.val) b) = 1 := by
       convert productWeight_total (fun i : {i // i ∉ S} => w i.val)
-        (fun i => hsum i.val) using 1 <;> congr! 2
+        (fun i => hsum i.val) using 1; congr! 2
     exact_mod_cast ht
   rw [hreindex, Fintype.sum_prod_type H]
   apply Finset.sum_congr rfl

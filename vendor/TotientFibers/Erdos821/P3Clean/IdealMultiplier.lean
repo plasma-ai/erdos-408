@@ -35,7 +35,7 @@ theorem phase_norm (theta : ℝ) : ‖phase theta‖ = 1 := by
   have h2 : Complex.im (2 : ℂ) = 0 := rfl
   simp only [phase, Complex.norm_exp, Complex.mul_re, Complex.mul_im,
     Complex.ofReal_re, Complex.ofReal_im, Complex.I_re, Complex.I_im,
-    h2, mul_zero, zero_mul, mul_one, add_zero, zero_add, sub_zero, Real.exp_zero]
+    h2, mul_zero, zero_mul, mul_one, add_zero, sub_zero, Real.exp_zero]
 
 theorem freshMass_nonneg (ν : Pattern P J F.ell m) (b : P.BigLabels (J + F.ell)) :
     0 ≤ ν.freshMass b := by
@@ -55,7 +55,7 @@ theorem bigAuxMass_nonneg (ν : Pattern P J F.ell m) (u : P.BigAux J) :
   intro i _
   exact (mu_pos g.val _).le
 
-theorem idealMultiplierRaw_norm_le (A : Model F P J m) (theta delta : ℝ) (hd : 0 ≤ delta)
+theorem idealMultiplierRaw_norm_le (A : Model F P J m) (theta delta : ℝ)
     (w : Fin A.patternCount → P.BigLabels (J + F.ell) → P.BigLabels (J + F.ell) → P.BigAux J → ℂ)
     (hw : ∀ v a b u, ‖w v a b u‖ ≤ delta)
     (hV : ∀ g : P.BigGroup, P.V g.val ≠ 0) (a b : P.BigLabels (J + F.ell)) :
@@ -73,7 +73,7 @@ theorem idealMultiplierRaw_norm_le (A : Model F P J m) (theta delta : ℝ) (hd :
       apply Finset.sum_le_sum
       intro v _
       by_cases h : (A.pattern v).matchesBig a b
-      · simp only [if_pos h]
+      · simp only [ite_eq_left h]
         calc
           _ ≤ ∑ u : P.BigAux J, ‖((A.pattern v).bigAuxMass u * (A.pattern v).freshMass b : ℝ) *
               (A.pattern v).coefficient a b u * imaginaryPower ((A.pattern v).DBig a u) A.zeta *
@@ -91,7 +91,7 @@ theorem idealMultiplierRaw_norm_le (A : Model F P J m) (theta delta : ℝ) (hd :
             have hh := mul_le_mul_of_nonneg_left hc (mul_nonneg hu hf)
             simpa only [mul_assoc, mul_left_comm, mul_comm] using hh
           _ = _ := by rw [← Finset.sum_mul, bigAuxMass_sum (A.pattern v) hV, one_mul]
-      · simp only [if_neg h, Finset.sum_const_zero, norm_zero, mul_zero, le_refl]
+      · simp only [ite_eq_right h, Finset.sum_const_zero, norm_zero, mul_zero, le_refl]
 
 theorem normBound_idealMultiplierRaw (A : Model F P J m) (theta delta : ℝ) (hd : 0 ≤ delta)
     (w : Fin A.patternCount → P.BigLabels (J + F.ell) → P.BigLabels (J + F.ell) → P.BigAux J → ℂ)
@@ -118,13 +118,13 @@ theorem normBound_idealMultiplierRaw (A : Model F P J m) (theta delta : ℝ) (hd
       unfold Pattern.matchesBig
       exact forall_congr' (fun g => forall_congr' (fun i => imp_congr_right (fun _ => eq_comm)))
     by_cases h : (A.pattern v).matchesBig a b
-    · simp only [R, if_pos h, if_pos (hs.mp h)]
+    · simp only [R, ite_eq_left h, ite_eq_left (hs.mp h)]
       exact bigFreshMass_reversal (A.pattern v) (fun g p => P.mu g.val p) a b h
-    · simp only [R, if_neg h, if_neg (fun hh => h (hs.mpr hh)), mul_zero]
+    · simp only [R, ite_eq_right h, ite_eq_right (fun hh => h (hs.mpr hh)), mul_zero]
   have h := normBound_probability_mixture P.idealMass R (fun v => delta * patternAmplitude A v)
     (idealMultiplierRaw A theta w) hm hR
     (fun v => mul_nonneg hd (patternAmplitude_nonneg A v)) hrow hrev
-    (idealMultiplierRaw_norm_le A theta delta hd w hw hV)
+    (idealMultiplierRaw_norm_le A theta delta w hw hV)
   simpa only [← Finset.mul_sum, sum_patternAmplitude] using h
 
 theorem idealMultiplierRaw_sub_one (A : Model F P J m) (theta : ℝ)
@@ -138,8 +138,8 @@ theorem idealMultiplierRaw_sub_one (A : Model F P J m) (theta : ℝ)
   apply Finset.sum_congr rfl
   intro u _
   by_cases h : (A.pattern v).matchesBig a b
-  · simp only [if_pos h, mul_sub, mul_one]
-  · simp only [if_neg h, sub_self]
+  · simp only [ite_eq_left h, mul_sub, mul_one]
+  · simp only [ite_eq_right h, sub_self]
 
 theorem normBound_idealMultiplierRaw_error (A : Model F P J m) (theta delta : ℝ) (hd : 0 ≤ delta)
     (w : Fin A.patternCount → P.BigLabels (J + F.ell) → P.BigLabels (J + F.ell) → P.BigAux J → ℂ)

@@ -41,7 +41,7 @@ theorem pendingBefore_stop_or_after (S : LifespanAssignment P n) (i : Fin (n + 1
   rcases he : S g p with _ | ⟨birth, stop⟩
   · rw [he] at h
     have hf : False := by
-      simpa only [Erdos821.S2Core.ResiduePath.pendingBefore] using h
+      simp only [Erdos821.S2Core.ResiduePath.pendingBefore] at h
     exact hf.elim
   · rw [he] at h
     simp only [Erdos821.S2Core.ResiduePath.pendingBefore] at h
@@ -64,7 +64,7 @@ theorem stop_hits_disjoint (S : LifespanAssignment P n) (i : Fin (n + 1))
   have hh' := (Finset.mem_filter.mp hh).2
   rcases he : S g p with _ | ⟨birth, stop⟩
   · rw [he] at hs
-    have hf : False := by simpa only [ghostStopAt] using hs
+    have hf : False := by simp only [ghostStopAt] at hs
     exact hf.elim
   · rw [he] at hs hh'
     simp only [ghostStopAt, pendingAfter] at hs hh'
@@ -323,7 +323,7 @@ theorem SpanGhostWeightTask_proof : Erdos821.S2Core.SpanGhostWeightTask := by
     apply Finset.prod_congr rfl
     intro g hg
     simp only [Erdos821.S2Core.ResiduePath.reconstructedGhostChoice,
-      Erdos821.S2Core.ResiduePath.stateBefore, div_one, one_pow] <;> rfl
+      Erdos821.S2Core.ResiduePath.stateBefore, div_one, one_pow]; rfl
   calc
     _ = (∏ g : P.BigGroup,
           (-eta F n i) ^ (Q.ghostTerminationIndices S i g).card *

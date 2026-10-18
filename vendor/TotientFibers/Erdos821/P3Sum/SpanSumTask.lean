@@ -94,17 +94,17 @@ theorem span_interval_product_split {n : ℕ} (birth stop a z : Fin n)
           have hnot : i ∉ active := by
             intro hi
             exact (not_lt_of_ge (hfirst i hi)) hia
-          simp [whole, hbi, his, hnot]
+          simp [hbi, his, hnot]
         · obtain ⟨hai, hiz, hnot⟩ := hmid
           have hbi : birth < i := lt_of_le_of_lt hba hai
           have his : i < stop := lt_of_lt_of_le hiz hze
-          simp [whole, hbi, his, hnot]
+          simp [hbi, his, hnot]
       · obtain ⟨hzi, his⟩ := hright
         have hbi : birth < i := lt_of_le_of_lt (le_trans hba haz) hzi
         have hnot : i ∉ active := by
           intro hi
           exact (not_lt_of_ge (hlast i hi)) hzi
-        simp [whole, hbi, his, hnot]
+        simp [hbi, his, hnot]
   have hpre_mid : Disjoint pre mid := by
     apply Finset.disjoint_left.mpr
     intro i hipre himid
@@ -177,9 +177,9 @@ theorem inactive_span_sum
   have hweight (birth stop : Fin (n + 1)) :
       Q.spanWeight g p (some (birth, stop)) = pairTerm birth stop := by
     by_cases hpairs : birth < stop ∧ h birth = h stop
-    · rw [ResiduePath.spanWeight, if_pos ((hvalid birth stop).2 hpairs)]
+    · rw [ResiduePath.spanWeight, ite_eq_left ((hvalid birth stop).2 hpairs)]
       simp_rw [hcast]
-      simp only [pairTerm, if_pos hpairs]
+      simp only [pairTerm, ite_eq_left hpairs]
       rw [hactive]
       have hfilter :
           Finset.univ.filter (fun t : Fin (n + 1) =>
@@ -191,8 +191,8 @@ theorem inactive_span_sum
       rw [show baselinePrime F n p.val = B by rfl]
       change C * (-η birth) * (-η stop) * _ = C * η birth * η stop * _
       ring
-    · rw [ResiduePath.spanWeight, if_neg (fun hv => hpairs ((hvalid birth stop).1 hv))]
-      simp only [pairTerm, if_neg hpairs]
+    · rw [ResiduePath.spanWeight, ite_eq_right (fun hv => hpairs ((hvalid birth stop).1 hv))]
+      simp only [pairTerm, ite_eq_right hpairs]
   have hspan :
       (∑ span : PrimeSpan n, Q.spanWeight g p span) =
         1 + C * pairSum := by
@@ -215,9 +215,8 @@ theorem inactive_span_sum
       by_cases hlt : birth < stop
       · by_cases heq : h birth = h stop
         · simp [hlt, heq]
-          <;> ring
+          ring
         · simp [hlt, heq]
-          <;> ring
       · simp [hlt]
     have hdouble :
         (∑ birth : Fin (n + 1), ∑ stop : Fin (n + 1), pairTerm birth stop) =
@@ -247,7 +246,6 @@ theorem inactive_span_sum
   rw [hspan, hexpectation]
   dsimp [C, B]
   field_simp [hbase, hpcast]
-  <;> ring
 
 /-- Reindex the active prime's valid lifespans by their optional ghost endpoints. -/
 theorem active_span_sum_formula
@@ -364,7 +362,6 @@ theorem active_span_sum_formula
         exact (not_lt_of_ge (hfirst birth hi)) hlt
       have hf : f birth = η birth := by simp [f, hbirthA]
       simp [birthCode, prefixChoice, heq, hlt, hnot, hf]
-      <;> ring
   have hsuffix (birth stop : Fin (n + 1))
       (hv : Q.spanValid g p (some (birth, stop))) :
       suffixChoice z f (stopCode stop) =
@@ -381,7 +378,6 @@ theorem active_span_sum_formula
         exact (not_lt_of_ge (hlast stop hi)) hlt
       have hf : f stop = η stop := by simp [f, hstopA]
       simp [stopCode, suffixChoice, heq, hlt, hnot, hf]
-      <;> ring
   have hTformula (birth stop : Fin (n + 1))
       (hall : ∀ i ∈ active, h i = h a) :
       T (birthCode birth) (stopCode stop) =
@@ -390,20 +386,20 @@ theorem active_span_sum_formula
             a < i ∧ i < z ∧ i ∉ active), (1 - f i)) *
           suffixChoice z f (stopCode stop) := by
     dsimp [T, activeSpanTerm, f]
-    rw [if_pos hall]
+    rw [ite_eq_left hall]
   have hpcast : (p.val : ℝ) ≠ 0 := by
     exact_mod_cast (NeZero.ne p.val)
   have hweight (birth stop : Fin (n + 1)) :
       Q.spanWeight g p (some (birth, stop)) = B⁻¹ * T (birthCode birth) (stopCode stop) := by
     by_cases hv : Q.spanValid g p (some (birth, stop))
     · obtain ⟨hall, hbirthA, hstopA, hba, hze⟩ := hcompat_of_valid birth stop hv
-      rw [ResiduePath.spanWeight, if_pos hv, hprod birth stop hv]
+      rw [ResiduePath.spanWeight, ite_eq_left hv, hprod birth stop hv]
       rw [hTformula birth stop hall, hprefix birth stop hv, hsuffix birth stop hv]
       rw [show baselinePrime F n p.val = B by rfl]
       dsimp [B]
       field_simp [hbase, hpcast]
-      <;> ring
-    · rw [ResiduePath.spanWeight, if_neg hv]
+      ring
+    · rw [ResiduePath.spanWeight, ite_eq_right hv]
       have hTzero : T (birthCode birth) (stopCode stop) = 0 := by
         by_cases hall : ∀ i ∈ active, h i = h a
         · by_contra hT
@@ -419,13 +415,13 @@ theorem active_span_sum_formula
             simp
           have hba : birth ≤ a := by
             by_cases heq : birth = a
-            · simpa [heq]
+            · simp [heq]
             · by_contra hnot
               have hlt : a < birth := lt_of_not_ge hnot
               have hcode : birthCode birth = some birth := by simp [birthCode, heq]
               apply hprefixNe
               rw [hcode]
-              simp only [prefixChoice, if_neg (not_lt_of_ge hlt.le)]
+              simp only [prefixChoice, ite_eq_right (not_lt_of_ge hlt.le)]
           have hze : z ≤ stop := by
             by_cases heq : stop = z
             · rw [heq]
@@ -434,7 +430,7 @@ theorem active_span_sum_formula
               have hcode : stopCode stop = some stop := by simp [stopCode, heq]
               apply hsuffixNe
               rw [hcode]
-              simp only [suffixChoice, if_neg (not_lt_of_ge hlt.le)]
+              simp only [suffixChoice, ite_eq_right (not_lt_of_ge hlt.le)]
           have hbirthA : h birth = h a := by
             by_cases heq : birth = a
             · simp [heq]
@@ -478,7 +474,7 @@ theorem active_span_sum_formula
         · simp [T, activeSpanTerm, hall]
       simp [hTzero]
   have hnone : Q.spanWeight g p none = 0 := by
-    simp [ResiduePath.spanWeight, active, hnonempty]
+    simp [ResiduePath.spanWeight, hnonempty]
   have hzero_birth (stop : Option (Fin (n + 1))) : T (some a) stop = 0 := by
     simp [T, activeSpanTerm, prefixChoice]
   have hzero_stop (birth : Option (Fin (n + 1))) : T birth (some z) = 0 := by

@@ -56,7 +56,7 @@ private lemma cellQuotient_ne_one {Q : ℕ} {χ ψ : CharacterIndex Q}
   have hn : 0 < n := Nat.succ_pos _
   have hm : 0 < m := Nat.succ_pos _
   have hL : 0 < Nat.lcm n m := Nat.lcm_pos hn hm
-  letI : NeZero (Nat.lcm n m) := ⟨ne_of_gt hL⟩
+  let : NeZero (Nat.lcm n m) := ⟨ne_of_gt hL⟩
   have hEq :
       DirichletCharacter.changeLevel (Nat.dvd_lcm_left n m) χ.2 =
         DirichletCharacter.changeLevel (Nat.dvd_lcm_right n m) ψ.2 := by
@@ -90,7 +90,7 @@ private lemma cellQuotient_ne_one {Q : ℕ} {χ ψ : CharacterIndex Q}
       have hab' : a = b := Fin.ext hab
       subst b
       have hcd : c = d := by
-        letI : NeZero (Nat.lcm (a.val + 1) (a.val + 1)) :=
+        let : NeZero (Nat.lcm (a.val + 1) (a.val + 1)) :=
           ⟨Nat.ne_of_gt (Nat.lcm_pos (Nat.succ_pos _) (Nat.succ_pos _))⟩
         have hEq' :
             DirichletCharacter.changeLevel
@@ -110,7 +110,7 @@ private lemma cellQuotient_eval {Q : ℕ} (χ ψ : CharacterIndex Q) (a : ℕ) :
   let n := level χ
   let m := level ψ
   let r := Nat.lcm n m
-  letI : NeZero r := ⟨Nat.ne_of_gt (Nat.lcm_pos (Nat.succ_pos _) (Nat.succ_pos _))⟩
+  let : NeZero r := ⟨Nat.ne_of_gt (Nat.lcm_pos (Nat.succ_pos _) (Nat.succ_pos _))⟩
   by_cases ha : IsUnit (a : ZMod r)
   · have hac : a.Coprime r := (ZMod.isUnit_iff_coprime a r).mp ha
     have hχ :
@@ -176,7 +176,7 @@ private abbrev Coordinate (G : PrimeGroups) (k : Fin G.size → ℕ) :=
 
 private def coordinateEquiv (G : PrimeGroups) (k : Fin G.size → ℕ) :
     Tuple G k ≃ (∀ i : Coordinate G k, Label G i.1) :=
-  (Equiv.piCurry (fun g (j : Fin (k g)) => Label G g)).symm
+  (Equiv.piCurry (fun g (_ : Fin (k g)) => Label G g)).symm
 
 private def splitCoordinate (G : PrimeGroups) (k : Fin G.size → ℕ)
     (i₀ : Coordinate G k) :
@@ -234,7 +234,7 @@ private lemma tupleWeight_split {G : PrimeGroups} {k : Fin G.size → ℕ}
           (by intro i; simp)]
         apply Finset.prod_congr rfl
         intro i hi
-        simp [f, restWeight, Equiv.piSplitAt, i.property]
+        simp [f, Equiv.piSplitAt, i.property]
       rw [hfirst, hrest]
 
 private lemma product_split {G : PrimeGroups} {k : Fin G.size → ℕ}
@@ -263,7 +263,7 @@ private lemma product_split {G : PrimeGroups} {k : Fin G.size → ℕ}
           (by intro i; simp)]
         apply Finset.prod_congr rfl
         intro i hi
-        simp [f, restProduct, Equiv.piSplitAt, i.property]
+        simp [f, Equiv.piSplitAt, i.property]
       rw [hfirst, hrest, Nat.mul_comm]
 
 private lemma labelWeight_sum {G : PrimeGroups} (g : Fin G.size)
@@ -600,7 +600,7 @@ private lemma conditional_cell_harmonic_bound
     have hm0 : (mass G g : ℂ) ≠ 0 := by exact_mod_cast ne_of_gt hmassPos
     have hpPrime := G.prime g p.val p.property
     have hp0 : (p.val : ℂ) ≠ 0 := by exact_mod_cast hpPrime.ne_zero
-    simp [mu, map_div, map_one, map_mul, map_inv]
+    simp [mu]
     ring
   have hqmul (p : ℕ) : q ((a : ZMod r) * (p : ZMod r)) =
       q (a : ZMod r) * q (p : ZMod r) := map_mul q _ _
@@ -623,7 +623,7 @@ private lemma conditional_cell_harmonic_bound
         apply Finset.sum_congr rfl
         intro p hp
         by_cases hc : cell h (a * p.val) = j
-        · simp only [if_pos hc]
+        · simp only [ite_eq_left hc]
           exact hterm p
         · simp [hc]
       _ = c * ∑ p : Label G g, if cell h (a * p.val) = j then f p.val else 0 := by
@@ -752,7 +752,7 @@ theorem CharacterCellTask_proof : CharacterCellTask := by
                 charValue ψ (product G k ((splitCoordinate G k i0).symm xy)) else 0) = _
         rw [tupleWeight_split, product_split]
         by_cases hc : cell h (restProduct i0 xy.2 * xy.1.val) = j
-        · simp only [if_pos hc]
+        · simp only [ite_eq_left hc]
           rw [← cellQuotient_eval χ ψ (restProduct i0 xy.2 * xy.1.val)]
           push_cast
           ring

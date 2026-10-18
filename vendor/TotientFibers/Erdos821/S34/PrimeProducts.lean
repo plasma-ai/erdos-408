@@ -65,7 +65,7 @@ theorem count_nat_ofFn (j : ℕ) (f : Fin j → ℕ) (p : ℕ) :
     rw [List.ofFn_succ, Fin.sum_univ_succ, List.count_cons, ih]
     by_cases h : f 0 = p
     · simp [h, Nat.add_comm]
-    · simp [h, Nat.add_comm]
+    · simp [h]
 
 theorem tuple_factorization (G : S34.Core.PrimeGroups) (k : Fin G.size → ℕ)
     (z : S34.Core.Tuple G k) :
@@ -87,7 +87,7 @@ theorem group_count_factorization (G : S34.Core.PrimeGroups) (k : Fin G.size →
     (S34.Core.product G k z).factorization p =
       List.count p (List.ofFn (fun i => (z g i).val)) := by
   rw [tuple_factorization, count_nat_ofFn]
-  simp only [Finsupp.coe_finset_sum, Finset.sum_apply, Finsupp.single_apply]
+  simp only [Finsupp.coe_finsetSum, Finset.sum_apply, Finsupp.single_apply]
   apply Finset.sum_eq_single g
   · intro h _ hne
     apply Finset.sum_eq_zero

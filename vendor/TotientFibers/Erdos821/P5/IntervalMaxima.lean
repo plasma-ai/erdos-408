@@ -17,7 +17,7 @@ theorem dp_unit_interval_max (s : Finset ℕ) (c : ℕ → ℂ) (j : ℤ) :
   have hcont : Continuous (fun t : ℝ => ‖dp s c t‖ ^ 2) := (continuous_dp s c).norm.pow 2
   obtain ⟨t, ht, hmax⟩ := isCompact_Icc.exists_isMaxOn
     (Set.nonempty_Icc.mpr (by linarith : (j : ℝ) ≤ (j : ℝ) + 1)) hcont.continuousOn
-  haveI : Nonempty (Set.Icc (j : ℝ) ((j : ℝ) + 1)) := ⟨⟨t, ht⟩⟩
+  have : Nonempty (Set.Icc (j : ℝ) ((j : ℝ) + 1)) := ⟨⟨t, ht⟩⟩
   have hbounded : BddAbove (Set.range (fun u : Set.Icc (j : ℝ) ((j : ℝ) + 1) =>
       ‖dp s c u‖ ^ 2)) := ⟨‖dp s c t‖ ^ 2, by
     rintro _ ⟨u, rfl⟩

@@ -73,7 +73,7 @@ theorem smallPrefixFibre_card (J ell : ℕ) (y : (p : P.Prime g) → ZMod p.val)
         obtain ⟨j, _, hj⟩ := Finset.mem_image.mp hp
         have heq : Fin.castAdd ell j = Fin.natAdd J i := ha ((hprefix j).trans hj)
         have hv := congrArg Fin.val heq
-        simp only [Fin.coe_castAdd, Fin.coe_natAdd] at hv
+        simp only [Fin.val_castAdd, Fin.val_natAdd] at hv
         omega⟩
       inj' := by
         intro i j hij
@@ -81,7 +81,7 @@ theorem smallPrefixFibre_card (J ell : ℕ) (y : (p : P.Prime g) → ZMod p.val)
         have hh := ha (congrArg Subtype.val hij)
         apply Fin.ext
         have hv := congrArg Fin.val hh
-        simp only [Fin.coe_natAdd] at hv
+        simp only [Fin.val_natAdd] at hv
         omega
     }
   have hinj : Function.Injective suffix := by

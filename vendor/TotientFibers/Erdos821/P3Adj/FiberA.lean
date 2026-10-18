@@ -172,7 +172,7 @@ lemma fiberA_card :
       ∏ v : P.Particle g.val, Nat.choose (s.count v) (u.count v)
     else 0 := by
   by_cases hvalid : nonzeroPreserved (P := P) (g := g) s u ∧ u ≤ s
-  · rw [if_pos hvalid]
+  · rw [ite_eq_left hvalid]
     obtain ⟨hpres, hle⟩ := hvalid
     have hcount_le : ∀ v : P.Particle g.val, u.count v ≤ s.count v := by
       rw [← Multiset.le_iff_count]
@@ -308,7 +308,7 @@ lemma fiberA_card :
     apply Finset.prod_congr rfl
     intro v _
     rw [Nat.choose_symm (hcount_le v)]
-  · rw [if_neg hvalid]
+  · rw [ite_eq_right hvalid]
     apply Finset.card_eq_zero.mpr
     apply Finset.eq_empty_of_forall_notMem
     intro A hA

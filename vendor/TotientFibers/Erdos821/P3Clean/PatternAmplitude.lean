@@ -31,7 +31,7 @@ theorem patternAmplitude_nonneg (A : Model F P J m) (v : Fin A.patternCount) :
   let T := P.BigLabels (J + F.ell) × P.BigLabels (J + F.ell) × P.BigAux J
   cases isEmpty_or_nonempty T with
   | inl h =>
-    letI : IsEmpty T := h
+    let : IsEmpty T := h
     have hr : Set.range (fun z : T => ‖(A.pattern v).coefficient z.1 z.2.1 z.2.2‖) = ∅ := by
       ext x
       simp

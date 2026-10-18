@@ -59,7 +59,7 @@ theorem dyadic_log_multiplier_error (G : PrimeGroups) (a b : Fin G.size → ℕ)
     nlinarith
   have ht := logMultiplier_difference ζ β _ _ (Real.log (16 * (U * V))) hlogX hlogD
   have he := mul_le_mul hcoeff hlogdist (abs_nonneg _) (by positivity : 0 ≤ |ζ| + 64 * Real.pi * S)
-  exact ht.trans (by convert he using 1 <;> ring)
+  exact ht.trans (by convert he using 1; ring)
 
 theorem dyadic_multiplier_freeze (G : PrimeGroups) (a b : Fin G.size → ℕ)
     (Q : ℕ) (h ξ U V S β ζ : ℝ) (u : ℤ) (r : ℕ)
@@ -84,7 +84,7 @@ theorem dyadic_multiplier_freeze (G : PrimeGroups) (a b : Fin G.size → ℕ)
     (fun D E => e ((u : ℝ) * (product G a D * product G b E) / r))
     (logMultiplier ζ β (Real.log (product G a X * product G b Y)))
     (2 * h * (|ζ| + 64 * Real.pi * S)) ((Q : ℝ) ^ 2) ((Q : ℝ) ^ 2)
-    (by positivity) (sq_nonneg _) (sq_nonneg _)
+    (by positivity) (sq_nonneg _)
     (kernel_l1_bound G a Q h ξ hξ _) (kernel_l1_bound G b Q h ξ hξ _)
     (fun D E => (norm_e _).le)
     (fun D E hK hH => dyadic_log_multiplier_error G a b Q h ξ U V S β ζ hh hh2 hU hV hS hβ X D Y E hX hY hK hH)

@@ -43,10 +43,10 @@ theorem physicalPatternBody_frequency {F : FixedData} {G : Blueprint.Graph.Prime
     then c * imaginaryPower (ν.D a u) ζ else 0)
   by_cases h : (G.physical (J + F.ell) n a ∧ G.physical (J + F.ell) n' b) ∧
     ν.compatible a b ∧ ν.ban a b u ∧ n' = n + k * (ν.D a u : ℤ)
-  · rw [if_pos h, if_pos h, imaginaryPower_eq_mellin, imaginaryPower_eq_mellin,
+  · rw [ite_eq_left h, ite_eq_left h, imaginaryPower_eq_mellin, imaginaryPower_eq_mellin,
       sub_eq_add_neg, mellin_add]
     ring
-  · simp only [if_neg h, mul_zero]
+  · simp only [ite_eq_right h, mul_zero]
 
 /-- The source multiplier used on an actual dyad. Conjugation supplies the
 positive Mellin frequency and the harmonic factor after division by X. -/
@@ -87,8 +87,8 @@ theorem normalized_mellin_gated_term {F : FixedData} {G : Blueprint.Graph.PrimeG
   simp only [gatedPatternTerm, ht, mellinPairingSource, star_mul,
     star_mellin, neg_neg, hstarQuot, one_mul]
   by_cases hT : patternTarget (B.model k ζ) ν u n a ∈ T
-  · rw [if_pos hT, if_pos hT, physicalPatternBody_frequency, hphase]
+  · rw [ite_eq_left hT, ite_eq_left hT, physicalPatternBody_frequency, hphase]
     field_simp [hXC]
-  · simp only [if_neg hT, mul_zero]
+  · simp only [ite_eq_right hT, mul_zero]
 
 end Erdos821.P5Core

@@ -31,13 +31,13 @@ theorem assembleAux_free {P : PrimeGroups} {J ell m : ℕ}
     (ν : Pattern P J ell m) (u : FreeDraw ν) (z : SharedDraw ν)
     (g : P.Group) (i : {i : Fin J // i ∈ ν.changed g}) :
     assembleAux ν u z g i.val = u ⟨g, i⟩ := by
-  rw [assembleAux, dif_pos i.property]
+  rw [assembleAux, dite_eq_left i.property]
 
 theorem assembleAux_unused {P : PrimeGroups} {J ell m : ℕ}
     (ν : Pattern P J ell m) (u : FreeDraw ν) (z : SharedDraw ν)
     (g : P.Group) (i : {i : Fin J // i ∈ sharedSlots ν g}) :
     assembleAux ν u z g i.val = z ⟨g, i⟩ := by
-  rw [assembleAux, dif_neg (Finset.mem_sdiff.mp i.property).2]
+  rw [assembleAux, dite_eq_right (Finset.mem_sdiff.mp i.property).2]
 
 def auxSplit {P : PrimeGroups} {J ell m : ℕ} (ν : Pattern P J ell m) :
     P.Aux J ≃ FreeDraw ν × SharedDraw ν where

@@ -245,10 +245,10 @@ theorem double_residue_sum2 (h : Fin n → ZMod p) (η : Fin n → ℝ)
       · have hrj : ¬ (r + h j = 0) := fun hcon => hr (heq ▸ hcon)
         simp [hr, hrj]
     simp only [hprod]
-    rw [if_pos heq, one_mul]
+    rw [ite_eq_left heq, one_mul]
     rw [Finset.sum_eq_single (-h i)]
     · have hr0 : (-h i) + h i = 0 := neg_add_cancel (h i)
-      rw [if_pos hr0, one_mul]
+      rw [ite_eq_left hr0, one_mul]
       apply Finset.prod_congr rfl
       intro t _
       have hiff : ((-h i + h t = 0) ↔ (h t = h j)) := by
@@ -262,7 +262,7 @@ theorem double_residue_sum2 (h : Fin n → ZMod p) (η : Fin n → ℝ)
         exact hrne this
       simp [hrne']
     · simp
-  · rw [if_neg heq, zero_mul]
+  · rw [ite_eq_right heq, zero_mul]
     apply Finset.sum_eq_zero
     intro r _
     by_cases hrj : r + h j = 0

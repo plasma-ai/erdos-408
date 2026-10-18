@@ -61,7 +61,7 @@ theorem initial_boundary_mass_factorization (F : FixedData) (P : PrimeGroups)
           C * bigLabelWeight F P n M ((labelSplitEquiv P M a).2) else 0 := by
     rw [Erdos821.S2Core.memoryMass_empty]
     by_cases hs : P.smallPhysical y a
-    · rw [if_pos hs]
+    · rw [ite_eq_left hs]
       have hcoeff :
           (Fintype.card P.SmallResidues : ℝ)⁻¹ *
               (∏ g : P.SmallGroup, (P.V g.val) ^ (-(J + F.ell : ℕ) : ℤ)) = C := by
@@ -75,7 +75,7 @@ theorem initial_boundary_mass_factorization (F : FixedData) (P : PrimeGroups)
         _ = |C * bigLabelWeight F P n M ((labelSplitEquiv P M a).2)| := by
           rw [hcoeff, hbig]
         _ = _ := by
-          rw [abs_of_nonneg (mul_nonneg hC.le (hweight _)), if_pos hs]
+          rw [abs_of_nonneg (mul_nonneg hC.le (hweight _)), ite_eq_left hs]
     · simp [hs]
   unfold Erdos821.S2Core.initialMemoryBoundaryMass
   simp_rw [hterm]

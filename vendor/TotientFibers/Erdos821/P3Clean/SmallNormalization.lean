@@ -78,7 +78,7 @@ theorem physicalSmallCoefficient_joint (F : FixedData) (P : PrimeGroups) (J : �
   have ht : 0 ≤ smallTargetFactor (P := P) F :=
     Finset.prod_nonneg (fun g _ => zpow_nonneg (hV g) _)
   simp only [physicalSmallCoefficient, smallArrayCoefficient_factor F P J _ hV,
-    star_mul, Complex.star_def, Complex.conj_ofReal, ← Complex.ofReal_mul]
+    Complex.star_def, Complex.conj_ofReal, ← Complex.ofReal_mul]
   have heq : Real.sqrt (smallMarkMass P (J + F.ell)) *
       (Real.sqrt (smallTargetFactor (P := P) F) * smallDamping F J y) *
       (Real.sqrt (smallMarkMass P (J + F.ell)) *

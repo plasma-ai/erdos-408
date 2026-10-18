@@ -58,13 +58,13 @@ theorem bigAveragedRawKernel_entry (A : Model F P J m) (n : ℕ) (theta : ℝ) (
   rw [mul_left_comm, Finset.mul_sum]
   simp_rw [Finset.mul_sum, he]
   by_cases hs : smallCleanGate J F.ell a.1 b.1 a.2.2.val b.2.2.val
-  · simp only [if_pos hs]
+  · simp only [ite_eq_left hs]
     apply Finset.sum_congr rfl
     intro p _
     apply Finset.sum_congr rfl
     intro q _
     ring
-  · simp only [if_neg hs, Finset.sum_const_zero, mul_zero]
+  · simp only [ite_eq_right hs, Finset.sum_const_zero, mul_zero]
 
 
 theorem big_averaged_clean_norm (F : FixedData) :
@@ -86,12 +86,12 @@ theorem big_averaged_clean_norm (F : FixedData) :
   have hV (g : P.SmallGroup) : 0 < P.V g.val := F.vMin_pos.trans_le ((hP.2.2.2.2.1 g.val).1)
   have h := bigAveragedRawKernel_entry A n theta forward a b hV
   by_cases hs : smallCleanGate J F.ell a.1 b.1 a.2.2.val b.2.2.val
-  · rw [if_pos hs] at h
+  · rw [ite_eq_left hs] at h
     simp only [smallCleanGate] at hs
-    simpa only [if_pos hs] using h
-  · rw [if_neg hs] at h
+    simpa only [ite_eq_left hs] using h
+  · rw [ite_eq_right hs] at h
     simp only [smallCleanGate] at hs
-    simpa only [if_neg hs] using h
+    simpa only [ite_eq_right hs] using h
 
 
 end Erdos821.P3Clean

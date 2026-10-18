@@ -22,7 +22,7 @@ def truncatedHistories (A : Model F P J m) (n B : ℕ) : Finset (MemoryHistory A
 
 theorem mem_truncatedHistories (A : Model F P J m) (n B : ℕ) (H : MemoryHistory A n) :
     H ∈ truncatedHistories A n B ↔ H.Truncated B := by
-  simp only [truncatedHistories, Set.Finite.mem_toFinset, Set.mem_setOf_eq]
+  simp only [truncatedHistories, Set.Finite.mem_toFinset, Set.mem_ofPred_eq]
 
 def truncatedDistinctMemoryExpression (A : Model F P J m) (n B : ℕ) (rho theta : ℝ) : ℂ :=
   ∑' H : MemoryHistory A n,

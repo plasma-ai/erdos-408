@@ -148,7 +148,7 @@ theorem beta_power_bound (m ell : ℕ) (hm : 1 ≤ m) (he : 1 ≤ ell)
   have hp₂ : 0 ≤ (1 - t) / we := div_nonneg (by linarith) hwepos.le
   have harith : wm * (t / wm) + we * ((1 - t) / we) = 1 := by
     field_simp [ne_of_gt hwmpos, ne_of_gt hwepos]
-    <;> ring
+    ring
   have ham : (t / wm) ^ wm * ((1 - t) / we) ^ we ≤ 1 :=
     (Real.geom_mean_le_arith_mean2_weighted hwmpos.le hwepos.le hp₁ hp₂ hw).trans_eq harith
   have hexpm : wm * ((m + ell : ℕ) : ℝ) = m := by

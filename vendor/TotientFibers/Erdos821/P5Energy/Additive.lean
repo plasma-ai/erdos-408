@@ -321,10 +321,10 @@ theorem localLogConvolutionTerm_fourier (n : ℕ) (c : ℂ) (H v : ℝ)
         (-(t * Real.log v / (2 * Real.pi))) by ring, e_add]
     have hmn : e (t * Real.log (n : ℝ) / (2 * Real.pi)) = mellin n t := by
       simp only [Blueprint.Analytic.mellin, e]
-      congr 1 <;> push_cast <;> field_simp [Real.pi_ne_zero] <;> ring
+      congr 1; push_cast; field_simp [Real.pi_ne_zero]
     have hmv : e (-(t * Real.log v / (2 * Real.pi))) = mellin v (-t) := by
       simp only [Blueprint.Analytic.mellin, e]
-      congr 1 <;> push_cast <;> field_simp [Real.pi_ne_zero] <;> ring
+      congr 1; push_cast; field_simp [Real.pi_ne_zero]
     rw [hmn, hmv]
     ring
   let F : ℝ → ℂ := fun ξ =>

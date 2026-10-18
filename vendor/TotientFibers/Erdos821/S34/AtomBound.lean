@@ -92,7 +92,7 @@ theorem product_atom_group_count (G : S34.Core.PrimeGroups) (k : Fin G.size → 
   exact (product_atom_finite G k n).trans
     (div_le_div_of_nonneg_right hprod (Nat.cast_nonneg _))
 
-theorem group_cost_log_power (m s : ℕ) (v C L : ℝ) (hv : 0 < v)
+theorem group_cost_log_power (m s : ℕ) (v C L : ℝ)
     (hL : 1 ≤ L) (hs : (s : ℝ) ≤ C * Real.log L) :
     ((Nat.factorial m : ℝ) * (max 1 v⁻¹) ^ m) ^ s ≤
       L ^ (C * (Real.log (Nat.factorial m) + m * Real.log (max 1 v⁻¹))) := by

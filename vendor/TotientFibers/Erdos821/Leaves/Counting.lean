@@ -87,8 +87,8 @@ theorem omission_congruence_unique (p : ℕ) (hp : Nat.Prime p)
     (h₁ : 0 < U₁) (h₁p : U₁ < p) (h₂ : 0 < U₂) (h₂p : U₂ < p)
     (hc₁ : r * (U₁ : ZMod p) + A = 0) (hc₂ : r * (U₂ : ZMod p) + A = 0) :
     U₁ = U₂ := by
-  haveI : Fact p.Prime := ⟨hp⟩
-  haveI : NeZero p := ⟨hp.ne_zero⟩
+  have : Fact p.Prime := ⟨hp⟩
+  have : NeZero p := ⟨hp.ne_zero⟩
   have _h₁ : 0 < U₁ := h₁
   have _h₂ : 0 < U₂ := h₂
   have hr : r ≠ 0 := by

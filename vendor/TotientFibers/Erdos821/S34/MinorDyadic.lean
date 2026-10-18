@@ -54,7 +54,7 @@ theorem dyadic_comparison_bilinear (G : PrimeGroups) (a b : Fin G.size → ℕ)
         (∑ D, ∑ E, (tupleWeight G a D : ℂ) * (tupleWeight G b E : ℂ) *
           cellKernel G a Q h ξ (product G a D) (product G a X) *
           cellKernel G b Q h ξ (product G b E) (product G b Y) * phase D E)) := by
-      simp only [C, expect, Finset.mul_sum, Finset.sum_mul]
+      simp only [C, expect, Finset.mul_sum]
       rw [Finset.sum_comm]
       apply Finset.sum_congr rfl
       intro X _
@@ -106,7 +106,7 @@ theorem dyadic_comparison_bilinear (G : PrimeGroups) (a b : Fin G.size → ℕ)
       (mul_nonneg hk (mul_nonneg (by norm_num) (tuple_norm_nonneg G a g))))
   rw [hdecomp]
   have hn := (norm_sub_le R C).trans (add_le_add hrb hc_bound)
-  convert hn using 1 <;> ring
+  convert hn using 1; ring
 
 end
 end Erdos821.S34Core

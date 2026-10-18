@@ -57,7 +57,6 @@ theorem joinTuple_coefficient_product (L:ι→Finset (Ideal O))(J:Finset ι)
       (fun i=>coeff i (joinTuple L J x y i).val)).symm
   simp only [joinTuple_assigned,joinTuple_remaining] at he
   convert he using 1
-  try simp only [assignedIdeal,remainingIdeal]
   congr 2
   ext i
   simp

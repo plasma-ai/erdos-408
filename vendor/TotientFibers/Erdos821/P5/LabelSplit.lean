@@ -40,13 +40,13 @@ theorem assembleLabels_shared {P : PrimeGroups} {J ell m : ℕ} (ν : Pattern P 
     (i : {i : Fin J // i ∈ sharedSlots ν g}) :
     assembleLabels ν z r g (ν.slot i.val) = z ⟨g, i⟩ := by
   have hi : ν.shared g (ν.slot i.val) := ⟨i.val, rfl, (Finset.mem_sdiff.mp i.property).2⟩
-  rw [assembleLabels, dif_pos hi, sharedSource_slot]
+  rw [assembleLabels, dite_eq_left hi, sharedSource_slot]
 
 theorem assembleLabels_unshared {P : PrimeGroups} {J ell m : ℕ} (ν : Pattern P J ell m)
     (z : SharedDraw ν) (r : UnsharedDraw ν) (g : P.Group)
     (i : {i : Fin (J + ell) // i ∈ unsharedSlots ν g}) :
     assembleLabels ν z r g i.val = r g i := by
-  rw [assembleLabels, dif_neg ((mem_unsharedSlots ν g i.val).mp i.property)]
+  rw [assembleLabels, dite_eq_right ((mem_unsharedSlots ν g i.val).mp i.property)]
 
 def labelSplit {P : PrimeGroups} {J ell m : ℕ} (ν : Pattern P J ell m) :
     P.Labels (J + ell) ≃ SharedDraw ν × UnsharedDraw ν where

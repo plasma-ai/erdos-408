@@ -67,17 +67,17 @@ theorem distinct_birth_expansion (a : ℕ) (performed : Finset (Fin a)) (value :
         Finset.sum_congr rfl (hterm π)
       _ = _ := by
         by_cases he : birthEvent performed value π
-        · simp only [if_pos he]
+        · simp only [ite_eq_left he]
           exact permutationsWithBlocks_sign_sum π hp
-        · simp only [if_neg he, Finset.sum_const_zero]
+        · simp only [ite_eq_right he, Finset.sum_const_zero]
   calc
     _ = ∑ σ : Equiv.Perm (Fin a), term σ := by
       refine (performed_value_preserving_sign_sum performed value).trans ?_
       apply Finset.sum_congr rfl
       intro σ _
       by_cases h : σ.support ⊆ performed ∧ ∀ i, value (σ i) = value i
-      · simp only [term, if_pos h]
-      · simp only [term, if_neg h]
+      · simp only [term, ite_eq_left h]
+      · simp only [term, ite_eq_right h]
     _ = ∑ π ∈ C,
         ∑ σ ∈ Finset.univ.filter (fun σ => cycleBirthBlocks σ = π), term σ :=
       (Finset.sum_fiberwise_of_maps_to hmap term).symm

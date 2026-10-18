@@ -94,7 +94,7 @@ theorem distinctMemoryExpression_rho_independent (A : Model F P J m) (n : ℕ)
   apply tsum_congr
   intro H
   by_cases hh : H.Valid ∧ H.DistinctBirths
-  · simp only [distinctMemoryExpression, ite_eq_left hh]
+  · simp only [ite_eq_left hh]
     exact H.weight_rho_independent rho theta hρ hh.1
   · simp only [ite_eq_right hh]
 

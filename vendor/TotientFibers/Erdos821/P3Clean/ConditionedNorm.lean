@@ -44,8 +44,8 @@ theorem bigAveragedConditionedKernel_controlled (A : Model F P J m) (n B : ℕ)
   apply Finset.sum_congr rfl
   intro r _
   by_cases h : cycleAct (pendingTranslationEquiv (P := P) B 1) r a.2 = b.2
-  · simp only [if_pos h, symmetricCycleKernel]
-  · simp only [if_neg h, Finset.sum_const_zero, mul_zero]
+  · simp only [ite_eq_left h, symmetricCycleKernel]
+  · simp only [ite_eq_right h, Finset.sum_const_zero, mul_zero]
 
 theorem normBound_bigAveragedConditionedKernel (A : Model F P J m) (n B : ℕ)
     [Fintype (CutPendingState P B)] (theta : ℝ) (forward : Bool) (d : SmallLabels P J)

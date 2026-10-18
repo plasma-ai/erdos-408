@@ -81,7 +81,7 @@ theorem prescribed_local {A : Model F P J m} {n B : ℕ} (H : MemoryHistory A n)
       (fun i => edgeMult A (slE F J U i) (valsE F J tgt i)) H = 1 := by
   have hI : initMult U tgt (H.before 0) = 1 := by
     unfold initMult
-    rw [if_pos]
+    rw [ite_eq_left]
     intro x hx
     have hj := hH _ (Finset.mem_filter.1 hx).2
     simp only [aIdx, Equiv.symm_apply_apply] at hj
@@ -90,7 +90,7 @@ theorem prescribed_local {A : Model F P J m} {n B : ℕ} (H : MemoryHistory A n)
       (H.ghost i) = 1 := by
     intro i
     unfold ghostMult
-    rw [if_pos]
+    rw [ite_eq_left]
     intro x hx
     have hj := hH _ (Finset.mem_filter.1 hx).2
     simp only [aIdx, Equiv.symm_apply_apply] at hj
@@ -99,7 +99,7 @@ theorem prescribed_local {A : Model F P J m} {n B : ℕ} (H : MemoryHistory A n)
       (H.before i.succ) (H.edge i) = 1 := by
     intro i
     unfold edgeMult
-    rw [if_pos]
+    rw [ite_eq_left]
     intro x hx
     have hj := hH _ (Finset.mem_filter.1 hx).2
     simp only [aIdx, Equiv.symm_apply_apply] at hj
@@ -253,12 +253,12 @@ theorem prescribed_sum_le (A : Model F P J m) (n B : ℕ) (rho theta v CG CE : �
       ∑ d : BoundedHistoryData A n B,
         (if (mkH d).Valid then ‖(mkH d).Weight rho theta‖ * localFactorR A n Φ0 φG φE (mkH d)
           else 0) := by
-    rw [tsum_truncR A n B _ (fun H hH => if_neg (fun h => hH h.2.1))]
+    rw [tsum_truncR A n B _ (fun H hH => ite_eq_right (fun h => hH h.2.1))]
     apply Finset.sum_le_sum
     intro d _
     by_cases hc : (mkH d).Valid ∧ (mkH d).Truncated B ∧ Prescribed B (mkH d) U tgt
-    · rw [if_pos hc, if_pos hc.1, prescribed_local (mkH d) U tgt hc.2.2, mul_one]
-    · rw [if_neg hc]
+    · rw [ite_eq_left hc, ite_eq_left hc.1, prescribed_local (mkH d) U tgt hc.2.2, mul_one]
+    · rw [ite_eq_right hc]
       split_ifs
       · exact mul_nonneg (norm_nonneg _) (localFactor_nonneg (mkH d) U tgt)
       · exact le_rfl
@@ -304,7 +304,7 @@ theorem prescribed_sum_le (A : Model F P J m) (n B : ℕ) (rho theta v CG CE : �
           mul_le_mul_of_nonneg_left (h2.trans (hE i s.val).2) hP
       _ = _ := by simp only [cE]; ring
   have hpath := pathSumR_le (fun s : BoundedMemoryState P (J + F.ell) B => P.memoryWeight v s.val)
-    (fun s => hw0 s.val) n
+    n
     (fun i (s t : BoundedMemoryState P (J + F.ell) B) => ghostK F J n rho i (φG i) s.val t.val)
     (fun i (s t : BoundedMemoryState P (J + F.ell) B) => edgeK A n rho theta i (φE i) s.val t.val)
     cG cE
@@ -339,11 +339,11 @@ theorem prescribed_sum_le (A : Model F P J m) (n B : ℕ) (rho theta v CG CE : �
           simp [PrimeGroups.memorySize, hem]
         have hw : P.memoryWeight v s.val = 1 := by
           simp [PrimeGroups.memoryWeight, hsz]
-        rw [if_pos hem, hw, mul_one]
-        simp only [Φ0, initMult, initTerm, if_pos hem]
+        rw [ite_eq_left hem, hw, mul_one]
+        simp only [Φ0, initMult, initTerm, ite_eq_left hem]
         split_ifs <;> ring
-      · rw [if_neg hem, zero_mul]
-        simp only [initTerm, if_neg hem]
+      · rw [ite_eq_right hem, zero_mul]
+        simp only [initTerm, ite_eq_right hem]
         split_ifs <;> rfl
     rw [Finset.sum_congr rfl (fun s _ => hrw s)]
     have hI0 : 0 ≤ ∏ x ∈ slI F J U, muHat F P n x.1 (valsI F J tgt x) :=

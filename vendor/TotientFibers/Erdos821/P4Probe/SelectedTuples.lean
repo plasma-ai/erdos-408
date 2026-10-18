@@ -92,7 +92,7 @@ lemma rowPartialTuple_product (S : P.BigGroup → Finset (Fin J)) (x : BigRowPar
     apply Finset.prod_eq_one
     intro g _
     have hk : selectedCounts S g.val = 0 := by simp [selectedCounts, g.property]
-    haveI : IsEmpty (Fin (selectedCounts S g.val)) := ⟨fun i => by have hi := i.isLt; omega⟩
+    have : IsEmpty (Fin (selectedCounts S g.val)) := ⟨fun i => by have hi := i.isLt; omega⟩
     exact Fintype.prod_empty _
   rw [hempty, mul_one]
   apply Finset.prod_congr rfl
@@ -114,7 +114,7 @@ lemma rowPartialTuple_weight (S : P.BigGroup → Finset (Fin J)) (x : BigRowPart
     apply Finset.prod_eq_one
     intro g _
     have hk : selectedCounts S g.val = 0 := by simp [selectedCounts, g.property]
-    haveI : IsEmpty (Fin (selectedCounts S g.val)) := ⟨fun i => by have hi := i.isLt; omega⟩
+    have : IsEmpty (Fin (selectedCounts S g.val)) := ⟨fun i => by have hi := i.isLt; omega⟩
     exact Fintype.prod_empty _
   rw [hempty, mul_one]
   apply Finset.prod_congr rfl
@@ -141,7 +141,7 @@ lemma partial_expectation_real {ι : Type*} [Fintype ι] {α : ι → Type*}
   have ht : (∑ b : ∀ i : {i // i ∉ S}, α i.val,
       productWeight (fun i : {i // i ∉ S} => w i.val) b) = 1 := by
     convert productWeight_total (fun i : {i // i ∉ S} => w i.val)
-      (fun i => hsum i.val) using 1 <;> congr! 2
+      (fun i => hsum i.val) using 1; congr! 2
   rw [he, Fintype.sum_prod_type R]
   apply Finset.sum_congr rfl
   intro a _
@@ -168,7 +168,7 @@ lemma partial_expectation_complex {ι : Type*} [Fintype ι] {α : ι → Type*}
     have ht' : (∑ b : ∀ i : {i // i ∉ S}, α i.val,
         productWeight (fun i : {i // i ∉ S} => w i.val) b) = 1 := by
       convert productWeight_total (fun i : {i // i ∉ S} => w i.val)
-        (fun i => hsum i.val) using 1 <;> congr! 2
+        (fun i => hsum i.val) using 1; congr! 2
     exact_mod_cast ht'
   rw [he, Fintype.sum_prod_type R]
   apply Finset.sum_congr rfl
@@ -250,7 +250,7 @@ lemma selectedCellMass_eq {ell m : ℕ} (ν : Pattern P J ell m)
     split_ifs <;> simp
   rw [hleft, hnorm]
   unfold Blueprint.Analytic.cellMass
-  letI : Fintype (Blueprint.Analytic.Tuple (analyticGroups P) (selectedCounts S)) :=
+  let : Fintype (Blueprint.Analytic.Tuple (analyticGroups P) (selectedCounts S)) :=
     inferInstanceAs (Fintype (∀ g : P.Group, Fin (selectedCounts S g) → P.Prime g))
   apply Fintype.sum_equiv ((flatPartialRows S).trans (rowPartialTupleEquiv S))
   intro x

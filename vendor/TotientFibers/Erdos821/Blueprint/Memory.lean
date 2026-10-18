@@ -14,7 +14,7 @@ variable {P : PrimeGroups}
 
 /-- Particle indices retain their multiplicity when numerical particles coincide. -/
 def memoryEntry {g : P.Group} (z : P.Memory g) (i : Fin z.card) : P.Particle g :=
-  z.toList.get ⟨i.val, by simpa using i.isLt⟩
+  z.toList.get ⟨i.val, by simp⟩
 
 def zeroMemoryIndices {g : P.Group} (z : P.Memory g) : Finset (Fin z.card) :=
   Finset.univ.filter (fun i => (memoryEntry z i).2 = 0)

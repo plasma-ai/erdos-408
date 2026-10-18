@@ -71,10 +71,10 @@ theorem residual_shared_average_eq {P : Geometry} {G : Blueprint.Analytic.PrimeG
       apply Finset.sum_congr rfl
       intro z hz
       by_cases hg : GoodSharedDraw (B.pattern v) n n' (freeDrawProduct (B.pattern v) u) z
-      · simp only [hg, not_true_eq_false, if_false, if_true, zero_add]
+      · simp only [hg, not_true_eq_false, ite_false, ite_true, zero_add]
         congr 1
         exact residual_good_row_eq B hB v k ζ z z₀ unused u n n' hn hn' hD hg
-      · simp only [hg, not_false_eq_true, if_true, if_false, add_zero]
+      · simp only [hg, not_false_eq_true, ite_true, ite_false, add_zero]
     _ = _ := by rw [shared_good_average_eq (B.pattern v) n n' _ hV R]
 
 theorem residual_shared_row_error_norm_le {P : Geometry} {G : Blueprint.Analytic.PrimeGroups}

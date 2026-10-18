@@ -380,7 +380,7 @@ abbrev physical_schur_statement : Prop :=
       (∀ z : A.State, ∑' z', (A.physicalKernel true z' z).re ≤ (L x) ^ Cabs)
 /-- thm:transference specialized to the positive mark length used in §§3–6. -/
 abbrev local_transference_statement : Prop :=
-  ∀ (F : FixedData) (E : ℝ) (hE : 0 < E),
+  ∀ (F : FixedData) (E : ℝ) (_ : 0 < E),
     ∃ Eid : ℝ, 0 < Eid ∧ ∀ (m : ℕ) (C₁ : ℝ), ∃ J₀ : ℕ, ∀ J ≥ J₀,
       ∀ (C₂ γ : ℝ), 0 < γ → ∃ x₀ : ℝ, ∀ x ≥ x₀, ∀ (P : PrimeGroups),
         P.Admissible F x → ∀ A : Model F P J m,
@@ -392,7 +392,7 @@ abbrev local_transference_statement : Prop :=
 when the active congruences are incompatible. Offsets may be arbitrary. -/
 abbrev uniform_residue_replacement_statement : Prop :=
   ∀ (F : FixedData) (J : ℕ) (A γ : ℝ)
-    (hA : 0 < A) (hγ : 0 < γ),
+    (_ : 0 < A) (_ : 0 < γ),
     ∃ x₀ : ℝ, ∀ x ≥ x₀, ∀ (P : PrimeGroups), P.Admissible F x →
       ∀ (h : Fin (N x + 1) → ℤ) (active : Fin (N x + 1) → Finset ℕ),
       (∀ i, active i ⊆ P.allPrimes ∧ (active i).card ≤ (J + F.ell) * P.count) →
@@ -406,10 +406,10 @@ abbrev uniform_residue_replacement_statement : Prop :=
 abbrev weighted_schur_statement : Prop :=
   ∀ {α : Type*} [Fintype α] (mass w : α → ℝ)
     (K : α → α → ℝ) (R C : ℝ)
-    (hm : ∀ a, 0 < mass a) (hw : ∀ a, 0 < w a)
-    (hK : ∀ a b, 0 ≤ K a b) (hR : 0 ≤ R) (hC : 0 ≤ C)
-    (hrow : ∀ a, ∑ b, K a b * w b ≤ R * w a)
-    (hcol : ∀ b, ∑ a, mass a * K a b * w a ≤ C * mass b * w b),
+    (_ : ∀ a, 0 < mass a) (_ : ∀ a, 0 < w a)
+    (_ : ∀ a b, 0 ≤ K a b) (_ : 0 ≤ R) (_ : 0 ≤ C)
+    (_ : ∀ a, ∑ b, K a b * w b ≤ R * w a)
+    (_ : ∀ b, ∑ a, mass a * K a b * w a ≤ C * mass b * w b),
     NormBound mass (fun a b => (K a b : ℂ)) (Real.sqrt (R * C))
 -- `prefix_ghost` is proved in `Erdos821/Leaves/`.
 
@@ -424,7 +424,7 @@ abbrev weighted_schur_statement : Prop :=
 /-- eq:initial-factorial-mass, stripped of its normalization. -/
 abbrev distinct_list_mass_le_statement : Prop :=
   ∀ {α : Type*} [Fintype α] (M : ℕ) (μ : α → ℝ)
-    (hμ : ∀ a, 0 ≤ μ a),
+    (_ : ∀ a, 0 ≤ μ a),
     (∑ a : Fin M → α, if Function.Injective a then ∏ i, μ (a i) else 0) ≤
       (∑ a, μ a) ^ M
 -- `damped_factorial_bound` is proved in `Erdos821/Leaves/`.

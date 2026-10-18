@@ -17,8 +17,7 @@ set_option maxHeartbeats 1000000 in
 set_option synthInstance.maxHeartbeats 100000 in
 theorem FullMemoryNormTask_proof (F : FixedData) (r : MemoryParameters F) :
     Erdos821.S2Core.FullMemoryNormTask F r := by
-  intro hGA hBoundary hEdge hTruncated hAbsorb
-  intro E hE
+  intro hGA hBoundary hEdge hTruncated hAbsorb E hE
   have hEplus : 0 < E + 1 := by linarith
   obtain ⟨Cv, hCv, xg, hGx⟩ := hGA
   obtain ⟨Eid, hEid, hTruncatedAt⟩ := hTruncated (E + 1) hEplus

@@ -42,7 +42,7 @@ theorem auxProduct_assemble {G : Blueprint.Graph.PrimeGroups} {J ell m : ℕ}
 
 theorem freeDrawProduct_pos {G : Blueprint.Graph.PrimeGroups} {J ell m : ℕ}
     (ν : Blueprint.Graph.Pattern G J ell m) (u : FreeDraw ν) : 0 < freeDrawProduct ν u :=
-  Finset.prod_pos (fun i hi => (G.prime i.1 _ (u i).property).pos)
+  Finset.prod_pos (fun i _ => (G.prime i.1 _ (u i).property).pos)
 
 /-- The total edge product is subpower, uniformly over shared and free
 draws and over every pattern with fixed J. -/

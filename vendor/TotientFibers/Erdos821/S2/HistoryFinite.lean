@@ -48,7 +48,7 @@ abbrev BoundedMemoryState (P : PrimeGroups) (M B : ℕ) :=
 theorem bounded_memoryState_finite (P : PrimeGroups) (M B : ℕ) :
     Finite (BoundedMemoryState P M B) := by
   classical
-  letI (g : P.BigGroup) : Finite {z : P.Memory g.val // z.card ≤ B} :=
+  let (g : P.BigGroup) : Finite {z : P.Memory g.val // z.card ≤ B} :=
     bounded_multiset_finite (P.Particle g.val) B
   let enc : BoundedMemoryState P M B →
       P.SmallResidues × P.Labels M × ((g : P.BigGroup) → {z : P.Memory g.val // z.card ≤ B}) :=
@@ -77,11 +77,11 @@ abbrev BoundedHistoryData (A : Model F P J m) (n B : ℕ) :=
 theorem truncated_history_finite (A : Model F P J m) (n B : ℕ) :
     Finite {H : MemoryHistory A n // H.Truncated B} := by
   classical
-  letI : Finite (BoundedMemoryState P (J + F.ell) B) := bounded_memoryState_finite P _ B
-  letI : Fintype (BoundedMemoryState P (J + F.ell) B) := Fintype.ofFinite _
-  letI (s t : P.MemoryState (J + F.ell)) : Fintype (GhostChoice s t) := inferInstance
-  letI (s : P.MemoryState (J + F.ell)) : Fintype (EdgeChoice A s) := inferInstance
-  letI : Fintype (BoundedHistoryData A n B) := by
+  let : Finite (BoundedMemoryState P (J + F.ell) B) := bounded_memoryState_finite P _ B
+  let : Fintype (BoundedMemoryState P (J + F.ell) B) := Fintype.ofFinite _
+  let (s t : P.MemoryState (J + F.ell)) : Fintype (GhostChoice s t) := inferInstance
+  let (s : P.MemoryState (J + F.ell)) : Fintype (EdgeChoice A s) := inferInstance
+  let : Fintype (BoundedHistoryData A n B) := by
     unfold BoundedHistoryData
     infer_instance
   let mk : BoundedHistoryData A n B → {H : MemoryHistory A n // H.Truncated B} :=
@@ -99,7 +99,7 @@ namespace MemoryHistory
 variable {A : Model F P J m} {n : ℕ} (H : MemoryHistory A n)
 
 theorem ghostBirthValues_card (i : Fin (n + 1)) : (H.ghostBirthValues i).card = ghostBirthCount (H.ghost i) := by
-  simp [ghostBirthValues, multiset_card_sum, ghostBirthCount]
+  simp [ghostBirthValues, ghostBirthCount]
 
 theorem totalGhostBirths_le_card : H.totalGhostBirths ≤ H.birthValues.card := by
   simp only [birthValues, Multiset.card_add, multiset_card_sum, H.ghostBirthValues_card, totalGhostBirths]
@@ -142,7 +142,7 @@ theorem valid_distinct_finite (A : Model F P J m) (n : ℕ) :
     Finite {H : MemoryHistory A n // H.Valid ∧ H.DistinctBirths} := by
   classical
   let B := P.allPrimes.card + n * ((J + F.ell) * Fintype.card P.BigGroup)
-  letI := truncated_history_finite A n B
+  let := truncated_history_finite A n B
   let enc : {H : MemoryHistory A n // H.Valid ∧ H.DistinctBirths} →
       {H : MemoryHistory A n // H.Truncated B} :=
     fun H => ⟨H.val, H.val.distinct_truncated H.property.1 H.property.2⟩
@@ -156,7 +156,7 @@ end MemoryHistory
 theorem distinct_history_hasFiniteSupport {β : Type*} [Zero β]
     (A : Model F P J m) (n : ℕ) (f : MemoryHistory A n → β) :
     Function.HasFiniteSupport (fun H => if H.Valid ∧ H.DistinctBirths then f H else 0) := by
-  letI : Finite {H : MemoryHistory A n // H.Valid ∧ H.DistinctBirths} :=
+  let : Finite {H : MemoryHistory A n // H.Valid ∧ H.DistinctBirths} :=
     MemoryHistory.valid_distinct_finite A n
   have hf : Set.Finite {H : MemoryHistory A n | H.Valid ∧ H.DistinctBirths} :=
     @Set.toFinite (MemoryHistory A n) {H | H.Valid ∧ H.DistinctBirths}

@@ -32,11 +32,11 @@ theorem sum_target_pattern {F : FixedData} {P : PrimeGroups} {J m : ℕ}
           physicalPatternBody A ν u n (patternTarget A ν u n a) a b else 0 := by
   classical
   by_cases ht : patternTarget A ν u n a ∈ T
-  · rw [if_pos ht]
+  · rw [ite_eq_left ht]
     apply Finset.sum_eq_single_of_mem _ ht
     intro n' hn' hne
     rw [physicalPatternBody_zero_off_shift A ν u n n' a b hne, mul_zero]
-  · rw [if_neg ht]
+  · rw [ite_eq_right ht]
     apply Finset.sum_eq_zero
     intro n' hn'
     rw [physicalPatternBody_zero_off_shift A ν u n n' a b (fun h => ht (h ▸ hn')),

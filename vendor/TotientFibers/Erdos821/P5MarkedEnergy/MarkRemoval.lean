@@ -82,7 +82,7 @@ theorem marks_sum_removal (ls : Fin (t gs)) (b : Tuple G t → ℂ) (n : ℕ) :
     · apply Finset.sum_congr rfl; intro z _
       simp only [h, true_and]
     · symm; apply Finset.sum_eq_zero; intro z _
-      simp only [h, false_and, and_false, if_false]
+      simp only [h, false_and, and_false, ite_false]
   simp_rw [this]
   rw [Finset.sum_comm]
   apply Finset.sum_congr rfl
@@ -91,7 +91,7 @@ theorem marks_sum_removal (ls : Fin (t gs)) (b : Tuple G t → ℂ) (n : ℕ) :
   · simp only [true_and]
     exact if_congr (adm_iff_admR ls n z) rfl rfl
   · intro p _ hp
-    simp only [Ne.symm hp, false_and, if_false]
+    simp only [Ne.symm hp, false_and, ite_false]
   · intro h; exact absurd (Finset.mem_univ _) h
 
 /-! ### Changing the removed prime -/
@@ -170,12 +170,12 @@ theorem Wpre_congr (ls : Fin (t gs)) (hgs : gs ∈ G.small) (b : Tuple G t → �
     simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hz ⊢
     exact ⟨swapS_self ls z p, admR_swapS ls k z p hz.2 hp⟩
   · intro z hz
-    simp only [Finset.mem_coe, Finset.mem_filter, Finset.mem_univ, true_and] at hz
+    simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hz
     have := swapS_swapS ls z p'
     rw [hz.1] at this
     exact this
   · intro z hz
-    simp only [Finset.mem_coe, Finset.mem_filter, Finset.mem_univ, true_and] at hz
+    simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hz
     have := swapS_swapS ls z p
     rw [hz.1] at this
     exact this
@@ -250,14 +250,14 @@ theorem weightedMarks_eq_removal (ls : Fin (t gs)) (q : ℝ) (b : Tuple G t → 
   split_ifs <;> simp
 
 /-- Away from square multiples of the removed prime, the term is the residual function. -/
-theorem removal_term_eq (ls : Fin (t gs)) (hgs : gs ∈ G.small) (q : ℝ) (hq : 0 < q)
+theorem removal_term_eq (ls : Fin (t gs)) (hgs : gs ∈ G.small) (q : ℝ)
     (b : Tuple G t → ℂ) (hb : ∀ z z' : Tuple G t, (∀ g, g ∈ G.big → z g = z' g) → b z = b z')
     (hmass : 0 < mass G gs) (p : Label G gs) (m : ℕ) (hp : ¬ p.val ∣ m) :
     ((q ^ ((omega G (p.val * m) : ℤ) - ∑ g, (t g : ℤ)) * ∏ g, (mass G g)⁻¹ ^ t g : ℝ) : ℂ) *
         Wpre G t gs ls b m p = ((mass G gs)⁻¹ : ℝ) * Wres G t gs ls q b m := by
   have h : ∃ p : Label G gs, ¬ p.val ∣ m := ⟨p, hp⟩
   unfold Wres
-  rw [dif_pos h, Wpre_congr ls hgs b hb m (Classical.choose h) p (Classical.choose_spec h) hp,
+  rw [dite_eq_left h, Wpre_congr ls hgs b hb m (Classical.choose h) p (Classical.choose_spec h) hp,
     omega_mul_label p m hp]
   rw [← mul_assoc]
   congr 1
@@ -299,14 +299,14 @@ theorem Wres_mul_groupFree (ls : Fin (t gs)) (hgs : gs ∈ G.small) (q : ℝ) (b
     simp only [label_dvd_mul_groupFree_iff _ he]
   by_cases h : ∃ p : Label G gs, ¬ p.val ∣ k
   · have h1 : ∃ p : Label G gs, ¬ p.val ∣ e * k := hiff.mpr h
-    rw [dif_pos h1, dif_pos h, omega_mul_groupFree he, Wpre_mul_groupFree ls b he]
+    rw [dite_eq_left h1, dite_eq_left h, omega_mul_groupFree he, Wpre_mul_groupFree ls b he]
     congr 1
     apply Wpre_congr ls hgs b hb
     · have := Classical.choose_spec h1
       rwa [label_dvd_mul_groupFree_iff _ he] at this
     · exact Classical.choose_spec h
   · have h1 : ¬ ∃ p : Label G gs, ¬ p.val ∣ e * k := fun h' => h (hiff.mp h')
-    rw [dif_neg h1, dif_neg h]
+    rw [dite_eq_right h1, dite_eq_right h]
 
 /-- The residual function is bounded by the marked sup bound. -/
 theorem norm_Wres_le (P : Geometry) (tmax : ℕ) : ∃ C : ℝ, ∀ᶠ x in Filter.atTop,
@@ -325,7 +325,7 @@ theorem norm_Wres_le (P : Geometry) (tmax : ℕ) : ∃ C : ℝ, ∀ᶠ x in Filt
     exact (norm_nonneg _).trans (by simpa using this)
   unfold Wres
   by_cases h : ∃ p : Label G gs, ¬ p.val ∣ k
-  · rw [dif_pos h]
+  · rw [dite_eq_left h]
     set p := Classical.choose h with hpdef
     have hp : ¬ p.val ∣ k := Classical.choose_spec h
     set A := (Finset.univ : Finset (Tuple G t)).filter
@@ -371,7 +371,7 @@ theorem norm_Wres_le (P : Geometry) (tmax : ℕ) : ∃ C : ℝ, ∀ᶠ x in Filt
       _ = mass G gs * ((P.q ^ ((omega G k : ℤ) + 1 - ∑ g, (t g : ℤ)) *
           ∏ g, (mass G g)⁻¹ ^ t g) * A'.card) := by ring
       _ ≤ mass G gs * L x ^ C := mul_le_mul_of_nonneg_left hwm hmass.le
-  · rw [dif_neg h, norm_zero]
+  · rw [dite_eq_right h, norm_zero]
     exact mul_nonneg hmass.le hLC
 
 end Erdos821.P5Marked

@@ -407,13 +407,13 @@ theorem corr_real_eq (P : Finset ℕ) (J : Finset ℕ)
     (hbad : bad ⊆ P) (hcov : bad ⊆ J.biUnion B)
     (hdisj : ∀ j₁ ∈ J, ∀ j₂ ∈ J, j₁ ≠ j₂ → Disjoint (B j₁) (B j₂))
     (hj₀ : j₀ ∈ J) (he₀ : Even (e j₀)) :
-    Prelim.BlockSieve.blkE J B e bad j₀
-      * ∏ k ∈ J.erase j₀, Prelim.BlockSieve.blkU J B e bad k
+    Prelim.BlockSieve.blkE B e bad j₀
+      * ∏ k ∈ J.erase j₀, Prelim.BlockSieve.blkU B e bad k
     = -∑ d ∈ (CorrSupport P J B e j₀).filter (· ⊆ bad),
         (-1 : ℝ) ^ d.card := by
   have hint := corr_integer_eq P J B e bad j₀ hbad hcov hdisj hj₀ he₀
-  have hLHS : Prelim.BlockSieve.blkE J B e bad j₀
-      * ∏ k ∈ J.erase j₀, Prelim.BlockSieve.blkU J B e bad k
+  have hLHS : Prelim.BlockSieve.blkE B e bad j₀
+      * ∏ k ∈ J.erase j₀, Prelim.BlockSieve.blkU B e bad k
       = ((((bad ∩ B j₀).card.choose (e j₀ + 1) : ℤ)
         * ∏ j ∈ J.erase j₀,
           Prelim.SieveCalculus.blockUpper (e j) ((bad ∩ B j).card) : ℤ) : ℝ) := by
@@ -443,7 +443,7 @@ theorem disjoint_support_corr (P : Finset ℕ) (J : Finset ℕ) (B : ℕ → Fin
 
 /-- Two corrections are disjoint (`=e+1` in different blocks). -/
 theorem disjoint_corr_corr (P : Finset ℕ) (J : Finset ℕ) (B : ℕ → Finset ℕ)
-    (e : ℕ → ℕ) (j₁ j₂ : ℕ) (hj₁ : j₁ ∈ J) (hj₂ : j₂ ∈ J) (hne : j₁ ≠ j₂) :
+    (e : ℕ → ℕ) (j₁ j₂ : ℕ) (hj₁ : j₁ ∈ J) (hne : j₁ ≠ j₂) :
     Disjoint (CorrSupport P J B e j₁) (CorrSupport P J B e j₂) := by
   rw [Finset.disjoint_left]
   intro d hd1 hd2
@@ -533,7 +533,7 @@ theorem Vval_eq_supportV_sum (α : Type) (S : Erdos821.Blueprint.SieveData α)
         ((Finset.range Jmax).biUnion (fun j => Block α S z j))
         (Finset.range Jmax) (fun j => Block α S z j) (fun j => (j + 1) * h)).filter
         (· ⊆ badFinset α S a), (-1 : ℝ) ^ s.card := by
-  have hcov := badFinset_covered α S z hz Jmax hJ η C hdb a
+  have hcov := badFinset_covered α S z Jmax hJ η C hdb a
   have hP : (badFinset α S a) ⊆
       (Finset.range Jmax).biUnion (fun j => Block α S z j) := hcov
   have hdisj : ∀ j₁ ∈ Finset.range Jmax, ∀ j₂ ∈ Finset.range Jmax, j₁ ≠ j₂ →
@@ -546,11 +546,11 @@ theorem Vval_eq_supportV_sum (α : Type) (S : Erdos821.Blueprint.SieveData α)
   have hU := Uval_eq_support_sum α S z hz Jmax hJ η C hdb h a
   -- corrections
   have hC : ∀ j₀ ∈ Finset.range Jmax,
-      Prelim.BlockSieve.blkE (Finset.range Jmax)
+      Prelim.BlockSieve.blkE
         (fun j => Block α S z j) (fun j => (j + 1) * h)
         (badFinset α S a) j₀
       * ∏ k ∈ (Finset.range Jmax).erase j₀,
-        Prelim.BlockSieve.blkU (Finset.range Jmax)
+        Prelim.BlockSieve.blkU
           (fun j => Block α S z j) (fun j => (j + 1) * h)
           (badFinset α S a) k
       = -∑ d ∈ (CorrSupport
@@ -571,21 +571,21 @@ theorem Vval_eq_supportV_sum (α : Type) (S : Erdos821.Blueprint.SieveData α)
       = Prelim.BlockSieve.Uval (Finset.range Jmax)
         (fun j => Block α S z j) (fun j => (j + 1) * h) (badFinset α S a)
         - ∑ j₀ ∈ Finset.range Jmax,
-          (Prelim.BlockSieve.blkE (Finset.range Jmax)
+          (Prelim.BlockSieve.blkE
             (fun j => Block α S z j) (fun j => (j + 1) * h)
             (badFinset α S a) j₀
           * ∏ k ∈ (Finset.range Jmax).erase j₀,
-            Prelim.BlockSieve.blkU (Finset.range Jmax)
+            Prelim.BlockSieve.blkU
               (fun j => Block α S z j) (fun j => (j + 1) * h)
               (badFinset α S a) k) := rfl
   rw [hVdef, hU]
   -- combine `∑_U + ∑_j ∑_{corr_j}`
   have hsum_corr : ∑ j₀ ∈ Finset.range Jmax,
-      (Prelim.BlockSieve.blkE (Finset.range Jmax)
+      (Prelim.BlockSieve.blkE
         (fun j => Block α S z j) (fun j => (j + 1) * h)
         (badFinset α S a) j₀
         * ∏ k ∈ (Finset.range Jmax).erase j₀,
-          Prelim.BlockSieve.blkU (Finset.range Jmax)
+          Prelim.BlockSieve.blkU
             (fun j => Block α S z j) (fun j => (j + 1) * h)
             (badFinset α S a) k)
       = -∑ j₀ ∈ Finset.range Jmax,
@@ -674,7 +674,7 @@ theorem Vval_eq_supportV_sum (α : Type) (S : Erdos821.Blueprint.SieveData α)
     have hD := disjoint_corr_corr
       ((Finset.range Jmax).biUnion (fun j => Block α S z j))
       (Finset.range Jmax) (fun j => Block α S z j)
-      (fun j => (j + 1) * h) j₁ j₂ hj₁ hj₂ hne
+      (fun j => (j + 1) * h) j₁ j₂ hj₁ hne
     have hempty : (CorrSupport
         ((Finset.range Jmax).biUnion (fun j => Block α S z j))
         (Finset.range Jmax) (fun j => Block α S z j)
@@ -1056,14 +1056,14 @@ theorem g_prod_eqV (α : Type) (S : Erdos821.Blueprint.SieveData α)
 
 /-- Pointwise lower: `weight·Vval ≤` sifted term. -/
 theorem sifted_term_ge_Vval (α : Type) (S : Erdos821.Blueprint.SieveData α)
-    (z : ℝ) (hz : 1 < z) (Jmax : ℕ) (hJ : Zscale z Jmax < 2)
+    (z : ℝ) (Jmax : ℕ) (hJ : Zscale z Jmax < 2)
     (η C : ℝ) (hdb : S.densityBounds z η C)
     (h : ℕ) (he : Even h) (a : α) (ha : a ∈ S.objects) :
     S.weight a * Prelim.BlockSieve.Vval (Finset.range Jmax)
       (fun j => Block α S z j) (fun j => (j + 1) * h) (badFinset α S a)
       ≤ (if ∀ p ∈ S.primes, ¬ S.bad p a then S.weight a else 0) := by
   rw [sifted_term_eq]
-  have hcov := badFinset_covered α S z hz Jmax hJ η C hdb a
+  have hcov := badFinset_covered α S z Jmax hJ η C hdb a
   have heJ : ∀ j ∈ Finset.range Jmax, Even ((j + 1) * h) :=
     fun j _ => he.mul_left _
   have hVI := Prelim.BlockSieve.Vval_le_avoid (Finset.range Jmax)
@@ -1071,7 +1071,7 @@ theorem sifted_term_ge_Vval (α : Type) (S : Erdos821.Blueprint.SieveData α)
   have hw := S.nonneg a ha
   by_cases hempty : badFinset α S a = ∅
   · have hif : (if badFinset α S a = ∅ then (1 : ℝ) else 0) = 1 :=
-      if_pos hempty
+      ite_eq_left hempty
     have hgoal : S.weight a * (if badFinset α S a = ∅ then (1 : ℝ) else 0)
         = S.weight a * 1 := by rw [hif]
     rw [hgoal]
@@ -1083,7 +1083,7 @@ theorem sifted_term_ge_Vval (α : Type) (S : Erdos821.Blueprint.SieveData α)
       exact h2
     exact mul_le_mul_of_nonneg_left hVI1 hw
   · have hif : (if badFinset α S a = ∅ then (1 : ℝ) else 0) = 0 :=
-      if_neg hempty
+      ite_eq_right hempty
     have hgoal : S.weight a * (if badFinset α S a = ∅ then (1 : ℝ) else 0)
         = 0 := by rw [hif, mul_zero]
     rw [hgoal]
@@ -1098,7 +1098,7 @@ theorem sifted_term_ge_Vval (α : Type) (S : Erdos821.Blueprint.SieveData α)
 
 /-- Global lower: `∑ weight·Vval ≤ sifted`. -/
 theorem sifted_ge_sum_Vval (α : Type) (S : Erdos821.Blueprint.SieveData α)
-    (z : ℝ) (hz : 1 < z) (Jmax : ℕ) (hJ : Zscale z Jmax < 2)
+    (z : ℝ) (Jmax : ℕ) (hJ : Zscale z Jmax < 2)
     (η C : ℝ) (hdb : S.densityBounds z η C)
     (h : ℕ) (he : Even h) :
     ∑ a ∈ S.objects, S.weight a * Prelim.BlockSieve.Vval
@@ -1107,7 +1107,7 @@ theorem sifted_ge_sum_Vval (α : Type) (S : Erdos821.Blueprint.SieveData α)
   unfold Erdos821.Blueprint.SieveData.sifted
   apply Finset.sum_le_sum
   intro a ha
-  exact sifted_term_ge_Vval α S z hz Jmax hJ η C hdb h he a ha
+  exact sifted_term_ge_Vval α S z Jmax hJ η C hdb h he a ha
 
 /-- Weighted lower sum as a double sum. -/
 theorem sum_Vval_eq_double (α : Type) (S : Erdos821.Blueprint.SieveData α)
@@ -1232,7 +1232,7 @@ theorem sifted_ge_main_sub_remainder (α : Type)
         (Finset.range Jmax) (fun j => Block α S z j) (fun j => (j + 1) * h),
         (-1 : ℝ) ^ s.card * ∏ p ∈ s, S.density p)
       - S.remainderSum (z ^ (4 * h + 2 : ℕ)) ≤ S.sifted := by
-  have hsupp_ge := sifted_ge_sum_Vval α S z hz Jmax hJ η C hdb h he
+  have hsupp_ge := sifted_ge_sum_Vval α S z Jmax hJ η C hdb h he
   have hdouble := sum_Vval_eq_double α S z hz Jmax hJ η C hdb h he
   have hmain : ∑ s ∈ SupportV
       ((Finset.range Jmax).biUnion (fun j => Block α S z j))
@@ -1392,7 +1392,7 @@ theorem weighted_V_eq (J : Finset ℕ) (B : ℕ → Finset ℕ)
     intro j₁ hj₁ j₂ hj₂ hne
     rw [Finset.mem_coe] at hj₁ hj₂
     simp only [Function.onFun]
-    exact disjoint_corr_corr (J.biUnion B) J B e j₁ j₂ hj₁ hj₂ hne
+    exact disjoint_corr_corr (J.biUnion B) J B e j₁ j₂ hj₁ hne
   have hsum : ∑ s ∈ SupportV (J.biUnion B) J B e,
       (-1 : ℝ) ^ s.card * ∏ p ∈ s, g p
       = (∑ s ∈ Prelim.BlockSieve.SieveSupport (J.biUnion B) J B e,

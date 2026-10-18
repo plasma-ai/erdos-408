@@ -280,7 +280,7 @@ theorem WholeEdgeContractionTask_proof (F : FixedData) (r : MemoryParameters F) 
       calc
         _ = (F.c₀ / 2) * Jgain := by
           dsimp [Jgain]
-          field_simp [ne_of_gt hc₀] <;> ring
+          field_simp [ne_of_gt hc₀]
         _ ≤ _ := mul_le_mul_of_nonneg_left h (by positivity)
     linarith
   have hxRare : xRare ≤ x := by
@@ -313,7 +313,7 @@ theorem WholeEdgeContractionTask_proof (F : FixedData) (r : MemoryParameters F) 
     have hAll := Erdos821.S2Core.memoryEdgeKernel_all A (N x) r.rho theta i
       (fun _ _ _ => (1 : ℂ)) s t
     by_cases hkeep : keep s ∧ keep t
-    · simp only [projectKernel, if_pos hkeep]
+    · simp only [projectKernel, ite_eq_left hkeep]
       exact hAll
     · simp [projectKernel, hkeep]
   have hCleanNorm : NormBound (P.memoryMass F J (N x)) Kclean

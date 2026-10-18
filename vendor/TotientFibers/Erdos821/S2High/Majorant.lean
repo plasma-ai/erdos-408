@@ -51,7 +51,7 @@ theorem majorantPattern_sup (ν : Pattern P J ell m) :
   have hnorm : ‖(coefficientSup ν : ℂ)‖ = coefficientSup ν := by
     rw [Complex.norm_real, Real.norm_eq_abs, abs_of_nonneg hnonneg]
   by_cases hα : Nonempty α
-  · letI : Nonempty α := hα
+  · let : Nonempty α := hα
     have hRange : Set.range (fun _ : α => ‖(coefficientSup ν : ℂ)‖) =
         {coefficientSup ν} := by
       apply Set.ext

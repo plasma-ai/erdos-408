@@ -72,7 +72,7 @@ lemma sharedNaturalProduct_restrict (ν : Pattern P J ell m)
           then (a g (Fin.natAdd J i)).val else 1) = 1 := by
         apply Finset.prod_eq_one
         intro i _
-        rw [if_neg (not_shared_natAdd ν g.val i)]
+        rw [ite_eq_right (not_shared_natAdd ν g.val i)]
       rw [ht, mul_one]
       apply Finset.prod_congr rfl
       intro i _

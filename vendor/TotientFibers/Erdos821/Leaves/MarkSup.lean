@@ -198,8 +198,7 @@ theorem mark_sup (P : Geometry) (tmax : ℕ) :
       Filter.eventually_gt_atTop 1
     exact htend.eventually hev
   apply hEv.mono
-  intro x hx
-  intro G hAdm t b B htB hB0 hbB n
+  intro x hx G hAdm t b B htB hB0 hbB n
   have hLpos : 0 < L x := lt_trans zero_lt_one hx
   have hTpos : 0 < T x := by
     have h1 : Real.log 1 < Real.log (L x) :=

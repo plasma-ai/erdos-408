@@ -109,7 +109,7 @@ private theorem pattern_D_le_sup_pow {P : PrimeGroups} {J ell m : ℕ}
       Finset.prod_le_pow_card _ _ S (by
         intro z hz
         exact hval z.1 z.2)
-    _ = S ^ (J * P.count) := by simp [Finset.card_product, mul_comm]
+    _ = S ^ (J * P.count) := by simp [mul_comm]
 
 
 private theorem displacement_mem_neighbors {F : FixedData} {P : PrimeGroups} {J m : ℕ}
@@ -141,7 +141,7 @@ private theorem physicalKernel_false_zero_of_not_neighbor {F : FixedData} {P : P
     unfold Model.physicalRaw
     by_cases hphys : P.physical (J + F.ell) z.1 (P.act π z.2) ∧
         P.physical (J + F.ell) z'.1 (P.act τ z'.2)
-    · simp only [if_pos hphys]
+    · simp only [ite_eq_left hphys]
       apply Finset.sum_eq_zero
       intro v hv
       apply Finset.sum_eq_zero
@@ -299,12 +299,12 @@ private theorem matrix_pow_apply_eq_finiteKernelPower {α : Type*} [DecidableEq 
     intro i j
     by_cases hij : i = j
     · subst j
-      simp [finiteKernelMatrix, finiteKernelPower]
+      simp [finiteKernelPower]
     · have hv : i.1 ≠ j.1 := by
         intro h
         apply hij
         exact Subtype.ext h
-      simp [finiteKernelMatrix, finiteKernelPower, Matrix.one_apply, hij, hv]
+      simp [finiteKernelPower, hij, hv]
   | succ n ih =>
     intro i j
     rw [pow_succ' (finiteKernelMatrix S B) n, Matrix.mul_apply]
@@ -353,7 +353,7 @@ private theorem kernelComp_eq_matrix_gram {F : FixedData} {P : PrimeGroups}
           A.physicalKernel false a z.1 * star (A.physicalKernel false b z.1) :=
       Finset.sum_subtype T (by intro z; simp) _
     _ = _ := by
-      simp [Matrix.mul_apply, Matrix.conjTranspose_apply, C, finitePhysicalMatrix]
+      simp [Matrix.mul_apply, Matrix.conjTranspose_apply, finitePhysicalMatrix]
 
 
 
@@ -364,8 +364,7 @@ private theorem gram_toEuclideanLin {ι κ : Type*} [Fintype ι] [Fintype κ]
   calc
     (C * Matrix.conjTranspose C).toEuclideanLin =
         C.toEuclideanLin.comp (Matrix.conjTranspose C).toEuclideanLin := by
-      simpa [Matrix.toEuclideanLin] using
-        (Matrix.toLpLin_mul_same (p := 2) (q := 2) (r := 2) C (Matrix.conjTranspose C))
+      simp [Matrix.toEuclideanLin]
     _ = C.toEuclideanLin.comp C.toEuclideanLin.adjoint := by
       rw [Matrix.toEuclideanLin_conjTranspose_eq_adjoint]
 
@@ -373,8 +372,7 @@ private theorem gram_toEuclideanLin {ι κ : Type*} [Fintype ι] [Fintype κ]
 private theorem matrix_toEuclideanLin_mul {m n o : Type*} [Fintype n] [DecidableEq n]
     [Fintype o] [DecidableEq o] (A : Matrix m n ℂ) (B : Matrix n o ℂ) :
     (A * B).toEuclideanLin = A.toEuclideanLin.comp B.toEuclideanLin := by
-  simpa [Matrix.toEuclideanLin] using
-    (Matrix.toLpLin_mul_same (p := 2) (q := 2) (r := 2) A B)
+  simp [Matrix.toEuclideanLin]
 
 private theorem matrix_pow_toEuclideanLin {ι : Type*} [Fintype ι] [DecidableEq ι]
     (G : Matrix ι ι ℂ) (R : ℕ) :
@@ -516,7 +514,7 @@ private theorem finite_matrix_pairing_sq_bound {S T I : Type*}
     calc
       ‖Cm.adjoint F‖ ^ 2 =
           (inner ℂ (Cm.adjoint F) (Cm.adjoint F)).re := by
-            simpa [pow_two] using (inner_self_eq_norm_mul_norm (Cm.adjoint F)).symm
+            simp [pow_two]
       _ = (inner ℂ F (Cm (Cm.adjoint F))).re :=
         congrArg Complex.re (LinearMap.adjoint_inner_left Cm (Cm.adjoint F) F)
       _ = (inner ℂ F (B F)).re := by
@@ -870,7 +868,7 @@ private theorem rootMatrix_column_pairing {F : FixedData} {P : PrimeGroups}
           subst k
           rfl
         rw [hstar]
-        simp only [if_pos htime]
+        simp only [ite_eq_left htime]
         rw [hrow]
       · rw [hstar]
         simp [htime]
@@ -913,14 +911,14 @@ private theorem rootMatrix_quadratic_expansion {F : FixedData} {P : PrimeGroups}
                 subst k
                 rfl
               rw [hstarU]
-              simp only [if_pos hit]
+              simp only [ite_eq_left hit]
               rw [hrow]
             · rw [hstarU]
               simp [hit]
       _ = ∑ a : A.Labels, q j (n, a) :=
         sum_subtype_states_at_time A I S hbase n hn (q j)
       _ = _ := by rfl
-  haveI : DecidableEq {z // z ∈ S} := Classical.decEq _
+  have : DecidableEq {z // z ∈ S} := Classical.decEq _
   let x (j : {z // z ∈ S}) : ℂ :=
     ∑ a : A.Labels, (Real.sqrt (A.stateMass (n, a)) : ℂ) * M (r a) j
   have hUrow (j : {z // z ∈ S}) :
@@ -941,7 +939,7 @@ private theorem rootMatrix_quadratic_expansion {F : FixedData} {P : PrimeGroups}
           intro j hj
           by_cases htime : j.1.1 = n
           · rw [hUrow]
-            simp only [if_pos htime]
+            simp only [ite_eq_left htime]
           · rw [hUrow]
             simp [htime]
     _ = ∑ b : A.Labels,
@@ -1146,8 +1144,7 @@ private theorem block_pairing_eq_matrix {F : FixedData} {P : PrimeGroups}
                       _ = ∑ n : {n // n ∈ I}, star (U s n * c n) * action s := by
                         have hs : star (∑ n : {n // n ∈ I}, U s n * c n) =
                             ∑ n : {n // n ∈ I}, star (U s n * c n) := by
-                          simpa using (star_sum (Finset.univ : Finset {n // n ∈ I})
-                            (fun n => U s n * c n))
+                          simp
                         rw [hs]
                         simpa using (Finset.sum_mul (Finset.univ : Finset {n // n ∈ I})
                           (fun n => star (U s n * c n)) (action s))
@@ -1272,7 +1269,7 @@ private theorem dyad_card_bounds {X : ℝ} (hX : 1 ≤ X) :
     linarith
 
 private theorem allPrimes_sup_le_two_exp {F : FixedData} {P : PrimeGroups}
-    {J m : ℕ} (A : Model F P J m) {x : ℝ} (hP : P.Admissible F x)
+    {J m : ℕ} (_A : Model F P J m) {x : ℝ} (hP : P.Admissible F x)
     (hy : 1 ≤ L x) :
     ((P.allPrimes.sup id : ℕ) : ℝ) ≤ 2 * Real.exp ((L x) ^ F.d) := by
   classical
@@ -1396,7 +1393,7 @@ private theorem model_stepBound_exp_bound {F : FixedData} {P : PrimeGroups}
 private theorem blockLength_exp_bound {F : FixedData} {P : PrimeGroups}
     {J m : ℕ} (A : Model F P J m) {x C₂ : ℝ}
     (hP : P.Admissible F x) (hy : 1 ≤ L x) (hC₂ : 0 < C₂)
-    (hk : A.k ≠ 0) (hkBound : |(A.k : ℝ)| ≤ (L x) ^ C₂)
+    (hkBound : |(A.k : ℝ)| ≤ (L x) ^ C₂)
     (hlarge : 64 + 100 * C₂ + 600 * (J : ℝ) * F.C₀ ≤ (L x) ^ ((3 : ℝ) / 100)) :
     let R := Nat.ceil ((L x) ^ ((52 : ℝ) / 100))
     let B := 2 * ((2 * R + 1) * A.stepBound) + 1
@@ -1429,7 +1426,7 @@ private theorem blockLength_exp_bound {F : FixedData} {P : PrimeGroups}
     have hlog := Real.log_le_rpow_div (le_of_lt hypos) (by norm_num : 0 < (1 : ℝ) / 100)
     calc
       Real.log y ≤ y ^ ((1 : ℝ) / 100) / ((1 : ℝ) / 100) := hlog
-      _ = 100 * y ^ ((1 : ℝ) / 100) := by norm_num [div_eq_mul_inv] <;> ring
+      _ = 100 * y ^ ((1 : ℝ) / 100) := by norm_num [div_eq_mul_inv]; ring
   have hlognonneg : 0 ≤ Real.log y := Real.log_nonneg hy
   have hy01_le48 : y ^ ((1 : ℝ) / 100) ≤ y ^ ((48 : ℝ) / 100) :=
     Real.rpow_le_rpow_of_exponent_le hy (by norm_num)
@@ -1554,7 +1551,7 @@ private theorem packet_scalar_cleanup (E C₃ Cf X y : ℝ) (R B : ℕ)
     (t s r : ℝ) (hy : 1 ≤ y) (hX : 1 ≤ X) (hR : 2 ≤ R)
     (hRlow : y ^ ((52 : ℝ) / 100) ≤ (R : ℝ))
     (hB : (B : ℝ) ≤ Real.exp (y ^ ((51 : ℝ) / 100)))
-    (ht0 : 0 ≤ t) (ht : t ≤ X * y ^ (2 * C₃))
+    (ht : t ≤ X * y ^ (2 * C₃))
     (hs0 : 0 ≤ s) (hs : s ≤ X * y ^ (2 * C₃))
     (hr0 : 0 ≤ r)
     (hr : r ≤ 2 * X * y ^ (-2 * (E + 1) * (R : ℝ))) :
@@ -2023,7 +2020,7 @@ private theorem rootMatrix_mul_coordinate {F : FixedData} {P : PrimeGroups}
   simp [Matrix.toEuclideanLin, Matrix.toLpLin_apply, Matrix.mulVec,
     dotProduct, rootMatrix, WithLp.ofLp_toLp]
   by_cases htime : s.1.1 ∈ I
-  · rw [if_pos htime]
+  · rw [ite_eq_left htime]
     change (∑ i ∈ I.attach,
         if s.1.1 = i.1 then (Real.sqrt (A.stateMass s.1) : ℂ) * f i.1 else 0) =
       (Real.sqrt (A.stateMass s.1) : ℂ) * f s.1.1
@@ -2050,7 +2047,7 @@ private theorem rootMatrix_mul_coordinate {F : FixedData} {P : PrimeGroups}
                       exact False.elim (hnot (Finset.mem_attach I i₀)))
           _ = (Real.sqrt (A.stateMass s.1) : ℂ) * f i₀.1 := by simp [i₀]
       _ = _ := by simp [i₀]
-  · rw [if_neg htime]
+  · rw [ite_eq_right htime]
     have hzero (i : {n // n ∈ I}) (hi : i ∈ I.attach) : s.1.1 ≠ i.1 := by
       intro heq
       exact htime (heq ▸ i.2)
@@ -2108,7 +2105,7 @@ private theorem rootMatrix_mul_norm_sq {F : FixedData} {P : PrimeGroups}
             intro z hz
             rw [hcoord]
             by_cases htime : z.1.1 ∈ I
-            · simp only [if_pos htime]
+            · simp only [ite_eq_left htime]
               have hmass := stateMass_nonneg_of_admissible A hP z.1
               calc
                 ‖(Real.sqrt (A.stateMass z.1) : ℂ) * f z.1.1‖ ^ 2 =
@@ -2164,9 +2161,9 @@ private theorem targetVector_norm_sq_eq {F : FixedData} {P : PrimeGroups}
           if z.1 ∈ t then A.stateMass z.1 * ‖g z.1‖ ^ 2 else 0 := by
             apply Finset.sum_congr rfl
             intro z hz
-            simp only [v, WithLp.ofLp_toLp]
+            simp only [v]
             by_cases hzt : z.1 ∈ t
-            · simp only [if_pos hzt]
+            · simp only [ite_eq_left hzt]
               have hmass := stateMass_nonneg_of_admissible A hP z.1
               calc
                 ‖(Real.sqrt (A.stateMass z.1) : ℂ) * g z.1‖ ^ 2 =
@@ -2328,7 +2325,7 @@ private theorem sum_three_factors_le {ι : Type*} (s : Finset ι)
       Real.sq_sqrt (Real.rpow_nonneg (hd i) _)]
   have hHolderTriple : α⁻¹.HolderTriple β⁻¹ 1 := by
     refine ⟨?_, inv_pos.mpr hα, inv_pos.mpr hβ⟩
-    simp [hα.ne', hβ.ne', hαβ]
+    simp [hαβ]
   have hHolder := Real.Lr_rpow_le_Lp_mul_Lq_of_nonneg s
       (f := fun i => u i ^ α) (g := fun i => d i ^ β)
       (p := α⁻¹) (q := β⁻¹) (r := 1) hHolderTriple
@@ -2427,7 +2424,7 @@ private theorem block_pairing_factored {F : FixedData} {P : PrimeGroups}
     let B := blockStates A I
     let S := twoReach A B R
     let T := neighborUnion A S
-    let c : EuclideanSpace ℂ {n // n ∈ I} :=
+    let _ : EuclideanSpace ℂ {n // n ∈ I} :=
       WithLp.toLp 2 (fun n : {n // n ∈ I} => f n.1)
     let v : EuclideanSpace ℂ {z // z ∈ T} :=
       WithLp.toLp 2 (fun z : {z // z ∈ T} =>
@@ -2758,11 +2755,10 @@ theorem PairingFromMomentTask_proof : PairingFromMomentTask := by
   have hBpos : 0 < B := by dsimp [B]; omega
   have hBM : 2 * ((2 * (R : ℤ) + 1) * (A.stepBound : ℤ)) < (B : ℤ) := by
     dsimp [B]
-    push_cast
     omega
   have hBexp : (B : ℝ) ≤ Real.exp (y ^ ((51 : ℝ) / 100)) := by
     simpa [B, R, y, Cblock] using
-      blockLength_exp_bound A hP hy hC₂ hk hkBound hCblock
+      blockLength_exp_bound A hP hy hC₂ hkBound hCblock
   have hxpow : 1 < x ^ γ := Real.one_lt_rpow hx hγ
   have hX : 1 ≤ X := le_trans hxpow.le hXlo
   have hDcard : 0 < (D.card : ℝ) ∧ (D.card : ℝ) ≤ 2 * X := by
@@ -2829,7 +2825,7 @@ theorem PairingFromMomentTask_proof : PairingFromMomentTask := by
       calc
         (y ^ C₃) ^ 2 = (y ^ C₃) ^ (2 : ℝ) := (Real.rpow_natCast _ _).symm
         _ = y ^ (C₃ * 2) := (Real.rpow_mul (le_of_lt hypos) C₃ 2).symm
-        _ = y ^ (2 * C₃) := by congr 1 <;> ring
+        _ = y ^ (2 * C₃) := by congr 1; ring
     calc
       sourceSq = A.normOn (D.product Finset.univ) (fun z => f z.1) ^ 2 := hSourceNormSq.symm
       _ ≤ (Real.sqrt X * y ^ C₃) ^ 2 :=
@@ -2841,7 +2837,7 @@ theorem PairingFromMomentTask_proof : PairingFromMomentTask := by
       calc
         (y ^ C₃) ^ 2 = (y ^ C₃) ^ (2 : ℝ) := (Real.rpow_natCast _ _).symm
         _ = y ^ (C₃ * 2) := (Real.rpow_mul (le_of_lt hypos) C₃ 2).symm
-        _ = y ^ (2 * C₃) := by congr 1 <;> ring
+        _ = y ^ (2 * C₃) := by congr 1; ring
     calc
       targetSq = A.normOn t g ^ 2 := hTargetNormSq.symm
       _ ≤ (Real.sqrt X * y ^ C₃) ^ 2 :=
@@ -2857,7 +2853,7 @@ theorem PairingFromMomentTask_proof : PairingFromMomentTask := by
     simpa [Model.pairing, targetSq, sourceSq, D, dyad, y, L] using hPair
   have hClean := packet_scalar_cleanup E C₃ Cf X y R B targetSq sourceSq
     (∑ n ∈ D, A.rootMoment R n) hy hX hR2 hRlow hBexp
-    hTargetRaw0 hTargetSqBound (by
+    hTargetSqBound (by
       dsimp [sourceSq]
       exact Finset.sum_nonneg fun n hn =>
         Finset.sum_nonneg fun a ha =>

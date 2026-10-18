@@ -86,7 +86,7 @@ lemma single_mass_kernel_eq (F : FixedData) (n : ℕ) (rho d : ℝ) (i : Fin (n 
             perU_term F n rho d i g t0 s0 u))) := by
     apply Finset.sum_congr rfl
     intro u _
-    have hpu := perU_mass_eq F n rho d i g s0 t0 u hrho hV hbase hd hagree_st
+    have hpu := perU_mass_eq F n rho d i g s0 t0 u hV hd hagree_st
     linear_combination hpu
   rw [hinner, ← Finset.mul_sum]
 
@@ -114,14 +114,14 @@ theorem GhostAdjointTask_proof : Erdos821.S2Core.GhostAdjointTask := by
             (∏ g : P.BigGroup, ∏ k, tiltedMu F P n g.val (s.2.1 g.val k)) *
             (∏ g : P.BigGroup, P.groupMemoryMass F n g.val (s.2.2 g)) := by
         unfold PrimeGroups.memoryMass
-        rw [if_pos hsmall]
+        rw [ite_eq_left hsmall]
       have hmass_t : P.memoryMass F J n t =
           (Fintype.card P.SmallResidues : ℝ)⁻¹ *
             (∏ g : P.SmallGroup, (P.V g.val) ^ (-(J + F.ell : ℕ) : ℤ)) *
             (∏ g : P.BigGroup, ∏ k, tiltedMu F P n g.val (s.2.1 g.val k)) *
             (∏ g : P.BigGroup, P.groupMemoryMass F n g.val (t.2.2 g)) := by
         unfold PrimeGroups.memoryMass
-        rw [if_pos hsmall_t]
+        rw [ite_eq_left hsmall_t]
         rw [← hcoord.2]
       by_cases hmismatch : ∃ g : P.BigGroup, ∃ v : P.Particle g.val,
           ¬ isZeroParticle v ∧ (s.2.2 g).count v ≠ (t.2.2 g).count v
@@ -203,10 +203,10 @@ theorem GhostAdjointTask_proof : Erdos821.S2Core.GhostAdjointTask := by
         exact hsmall
       have hmass_s0 : P.memoryMass F J n s = 0 := by
         unfold PrimeGroups.memoryMass
-        rw [if_neg hsmall]
+        rw [ite_eq_right hsmall]
       have hmass_t0 : P.memoryMass F J n t = 0 := by
         unfold PrimeGroups.memoryMass
-        rw [if_neg hsmall_t]
+        rw [ite_eq_right hsmall_t]
       rw [hmass_s0, hmass_t0]
       ring
   · have hcoord_symm : ¬ (t.1 = s.1 ∧ t.2.1 = s.2.1) := by
@@ -214,10 +214,10 @@ theorem GhostAdjointTask_proof : Erdos821.S2Core.GhostAdjointTask := by
       exact hcoord ⟨h1.symm, h2.symm⟩
     have hker_st0 : absoluteScaledMemoryGhostKernel F J n r.rho d i s t = 0 := by
       unfold absoluteScaledMemoryGhostKernel
-      rw [if_neg hcoord]
+      rw [ite_eq_right hcoord]
     have hker_ts0 : absoluteScaledMemoryGhostKernel F J n r.rho d i t s = 0 := by
       unfold absoluteScaledMemoryGhostKernel
-      rw [if_neg hcoord_symm]
+      rw [ite_eq_right hcoord_symm]
     rw [hker_st0, hker_ts0]
     ring
 

@@ -73,7 +73,7 @@ theorem smallPrefixFibre_card (J ell : ℕ) (y : (p : P.Prime g) → ZMod p.val)
         obtain ⟨j, _, hj⟩ := Finset.mem_image.mp hp
         have heq : Fin.castAdd ell j = Fin.natAdd J i := ha ((hprefix j).trans hj)
         have hv := congrArg Fin.val heq
-        simp only [Fin.coe_castAdd, Fin.coe_natAdd] at hv
+        simp only [Fin.val_castAdd, Fin.val_natAdd] at hv
         omega⟩
       inj' := by
         intro i j hij
@@ -81,7 +81,7 @@ theorem smallPrefixFibre_card (J ell : ℕ) (y : (p : P.Prime g) → ZMod p.val)
         have hh := ha (congrArg Subtype.val hij)
         apply Fin.ext
         have hv := congrArg Fin.val hh
-        simp only [Fin.coe_natAdd] at hv
+        simp only [Fin.val_natAdd] at hv
         omega
     }
   have hinj : Function.Injective suffix := by
@@ -122,7 +122,6 @@ lemma prod_smallGroupWeight_eq (F : FixedData) (J : ℕ) (y : P.SmallResidues) :
 
 /-- Unconditional bound on the small-group fiber sum for one small group `g`. -/
 lemma smallPrefixFibre_sum_le (F : FixedData) (J m : ℕ) (Csmall0 : ℝ)
-    (hCsmall0_pos : 0 < Csmall0)
     (hCsmall0 : ∀ Y : ℕ, F.ell ≤ Y →
       (Y : ℝ) ^ F.ell * F.q ^ ((((Y - F.ell : ℕ)) : ℝ) / 2) ≤ Csmall0)
     (g : P.SmallGroup) (hVlo : F.vMin ≤ P.V g.val)

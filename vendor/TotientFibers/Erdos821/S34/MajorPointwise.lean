@@ -49,7 +49,7 @@ theorem finite_character_reproduction_error {γ : Type} [Fintype γ]
 theorem kernel_multiplier_freeze {α β : Type} [Fintype α] [Fintype β]
     (w : α → ℝ) (v : β → ℝ) (hw : ∀ x, 0 ≤ w x) (hv : ∀ y, 0 ≤ v y)
     (K : α → ℂ) (H : β → ℂ) (M phase : α → β → ℂ) (M₀ : ℂ)
-    (E CA CB : ℝ) (hE : 0 ≤ E) (hCA : 0 ≤ CA) (hCB : 0 ≤ CB)
+    (E CA CB : ℝ) (hE : 0 ≤ E) (hCA : 0 ≤ CA)
     (hK : (∑ x, w x * ‖K x‖) ≤ CA) (hH : (∑ y, v y * ‖H y‖) ≤ CB)
     (hphase : ∀ x y, ‖phase x y‖ ≤ 1)
     (hM : ∀ x y, K x ≠ 0 → H y ≠ 0 → ‖M x y - M₀‖ ≤ E) :
@@ -64,7 +64,7 @@ theorem kernel_multiplier_freeze {α β : Type} [Fintype α] [Fintype β]
       apply Finset.sum_le_sum
       intro y _
       by_cases hk : K x = 0
-      · simp [hk, mul_nonneg hE (hw x)]
+      · simp [hk]
       by_cases hh : H y = 0
       · simp [hh]
       simp only [norm_mul, Complex.norm_real, Real.norm_eq_abs,
@@ -74,7 +74,7 @@ theorem kernel_multiplier_freeze {α β : Type} [Fintype α] [Fintype β]
       have ht := mul_le_mul
         (mul_le_mul_of_nonneg_left (hM x y hk hh) hn) (hphase x y)
         (norm_nonneg _) (mul_nonneg hn hE)
-      convert ht using 1 <;> ring
+      convert ht using 1; ring
     _ = E * (∑ x, w x * ‖K x‖) * (∑ y, v y * ‖H y‖) := by
       simp_rw [Finset.mul_sum, Finset.sum_mul]
       exact Finset.sum_comm

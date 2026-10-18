@@ -56,7 +56,7 @@ theorem eventual_smooth_cell_all_frequency_bound
       ∀ᶠ x : ℝ in atTop,
         ∀ (G : PrimeGroups) (J Q : ℕ) (ν : Pattern G.graph J P.ell m)
           (block : G.graph.BigGroup → Bool) (j : ℤ × ℤ)
-          (χA χB : CharacterIndex Q) (z : SharedDraw ν)
+          (χA χB : CharacterIndex Q) (_ : SharedDraw ν)
           (E H : Endpoint) (Z a₁ a₂ v : ℝ) (k : ℤ),
           Admissible P x G →
           (∀ side : Bool, ∃ g : G.graph.BigGroup,

@@ -33,7 +33,7 @@ theorem scaled_dirichlet_approximation (α Z S : ℝ)
       _ ≤ 1 / (q.den : ℝ) ^ 2 := by
         apply one_div_le_one_div_of_le (sq_pos_of_pos hr)
         nlinarith
-      _ = _ := by simp [zpow_neg, zpow_natCast, one_div]
+      _ = _ := by simp [zpow_neg, one_div]
   · have hmul : Z ≤ ((N : ℝ) + 1) * S := ((div_lt_iff₀ hS).mp hNnext).le
     have hden : 0 < ((N : ℝ) + 1) * q.den := by positivity
     calc

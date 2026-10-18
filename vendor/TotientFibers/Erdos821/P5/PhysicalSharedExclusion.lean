@@ -40,8 +40,8 @@ theorem physicalSharedExclusion_norm_le {P : Geometry} {G : PrimeGroups} {J m : 
       apply Finset.sum_le_sum
       intro z hz
       by_cases h : GoodSharedDraw ν n n' D z
-      · simp only [h, not_true_eq_false, if_false, norm_zero, le_refl]
-      · simp only [h, not_false_eq_true, if_true, norm_mul, Complex.norm_real,
+      · simp only [h, not_true_eq_false, ite_false, norm_zero, le_refl]
+      · simp only [h, not_false_eq_true, ite_true, norm_mul, Complex.norm_real,
           Real.norm_of_nonneg (sharedDrawLaw_nonneg ν z hV)]
         exact mul_le_mul_of_nonneg_left (hb z) (sharedDrawLaw_nonneg ν z hV)
     _ = K * sharedExclusionMass ν n n' D := by

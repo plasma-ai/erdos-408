@@ -78,7 +78,7 @@ theorem weighted_energy_bound (N : ℕ) (hN : 2 ≤ N) : ∃ C : ℝ, 0 < C ∧
     simp only [E, EE, ampE, amp, phase]
     fun_prop
   have hFc : Continuous F := by
-    simp only [F, FF]
+    simp only [F]
     exact ((continuous_omega h N).pow 2).mul (hP.norm.pow 2)
   -- pointwise bound on E on the support of the weight
   have hEb : ∀ u t, w u ≠ 0 → ‖E u t‖ ≤ B * omega h N t * S := by

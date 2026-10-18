@@ -64,7 +64,7 @@ lemma memoryMass_eq_of_smallPhysical (F : FixedData) (J n : ℕ)
   have hphys0 : P.smallPhysical z.1 z.2.1 :=
     (smallPhysical_permuteActive_iff π z.1 z.2.1).mp hphys
   unfold PrimeGroups.memoryMass smallBaseMass
-  rw [if_pos hphys0, Finset.prod_mul_distrib, ← mul_assoc]
+  rw [ite_eq_left hphys0, Finset.prod_mul_distrib, ← mul_assoc]
   congr 2
   apply Finset.prod_congr rfl
   intro g _
@@ -99,7 +99,7 @@ lemma edgeDelta_eq_of_compatible (A : Model F P J m) (ν : Pattern P J F.ell m)
     by_cases hi : i ∈ ν.changed g
     · simp [hi]
     · have hsh : ν.shared g (ν.slot i) := ⟨i, rfl, hi⟩
-      rw [if_neg hi, if_neg hi, hcomp g (ν.slot i) hsh]
+      rw [ite_eq_right hi, ite_eq_right hi, hcomp g (ν.slot i) hsh]
   unfold edgeDelta
   rw [hD]
 
@@ -175,7 +175,7 @@ lemma colLabelTerm_nonneg (F : FixedData) (r : MemoryParameters F) (n : ℕ)
 
 /-- Summing `colLabelTerm` over `(B, A_retr, a)` is bounded by the product of big and small group constants. -/
 lemma sum_colLabelTerm_le (F : FixedData) (r : MemoryParameters F) (n : ℕ)
-    (Cprom Csmall0 : ℝ) (hCsmall0_pos : 0 < Csmall0)
+    (Cprom Csmall0 : ℝ)
     (hCprom : ∀ Z' a : ℕ, a ≤ F.ell + m → (Z' : ℝ) ^ a * r.rho ^ (Z' - a) ≤ Cprom)
     (hCsmall0 : ∀ Y : ℕ, F.ell ≤ Y →
       (Y : ℝ) ^ F.ell * F.q ^ ((((Y - F.ell : ℕ)) : ℝ) / 2) ≤ Csmall0)
@@ -258,7 +258,7 @@ lemma sum_colLabelTerm_le (F : FixedData) (r : MemoryParameters F) (n : ℕ)
       · exact smallGroupWeight_nonneg F J g (hVpos g.val) _
       · exact le_refl 0
     · intro g
-      exact smallPrefixFibre_sum_le F J m Csmall0 hCsmall0_pos hCsmall0 g (hVlo g.val) _ _
+      exact smallPrefixFibre_sum_le F J m Csmall0 hCsmall0 g (hVlo g.val) _ _
   apply mul_le_mul hbig_prod_le hsmall_prod_le
   · refine Finset.prod_nonneg (fun g _ => Finset.sum_nonneg (fun a_g _ => ?_))
     dsimp [F_small]
@@ -413,7 +413,7 @@ lemma col_rawEdge_reversal_le (F : FixedData) (r : MemoryParameters F) (n : ℕ)
           (translateSmallResidues (-delta) t.1 g)
           (fun j => tt.2.1 g.val (Fin.castAdd F.ell j)) then
         smallGroupWeight F J g (translateSmallResidues (-delta) t.1 g) else 0) = _
-      rw [if_pos (hsg_mem g), ← hs_small]
+      rw [ite_eq_left (hsg_mem g), ← hs_small]
     rw [h1, prod_smallGroupWeight_eq]
   have hw_eq : P.memoryWeight r.v s =
       P.memoryWeight r.v t * ∏ g : P.BigGroup, (r.v ^ (A_retr g).card / r.v ^ (B g).card) := by
@@ -823,11 +823,11 @@ lemma sum_source_colSourceMapSum_le (F : FixedData) (r : MemoryParameters F) (n 
     symm
     apply Finset.sum_subset (Finset.filter_subset _ S)
     intro s hs hnot
-    simp only [S_val, Finset.mem_filter, hs, true_and, not_exists] at hnot
+    simp only [Finset.mem_filter, hs, true_and, not_exists] at hnot
     unfold colSourceMapSum
     apply Finset.sum_eq_zero
     intro f _
-    rw [if_neg (hnot f)]
+    rw [ite_eq_right (hnot f)]
   have hinj : Set.InjOn (fun s : P.MemoryState (J + F.ell) => P.act π s.2.1) S_val := by
     intro s₁ hs₁ s₂ hs₂ heq
     simp only [] at heq
@@ -973,7 +973,7 @@ theorem col_tsum_le (F : FixedData) (r : MemoryParameters F) (m : ℕ) (C₁ : �
       have hnot : s ∉ {s : P.MemoryState (J + F.ell) |
           absoluteMemoryEdgeKernel A (N x) r.rho theta i .all s t ≠ 0} :=
         fun hcon => hs (hfin.mem_toFinset.mpr hcon)
-      simp only [Set.mem_setOf_eq, ne_eq, not_not] at hnot
+      simp only [Set.mem_ofPred_eq, ne_eq, not_not] at hnot
       rw [norm_cast_absolute, hnot, mul_zero, zero_mul]
   let P_base : ℝ := (bigGroupConst F r m Cprom) ^ Fintype.card P.BigGroup *
     Csmall ^ Fintype.card P.SmallGroup
@@ -1052,7 +1052,7 @@ theorem col_tsum_le (F : FixedData) (r : MemoryParameters F) (m : ℕ) (C₁ : �
             simp_rw [← Finset.mul_sum]
         _ ≤ (patternSup A v * (A.pattern v).auxMass u * MW_t) * P_base := by
             apply mul_le_mul_of_nonneg_left
-              (sum_colLabelTerm_le F r (N x) Cprom Csmall0 hCsmall0_pos hCprom hCsmall0
+              (sum_colLabelTerm_le F r (N x) Cprom Csmall0 hCprom hCsmall0
                 hVlo htilted_nn htilted_sum (A.pattern v)
                 (-edgeDelta A (A.pattern v) (edgeForward i) (permuteActive τ t).2.1 u)
                 (permuteActive τ t))

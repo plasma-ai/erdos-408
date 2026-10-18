@@ -51,7 +51,7 @@ theorem long_rough_polynomial_of_inputs (hsieve : Blueprint.RoughPolynomial)
       (Real.rpow_le_rpow_of_exponent_le hgeom.2.1 (by linarith)) (by norm_num)
   have hXdelta : (x ^ (τ / 2)) ^ (-δ) ≤ L x ^ (-(A + 1)) := by
     rw [← Real.rpow_mul hxpos.le]
-    convert hdelta.2.2 using 1 <;> ring
+    convert hdelta.2.2 using 1; ring
   have hXinv : (x ^ (τ / 2))⁻¹ ≤ L x ^ (-(A + 1)) := by
     rw [← Real.rpow_neg hxpos.le]
     exact hinv.2.2

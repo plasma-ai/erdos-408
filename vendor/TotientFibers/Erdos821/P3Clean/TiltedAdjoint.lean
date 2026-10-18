@@ -60,8 +60,8 @@ theorem tiltedBannedRaw_backward (A : Model F P J m) (n : ℕ) (theta : ℝ)
     and_congr hmatches (bigBan_comm (A.pattern v) a b u)
   by_cases h : (A.pattern v).matchesBig a b ∧ bigBan (A.pattern v) a b u
   · have hs (t : ℝ) : star (t : ℂ) = (t : ℂ) := Complex.conj_ofReal t
-    rw [if_pos h, if_pos (hg.mp h)]
-    simp only [bigSignedCoefficient, Bool.false_eq_true, if_false, if_true]
+    rw [ite_eq_left h, ite_eq_left (hg.mp h)]
+    simp only [bigSignedCoefficient, Bool.false_eq_true, ite_false, ite_true]
     simp only [star_mul, phase_star, hs]
     rw [← DBig_eq_of_matches (A.pattern v) a b u h.1]
     have hr : (tiltedIdealMass F n b / tiltedIdealMass F n a) * tiltedFreshMass F n (A.pattern v) a =
@@ -72,13 +72,13 @@ theorem tiltedBannedRaw_backward (A : Model F P J m) (n : ℕ) (theta : ℝ)
       simpa only [mul_comm] using (tiltedFreshMass_reversal F n (A.pattern v) a b h.1).symm
     have hc := congrArg Complex.ofReal hr
     simp only [Complex.ofReal_mul, Complex.ofReal_div] at hc
-    simp only [neg_mul, neg_neg, Complex.ofReal_mul, Complex.ofReal_div, Complex.ofReal_inv]
+    simp only [neg_mul, neg_neg, Complex.ofReal_mul, Complex.ofReal_div]
     calc
       _ = ((A.pattern v).bigAuxMass u : ℂ) * (tiltedFreshMass F n (A.pattern v) b : ℂ) *
           star ((A.pattern v).coefficient b a u * imaginaryPower ((A.pattern v).DBig a u) A.zeta) *
           phase (theta * ((A.pattern v).DBig a u : ℝ)) := by simp only [star_mul]
       _ = _ := by rw [← hc]; simp only [star_mul]; ring
-  · simp only [if_neg h, if_neg (fun hh => h (hg.mpr hh)), star_zero, mul_zero]
+  · simp only [ite_eq_right h, ite_eq_right (fun hh => h (hg.mpr hh)), star_zero, mul_zero]
 
 theorem weightedAdjoint_averageBig (mass : P.BigLabels (J + F.ell) → ℝ)
     (K : P.BigLabels (J + F.ell) → P.BigLabels (J + F.ell) → ℂ)

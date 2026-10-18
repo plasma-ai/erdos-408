@@ -56,7 +56,7 @@ theorem one_sub_pow_lower {e : ℝ} (he : e ≤ 1) (k : ℕ) :
       _ = (1 - e) ^ (k + 1) := (pow_succ _ _).symm
 
 theorem big_label_product_le_two (P : PrimeGroups) (M : ℕ) (e : ℝ)
-    (he0 : 0 ≤ e) (he1 : e ≤ 1 / 2)
+    (he1 : e ≤ 1 / 2)
     (hbudget : (M : ℝ) * (Fintype.card P.BigGroup : ℝ) * e ≤ 1 / 2)
     (S : P.BigGroup → ℝ)
     (hS : ∀ g, 0 ≤ S g ∧ S g ≤ (1 - e)⁻¹) :

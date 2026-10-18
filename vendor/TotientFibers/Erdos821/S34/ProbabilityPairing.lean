@@ -44,7 +44,7 @@ theorem independent_pairing_bound {α β : Type*} [Fintype α] [Fintype β]
         abs_of_nonneg (hw x), abs_of_nonneg (hv y)]
       have h := mul_le_mul_of_nonneg_left (hR x y)
         (mul_nonneg (mul_nonneg (mul_nonneg (hw x) (hv y)) (norm_nonneg (f y))) (norm_nonneg (g x)))
-      convert h using 1 <;> ring
+      convert h using 1; ring
     _ = E * (∑ x, w x * ‖g x‖) * (∑ y, v y * ‖f y‖) := by
       simp_rw [Finset.mul_sum, Finset.sum_mul]
       exact Finset.sum_comm

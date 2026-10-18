@@ -336,7 +336,6 @@ theorem inverse_quadratic (t a b k l : ℂ)
   field_simp [hq, hr]
   dsimp [q] at *
   ring_nf
-  try simp [Complex.I_sq]
 
 end OscillatoryDeterminant
 open Filter Real Asymptotics

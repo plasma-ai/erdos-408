@@ -513,7 +513,7 @@ theorem secondInputCoefficient_norm_le (Ψ : O →* ℂ) (m c d : O) (G : Finset
   simp only [secondInputCoefficient, norm_mul, norm_pow,  mul_one]
   calc
     _ ≤ ‖Ψ (∏ i ∈ G, p i)‖ * 1 * 1 ^ 4 * 1 := by
-      gcongr <;> first | exact hm | exact finiteSquarefreeRow_norm_le_one _ hg G _
+      gcongr <;> exact finiteSquarefreeRow_norm_le_one _ hg G _
     _ = _ := by ring
 
 theorem secondNormalizedExpansionWeight_after_scale

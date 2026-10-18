@@ -45,8 +45,8 @@ theorem sum_strip_multiples {R : Type*} [AddCommMonoid R]
       apply Finset.sum_congr rfl
       intro n hn
       by_cases hd : (D : ℤ) ∣ n
-      · simp only [hd, if_true]
-      · simp only [hd, if_false, hf n hn hd]
+      · simp only [hd, ite_true]
+      · simp only [hd, ite_false, hf n hn hd]
     _ = _ := by
       symm
       unfold strippedRoots

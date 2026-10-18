@@ -76,17 +76,17 @@ theorem rawClean_summand_split (A : Model F P J m) (n : ℕ) (theta : ℝ) (forw
   by_cases hs : smallCleanGate J F.ell a c s t
   · by_cases hb : bigCleanGate A ν forward (smallArrayPrefix J F.ell a) b d u s t
     · have hv := hr.mpr ⟨hs, hb⟩
-      rw [if_pos hs, if_pos hb, if_pos hv, rawCleanCoefficient_join A n theta forward ν a c b d v u s t hV]
+      rw [ite_eq_left hs, ite_eq_left hb, ite_eq_left hv, rawCleanCoefficient_join A n theta forward ν a c b d v u s t hV]
       unfold bigCleanCoefficient
       ring
     · have hv : ¬ rawEdgeValid A ν forward (joinLabels v u)
           (s.1, joinLabels a b, s.2) (t.1, joinLabels c d, t.2)
           (emptyTransfer (s.1, joinLabels a b, s.2)) := fun h => hb (hr.mp h).2
-      simp only [if_pos hs, if_neg hb, if_neg hv, mul_zero]
+      simp only [ite_eq_left hs, ite_eq_right hb, ite_eq_right hv, mul_zero]
   · have hv : ¬ rawEdgeValid A ν forward (joinLabels v u)
         (s.1, joinLabels a b, s.2) (t.1, joinLabels c d, t.2)
         (emptyTransfer (s.1, joinLabels a b, s.2)) := fun h => hs (hr.mp h).1
-    simp only [if_neg hs, if_neg hv, mul_zero]
+    simp only [ite_eq_right hs, ite_eq_right hv, mul_zero]
 
 theorem sum_aux_split (f : P.Aux J → ℂ) :
     (∑ u : P.Aux J, f u) = ∑ v : SmallLabels P J, ∑ u : P.BigAux J, f (joinLabels v u) := by
@@ -112,7 +112,7 @@ theorem rawCleanPattern_sum_split (A : Model F P J m) (n : ℕ) (theta : ℝ) (f
   rw [Finset.mul_sum, sum_aux_split]
   simp_rw [rawClean_summand_split A n theta forward ν a c b d _ _ s t (fun g => (hV g).le)]
   by_cases hs : smallCleanGate J F.ell a c s t
-  · simp only [if_pos hs]
+  · simp only [ite_eq_left hs]
     rw [Finset.sum_comm]
     unfold conditionedPatternEntry
     rw [Finset.mul_sum]
@@ -130,7 +130,7 @@ theorem rawCleanPattern_sum_split (A : Model F P J m) (n : ℕ) (theta : ℝ) (f
         intro v _
         ring
       _ = _ := by rw [hsmall, one_mul]
-  · simp only [if_neg hs, Finset.sum_const_zero]
+  · simp only [ite_eq_right hs, Finset.sum_const_zero]
 
 theorem rawCleanKernel_coordinates (A : Model F P J m) (n : ℕ) (theta : ℝ) (forward : Bool)
     (a c : SmallLabels P (J + F.ell)) (b d : P.BigLabels (J + F.ell))
@@ -146,10 +146,10 @@ theorem rawCleanKernel_coordinates (A : Model F P J m) (n : ℕ) (theta : ℝ) (
   rw [Finset.mul_sum]
   simp_rw [rawCleanPattern_sum_split A n theta forward _ a c b d s t hV]
   by_cases hs : smallCleanGate J F.ell a c s t
-  · simp only [if_pos hs]
+  · simp only [ite_eq_left hs]
     rw [← Finset.mul_sum]
     rfl
-  · simp only [if_neg hs, Finset.sum_const_zero]
+  · simp only [ite_eq_right hs, Finset.sum_const_zero]
 
 
 end Erdos821.P3Clean

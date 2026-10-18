@@ -69,7 +69,7 @@ lemma raw_freshMass_tail {P : PrimeGroups} {J ell m : ℕ} (b : P.BigLabels (J +
       then (1 : ℝ) else P.mu g.val (b g (Fin.castAdd ell i))) = 1 := by
     apply Finset.prod_eq_one
     intro i _
-    rw [if_pos ((raw_shared_iff g.val _).mpr i.isLt)]
+    rw [ite_eq_left ((raw_shared_iff g.val _).mpr i.isLt)]
   rw [hp, one_mul]
   apply Finset.prod_congr rfl
   intro i _
@@ -77,7 +77,7 @@ lemma raw_freshMass_tail {P : PrimeGroups} {J ell m : ℕ} (b : P.BigLabels (J +
     rw [raw_shared_iff]
     change ¬J + i.val < J
     omega
-  rw [if_neg hi]
+  rw [ite_eq_right hi]
   rfl
 
 def prefixProduct {P : PrimeGroups} {J : ℕ} (a : P.BigLabels J) : ℕ :=

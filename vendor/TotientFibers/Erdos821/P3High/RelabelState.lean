@@ -129,7 +129,7 @@ theorem permuteActive_relabel {M : ℕ} (τ : P.Permutations M) (g : P.BigGroup)
 theorem prod_update_mul {ι : Type*} [Fintype ι] [DecidableEq ι] (f : ι → ℝ) (x : ι) (a : ℝ) :
     (∏ y, Function.update f x a y) * f x = (∏ y, f y) * a := by
   rw [Finset.prod_update_of_mem (Finset.mem_univ x),
-    Finset.prod_eq_mul_prod_diff_singleton x f (fun hx => (hx (Finset.mem_univ x)).elim)]
+    Finset.prod_eq_mul_prod_sdiff_singleton x f (fun hx => (hx (Finset.mem_univ x)).elim)]
   ring
 
 /-- A product of tilted label masses over unconditioned big slots scales at the replaced slot. -/
@@ -150,12 +150,12 @@ theorem tilted_prod_relabel (F : FixedData) (n : ℕ) {M : ℕ}
     funext x
     by_cases hx : x = (g, h)
     · subst hx
-      simp only [Function.update_self, if_neg hc, relabelLabels_self]
+      simp only [Function.update_self, ite_eq_right hc, relabelLabels_self]
     · rw [Function.update_of_ne hx]
       simp only [f]
       rcases x with ⟨g', i⟩
       rw [relabelLabels_of_ne a g h p g' i hx]
-  have hf : f (g, h) = tiltedMu F P n g.val (a g.val h) := if_neg hc
+  have hf : f (g, h) = tiltedMu F P n g.val (a g.val h) := ite_eq_right hc
   rw [hpt, ← hf]
   exact prod_update_mul f (g, h) _
 

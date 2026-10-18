@@ -28,7 +28,7 @@ theorem productMass_coordinate_sum {I : Type*} [Fintype I] [DecidableEq I]
       _ = (if h : i = i then f (h ▸ a i) else 1) := by
         apply Finset.prod_eq_single i
         · intro j _ hji
-          simp only [dif_neg hji]
+          simp only [dite_eq_right hji]
         · intro hi
           exact False.elim (hi (Finset.mem_univ i))
       _ = _ := by simp
@@ -38,7 +38,7 @@ theorem productMass_coordinate_sum {I : Type*} [Fintype I] [DecidableEq I]
     _ = ∑ x, w i x := by
       apply Finset.prod_eq_single i
       · intro j _ hji
-        simp only [w, dif_neg hji, mul_one, hmu]
+        simp only [w, dite_eq_right hji, mul_one, hmu]
       · intro hi
         exact False.elim (hi (Finset.mem_univ i))
     _ = _ := by simp [w]
@@ -57,7 +57,7 @@ theorem bigAuxMass_marginal {P : PrimeGroups} {J ell m : ℕ} (ν : Pattern P J 
   simp only [productMass, Fintype.prod_prod_type, flattenBigLabels, Equiv.coe_fn_mk] at hh
   change (∑ u : P.BigAux J, ν.bigAuxMass u * (if u g i = q then 1 else 0)) =
     (∑ x : P.Prime g.val, P.mu g.val x * (if x = q then 1 else 0)) at hh
-  simpa only [mul_ite, mul_one, mul_zero, Finset.sum_ite_eq', Finset.mem_univ, if_true] using hh
+  simpa only [mul_ite, mul_one, mul_zero, Finset.sum_ite_eq', Finset.mem_univ, ite_true] using hh
 
 theorem bigBan_indicator_le {P : PrimeGroups} {J ell m : ℕ} (ν : Pattern P J ell m)
     (a b : P.BigLabels (J + ell)) (u : P.BigAux J) :
@@ -68,20 +68,20 @@ theorem bigBan_indicator_le {P : PrimeGroups} {J ell m : ℕ} (ν : Pattern P J 
       0 ≤ (if u g i = a g j then (1 : ℝ) else 0) + (if u g i = b g j then 1 else 0) := by
     positivity
   by_cases h : bigBan ν a b u
-  · simp only [if_pos h]
+  · simp only [ite_eq_left h]
     exact Finset.sum_nonneg (fun g _ => Finset.sum_nonneg (fun i _ =>
       Finset.sum_nonneg (fun j _ => hn g i j)))
-  · simp only [if_neg h]
+  · simp only [ite_eq_right h]
     unfold bigBan at h
-    push_neg at h
+    push Not at h
     obtain ⟨g, i, _, j, hbad⟩ := h
     have hs : 1 ≤ (if u g i = a g j then (1 : ℝ) else 0) +
         (if u g i = b g j then 1 else 0) := by
       by_cases ha : u g i = a g j
-      · simp only [if_pos ha]
+      · simp only [ite_eq_left ha]
         have hz : 0 ≤ (if u g i = b g j then (1 : ℝ) else 0) := by positivity
         linarith
-      · simp only [if_neg ha, if_pos (hbad ha)]; norm_num
+      · simp only [ite_eq_right ha, ite_eq_left (hbad ha)]; norm_num
     exact hs.trans ((Finset.single_le_sum (fun z _ => hn g i z) (Finset.mem_univ j)).trans
       ((Finset.single_le_sum (fun z _ => Finset.sum_nonneg (fun t _ => hn g z t))
         (Finset.mem_univ i)).trans

@@ -27,7 +27,7 @@ lemma calibratedNumerator_congr (C : CalibrationData) (A m n : O)
     Ideal.mem_span_singleton.mpr ((dvd_mul_left A C.generator).trans hd)
   unfold calibratedNumerator CalibrationData.residueMonoid
   simp only [MonoidHom.comp_apply, RingHom.toMonoidHom_eq_coe,
-    MonoidHom.coe_coe, hb, idealRowHom_congr_mod (Ideal.span {A}) m n hA]
+    MonoidHom.coe_ofClass, hb, idealRowHom_congr_mod (Ideal.span {A}) m n hA]
 
 def calibratedQuotient (C : CalibrationData) (A : O)
     (m : O ⧸ Ideal.span {C.generator*A}) : ℂ :=

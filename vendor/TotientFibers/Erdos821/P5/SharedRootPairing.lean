@@ -44,8 +44,8 @@ theorem sum_gatedPatternTerm_labels {F : FixedData} {P : PrimeGroups} {J m : ℕ
   apply Finset.sum_congr rfl
   intro b hb
   by_cases hc : ν.compatible a b
-  · simp only [hc, if_true]
-  · simp only [hc, if_false, gatedPatternTerm_zero_incompatible A ν u T f g weight n a b hc]
+  · simp only [hc, ite_true]
+  · simp only [hc, ite_false, gatedPatternTerm_zero_incompatible A ν u T f g weight n a b hc]
 
 theorem gatedPatternTerm_zero_not_shared_multiple {F : FixedData} {P : PrimeGroups}
     {J m : ℕ} (A : Model F P J m) (ν : Pattern P J F.ell m) (u : P.Aux J)

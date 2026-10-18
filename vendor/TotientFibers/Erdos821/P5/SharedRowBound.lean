@@ -48,7 +48,6 @@ theorem sharedDampingLoss_le_log_power (P : Geometry) (G : PrimeGroups) (J : ℕ
   rw [← Real.rpow_intCast, Real.rpow_def_of_pos P.damping.1, Real.rpow_def_of_pos hLpos]
   apply Real.exp_le_exp.mpr
   push_cast
-  change _ ≤ Real.log (L x) * _
   unfold T at hs
   convert hs using 1 <;> push_cast <;> ring
 
@@ -106,8 +105,8 @@ theorem physicalSharedRow_norm_le {P : Geometry} {G : PrimeGroups} {J m : ℕ}
         (assembleLabels ν z s)
     · have hr := unsharedPhysical_of_physical_assemble ν z r n hp.1
       have hs := unsharedPhysical_of_physical_assemble ν z s n' hp.2
-      simpa only [← Nat.cast_mul, hp, hr, hs, true_and, if_true, mul_one] using hc r s
-    · simp only [← Nat.cast_mul, hp, if_false, norm_zero]
+      simpa only [← Nat.cast_mul, hp, hr, hs, true_and, ite_true, mul_one] using hc r s
+    · simp only [← Nat.cast_mul, hp, ite_false, norm_zero]
       apply mul_nonneg
       · exact mul_nonneg hB (by split_ifs <;> norm_num)
       · split_ifs <;> norm_num

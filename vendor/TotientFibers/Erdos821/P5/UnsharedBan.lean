@@ -56,7 +56,7 @@ theorem pattern_ban_assemble_iff {G : Blueprint.Graph.PrimeGroups} {J ell m : �
         apply hzD ⟨g, sharedSource ν g j hj⟩
         rw [← heq]
         exact free_prime_dvd_freeDrawProduct ν u ⟨g, ⟨i, hi⟩⟩
-      simp only [assembleLabels, dif_pos hj]
+      simp only [assembleLabels, dite_eq_left hj]
       exact ⟨hne, hne⟩
     · have hj' := (mem_unsharedSlots ν g j).mpr hj
       have hjs := h ⟨g, ⟨i, hi⟩⟩ ⟨j, hj'⟩

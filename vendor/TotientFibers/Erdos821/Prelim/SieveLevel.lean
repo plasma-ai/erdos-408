@@ -196,8 +196,8 @@ theorem corr_level_le (α : Type) (S : Erdos821.Blueprint.SieveData α)
     intro j hj
     by_cases heq : j = j₀
     · subst heq
-      rw [if_pos rfl, hcon_eq]
-    · rw [if_neg heq]
+      rw [ite_eq_left rfl, hcon_eq]
+    · rw [ite_eq_right heq]
       exact hcon_le j hj heq
   have hinner : ∀ j ∈ Finset.range N,
       ∏ p ∈ d ∩ Block α S z j, (p : ℝ)
@@ -259,10 +259,10 @@ theorem corr_level_le (α : Type) (S : Erdos821.Blueprint.SieveData α)
       intro j _
       by_cases heq : j = j₀
       · subst heq
-        simp only [if_pos rfl]
+        simp only
         push_cast
         ring
-      · simp only [if_neg heq]
+      · simp only [ite_eq_right heq]
         push_cast
         ring
     have hsum_eq : ∑ j ∈ Finset.range N,

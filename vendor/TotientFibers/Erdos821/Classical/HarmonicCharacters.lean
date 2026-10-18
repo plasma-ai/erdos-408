@@ -27,13 +27,13 @@ theorem primeCharacterError_nonprincipal_bound (A B : ℝ)
   obtain ⟨M, hM, hbound⟩ := primeCharacterError_log_bound A B hA hB
   refine ⟨M, hM, ?_⟩
   intro y q χ hq hy hlog hpower hqlog hχ
-  letI : NeZero q := ⟨Nat.ne_of_gt hq⟩
+  let : NeZero q := ⟨Nat.ne_of_gt hq⟩
   have hcond : (χ.conductor : ℝ) ≤ (Real.log y) ^ B := by
     calc
       (χ.conductor : ℝ) ≤ q := by
         exact_mod_cast Nat.le_of_dvd hq χ.conductor_dvd_level
       _ ≤ (Real.log y) ^ B := hqlog
-  letI : NeZero χ.conductor :=
+  let : NeZero χ.conductor :=
     ⟨Nat.ne_of_gt (Nat.pos_of_dvd_of_pos χ.conductor_dvd_level hq)⟩
   have hprim : χ.primitiveCharacter ≠ 1 := by
     intro h
@@ -344,7 +344,7 @@ theorem thetaMellinWeight_deriv_norm_le (t y : ℝ) (hy : 0 < y)
         Erdos821.Blueprint.Analytic.mellin y t) y := by
     have hlog' := HasDerivAt.ofReal_comp (Real.hasDerivAt_log hy.ne')
     convert (hlog'.const_mul (Complex.I * (t : ℂ))).cexp using 1 <;>
-      simp [Erdos821.Blueprint.Analytic.mellin] <;> ring
+      simp [Erdos821.Blueprint.Analytic.mellin]; ring
   have hid : HasDerivAt (fun z : ℝ => (z : ℂ)) 1 y :=
     HasDerivAt.ofReal_comp (hasDerivAt_id y)
   have hyInv := hid.inv hyC
@@ -374,13 +374,12 @@ theorem thetaMellinWeight_deriv_norm_le (t y : ℝ) (hy : 0 < y)
     ring
   have hterm₂ :
       ‖Erdos821.Blueprint.Analytic.mellin y t * (-1 / (y : ℂ) ^ 2)‖ = 1 / y ^ 2 := by
-    simp [norm_div, hmnorm, hynorm, Complex.norm_real, Real.norm_eq_abs]
+    simp [hmnorm]
   have hterm₃ :
       ‖Erdos821.Blueprint.Analytic.mellin y t * (y : ℂ)⁻¹ *
         (-((y⁻¹ : ℝ) : ℂ) / (Real.log y : ℂ) ^ 2)‖ =
         1 / (y ^ 2 * (Real.log y) ^ 2) := by
-    simp [norm_mul, norm_div, norm_inv, hmnorm, hynorm, hlognorm,
-      Complex.norm_real, Real.norm_eq_abs, abs_of_pos hy, abs_of_pos hlogpos]
+    simp [norm_inv, hmnorm, abs_of_pos hy, abs_of_pos hlogpos]
     ring
   calc
     _ ≤ ‖Complex.I * (t : ℂ) * (y : ℂ)⁻¹ *
@@ -690,14 +689,14 @@ theorem HarmonicCharacters_proof : HarmonicCharacters := by
       have hkC : (k : ℂ) ≠ 0 := by exact_mod_cast hprime.ne_zero
       have hlogpos : 0 < Real.log (k : ℝ) := Real.log_pos (by exact_mod_cast hprime.one_lt)
       have hlogne : (Real.log (k : ℝ) : ℂ) ≠ 0 := by exact_mod_cast hlogpos.ne'
-      simp only [weight, coeff, if_pos hnk,
+      simp only [weight, coeff, ite_eq_left hnk,
         Erdos821.DivisorHarmonic.thetaMellinWeight,
-        OAI.LargePrimeGaps.theta, if_pos hprime]
+        OAI.LargePrimeGaps.theta, ite_eq_left hprime]
       field_simp [hkC, hlogne]
       have hkCast : ((k : ℝ) : ℂ) = (k : ℂ) := by norm_cast
       rw [hkCast]
-    · simp only [coeff, if_pos hnk, OAI.LargePrimeGaps.theta, if_neg hprime]
-      simp [Nat.cast_zero]
+    · simp only [coeff, ite_eq_left hnk, OAI.LargePrimeGaps.theta, ite_eq_right hprime]
+      simp
   let s : Set ℝ := Set.Ioi 1
   have hlogRealCD : ContDiffOn ℝ 2 Real.log s := by
     apply (Real.contDiffOn_log (n := 2)).mono
@@ -819,7 +818,7 @@ theorem HarmonicCharacters_proof : HarmonicCharacters := by
       _ ≤ C * L := by
         calc
           Real.log hi ≤ Real.log (x ^ C) := Real.log_le_log hhiPos hhi
-          _ = C * L := by simp [L, Analytic.L, Real.log_rpow hxpos]
+          _ = C * L := by simp [L, Real.log_rpow hxpos]
   have hIntNorm :
       ‖∫ y in (n : ℝ)..(m : ℝ), deriv weight y * partialTheta y‖ ≤ R * (C * L) := by
     calc
@@ -857,7 +856,7 @@ theorem HarmonicCharacters_proof : HarmonicCharacters := by
               rw [Erdos821.Blueprint.Analytic.mellin, Complex.norm_exp]
         _ = Real.exp ((Complex.I * (t : ℂ) * Complex.log (m : ℂ)).re) := by rw [harg]
         _ = 1 := by rw [hRe]; simp
-    have hmCast : ‖(m : ℂ)‖ = (m : ℝ) := by simp [abs_of_pos hmPos]
+    have hmCast : ‖(m : ℂ)‖ = (m : ℝ) := by simp
     have hlogCast : ‖(Real.log (m : ℝ) : ℂ)‖ = Real.log (m : ℝ) := by
       rw [Complex.norm_real, Real.norm_eq_abs, abs_of_pos hmLogPos]
     have hlogInv : 1 / Real.log (m : ℝ) ≤ 1 := by
@@ -939,7 +938,7 @@ theorem HarmonicCharacters_proof : HarmonicCharacters := by
                     ring
                   _ = L ^ B * L ^ (-E + 1) := by rw [← Real.rpow_add hLpos]
                   _ = L ^ (B + (-E + 1)) := by rw [← Real.rpow_add hLpos]
-                  _ = L ^ (B + 1 - E) := by congr 1 <;> ring
+                  _ = L ^ (B + 1 - E) := by congr 1; ring
               calc
                 _ = 6 * M * C * (L ^ B * L ^ (-E) * L) := by ring
                 _ = 6 * M * C * L ^ (B + 1 - E) := by rw [hpow]

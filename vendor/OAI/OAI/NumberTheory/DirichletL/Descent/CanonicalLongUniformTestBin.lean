@@ -144,7 +144,6 @@ theorem actual_marked_bin_uniform_test
         (fun v T => primeMark slots lists weights (v.support∪T)*normTwistedSource om ξ
           (primeProductNorm (poolPrimary F) T/Z^r)) z) (hc I).symm
     · dsimp [E,Gamma,d]
-      try simp only [Real.norm_eq_abs]
       ring
   · dsimp [E,Gamma,moment]
 

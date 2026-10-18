@@ -36,7 +36,7 @@ lemma col_valid_set_finite (A : Model F P J m) {n : ℕ} (i : Fin n)
       (Set.univ : Set P.SmallResidues) ×ˢ ((Set.univ : Set (P.Labels (J + F.ell))) ×ˢ (Set.univ.pi (fun g : P.BigGroup => {z : P.Memory (g : P.Group) | z.card ≤ bound g}))) := by
     intro s hs
     obtain ⟨c, hc⟩ := hs
-    simp only [Set.mem_prod, Set.mem_univ, Set.mem_pi, Set.mem_setOf_eq, true_and] at ⊢
+    simp only [Set.mem_prod, Set.mem_univ, Set.mem_pi, Set.mem_ofPred_eq, true_and] at ⊢
     intro g _
     have hb := source_card_bound A i s t c hc g
     simp only [bound] at hb ⊢

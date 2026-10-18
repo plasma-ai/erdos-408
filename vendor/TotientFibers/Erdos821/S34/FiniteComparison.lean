@@ -48,7 +48,7 @@ theorem finite_comparison_of_pointwise {α β : Type} [Fintype α] [Fintype β]
     · simp [R, he]
   rw [heq]
   have hn := (norm_add_le _ _).trans (add_le_add hbad hgood)
-  convert hn using 1 <;> ring
+  convert hn using 1; ring
 
 end
 end Erdos821.S34Core

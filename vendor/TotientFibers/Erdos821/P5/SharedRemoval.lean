@@ -75,11 +75,11 @@ theorem sharedDrawLaw_good_mass {P : PrimeGroups} {J ell m : ℕ}
     · have he : ¬∃ i : SharedIndex ν,
           (z i).val ∈ sharedForbidden ν n n' D i (fun j => z j.val) := by
         simpa only [GoodSharedDraw, not_exists] using h
-      simp only [h, he, if_true, if_false, add_zero]
+      simp only [h, he, ite_true, ite_false, add_zero]
     · have he : ∃ i : SharedIndex ν,
           (z i).val ∈ sharedForbidden ν n n' D i (fun j => z j.val) := by
         simpa only [GoodSharedDraw, not_forall, not_not] using h
-      simp only [h, he, if_true, if_false, zero_add]
+      simp only [h, he, ite_true, ite_false, zero_add]
   linarith
 
 /-- Discarding shared draws has exactly their harmonic mass as cost when the
@@ -96,7 +96,7 @@ theorem shared_constant_removal_norm {P : PrimeGroups} {J ell m : ℕ}
       Finset.sum_mul]
     apply Finset.sum_congr rfl
     intro z hz
-    by_cases h : GoodSharedDraw ν n n' D z <;> simp only [h, if_true, if_false,
+    by_cases h : GoodSharedDraw ν n n' D z <;> simp only [h, ite_true, ite_false,
       Complex.ofReal_zero, zero_mul]
   rw [hsum]
   have heq : ((1 - sharedExclusionMass ν n n' D : ℝ) : ℂ) * c - c =

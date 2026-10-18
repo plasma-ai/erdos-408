@@ -19,6 +19,7 @@ variable {ι : Type*} [Fintype ι] {α : ι → Type*} [∀ i, Fintype (α i)]
 abbrev FreshSample (S : Finset ι) (α : ι → Type*) :=
   ∀ i : {i // i ∉ S}, α i.val
 
+omit [(i : ι) → Fintype (α i)] in
 lemma freshProductWeight_eq_productWeight
     (w : ∀ i, α i → ℝ) (S : Finset ι) (y : ProductSample α) :
     freshProductWeight w S y =
@@ -33,18 +34,21 @@ lemma freshProductWeight_eq_productWeight
     (Finset.univ.filter fun i : ι => i ∉ S)
     (by intro i; simp) (fun i => w i (y i))
 
+omit [Fintype ι] [(i : ι) → Fintype (α i)] in
 lemma joinSharedFresh_shared (S : Finset ι) (s : PartialSample S α)
     (u : FreshSample S α) :
     (fun i : {i // i ∈ S} => joinSharedFresh S s u i.val) = s := by
   funext i
   simp [joinSharedFresh, Equiv.piEquivPiSubtypeProd, i.property]
 
+omit [Fintype ι] [(i : ι) → Fintype (α i)] in
 lemma joinSharedFresh_fresh (S : Finset ι) (s : PartialSample S α)
     (u : FreshSample S α) :
     (fun i : {i // i ∉ S} => joinSharedFresh S s u i.val) = u := by
   funext i
   simp [joinSharedFresh, Equiv.piEquivPiSubtypeProd, i.property]
 
+omit [(i : ι) → Fintype (α i)] in
 lemma productWeight_joinSharedFresh (w : ∀ i, α i → ℝ) (S : Finset ι)
     (s : PartialSample S α) (u : FreshSample S α) :
     productWeight w (joinSharedFresh S s u) =
@@ -53,12 +57,14 @@ lemma productWeight_joinSharedFresh (w : ∀ i, α i → ℝ) (S : Finset ι)
   rw [productWeight_split]
   rw [joinSharedFresh_shared, joinSharedFresh_fresh]
 
+omit [(i : ι) → Fintype (α i)] in
 lemma freshProductWeight_joinSharedFresh (w : ∀ i, α i → ℝ) (S : Finset ι)
     (s : PartialSample S α) (u : FreshSample S α) :
     freshProductWeight w S (joinSharedFresh S s u) =
       productWeight (fun i : {i // i ∉ S} => w i.val) u := by
   rw [freshProductWeight_eq_productWeight, joinSharedFresh_fresh]
 
+omit [Fintype ι] [(i : ι) → Fintype (α i)] in
 lemma sameShared_joinSharedFresh_iff (S : Finset ι)
     (s t : PartialSample S α) (u v : FreshSample S α) :
     sameShared S (joinSharedFresh S s u) (joinSharedFresh S t v) ↔ s = t := by

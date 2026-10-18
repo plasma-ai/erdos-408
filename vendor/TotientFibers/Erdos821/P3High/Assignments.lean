@@ -39,19 +39,19 @@ instance pivotAssignmentFintype {n B : ℕ} (pi : Finset (Finset (AddrIdx P (J +
 def blockTarget {n B : ℕ} (pi : Finset (Finset (AddrIdx P (J + F.ell) n B)))
     (hpi : BirthCollection pi) (values : PivotAssignment pi hpi)
     (j : AddrIdx P (J + F.ell) n B) : ℕ :=
-  if hj : j ∈ performedAddressSet pi then (values (blockContaining pi hpi j hj)).val else 0
+  if hj : j ∈ performedAddressSet pi then (values (blockContaining pi j hj)).val else 0
 
 theorem prescribed_of_compatible {A : Model F P J m} {n B : ℕ} (H : MemoryHistory A n)
     (pi : Finset (Finset (AddrIdx P (J + F.ell) n B))) (hpi : BirthCollection pi)
     (values : PivotAssignment pi hpi) (hc : PivotCompatible H pi hpi values) :
     Prescribed B H (performedAddressSet pi) (blockTarget pi hpi values) := by
   intro j hj
-  have hmem := blockContaining_mem pi hpi j hj
-  have h := hc (blockContaining pi hpi j hj) j hmem
+  have hmem := blockContaining_mem pi j hj
+  have h := hc (blockContaining pi j hj) j hmem
   refine ⟨h.1, ?_⟩
   rw [h.2]
   unfold blockTarget
-  rw [dif_pos hj]
+  rw [dite_eq_left hj]
 
 /-- The literal high-rank expression is covered by the prescriptions of block values. -/
 theorem highRank_le_assign (A : Model F P J m) (n B : ℕ) (rho theta : ℝ)
@@ -62,7 +62,7 @@ theorem highRank_le_assign (A : Model F P J m) (n B : ℕ) (rho theta : ℝ)
             Prescribed B H (performedAddressSet pi) (blockTarget pi hpi values)
           then ‖H.Weight rho theta‖ else 0) := by
   unfold highRankHistoryExpression
-  rw [tsum_truncR A n B _ (fun H hH => if_neg (fun h => hH h.2.1))]
+  rw [tsum_truncR A n B _ (fun H hH => ite_eq_right (fun h => hH h.2.1))]
   have htr : ∀ values : PivotAssignment pi hpi, (∑' H : MemoryHistory A n,
       (if H.Valid ∧ H.Truncated B ∧
           Prescribed B H (performedAddressSet pi) (blockTarget pi hpi values)
@@ -71,25 +71,25 @@ theorem highRank_le_assign (A : Model F P J m) (n B : ℕ) (rho theta : ℝ)
         (if (mkH d).Valid ∧ (mkH d).Truncated B ∧
             Prescribed B (mkH d) (performedAddressSet pi) (blockTarget pi hpi values)
           then ‖(mkH d).Weight rho theta‖ else 0) :=
-    fun values => tsum_truncR A n B _ (fun H hH => if_neg (fun h => hH h.2.1))
+    fun values => tsum_truncR A n B _ (fun H hH => ite_eq_right (fun h => hH h.2.1))
   rw [Finset.sum_congr rfl (fun v _ => htr v), Finset.sum_comm]
   apply Finset.sum_le_sum
   intro d _
   by_cases hc : (mkH d).Valid ∧ (mkH d).Truncated B ∧
       birthEvent ((mkH d).performedFin B) ((mkH d).valueFin B) pi
-  · rw [if_pos hc]
+  · rw [ite_eq_left hc]
     obtain ⟨values, hv⟩ := (birthEvent_iff_exists_pivotAssignment (mkH d) pi hpi).mp hc.2.2
     have hpre := prescribed_of_compatible (mkH d) pi hpi values hv
     calc ‖(mkH d).Weight rho theta‖
         = (if (mkH d).Valid ∧ (mkH d).Truncated B ∧
             Prescribed B (mkH d) (performedAddressSet pi) (blockTarget pi hpi values)
-          then ‖(mkH d).Weight rho theta‖ else 0) := by rw [if_pos ⟨hc.1, hc.2.1, hpre⟩]
+          then ‖(mkH d).Weight rho theta‖ else 0) := by rw [ite_eq_left ⟨hc.1, hc.2.1, hpre⟩]
       _ ≤ _ := Finset.single_le_sum (f := fun values : PivotAssignment pi hpi =>
             if (mkH d).Valid ∧ (mkH d).Truncated B ∧
               Prescribed B (mkH d) (performedAddressSet pi) (blockTarget pi hpi values)
             then ‖(mkH d).Weight rho theta‖ else 0)
           (fun v _ => by split_ifs <;> simp) (Finset.mem_univ values)
-  · rw [if_neg hc]
+  · rw [ite_eq_right hc]
     exact Finset.sum_nonneg fun v _ => by split_ifs <;> simp
 
 theorem muHat_le_block {n B : ℕ} (pi : Finset (Finset (AddrIdx P (J + F.ell) n B)))
@@ -103,7 +103,7 @@ theorem muHat_le_block {n B : ℕ} (pi : Finset (Finset (AddrIdx P (J + F.ell) n
   · rw [hg, muHat_of_mem]
   · have h0 : muHat F P n (birthAddressGroup ((Fintype.equivFin _).symm j)) p.val = 0 := by
       unfold muHat
-      rw [dif_neg]
+      rw [dite_eq_right]
       intro hmem
       exact hg (big_groups_eq_of_common_prime _ _ p.val hmem p.property)
     rw [h0]
@@ -141,7 +141,7 @@ theorem assign_sum_le {n B : ℕ} (x : ℝ) (hP : P.Admissible F x)
     have hjU : j ∈ performedAddressSet pi := Finset.mem_biUnion.2 ⟨C.val, C.property, hj⟩
     have hb : blockTarget pi hpi values j = (values C).val := by
       unfold blockTarget
-      rw [dif_pos hjU, blockContaining_eq pi hpi j hjU C.val C.property hj]
+      rw [dite_eq_left hjU, blockContaining_eq pi hpi j hjU C.val C.property hj]
     rw [hb]
   rw [Finset.sum_congr rfl (fun v _ => hstep1 v)]
   have hstep2 : (∑ values : PivotAssignment pi hpi, ∏ C : {C // C ∈ pi}, H C (values C)) =

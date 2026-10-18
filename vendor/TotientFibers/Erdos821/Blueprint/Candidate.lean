@@ -136,7 +136,7 @@ end CandidateData
 
 /-- P7 geometry is chosen before the gap, rough slot, accuracy and proxy precision. -/
 abbrev candidate_geometry_statement : Prop :=
-  ∀ (_hc : ClassicalInputs) (δ : ℝ) (hδ : 0 < δ) (hδ' : δ < 1 / 4),
+  ∀ (_hc : ClassicalInputs) (δ : ℝ) (_ : 0 < δ) (_ : δ < 1 / 4),
     ∃ C : CandidateData, C.Geometry δ
 abbrev candidate_bounds_statement : Prop :=
   ∀ (_hc : ClassicalInputs) (δ : ℝ) (C : CandidateData)

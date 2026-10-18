@@ -139,7 +139,7 @@ theorem pointResidueFactor_fin {n : ℕ} (q : Fin (n + 1) → ℝ)
   intro i hi
   have hcast : ((z.val : ℤ) + h i : ZMod p) =
       (z.val : ZMod p) + (h i : ZMod p) := by
-    simp [Int.cast_add, Int.cast_natCast]
+    simp [Int.cast_natCast]
   have hhit : ZMod.finEquiv p z + (h i : ZMod p) = 0 ↔
       (p : ℤ) ∣ (z.val : ℤ) + h i := by
     rw [zmod_finEquiv_val, ← hcast]
@@ -244,10 +244,10 @@ theorem pointResidueFactor_eq_onePrimePointFactor {F : FixedData} {J m n : ℕ}
   by_cases ha : p.val ∈ Q.active i
   · have hv : i ∈ Q.activeVisits g p := hactive.mp ha
     by_cases hh : r + (Q.offset i : ZMod p.val) = 0 <;>
-      simp [pointResidueFactor, onePrimePointFactor, ha, hv, hh]
+      simp [ha, hv, hh]
   · have hv : i ∉ Q.activeVisits g p := fun hi => ha (hactive.mpr hi)
     by_cases hh : r + (Q.offset i : ZMod p.val) = 0 <;>
-      simp [pointResidueFactor, onePrimePointFactor, ha, hv, hh, eta] <;> ring
+      simp [ha, hv, hh, eta]
 
 noncomputable def primeCoordinateEquiv (p : P.GroupPrime) :
     Fin p.val ≃ ZMod ((groupPrimeEquiv P p).2.val) := by
@@ -266,10 +266,7 @@ noncomputable def residuesEquivGroup : P.Residues ≃ GroupResidues P :=
 
 theorem residuesEquivSigma_apply (y : P.Residues) (p : P.GroupPrime) :
     residuesEquivSigma P y (groupPrimeEquiv P p) = primeCoordinateEquiv P p (y p) := by
-  simpa [residuesEquivSigma] using
-    (Equiv.piCongr_apply_apply
-      (Z := fun gp : Σ g : P.Group, P.Prime g => ZMod gp.2.val)
-      (groupPrimeEquiv P) (primeCoordinateEquiv P) y p)
+  simp [residuesEquivSigma]
 
 theorem residuesEquivGroup_apply (y : P.Residues) (g : P.Group) (p : P.Prime g) :
     residuesEquivGroup P y g p = residuesEquivSigma P y ⟨g, p⟩ := by
@@ -309,7 +306,7 @@ theorem groupResiduePathFactor_eq_residuePathFactor {n : ℕ}
       apply Finset.prod_congr rfl
       intro p hp
       let gp := groupPrimeEquiv P p
-      letI : NeZero p.val := ⟨(P.prime gp.1 gp.2.val gp.2.property).ne_zero⟩
+      let : NeZero p.val := ⟨(P.prime gp.1 gp.2.val gp.2.property).ne_zero⟩
       change pointResidueFactor q h active p.val
         (ZMod.finEquiv p.val (y p)) = _
       exact pointResidueFactor_fin q h active (p := p.val) (z := y p)
@@ -766,7 +763,7 @@ theorem bigLocalAverage_eq_onePrimeExpectation {F : FixedData} {J m n : ℕ}
       Erdos821.S2Core.onePrimeExpectation p.val (n + 1) (eta F n)
         (fun i => (Q.offset i : ZMod p.val)) (Q.activeVisits g p) := by
   classical
-  letI := P.primeNeZero g.val p
+  let := P.primeNeZero g.val p
   rw [ZMod.card]
   unfold Erdos821.S2Core.onePrimeExpectation
   congr 1
@@ -895,8 +892,8 @@ theorem residueExpectation_eq_smallBigAverages {F : FixedData} {J m n : ℕ}
         ((Fintype.card (BigGroupResidues P) : ℝ)⁻¹ *
           ∑ b : BigGroupResidues P,
             bigGroupResiduePathFactor P (visitQ F.q n) Q.offset Q.active b) := by
-      letI : Nonempty (P.SmallResidues) := ⟨fun _ _ => 0⟩
-      letI : Nonempty (BigGroupResidues P) := ⟨fun _ _ => 0⟩
+      let : Nonempty (P.SmallResidues) := ⟨fun _ _ => 0⟩
+      let : Nonempty (BigGroupResidues P) := ⟨fun _ _ => 0⟩
       exact uniform_product_average
         (fun s => smallResiduePathFactor P (visitQ F.q n) Q.offset Q.active s)
         (fun b => bigGroupResiduePathFactor P (visitQ F.q n) Q.offset Q.active b)

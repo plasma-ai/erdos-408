@@ -25,7 +25,7 @@ theorem blocks_eq_primes (α : Type) (S : Blueprint.SieveData α)
   apply Finset.Subset.antisymm
   · exact biUnion_subset_primes α S z N
   · intro p hp
-    obtain ⟨j, hj, hpj⟩ := Block_cover α S z hdb.1 N hN p hp
+    obtain ⟨j, hj, hpj⟩ := Block_cover α S z N hN p hp
       (hdb.2.2.1 p hp).1
     exact Finset.mem_biUnion.mpr ⟨j, Finset.mem_range.mpr hj, hpj⟩
 

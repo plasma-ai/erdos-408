@@ -145,7 +145,7 @@ theorem clean_kernel_eq_zero_of_memory_size_ne (A : Model F P J m)
         edgeChoiceCoefficient A n rho theta i s t c * phi s t c else 0) = 0 := by
     apply Finset.sum_eq_zero
     intro c _
-    exact if_neg (fun hc => h (clean_memory_size A n i s t c hc))
+    exact ite_eq_right (fun hc => h (clean_memory_size A n i s t c hc))
   rw [hzero, mul_zero]
 
 def particleTranslation (delta : ℤ) (g : P.Group) : P.Particle g ≃ P.Particle g where

@@ -94,10 +94,10 @@ theorem eventual_physical_endpoint_norm (P : Geometry) (C : ℝ) :
     have hn := (Finset.mem_product.mp hz).1
     by_cases hp : G.graph.physical (J + P.ell) n a
     · apply mul_le_mul_of_nonneg_left (pow_le_pow_left₀ (norm_nonneg _) (hf n hn a hp) 2)
-      simpa only [Blueprint.Graph.Model.stateMass, if_pos hp] using
+      simpa only [Blueprint.Graph.Model.stateMass, ite_eq_left hp] using
         markMass_nonneg G.graph (J + P.ell)
           (fun g => by rw [graph_mass]; exact lt_of_lt_of_le P.positive.2.2.1 (hG.2.2.1 g).1)
-    · simp only [Blueprint.Graph.Model.stateMass, if_neg hp, zero_mul, le_refl]
+    · simp only [Blueprint.Graph.Model.stateMass, ite_eq_right hp, zero_mul, le_refl]
   have hlogX : Real.log X ≤ 2 * L x := by
     apply (Real.log_le_log hXpos hXhi).trans
     simp [L, Real.log_pow]

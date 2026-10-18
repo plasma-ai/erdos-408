@@ -28,7 +28,7 @@ def analyticGeometry (F : FixedData) : Blueprint.Analytic.Geometry where
   vmax := max F.vMin F.vMax
   q := F.q
   ell := F.ell
-  ordered := ⟨F.a_pos, F.ab, F.bc, F.cd, by convert F.d_lt using 1 <;> norm_num⟩
+  ordered := ⟨F.a_pos, F.ab, F.bc, F.cd, by convert F.d_lt using 1; norm_num⟩
   positive := ⟨F.c₀_pos, F.C₀_pos, F.vMin_pos, le_max_left ..⟩
   damping := ⟨F.q_pos, F.q_lt⟩
   marks := F.ell_pos

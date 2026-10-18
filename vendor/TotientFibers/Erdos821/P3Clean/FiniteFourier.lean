@@ -50,15 +50,13 @@ theorem finiteFourier_inner (f g : G → ℂ) :
       ring
     _ = _ := by
       simp only [character_orthogonality, mul_ite, mul_zero]
-      simp [Finset.mul_sum, mul_comm, mul_left_comm]
+      simp [mul_comm, mul_left_comm]
 
 theorem finiteFourier_parseval (f : G → ℂ) :
     (∑ ψ : AddChar G ℂ, ‖finiteFourier f ψ‖ ^ 2) =
       (Fintype.card G : ℝ) * ∑ r : G, ‖f r‖ ^ 2 := by
   have h := finiteFourier_inner f f
-  simp only [Complex.star_def, Complex.conj_mul', ← Complex.ofReal_sum,
-    ← Complex.ofReal_natCast,
-    ← Complex.ofReal_mul] at h
+  simp only [Complex.star_def, Complex.conj_mul', ← Complex.ofReal_natCast] at h
   exact_mod_cast h
 
 theorem finiteFourier_translate (f : G → ℂ) (d : G) (ψ : AddChar G ℂ) :
@@ -69,7 +67,7 @@ theorem finiteFourier_translate (f : G → ℂ) (d : G) (ψ : AddChar G ℂ) :
       ψ d * (star (ψ (r + d)) * f (r + d)) := by
     rw [AddChar.map_add_eq_mul, star_mul]
     have hψ : ψ d * star (ψ d) = 1 := by
-      simp [Complex.star_def, Complex.mul_conj', ψ.norm_apply]
+      simp [Complex.mul_conj', ψ.norm_apply]
     calc
       _ = (ψ d * star (ψ d)) * (star (ψ r) * f (r + d)) := by rw [hψ, one_mul]
       _ = _ := by ring

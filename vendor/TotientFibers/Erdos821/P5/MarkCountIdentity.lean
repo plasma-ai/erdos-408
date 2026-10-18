@@ -60,8 +60,7 @@ theorem weightedMarks_one (G : PrimeGroups) (q : ℝ) (t : Fin G.size → ℕ) (
   simp only [Complex.ofReal_mul, Complex.ofReal_prod, Complex.ofReal_div,
     Complex.ofReal_pow, Complex.ofReal_natCast]
   rw [Finset.prod_div_distrib]
-  simp only [div_eq_mul_inv, inv_pow, Finset.prod_inv_distrib, Complex.ofReal_inv,
-    Complex.ofReal_pow]
+  simp only [div_eq_mul_inv, inv_pow, Finset.prod_inv_distrib, Complex.ofReal_inv]
   ring
 
 theorem unsharedCount_eq_descFactorial {G : PrimeGroups} {J ell m : ℕ}

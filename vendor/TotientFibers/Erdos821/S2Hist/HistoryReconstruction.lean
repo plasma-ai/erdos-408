@@ -328,8 +328,8 @@ theorem canonical_ghost_batch_injective (Q : ResiduePath A n)
   intro h k he
   have hlist := (Q.ghostBirthPrimes S i g).nodup_toList
   have hget : (Q.ghostBirthPrimes S i g).toList.get
-      ⟨h.val, by simpa using h.isLt⟩ = (Q.ghostBirthPrimes S i g).toList.get
-      ⟨k.val, by simpa using k.isLt⟩ := by
+      ⟨h.val, by simp⟩ = (Q.ghostBirthPrimes S i g).toList.get
+      ⟨k.val, by simp⟩ := by
     simpa [ResiduePath.ghostBatchLabels] using congrArg Subtype.val he
   have hidx := (hlist.get_inj_iff).mp hget
   apply Fin.ext
@@ -556,7 +556,7 @@ theorem history_edge_pending_primes_eq (hH : H.Valid) (i : Fin n) (g : P.BigGrou
   exact hp
 
 theorem history_edge_store_slots_eq (hH : H.Valid) (hd : H.DistinctBirths)
-    (S : LifespanAssignment P n) (hS : H.toResiduePath.lifespanValid S)
+    (S : LifespanAssignment P n)
     (hm : ∀ i g, H.toResiduePath.memoryBefore S i g = (H.before i).2.2 g ∧
       H.toResiduePath.memoryAfter S i g = (H.after i).2.2 g)
     (i : Fin n) :
@@ -844,7 +844,7 @@ theorem transferChoice_heq_of_components {M : ℕ}
   exact heq_of_eq hchoice
 
 theorem history_edge_transfer_choice_heq (hH : H.Valid) (hd : H.DistinctBirths)
-    (S : LifespanAssignment P n) (hS : H.toResiduePath.lifespanValid S)
+    (S : LifespanAssignment P n)
     (hm : ∀ i g, H.toResiduePath.memoryBefore S i g = (H.before i).2.2 g ∧
       H.toResiduePath.memoryAfter S i g = (H.after i).2.2 g)
     (i : Fin n) :
@@ -854,7 +854,7 @@ theorem history_edge_transfer_choice_heq (hH : H.Valid) (hd : H.DistinctBirths)
   let Q := H.toResiduePath
   let c := (H.edge i).2.2.2.2
   let d := Q.reconstructedTransferChoice S (H.before 0).1 i
-  have hStore := history_edge_store_slots_eq (H := H) hH hd S hS hm i
+  have hStore := history_edge_store_slots_eq (H := H) hH hd S hm i
   have hPromAll : ∀ e, (H.edge e).2.2.2.2.2.1 = Q.promotionSlots S e :=
     fun e => history_edge_promotion_slots_eq (H := H) hH hd S hm e
   have hProm := hPromAll i
@@ -895,7 +895,7 @@ theorem history_edge_choice_heq (hH : H.Valid) (hd : H.DistinctBirths)
     (i : Fin n) :
     HEq (H.edge i)
       ((H.toResiduePath.reconstructedHistory S hS (H.before 0).1).edge i) := by
-  have htransfer := history_edge_transfer_choice_heq (H := H) hH hd S hS hm i
+  have htransfer := history_edge_transfer_choice_heq (H := H) hH hd S hm i
   exact edgeChoice_heq_of_fields (H.edge i)
     ((H.toResiduePath.reconstructedHistory S hS (H.before 0).1).edge i)
     rfl rfl rfl rfl htransfer

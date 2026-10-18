@@ -20,7 +20,7 @@ lemma uniform_residue_hit_sum (p : ℕ) [NeZero p] (h : ZMod p) :
   rw [Finset.sum_eq_single (-h)]
   · simp
   · intro r _ hr
-    apply if_neg
+    apply ite_eq_right
     intro he
     apply hr
     calc
@@ -49,7 +49,7 @@ lemma uniform_residue_pair_sum (p : ℕ) [NeZero p] (n : ℕ)
       simp
   have hi : -h j + h i = 0 ↔ h j = h i := (hz (h i)).trans eq_comm
   rw [Finset.sum_eq_single (-h j)]
-  · simp only [hi, hz, neg_add_cancel, if_true, mul_one]
+  · simp only [hi, hz, neg_add_cancel, ite_true, mul_one]
     ring
   · intro r _ hr
     have hn : ¬ r + h j = 0 := by
@@ -58,7 +58,7 @@ lemma uniform_residue_pair_sum (p : ℕ) [NeZero p] (n : ℕ)
       calc
         r = (r + h j) - h j := by abel
         _ = -h j := by rw [he]; simp
-    simp only [if_neg hn, mul_zero, zero_mul]
+    simp only [ite_eq_right hn, mul_zero, zero_mul]
   · intro hn
     exact False.elim (hn (Finset.mem_univ _))
 

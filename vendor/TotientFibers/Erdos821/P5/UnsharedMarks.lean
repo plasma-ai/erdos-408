@@ -66,7 +66,7 @@ theorem unsharedCount_nonneg {G : Blueprint.Graph.PrimeGroups} {J ell m : ℕ}
 theorem physicalTargetMass_nonneg {G : Blueprint.Graph.PrimeGroups} {J ell m : ℕ}
     (ν : Blueprint.Graph.Pattern G J ell m) (hV : ∀ g, 0 ≤ G.V g) :
     0 ≤ ν.physicalTargetMass :=
-  Finset.prod_nonneg (fun g hg => zpow_nonneg (hV g) _)
+  Finset.prod_nonneg (fun g _ => zpow_nonneg (hV g) _)
 
 theorem unsharedWeight_nonneg {G : PrimeGroups} {J ell m : ℕ}
     (P : Geometry) (ν : Blueprint.Graph.Pattern G.graph J ell m) (n : ℕ)

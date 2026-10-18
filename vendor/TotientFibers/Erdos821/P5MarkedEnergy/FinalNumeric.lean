@@ -23,13 +23,13 @@ theorem mono_mul {ℓ x y cx cy ax ay : ℝ} (hℓ : 0 < ℓ) (hx0 : 0 ≤ x) (h
 
 theorem mono_atom {ℓ : ℝ} (a : ℝ) : ℓ ^ a ≤ 1 * ℓ ^ a := by rw [one_mul]
 
-theorem mono_const {ℓ : ℝ} (hℓ : 0 < ℓ) (c : ℝ) : c ≤ c * ℓ ^ (0 : ℝ) := by
+theorem mono_const {ℓ : ℝ} (c : ℝ) : c ≤ c * ℓ ^ (0 : ℝ) := by
   rw [Real.rpow_zero, mul_one]
 
 theorem mono_sq {ℓ : ℝ} (hℓ : 0 < ℓ) (a : ℝ) : (ℓ ^ a) ^ 2 ≤ 1 * ℓ ^ (2 * a) := by
   rw [one_mul, ← Real.rpow_natCast, ← Real.rpow_mul hℓ.le]; norm_num; rw [mul_comm]
 
-theorem mono_lin {ℓ : ℝ} (hℓ : 1 ≤ ℓ) (c d : ℝ) (hc : 0 ≤ c) (hd : 0 ≤ d) :
+theorem mono_lin {ℓ : ℝ} (hℓ : 1 ≤ ℓ) (c d : ℝ) (hc : 0 ≤ c) :
     c + d * ℓ ≤ (c + d) * ℓ ^ (1 : ℝ) := by
   rw [Real.rpow_one]; nlinarith
 
@@ -57,8 +57,8 @@ theorem rpow3 {ℓ : ℝ} (hℓ : 0 < ℓ) (a b c : ℝ) : ℓ ^ a * ℓ ^ b * �
   rw [Real.rpow_add hℓ, Real.rpow_add hℓ]
 
 theorem psi1_le_terms {ℓ kk KLM αmin Kmm K3r c3r As Al Kl B0 B C Cmk vmax KW cW KAm At : ℝ}
-    {j : ℕ} (hℓ : 1 ≤ ℓ) (hkk : 0 ≤ kk) (hKLM : 0 ≤ KLM) (hα : 0 < αmin) (hK3 : 0 ≤ K3r)
-    (hKl : 0 ≤ Kl) (hv : 0 ≤ vmax) (hKW : 0 ≤ KW) (hKA : 0 ≤ KAm) :
+    {j : ℕ} (hℓ : 1 ≤ ℓ) (hKLM : 0 ≤ KLM) (hα : 0 < αmin) (hK3 : 0 ≤ K3r)
+    (hKW : 0 ≤ KW) (hKA : 0 ≤ KAm) :
     2 * kk ^ 2 * ℓ ^ (2 * C) * Psi1 ℓ KLM αmin Kmm K3r c3r As Al Kl B0 B C Cmk vmax KW cW KAm At j ≤
       (2 * kk ^ 2 * (KLM / αmin) * 256 * 256 * 1 * 1 * K3r * 1 * 17 * 1 * 2 ^ c3r) *
           ℓ ^ ((2 * C + 4 + 4) + Kmm + Kmm + 0 + 2 * (-As) + 1 + 2 * (C + C + Cmk) + c3r) +
@@ -74,9 +74,9 @@ theorem psi1_le_terms {ℓ kk KLM αmin Kmm K3r c3r As Al Kl B0 B C Cmk vmax KW 
   -- common blocks
   have hPre : 2 * kk ^ 2 * ℓ ^ (2 * C) * (KLM / αmin) * (3 * ℓ + 1) ^ 4 * (3 * ℓ + 1) ^ 4 ≤
       (2 * kk ^ 2 * (KLM / αmin) * 256 * 256) * ℓ ^ (2 * C + 4 + 4) := by
-    have h1 := mono_mul hℓ0 (by positivity) (by positivity) (mono_const hℓ0 (2 * kk ^ 2))
+    have h1 := mono_mul hℓ0 (by positivity) (by positivity) (mono_const (2 * kk ^ 2))
       (mono_atom (ℓ := ℓ) (2 * C))
-    have h2 := mono_mul hℓ0 (by positivity) (by positivity) h1 (mono_const hℓ0 (KLM / αmin))
+    have h2 := mono_mul hℓ0 (by positivity) (by positivity) h1 (mono_const (KLM / αmin))
     have h3 := mono_mul hℓ0 (by positivity) (by positivity) h2 (mono_box hℓ)
     have h4 := mono_mul hℓ0 (by positivity) (by positivity) h3 (mono_box hℓ)
     convert h4 using 2 <;> ring
@@ -100,7 +100,7 @@ theorem psi1_le_terms {ℓ kk KLM αmin Kmm K3r c3r As Al Kl B0 B C Cmk vmax KW 
     rw [Real.rpow_one]; nlinarith
   have h2l : 2 * ℓ ≤ 2 * ℓ ^ (1 : ℝ) := by rw [Real.rpow_one]
   have h16 : 1 + 16 * ℓ ≤ 17 * ℓ ^ (1 : ℝ) := by
-    have := mono_lin hℓ 1 16 (by norm_num) (by norm_num); norm_num at this ⊢; linarith
+    have := mono_lin hℓ 1 16 (by norm_num); norm_num at this ⊢; linarith
   have hB0 : 2 * ℓ ^ B0 ≤ 2 * ℓ ^ B0 := le_rfl
   -- expansion
   have hexp : 2 * kk ^ 2 * ℓ ^ (2 * C) *
@@ -131,7 +131,7 @@ theorem psi1_le_terms {ℓ kk KLM αmin Kmm K3r c3r As Al Kl B0 B C Cmk vmax KW 
           (mono_mul hℓ0 (by positivity) (by positivity)
             (mono_mul hℓ0 (by positivity) (by positivity)
               (mono_mul hℓ0 hPre0 (by positivity) hPre (mono_atom (ℓ := ℓ) Kmm))
-              (mono_atom (ℓ := ℓ) Kmm)) (mono_const hℓ0 K3r)) (mono_sq hℓ0 (-As))) h16) hCC)
+              (mono_atom (ℓ := ℓ) Kmm)) (mono_const K3r)) (mono_sq hℓ0 (-As))) h16) hCC)
     (mono_two_pow hℓ0 c3r)
   have t2 := mono_mul hℓ0 (by positivity) (by positivity)
     (mono_mul hℓ0 (by positivity) (by positivity)
@@ -140,7 +140,7 @@ theorem psi1_le_terms {ℓ kk KLM αmin Kmm K3r c3r As Al Kl B0 B C Cmk vmax KW 
           (mono_mul hℓ0 (by positivity) (by positivity)
             (mono_mul hℓ0 (by positivity) (by positivity)
               (mono_mul hℓ0 hPre0 (by positivity) hPre (mono_atom (ℓ := ℓ) Kmm))
-              (mono_atom (ℓ := ℓ) Kmm)) (mono_const hℓ0 K3r)) hKl2) hCCv)
+              (mono_atom (ℓ := ℓ) Kmm)) (mono_const K3r)) hKl2) hCCv)
       (mono_two_pow hℓ0 c3r)) h2l
   have t3 := mono_mul hℓ0 (by positivity) (by positivity)
     (mono_mul hℓ0 (by positivity) (by positivity)
@@ -171,8 +171,8 @@ theorem psi1_le_terms {ℓ kk KLM αmin Kmm K3r c3r As Al Kl B0 B C Cmk vmax KW 
   linarith
 
 theorem ev_psi1 (kk KLM αmin Kmm K3r c3r As Al Kl B0 B C Cmk vmax KW cW KAm At A : ℝ) (j : ℕ)
-    (hkk : 0 ≤ kk) (hKLM : 0 ≤ KLM) (hα : 0 < αmin) (hK3 : 0 ≤ K3r)
-    (hKl : 0 ≤ Kl) (hv : 0 ≤ vmax) (hKW : 0 ≤ KW) (hKA : 0 ≤ KAm)
+    (hKLM : 0 ≤ KLM) (hα : 0 < αmin) (hK3 : 0 ≤ K3r)
+     (hKW : 0 ≤ KW) (hKA : 0 ≤ KAm)
     (he1 : (2 * C + 4 + 4) + Kmm + Kmm + 0 + 2 * (-As) + 1 + 2 * (C + C + Cmk) + c3r < -A)
     (he2 : (2 * C + 4 + 4) + Kmm + Kmm + 0 + 2 * (-Al) + 2 * (C + C + Cmk) + c3r + 1 < -A)
     (he3 : (2 * C + 4 + 4) + Kmm + Kmm + B0 + 2 * (-B) + 2 * (C + Cmk) < -A)
@@ -195,7 +195,7 @@ theorem ev_psi1 (kk KLM αmin Kmm K3r c3r As Al Kl B0 B C Cmk vmax KW cW KAm At 
   have := psi1_le_terms (ℓ := L x) (kk := kk) (KLM := KLM) (αmin := αmin) (Kmm := Kmm) (K3r := K3r)
     (c3r := c3r) (As := As) (Al := Al) (Kl := Kl) (B0 := B0) (B := B) (C := C) (Cmk := Cmk)
     (vmax := vmax) (KW := KW) (cW := cW) (KAm := KAm) (At := At) (j := j)
-    hL hkk hKLM hα hK3 hKl hv hKW hKA
+    hL hKLM hα hK3 hKW hKA
   linarith
 
 theorem sq_rpow {ℓ : ℝ} (hℓ : 0 < ℓ) (a : ℝ) : (ℓ ^ a) ^ 2 = ℓ ^ (2 * a) := by
@@ -231,8 +231,8 @@ theorem ev_poly_mul_exp_neg_rpow (c e a A : ℝ) (ha : 0 < a) :
     _ = L x ^ (-A) := by field_simp
 
 /-- The piece coefficient term divided by `Y`. -/
-theorem ev_psi2 (kk K0 b0 C v1 v2 Cmk KS hi cS αmin A : ℝ) (hkk : 0 ≤ kk) (hK0 : 0 ≤ K0)
-    (hb0 : 0 ≤ b0) (hv1 : 0 ≤ v1) (hv2 : 0 ≤ v2) (hKS : 0 ≤ KS) (hhi : 0 ≤ hi) (hα : 0 < αmin) :
+theorem ev_psi2 (kk K0 b0 C v1 v2 Cmk KS hi cS αmin A : ℝ)
+ :
     ∀ᶠ x : ℝ in atTop, 2 * kk ^ 2 * L x ^ (2 * C) *
       (K0 * (b0 * L x ^ C) ^ 2 * (L x ^ C * v1 * 1 * (L x ^ C * (v2 * L x ^ Cmk))) ^ 2 *
         (KS * hi * (2 * L x) ^ cS) / αmin ^ 2 * Real.exp (-(1.96 * L x))) ≤ L x ^ (-A) / 3 := by

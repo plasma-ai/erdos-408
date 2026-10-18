@@ -42,7 +42,7 @@ lemma unsignedFullPair_states (ν : Pattern P J ell m) (block : P.BigGroup → B
   rw [sum_labels ν block]
   simp only [unsignedKernel_join ν block hV, idealMass_labelJoin,
     mul_ite, ite_mul, mul_zero, zero_mul]
-  simp only [Finset.sum_ite_irrel, Finset.sum_const_zero, Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ,
+  simp only [Finset.sum_ite_irrel, Finset.sum_const_zero, Finset.sum_ite_eq, Finset.mem_univ,
     ite_true]
   apply Finset.sum_congr rfl
   intro a' _

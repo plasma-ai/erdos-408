@@ -52,7 +52,7 @@ theorem normBound_subtype_project {alpha : Type*} (mass : alpha → ℝ)
     apply Finset.sum_congr rfl
     intro a _
     by_cases ha : keep a
-    · simp only [if_pos ha, true_and]
+    · simp only [ite_eq_left ha]
       apply Finset.sum_congr rfl
       intro b _
       by_cases hb : keep b <;> simp [ha, hb]

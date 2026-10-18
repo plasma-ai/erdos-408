@@ -17,9 +17,9 @@ theorem admissible_group_prime_lower (P : Geometry) (G : PrimeGroups) (x : ℝ)
   classical
   have h := hG.2.2.2.1 g p hp
   by_cases hs : g ∈ G.small
-  · simp only [if_pos hs] at h
+  · simp only [ite_eq_left hs] at h
     exact h.1
-  · simp only [if_neg hs] at h
+  · simp only [ite_eq_right hs] at h
     have hac : P.a ≤ P.c := (P.ordered.2.1.trans P.ordered.2.2.1).le
     exact (Real.exp_le_exp.mpr (Real.rpow_le_rpow_of_exponent_le hL hac)).trans
       h.1

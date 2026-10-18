@@ -79,7 +79,7 @@ lemma dp_shift (s : Finset ℕ) (a : ℕ → ℂ) (x y : ℝ) :
 
 lemma intervalIntegral_symmetric_reflect (T : ℝ) (f : ℝ → ℝ) :
     (∫ t : ℝ in -T..T, f (-t)) = (∫ t : ℝ in -T..T, f t) := by
-  simpa using intervalIntegral.integral_comp_neg (f := f) (a := -T) (b := T)
+  simp
 
 lemma mrt_negative_phase_eq_dp (n : ℕ) (t : ℝ) :
     Complex.exp (((-Real.log (n : ℝ) * t : ℝ) * Complex.I)) = mellin n (-t) := by
@@ -478,7 +478,7 @@ lemma continuous_mean_square_bound (Y : ℕ) (a : ℕ → ℂ) (lo hi : ℝ)
       16 * Real.exp 1 * (hi - lo + Y * Real.log (2 * Y)) *
         sqNorm (Finset.Icc 1 Y) a :=
   continuous_of_symmetric_mean Y a lo hi hlohi
-    (fun b T hT => symmetric_mean_square Y b hT)
+    (fun b _ hT => symmetric_mean_square Y b hT)
 
 /-- The uniform continuous and separated-point Dirichlet-polynomial mean
 square estimates from Lemma 1.4 of the paper. -/

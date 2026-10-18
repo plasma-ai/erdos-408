@@ -25,6 +25,7 @@ def productAverage (w : ∀ i, α i → ℝ) (S : Finset ι)
     (f : ProductSample α → ℂ) (x : ProductSample α) : ℂ :=
   ∑ y, (productWeight w y : ℂ) * f (mixCoords S x y)
 
+omit [Fintype ι] [(i : ι) → Fintype (α i)] in
 lemma mixCoords_involution (S : Finset ι) (x y : ProductSample α) :
     mixCoords S (mixCoords S x y) (mixCoords S y x) = x := by
   funext i
@@ -37,6 +38,7 @@ def swapCoords (S : Finset ι) :
   left_inv z := by ext <;> simp only [mixCoords_involution]
   right_inv z := by ext <;> simp only [mixCoords_involution]
 
+omit [(i : ι) → Fintype (α i)] in
 lemma productWeight_swap (w : ∀ i, α i → ℝ) (S : Finset ι)
     (x y : ProductSample α) :
     productWeight w (mixCoords S x y) * productWeight w (mixCoords S y x) =
@@ -54,6 +56,7 @@ lemma productWeight_total (w : ∀ i, α i → ℝ) (hsum : ∀ i, ∑ a, w i a 
   · exact (Fintype.prod_sum w).symm
   · simp only [hsum, Finset.prod_const_one]
 
+omit [Fintype ι] [(i : ι) → Fintype (α i)] in
 lemma mixCoords_union (A B : Finset ι) (x y z : ProductSample α) :
     mixCoords B (mixCoords A x y) z = mixCoords (A ∪ B) x (mixCoords B y z) := by
   funext i

@@ -14,7 +14,7 @@ theorem mellin_add (n t u : ℝ) : mellin n (t + u) = mellin n t * mellin n u :=
   simp [Blueprint.Analytic.mellin, add_mul, mul_add, Complex.exp_add]
 
 @[simp] theorem star_mellin (n t : ℝ) : star (mellin n t) = mellin n (-t) := by
-  simp [Blueprint.Analytic.mellin, Complex.star_def, ← Complex.exp_conj]
+  simp [Blueprint.Analytic.mellin, ← Complex.exp_conj]
 
 theorem mellin_sub (n t u : ℝ) : mellin n (t - u) = mellin n t * star (mellin n u) := by
   rw [sub_eq_add_neg, mellin_add, star_mellin]

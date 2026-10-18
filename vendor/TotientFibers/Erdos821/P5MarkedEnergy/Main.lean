@@ -108,10 +108,8 @@ theorem MarkedEndpointEnergyTask_proof : MarkedEndpointEnergyTask := by
         (∫ ξ in {ξ : Fin 1 → ℝ | L x ^ (Cf i) < ‖ξ‖}, ‖a ξ‖) ≤ KA i * L x ^ (-E1) :=
     Filter.eventually_all.mpr (fun i => hMCx i)
   have hn1 := ev_psi1 (kk : ℝ) KLM (ptA lo 0) Kmm K3r c3r E1 E1 Kl B0 B C Cmk P.vmax KW cW KAm E1 A j
-    (Nat.cast_nonneg _) hKLM.le (ptA_pos hlo 0) hK3r.le hKl.le hvmax.le hKW.le hKAm0 he1 he2 he3 he4 he5
+    hKLM.le (ptA_pos hlo 0) hK3r.le hKW.le hKAm0 he1 he2 he3 he4 he5
   have hn2 := ev_psi2 (kk : ℝ) KLM (bounds 0) C P.vmin⁻¹ P.vmax Cmk KS hi cS (ptA lo 0) A
-    (Nat.cast_nonneg _) hKLM.le (hbounds 0) (inv_nonneg.mpr hvmin.le) hvmax.le hKS.le (by linarith)
-    (ptA_pos hlo 0)
   have hn3 := ev_psi3 (bounds 0) C Cms Cmk ((J0 : ℝ) + 1) KE (lo * 2 ^ J0) cE P.vmax P.a A hPa
     (hbounds 0) (by positivity) hKE.le (by positivity) hvmax.le
   have hH2ev : ∀ᶠ x : ℝ in atTop, 2 * Real.log 2 ≤ L x ^ P.c := ev_const_le_rpow _ _ hPc0
@@ -184,7 +182,7 @@ theorem MarkedEndpointEnergyTask_proof : MarkedEndpointEnergyTask := by
       by_contra hs'; exact hS (by simp [S0, hs'])
     have hs : Nat.Coprime s r := by
       have hadm := hG.2.2.2.1 gs s hsP
-      rw [if_pos hgs] at hadm
+      rw [ite_eq_left hgs] at hadm
       apply Nat.coprime_of_lt_prime (by omega) _ (G.prime gs s hsP)
       have : (r : ℝ) < s := lt_of_le_of_lt hrC (lt_of_lt_of_le hszexpa hadm.1)
       exact_mod_cast this
@@ -221,7 +219,7 @@ theorem MarkedEndpointEnergyTask_proof : MarkedEndpointEnergyTask := by
         (bpiece G x Y v lo E Ψ gs Wr r u ⌊hi * Y⌋₊ p.1 p.2) β‖ ^ 2 ≤
       Y * Psi1 ℓ KLM (ptA lo 0) Kmm K3r c3r E1 E1 Kl B0 B C Cmk P.vmax KW cW KAm E1 j +
         Y * Psi2 ℓ KLM (bounds 0) C P.vmin P.vmax Cmk KS hi cS (ptA lo 0) := fun p =>
-    piece_final P C τ η lo hi bounds K3r c3r Y0sp KW cW hpiece hK3r hKW hcW hc3r cS KS hsqS hcS hKS
+    piece_final P C τ η lo hi bounds K3r c3r Y0sp KW cW hpiece hK3r hKW cS KS hsqS hcS hKS
       Cmk kk Kc Cf KA Kmm KAm Cfm E1 E1 E1 B B0 Kex Kl KLM j hKcm hKAm hKA hCfm' hC hlo hlohi
       hbounds x hexcx hlongx hKl hLM hKLM (by omega) hMCx' hx1 hL2 hszY hszα hszT hszz hszc hszf
       hszW.1 hszB1 hszB2 hszl' G E Y H v t b Ψ r u gs ls p.1 p.2 hG hE hdisc hgs hr1 hrC hWres hΨ
@@ -232,7 +230,7 @@ theorem MarkedEndpointEnergyTask_proof : MarkedEndpointEnergyTask := by
     hY1 hY2
   -- the number of pieces
   have hcardχ : (Fintype.card (DirichletCharacter ℂ r) : ℝ) ≤ r := by
-    haveI : NeZero r := ⟨by omega⟩
+    have : NeZero r := ⟨by omega⟩
     have h1 := DirichletCharacter.card_eq_totient_of_hasEnoughRootsOfUnity ℂ r
     rw [Nat.card_eq_fintype_card] at h1
     rw [h1]; exact_mod_cast Nat.totient_le r

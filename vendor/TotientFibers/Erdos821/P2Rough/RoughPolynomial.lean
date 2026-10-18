@@ -532,7 +532,7 @@ theorem roughLambda_reciprocal_sum_le (z : ℝ) (hz : 1 < z) (h : ℕ) :
             intro d hd
             by_cases hmem : d ∈ Uset
             · simp [roughLambda, Uset, hmem, one_div]
-            · simp [roughLambda, Uset, hmem, one_div]
+            · simp [roughLambda, Uset, hmem]
       _ = ∑ d ∈ (Finset.Icc 1 ⌊z ^ (4 * h + 2)⌋₊).filter (· ∈ Uset),
           1 / (d : ℝ) := by
             symm
@@ -606,7 +606,7 @@ theorem rough_iff_badFinset_empty (z : ℝ) (hz : 2 ≤ z) (n : ℕ) (hn : 0 < n
     · intro hempty p hp hdiv
       have hmem : p ∈ S.primes.filter (fun q => S.bad q n) :=
         Finset.mem_filter.mpr ⟨hp, hdiv⟩
-      simpa [hempty] using hmem
+      simp [hempty] at hmem
     · intro h
       rw [Finset.filter_eq_empty_iff]
       exact h
@@ -623,7 +623,7 @@ theorem roughLambda_pointwise (hc : Erdos821.Blueprint.ClassicalInputs)
     exact hdbAll 1 1 z hz
   let J := roughBlockIndex z hz1
   let bad := Erdos821.PrelimLemmas.badFinset ℕ S n
-  have hcov := Erdos821.PrelimLemmas.badFinset_covered ℕ S z hz1 (roughBlockCount z hz1)
+  have hcov := Erdos821.PrelimLemmas.badFinset_covered ℕ S z (roughBlockCount z hz1)
     (roughBlockCount_spec hz1) (1 / 2) C hdb n
   have heJ : ∀ j ∈ J, Even ((j + 1) * h) := fun j _ => he.mul_left (j + 1)
   have hU := Prelim.BlockSieve.Uval_ge_avoid J
@@ -809,7 +809,7 @@ theorem sum_Uval_le_main_add_remainder (α : Type)
   linarith [hrem]
 
 theorem intervalSieveData_remainder_abs_le (lo hi z D : ℝ)
-    (hlo : 1 ≤ lo) (hlohi : lo ≤ hi) {d : ℕ}
+    (hlo : 1 ≤ lo) {d : ℕ}
     (hd : d ∈ (intervalSieveData lo hi z).products D) :
     |(intervalSieveData lo hi z).remainder d| ≤ 1 := by
   let S := intervalSieveData lo hi z
@@ -839,11 +839,11 @@ theorem intervalSieveData_remainder_abs_le (lo hi z D : ℝ)
       unfold Erdos821.Blueprint.SieveData.monomial
       by_cases hdvd : d ∣ n
       · have hall := hAllIff.mpr hdvd
-        rw [if_pos hall, if_pos hdvd]
+        rw [ite_eq_left hall, ite_eq_left hdvd]
       · have hnot : ¬ (∀ p ∈ d.primeFactors, S.bad p n) := by
           intro hall
           exact hdvd (hAllIff.mp hall)
-        rw [if_neg hnot, if_neg hdvd]
+        rw [ite_eq_right hnot, ite_eq_right hdvd]
     have hcount :
         (∑ n ∈ S.objects, S.weight n * S.monomial d n) =
           ((Finset.Icc a b).filter (fun n => d ∣ n)).card := by
@@ -892,12 +892,12 @@ theorem intervalSieveData_remainder_abs_le (lo hi z D : ℝ)
     norm_num
 
 theorem intervalSieveData_remainderSum_le (lo hi z D : ℝ)
-    (hlo : 1 ≤ lo) (hlohi : lo ≤ hi) (hD : 1 ≤ D) :
+    (hlo : 1 ≤ lo) (hD : 1 ≤ D) :
     (intervalSieveData lo hi z).remainderSum D ≤ D := by
   let S := intervalSieveData lo hi z
   have hterm : ∀ d ∈ S.products D, |S.remainder d| ≤ 1 := by
     intro d hd
-    exact intervalSieveData_remainder_abs_le lo hi z D hlo hlohi hd
+    exact intervalSieveData_remainder_abs_le lo hi z D hlo hd
   have hcard : (S.products D).card ≤ ⌊D⌋₊ := by
     calc
       (S.products D).card ≤ (Finset.Icc 1 ⌊D⌋₊).card :=
@@ -937,7 +937,7 @@ theorem intervalSieveData_X_le_span_add_one (lo hi z : ℝ)
 theorem roughLambda_interval_overcount_bound
     (hc : Erdos821.Blueprint.ClassicalInputs) :
     ∃ K : ℝ, 0 < K ∧ ∃ h₀ : ℕ, ∀ h : ℕ, h₀ ≤ h → Even h →
-      ∀ z : ℝ, ∀ hz : 2 ≤ z, ∀ hz1 : 1 < z, ∀ lo hi : ℝ, 1 ≤ lo → lo ≤ hi →
+      ∀ z : ℝ, 2 ≤ z → ∀ hz1 : 1 < z, ∀ lo hi : ℝ, 1 ≤ lo → lo ≤ hi →
         (∑ n ∈ Finset.Icc ⌈lo⌉₊ ⌊hi⌋₊,
           ((∑ d ∈ n.divisors, roughLambda z hz1 h d) -
             (if Erdos821.Blueprint.Analytic.rough z n then (1 : ℝ) else 0))) ≤
@@ -961,7 +961,7 @@ theorem roughLambda_interval_overcount_bound
     have hD1 : 1 ≤ D := by
       dsimp [D]
       exact one_le_pow₀ (by linarith [hz])
-    have hRsum := intervalSieveData_remainderSum_le lo hi z D hlo hlohi hD1
+    have hRsum := intervalSieveData_remainderSum_le lo hi z D hlo hD1
     have hXle := intervalSieveData_X_le_span_add_one lo hi z hlo hlohi
     have hsumB : ∀ j ∈ J, ∑ p ∈ B j, S.density p ≤ C := by
       intro j hj
@@ -1051,12 +1051,12 @@ theorem roughLambda_interval_overcount_bound
       · have hno := hroughBad.mp hr
         change (if Erdos821.Blueprint.Analytic.rough z n then (1 : ℝ) else 0) =
           (if ∀ p ∈ S.primes, ¬ S.bad p n then S.weight n else 0)
-        rw [if_pos hr, if_pos hno]
+        rw [ite_eq_left hr, ite_eq_left hno]
         simp [S, intervalSieveData]
       · have hno : ¬ ∀ p ∈ S.primes, ¬ S.bad p n := fun hno => hr (hroughBad.mpr hno)
         change (if Erdos821.Blueprint.Analytic.rough z n then (1 : ℝ) else 0) =
           (if ∀ p ∈ S.primes, ¬ S.bad p n then S.weight n else 0)
-        rw [if_neg hr, if_neg hno]
+        rw [ite_eq_right hr, ite_eq_right hno]
     have hLambdaTotal :
         (∑ n ∈ S.objects, ∑ d ∈ n.divisors, roughLambda z hz1 h d) =
           ∑ n ∈ S.objects, S.weight n * Prelim.BlockSieve.Uval J B e
@@ -1089,7 +1089,7 @@ theorem roughLambda_interval_overcount_bound
             S.X * Erdos821.PrelimLemmas.corrExp N B S.density h +
               2 * S.remainderSum D := by
       nlinarith [hUupper, hLower]
-    have hDrem := intervalSieveData_remainderSum_le lo hi z D hlo hlohi hD1
+    have hDrem := intervalSieveData_remainderSum_le lo hi z D hlo hD1
     have hXle := intervalSieveData_X_le_span_add_one lo hi z hlo hlohi
     have hexpLeOne : Real.exp (-((h : ℝ))) ≤ 1 := by
       rw [← Real.exp_zero]

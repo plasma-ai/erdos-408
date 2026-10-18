@@ -30,11 +30,11 @@ theorem strippedMarkedRow_ban_split {P : Geometry} {G : Blueprint.Analytic.Prime
   · by_cases hb : UnsharedBan ν r s u <;> simp [hp, hb]
   · have hn : ¬(UnsharedPhysical ν n r ∧ UnsharedPhysical ν n' s ∧ ¬UnsharedBan ν r s u) :=
       fun h => hp ⟨h.1, h.2.1⟩
-    simp only [hp, hn, if_false, add_zero]
+    simp only [hp, hn, ite_false, add_zero]
 
 theorem strippedMarkedRow_norm_le {P : Geometry} {G : Blueprint.Analytic.PrimeGroups}
     {J m : ℕ} (ν : Pattern G.graph J P.ell m) (n n' : ℕ)
-    (c : UnsharedDraw ν → UnsharedDraw ν → ℂ) (B : ℝ) (hB : 0 ≤ B)
+    (c : UnsharedDraw ν → UnsharedDraw ν → ℂ) (B : ℝ)
     (hc : ∀ r s, ‖c r s‖ ≤ B) (hV : ∀ g, 0 ≤ G.graph.V g) :
     ‖strippedMarkedRow ν n n' c‖ ≤ B * unsharedWeight P ν n * unsharedWeight P ν n' := by
   let f := fun r s : UnsharedDraw ν =>
@@ -43,7 +43,7 @@ theorem strippedMarkedRow_norm_le {P : Geometry} {G : Blueprint.Analytic.PrimeGr
       B * (if UnsharedPhysical ν n r then (1 : ℝ) else 0) *
         (if UnsharedPhysical ν n' s then (1 : ℝ) else 0) := by
     by_cases hr : UnsharedPhysical ν n r <;> by_cases hs : UnsharedPhysical ν n' s
-    · simpa only [f, hr, hs, and_self, if_true, mul_one] using hc r s
+    · simpa only [f, hr, hs, and_self, ite_true, mul_one] using hc r s
     · simp [f, hr, hs]
     · simp [f, hr, hs]
     · simp [f, hr, hs]
@@ -76,7 +76,7 @@ theorem shared_good_average_eq {G : Blueprint.Graph.PrimeGroups} {J ell m : ℕ}
   rw [← sharedDrawLaw_good_mass ν n n' D hV, Complex.ofReal_sum, Finset.sum_mul]
   apply Finset.sum_congr rfl
   intro z hz
-  by_cases h : GoodSharedDraw ν n n' D z <;> simp only [h, if_true, if_false,
+  by_cases h : GoodSharedDraw ν n n' D z <;> simp only [h, ite_true, ite_false,
     Complex.ofReal_zero, zero_mul]
 
 theorem sharedExclusionMass_le_one {G : Blueprint.Graph.PrimeGroups} {J ell m : ℕ}

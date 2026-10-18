@@ -18,7 +18,7 @@ theorem rpow_quot_product (L K a b c : ℝ) (hL : 0 < L) :
 theorem major_power_precision (L K B q d C₄ hExp ξExp DExp ζ NA NB : ℝ) (Q : ℕ)
     (hL : 3 ≤ L) (hK : 0 < K) (hKL : 3 * K ≤ L)
     (hπL : 2 * (1 + 64 * Real.pi) ≤ L)
-    (hB : 0 ≤ B) (hq : 0 ≤ q) (hd : 0 ≤ d) (hC₄ : 0 ≤ C₄)
+    (hB : 0 ≤ B) (hq : 0 ≤ q) (hC₄ : 0 ≤ C₄)
     (hhEq : hExp = comparisonPowerH B q C₄)
     (hξEq : ξExp = comparisonPowerXi B d hExp)
     (hDEq : DExp = comparisonPowerD B q ξExp)
@@ -117,7 +117,7 @@ theorem major_power_precision (L K B q d C₄ hExp ξExp DExp ζ NA NB : ℝ) (Q
   refine ⟨hε1, ?_⟩
   have hs := add_le_add (add_le_add hdiscard hfreeze) hchar
   have hlast := rpow_cost_absorption L 3 (-B) (-B - 2) hL1 hL (by linarith)
-  exact hs.trans (by convert hlast using 1 <;> ring)
+  exact hs.trans (by convert hlast using 1; ring)
 
 end
 end Erdos821.S34Core

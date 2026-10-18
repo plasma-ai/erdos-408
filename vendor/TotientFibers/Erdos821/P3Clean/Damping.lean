@@ -92,9 +92,9 @@ theorem memoryEdgeKernel_rho {J m : ℕ} (A : Model F P J m) (n : ℕ)
           edgeChoiceCoefficient A n 1 theta i s t c * phi s t c else 0) *
         (pendingDamping rho t : ℂ) := by
     by_cases h : edgeChoiceValid A mode i s t c
-    · rw [if_pos h, if_pos h, edgeChoiceCoefficient_rho]
+    · rw [ite_eq_left h, ite_eq_left h, edgeChoiceCoefficient_rho]
       ring
-    · simp only [if_neg h, mul_zero, zero_mul]
+    · simp only [ite_eq_right h, mul_zero, zero_mul]
   simp only [memoryEdgeKernel]
   simp_rw [hc]
   rw [← Finset.sum_mul, ← Finset.mul_sum]

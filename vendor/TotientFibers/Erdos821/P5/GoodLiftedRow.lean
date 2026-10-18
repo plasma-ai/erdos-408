@@ -36,14 +36,14 @@ theorem physicalSharedRow_good_eq_stripped {P : Geometry} {G : Blueprint.Analyti
   rw [physical_assemble_good_iff ν z r n n' D hn hn' hD hz,
     physical_assemble_good_right_iff ν z s n n' D hn hn' hD hz]
   by_cases hp : UnsharedPhysical ν n r ∧ UnsharedPhysical ν n' s
-  · simp only [hp, if_true]
+  · simp only [hp]
     rw [damping_sq_good_shared P G J m A ν z r n n' D hn hn' hD hz,
       damping_sq_strip_of_counts P G J m A ν (sharedDrawProduct ν z) n' hcop.2.1
         (sharedProduct_counts_of_draw_injective G ν z hgood.2 r)]
     unfold strippedDamping
     push_cast
     ring
-  · simp only [hp, if_false, mul_zero]
+  · simp only [hp, ite_false, mul_zero]
 
 theorem strippedMarkedRow_const {P : Geometry} {G : Blueprint.Analytic.PrimeGroups}
     {J m : ℕ} (ν : Pattern G.graph J P.ell m) (n n' : ℕ) (c : ℂ) :

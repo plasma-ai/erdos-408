@@ -27,15 +27,15 @@ theorem physicalRaw_false_eq_patterns {F : FixedData} {P : PrimeGroups} {J m : �
       ∑ v : Fin A.patternCount, ∑ u : P.Aux J,
         ((A.pattern v).auxMass u : ℂ) * physicalPatternBody A (A.pattern v) u n n' a b := by
   by_cases hp : P.physical (J + F.ell) n a ∧ P.physical (J + F.ell) n' b
-  · simp only [Model.physicalRaw, hp, and_self, if_true, Bool.false_eq_true, if_false]
+  · simp only [Model.physicalRaw, hp, and_self, ite_true, Bool.false_eq_true, ite_false]
     apply Finset.sum_congr rfl
     intro v hv
     apply Finset.sum_congr rfl
     intro u hu
     unfold physicalPatternBody
     simp only [hp, true_and]
-    split_ifs <;> simp only [mul_zero, Complex.ofReal_mul] <;> ring
-  · simp only [Model.physicalRaw, hp, if_false, physicalPatternBody, false_and,
+    split_ifs <;> simp only [mul_zero, Complex.ofReal_mul]; ring
+  · simp only [Model.physicalRaw, hp, ite_false, physicalPatternBody, false_and,
       mul_zero, Finset.sum_const_zero]
 
 /-- The actual symmetrized graph pairing is an exact sum of its physical

@@ -21,7 +21,7 @@ theorem piece_energy_core {ι : Type*} (Rel : Finset ι) (Pb : ι → ℝ → �
     (s : Finset ℕ) (bco : ℕ → ℂ) (Y Yi H Lx v R A1 εt J3 WM KLM : ℝ) (j : ℕ)
     (b : (Fin 1 → ℝ) → ℂ) (hb : Integrable b)
     (hj : 4 ≤ j) (hL : 1 ≤ Lx) (hYi : 0 < Yi) (hH : 0 < H) (hKLM : 0 ≤ KLM)
-    (hJ30 : 0 ≤ J3) (hWM0 : 0 ≤ WM) (hR : 0 ≤ R)
+    (hJ30 : 0 ≤ J3) (hWM0 : 0 ≤ WM)
     (hLM : ∫ θ in (-1 / H)..(1 / H), ‖localAdditivePolynomial s bco θ‖ ^ 2 ≤
       KLM / Yi * (∫ t : ℝ, (1 + |H / Yi * t|) ^ (-(j : ℤ)) * ‖dp s bco t‖ ^ 2) +
         KLM * (H / Yi) ^ 2 * sqNorm s bco)
@@ -32,7 +32,7 @@ theorem piece_energy_core {ι : Type*} (Rel : Finset ι) (Pb : ι → ℝ → �
       ∫ t, wt (H / Yi) t * ‖Pb β (t + c)‖ ^ 2 ≤ WM)
     (hfreq : |v| + 2 * Real.pi * R ≤ Lx / (H / Yi)) :
     ∫ θ in (-1 / H)..(1 / H), ‖localAdditivePolynomial s bco θ‖ ^ 2 ≤
-      KLM / Yi * (Y ^ 2 * (Rel.card * A1 * ∑ β ∈ Rel,
+      KLM / Yi * (Y ^ 2 * (Rel.card * A1 * ∑ _ ∈ Rel,
           (A1 * (J3 + ((1 + Lx) ^ (j - 4))⁻¹ * WM) + εt * WM))) +
         KLM * (H / Yi) ^ 2 * sqNorm s bco := by
   set h' := H / Yi with hh'

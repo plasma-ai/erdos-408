@@ -122,7 +122,7 @@ lemma productAnova_independent (w : ∀ i, α i → ℝ)
 lemma productPair_star_swap (w : ∀ i, α i → ℝ) (f g : ProductSample α → ℂ) :
     star (productPair w f g) = productPair w g f := by
   unfold productPair
-  simp only [star_sum, star_mul, star_star, Complex.star_def, Complex.conj_ofReal]
+  simp only [star_sum, star_mul, Complex.star_def, Complex.conj_ofReal]
   apply Finset.sum_congr rfl
   intro x _
   change star (g x) * (star (star (f x)) * (productWeight w x : ℂ)) =
@@ -131,7 +131,7 @@ lemma productPair_star_swap (w : ∀ i, α i → ℝ) (f g : ProductSample α �
   ring
 
 lemma productAnova_pair_zero_of_mem (w : ∀ i, α i → ℝ)
-    (hsum : ∀ i, ∑ a, w i a = 1) (I S T : Finset ι) (hT : T ⊆ I)
+    (hsum : ∀ i, ∑ a, w i a = 1) (I S T : Finset ι)
     (i : ι) (hi : i ∈ S) (hiI : i ∈ I) (hiT : i ∉ T) (f g : ProductSample α → ℂ) :
     productPair w (productAnova w I S f) (productAnova w I T g) = 0 := by
   have h := productAverage_duality w {i} (productAnova w I S f) (productAnova w I T g)
@@ -146,11 +146,11 @@ lemma productAnova_pairwise_orthogonal (w : ∀ i, α i → ℝ)
   by_cases hST : S ⊆ T
   · have hTS : ¬T ⊆ S := fun h => hne (Finset.Subset.antisymm hST h)
     obtain ⟨i, hiT, hiS⟩ := Finset.not_subset.mp hTS
-    have hrev := productAnova_pair_zero_of_mem w hsum I T S hS i hiT (hT hiT) hiS g f
+    have hrev := productAnova_pair_zero_of_mem w hsum I T S i hiT (hT hiT) hiS g f
     have h := congrArg star hrev
     simpa only [productPair_star_swap, star_zero] using h
   · obtain ⟨i, hiS, hiT⟩ := Finset.not_subset.mp hST
-    exact productAnova_pair_zero_of_mem w hsum I S T hT i hiS (hS hiS) hiT f g
+    exact productAnova_pair_zero_of_mem w hsum I S T i hiS (hS hiS) hiT f g
 
 lemma productAnova_component_sqNorm_le (w : ∀ i, α i → ℝ)
     (hw : ∀ i a, 0 ≤ w i a) (hsum : ∀ i, ∑ a, w i a = 1)

@@ -31,7 +31,7 @@ theorem memoryBefore_member_form (S : LifespanAssignment P n) (i : Fin (n + 1)) 
 
 def ghostBatchLabels (S : LifespanAssignment P n) (i : Fin (n + 1)) (g : P.BigGroup)
     (h : Fin (Q.ghostBirthPrimes S i g).card) : P.Prime g.val :=
-  (Q.ghostBirthPrimes S i g).toList.get ⟨h.val, by simpa using h.isLt⟩
+  (Q.ghostBirthPrimes S i g).toList.get ⟨h.val, by simp⟩
 
 theorem ghostBatchLabels_enumeration (S : LifespanAssignment P n) (i : Fin (n + 1)) (g : P.BigGroup) :
     List.ofFn (Q.ghostBatchLabels S i g) = (Q.ghostBirthPrimes S i g).toList := by
@@ -115,7 +115,7 @@ theorem ghostBorn_particle_zero (S : LifespanAssignment P n) (i : Fin (n + 1)) (
   · simp only [he, ghostBirthAt] at hb
   · rw [he] at hb
     obtain ⟨rfl, _⟩ := hb
-    simp only [he, spanAnchor, sub_self, Int.cast_zero]
+    simp only [spanAnchor, sub_self, Int.cast_zero]
 
 theorem ghostDeleted_eq_map (S : LifespanAssignment P n) (i : Fin (n + 1)) (g : P.BigGroup) :
     deleteMemoryIndices (Q.memoryBefore S i g) (Q.ghostTerminationIndices S i g) =

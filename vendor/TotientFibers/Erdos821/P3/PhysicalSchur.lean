@@ -417,7 +417,7 @@ lemma physical_act_iff {P : PrimeGroups} {M : ℕ} (π : P.Permutations M)
     have h' := physical_act (fun g => (π g).symm) n (P.act π a) h
     have hlabels : P.act (fun g => (π g).symm) (P.act π a) = a := by
       funext g i
-      simp [PrimeGroups.act, Equiv.symm_apply_apply]
+      simp [PrimeGroups.act]
     simpa [hlabels] using h'
   · exact physical_act π n a
 
@@ -815,7 +815,7 @@ lemma physical_target_mass_damping_count_le {F : FixedData} {P : PrimeGroups}
             ← Finset.prod_mul_distrib, ← Finset.prod_mul_distrib]
           apply Finset.prod_congr rfl
           intro g hg
-          simp [Nat.cast_pow, mul_assoc, mul_left_comm, mul_comm]
+          simp [Nat.cast_pow, mul_left_comm, mul_comm]
     _ ≤ C ^ P.count := by
       simpa [mul_assoc, mul_left_comm, mul_comm] using
         product_target_weight_bound_of_C ν n hV C hgroupBound
@@ -881,7 +881,7 @@ lemma physicalRaw_norm_le_terms {F : FixedData} {P : PrimeGroups} {J m : ℕ}
   classical
   by_cases hz' : P.physical (J + F.ell) z'.1 z'.2
   · have hV : ∀ g : P.Group, 0 < P.V g := fun g => V_pos_of_admissible hP g
-    rw [Model.physicalRaw, if_pos ⟨hz, hz'⟩]
+    rw [Model.physicalRaw, ite_eq_left ⟨hz, hz'⟩]
     calc
       ‖∑ v : Fin A.patternCount, ∑ u : P.Aux J,
           if (A.pattern v).compatible z.2 z'.2 ∧ (A.pattern v).ban z.2 z'.2 u ∧
@@ -974,7 +974,7 @@ lemma physicalRaw_norm_le_terms {F : FixedData} {P : PrimeGroups} {J m : ℕ}
         · simp [hz', hcond]
   · have hnot : ¬ (P.physical (J + F.ell) z.1 z.2 ∧
         P.physical (J + F.ell) z'.1 z'.2) := fun h => hz' h.2
-    rw [Model.physicalRaw, if_neg hnot]
+    rw [Model.physicalRaw, ite_eq_right hnot]
     simp [hz']
 
 lemma raw_transition_target_sum_le {F : FixedData} {P : PrimeGroups} {J m : ℕ}
@@ -1056,7 +1056,7 @@ lemma raw_transition_target_sum_le {F : FixedData} {P : PrimeGroups} {J m : ℕ}
           apply Finset.sum_le_sum
           intro b hb
           by_cases hg : good b
-          · by_cases hban : ν.ban a b u <;> simp [hg, hban] <;> positivity
+          · by_cases hban : ν.ban a b u <;> simp [hg, hban]; positivity
           · simp [hg]
       _ = (ν.auxMass u * ν.physicalTargetMass * A.damping n * A.damping n') *
             ∑ b : P.Labels (J + F.ell), if good b then coeff b else 0 := by
@@ -1294,8 +1294,8 @@ lemma physicalRaw_reverse_eq {F : FixedData} {P : PrimeGroups} {J m : ℕ}
   by_cases hsrc : P.physical (J + F.ell) n' b
   · by_cases htgt : P.physical (J + F.ell) n a
     · unfold Model.physicalRaw
-      rw [if_pos ⟨hsrc, htgt⟩, if_pos ⟨htgt, hsrc⟩]
-      simp only [if_true]
+      rw [ite_eq_left ⟨hsrc, htgt⟩, ite_eq_left ⟨htgt, hsrc⟩]
+      simp only [ite_true]
       apply Finset.sum_congr rfl
       intro v hv
       apply Finset.sum_congr rfl
@@ -1352,7 +1352,7 @@ lemma physicalRaw_reverse_eq {F : FixedData} {P : PrimeGroups} {J m : ℕ}
                 imaginaryPower (ν.D a u) A.zeta‖ : ℂ))
           rw [hD]
           ring_nf
-        rw [if_pos hL, if_pos hR]
+        rw [ite_eq_left hL, ite_eq_left hR]
         exact hterm
       · have hR : ¬(νrev.compatible a b ∧ νrev.ban a b u ∧
             n' = n + (-A.k) * (νrev.D a u : ℤ)) := by
@@ -1360,9 +1360,9 @@ lemma physicalRaw_reverse_eq {F : FixedData} {P : PrimeGroups} {J m : ℕ}
           have hc : ν.compatible b a := hcompatible.mpr hr.1
           have hD := pattern_D_eq_of_compatible ν b a u hc
           exact hL ((hcond hD).mpr hr)
-        rw [if_neg hL, if_neg hR]
-    · simp [Model.physicalRaw, swapPatternCoefficient, htgt]
-  · simp [Model.physicalRaw, swapPatternCoefficient, hsrc]
+        rw [ite_eq_right hL, ite_eq_right hR]
+    · simp [Model.physicalRaw, htgt]
+  · simp [Model.physicalRaw, hsrc]
 
 lemma physicalKernel_reverse_eq {F : FixedData} {P : PrimeGroups} {J m : ℕ}
     (A : Model F P J m) (n n' : ℤ) (a b : A.Labels) :

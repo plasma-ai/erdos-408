@@ -101,10 +101,10 @@ theorem blockUpper_eq (h t : ℕ) :
       = if t = 0 then 1 else (-1 : ℤ) ^ h * (((t - 1).choose h : ℕ) : ℤ) := by
   cases t with
   | zero =>
-    rw [if_pos rfl]
+    rw [ite_eq_left rfl]
     exact blockUpper_zero h
   | succ n =>
-    rw [if_neg (Nat.succ_ne_zero n)]
+    rw [ite_eq_right (Nat.succ_ne_zero n)]
     exact blockUpper_succ h n
 
 /-- For even `h` (the paper's `h_j` are even) and `t ≥ 1`: `U(t) = C(t-1,h)`. -/
@@ -127,7 +127,7 @@ theorem blockUpper_ge_indicator (h t : ℕ) (he : Even h) :
   · subst ht
     simp [blockUpper_zero]
   · have ht1 : 1 ≤ t := Nat.pos_of_ne_zero ht
-    rw [if_neg ht, blockUpper_of_even h t he ht1]
+    rw [ite_eq_right ht, blockUpper_of_even h t he ht1]
     exact Nat.cast_nonneg _
 
 /-- The paper's `U_j - I_j ≤ E_j`: overcount bounded by the degree-`h+1`
@@ -141,7 +141,7 @@ theorem blockUpper_sub_indicator_le_error (h t : ℕ) (he : Even h) :
       Nat.choose_eq_zero_of_lt (by omega)
     simp [blockUpper_zero, e]
   · have ht1 : 1 ≤ t := Nat.pos_of_ne_zero ht
-    rw [if_neg ht, blockUpper_of_even h t he ht1, sub_zero]
+    rw [ite_eq_right ht, blockUpper_of_even h t he ht1, sub_zero]
     have hpascal : t.choose (h + 1)
         = (t - 1).choose h + (t - 1).choose (h + 1) := by
       conv_lhs => rw [← Nat.sub_add_cancel ht1, Nat.choose_succ_succ']
@@ -501,7 +501,7 @@ theorem tailTerm_succ (C : ℝ) (m : ℕ) :
   field_simp
 
 /-- One-step ratio bound by `1/e` once the denominator exceeds `e*C`. -/
-theorem ratio_le_inv_exp_one {C : ℝ} (hC : 0 ≤ C) (m : ℕ)
+theorem ratio_le_inv_exp_one {C : ℝ} (m : ℕ)
     (hden : Real.exp 1 * C ≤ (m : ℝ) + 2) :
     C / ((m : ℝ) + 2) ≤ (Real.exp 1)⁻¹ := by
   have hexp : (0 : ℝ) < Real.exp 1 := Real.exp_pos _
@@ -530,7 +530,7 @@ theorem tailTerm_le_geometric {C : ℝ} (hC : 0 ≤ C) (m₀ m : ℕ)
         have : (m₀ : ℝ) ≤ (n : ℝ) := Nat.cast_le.mpr hn
         linarith
       exact le_trans hden h1
-    have hratio := ratio_le_inv_exp_one hC n hden_n
+    have hratio := ratio_le_inv_exp_one n hden_n
     have hr_nonneg : (0 : ℝ) ≤ (Real.exp 1)⁻¹ :=
       inv_nonneg.mpr (Real.exp_pos _).le
     have hpow_nn : (0 : ℝ) ≤ (Real.exp 1)⁻¹ ^ (n - m₀) :=

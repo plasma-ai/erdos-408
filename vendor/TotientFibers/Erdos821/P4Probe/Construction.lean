@@ -81,7 +81,7 @@ theorem symmetricProbeTask_of_finite (hsym : SymmetricFullComponentTask)
         Real.sqrt (probeBeta F.ell m ^
           (Finset.univ.filter (fun g : P.BigGroup => block g = side)).card) ≤
         L x ^ (-(E + 2)) := by
-      apply sqrt_beta_power_le _ F.c₀ E _ _ hbpos hb1 F.c₀_pos
+      apply sqrt_beta_power_le _ F.c₀ E _ _ hbpos hb1
         (by linarith [hbounds.1]) hblog
       calc
         _ ≤ (Fintype.card P.BigGroup : ℝ) / 3 := by
@@ -102,7 +102,7 @@ theorem symmetricProbeTask_of_finite (hsym : SymmetricFullComponentTask)
           ring
     have hsum := add_le_add (add_le_add (hfull false) (hfull true)) herr
     exact hsum.trans (by
-      convert three_errors_le (L x) E hbounds.1 using 1 <;> ring)
+      convert three_errors_le (L x) E hbounds.1 using 1; ring)
 
 end
 end Erdos821.P4Probe

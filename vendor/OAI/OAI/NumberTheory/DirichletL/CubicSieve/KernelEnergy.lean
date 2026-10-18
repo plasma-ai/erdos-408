@@ -234,7 +234,7 @@ theorem beforeDilationLabel_norm_le_one {κ : Type*} (p : κ → O) (B : Finset 
   simp only [beforeDilationLabel, norm_mul, norm_pow]
   calc
     _ ≤ (1:ℝ)^4 * 1 * (1 * 1^4 * 1) * 1^4 := by
-      gcongr <;> first | exact hm | exact finiteSquarefreeRow_norm_le_one P hg S _
+      gcongr <;> exact finiteSquarefreeRow_norm_le_one P hg S _
     _ = 1 := by norm_num
 
 omit [DecidableEq ι] in

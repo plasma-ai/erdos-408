@@ -26,7 +26,7 @@ def cleanBigMultiplier (F : FixedData) (n : ℕ) (ν : Pattern P J F.ell m)
     (if bigBan ν a b u then 1 else 0)
 
 theorem cleanBigMultiplier_average_error (F : FixedData) (n : ℕ)
-    (ν : Pattern P J F.ell m) (D atom : ℝ) (hD : 1 ≤ D) (hat : 0 ≤ atom)
+    (ν : Pattern P J F.ell m) (D atom : ℝ) (hD : 1 ≤ D)
     (hV : ∀ g : P.BigGroup, P.V g.val ≠ 0)
     (hatom : ∀ g : P.BigGroup, ∀ p : P.Prime g.val, P.mu g.val p ≤ atom)
     (hsqrt : ∀ a b, 1 ≤ Real.sqrt (freshDensity F n ν a) * Real.sqrt (freshDensity F n ν b) ∧
@@ -38,12 +38,12 @@ theorem cleanBigMultiplier_average_error (F : FixedData) (n : ℕ)
   have hp (u : P.BigAux J) : ‖cleanBigMultiplier F n ν a b u - 1‖ ≤
       (D - 1) + D * (if bigBan ν a b u then (0 : ℝ) else 1) := by
     by_cases h : bigBan ν a b u
-    · simp only [cleanBigMultiplier, if_pos h, mul_one, mul_zero, add_zero]
+    · simp only [cleanBigMultiplier, ite_eq_left h, mul_one, mul_zero, add_zero]
       rw [← Complex.ofReal_one, ← Complex.ofReal_sub, Complex.norm_real, Real.norm_eq_abs]
       rw [abs_of_nonneg (by linarith : 0 ≤
         Real.sqrt (freshDensity F n ν a) * Real.sqrt (freshDensity F n ν b) - 1)]
       linarith
-    · simp only [cleanBigMultiplier, if_neg h, mul_zero, zero_sub, norm_neg, norm_one, mul_one]
+    · simp only [cleanBigMultiplier, ite_eq_right h, mul_zero, zero_sub, norm_neg, norm_one, mul_one]
       linarith
   calc
     _ ≤ ∑ u : P.BigAux J, ν.bigAuxMass u *
@@ -69,8 +69,8 @@ theorem normalizedTiltedBannedRaw_forward (A : Model F P J m) (n : ℕ) (theta :
   by_cases hm : (A.pattern v).matchesBig a b
   · by_cases hban : bigBan (A.pattern v) a b u
     · have hg : (A.pattern v).matchesBig a b ∧ bigBan (A.pattern v) a b u := ⟨hm, hban⟩
-      simp only [if_pos hm, if_pos hg, cleanBigMultiplier, if_pos hban,
-        mul_one, bigSignedCoefficient, Bool.true_eq, if_true]
+      simp only [ite_eq_left hm, ite_eq_left hg, cleanBigMultiplier, ite_eq_left hban,
+        mul_one, bigSignedCoefficient, ite_true]
       have h := normalizedFreshDensityFactor F P n (A.pattern v) a b hb hm
       have hc : ((Real.sqrt (activeDensity F n a) / Real.sqrt (activeDensity F n b) *
           tiltedFreshMass F n (A.pattern v) b : ℝ) : ℂ) =
@@ -87,9 +87,9 @@ theorem normalizedTiltedBannedRaw_forward (A : Model F P J m) (n : ℕ) (theta :
             phase (theta * ((A.pattern v).DBig a u : ℝ)) := by ring
         _ = _ := by rw [hc]; ring
     · have hg : ¬ ((A.pattern v).matchesBig a b ∧ bigBan (A.pattern v) a b u) := fun h => hban h.2
-      simp only [if_pos hm, if_neg hg, cleanBigMultiplier, if_neg hban, mul_zero]
+      simp only [ite_eq_left hm, ite_eq_right hg, cleanBigMultiplier, ite_eq_right hban, mul_zero]
   · have hg : ¬ ((A.pattern v).matchesBig a b ∧ bigBan (A.pattern v) a b u) := fun h => hm h.1
-    simp only [if_neg hm, if_neg hg, mul_zero]
+    simp only [ite_eq_right hm, ite_eq_right hg, mul_zero]
 
 theorem densityNormalizedKernel_averageBig (n : ℕ)
     (K : P.BigLabels (J + F.ell) → P.BigLabels (J + F.ell) → ℂ) :
@@ -126,7 +126,7 @@ theorem normBound_tiltedBannedKernel_forward (A : Model F P J m) (n : ℕ) (thet
   have hd : 0 ≤ delta := by unfold delta; positivity
   have herr := normBound_idealMultiplierRaw_average A theta delta hd
     (fun v a b u => cleanBigMultiplier F n (A.pattern v) a b u - 1)
-    (fun v a b => cleanBigMultiplier_average_error F n (A.pattern v) D atom hD hat hV hatom
+    (fun v a b => cleanBigMultiplier_average_error F n (A.pattern v) D atom hD hV hatom
       (hsqrt v) a b) hV
   have havg := normBound_averageBigKernel P.idealMass _ _
     (fun p a => bigProductMass_actBig (fun g q => P.mu g.val q) p a) herr

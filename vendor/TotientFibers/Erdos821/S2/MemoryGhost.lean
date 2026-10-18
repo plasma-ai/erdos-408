@@ -18,7 +18,7 @@ variable {P : PrimeGroups}
 
 /-- Particle indices retain their multiplicity when numerical particles coincide. -/
 def memoryEntry {g : P.Group} (z : P.Memory g) (i : Fin z.card) : P.Particle g :=
-  z.toList.get ⟨i.val, by simpa using i.isLt⟩
+  z.toList.get ⟨i.val, by simp⟩
 
 def zeroMemoryIndices {g : P.Group} (z : P.Memory g) : Finset (Fin z.card) :=
   Finset.univ.filter (fun i => (memoryEntry z i).2 = 0)
@@ -89,7 +89,7 @@ theorem memoryGhostKernel_norm_le (F : FixedData) (J n : ℕ) (rho : ℝ) (i : F
     (hphi : ∀ s t c, ‖phi s t c‖ ≤ 1) (s t : P.MemoryState (J + F.ell)) :
     ‖memoryGhostKernel F J n rho i phi s t‖ ≤ absoluteMemoryGhostKernel F J n rho i s t := by
   by_cases h : s.1 = t.1 ∧ s.2.1 = t.2.1
-  · simp only [memoryGhostKernel, absoluteMemoryGhostKernel, if_pos h]
+  · simp only [memoryGhostKernel, absoluteMemoryGhostKernel, ite_eq_left h]
     calc
       _ ≤ ∑ c : GhostChoice s t,
           ‖if ghostChoiceValid c then (ghostChoiceWeight F n rho i c : ℂ) * phi s t c else 0‖ :=
@@ -98,11 +98,11 @@ theorem memoryGhostKernel_norm_le (F : FixedData) (J n : ℕ) (rho : ℝ) (i : F
         apply Finset.sum_le_sum
         intro c _
         by_cases hc : ghostChoiceValid c
-        · simp only [if_pos hc, norm_mul, Complex.norm_real, Real.norm_eq_abs]
+        · simp only [ite_eq_left hc, norm_mul, Complex.norm_real, Real.norm_eq_abs]
           simpa only [mul_one] using
             mul_le_mul_of_nonneg_left (hphi s t c) (abs_nonneg (ghostChoiceWeight F n rho i c))
-        · simp only [if_neg hc, norm_zero, le_refl]
-  · simp only [memoryGhostKernel, absoluteMemoryGhostKernel, if_neg h, norm_zero, le_refl]
+        · simp only [ite_eq_right hc, norm_zero, le_refl]
+  · simp only [memoryGhostKernel, absoluteMemoryGhostKernel, ite_eq_right h, norm_zero, le_refl]
 
 
 end Erdos821.S2Core

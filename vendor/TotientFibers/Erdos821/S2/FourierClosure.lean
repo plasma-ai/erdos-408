@@ -107,7 +107,7 @@ end ResiduePath
 theorem residueExpression_continuous {F : FixedData} {P : PrimeGroups} {J m : ℕ}
     (A : Model F P J m) (n : ℕ) : Continuous (fun theta : ℝ => residueExpression A n theta) := by
   unfold residueExpression
-  apply continuous_finset_sum
+  apply continuous_finsetSum
   intro Q _
   by_cases h : Q.Valid
   · simp only [h, ite_true]

@@ -32,13 +32,13 @@ lemma auxSideSets_disjoint (ν : Pattern P J ell m) (block : P.BigGroup → Bool
     by_contra hh
     have hz := (Finset.mem_filter.mp hzF).2
     change z.2 ∈ (if block z.1 = false then ν.changed z.1.val else ∅) at hz
-    rw [if_neg hh] at hz
+    rw [ite_eq_right hh] at hz
     exact Finset.notMem_empty _ hz
   have hT : block z.1 = true := by
     by_contra hh
     have hz := (Finset.mem_filter.mp hzT).2
     change z.2 ∈ (if block z.1 = true then ν.changed z.1.val else ∅) at hz
-    rw [if_neg hh] at hz
+    rw [ite_eq_right hh] at hz
     exact Finset.notMem_empty _ hz
   cases hF.symm.trans hT
 
@@ -75,9 +75,9 @@ lemma bigAux_selected_pair_expect (ν : Pattern P J ell m) (block : P.BigGroup �
     rw [bigFlatWeight_eq]
     rfl
   rw [hl, hind]
-  letI : Fintype (Blueprint.Analytic.Tuple (analyticGroups P) (selectedCounts SF)) :=
+  let : Fintype (Blueprint.Analytic.Tuple (analyticGroups P) (selectedCounts SF)) :=
     inferInstanceAs (Fintype (∀ g : P.Group, Fin (selectedCounts SF g) → P.Prime g))
-  letI : Fintype (Blueprint.Analytic.Tuple (analyticGroups P) (selectedCounts ST)) :=
+  let : Fintype (Blueprint.Analytic.Tuple (analyticGroups P) (selectedCounts ST)) :=
     inferInstanceAs (Fintype (∀ g : P.Group, Fin (selectedCounts ST g) → P.Prime g))
   apply Fintype.sum_equiv eF
   intro a

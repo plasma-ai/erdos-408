@@ -73,7 +73,7 @@ set_option maxHeartbeats 4000000 in
 /-- One piece and one character, uniformly. -/
 theorem piece_final (P : Geometry) (C τ η lo hi : ℝ) (bounds : ℕ → ℝ)
     (K3r c3r Y0sp KW cW : ℝ) (hpiece : PieceBoundSpec K3r c3r Y0sp KW cW)
-    (hK3r : 0 < K3r) (hKW : 0 < KW) (hcW : 0 ≤ cW) (hc3r : 0 ≤ c3r)
+    (hK3r : 0 < K3r) (hKW : 0 < KW)
     (cS KS : ℝ) (hsqS : SqSpec cS KS) (hcS : 0 ≤ cS) (hKS : 0 < KS)
     (Cmk : ℝ) (kk : ℕ) (Kc Cf KA : ℕ → ℝ) (Kmm KAm Cfm As Al At B B0 Kex Kl KLM : ℝ) (j : ℕ)
     (hKcm : ∀ i < kk, Kc i ≤ Kmm) (hKAm : ∀ i < kk, KA i ≤ KAm) (hKA0 : ∀ i, 0 < KA i)
@@ -276,7 +276,7 @@ theorem error_final (P : Geometry) (C τ η lo hi : ℝ) (bounds : ℕ → ℝ) 
   have hp2 : ∀ p ∈ G.primes gs, ((p ^ 2 : ℕ) : ℝ) ≤ lo * Y := by
     intro p hp
     have hadm := hG.2.2.2.1 gs p hp
-    rw [if_pos hgs] at hadm
+    rw [ite_eq_left hgs] at hadm
     exact hszerr Y hY1 p hadm.2
   have h := herrS P G x C τ η Y v lo hi (bounds 0 * ℓ ^ C) (ℓ ^ Cms + 3 * ℓ * ℓ ^ Cmk) E t b Ψ gs ls
     r u J0 hL1 hE hlo hYpos hJ0 hgs hmass0 hbinv hp2 hΨb hMw
@@ -286,7 +286,7 @@ theorem error_final (P : Geometry) (C τ η lo hi : ℝ) (bounds : ℕ → ℝ) 
     have hterm : ∀ p ∈ G.primes gs, 1 / ((p : ℝ) ^ 2) ≤ Real.exp (-(ℓ ^ P.a)) * (1 / (p : ℝ)) := by
       intro p hp
       have hadm := hG.2.2.2.1 gs p hp
-      rw [if_pos hgs] at hadm
+      rw [ite_eq_left hgs] at hadm
       have hppos : (0 : ℝ) < p := lt_of_lt_of_le (Real.exp_pos _) hadm.1
       have h1 : 1 / (p : ℝ) ≤ Real.exp (-(ℓ ^ P.a)) := by
         rw [Real.exp_neg, ← one_div]

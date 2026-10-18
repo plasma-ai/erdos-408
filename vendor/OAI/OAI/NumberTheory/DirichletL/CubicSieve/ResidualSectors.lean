@@ -456,7 +456,7 @@ theorem outerWindow_global_bound (windows : Fin 7 → ℝ → ℂ)
   intro z ud ue uv kap
   simp only [outerWindow, norm_mul]
   gcongr
-  all_goals first | positivity | apply hbound
+  all_goals apply hbound
 
 theorem actual_raw_variable_sector_transfer {ι : Type*} [DecidableEq ι]
     (p : ι → O) (hp : ∀ i, p i ≠ 0) [∀ i, (Ideal.span {p i}).IsMaximal]

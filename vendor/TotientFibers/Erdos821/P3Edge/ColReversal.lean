@@ -269,30 +269,30 @@ lemma retrievalFibre_insert_card {M : ℕ} {g : P.Group} (z : P.Memory g)
         let f : {idx : Fin M // idx ∈ insert a S} → Fin z.card :=
           fun idx => if h : idx.1 = a then j₀
             else f' ⟨idx.1, Finset.mem_of_mem_insert_of_ne idx.2 h⟩
-        have hfa : f ⟨a, Finset.mem_insert_self a S⟩ = j₀ := dif_pos rfl
+        have hfa : f ⟨a, Finset.mem_insert_self a S⟩ = j₀ := dite_eq_left rfl
         have hres : restrict f = f' := by
           funext idx
           have hne : idx.1 ≠ a := fun h => ha (h ▸ idx.2)
-          exact dif_neg hne
+          exact dite_eq_right hne
         have hfval : ∀ idx : {idx : Fin M // idx ∈ insert a S},
             memoryEntry z (f idx) = w idx.val := by
           intro idx
           by_cases h : idx.1 = a
           · dsimp [f]
-            rw [dif_pos h, hj₀.1, h]
+            rw [dite_eq_left h, hj₀.1, h]
           · dsimp [f]
-            rw [dif_neg h]
+            rw [dite_eq_right h]
             exact hf'_prop.2 ⟨idx.1, Finset.mem_of_mem_insert_of_ne idx.2 h⟩
         have hfinj : Function.Injective f := by
           intro i₁ i₂ heq
           dsimp [f] at heq
           by_cases h₁ : i₁.1 = a <;> by_cases h₂ : i₂.1 = a
           · exact Subtype.ext (h₁.trans h₂.symm)
-          · rw [dif_pos h₁, dif_neg h₂] at heq
+          · rw [dite_eq_left h₁, dite_eq_right h₂] at heq
             exact False.elim (hj₀.2 _ heq.symm)
-          · rw [dif_neg h₁, dif_pos h₂] at heq
+          · rw [dite_eq_right h₁, dite_eq_left h₂] at heq
             exact False.elim (hj₀.2 _ heq)
-          · rw [dif_neg h₁, dif_neg h₂] at heq
+          · rw [dite_eq_right h₁, dite_eq_right h₂] at heq
             have hinj := hf'_prop.1 heq
             exact Subtype.ext (Subtype.mk.inj hinj)
         refine ⟨f, ?_, hfa⟩
@@ -775,7 +775,7 @@ lemma col_bigGroup_reversal_le (F : FixedData) (r : MemoryParameters F) (n : ℕ
       apply Finset.sum_congr rfl
       intro f'_g hf'_g
       obtain ⟨hval, hwt⟩ := hfibre_term f'_g hf'_g
-      rw [if_pos hval, hwt]
+      rw [ite_eq_left hval, hwt]
     rw [hsub_eq]
     apply Finset.sum_le_univ_sum_of_nonneg
     intro f'_g

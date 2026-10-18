@@ -54,13 +54,13 @@ theorem quad_eq_sum_tri (f1 f2 f3 f4 : ℕ → ℂ) (N n : ℕ) :
         rw [← h]; ring
       · intro h; rw [← h]; ring
     by_cases h : m * p * r = c
-    · rw [if_pos (hiff.mpr h), if_pos h]; ring
-    · rw [if_neg (fun h' => h (hiff.mp h')), if_neg h, mul_zero]
+    · rw [ite_eq_left (hiff.mpr h), ite_eq_left h]; ring
+    · rw [ite_eq_right (fun h' => h (hiff.mp h')), ite_eq_right h, mul_zero]
   · rw [mul_zero]
     apply Finset.sum_eq_zero; intro m _
     apply Finset.sum_eq_zero; intro p _
     apply Finset.sum_eq_zero; intro r _
-    rw [if_neg]
+    rw [ite_eq_right]
     intro h
     exact hsn ⟨m * p * r, by rw [← h]; ring⟩
 
@@ -275,7 +275,7 @@ theorem endpoint_mul_Wtil_eq_quad (G : PrimeGroups) (gs : Fin G.size) (x : ℝ) 
         intro q hq
         rw [Finset.mem_singleton.mp hq]
         exact Finset.mem_biUnion.mpr ⟨gs, Finset.mem_univ _, p.2⟩
-      rw [hend, S0, if_pos p.2]
+      rw [hend, S0, ite_eq_left p.2]
       ring
     · rw [mul_zero]
   rw [Finset.sum_congr rfl (fun p _ => hL p)]
@@ -285,7 +285,7 @@ theorem endpoint_mul_Wtil_eq_quad (G : PrimeGroups) (gs : Fin G.size) (x : ℝ) 
     (s₂ := Finset.Icc 1 N)]
   · apply Finset.sum_congr rfl
     intro s hs
-    rw [if_pos (Finset.mem_filter.mp hs).2]
+    rw [ite_eq_left (Finset.mem_filter.mp hs).2]
   · intro s hs
     obtain ⟨hsP, hsn⟩ := Finset.mem_filter.mp hs
     have := label_dvd_le (⟨s, hsP⟩ : Label G gs) hn1 hsn
@@ -293,12 +293,12 @@ theorem endpoint_mul_Wtil_eq_quad (G : PrimeGroups) (gs : Fin G.size) (x : ℝ) 
   · intro s _ hs
     by_cases hsn : s ∣ n
     · have hsP : s ∉ G.primes gs := fun h => hs (Finset.mem_filter.mpr ⟨h, hsn⟩)
-      rw [if_pos hsn, S0, if_neg hsP, zero_mul]
-    · rw [if_neg hsn, mul_zero]
+      rw [ite_eq_left hsn, S0, ite_eq_right hsP, zero_mul]
+    · rw [ite_eq_right hsn, mul_zero]
 
 /-- For `n` with no square of a removed prime, the mark weight is the removal sum. -/
 theorem weightedMarks_eq_Wtil {G : PrimeGroups} {t : Fin G.size → ℕ} {gs : Fin G.size}
-    (ls : Fin (t gs)) (hgs : gs ∈ G.small) (q : ℝ) (hq : 0 < q)
+    (ls : Fin (t gs)) (hgs : gs ∈ G.small) (q : ℝ)
     (b : Tuple G t → ℂ) (hb : ∀ z z' : Tuple G t, (∀ g, g ∈ G.big → z g = z' g) → b z = b z')
     (hmass : 0 < mass G gs) (n : ℕ) (hgood : ∀ p ∈ G.primes gs, ¬ p ^ 2 ∣ n) :
     weightedMarks G q t b n = Wtil G gs (Wres G t gs ls q b) n := by
@@ -312,7 +312,7 @@ theorem weightedMarks_eq_Wtil {G : PrimeGroups} {t : Fin G.size → ℕ} {gs : F
       apply hgood p.val p.2
       obtain ⟨c, hc⟩ := h
       exact ⟨c, by rw [pow_two, mul_assoc, ← hc, Nat.mul_div_cancel' hp]⟩
-    have := removal_term_eq ls hgs q hq b hb hmass p (n / p.val) hpk
+    have := removal_term_eq ls hgs q b hb hmass p (n / p.val) hpk
     rw [Nat.mul_div_cancel' hp] at this
     exact this
   · rfl
@@ -365,7 +365,7 @@ theorem norm_cchi_le (r : ℕ) (u : ℤ) (χ : DirichletCharacter ℂ r) (k : �
 /-- Character expansion of the rational phase on units. -/
 theorem e_eq_sum_cchi (r : ℕ) (hr : 1 ≤ r) (u : ℤ) (v k : ℕ) (hv : Nat.Coprime v r) :
     e (u * (v * k : ℕ) / r) = ∑ χ : DirichletCharacter ℂ r, cchi r u χ k * χ (v : ZMod r) := by
-  haveI : NeZero r := ⟨by omega⟩
+  have : NeZero r := ⟨by omega⟩
   unfold cchi
   simp_rw [Finset.mul_sum, Finset.sum_mul]
   rw [Finset.sum_comm]
@@ -388,15 +388,15 @@ theorem e_eq_sum_cchi (r : ℕ) (hr : 1 ≤ r) (u : ℤ) (v k : ℕ) (hv : Nat.C
     have htot : (Nat.totient r : ℂ) ≠ 0 := by
       exact_mod_cast (Nat.totient_pos.mpr (by omega)).ne'
     by_cases h : a = v % r
-    · rw [if_pos (hiff.mpr h), if_pos h]; field_simp
-    · rw [if_neg (fun h' => h (hiff.mp h')), if_neg h, mul_zero]
+    · rw [ite_eq_left (hiff.mpr h), ite_eq_left h]; field_simp
+    · rw [ite_eq_right (fun h' => h (hiff.mp h')), ite_eq_right h, mul_zero]
   rw [Finset.sum_congr rfl hinner, Finset.sum_ite_eq']
   have hmem : v % r ∈ (Finset.range r).filter (fun a => Nat.Coprime a r) := by
     refine Finset.mem_filter.mpr ⟨Finset.mem_range.mpr (Nat.mod_lt _ (by omega)), ?_⟩
     show Nat.gcd (v % r) r = 1
     rw [← Nat.gcd_rec r v]
     exact hv.symm
-  rw [if_pos hmem]
+  rw [ite_eq_left hmem]
   -- periodicity
   have hdecomp : (u : ℝ) * ((v * k : ℕ) : ℝ) / r =
       (u : ℝ) * ((v % r : ℕ) : ℝ) * k / r + ((u * ((v / r : ℕ) : ℤ) * k : ℤ) : ℝ) := by
@@ -435,7 +435,7 @@ theorem e_mul_quad (r : ℕ) (hr : 1 ≤ r) (u : ℤ) (f1 f2 f3 f4 : ℕ → ℂ
   apply Finset.sum_congr rfl; intro p _
   apply Finset.sum_congr rfl; intro k _
   by_cases hprod : m * s * p * k = n
-  · simp only [if_pos hprod]
+  · simp only [ite_eq_left hprod]
     by_cases hz : f1 m * f2 s * f3 p = 0
     · have : ∀ χ : DirichletCharacter ℂ r, f1 m * χ (m : ZMod r) * (f2 s * χ (s : ZMod r)) *
           (f3 p * χ (p : ZMod r)) * (f4 k * cchi r u χ k) = 0 := by
@@ -455,6 +455,6 @@ theorem e_mul_quad (r : ℕ) (hr : 1 ≤ r) (u : ℤ) (f1 f2 f3 f4 : ℕ → ℂ
       have hχ : χ ((m * s * p : ℕ) : ZMod r) = χ (m : ZMod r) * χ (s : ZMod r) * χ (p : ZMod r) := by
         push_cast; rw [map_mul, map_mul]
       rw [hχ]; ring
-  · simp only [if_neg hprod, mul_zero, Finset.sum_const_zero]
+  · simp only [ite_eq_right hprod, mul_zero, Finset.sum_const_zero]
 
 end Erdos821.P5Marked

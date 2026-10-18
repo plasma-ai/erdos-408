@@ -23,7 +23,7 @@ def splitPartial (S T : Finset ι) (c : PartialSample (S ∪ T) α) :
   (fun i => c ⟨i.val, Finset.mem_union.mpr (Or.inl i.property)⟩,
    fun i => c ⟨i.val, Finset.mem_union.mpr (Or.inr i.property)⟩)
 
-def joinPartial (S T : Finset ι) (hST : Disjoint S T)
+def joinPartial (S T : Finset ι)
     (a : PartialSample S α) (b : PartialSample T α) : PartialSample (S ∪ T) α :=
   fun i => if hi : i.val ∈ S then a ⟨i.val, hi⟩ else
     b ⟨i.val, by
@@ -34,7 +34,7 @@ def joinPartial (S T : Finset ι) (hST : Disjoint S T)
 def partialUnionEquiv (S T : Finset ι) (hST : Disjoint S T) :
     PartialSample (S ∪ T) α ≃ PartialSample S α × PartialSample T α where
   toFun := splitPartial S T
-  invFun := fun z => joinPartial S T hST z.1 z.2
+  invFun := fun z => joinPartial S T z.1 z.2
   left_inv := by
     intro c
     funext i
@@ -44,23 +44,24 @@ def partialUnionEquiv (S T : Finset ι) (hST : Disjoint S T) :
         rcases Finset.mem_union.mp i.property with hs | ht
         · exact False.elim (hi hs)
         · exact ht
-      simp [splitPartial, joinPartial, hi, ht]
+      simp [splitPartial, joinPartial, hi]
   right_inv := by
     intro z
     rcases z with ⟨a, b⟩
     apply Prod.ext
     · funext i
-      simp [splitPartial, joinPartial, i.property]
+      simp [splitPartial, joinPartial]
     · funext i
       have hi : i.val ∉ S := by
         intro his
         exact (Finset.disjoint_left.mp hST) his i.property
       simp [splitPartial, joinPartial, hi]
 
+omit [Fintype ι] [(i : ι) → Fintype (α i)] in
 lemma partialProductWeight_join (w : ∀ i, α i → ℝ)
     (S T : Finset ι) (hST : Disjoint S T)
     (a : PartialSample S α) (b : PartialSample T α) :
-    partialProductWeight w (S ∪ T) (joinPartial S T hST a b) =
+    partialProductWeight w (S ∪ T) (joinPartial S T a b) =
       partialProductWeight w S a * partialProductWeight w T b := by
   let eS : {i : {i // i ∈ S ∪ T} // i.val ∈ S} ≃ {i // i ∈ S} := {
     toFun := fun z => ⟨z.val.val, z.property⟩
@@ -78,14 +79,14 @@ lemma partialProductWeight_join (w : ∀ i, α i → ℝ)
   }
   have hs :
       (∏ z : {i : {i // i ∈ S ∪ T} // i.val ∈ S},
-        w z.val.val (joinPartial S T hST a b z.val)) = partialProductWeight w S a := by
+        w z.val.val (joinPartial S T a b z.val)) = partialProductWeight w S a := by
     unfold partialProductWeight
     apply Fintype.prod_equiv eS
     intro z
     simp [joinPartial, z.property, eS]
   have ht :
       (∏ z : {i : {i // i ∈ S ∪ T} // i.val ∉ S},
-        w z.val.val (joinPartial S T hST a b z.val)) = partialProductWeight w T b := by
+        w z.val.val (joinPartial S T a b z.val)) = partialProductWeight w T b := by
     unfold partialProductWeight
     apply Fintype.prod_equiv eT
     intro z
@@ -132,7 +133,7 @@ theorem DisjointMarginalTask_proof : DisjointMarginalTask := by
       dsimp [K]
       have hw := partialProductWeight_join w S T hST
         (e c).1 (e c).2
-      have hc : joinPartial S T hST (e c).1 (e c).2 = c := by
+      have hc : joinPartial S T (e c).1 (e c).2 = c := by
         change (partialUnionEquiv S T hST).invFun
           ((partialUnionEquiv S T hST).toFun c) = c
         exact (partialUnionEquiv S T hST).left_inv c

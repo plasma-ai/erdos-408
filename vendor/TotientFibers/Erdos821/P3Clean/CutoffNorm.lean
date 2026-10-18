@@ -29,7 +29,7 @@ theorem clean_projected_norm (F : FixedData) (r : MemoryParameters F) :
   obtain ⟨Cs, hraw⟩ := big_averaged_clean_norm F
   refine ⟨Cs, ?_⟩
   intro x P hP hL J m n B A theta i C hC hb hbig
-  letI : Fintype (CutPendingState P B) := Fintype.ofFinite _
+  let : Fintype (CutPendingState P B) := Fintype.ofFinite _
   have hV (g : P.Group) : 0 < P.V g := F.vMin_pos.trans_le (hP.2.2.2.2.1 g).1
   have hm := memoryMass_nonneg (P := P) (F := F) J n hV hb
   have hCC : 0 ≤ C * (L x) ^ Cs := mul_nonneg hC (Real.rpow_nonneg hL.le _)
@@ -70,7 +70,7 @@ theorem clean_projected_norm (F : FixedData) (r : MemoryParameters F) :
     rw [memoryEdgeKernel_rho]
     rw [memoryEdgeKernel_clean]
     by_cases hs : P.memorySize s ≤ B <;> by_cases ht : P.memorySize t ≤ B <;>
-      simp [projectKernel, hs, ht]
+      simp [hs, ht]
   rw [he] at h
   exact h
 

@@ -144,14 +144,14 @@ theorem memoryRareTask_holds (F : FixedData) (r : MemoryParameters F) :
     (by
       intro ctx O s T
       have h := promotionContextKernel_rowCost_le A r theta i ctx O s T hVlo hVpos
-        htilted_nn htilted_sum Cprom Csmall0 hCsmall0_pos hCprom hCsmall0
+        htilted_nn htilted_sum Cprom Csmall0 hCprom hCsmall0
       refine le_trans h (le_of_eq ?_)
       simp only [R, a, Gr, BP]
       ring)
     (by
       intro ctx O t S
       have h := promotionContextKernel_columnCost_le A r theta i ctx O t S hVlo hVhi
-        htilted_nn htilted_sum Cprom Csmall0 hCsmall0_pos hCprom hCsmall0
+        htilted_nn htilted_sum Cprom Csmall0 hCprom hCsmall0
       refine le_trans h (le_of_eq ?_)
       simp only [C, a, Gc, BP]
       ring)
@@ -172,14 +172,14 @@ theorem memoryRareTask_holds (F : FixedData) (r : MemoryParameters F) :
     (by
       intro ctx O s T
       have h := storeOnlyContextKernel_rowCost_le A r theta i ctx O s T hVlo hVpos
-        htilted_nn htilted_sum Cprom Csmall0 hCsmall0_pos hCprom hCsmall0
+        htilted_nn htilted_sum Cprom Csmall0 hCprom hCsmall0
       refine le_trans h (le_of_eq ?_)
       simp only [R, a, Gr, BP]
       ring)
     (by
       intro ctx O t S
       have h := storeOnlyContextKernel_columnCost_le A r theta i ctx O t S hVlo hVhi
-        htilted_nn htilted_sum Cprom Csmall0 hCsmall0_pos hCprom hCsmall0
+        htilted_nn htilted_sum Cprom Csmall0 hCprom hCsmall0
       refine le_trans h (le_of_eq ?_)
       simp only [C, a, Gc, BP]
       ring)

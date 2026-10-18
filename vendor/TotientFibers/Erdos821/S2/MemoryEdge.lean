@@ -98,7 +98,7 @@ def rawEdgeValid (A : Model F P J m) (ν : Pattern P J F.ell m) (forward : Bool)
       (deleteMemoryIndices (s.2.2 g) (retrievedIndices c g) + storedMemory (s.2.1 g.val) (c.1 g))
 
 /-- Small endpoints stay physical; big endpoints use fresh/promoted birth weights. -/
-def rawEdgeWeight (A : Model F P J m) (n : ℕ) (rho : ℝ)
+def rawEdgeWeight (_A : Model F P J m) (n : ℕ) (rho : ℝ)
     (ν : Pattern P J F.ell m) (u : P.Aux J)
     (s t : P.MemoryState (J + F.ell)) (c : TransferChoice s) : ℝ :=
   ν.auxMass u * freshBigFactor F n ν c.2.1 t.2.1 *
@@ -199,10 +199,10 @@ theorem memoryEdgeKernel_norm_le (A : Model F P J m) (n : ℕ) (rho theta : ℝ)
       apply Finset.sum_le_sum
       intro c _
       by_cases hc : edgeChoiceValid A mode i s t c
-      · simp only [if_pos hc, norm_mul]
+      · simp only [ite_eq_left hc, norm_mul]
         simpa only [mul_one] using mul_le_mul_of_nonneg_left (hphi s t c)
           (norm_nonneg (edgeChoiceCoefficient A n rho theta i s t c))
-      · simp only [if_neg hc, norm_zero, le_refl]
+      · simp only [ite_eq_right hc, norm_zero, le_refl]
 
 theorem memoryEdgeKernel_all (A : Model F P J m) (n : ℕ) (rho theta : ℝ)
     (i : Fin n)
@@ -223,9 +223,9 @@ theorem memoryEdgeKernel_all (A : Model F P J m) (n : ℕ) (rho theta : ℝ)
       ¬ (∀ g, c.2.2.2.2.1 g = ∅ ∧ c.2.2.2.2.2.1 g = ∅) at hd
     by_cases hclean : ∀ g, c.2.2.2.2.1 g = ∅ ∧ c.2.2.2.2.2.1 g = ∅
     · have hdirty := hd.not.mpr (not_not.mpr hclean)
-      simp only [hv, ite_true, true_and, if_pos hclean, if_neg hdirty, add_zero]
+      simp only [hv, ite_true, true_and, ite_eq_left hclean, ite_eq_right hdirty, add_zero]
     · have hdirty := hd.mpr hclean
-      simp only [hv, ite_true, true_and, if_neg hclean, if_pos hdirty, zero_add]
+      simp only [hv, ite_true, true_and, ite_eq_right hclean, ite_eq_left hdirty, zero_add]
   · simp [hv]
 
 

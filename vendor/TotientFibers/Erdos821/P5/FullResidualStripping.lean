@@ -30,7 +30,7 @@ theorem full_residual_lift_eq_averaged {P : Geometry} {G : PrimeGroups} {J m : �
     (hV : ∀ g, G.graph.V g ≠ 0) (hlo : 0 < lo) (hhi : lo < hi) (hZ : 0 < Z)
     (hΨ : Function.support Ψ ⊆ Set.Icc lo hi)
     (hX : ∀ v u, 1 ≤ lo * Z * freeDrawProduct (B.pattern v) u)
-    (hk : ∀ v (u : FreeDraw (B.pattern v)), |(k : ℝ)| ≤ lo * Z / 2)
+    (hk : ∀ v (_ : FreeDraw (B.pattern v)), |(k : ℝ)| ≤ lo * Z / 2)
     (hY : ∀ v u z, (sharedDrawProduct (B.pattern v) z : ℝ) *
       ((hi + lo) * Z * freeDrawProduct (B.pattern v) u) ≤ Y)
     (hζ : ζ = -a₁ - a₂) :

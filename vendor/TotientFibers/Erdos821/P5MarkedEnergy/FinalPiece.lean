@@ -153,7 +153,7 @@ theorem piece_bound : ∃ K3r c3r Y0sp KW cW : ℝ, 0 < K3r ∧ 0 ≤ c3r ∧ 1 
     have hlY : (0 : ℝ) < lo * Y := by positivity
     have : 0 < ⌈lo * Y⌉₊ := Nat.ceil_pos.mpr hlY
     exact Finset.mem_Icc.mpr ⟨by omega, h2⟩
-  have hid := mellin_box_identity f1 f2 f3 f4 Ψi a ha Y α v hY hαpos hsuppi hrepi N hN1 s hSi hSN
+  have hid := mellin_box_identity f1 f2 f3 f4 Ψi a ha Y α v hY hsuppi hrepi N s hSi hSN
   -- the separation measure
   set b' : (Fin 1 → ℝ) → ℂ := fun ξ => a ξ * Blueprint.Analytic.mellin (1 / Y) (2 * Real.pi * ξ 0) with hb'
   have hb'norm : ∀ ξ, ‖b' ξ‖ = ‖a ξ‖ := by
@@ -239,7 +239,7 @@ theorem piece_bound : ∃ K3r c3r Y0sp KW cW : ℝ, 0 < K3r ∧ 0 ≤ c3r ∧ 1 
     have : 0 ≤ (2 * L x) ^ cW := Real.rpow_nonneg (by positivity) _
     positivity
   have hcore := piece_energy_core Rel (boxPoly f1 f2 f3 f4) hcont (fun _ => BB4) hMb s bco Y Yi H
-    (L x) v R (L x ^ Kmc) εt _ _ KLM j b' hb'int hj hL1 hYipos hHpos hKLM.le hJ30 hWM0 hR hLM'
+    (L x) v R (L x ^ Kmc) εt _ _ KLM j b' hb'int hj hL1 hYipos hHpos hKLM.le hJ30 hWM0 hLM'
     hid hA1 htail' hJ3' hWM' hfreq
   rw [Finset.sum_const, nsmul_eq_mul] at hcore
   exact hcore

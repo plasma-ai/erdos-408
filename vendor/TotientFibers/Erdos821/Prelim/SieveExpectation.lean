@@ -117,7 +117,7 @@ theorem trialProb_sum_one (B : Finset ℕ) (g : ℕ → ℝ) :
     ring
 
 /-- Disjointness of `u` from the remainder `B \\ u`. -/
-theorem disjoint_sdiff_rem (B u : Finset ℕ) (hu : u ⊆ B) :
+theorem disjoint_sdiff_rem (B u : Finset ℕ) :
     Disjoint u (B \ u) := by
   rw [Finset.disjoint_left]
   intro p hpu hpB
@@ -129,7 +129,7 @@ theorem trialProb_superset (B : Finset ℕ) (g : ℕ → ℝ)
     {u : Finset ℕ} (hu : u ⊆ B) :
     ∑ T ∈ B.powerset.filter (fun T => u ⊆ T), trialProb B g T
       = ∏ p ∈ u, g p := by
-  have hdisj : Disjoint u (B \ u) := disjoint_sdiff_rem B u hu
+  have hdisj : Disjoint u (B \ u) := disjoint_sdiff_rem B u
   have hinj : Set.InjOn (fun V : Finset ℕ => u ∪ V)
       (↑(B \ u).powerset : Set (Finset ℕ)) := by
     intro V hV W hW heq
@@ -285,7 +285,7 @@ theorem blockExp_bounds (B : Finset ℕ) (g : ℕ → ℝ) (h : ℕ)
       have hleR : ((if T.card = 0 then (1 : ℤ) else 0) : ℝ)
           ≤ ((Prelim.SieveCalculus.blockUpper h T.card : ℤ) : ℝ) := by
         exact_mod_cast hle
-      simp only [Int.cast_ite, Int.cast_one, Int.cast_zero] at hleR
+      simp only [Int.cast_one] at hleR
       linarith
     exact hcast
   have hpt1 : ∀ T ∈ B.powerset,
@@ -297,7 +297,7 @@ theorem blockExp_bounds (B : Finset ℕ) (g : ℕ → ℝ) (h : ℕ)
         - ((if T.card = 0 then (1 : ℤ) else 0) : ℝ)
         ≤ (((T.card.choose (h + 1) : ℕ)) : ℝ) := by
       exact_mod_cast hle
-    simp only [Int.cast_ite, Int.cast_one, Int.cast_zero] at hleR
+    simp only [Int.cast_one] at hleR
     linarith
   constructor
   · rw [hSsub]

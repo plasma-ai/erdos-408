@@ -87,7 +87,7 @@ theorem kernelProduct_succ_unfold (A : Model F P J m) (n : ℕ) (Q : ResiduePath
           (x + pathEdgeDelta A f (x, Q.labels 0) (edgeOf Q 0), (residuePathTail Q).labels 0) := by
   rw [← pathDataHead_residuePathToPathData A n (residuePathTail Q)]
   simp only [residuePathToPathData, pathDataKernelProduct]
-  rw [if_pos trivial]
+  rw [ite_eq_left trivial]
   rfl
 
 theorem kernelProduct_eq_prod (A : Model F P J m) :
@@ -171,13 +171,13 @@ theorem pathEdgeTerm_vtx (A : Model F P J m) {n : ℕ} (Q : ResiduePath A n) (z 
     exact and_congr (physical_act_iff _ _ _ _) (and_congr (physical_act_iff _ _ _ _) Iff.rfl)
   unfold pathEdgeTerm
   by_cases h : vertexPhysical Q z i.castSucc ∧ vertexPhysical Q z i.succ ∧ edgeAdmissible Q i
-  · rw [if_pos (hvalid.mpr h), if_pos h]
+  · rw [ite_eq_left (hvalid.mpr h), ite_eq_left h]
     simp only [ResiduePath.edgeCoefficient, orient, Bool.cond_true, phase, zero_mul,
       Complex.ofReal_zero, mul_zero, Complex.exp_zero, mul_one]
     by_cases hf : edgeForward i <;>
       simp [hf, pathEdgeSource, pathEdgeTarget, edgeOf, vtx, ResiduePath.source,
         ResiduePath.target] <;> ring
-  · rw [if_neg (mt hvalid.mp h), if_neg h]
+  · rw [ite_eq_right (mt hvalid.mp h), ite_eq_right h]
 
 theorem prod_pathEdgeTerm_vtx (A : Model F P J m) {n : ℕ} (Q : ResiduePath A n) (z : ℤ) :
     ∏ i : Fin n, pathEdgeTerm A (orient true i) (vtx true z Q i.castSucc)
@@ -190,11 +190,11 @@ theorem prod_pathEdgeTerm_vtx (A : Model F P J m) {n : ℕ} (Q : ResiduePath A n
   simp_rw [pathEdgeTerm_vtx]
   by_cases h : ∀ i : Fin n, vertexPhysical Q z i.castSucc ∧ vertexPhysical Q z i.succ ∧
       edgeAdmissible Q i
-  · rw [if_pos h, Finset.prod_congr rfl (fun i _ => if_pos (h i)), Finset.prod_mul_distrib,
+  · rw [ite_eq_left h, Finset.prod_congr rfl (fun i _ => ite_eq_left (h i)), Finset.prod_mul_distrib,
       Complex.ofReal_prod]
-  · rw [if_neg h]
+  · rw [ite_eq_right h]
     obtain ⟨i, hi⟩ := not_forall.mp h
-    exact Finset.prod_eq_zero (Finset.mem_univ i) (if_neg hi)
+    exact Finset.prod_eq_zero (Finset.mem_univ i) (ite_eq_right hi)
 
 theorem active_card_eq {A : Model F P J m} {n : ℕ} (Q : ResiduePath A n) (j : Fin (n + 1))
     (hinj : ∀ g, Function.Injective (Q.labels j g)) :
@@ -315,7 +315,7 @@ theorem damping_prod_eq_pathFactor (A : Model F P J m) {n : ℕ} (Q : ResiduePat
         rintro (h | h)
         · exact h0 (Fin.ext h)
         · exact hl (Fin.ext h)
-      rw [if_neg hv, if_neg h0, if_neg hl]
+      rw [ite_eq_right hv, ite_eq_right h0, ite_eq_right hl]
       simp only [pow_one]
       rw [← mul_pow, Real.mul_self_sqrt F.q_pos.le]
 
@@ -335,8 +335,8 @@ theorem term_eq_succ (A : Model F P J m) {n : ℕ} (Q : ResiduePath A (n + 1)) (
   rw [prod_pathEdgeTerm_vtx]
   by_cases ho : Q.offset (Fin.last (n + 1)) = 0
   swap
-  · rw [if_neg (mt hend.mp ho), if_neg (fun h => ho h.2), mul_zero]
-  rw [if_pos (hend.mpr ho)]
+  · rw [ite_eq_right (mt hend.mp ho), ite_eq_right (fun h => ho h.2), mul_zero]
+  rw [ite_eq_left (hend.mpr ho)]
   have hcover : (∀ i : Fin (n + 1), vertexPhysical Q z i.castSucc ∧
       vertexPhysical Q z i.succ) → ∀ j, vertexPhysical Q z j := by
     intro h j
@@ -347,7 +347,7 @@ theorem term_eq_succ (A : Model F P J m) {n : ℕ} (Q : ResiduePath A (n + 1)) (
   by_cases hV : ∀ j, vertexPhysical Q z j
   · have hmass : A.stateMass (z, Q.labels 0) = P.markMass (J + F.ell) := by
       unfold Model.stateMass
-      rw [if_pos]
+      rw [ite_eq_left]
       simpa [vertexPhysical, ResiduePath.offset_zero] using hV 0
     have hvalid : Q.Valid ↔ ∀ i, edgeAdmissible Q i := by
       constructor
@@ -356,18 +356,18 @@ theorem term_eq_succ (A : Model F P J m) {n : ℕ} (Q : ResiduePath A (n + 1)) (
       · intro h
         exact ⟨fun j g => (hV j g).1, h⟩
     by_cases hE : ∀ i, edgeAdmissible Q i
-    · rw [if_pos (fun i => ⟨hV _, hV _, hE i⟩), if_pos ⟨hvalid.mpr hE, ho⟩, hmass,
+    · rw [ite_eq_left (fun i => ⟨hV _, hV _, hE i⟩), ite_eq_left ⟨hvalid.mpr hE, ho⟩, hmass,
         damping_prod_eq_pathFactor A Q z hV]
       ring
-    · rw [if_neg (fun h => hE (fun i => (h i).2.2)), if_neg (fun h => hE (hvalid.mp h.1)),
+    · rw [ite_eq_right (fun h => hE (fun i => (h i).2.2)), ite_eq_right (fun h => hE (hvalid.mp h.1)),
         mul_zero]
-  · rw [if_neg (fun h => hV (hcover (fun i => ⟨(h i).1, (h i).2.1⟩))), mul_zero]
+  · rw [ite_eq_right (fun h => hV (hcover (fun i => ⟨(h i).1, (h i).2.1⟩))), mul_zero]
     by_cases hQ : Q.Valid
-    · rw [if_pos ⟨hQ, ho⟩]
+    · rw [ite_eq_left ⟨hQ, ho⟩]
       obtain ⟨j, hj⟩ := not_forall.mp hV
       have hex : ∃ g h, ¬ ((Q.labels j g h).val : ℤ) ∣ z + Q.offset j := by
         by_contra hc
-        push_neg at hc
+        push Not at hc
         exact hj (fun g => ⟨hQ.1 j g, hc g⟩)
       obtain ⟨g, h, hnd⟩ := hex
       have hzero : P.pathFactor (n + 1) (visitQ F.q (n + 1)) Q.offset Q.active z = 0 := by
@@ -378,10 +378,10 @@ theorem term_eq_succ (A : Model F P J m) {n : ℕ} (Q : ResiduePath A (n + 1)) (
           have hmem : (Q.labels j g h).val ∈ Q.active j :=
             Finset.mem_biUnion.mpr ⟨g, Finset.mem_univ _,
               Finset.mem_image.mpr ⟨h, Finset.mem_univ _, rfl⟩⟩
-          rw [if_pos hmem, if_neg hnd]
+          rw [ite_eq_left hmem, ite_eq_right hnd]
       rw [hzero]
       simp
-    · rw [if_neg (fun h => hQ h.1)]
+    · rw [ite_eq_right (fun h => hQ h.1)]
 
 theorem term_eq (A : Model F P J m) {n : ℕ} (hn : 0 < n) (Q : ResiduePath A n) (z : ℤ) :
     (A.stateMass (z, pathDataHead A n (residuePathToPathData A n Q)) : ℂ) *

@@ -25,7 +25,7 @@ abbrev Geometry.graph (F : Geometry) : Graph.FixedData where
   ab := F.ordered.2.1
   bc := F.ordered.2.2.1
   cd := F.ordered.2.2.2.1
-  d_lt := by convert F.ordered.2.2.2.2 using 1 <;> norm_num
+  d_lt := by convert F.ordered.2.2.2.2 using 1; norm_num
   c₀_pos := F.positive.1
   C₀_pos := F.positive.2.1
   vMin_pos := F.positive.2.2.1
@@ -43,14 +43,14 @@ abbrev PrimeGroups.graph (P : PrimeGroups) : Graph.PrimeGroups where
 
 @[simp] theorem graph_small (P : PrimeGroups) : P.graph.smallGroups = P.small := by
   ext g
-  simp [Graph.PrimeGroups.smallGroups, PrimeGroups.graph, Finset.mem_filter]
+  simp [Graph.PrimeGroups.smallGroups, PrimeGroups.graph]
 
 @[simp] theorem graph_big (P : PrimeGroups) : P.graph.bigGroups = P.big := by
   ext g
   simp [Graph.PrimeGroups.bigGroups, PrimeGroups.graph, PrimeGroups.big, Finset.mem_filter]
 
 @[simp] theorem graph_mass (P : PrimeGroups) (g : Fin P.size) : P.graph.V g = mass P g := by
-  simp [Graph.PrimeGroups.V, PrimeGroups.graph, mass, one_div]
+  simp [Graph.PrimeGroups.V, mass, one_div]
 
 /-- P5's adapter uses no pending graph theorem. -/
 theorem graph_admissible (F : Geometry) (x : ℝ) (P : PrimeGroups)

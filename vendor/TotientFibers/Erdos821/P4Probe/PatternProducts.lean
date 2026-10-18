@@ -29,7 +29,7 @@ lemma DBig_split (ν : Pattern P J ell m) (block : P.BigGroup → Bool)
   rw [← Finset.prod_mul_distrib, ← Finset.prod_mul_distrib]
   apply Finset.prod_congr rfl
   intro i _
-  cases hb : block g <;> by_cases hi : i ∈ ν.changed g.val <;> simp [hb, hi]
+  cases hb : block g <;> by_cases hi : i ∈ ν.changed g.val <;> simp [hi]
 
 lemma prefixProduct_split (ν : Pattern P J ell m) (block : P.BigGroup → Bool)
     (a : P.BigLabels (J + ell)) :
@@ -44,7 +44,7 @@ lemma prefixProduct_split (ν : Pattern P J ell m) (block : P.BigGroup → Bool)
   intro i _
   have hs : ν.slot i = Fin.castAdd ell i := by apply Fin.ext; rfl
   cases hb : block g <;> by_cases hi : i ∈ ν.changed g.val <;>
-    simp [hb, hi, splitBigLabels, hs]
+    simp [hi, splitBigLabels, hs]
 
 lemma sharedPrefixProduct_matches (ν : Pattern P J ell m)
     {a b : P.BigLabels (J + ell)} (hab : ν.matchesBig a b) :

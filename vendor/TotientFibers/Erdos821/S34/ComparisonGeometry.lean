@@ -37,7 +37,7 @@ theorem eventually_big_prime_power (P : Geometry) (q : ℝ) :
   intro G hG g hg p hp
   have hs : g ∉ G.small := (Finset.mem_sdiff.mp hg).2
   have hbound := hG.2.2.2.1 g p hp
-  rw [if_neg hs] at hbound
+  rw [ite_eq_right hs] at hbound
   have he := Real.exp_pos (L x ^ P.c)
   linarith [hbound.1]
 

@@ -61,8 +61,8 @@ theorem DBig_eq_of_matches (ν : Pattern P J F.ell m) (a b : P.BigLabels (J + F.
   apply Finset.prod_congr rfl
   intro i _
   by_cases hi : i ∈ ν.changed g.val
-  · simp only [if_pos hi]
-  · simp only [if_neg hi, h g (ν.slot i) ⟨i, rfl, hi⟩]
+  · simp only [ite_eq_left hi]
+  · simp only [ite_eq_right hi, h g (ν.slot i) ⟨i, rfl, hi⟩]
 
 theorem regularCycleKernel_ideal_frequency (A : Model F P J m) (n B : ℕ)
     [Fintype (CutPendingState P B)] (theta : ℝ) (forward : Bool) (d : SmallLabels P J)
@@ -81,8 +81,7 @@ theorem regularCycleKernel_ideal_frequency (A : Model F P J m) (n B : ℕ)
   apply Finset.sum_congr rfl
   intro u _
   by_cases h : (A.pattern v).matchesBig a b ∧ bigBan (A.pattern v) a b u
-  · simp only [if_pos h, bigCleanCoefficient, ht, bigStep_real]
-    change _ = _
+  · simp only [ite_eq_left h, bigCleanCoefficient, ht, bigStep_real]
     have hp : phase (theta * (base * ((A.pattern v).DBig a u : ℝ))) *
         phase (t * ((A.pattern v).DBig a u : ℝ)) =
         phase ((theta * base + t) * ((A.pattern v).DBig a u : ℝ)) := by
@@ -95,7 +94,7 @@ theorem regularCycleKernel_ideal_frequency (A : Model F P J m) (n B : ℕ)
             (phase (theta * (base * ((A.pattern v).DBig a u : ℝ))) *
               phase (t * ((A.pattern v).DBig a u : ℝ)))) := by ring
       _ = _ := by rw [hp]
-  · simp only [if_neg h, mul_zero]
+  · simp only [ite_eq_right h, mul_zero]
 
 
 end Erdos821.P3Clean

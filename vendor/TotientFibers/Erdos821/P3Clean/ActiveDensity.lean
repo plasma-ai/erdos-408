@@ -18,11 +18,11 @@ open Erdos821.Blueprint.Graph
 variable {F : FixedData} {P : PrimeGroups} {J m : ℕ}
 
 def activeDensity (F : FixedData) (n : ℕ) {M : ℕ} (a : P.BigLabels M) : ℝ :=
-  bigProductMass (fun g p => (baselinePrime F n p.val)⁻¹) a
+  bigProductMass (fun _ p => (baselinePrime F n p.val)⁻¹) a
 
 def freshDensity (F : FixedData) (n : ℕ) (ν : Pattern P J F.ell m)
     (a : P.BigLabels (J + F.ell)) : ℝ :=
-  bigFreshMass ν (fun g p => (baselinePrime F n p.val)⁻¹) a
+  bigFreshMass ν (fun _ p => (baselinePrime F n p.val)⁻¹) a
 
 theorem tiltedIdealMass_density (F : FixedData) (n : ℕ) {M : ℕ} (a : P.BigLabels M) :
     tiltedIdealMass F n a = P.idealMass a * activeDensity F n a := by
@@ -40,8 +40,8 @@ theorem tiltedFreshMass_density (F : FixedData) (n : ℕ) (ν : Pattern P J F.el
   apply Finset.prod_congr rfl
   intro i _
   by_cases hi : ν.shared g.val i
-  · simp only [if_pos hi, one_mul]
-  · simp only [if_neg hi, tiltedMu_eq_mu_mul]
+  · simp only [ite_eq_left hi, one_mul]
+  · simp only [ite_eq_right hi, tiltedMu_eq_mu_mul]
 
 theorem activeDensity_pos (F : FixedData) (n : ℕ)
     (hb : ∀ g : P.BigGroup, ∀ p : P.Prime g.val, 0 < baselinePrime F n p.val)
@@ -69,7 +69,7 @@ theorem density_reversal (F : FixedData) (n : ℕ) (ν : Pattern P J F.ell m)
     (a b : P.BigLabels (J + F.ell)) (h : ν.matchesBig a b) :
     activeDensity F n a * freshDensity F n ν b =
       activeDensity F n b * freshDensity F n ν a :=
-  bigFreshMass_reversal ν (fun g p => (baselinePrime F n p.val)⁻¹) a b h
+  bigFreshMass_reversal ν (fun _ p => (baselinePrime F n p.val)⁻¹) a b h
 
 theorem bigProductMass_actBig {M : ℕ}
     (mu : (g : P.BigGroup) → P.Prime g.val → ℝ) (p : P.BigPermutations M) (a : P.BigLabels M) :

@@ -112,7 +112,7 @@ lemma rowProduct_pos (S : P.BigGroup → Finset (Fin J)) (x : BigRowPartial S) :
   exact (P.prime g.val _ (x g i).property).pos
 
 lemma row_split_product {R : Type*} [CommMonoid R] (ν : Pattern P J ell m)
-    (block : P.BigGroup → Bool) (v : ∀ g : P.BigGroup, Fin J → R) :
+    (block : P.BigGroup → Bool) (v : P.BigGroup → Fin J → R) :
     (∏ g, ∏ i, v g i) =
       (∏ g, ∏ i : {i // i ∈ sharedRows ν g}, v g i.val) *
       (∏ g, ∏ i : {i // i ∈ patternAuxCoordinates ν block false g}, v g i.val) *
@@ -122,8 +122,8 @@ lemma row_split_product {R : Type*} [CommMonoid R] (ν : Pattern P J ell m)
   intro g _
   simp only [Finset.prod_coe_sort]
   unfold sharedRows patternAuxCoordinates
-  cases hb : block g <;> simp only [hb, ite_true, Bool.false_eq_true,
-    Bool.true_eq_false, ite_false, Finset.prod_empty, mul_one, one_mul]
+  cases hb : block g <;> simp only [ite_true, Bool.false_eq_true,
+    Bool.true_eq_false, ite_false, Finset.prod_empty, mul_one]
   all_goals
     rw [← Finset.prod_union (Finset.sdiff_disjoint), Finset.sdiff_union_of_subset (Finset.subset_univ _)]
 

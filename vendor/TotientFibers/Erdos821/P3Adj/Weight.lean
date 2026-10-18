@@ -26,14 +26,14 @@ lemma eta_pos (F : FixedData) (n : ℕ) (i : Fin (n + 1)) : 0 < eta F n i := by
   have hq : visitQ F.q n i < 1 := by
     unfold visitQ
     by_cases h : i.val = 0 ∨ i.val = n
-    · rw [if_pos h]
+    · rw [ite_eq_left h]
       have hq0 : 0 < F.q := F.q_pos
       have hq1 : F.q < 1 := F.q_lt
       have hsqrt : Real.sqrt F.q < 1 := by
         have h := Real.sqrt_lt_sqrt hq0.le hq1
         simpa only [Real.sqrt_one] using h
       exact hsqrt
-    · rw [if_neg h]
+    · rw [ite_eq_right h]
       exact F.q_lt
   linarith
 
@@ -41,9 +41,9 @@ lemma eta_pos (F : FixedData) (n : ℕ) (i : Fin (n + 1)) : 0 < eta F n i := by
 lemma visitQ_pos (F : FixedData) (n : ℕ) (i : Fin (n + 1)) : 0 < visitQ F.q n i := by
   unfold visitQ
   by_cases h : i.val = 0 ∨ i.val = n
-  · rw [if_pos h]
+  · rw [ite_eq_left h]
     exact Real.sqrt_pos.mpr F.q_pos
-  · rw [if_neg h]
+  · rw [ite_eq_right h]
     exact F.q_pos
 
 /-- tiltedMu is positive from V>0 and baseline>0. -/

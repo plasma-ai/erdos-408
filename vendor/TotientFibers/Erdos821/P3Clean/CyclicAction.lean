@@ -33,12 +33,12 @@ theorem cycleAct_add (e : Equiv.Perm V) (r d : TranslationCycle e) (v : V) :
 theorem cycleAct_step_nsmul (e : Equiv.Perm V) (n : ℕ) :
     cycleAct e (n • cycleStep e) = e ^ n := by
   change ((Additive.toMul (n • cycleStep e)).val : Equiv.Perm V) = e ^ n
-  simp [cycleStep, toMul_nsmul, Subgroup.coe_pow]
+  simp [cycleStep, toMul_nsmul]
 
 theorem cycleAct_step_zsmul (e : Equiv.Perm V) (n : ℤ) :
     cycleAct e (n • cycleStep e) = e ^ n := by
   change ((Additive.toMul (n • cycleStep e)).val : Equiv.Perm V) = e ^ n
-  simp [cycleStep, toMul_zsmul, Subgroup.coe_zpow]
+  simp [cycleStep, toMul_zsmul]
 
 theorem weight_perm_zpow (e : Equiv.Perm V) (weight : V → ℝ)
     (h : ∀ v, weight (e v) = weight v) (n : ℤ) (v : V) : weight ((e ^ n) v) = weight v := by

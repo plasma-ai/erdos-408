@@ -29,6 +29,7 @@ def flattenRows : ProbeSample α M ≃ ProductSample (FlatAlphabet α M) where
 def flatWeight (w : ∀ g, α g → ℝ) : ∀ z : RowSite s M, FlatAlphabet α M z → ℝ :=
   fun z => w z.1
 
+omit [(g : Fin s) → Fintype (α g)] in
 lemma flatWeight_eq (w : ∀ g, α g → ℝ) (x : ProbeSample α M) :
     productWeight (flatWeight w) (flattenRows x) = sampleWeight w x := by
   exact Fintype.prod_prod_type (fun z : RowSite s M => w z.1 (x z.1 z.2))
@@ -42,6 +43,7 @@ lemma flatSqNorm_eq (w : ∀ g, α g → ℝ) (f : ProbeSample α M → ℂ) :
   rw [flatWeight_eq]
   simp [flattenRows]
 
+omit [(g : Fin s) → Fintype (α g)] in
 lemma flat_replace (I : Finset (RowSite s M)) (x y : ProbeSample α M) :
     flattenRows.symm (mixCoords I (flattenRows x) (flattenRows y)) = replaceCoords I x y := by
   funext g i
@@ -82,7 +84,7 @@ lemma flat_fullProbe_energy (w : ∀ g, α g → ℝ) (hsum : ∀ g, ∑ a, w g 
     simpa only [Equiv.apply_symm_apply] using h.symm
   rw [← flatSqNorm_eq, hfun]
   convert productProbeProjection_energy (flatWeight w) (fun z => hsum z.1) tail I
-    (fun y => f (flattenRows.symm y)) using 1 <;> congr! 2
+    (fun y => f (flattenRows.symm y)) using 1
 
 end
 end Erdos821.P4Probe

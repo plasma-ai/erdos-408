@@ -84,7 +84,7 @@ theorem translateMemory_mem (delta : ℤ) {g : P.Group} (w : P.Memory g)
 /-- Every indexed particle occurs in its multiset. -/
 theorem anchorsMemoryEntry_mem {g : P.Group} (z : P.Memory g) (k : Fin z.card) :
     memoryEntry z k ∈ z := by
-  have hget : z.toList.get ⟨k.val, by simpa using k.isLt⟩ ∈ z.toList :=
+  have hget : z.toList.get ⟨k.val, by simp⟩ ∈ z.toList :=
     List.get_mem _ _
   have hmem : memoryEntry z k ∈ z.toList := hget
   have hcoe : memoryEntry z k ∈ ((z.toList : List (P.Particle g)) : Multiset (P.Particle g)) :=

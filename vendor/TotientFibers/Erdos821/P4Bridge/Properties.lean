@@ -99,14 +99,14 @@ lemma sharedLabelMass_rows (ν : Pattern P J ell m) (block : P.BigGroup → Bool
       then P.mu g.val (a g (Fin.natAdd J i)) else 1) = 1 := by
     apply Finset.prod_eq_one
     intro i _
-    rw [if_neg (not_shared_natAdd ν g.val i)]
+    rw [ite_eq_right (not_shared_natAdd ν g.val i)]
   rw [ht, mul_one]
   change _ = ∏ i : {i // i ∈ sharedRows ν g}, P.mu g.val (a g (ν.slot i.val))
   rw [prod_sharedRows ν g (fun i => P.mu g.val (a g (ν.slot i)))]
   apply Finset.prod_congr rfl
   intro i _
   rw [shared_castAdd_iff]
-  by_cases hi : i ∈ ν.changed g.val <;> simp [hi] <;> rfl
+  by_cases hi : i ∈ ν.changed g.val <;> simp [hi]; rfl
 
 lemma matchesBig_rows (ν : Pattern P J ell m) (block : P.BigGroup → Bool)
     (a b : P.BigLabels (J + ell)) :

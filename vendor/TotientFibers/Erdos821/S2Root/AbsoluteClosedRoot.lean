@@ -35,15 +35,15 @@ theorem residueExpectation_visitQ_nonneg {F : FixedData} {P : PrimeGroups}
     intro i hi
     by_cases ha : p.val ∈ Q.active i
     · by_cases hd : (p.val : ℤ) ∣ (y p).val + Q.offset i
-      · simp only [if_pos ha, if_pos hd]
+      · simp only [ite_eq_left ha, ite_eq_left hd]
         norm_num
-      · simp only [if_pos ha, if_neg hd]
+      · simp only [ite_eq_left ha, ite_eq_right hd]
         norm_num
-    · simp only [if_neg ha]
+    · simp only [ite_eq_right ha]
       by_cases hd : (p.val : ℤ) ∣ (y p).val + Q.offset i
-      · simp only [if_pos hd]
+      · simp only [ite_eq_left hd]
         exact visitQ_nonneg F n i
-      · simp only [if_neg hd]
+      · simp only [ite_eq_right hd]
         norm_num
   unfold PrimeGroups.residueExpectation
   apply mul_nonneg

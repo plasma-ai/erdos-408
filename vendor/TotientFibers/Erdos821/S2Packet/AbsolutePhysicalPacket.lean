@@ -35,7 +35,7 @@ lemma physicalRaw_true_eq_ofReal_absolutePhysicalRawReal
   classical
   by_cases hphys : P.physical (J + F.ell) z.1 z.2 ∧
       P.physical (J + F.ell) z'.1 z'.2
-  · simp only [absolutePhysicalRawReal, Model.physicalRaw, if_pos hphys, if_true]
+  · simp only [absolutePhysicalRawReal, Model.physicalRaw, ite_eq_left hphys, ite_true]
     simp only [Complex.ofReal_sum]
     apply Finset.sum_congr rfl
     intro v hv
@@ -102,8 +102,8 @@ lemma absolutePhysicalKernelReal_nonneg
     exact absolutePhysicalRawReal_nonneg A _ _ hP
 
 lemma physicalKernel_true_re_eq_absolutePhysicalKernelReal
-    {F : FixedData} {P : PrimeGroups} {J m : ℕ} {x : ℝ}
-    (A : Model F P J m) (z z' : A.State) (hP : P.Admissible F x) :
+    {F : FixedData} {P : PrimeGroups} {J m : ℕ}
+    (A : Model F P J m) (z z' : A.State) :
     (A.physicalKernel true z z').re = absolutePhysicalKernelReal A z z' := by
   rw [physicalKernel_true_eq_ofReal_absolutePhysicalKernelReal]
   simp
@@ -139,7 +139,7 @@ lemma pattern_D_le_sup_pow {P : PrimeGroups} {J ell m : ℕ}
       Finset.prod_le_pow_card _ _ S (by
         intro z hz
         exact hval z.1 z.2)
-    _ = S ^ (J * P.count) := by simp [S, Finset.card_product, mul_comm]
+    _ = S ^ (J * P.count) := by simp [S, mul_comm]
 
 lemma possiblePhysicalTargets_subset_neighbors {F : FixedData} {P : PrimeGroups}
     {J m : ℕ} (A : Model F P J m) (n : ℤ) :
@@ -168,7 +168,7 @@ lemma possiblePhysicalTargets_subset_neighbors {F : FixedData} {P : PrimeGroups}
     omega
   have hmem' : z.1 ∈ Finset.Icc (n - A.stepBound) (n + A.stepBound) := by
     simpa [htime] using hmem
-  simpa [Model.neighbors, hmem']
+  simp [Model.neighbors, hmem']
 
 lemma possiblePhysicalTargets_reverse_subset_neighbors {F : FixedData} {P : PrimeGroups}
     {J m : ℕ} (A : Model F P J m) (n : ℤ) :

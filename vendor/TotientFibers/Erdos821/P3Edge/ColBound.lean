@@ -16,7 +16,7 @@ open Erdos821.S2Core
 
 variable {F : FixedData} {P : PrimeGroups} {J m : ℕ}
 
-lemma card_le_of_valid (s t b c : ℕ) (M : ℕ) (hb : b ≤ M) (hc : c ≤ M)
+lemma card_le_of_valid (s t b c : ℕ) (M : ℕ) (hb : b ≤ M)
     (h : t = s - b + c) : s ≤ t + M := by
   omega
 
@@ -42,6 +42,6 @@ lemma source_card_bound (A : Model F P J m) {n : ℕ} (i : Fin n)
     calc (c.2.2.2.2.1 g).card ≤ Fintype.card (Fin (J + F.ell)) := Finset.card_le_univ _
       _ = J + F.ell := Fintype.card_fin _
   -- hcard : tcard = scard - bcard + ccard
-  exact card_le_of_valid _ _ _ _ _ hb hc hcard
+  exact card_le_of_valid _ _ _ _ _ hb hcard
 
 end Erdos821.P3Edge

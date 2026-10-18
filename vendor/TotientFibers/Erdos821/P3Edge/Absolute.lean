@@ -77,7 +77,7 @@ lemma edgeChoiceCoefficient_norm_le (A : Model F P J m) (n : ℕ) (rho theta : �
     rw [norm_mul, norm_mul, Complex.norm_real, Real.norm_eq_abs, hphase, mul_one,
       mul_comm A.patternMass _]
     exact mul_le_mul_of_nonneg_left hz (abs_nonneg _)
-  · rw [if_neg hf] at ⊢
+  · rw [ite_eq_right hf] at ⊢
     have hz := hcoeff (P.restrictBig (permuteActive c.2.1 t).2.1)
       (P.restrictBig (permuteActive c.1 s).2.1) (fun g => c.2.2.2.1 g.val)
     rw [norm_mul, norm_mul, norm_star, Complex.norm_real, Real.norm_eq_abs,

@@ -14,7 +14,7 @@ def productLaw {ι : Type*} [Fintype ι] {α : ι → Type*}
 
 theorem productLaw_nonneg {ι : Type*} [Fintype ι] {α : ι → Type*}
     (w : ∀ i, α i → ℝ) (hw : ∀ i a, 0 ≤ w i a) (z : ∀ i, α i) :
-    0 ≤ productLaw w z := Finset.prod_nonneg (fun i hi => hw i (z i))
+    0 ≤ productLaw w z := Finset.prod_nonneg (fun i _ => hw i (z i))
 
 theorem productLaw_sum {ι : Type*} [Fintype ι] [DecidableEq ι] {α : ι → Type*} [∀ i, Fintype (α i)]
     (w : ∀ i, α i → ℝ) (hs : ∀ i, (∑ a, w i a) = 1) :

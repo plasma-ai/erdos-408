@@ -125,11 +125,11 @@ abbrev product_atom_bound_statement : Prop :=
 abbrev collapse_l2_statement : Prop :=
   ∀ (G : PrimeGroups) (k : Fin G.size → ℕ)
     (f : Tuple G k → ℂ) (s : Finset ℕ) (R : ℝ)
-    (hR : 0 ≤ R) (hρ : ∀ n ∈ s, rho G k n ≤ R),
+    (_ : 0 ≤ R) (_ : ∀ n ∈ s, rho G k n ≤ R),
     sqNorm s (collapse G k f) ≤ R * (tupleNorm G k f) ^ 2
 /-- §3, Lemma integer bilinear estimate. Origins N and M are unrestricted. -/
 abbrev integer_bilinear_statement : Prop :=
-  ∀ (C : ℝ) (hC : 0 < C),
+  ∀ (C : ℝ) (_ : 0 < C),
     ∃ K : ℝ, 0 < K ∧ ∀ (U V N M α β : ℝ) (u : ℤ) (r : ℕ)
       (s t : Finset ℤ) (a b : ℤ → ℂ),
       1 ≤ U → 1 ≤ V → 1 ≤ r → Nat.Coprime u.natAbs r →
@@ -141,7 +141,7 @@ abbrev integer_bilinear_statement : Prop :=
           Real.sqrt (U + (1 + V / r) * (U + r * Real.log (2 * r)))
 abbrev cell_kernel_sup_statement : Prop :=
   ∀ (G : PrimeGroups) (k : Fin G.size → ℕ)
-    (Q : ℕ) (h ξ : ℝ) (hξ : 0 < ξ) (D X : ℕ),
+    (Q : ℕ) (h ξ : ℝ) (_ : 0 < ξ) (D X : ℕ),
     ‖cellKernel G k Q h ξ D X‖ ≤ (Q : ℝ) ^ 2 / ξ
 def comparisonError (G : PrimeGroups) (a b : Fin G.size → ℕ)
     (Q : ℕ) (h ξ α ζ : ℝ) (f : Tuple G b → ℂ) (g : Tuple G a → ℂ) : ℂ :=
@@ -156,7 +156,7 @@ def comparisonError (G : PrimeGroups) (a b : Fin G.size → ℕ)
 /-- §3 comparison kernel; Q is rounded down, h and ξ are exact real powers. -/
 abbrev comparison_kernel_statement : Prop :=
   ∀ (P : Geometry) (m : ℕ) (A C₄ : ℝ)
-    (hA : 0 < A) (hC₄ : 0 ≤ C₄),
+    (_ : 0 < A) (_ : 0 ≤ C₄),
     ∃ qexp hexp ξexp : ℝ, 0 < qexp ∧ 0 < hexp ∧ 0 < ξexp ∧
       ∀ᶠ x in atTop, ∀ G : PrimeGroups, Admissible P x G →
         ∀ a b, bigSlots G a m → bigSlots G b m →
@@ -166,14 +166,14 @@ abbrev comparison_kernel_statement : Prop :=
             (L x ^ (-ξexp)) α ζ f g‖ ≤ L x ^ (-A) * tupleNorm G b f * tupleNorm G a g
 /-- §3 Hoeffding fraction; cast BEFORE division, and require feasible cardinalities. -/
 abbrev hoeffding_fraction_statement : Prop :=
-  ∀ (M m ell j : ℕ) (hml : m + ell ≤ M)
-    (hmj : m ≤ j) (hje : j + ell ≤ M),
+  ∀ (M m ell j : ℕ) (_ : m + ell ≤ M)
+    (_ : m ≤ j) (_ : j + ell ≤ M),
     (Nat.choose (M - m - ell) (j - m) : ℝ) / Nat.choose M j =
       ((Nat.descFactorial j m : ℝ) * Nat.descFactorial (M - j) ell) /
         Nat.descFactorial M (m + ell)
 abbrev hoeffding_fraction_bound_statement : Prop :=
-  ∀ (M m ell j : ℕ) (hm : 1 ≤ m) (he : 1 ≤ ell)
-    (hM : (m + ell) * (m + ell - 1) ≤ M) (hj : j ≤ M),
+  ∀ (M m ell j : ℕ) (_ : 1 ≤ m) (_ : 1 ≤ ell)
+    (_ : (m + ell) * (m + ell - 1) ≤ M) (_ : j ≤ M),
     ((Nat.descFactorial j m : ℝ) * Nat.descFactorial (M - j) ell) /
       Nat.descFactorial M (m + ell) ≤ 2 * (ell : ℝ) ^ ell / (m : ℝ) ^ ell
 -- `inclusion_exclusion` is proved in `Erdos821/Leaves/`.
@@ -247,7 +247,7 @@ def shiftCorrelation (P : Geometry) (G : PrimeGroups) (x Z a₁ a₂ : ℝ)
 
 abbrev lifted_shift_statement : Prop :=
   ∀ (P : Geometry) (D C τ η lo hi : ℝ) (bounds : ℕ → ℝ)
-    (hD : 0 < D) (hC : 0 < C) (hI : 0 < lo ∧ lo < hi),
+    (_ : 0 < D) (_ : 0 < C) (_ : 0 < lo ∧ lo < hi),
     ∃ B K : ℝ, 0 < B ∧ 0 < K ∧ ∀ᶠ x in atTop,
       ∀ (G : PrimeGroups) (F H : Endpoint) (k : ℤ) (Z a₁ a₂ : ℝ) (Ψ : ℝ → ℂ),
       Admissible P x G → EndpointBound x C τ η F → EndpointBound x C τ η H →
@@ -275,8 +275,8 @@ abbrev sparse_residual_statement : Prop :=
         K * A * Real.log (2 * Y)
 /-- §4 long rough-integer polynomial. The variable n ranges over integers, not primes. -/
 abbrev long_rough_polynomial_statement : Prop :=
-  ∀ (τ η C A : ℝ) (hτ : 0 < τ) (hη : η < 1 / 4)
-    (hC : 0 < C) (hA : 0 < A),
+  ∀ (τ η C A : ℝ) (_ : 0 < τ) (_ : η < 1 / 4)
+    (_ : 0 < C) (_ : 0 < A),
     ∃ B₀ K : ℝ, 0 < B₀ ∧ 0 < K ∧ ∀ᶠ x in atTop,
       ∀ (P lo hi σ t : ℝ) (r : ℕ) (χ : DirichletCharacter ℂ r),
       x ^ τ / 2 ≤ P → P ≤ x ^ η → P ≤ lo → lo ≤ hi → hi ≤ 2 * P →

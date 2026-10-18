@@ -30,7 +30,7 @@ theorem eventual_comparison_cell_cancellation
       ∀ᶠ x : ℝ in atTop,
         ∀ (G : PrimeGroups) (J Q : ℕ) (ν : Pattern G.graph J P.ell m)
           (block : G.graph.BigGroup → Bool) (j : ℤ × ℤ)
-          (χA χB : CharacterIndex Q) (z : SharedDraw ν)
+          (χA χB : CharacterIndex Q) (_ : SharedDraw ν)
           (E H : Endpoint) (Z a₁ a₂ : ℝ) (Ψ : ℝ → ℂ) (k : ℤ),
           Admissible P x G →
           (∀ side : Bool, ∃ g : G.graph.BigGroup,
@@ -67,7 +67,7 @@ theorem eventual_comparison_cell_cancellation
   let S : Set (Fin 1 → ℝ) := {ξ | ‖ξ‖ ≤ L x ^ Cf}
   have hS : MeasurableSet S := measurableSet_le measurable_norm measurable_const
   have htail : (∫ ξ in Sᶜ, ‖α ξ‖) ≤ KA * L x ^ (-(D + |Rcost| + 1)) := by
-    simpa only [S, Set.compl_setOf, not_le] using hαtail
+    simpa only [S, Set.compl_ofPred, not_le] using hαtail
   have hv (ξ : Fin 1 → ℝ) (hξ : ξ ∈ S) : |mellinFrequency ξ| ≤ L x ^ (max C Cf + 1) := by
     have hz : |(0 : ℝ)| ≤ L x ^ C := by simp; positivity
     simpa only [sub_zero, zero_sub, abs_neg] using hfreq 0 0 0 ξ hz hz (by ring) hξ

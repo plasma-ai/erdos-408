@@ -70,7 +70,7 @@ theorem sieveCoefficient_polynomial_eq (α : Type) (S : Blueprint.SieveData α)
       exact Finset.mem_filter.mpr ⟨hT s hs hp, hb p hp⟩
     · intro hb p hp
       exact (Finset.mem_filter.mp (hb hp)).2
-  simp only [sieveCoefficient, if_pos hmem, hpf s hs, Blueprint.SieveData.monomial,
+  simp only [sieveCoefficient, ite_eq_left hmem, hpf s hs, Blueprint.SieveData.monomial,
     hiff]
   split_ifs <;> simp
 
@@ -146,7 +146,7 @@ theorem exists_sieve_polynomials (α : Type) (S : Blueprint.SieveData α)
     have hiff : badFinset α S a = ∅ ↔ ∀ p ∈ S.primes, ¬ S.bad p a := by
       unfold badFinset
       exact Finset.filter_eq_empty_iff
-    have hcov := badFinset_covered α S z hdb.1 N hN η C hdb a
+    have hcov := badFinset_covered α S z N hN η C hdb a
     have heJ : ∀ j ∈ Finset.range N, Even ((j + 1) * h) := fun j _ => he.mul_left _
     dsimp only
     rw [hdiff, hU, hV]

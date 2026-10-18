@@ -129,14 +129,14 @@ theorem birthPrefixAfter_mono (i j : Fin (n + 1)) (hij : i ≤ j) :
     apply Finset.sum_le_sum
     intro k _
     by_cases hj : k.val ≤ j.val <;> by_cases hi : k.val ≤ i.val <;>
-      simp [hi, hj] <;> omega
+      simp [hi, hj]; omega
   have hf :
       (∑ e : Fin n, if e.val < i.val then H.freshBirthValues e else 0) ≤
         ∑ e : Fin n, if e.val < j.val then H.freshBirthValues e else 0 := by
     apply Finset.sum_le_sum
     intro e _
     by_cases hj : e.val < j.val <;> by_cases hi : e.val < i.val <;>
-      simp [hi, hj] <;> omega
+      simp [hi, hj]; omega
   unfold birthPrefixAfter
   exact add_le_add (add_le_add (le_refl _) hg) hf
 
@@ -170,7 +170,7 @@ theorem birthPrefixAfter_le_before_of_lt (b j : Fin (n + 1)) (hbj : b < j) :
     intro k _
     by_cases hleft : k.val ≤ b.val
     · have hright : k.val < j.val := by
-        exact lt_of_le_of_lt hleft (Fin.lt_iff_val_lt_val.mp hbj)
+        exact lt_of_le_of_lt hleft (Fin.lt_def.mp hbj)
       simp [hleft, hright]
     · simp [hleft]
   have hf :
@@ -179,7 +179,7 @@ theorem birthPrefixAfter_le_before_of_lt (b j : Fin (n + 1)) (hbj : b < j) :
     apply Finset.sum_le_sum
     intro e _
     by_cases hleft : e.val < b.val
-    · have hright : e.val < j.val := lt_trans hleft (Fin.lt_iff_val_lt_val.mp hbj)
+    · have hright : e.val < j.val := lt_trans hleft (Fin.lt_def.mp hbj)
       simp [hleft, hright]
     · simp [hleft]
   unfold birthPrefixAfter birthPrefixBefore
@@ -252,7 +252,7 @@ theorem birthPrefixBefore_le_after (i : Fin (n + 1)) :
     apply Finset.sum_le_sum
     intro k _
     by_cases hlt : k.val < i.val <;> by_cases hle : k.val ≤ i.val <;>
-      simp [hlt, hle] <;> omega
+      simp [hlt, hle]; omega
   unfold birthPrefixBefore birthPrefixAfter
   exact add_le_add (add_le_add (le_refl _) hg) le_rfl
 
@@ -297,7 +297,7 @@ theorem liveVisits_mem {g : P.BigGroup} {p : P.Prime g.val} {i : Fin (n + 1)}
     p.val ∈ liveValues (H.before i) ∨ p.val ∈ liveValues (H.after i) :=
   (Finset.mem_filter.mp hi).2
 
-theorem activeVisits_subset_liveVisits {hH : H.Valid} (g : P.BigGroup) (p : P.Prime g.val) :
+theorem activeVisits_subset_liveVisits (g : P.BigGroup) (p : P.Prime g.val) :
     (H.toResiduePath.activeVisits g p) ⊆ H.liveVisits g p := by
   intro i hi
   have hlabel : ∃ j : Fin (J + F.ell), (H.before i).2.1 g.val j = p := by
@@ -403,7 +403,6 @@ theorem no_pendingBefore_min (hH : H.Valid) (hd : H.DistinctBirths)
   intro hp
   by_cases hb0 : b = 0
   · have hpB : p ∈ pendingPrimes ((H.before b).2.2 g) := by
-      change p ∈ pendingPrimes ((H.before b).2.2 g)
       exact hp
     have hp0 : p ∈ pendingPrimes ((H.before 0).2.2 g) := by
       simpa only [hb0] using hpB
@@ -413,7 +412,7 @@ theorem no_pendingBefore_min (hH : H.Valid) (hd : H.DistinctBirths)
         _ = pendingPrimes (0 : P.Memory g.val) := congrArg pendingPrimes hzero
         _ = 0 := by simp [pendingPrimes]
     have hp0 := Eq.mp (congrArg (fun z : Multiset (P.Prime g.val) => p ∈ z) hzeroP) hp0
-    simpa using hp0
+    simp at hp0
   · have hbpos : 0 < b.val := by
       by_contra h
       have heq : b.val = 0 := Nat.eq_zero_of_not_pos h
@@ -433,7 +432,7 @@ theorem no_pendingBefore_min (hH : H.Valid) (hd : H.DistinctBirths)
       simp only [Fin.val_castSucc]
       dsimp [e]
       omega
-    have hlt : e.castSucc < b := Fin.lt_iff_val_lt_val.mpr hltVal
+    have hlt : e.castSucc < b := Fin.lt_def.mpr hltVal
     exact (not_lt_of_ge hmin) hlt
 
 theorem no_pendingAfter_max (hH : H.Valid) (hd : H.DistinctBirths)
@@ -443,7 +442,6 @@ theorem no_pendingAfter_max (hH : H.Valid) (hd : H.DistinctBirths)
   intro hp
   by_cases hlast : s = Fin.last n
   · have hpS : p ∈ pendingPrimes ((H.after s).2.2 g) := by
-      change p ∈ pendingPrimes ((H.after s).2.2 g)
       exact hp
     have hpLast : p ∈ pendingPrimes ((H.after (Fin.last n)).2.2 g) := by
       simpa only [hlast] using hpS
@@ -453,7 +451,7 @@ theorem no_pendingAfter_max (hH : H.Valid) (hd : H.DistinctBirths)
         _ = pendingPrimes (0 : P.Memory g.val) := congrArg pendingPrimes hzero
         _ = 0 := by simp [pendingPrimes]
     have hp0 := Eq.mp (congrArg (fun z : Multiset (P.Prime g.val) => p ∈ z) hzeroP) hpLast
-    simpa using hp0
+    simp at hp0
   · have hslt : s.val < n := by
       have hsle : s.val ≤ n := Nat.lt_succ_iff.mp s.isLt
       have hsne : s.val ≠ n := by
@@ -469,7 +467,7 @@ theorem no_pendingAfter_max (hH : H.Valid) (hd : H.DistinctBirths)
       Finset.mem_filter.mpr ⟨Finset.mem_univ _, Or.inl hnext⟩
     have hmax : e.succ ≤ s := Finset.le_max' _ _ hnextVisit
     have hlt : s < e.succ := by
-      apply Fin.lt_iff_val_lt_val.mpr
+      apply Fin.lt_def.mpr
       dsimp [e]
       omega
     exact (not_lt_of_ge hmax) hlt
@@ -689,7 +687,7 @@ theorem lifeAssignment_lifespanValid (hH : H.Valid) (hd : H.DistinctBirths)
       have hStopNoPending := H.no_pendingAfter_max hH hd g p hL
       exact hStopNoPending (by simpa [L, birth, stop, hEq] using hBirthPending)
     · intro i hi
-      have hmem : i ∈ L := H.activeVisits_subset_liveVisits (hH := hH) g p hi
+      have hmem : i ∈ L := H.activeVisits_subset_liveVisits g p hi
       exact ⟨Finset.min'_le L i hmem, Finset.le_max' L i hmem⟩
     · have hBirth := H.firstOffset_eq_anchor hH hd hAnch g p hL
       have hStop := H.lastOffset_eq_anchor hH hd hAnch g p hL
@@ -706,7 +704,7 @@ theorem lifeAssignment_lifespanValid (hH : H.Valid) (hd : H.DistinctBirths)
     unfold ResiduePath.spanValid
     apply Finset.eq_empty_iff_forall_notMem.mpr
     intro i hi
-    exact hL ⟨i, H.activeVisits_subset_liveVisits (hH := hH) g p hi⟩
+    exact hL ⟨i, H.activeVisits_subset_liveVisits g p hi⟩
 
 
 theorem live_interval_global (hH : H.Valid) (hd : H.DistinctBirths) (p : ℕ) :
@@ -783,7 +781,7 @@ theorem live_after_before_stop (hH : H.Valid) (hd : H.DistinctBirths)
   have hend := H.liveVisits_mem (Finset.max'_mem (H.liveVisits g p) hL)
   have hnext : i.succ ≤ s := by
     apply Fin.le_iff_val_le_val.mpr
-    have hlt0 := Fin.lt_iff_val_lt_val.mp (by simpa [s] using hi)
+    have hlt0 := Fin.lt_def.mp (by simpa [s] using hi)
     have hlt : i.val < s.val := by simpa only [Fin.val_castSucc] using hlt0
     simpa only [Fin.val_succ] using (Nat.succ_le_of_lt hlt)
   have hAt := H.live_interval_global hH hd p s b hbs hpref hend i.succ
@@ -868,7 +866,7 @@ theorem pendingAfter_iff_memory (hH : H.Valid) (hd : H.DistinctBirths)
     constructor
     · rintro ⟨hbi, his, hnot⟩
       have hilt : i.val < n := by
-        have hlt := Fin.lt_iff_val_lt_val.mp his
+        have hlt := Fin.lt_def.mp his
         have hstop := stop.isLt
         omega
       let e : Fin n := ⟨i.val, hilt⟩

@@ -43,7 +43,7 @@ def bigSignedCoefficient (A : Model F P J m) (ν : Pattern P J F.ell m) (forward
 theorem imaginaryPower_norm (n : ℕ) (zeta : ℝ) : ‖imaginaryPower n zeta‖ = 1 := by
   simp only [imaginaryPower, Complex.norm_exp, Complex.mul_re, Complex.mul_im,
     Complex.ofReal_re, Complex.ofReal_im, Complex.I_re, Complex.I_im, mul_zero,
-    zero_mul, mul_one, add_zero, zero_add, sub_zero, Real.exp_zero]
+    zero_mul, mul_one, add_zero, sub_zero, Real.exp_zero]
 
 theorem smallSignedCoefficient_norm (A : Model F P J m) (forward : Bool) (d : SmallLabels P J) :
     ‖smallSignedCoefficient A forward d‖ = 1 := by

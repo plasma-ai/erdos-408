@@ -39,93 +39,98 @@ open Finset
 variable {ιb : Type*} [DecidableEq ιb]
 
 /-- One-block inclusion–exclusion value at the bad count of the block. -/
-def blkU (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) (j : ιb) : ℝ :=
+def blkU (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) (j : ιb) : ℝ :=
   ((SieveCalculus.blockUpper (e j) ((bad ∩ B j).card) : ℤ) : ℝ)
 
 /-- One-block avoidance indicator. -/
-def blkI (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) (j : ιb) : ℝ :=
+def blkI (B : ιb → Finset ℕ) (bad : Finset ℕ) (j : ιb) : ℝ :=
   if bad ∩ B j = ∅ then 1 else 0
 
 /-- One-block degree-`(e_j+1)` error value. -/
-def blkE (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) (j : ιb) : ℝ :=
+def blkE (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) (j : ιb) : ℝ :=
   (((bad ∩ B j).card.choose (e j + 1) : ℕ) : ℝ)
 
 /-- Upper polynomial value: product of block values. -/
 def Uval (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) : ℝ :=
-  ∏ j ∈ J, blkU J B e bad j
+  ∏ j ∈ J, blkU B e bad j
 
 /-- Lower polynomial value: upper minus the correction sum. -/
 def Vval (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) : ℝ :=
-  Uval J B e bad - ∑ j ∈ J, blkE J B e bad j * ∏ k ∈ J.erase j, blkU J B e bad k
+  Uval J B e bad - ∑ j ∈ J, blkE B e bad j * ∏ k ∈ J.erase j, blkU B e bad k
 
+omit [DecidableEq ιb] in
 theorem blkU_nonneg (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) (he : ∀ j ∈ J, Even (e j)) {j : ιb} (hj : j ∈ J) :
-    0 ≤ blkU J B e bad j := by
+    0 ≤ blkU B e bad j := by
   by_cases hempty : bad ∩ B j = ∅
   · have ht0 : (bad ∩ B j).card = 0 := Finset.card_eq_zero.mpr hempty
-    have gU : blkU J B e bad j
+    have gU : blkU B e bad j
         = ((SieveCalculus.blockUpper (e j) ((bad ∩ B j).card) : ℤ) : ℝ) := rfl
     rw [gU, ht0, SieveCalculus.blockUpper_zero, Int.cast_one]
     exact zero_le_one
   · have ht1 : 1 ≤ (bad ∩ B j).card := Nat.pos_of_ne_zero (fun hcon =>
       hempty (Finset.card_eq_zero.mp hcon))
     have h := SieveCalculus.blockUpper_nonneg_of_even (e j) _ (he j hj) ht1
-    have gU : blkU J B e bad j
+    have gU : blkU B e bad j
         = ((SieveCalculus.blockUpper (e j) ((bad ∩ B j).card) : ℤ) : ℝ) := rfl
     rw [gU]
     exact_mod_cast h
 
-theorem blkI_nonneg (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) {j : ιb} : 0 ≤ blkI J B e bad j := by
+omit [DecidableEq ιb] in
+theorem blkI_nonneg (B : ιb → Finset ℕ) (bad : Finset ℕ) {j : ιb} : 0 ≤ blkI B bad j := by
   simp only [blkI]
   split_ifs <;> norm_num
 
+omit [DecidableEq ιb] in
 theorem blkI_le_blkU (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) (he : ∀ j ∈ J, Even (e j)) {j : ιb} (hj : j ∈ J) :
-    blkI J B e bad j ≤ blkU J B e bad j := by
+    blkI B bad j ≤ blkU B e bad j := by
   by_cases hempty : bad ∩ B j = ∅
   · have ht0 : (bad ∩ B j).card = 0 := Finset.card_eq_zero.mpr hempty
-    have gU : blkU J B e bad j
+    have gU : blkU B e bad j
         = ((SieveCalculus.blockUpper (e j) ((bad ∩ B j).card) : ℤ) : ℝ) := rfl
-    have gI : blkI J B e bad j = 1 := by simp only [blkI, if_pos hempty]
+    have gI : blkI B bad j = 1 := by simp only [blkI, ite_eq_left hempty]
     rw [gU, gI, ht0, SieveCalculus.blockUpper_zero, Int.cast_one]
-  · have gI : blkI J B e bad j = 0 := by simp only [blkI, if_neg hempty]
+  · have gI : blkI B bad j = 0 := by simp only [blkI, ite_eq_right hempty]
     rw [gI]
     exact blkU_nonneg J B e bad he hj
 
+omit [DecidableEq ιb] in
 theorem blkU_sub_blkI_le_blkE (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) (he : ∀ j ∈ J, Even (e j)) {j : ιb} (hj : j ∈ J) :
-    blkU J B e bad j - blkI J B e bad j ≤ blkE J B e bad j := by
+    blkU B e bad j - blkI B bad j ≤ blkE B e bad j := by
   by_cases hempty : bad ∩ B j = ∅
   · have ht0 : (bad ∩ B j).card = 0 := Finset.card_eq_zero.mpr hempty
-    have gU : blkU J B e bad j
+    have gU : blkU B e bad j
         = ((SieveCalculus.blockUpper (e j) ((bad ∩ B j).card) : ℤ) : ℝ) := rfl
-    have gI : blkI J B e bad j = 1 := by simp only [blkI, if_pos hempty]
-    have gE : blkE J B e bad j
+    have gI : blkI B bad j = 1 := by simp only [blkI, ite_eq_left hempty]
+    have gE : blkE B e bad j
         = ((((bad ∩ B j).card.choose (e j + 1) : ℕ)) : ℝ) := rfl
     rw [gU, gI, gE, ht0, SieveCalculus.blockUpper_zero, Int.cast_one, sub_self]
     exact Nat.cast_nonneg _
   · have htne : (bad ∩ B j).card ≠ 0 := fun hcon =>
       hempty (Finset.card_eq_zero.mp hcon)
     have ht1 : 1 ≤ (bad ∩ B j).card := Nat.pos_of_ne_zero htne
-    have gU : blkU J B e bad j
+    have gU : blkU B e bad j
         = ((SieveCalculus.blockUpper (e j) ((bad ∩ B j).card) : ℤ) : ℝ) := rfl
-    have gI : blkI J B e bad j = 0 := by simp only [blkI, if_neg hempty]
-    have gE : blkE J B e bad j
+    have gI : blkI B bad j = 0 := by simp only [blkI, ite_eq_right hempty]
+    have gE : blkE B e bad j
         = ((((bad ∩ B j).card.choose (e j + 1) : ℕ)) : ℝ) := rfl
     rw [gU, gI, gE, sub_zero]
     have h := SieveCalculus.blockUpper_sub_indicator_le_error (e j)
       ((bad ∩ B j).card) (he j hj)
-    rw [if_neg htne, sub_zero] at h
+    rw [ite_eq_right htne, sub_zero] at h
     exact_mod_cast h
 
+omit [DecidableEq ιb] in
 /-- The product of block avoidances is the global avoidance indicator
 (needs every bad prime to live in some block). -/
-theorem prod_blkI_eq_avoid (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) (hcov : bad ⊆ J.biUnion B) :
-    ∏ j ∈ J, blkI J B e bad j = (if bad = ∅ then (1 : ℝ) else 0) := by
+theorem prod_blkI_eq_avoid (J : Finset ιb) (B : ιb → Finset ℕ) (bad : Finset ℕ) (hcov : bad ⊆ J.biUnion B) :
+    ∏ j ∈ J, blkI B bad j = (if bad = ∅ then (1 : ℝ) else 0) := by
   by_cases hb : bad = ∅
-  · simp only [if_pos hb]
+  · simp only [ite_eq_left hb]
     apply Finset.prod_eq_one
     intro j _
     simp only [blkI]
     simp [hb]
-  · simp only [if_neg hb]
+  · simp only [ite_eq_right hb]
     obtain ⟨p, hpb⟩ := Finset.nonempty_iff_ne_empty.mpr hb
     have hcovp := hcov hpb
     rw [Finset.mem_biUnion] at hcovp
@@ -136,37 +141,39 @@ theorem prod_blkI_eq_avoid (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb �
       have hmem : p ∈ bad ∩ B j := Finset.mem_inter.mpr ⟨hpb, hjB⟩
       rw [hcon] at hmem
       exact Finset.notMem_empty p hmem
-    simp only [blkI, if_neg hne]
+    simp only [blkI, ite_eq_right hne]
 
+omit [DecidableEq ιb] in
 /-- The paper's `1_{no bad} ≤ U`: the upper value dominates avoidance. -/
 theorem Uval_ge_avoid (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) (hcov : bad ⊆ J.biUnion B)
     (he : ∀ j ∈ J, Even (e j)) :
     (if bad = ∅ then (1 : ℝ) else 0) ≤ Uval J B e bad := by
-  have hle := SieveCalculus.prod_le_prod_of_nonneg_le J (blkI J B e bad)
-    (blkU J B e bad) (fun j _ => blkI_nonneg J B e bad)
+  have hle := SieveCalculus.prod_le_prod_of_nonneg_le J (blkI B bad)
+    (blkU B e bad) (fun j _ => blkI_nonneg B bad)
     (fun j hj => blkI_le_blkU J B e bad he hj)
-  rw [prod_blkI_eq_avoid J B e bad hcov] at hle
-  show (if bad = ∅ then (1 : ℝ) else 0) ≤ ∏ j ∈ J, blkU J B e bad j
+  rw [prod_blkI_eq_avoid J B bad hcov] at hle
+  show (if bad = ∅ then (1 : ℝ) else 0) ≤ ∏ j ∈ J, blkU B e bad j
   exact hle
 
+omit [DecidableEq ιb] in
 /-- The paper's `U ≥ 0`. -/
 theorem Uval_nonneg (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) (he : ∀ j ∈ J, Even (e j)) : 0 ≤ Uval J B e bad :=
-  Finset.prod_nonneg (fun j hj => blkU_nonneg J B e bad he hj)
+  Finset.prod_nonneg (fun _ hj => blkU_nonneg J B e bad he hj)
 
 /-- The paper's `V ≤ 1_{no bad}`: the lower value is below avoidance,
 by the telescoping inequality. -/
 theorem Vval_le_avoid (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) (hcov : bad ⊆ J.biUnion B)
     (he : ∀ j ∈ J, Even (e j)) :
     Vval J B e bad ≤ (if bad = ∅ then (1 : ℝ) else 0) := by
-  have htele := SieveCalculus.prod_telescope_le J (blkI J B e bad)
-    (blkU J B e bad) (blkE J B e bad)
-    (fun j _ => blkI_nonneg J B e bad)
+  have htele := SieveCalculus.prod_telescope_le J (blkI B bad)
+    (blkU B e bad) (blkE B e bad)
+    (fun j _ => blkI_nonneg B bad)
     (fun j hj => blkI_le_blkU J B e bad he hj)
     (fun j hj => blkU_sub_blkI_le_blkE J B e bad he hj)
-  have hprod := prod_blkI_eq_avoid J B e bad hcov
+  have hprod := prod_blkI_eq_avoid J B bad hcov
   have hV : Vval J B e bad
-      = ∏ j ∈ J, blkU J B e bad j
-        - ∑ j ∈ J, blkE J B e bad j * ∏ k ∈ J.erase j, blkU J B e bad k := rfl
+      = ∏ j ∈ J, blkU B e bad j
+        - ∑ j ∈ J, blkE B e bad j * ∏ k ∈ J.erase j, blkU B e bad k := rfl
   rw [hV]
   rw [hprod] at htele
   linarith
@@ -183,19 +190,19 @@ theorem overcount_le_sub (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → 
 theorem Uval_sub_Vval_nonneg (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ) (bad : Finset ℕ) (he : ∀ j ∈ J, Even (e j)) :
     0 ≤ Uval J B e bad - Vval J B e bad := by
   have hV : Uval J B e bad - Vval J B e bad
-      = ∑ j ∈ J, blkE J B e bad j * ∏ k ∈ J.erase j, blkU J B e bad k := by
+      = ∑ j ∈ J, blkE B e bad j * ∏ k ∈ J.erase j, blkU B e bad k := by
     show Uval J B e bad
         - (Uval J B e bad
-          - ∑ j ∈ J, blkE J B e bad j * ∏ k ∈ J.erase j, blkU J B e bad k)
-        = ∑ j ∈ J, blkE J B e bad j * ∏ k ∈ J.erase j, blkU J B e bad k
+          - ∑ j ∈ J, blkE B e bad j * ∏ k ∈ J.erase j, blkU B e bad k)
+        = ∑ j ∈ J, blkE B e bad j * ∏ k ∈ J.erase j, blkU B e bad k
     rw [sub_sub_cancel]
   rw [hV]
   apply Finset.sum_nonneg
   intro j hj
-  have hE0 : 0 ≤ blkE J B e bad j := by
+  have hE0 : 0 ≤ blkE B e bad j := by
     simp only [blkE]
     exact Nat.cast_nonneg _
-  have hP0 : 0 ≤ ∏ k ∈ J.erase j, blkU J B e bad k := by
+  have hP0 : 0 ≤ ∏ k ∈ J.erase j, blkU B e bad k := by
     apply Finset.prod_nonneg
     intro k hk
     exact blkU_nonneg J B e bad he (Finset.mem_of_mem_erase hk)
@@ -210,6 +217,7 @@ def SieveSupport (P : Finset ℕ) (J : Finset ιb) (B : ιb → Finset ℕ)
     (e : ιb → ℕ) : Finset (Finset ℕ) :=
   P.powerset.filter (fun d => ∀ j ∈ J, (d ∩ B j).card ≤ e j)
 
+omit [DecidableEq ιb] in
 theorem mem_sieveSupport (P : Finset ℕ) (J : Finset ιb) (B : ιb → Finset ℕ)
     (e : ιb → ℕ) (d : Finset ℕ) :
     d ∈ SieveSupport P J B e ↔ d ⊆ P ∧ ∀ j ∈ J, (d ∩ B j).card ≤ e j := by
@@ -240,14 +248,14 @@ theorem blockSubsetSum_eq (e : ℕ) (T : Finset ℕ) :
       have hxe : ¬ x ≤ e := by
         intro hle2
         exact hx (Finset.mem_range.mpr (Nat.lt_succ_of_le hle2))
-      rw [if_neg hxe, smul_zero]
+      rw [ite_eq_right hxe, smul_zero]
     rw [← Finset.sum_subset hsub hvan]
     apply Finset.sum_congr rfl
     intro m hm
     have hme : m ≤ e := by
       have hmr := Finset.mem_range.mp hm
       omega
-    rw [if_pos hme, nsmul_eq_mul, mul_comm]
+    rw [ite_eq_left hme, nsmul_eq_mul, mul_comm]
   · have hlt : T.card < e := by omega
     have hsub : Finset.range (T.card + 1) ⊆ Finset.range (e + 1) := by
       intro x hx
@@ -266,7 +274,7 @@ theorem blockSubsetSum_eq (e : ℕ) (T : Finset ℕ) :
     have hme : m ≤ e := by
       have hmr := Finset.mem_range.mp hm
       omega
-    rw [if_pos hme, nsmul_eq_mul, mul_comm]
+    rw [ite_eq_left hme, nsmul_eq_mul, mul_comm]
 
 /-- Sieve coefficients have absolute value one (paper: "absolute
 coefficients at most one"). -/
@@ -274,6 +282,7 @@ theorem sieve_coeff_abs_eq_one (d : Finset ℕ) :
     |(-1 : ℤ) ^ (d.card)| = 1 := by
   rcases neg_one_pow_eq_or ℤ d.card with h | h <;> simp [h]
 
+omit [DecidableEq ιb] in
 /-- Level bound: a constrained index has product at most the per-block cap
 powers (`z^{4h+2}` in the paper follows from the geometric block choice).
 Needs the index covered by the blocks and the blocks disjoint. -/
@@ -326,6 +335,7 @@ theorem sieve_prod_le (J : Finset ιb) (B : ιb → Finset ℕ) (e : ιb → ℕ
             _ ≤ Z j ^ (e j) :=
                 Nat.pow_le_pow_right (by have h := hZ1 j hj; omega) (hcon j hj)
 
+omit [DecidableEq ιb] in
 /-- Level bound on the support: every supported index satisfies the
 product cap (with ambient covered by the blocks). -/
 theorem sieveSupport_prod_le (P : Finset ℕ) (J : Finset ιb) (B : ιb → Finset ℕ)

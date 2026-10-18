@@ -32,19 +32,19 @@ theorem refreshKernel_eq_prod {I : Type*} [Fintype I] {α : I → Type*}
       ∏ i, if shared i then (if a i = b i then 1 else 0) else mu i (b i) := by
   classical
   by_cases h : refreshMatches shared a b
-  · simp only [refreshKernel, if_pos h, refreshMass]
+  · simp only [refreshKernel, ite_eq_left h, refreshMass]
     apply Finset.prod_congr rfl
     intro i _
     by_cases hi : shared i
-    · simp only [if_pos hi, if_pos (h i hi)]
-    · simp only [if_neg hi]
-  · rw [refreshKernel, if_neg h]
+    · simp only [ite_eq_left hi, ite_eq_left (h i hi)]
+    · simp only [ite_eq_right hi]
+  · rw [refreshKernel, ite_eq_right h]
     obtain ⟨i, hi⟩ := not_forall.mp h
     have hs : shared i := by by_contra hh; exact hi (fun hp => False.elim (hh hp))
     have hab : a i ≠ b i := fun hh => hi (fun _ => hh)
     symm
     apply Finset.prod_eq_zero (Finset.mem_univ i)
-    simp only [if_pos hs, if_neg hab]
+    simp only [ite_eq_left hs, ite_eq_right hab]
 
 theorem refreshKernel_row_sum {I : Type*} [Fintype I] [DecidableEq I] {α : I → Type*} [∀ i, Fintype (α i)]
     (shared : I → Prop) (mu : ∀ i, α i → ℝ) (hmu : ∀ i, (∑ x, mu i x) = 1)
@@ -56,7 +56,7 @@ theorem refreshKernel_row_sum {I : Type*} [Fintype I] [DecidableEq I] {α : I �
   intro i _
   by_cases hi : shared i
   · simp [hi]
-  · simp only [if_neg hi, hmu i]
+  · simp only [ite_eq_right hi, hmu i]
 
 theorem refreshMass_reversal {I : Type*} [Fintype I] {α : I → Type*}
     (shared : I → Prop) (mu : ∀ i, α i → ℝ) (a b : ∀ i, α i)
@@ -66,8 +66,8 @@ theorem refreshMass_reversal {I : Type*} [Fintype I] {α : I → Type*}
   apply Finset.prod_congr rfl
   intro i _
   by_cases hi : shared i
-  · simp only [if_pos hi, h i hi]
-  · simp only [if_neg hi]
+  · simp only [ite_eq_left hi, h i hi]
+  · simp only [ite_eq_right hi]
     ring
 
 theorem refreshKernel_reversal {I : Type*} [Fintype I] {α : I → Type*}
@@ -79,9 +79,9 @@ theorem refreshKernel_reversal {I : Type*} [Fintype I] {α : I → Type*}
     unfold refreshMatches
     exact forall_congr' (fun _ => imp_congr_right (fun _ => eq_comm))
   by_cases h : refreshMatches shared a b
-  · simp only [refreshKernel, if_pos h, if_pos (hs.mp h)]
+  · simp only [refreshKernel, ite_eq_left h, ite_eq_left (hs.mp h)]
     exact refreshMass_reversal shared mu a b h
-  · simp only [refreshKernel, if_neg h, if_neg (fun hh => h (hs.mpr hh)), mul_zero]
+  · simp only [refreshKernel, ite_eq_right h, ite_eq_right (fun hh => h (hs.mpr hh)), mul_zero]
 
 
 end Erdos821.P3Clean

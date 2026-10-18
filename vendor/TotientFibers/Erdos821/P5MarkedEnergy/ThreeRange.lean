@@ -31,7 +31,7 @@ theorem three_range_integral
     (F1 F2 F3 F4 : ℝ → ℂ) (hc1 : Continuous F1) (hc2 : Continuous F2)
     (hc3 : Continuous F3) (hc4 : Continuous F4)
     (T0 T1 θ ε1 ε3 M4 Q3 Q14 : ℝ) (occ : Finset ℤ)
-    (hT0 : 0 ≤ T0) (hT1 : 0 ≤ T1) (hθ : 0 ≤ θ) (hε3 : 0 ≤ ε3)
+    (hT0 : 0 ≤ T0) (hT1 : 0 ≤ T1)
     (hoff : ∀ s, |s| ≤ T1 → (∀ j ∈ occ, s ∉ Set.Icc (j : ℝ) (j + 1)) → ‖F2 s‖ ≤ θ)
     (h2 : ∀ s, ‖F2 s‖ ≤ 1) (h3 : ∀ s, ‖F3 s‖ ≤ 1) (h4 : ∀ s, ‖F4 s‖ ≤ M4)
     (h3hi : ∀ s, T0 ≤ |s| → |s| ≤ T1 → ‖F3 s‖ ≤ ε3)

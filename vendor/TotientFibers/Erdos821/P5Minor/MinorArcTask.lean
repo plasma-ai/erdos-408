@@ -29,7 +29,7 @@ lemma exp_log_dominates (δ M : ℝ) (hδ : 0 < δ) :
       (L x ^ δ) ^ (M / δ) = L x ^ (δ * (M / δ)) := by
         symm
         exact Real.rpow_mul hpos.le δ (M / δ)
-      _ = L x ^ M := by congr 1 <;> field_simp
+      _ = L x ^ M := by congr 1; field_simp
   have hden : 0 < L x ^ M := Real.rpow_pos_of_pos hpos _
   change 1 ≤ Real.exp (L x ^ δ) / (L x ^ δ) ^ (M / δ) at hx
   rw [hpow] at hx
@@ -105,7 +105,7 @@ lemma scaled_fraction (k u : ℤ) (r : ℕ) (hk : k ≠ 0) (hr : 0 < r) :
     calc
       (k.sign : ℝ) * (k : ℝ) = ((k.sign * k : ℤ) : ℝ) := by norm_cast
       _ = ((k.natAbs : ℤ) : ℝ) := congrArg (fun z : ℤ => (z : ℝ)) hsignZ
-      _ = (k.natAbs : ℝ) := by simp [Int.natCast_natAbs]
+      _ = (k.natAbs : ℝ) := by simp
   have hmul := congrArg (fun z : ℝ => -(u : ℝ) * z) hsign
   push_cast
   field_simp [hkR, hrR]
@@ -114,10 +114,10 @@ lemma scaled_fraction (k u : ℤ) (r : ℕ) (hk : k ≠ 0) (hr : 0 < r) :
 
 lemma large_denominator_of_minor_arc
     (C Cp Carc L H θ : ℝ) (k u : ℤ) (r : ℕ) (β : ℝ)
-    (hL : 1 ≤ L) (hLpos : 0 < L) (hC : 0 ≤ C) (hCp : 0 ≤ Cp)
+    (hL : 1 ≤ L) (hLpos : 0 < L) (hC : 0 ≤ C)
     (hCarc : C + Cp ≤ Carc) (hH : 0 < H)
     (hk : k ≠ 0) (hkbound : |(k : ℝ)| ≤ L ^ C)
-    (hr : 1 ≤ r) (hrbound : (r : ℝ) ≤ H / L ^ Cp)
+    (hr : 1 ≤ r)
     (hphase : -(k : ℝ) * θ = (u : ℝ) / (r : ℝ) + β)
     (hbeta : |β| ≤ L ^ Cp / H)
     (harc : ∀ (q : ℕ) (v : ℤ), 1 ≤ q → (q : ℝ) ≤ L ^ Carc →
@@ -166,7 +166,7 @@ lemma large_denominator_of_minor_arc
     calc
       |θ - (v : ℝ) / (d : ℝ)| = |θ + ((u : ℝ) / (r : ℝ)) / (k : ℝ)| := by
         rw [hcenter]
-        congr 1 <;> ring
+        congr 1; ring
       _ = |-β / (k : ℝ)| := by rw [← htheta]
       _ = |β| / |(k : ℝ)| := by simp [abs_div]
   have hkabsone : 1 ≤ |(k : ℝ)| := by
@@ -262,7 +262,7 @@ lemma bilinear_factor_bound
       _ = 3 / L ^ (m + 9) := by
         have hpow : L ^ (m + 10) = L ^ (m + 9) * L := by
           calc
-            L ^ (m + 10) = L ^ ((m + 9) + 1) := by congr 1 <;> ring
+            L ^ (m + 10) = L ^ ((m + 9) + 1) := by congr 1; ring
             _ = L ^ (m + 9) * L ^ (1 : ℝ) := Real.rpow_add hLpos _ _
             _ = L ^ (m + 9) * L := by rw [Real.rpow_one]
         rw [hpow]
@@ -277,7 +277,7 @@ lemma bilinear_factor_bound
       _ = 3 / L ^ (m + 9) := by
         have hpow : L ^ (m + 10) = L ^ (m + 9) * L := by
           calc
-            L ^ (m + 10) = L ^ ((m + 9) + 1) := by congr 1 <;> ring
+            L ^ (m + 10) = L ^ ((m + 9) + 1) := by congr 1; ring
             _ = L ^ (m + 9) * L ^ (1 : ℝ) := Real.rpow_add hLpos _ _
             _ = L ^ (m + 9) * L := by rw [Real.rpow_one]
         rw [div_eq_mul_inv]
@@ -320,7 +320,7 @@ lemma bilinear_factor_bound
   have hpowC : L ^ C * L ^ C = L ^ (2 * C) := by
     calc
       L ^ C * L ^ C = L ^ (C + C) := (Real.rpow_add hLpos C C).symm
-      _ = L ^ (2 * C) := by congr 1 <;> ring
+      _ = L ^ (2 * C) := by congr 1; ring
   have hfactor :
       (L ^ C / U) * (L ^ C / V) *
         (U + (1 + V / r) * (U + r * ell)) =
@@ -396,7 +396,7 @@ theorem minorArcTask_proof : MinorArcTask := by
   have hPowSplit : L x ^ Cp =
       L x ^ (Cp / 2) * L x ^ (Cp / 2) := by
     calc
-      L x ^ Cp = L x ^ (Cp / 2 + Cp / 2) := by congr 1 <;> ring
+      L x ^ Cp = L x ^ (Cp / 2 + Cp / 2) := by congr 1; ring
       _ = L x ^ (Cp / 2) * L x ^ (Cp / 2) :=
         Real.rpow_add hLpos _ _
   have hProductLow : L x ^ Cp ≤ H := by
@@ -422,8 +422,8 @@ theorem minorArcTask_proof : MinorArcTask := by
   have hCarcBound : C + Cp ≤ Carc := by dsimp [Carc]; linarith
   have hlarge : L x ^ Cp < (r : ℝ) :=
     Erdos821.P5Minor.large_denominator_of_minor_arc
-      C Cp Carc (L x) H θ k u r β hLone hLpos hC.le hCpNonneg
-      hCarcBound hHpos hk hkbound hrone hrarg hphase hbetaArc harc
+      C Cp Carc (L x) H θ k u r β hLone hLpos hC.le
+      hCarcBound hHpos hk hkbound hrone hphase hbetaArc harc
   let ell : ℝ := Real.log (2 * (r : ℝ))
   have hrRealOne : 1 ≤ (r : ℝ) := by exact_mod_cast hrone
   have hellNonneg : 0 ≤ ell := by
@@ -499,7 +499,7 @@ theorem minorArcTask_proof : MinorArcTask := by
     calc
       L x ^ (-A) * L x ^ (-A) = L x ^ ((-A) + (-A)) :=
         (Real.rpow_add hLpos (-A) (-A)).symm
-      _ = L x ^ (-2 * A) := by congr 1 <;> ring
+      _ = L x ^ (-2 * A) := by congr 1; ring
   have hTle : T ≤ (L x) ^ (-A) := by
     apply (sq_le_sq₀ hTnonneg hTargetNonneg).1
     have hTidentity : T ^ 2 =

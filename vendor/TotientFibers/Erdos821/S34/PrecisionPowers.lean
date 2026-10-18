@@ -63,7 +63,7 @@ theorem minor_power_precision (L K B κ d U V r : ℝ)
   have hUp : 0 < U := hpowp.trans_le hU
   have hVp : 0 < V := hpowp.trans_le hV
   have hminor := bilinear_decay_minor_bound U V r ⌊L ^ q⌋₊ (L ^ q) (L ^ (d + 1))
-    hUp hVp hr hQp hpowp (Real.rpow_nonneg hLp.le _) hrQ hrS hlog
+    hUp hVp hr hQp hpowp hrQ hrS hlog
   have hVinv : 1 / V ≤ L ^ (-q) := by
     calc
       _ ≤ 1 / L ^ q := one_div_le_one_div_of_le hpowp hV

@@ -637,7 +637,6 @@ theorem first_ray_energy_integral (deltaLoss : ℝ) (hδ : 0 < deltaLoss) :
         _ ≤ M * (H * firstLogDensity J t) * 1 * ‖crossCoeff r.1 r.2‖ := by
           have hden := firstLogDensity_nonneg J t
           gcongr <;> first
-            | positivity
             | exact hw x hx
             | exact hdom x hx t
             | exact cubeBaseFactor_norm_le_one p hp hcop hg hc B v ε₁ ε₂ d x.2

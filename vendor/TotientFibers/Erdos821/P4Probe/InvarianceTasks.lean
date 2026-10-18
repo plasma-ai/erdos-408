@@ -54,7 +54,7 @@ theorem symmetricFullComponentTask_of_counting (hcount : ProbeCountingTask)
       productSqNorm (flatWeight w) (fun y => f (flattenRows.symm y)) from
         productAnova_energy (flatWeight w) (fun z => hsum z.1) Finset.univ _, flatSqNorm_eq]
   rw [ht] at hc
-  convert hc using 1 <;> congr! 2
+  convert hc using 1; congr! 2
 
 end
 end Erdos821.P4Probe

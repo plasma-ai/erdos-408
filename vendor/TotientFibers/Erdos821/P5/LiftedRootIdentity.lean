@@ -46,7 +46,7 @@ theorem lifted_pattern_root_identity {P : Geometry} {G : Blueprint.Analytic.Prim
   intro w hwS
   have hw := strippedRoots_positive (sharedDrawProduct_pos ν z) hS hwS
   by_cases hw' : 0 < w + A.k * (freeProduct ν u : ℤ)
-  · rw [if_pos hw']
+  · rw [ite_eq_left hw']
     have hwn : 0 < w.toNat := by omega
     have hw'n : 0 < (w + A.k * (freeProduct ν u : ℤ)).toNat := by omega
     have hshift : ((w + A.k * (freeProduct ν u : ℤ)).toNat : ℤ) =
@@ -55,7 +55,7 @@ theorem lifted_pattern_root_identity {P : Geometry} {G : Blueprint.Analytic.Prim
     simpa only [Nat.cast_mul, Int.toNat_of_nonneg hw.le, Int.toNat_of_nonneg hw'.le] using
       sum_lifted_shared_row A ν z u hV T x Z a₁ a₂ E H Ψ
         w.toNat (w + A.k * (freeProduct ν u : ℤ)).toNat hwn hw'n hshift hζ
-  · rw [if_neg hw']
+  · rw [ite_eq_right hw']
     have hnotT : (sharedDrawProduct ν z : ℤ) * (w + A.k * (freeProduct ν u : ℤ)) ∉ T := by
       intro ht
       have hp := hT _ ht
@@ -65,6 +65,6 @@ theorem lifted_pattern_root_identity {P : Geometry} {G : Blueprint.Analytic.Prim
     intro r hr
     apply Finset.sum_eq_zero
     intro s hs
-    simp only [gatedPatternTerm, patternTarget_shared_int, hnotT, if_false, mul_zero]
+    simp only [gatedPatternTerm, patternTarget_shared_int, hnotT, ite_false, mul_zero]
 
 end Erdos821.P5Core

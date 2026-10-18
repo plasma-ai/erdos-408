@@ -53,8 +53,8 @@ theorem hpoly_S0_eq (G : PrimeGroups) (gs : Fin G.size) (r : ℕ) (χ : Dirichle
   intro m _
   unfold S0
   by_cases h : m ∈ G.primes gs
-  · simp only [h, if_true]; push_cast; ring
-  · simp only [h, if_false]; ring
+  · simp only [h, ite_true]; push_cast; ring
+  · simp only [h, ite_false]; ring
 
 theorem norm_hpoly_S0_le (G : PrimeGroups) (gs : Fin G.size) (r : ℕ) (χ : DirichletCharacter ℂ r)
     (i : ℕ) (hmass : 0 < mass G gs) (t : ℝ) :
@@ -134,9 +134,9 @@ theorem hpoly_P0_eq (E : Endpoint) (x : ℝ) (r : ℕ) (χ : DirichletCharacter 
   apply Finset.sum_congr rfl
   intro n _
   by_cases h : E.lo ≤ (n : ℝ) ∧ (n : ℝ) ≤ E.hi ∧ rough (W x) n
-  · simp only [h, and_self, if_true]
+  · simp only [h, and_self, ite_true]
     rw [P5Core.mellin_add (n : ℝ) t E.sigma₁]; ring
-  · simp only [h, if_false]; ring
+  · simp only [h, ite_false]; ring
 
 /-- The `m` polynomial of a dyad, with the product character. -/
 theorem hpoly_A0_eq (E : Endpoint) (r : ℕ) (χ : DirichletCharacter ℂ r) (i : ℕ)

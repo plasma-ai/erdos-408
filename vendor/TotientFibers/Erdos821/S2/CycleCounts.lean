@@ -21,6 +21,7 @@ def cyclesOn (B : Finset α) : Finset (Equiv.Perm α) :=
 def tailOrders (B : Finset α) (x : α) : Finset (List α) :=
   (B.erase x).toList.permutations.toFinset
 
+omit [Fintype α] in
 lemma tailOrders_properties (B : Finset α) (x : α) (hx : x ∈ B)
     (l : List α) (hl : l ∈ tailOrders B x) :
     l.Nodup ∧ x ∉ l ∧ l.toFinset = B.erase x ∧ l.length = B.card - 1 := by

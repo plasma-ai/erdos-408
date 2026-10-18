@@ -81,7 +81,7 @@ theorem initial_birth_at_zero
       have hbirthVal : birth.val ≤ 0 := by
         simpa using (Fin.le_iff_val_le_val).mp hbirth
       simpa using Nat.le_antisymm hbirthVal (Nat.zero_le _)
-    exact ⟨stop, by simpa [hb0]⟩
+    exact ⟨stop, by simp [hb0]⟩
 
 /-- A fresh active target can only occur at its assigned lifespan start. -/
 theorem fresh_birth_at_target
@@ -106,7 +106,7 @@ theorem fresh_birth_at_target
       simpa [hs] using hS g p
     have hbirth_le := (hspan.2.2.1 i.succ hactiveTarget).1
     by_cases hb : birth = i.succ
-    · exact ⟨stop, by simpa [hb]⟩
+    · exact ⟨stop, by simp [hb]⟩
     · have hbirth_le_i : birth ≤ i.castSucc := by
         have hleVal : birth.val ≤ i.succ.val := Fin.le_iff_val_le_val.mp hbirth_le
         have hneVal : birth.val ≠ i.succ.val := fun he => hb (Fin.ext he)
@@ -185,7 +185,7 @@ theorem ghostBatchLabels_injective
     Function.Injective (Q.ghostBatchLabels S i g) := by
   let ps := Q.ghostBirthPrimes S i g
   let idx : Fin ps.card → Fin ps.toList.length := fun h =>
-    ⟨h.val, by simpa using h.isLt⟩
+    ⟨h.val, by simp⟩
   have hnodup : ps.toList.Nodup := Finset.nodup_toList ps
   intro h k he
   have hvalues : (ps.toList.get (idx h)).val = (ps.toList.get (idx k)).val :=
@@ -368,7 +368,7 @@ theorem performed_address_value_injective
                 omega
               exact hfalse.elim
           | inr xb =>
-              have hf : False := by simpa [ghostAddress] using hsameGhost
+              have hf : False := by simp [ghostAddress] at hsameGhost
               exact hf.elim
   | inr ra =>
       cases ra with
@@ -411,7 +411,7 @@ theorem performed_address_value_injective
                   subst hbSlot
                   rfl
               | inr xb =>
-                  have hf : False := by simpa [ghostAddress] using hsameGhost
+                  have hf : False := by simp [ghostAddress] at hsameGhost
                   exact hf.elim
       | inr xa =>
           rcases xa with ⟨i, ga', haSlot⟩

@@ -259,7 +259,7 @@ theorem error_energy {L : NNReal} (hL : LipschitzWith L localKernel) (s : Finset
       ((localLogConvolution_continuousOn s a H).mono hsubset)).norm).pow 2
   have hgint : Integrable (fun v => (2 * H + 1) * ((L : ℝ) * (H / Y)) ^ 2 *
       ∑ n ∈ s, chi H n v * ‖a n‖ ^ 2) :=
-    (integrable_finset_sum s (fun n _ => (integrable_chi H n).mul_const _)).const_mul _
+    (integrable_finsetSum s (fun n _ => (integrable_chi H n).mul_const _)).const_mul _
   have hsq0 : 0 ≤ sqNorm s a := Finset.sum_nonneg (fun n _ => sq_nonneg _)
   calc ∫ v in (Y / 2)..(5 * Y / 2),
         ‖localConvolution s a H v - localLogConvolution s a H v‖ ^ 2 ≤
@@ -269,7 +269,7 @@ theorem error_energy {L : NNReal} (hL : LipschitzWith L localKernel) (s : Finset
           (fun v hv => diff_pointwise_sq hL s a hY hH1 hHY hs hv.1)
     _ = (2 * H + 1) * ((L : ℝ) * (H / Y)) ^ 2 *
         ∑ n ∈ s, (∫ v in (Y / 2)..(5 * Y / 2), chi H n v) * ‖a n‖ ^ 2 := by
-        rw [intervalIntegral.integral_const_mul, intervalIntegral.integral_finset_sum
+        rw [intervalIntegral.integral_const_mul, intervalIntegral.integral_finsetSum
           (fun n _ => ((integrable_chi H n).mul_const _).intervalIntegrable)]
         congr 1
         exact Finset.sum_congr rfl (fun n _ => intervalIntegral.integral_mul_const _ _)

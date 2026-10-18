@@ -26,3 +26,9 @@ imports with `public import`, and exposes its definitions with
 `@[expose] public section`. `L2Compactness/Approximation.lean` imports
 `Mathlib.Algebra.Order.Star.Real`, which it uses but no longer sees, because a
 module sees only what its imports export.
+
+`Sobolev/Euclidean/Translation.lean` and
+`Sobolev/Euclidean/TranslationEstimateL2.lean` also replace the deprecated
+`Measure.QuasiMeasurePreserving.ae_eq_comp` by
+`QuasiMeasurePreserving.ae_eq_comp`, so that the modules build without
+warnings.

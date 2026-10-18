@@ -18,7 +18,7 @@ theorem e_eq_bvExp (t : ℝ) : Core.e t = bvExp t := by
   push_cast
   ring
 
-private theorem interval_from_real_bounds (s : Finset ℤ) (X H : ℝ) (hH : 0 ≤ H)
+private theorem interval_from_real_bounds (s : Finset ℤ) (X H : ℝ)
     (hs : ∀ n ∈ s, X ≤ (n : ℝ) ∧ (n : ℝ) ≤ X + H) :
     ∀ n ∈ s, ⌈X⌉ ≤ n ∧ n < ⌈X⌉ + (⌊H⌋₊ + 1 : ℕ) := by
   intro n hn
@@ -58,7 +58,7 @@ theorem integer_bilinear (C : ℝ) (hC : 0 < C) :
   have hti : ∀ v ∈ t, ⌈M⌉ ≤ v ∧ (v : ℝ) - ⌈M⌉ ≤ C * V := by
     intro v hv
     exact ⟨Int.ceil_le.mpr (ht v hv).1, by linarith [(ht v hv).2, Int.le_ceil M]⟩
-  have hsi := interval_from_real_bounds s N (C * U) (by positivity) hs
+  have hsi := interval_from_real_bounds s N (C * U) hs
   let Ea : ℝ := ∑ n ∈ s, ‖a n‖ ^ 2
   let Eb : ℝ := ∑ v ∈ t, ‖b v‖ ^ 2
   let F : ℝ := U + (1 + V / r) * (U + r * Real.log (2 * r))
@@ -127,7 +127,7 @@ theorem integer_bilinear (C : ℝ) (hC : 0 < C) :
     have hc := norm_sum_mul_sq t b (fun v => ∑ n ∈ s, a n * bvExp (α * n * v))
     have he := mul_le_mul_of_nonneg_left henergy hEb
     have hh := hc.trans he
-    convert hh using 1 <;> dsimp [Eb] <;> ring
+    convert hh using 1; dsimp [Eb]; ring
   have hrhs : 0 ≤ Real.sqrt K₂ * Real.sqrt Ea * Real.sqrt Eb * Real.sqrt F := by positivity
   have hrhssq : (Real.sqrt K₂ * Real.sqrt Ea * Real.sqrt Eb * Real.sqrt F) ^ 2 = K₂ * Ea * Eb * F := by
     simp only [mul_pow, Real.sq_sqrt hKpos.le, Real.sq_sqrt hEa, Real.sq_sqrt hEb, Real.sq_sqrt hF]

@@ -40,8 +40,7 @@ theorem omega_mul_coprime (G : PrimeGroups) (D n : ℕ) (hcop : Nat.Coprime D n)
 
 theorem graph_omegaGroup_nat (G : PrimeGroups) (g : Fin G.size) (n : ℕ) :
     G.graph.omegaGroup g (n : ℤ) = omegaGroup G g n := by
-  simp only [Blueprint.Graph.PrimeGroups.omegaGroup, PrimeGroups.graph,
-    Int.natCast_dvd_natCast, omegaGroup]
+  simp only [Blueprint.Graph.PrimeGroups.omegaGroup, Int.natCast_dvd_natCast, omegaGroup]
 
 theorem graph_omega_nat (G : PrimeGroups) (n : ℕ) : G.graph.omega (n : ℤ) = omega G n := by
   unfold Blueprint.Graph.PrimeGroups.omega omega
@@ -53,7 +52,7 @@ theorem damping_sq_int (P : Geometry) (G : PrimeGroups) (J m : ℕ)
     (A : Blueprint.Graph.Model P.graph G.graph J m) (n : ℕ) :
     A.damping (n : ℤ) ^ 2 =
       P.q ^ ((omega G n : ℤ) - (((J + P.ell) * G.size : ℕ) : ℤ)) := by
-  simp only [Blueprint.Graph.Model.damping, Geometry.graph, PrimeGroups.graph,
+  simp only [Blueprint.Graph.Model.damping, PrimeGroups.graph,
     graph_omega_nat, Nat.cast_add, Nat.cast_mul]
   let b : ℝ := ((omega G n : ℝ) - ((J : ℝ) + P.ell) * G.size) / 2
   change (P.q ^ b) ^ 2 = _

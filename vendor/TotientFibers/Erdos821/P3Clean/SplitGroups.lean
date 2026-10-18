@@ -119,8 +119,8 @@ theorem D_eq_of_compatible {J ell m : ℕ} (ν : Pattern P J ell m)
   apply Finset.prod_congr rfl
   intro i _
   by_cases hi : i ∈ ν.changed g
-  · simp only [if_pos hi]
-  · simp only [if_neg hi, h g (ν.slot i) ⟨i, rfl, hi⟩]
+  · simp only [ite_eq_left hi]
+  · simp only [ite_eq_right hi, h g (ν.slot i) ⟨i, rfl, hi⟩]
 
 theorem D_aux_ext {J ell m : ℕ} (ν : Pattern P J ell m)
     (a : P.Labels (J + ell)) (u v : P.Aux J)
@@ -131,8 +131,8 @@ theorem D_aux_ext {J ell m : ℕ} (ν : Pattern P J ell m)
   apply Finset.prod_congr rfl
   intro i _
   by_cases hi : i ∈ ν.changed g
-  · simp only [if_pos hi, h g i hi]
-  · simp only [if_neg hi]
+  · simp only [ite_eq_left hi, h g i hi]
+  · simp only [ite_eq_right hi]
 
 
 end Erdos821.P3Clean

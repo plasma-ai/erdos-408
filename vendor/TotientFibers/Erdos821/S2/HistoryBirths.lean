@@ -26,7 +26,7 @@ theorem sum_fin_dite {M : Type*} [AddCommMonoid M] (b B : ℕ) (hb : b ≤ B) (f
       simp
   | succ B hb ih =>
       rw [Fin.sum_univ_castSucc]
-      simpa only [Fin.val_castSucc, Fin.val_last, dif_neg (Nat.not_lt.mpr hb), add_zero] using ih
+      simpa only [Fin.val_castSucc, Fin.val_last, dite_eq_right (Nat.not_lt.mpr hb), add_zero] using ih
 
 theorem sum_singletons_eq_map {α β : Type*} (s : Finset α) (f : α → β) :
     (∑ a ∈ s, ({f a} : Multiset β)) = s.val.map f := by

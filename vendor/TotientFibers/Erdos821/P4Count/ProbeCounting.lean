@@ -163,7 +163,7 @@ noncomputable def fullFiberEquiv {s M : ℕ} (k : Fin s → Fin (M + 1)) :
 lemma card_fullFiber {s M : ℕ} (k : Fin s → Fin (M + 1)) :
     Fintype.card (FullFiber k) = ∏ i, Nat.choose M (k i).val := by
   rw [Fintype.card_congr (fullFiberEquiv k)]
-  simp [Fintype.card_pi, Finset.card_powersetCard]
+  simp [Fintype.card_pi]
 
 def allowedCoords (J ell : ℕ) : Finset (Fin (J + ell)) :=
   (Finset.univ : Finset (Fin J)).map (Fin.castLEEmb (by omega))
@@ -287,7 +287,7 @@ lemma rowChoices_eq_block {s J ell : ℕ} (block : Finset (Fin s)) (m : ℕ)
         (fun A => probeCoords m J ell ⊆ A) := by
   ext A
   simp [rowChoices, Finset.mem_filter, Finset.mem_powersetCard, hi,
-    and_comm, and_left_comm, and_assoc]
+    and_comm, and_assoc]
 
 lemma rowChoices_eq_outside {s J ell : ℕ} (block : Finset (Fin s)) (m : ℕ)
     (i : Fin s) (j : ℕ) (hi : i ∉ block) :
@@ -310,7 +310,7 @@ lemma card_rowChoices_block {s J ell : ℕ} (block : Finset (Fin s)) (m : ℕ)
   rw [card_allowedCoords, card_probeCoords (by omega : m ≤ J + ell)]
 
 lemma card_rowChoices_block_zero {s J ell : ℕ} (block : Finset (Fin s))
-    (m : ℕ) (i : Fin s) (j : ℕ) (hi : i ∈ block) (hmJ : m ≤ J)
+    (m : ℕ) (i : Fin s) (j : ℕ) (hi : i ∈ block)
     (hm : m ≤ J + ell) (hjm : j < m) :
     (rowChoices (s := s) (J := J) (ell := ell) block m i j).card = 0 := by
   rw [rowChoices_eq_block block m i j hi]
@@ -332,7 +332,7 @@ lemma rowChoices_card_le {s J ell : ℕ} (block : Finset (Fin s)) (m : ℕ)
         (Nat.choose (J + ell) j : ℝ) := by
   classical
   by_cases hi : i ∈ block
-  · simp only [if_pos hi]
+  · simp only [ite_eq_left hi]
     by_cases hmj : m ≤ j
     · by_cases hjJ : j ≤ J
       · rw [card_rowChoices_block (s := s) (J := J) (ell := ell)
@@ -360,13 +360,13 @@ lemma rowChoices_card_le {s J ell : ℕ} (block : Finset (Fin s)) (m : ℕ)
         simp [hzero]
         positivity
     · have hzero := card_rowChoices_block_zero (s := s) (J := J) (ell := ell)
-        block m i j hi hmJ (by omega) (by omega)
+        block m i j hi (by omega) (by omega)
       rw [hzero]
       have hnum : (0 : ℝ) ≤ 2 * (ell : ℝ) ^ ell := by positivity
       have hden : (0 : ℝ) ≤ (m : ℝ) ^ ell := by positivity
       have hchoose : (0 : ℝ) ≤ (Nat.choose (J + ell) j : ℝ) := by positivity
       simpa using mul_nonneg (div_nonneg hnum hden) hchoose
-  · simp only [if_neg hi, one_mul]
+  · simp only [ite_eq_right hi, one_mul]
     rw [rowChoices_eq_outside (s := s) (J := J) (ell := ell) block m i j hi]
     have hsub :
         (allowedCoords J ell).powersetCard j ⊆
@@ -530,7 +530,7 @@ lemma selectedProfileFinset_eq_filter {s J ell : ℕ}
     selectedProfileFinset block m k =
       (profileFinset k).filter (selectedRows block m) := by
   ext A
-  simp [selectedProfileFinset, profileFinset, and_assoc, and_left_comm, and_comm]
+  simp [selectedProfileFinset, profileFinset, and_comm]
 
 lemma profileSum_total {s M : ℕ}
     (E : Finset (Fin s × Fin M) → ℝ)

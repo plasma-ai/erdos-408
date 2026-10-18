@@ -94,7 +94,7 @@ def rawEdgeValid (A : Model F P J m) (ν : Pattern P J F.ell m) (forward : Bool)
       (deleteMemoryIndices (s.2.2 g) (retrievedIndices c g) + storedMemory (s.2.1 g.val) (c.1 g))
 
 /-- Small endpoints stay physical; big endpoints use fresh/promoted birth weights. -/
-def rawEdgeWeight (A : Model F P J m) (n : ℕ) (rho : ℝ)
+def rawEdgeWeight (_A : Model F P J m) (n : ℕ) (rho : ℝ)
     (ν : Pattern P J F.ell m) (u : P.Aux J)
     (s t : P.MemoryState (J + F.ell)) (c : TransferChoice s) : ℝ :=
   ν.auxMass u * freshBigFactor F n ν c.2.1 t.2.1 *

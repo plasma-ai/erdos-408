@@ -21,7 +21,7 @@ lemma multiset_fixed_card_finite (N : ℕ) :
   classical
   have hle : {z : Multiset α | z.card = N} ⊆ {z : Multiset α | z.card ≤ N} := by
     intro z hz
-    simp only [Set.mem_setOf_eq] at hz ⊢
+    simp only [Set.mem_ofPred_eq] at hz ⊢
     omega
   exact (finite_multiset_bounded α N).subset hle
 
@@ -29,6 +29,7 @@ lemma multiset_fixed_card_finite (N : ℕ) :
 def multFact (z : Multiset α) : ℝ :=
   ∏ u ∈ z.toFinset, ((z.count u).factorial : ℝ)
 
+omit [Fintype α] in
 lemma multFact_pos (z : Multiset α) : 0 < multFact z := by
   unfold multFact
   apply Finset.prod_pos
@@ -78,7 +79,7 @@ lemma multiset_sum_eq
             · apply (multiset_fixed_card_finite 0).mem_toFinset.mpr
               simp
             · intro a ha
-              simpa using ha
+              simp at ha
         rw [hset]
         simp [multFact]
       · have hset : ((multiset_fixed_card_finite N).toFinset.filter
@@ -95,9 +96,9 @@ lemma multiset_sum_eq
               exact Multiset.card_pos_iff_exists_mem.mp hpos
             obtain ⟨a, ha⟩ := hmem
             have hcon := hz.2 a ha
-            simpa using hcon
+            simp at hcon
           · intro hz
-            simpa using hz
+            simp at hz
         rw [hset]
         simp only [Finset.sum_empty]
         rw [zero_pow hN, zero_div]
@@ -183,7 +184,7 @@ lemma multiset_sum_eq
               · exact hs
             have hy_fin : y ∈ (multiset_fixed_card_finite (N - k)).toFinset := by
               apply (multiset_fixed_card_finite (N - k)).mem_toFinset.mpr
-              simpa [hy_card] using hy_card
+              simp [hy_card]
             refine ⟨y, ⟨hy_fin, hy_mem⟩, ?_⟩
             -- z = y + k•a
             have hz_eq : z = y + Multiset.replicate k a := by
@@ -326,7 +327,7 @@ lemma multiset_sum_eq
                 exact has hs
               rw [Multiset.count_add]
               have hrep : (Multiset.replicate k a).count b = 0 := by
-                rw [Multiset.count_replicate, if_neg (Ne.symm hba)]
+                rw [Multiset.count_replicate, ite_eq_right (Ne.symm hba)]
               omega
             have hcount_a : (y + Multiset.replicate k a).count a = k := by
               rw [Multiset.count_add, hcount_y]
@@ -425,8 +426,7 @@ lemma multiset_sum_eq
       (fun z : Multiset α => ∀ a_1 ∈ z, a_1 ∈ Finset.univ)) =
       (multiset_fixed_card_finite N).toFinset := by
     apply Finset.filter_true_of_mem
-    intro z _
-    intro a _
+    intro z _ a _
     exact Finset.mem_univ a
   rw [hfilter_eq] at hfull
   simpa using hfull

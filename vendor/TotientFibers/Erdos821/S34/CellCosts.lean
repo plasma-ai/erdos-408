@@ -51,7 +51,7 @@ theorem kernel_l1_bound (G : PrimeGroups) (k : Fin G.size → ℕ)
       · have hk : cellKernel G k Q h ξ (product G k D) X =
             cellKernel G k Q h ν (product G k D) X := by
           simp [cellKernel, hm, show ξ ≤ cellMass G k h (cell h X) from hret, ν]
-        rw [if_pos hm, hk]
+        rw [ite_eq_left hm, hk]
         exact cell_kernel_sup_proof G k Q h ν hν (product G k D) X
       · simp [cellKernel, hm]
     calc

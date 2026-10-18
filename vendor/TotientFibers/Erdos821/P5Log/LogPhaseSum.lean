@@ -979,7 +979,7 @@ theorem logPhase_terminal_epsilon
       mul_le_mul_of_nonneg_left hpow40 hDnonneg
 
 lemma logPhase_rpow_epsilon {D N α δ e : ℝ}
-    (hD : 1 ≤ D) (hN : 1 ≤ N) (he : 0 ≤ e) (he1 : e ≤ 1)
+    (hD : 1 ≤ D) (hN : 1 ≤ N) (he1 : e ≤ 1)
     (hδ : δ ≤ α * e) :
     (D * N ^ (-α)) ^ e ≤ D * N ^ (-δ) := by
   have hNpos : 0 < N := by linarith
@@ -1764,7 +1764,7 @@ theorem logPhaseHighBands_proof (hD : Blueprint.DerivativeTests)
       _ = α * (1 / (2 : ℝ) ^ (k - 2)) := by ring
   have hD1 : 1 ≤ D := by linarith [hD4]
   have hpowEps : eps ^ e ≤ D * N ^ (-δ) := by
-    simpa [eps, D, α] using logPhase_rpow_epsilon hD1 hN he.le he1 hδe
+    simpa [eps, D, α] using logPhase_rpow_epsilon hD1 hN he1 hδe
   have hNormRaw :
       ‖∑ y ∈ Finset.Icc L U,
         Blueprint.Analytic.mellin ((q : ℝ) * (y : ℝ) + a) u‖ ≤

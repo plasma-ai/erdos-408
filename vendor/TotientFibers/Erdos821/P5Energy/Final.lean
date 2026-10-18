@@ -15,7 +15,7 @@ namespace Erdos821.P5Energy
 open Blueprint.Analytic
 
 /-- The additive convolution vanishes off `[Y/2, 5Y/2]`. -/
-theorem localConvolution_eq_zero_off {s : Finset ℕ} {a : ℕ → ℂ} {Y H v : ℝ} (hY : 0 < Y)
+theorem localConvolution_eq_zero_off {s : Finset ℕ} {a : ℕ → ℂ} {Y H v : ℝ}
     (hH : 0 < H) (hHY : H ≤ Y / 10) (hs : ∀ n ∈ s, Y ≤ (n : ℝ) ∧ (n : ℝ) ≤ 2 * Y)
     (hv : v ∉ Set.Icc (Y / 2) (5 * Y / 2)) : localConvolution s a H v = 0 := by
   unfold localConvolution
@@ -164,7 +164,7 @@ theorem local_mellin_energy (j : ℕ) (hj : 2 ≤ j) : ∃ K : ℝ, 0 < K ∧
     rw [intervalIntegral.integral_of_le hab, ← integral_Icc_eq_integral_Ioc,
       setIntegral_eq_integral_of_forall_compl_eq_zero]
     intro v hv
-    rw [localConvolution_eq_zero_off hY hH hHY hs hv]
+    rw [localConvolution_eq_zero_off hH hHY hs hv]
     simp
   have hsubset : Set.uIcc (Y / 2) (5 * Y / 2) ⊆ Set.Ioi 0 := by
     rw [Set.uIcc_of_le hab]; intro x hx; exact lt_of_lt_of_le (by linarith) hx.1

@@ -105,18 +105,18 @@ lemma sum_fixed_outside_eq {ι α : Type*} [Fintype ι] [DecidableEq ι] [Fintyp
   · intro φ _
     simp only [Finset.mem_filter, Finset.mem_univ, true_and]
     intro i hi
-    exact dif_pos hi
+    exact dite_eq_left hi
   · intro φ₁ _ φ₂ _ h
     funext j
     have hj := congrArg (fun f : ι → α => f j.val) h
-    simpa [dif_neg j.property] using hj
+    simpa [dite_eq_right j.property] using hj
   · intro b hb
     simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hb
     refine ⟨fun j => b j.val, Finset.mem_univ _, ?_⟩
     funext i
     by_cases hi : Q i
-    · rw [dif_pos hi, hb i hi]
-    · rw [dif_neg hi]
+    · rw [dite_eq_left hi, hb i hi]
+    · rw [dite_eq_right hi]
   · intro φ _
     rw [Finset.prod_ite, Finset.prod_const_one, one_mul]
     apply Finset.prod_bij (fun (j : {i : ι // ¬ Q i}) _ => j.val)
@@ -128,7 +128,7 @@ lemma sum_fixed_outside_eq {ι α : Type*} [Fintype ι] [DecidableEq ι] [Fintyp
       simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hi
       exact ⟨⟨i, hi⟩, Finset.mem_univ _, rfl⟩
     · intro j _
-      simp [dif_neg j.property]
+      simp [dite_eq_right j.property]
 
 /-- Row per-entry weight ratio from Schur weights (big groups only). -/
 lemma weight_ratio_le (r : MemoryParameters F)
@@ -232,7 +232,7 @@ lemma bigGroup_label_sum_le (F : FixedData) (n : ℕ)
   by_cases hcond : (∀ idx ∈ B_g, ¬ ν.shared g.val idx) ∧
       (∀ idx ∈ A_g, ¬ ν.shared g.val idx) ∧
       (∀ idx : {idx : Fin (J + F.ell) // idx ∈ A_g}, f_g idx ∈ transZeroSet z_g delta)
-  · rw [if_pos hcond]
+  · rw [ite_eq_left hcond]
     obtain ⟨hB, hA, hzero⟩ := hcond
     let Q : Fin (J + F.ell) → Prop := fun idx => ν.shared g.val idx ∨ idx ∈ A_g
     let b₀ : Fin (J + F.ell) → P.Prime g.val :=
@@ -254,13 +254,13 @@ lemma bigGroup_label_sum_le (F : FixedData) (n : ℕ)
           intro idx hQ
           rcases hQ with hsh | hmem
           · have hnotA : idx ∉ A_g := fun hm => hA idx hm hsh
-            simp only [b₀, dif_neg hnotA]
+            simp only [b₀, dite_eq_right hnotA]
             obtain ⟨j, rfl, hj⟩ := hsh
             exact hval.2.2.1 j hj
-          · simp only [b₀, dif_pos hmem]
+          · simp only [b₀, dite_eq_left hmem]
             exact (hval.2.2.2 ⟨idx, hmem⟩).1.symm
-        rw [if_pos hval, if_pos hfix]
-      · rw [if_neg hval]
+        rw [ite_eq_left hval, ite_eq_left hfix]
+      · rw [ite_eq_right hval]
         split_ifs
         · apply Finset.prod_nonneg
           intro idx _
@@ -298,11 +298,11 @@ lemma bigGroup_label_sum_le (F : FixedData) (n : ℕ)
           pow_le_pow_left₀ hsum_nn htilted_sum _
       _ ≤ (2 : ℝ) ^ (F.ell + m) :=
           pow_le_pow_right₀ (by norm_num) hcard_le
-  · rw [if_neg hcond]
+  · rw [ite_eq_right hcond]
     apply le_of_eq
     apply Finset.sum_eq_zero
     intro b_g _
-    rw [if_neg]
+    rw [ite_eq_right]
     intro hval
     apply hcond
     refine ⟨hval.1, hval.2.1, fun idx => ?_⟩
@@ -340,9 +340,9 @@ lemma bigGroup_retrieval_sum_le (r : MemoryParameters F) (m : ℕ)
           transZeroSet z_g delta) := by
       rw [Fintype.mem_piFinset]
     by_cases hf : ∀ idx : {idx : Fin (J + F.ell) // idx ∈ A_g}, f_g idx ∈ transZeroSet z_g delta
-    · rw [if_pos hf, if_pos (hmem_iff.mp hf)]
+    · rw [ite_eq_left hf, ite_eq_left (hmem_iff.mp hf)]
       exact target_rho_pow_le r z_g delta A_g f_g (storedMemory a_g B_g)
-    · rw [if_neg hf, if_neg (mt hmem_iff.mpr hf)]
+    · rw [ite_eq_right hf, ite_eq_right (mt hmem_iff.mpr hf)]
   have hpi_card : (Fintype.piFinset (fun _ : {idx : Fin (J + F.ell) // idx ∈ A_g} =>
       transZeroSet z_g delta)).card = Z' ^ A_g.card := by
     rw [Fintype.card_piFinset, Finset.prod_const, Finset.card_univ, Fintype.card_coe]
@@ -399,7 +399,7 @@ lemma bigGroup_sum_le (F : FixedData) (r : MemoryParameters F) (n : ℕ)
       else 0 := by
     intro B_g A_g
     by_cases hBA : (∀ idx ∈ B_g, ¬ ν.shared g.val idx) ∧ (∀ idx ∈ A_g, ¬ ν.shared g.val idx)
-    · rw [if_pos hBA]
+    · rw [ite_eq_left hBA]
       obtain ⟨hB, hA⟩ := hBA
       have hB_card : B_g.card ≤ F.ell + m := prom_card_le ν g B_g hB
       have hA_card : A_g.card ≤ F.ell + m := prom_card_le ν g A_g hA
@@ -449,8 +449,8 @@ lemma bigGroup_sum_le (F : FixedData) (r : MemoryParameters F) (n : ℕ)
               (∀ idx ∈ A_g, ¬ ν.shared g.val idx) ∧
               (∀ idx : {idx : Fin (J + F.ell) // idx ∈ A_g}, f_g idx ∈ transZeroSet z_g delta) :=
             ⟨hB, hA, hf⟩
-          rw [if_pos hcond_pos] at hbl
-          rw [if_pos hf]
+          rw [ite_eq_left hcond_pos] at hbl
+          rw [ite_eq_left hf]
           have hrho_nn : 0 ≤ r.rho ^ (zeroMemoryIndices (translateMemory delta
               (deleteMemoryIndices z_g (Finset.univ.image f_g) + storedMemory a_g B_g))).card :=
             pow_nonneg r.rho_pos.le _
@@ -486,8 +486,8 @@ lemma bigGroup_sum_le (F : FixedData) (r : MemoryParameters F) (n : ℕ)
               (∀ idx ∈ A_g, ¬ ν.shared g.val idx) ∧
               (∀ idx : {idx : Fin (J + F.ell) // idx ∈ A_g}, f_g idx ∈ transZeroSet z_g delta)) :=
             fun hc => hf hc.2.2
-          rw [if_neg hcond_neg] at hbl
-          rw [if_neg hf, zero_mul]
+          rw [ite_eq_right hcond_neg] at hbl
+          rw [ite_eq_right hf, zero_mul]
           have hsum_nn : 0 ≤ ∑ b_g : Fin (J + F.ell) → P.Prime g.val,
               if bigGroupValid ν delta g a_g z_g B_g A_g f_g b_g then
                 (∏ idx : Fin (J + F.ell),
@@ -530,13 +530,13 @@ lemma bigGroup_sum_le (F : FixedData) (r : MemoryParameters F) (n : ℕ)
               (bigGroup_retrieval_sum_le r m Cprom hCprom ν delta g a_g z_g B_g A_g hA)
             exact mul_nonneg (mul_nonneg hCV_pos.le (pow_nonneg hvpos.le _)) (by positivity)
         _ = max 1 Cprom * CV * (r.v ^ (F.ell + m)) * ((2 : ℝ) ^ (F.ell + m)) := by ring
-    · rw [if_neg hBA]
+    · rw [ite_eq_right hBA]
       apply le_of_eq
       apply Finset.sum_eq_zero
       intro f_g _
       apply Finset.sum_eq_zero
       intro b_g _
-      rw [if_neg]
+      rw [ite_eq_right]
       intro hval
       exact hBA ⟨hval.1, hval.2.1⟩
   -- Step 2: Sum over B_g and A_g.

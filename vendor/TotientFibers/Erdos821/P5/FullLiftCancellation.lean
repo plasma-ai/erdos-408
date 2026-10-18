@@ -64,7 +64,7 @@ theorem residual_family_full_lift_bound (hsep : Blueprint.FourierSeparation)
     rw [graph_mass]
     exact (P.positive.2.2.1.trans_le (hG.2.2.1 g).1).ne'
   have htail : (∫ ξ in Sᶜ, ‖α ξ‖) ≤ KA * L x ^ (-(D + |Rcost| + 1)) := by
-    simpa only [S, Set.compl_setOf, not_le] using hαtail
+    simpa only [S, Set.compl_ofPred, not_le] using hαtail
   have hfull := fullResidualLift_norm_le_main_tail B x Z a₁ a₂ C τ η E H Ψ k ζ unused
     hE hdyad.2.1 hV hZ (hdyad.2.2.2 G m B k hG hkbound) α hα hrep S hS
     (Kmain * L x ^ (-(D + Kcost + 1))) (L x ^ Rcost)

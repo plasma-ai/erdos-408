@@ -237,7 +237,7 @@ theorem box_three_range :
   have hF4b : ∀ s, ‖hpoly f4 i4 s‖ ≤ B4 := norm_hpoly_le f4 i4 B4 hf4
   have hmain := three_range_integral (hpoly f1 i1) (hpoly f2 i2) (hpoly f3 i3) (hpoly f4 i4)
     (continuous_hpoly _ _) (continuous_hpoly _ _) (continuous_hpoly _ _) (continuous_hpoly _ _)
-    T0 T1 θ ε1 ε3 B4 _ _ occ hT0 hT1 hθ hε3 hoff hF2 hF3b hF4b hlong hdisc hQ3 hQ14
+    T0 T1 θ ε1 ε3 B4 _ _ occ hT0 hT1 hoff hF2 hF3b hF4b hlong hdisc hQ3 hQ14
   refine hmain.trans ?_
   have hpw2 := hpowc (S2 + 2) c2 (by omega) (le_max_right _ _)
   have hQ14' : 6 * Ksp * A * Real.log (2 * Y) ≤ 6 * Ksp * K2 * (B1 * B4) ^ 2 *

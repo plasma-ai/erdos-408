@@ -230,10 +230,10 @@ theorem RationalFourierTask_proof : RationalFourierTask := by
           rf_unitPhase r u v * (if v.val = un.val then ((r.totient : ℕ) : ℂ) else 0) = 0 := by
         intro v hv
         have hne : ¬ (v.val = un.val) := fun heq => hv (Units.ext heq)
-        rw [if_neg hne, mul_zero]
+        rw [ite_eq_right hne, mul_zero]
       have h2 : rf_unitPhase r u un * (if un.val = un.val then ((r.totient : ℕ) : ℂ) else 0)
           = rf_unitPhase r u un * ((r.totient : ℕ) : ℂ) := by
-        rw [if_pos rfl]
+        rw [ite_eq_left rfl]
       have hEq := Finset.sum_eq_single un (fun v _ hv => h1 v hv) (fun hmem => absurd (Finset.mem_univ un) hmem)
       rw [h2] at hEq
       exact hEq

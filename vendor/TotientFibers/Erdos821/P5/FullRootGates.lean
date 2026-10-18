@@ -106,7 +106,7 @@ theorem sum_full_shared_roots {P : Geometry} {G : PrimeGroups} {J m : ℕ}
   apply Finset.sum_congr rfl
   intro n hn
   have hg := cutoffRoots_shared_gates ν u z lo hi Z Y A.k hlo hhi hZ hX hk hY n hn
-  simp only [f, hg.2.1, hg.2.2, if_true, Int.toNat_natCast]
+  simp only [f, hg.2.1, hg.2.2, ite_true, Int.toNat_natCast]
 
 /-- A full positive-root physical pattern equals its unrestricted shared
 harmonic average on the common cutoff interval. No draws are discarded. -/

@@ -11,7 +11,7 @@ namespace Erdos821.P5Core
 open Blueprint.Analytic Blueprint.Graph
 
 def bannedPatternCoefficient {F : FixedData} {G : Blueprint.Graph.PrimeGroups} {J m : ℕ}
-    (A : Model F G J m) (ν : Pattern G J F.ell m) (u : G.Aux J)
+    (_A : Model F G J m) (ν : Pattern G J F.ell m) (u : G.Aux J)
     (z : SharedDraw ν) (r s : UnsharedDraw ν) : ℂ :=
   if ν.ban (assembleLabels ν z r) (assembleLabels ν z s) u then
     ν.coefficient (G.restrictBig (assembleLabels ν z r))
@@ -50,7 +50,7 @@ theorem gated_lifted_shared_term {P : Geometry} {G : Blueprint.Analytic.PrimeGro
   unfold gatedPatternTerm
   rw [hD, ht]
   by_cases hT : ((sharedDrawProduct ν z * w' : ℕ) : ℤ) ∈ T
-  · simp only [hT, if_true]
+  · simp only [hT, ite_true]
     by_cases hp : G.graph.physical (J + P.ell) ((sharedDrawProduct ν z * w : ℕ) : ℤ)
         (assembleLabels ν z r) ∧
       G.graph.physical (J + P.ell) ((sharedDrawProduct ν z * w' : ℕ) : ℤ)
@@ -66,8 +66,8 @@ theorem gated_lifted_shared_term {P : Geometry} {G : Blueprint.Analytic.PrimeGro
               ((sharedDrawProduct ν z * w : ℕ) : ℤ) +
                 A.k * (ν.D (assembleLabels ν z r) u : ℤ) :=
           ⟨hp, hcomp, hb, by rwa [hD]⟩
-        rw [physicalPatternBody, if_pos hcond, if_pos hp,
-          bannedPatternCoefficient, if_pos hb, hD]
+        rw [physicalPatternBody, ite_eq_left hcond, ite_eq_left hp,
+          bannedPatternCoefficient, ite_eq_left hb, hD]
         have hi := lifted_shared_integrand A ν z r u hV x Z a₁ a₂ E H Ψ w w' hw hw' hζ
         calc
           _ = (harmonicCutoff Ψ Z ((sharedDrawProduct ν z * w : ℕ) : ℤ)
@@ -85,15 +85,15 @@ theorem gated_lifted_shared_term {P : Geometry} {G : Blueprint.Analytic.PrimeGro
             ((sharedDrawProduct ν z * w' : ℕ) : ℤ)
             (assembleLabels ν z r) (assembleLabels ν z s) = 0 := by
           unfold physicalPatternBody
-          exact if_neg (fun h => hb h.2.2.1)
-        simp only [hbody, mul_zero, hp, if_true, bannedPatternCoefficient, hb, if_false, ite_self]
+          exact ite_eq_right (fun h => hb h.2.2.1)
+        simp only [hbody, mul_zero, hp, bannedPatternCoefficient, hb, ite_false, ite_self]
     · have hbody : physicalPatternBody A ν u ((sharedDrawProduct ν z * w : ℕ) : ℤ)
           ((sharedDrawProduct ν z * w' : ℕ) : ℤ)
           (assembleLabels ν z r) (assembleLabels ν z s) = 0 := by
         unfold physicalPatternBody
-        exact if_neg (fun h => hp h.1)
-      simp only [hbody, mul_zero, hp, if_false]
-  · simp only [hT, if_false, mul_zero]
+        exact ite_eq_right (fun h => hp h.1)
+      simp only [hbody, mul_zero, hp, ite_false]
+  · simp only [hT, ite_false, mul_zero]
 
 /-- The reindexed actual lift is the existing physicalSharedRow times its
 harmonic law and stripped scalar. This includes bad draws and the full ban. -/
@@ -114,7 +114,7 @@ theorem sum_lifted_shared_row {P : Geometry} {G : Blueprint.Analytic.PrimeGroups
           physicalSharedRow A ν z w w' (bannedPatternCoefficient A ν u z) else 0 := by
   simp_rw [gated_lifted_shared_term A ν z _ _ u hV T x Z a₁ a₂ E H Ψ w w' hw hw' hshift hζ]
   by_cases hT : ((sharedDrawProduct ν z * w' : ℕ) : ℤ) ∈ T
-  · simp only [hT, if_true, physicalSharedRow, Finset.mul_sum, mul_assoc]
-  · simp only [hT, if_false, Finset.sum_const_zero]
+  · simp only [hT, ite_true, physicalSharedRow, Finset.mul_sum, mul_assoc]
+  · simp only [hT, ite_false, Finset.sum_const_zero]
 
 end Erdos821.P5Core

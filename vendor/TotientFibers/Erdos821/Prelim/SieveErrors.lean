@@ -167,7 +167,7 @@ theorem one_div_one_sub_le (R : ℝ) (hR0 : 0 ≤ R) (hR1 : R ≤ 1 / 2) :
 
 /-- `E_corr = (∏S)·R'` with `R' = ∑ e_j/S_j`. -/
 theorem corr_eq_prod_mul (N : ℕ) (B : ℕ → Finset ℕ) (g : ℕ → ℝ) (h : ℕ)
-    (η C : ℝ) (hη : 0 < η) (hC : 0 ≤ C) (he : Even h)
+    (η C : ℝ) (hη : 0 < η) (he : Even h)
     (hgB : ∀ j ∈ Finset.range N, ∀ p ∈ B j, 0 ≤ g p ∧ g p ≤ 1 - η)
     (hsumB : ∀ j ∈ Finset.range N, ∑ p ∈ B j, g p ≤ C) :
     corrExp N B g h
@@ -353,7 +353,7 @@ theorem exists_prod_error_bound (η C : ℝ) (hη : 0 < η) (hC : 0 ≤ C) :
     have h2 := (hgB j hj p hp).2
     exact ⟨h1, by linarith [hη]⟩
   have htele := prod_sub_le_corr N B g h he hg1
-  have hcorr := corr_eq_prod_mul N B g h η C hη hC he hgB hsumB
+  have hcorr := corr_eq_prod_mul N B g h η C hη he hgB hsumB
   have hR' := R'_le_R N B g h η C hη he hgB hsumB
   -- `∏S ≥ 0` via `Prob≥0`, `U≥0` (even truncation, case `card=0` vs `≥1`)
   have hSnn : (0 : ℝ) ≤ ∏ j ∈ Finset.range N,
@@ -608,7 +608,7 @@ theorem exists_tailSum_fixed_bound (C : ℝ) (hC : 0 ≤ C) (h : ℕ) (hh : 1 �
               mul_nonneg hpos_div (div_nonneg hrh_nn h1rh.le)
             linarith
           linarith
-  · push_neg at hN
+  · push Not at hN
     have hleN : m₀ ≤ N := le_of_lt hN
     have hsplit := Finset.sum_range_add_sum_Ico
       (fun j => Prelim.SieveCalculus.tailTerm C ((j + 1) * h)) hleN
@@ -869,7 +869,7 @@ theorem exists_corr_error_bound (η C : ℝ) (hη : 0 < η) (hC : 0 ≤ C) :
       (le_max_right m₀R (max m₀P 1))) hh0
   have hR := hRbound h N hmR hh1 B g hgB hsumB
   have hP := hPbound h N hmP he B g hgB hsumB
-  have hcorr := corr_eq_prod_mul N B g h η C hη hC he hgB hsumB
+  have hcorr := corr_eq_prod_mul N B g h η C hη he hgB hsumB
   have hR' := R'_le_R N B g h η C hη he hgB hsumB
   have hej : ∀ j ∈ Finset.range N, Even ((j + 1) * h) :=
     fun j _ => he.mul_left _

@@ -56,6 +56,7 @@ def cellCoeff (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ) (f : 
     (j : κ) (c : γ) : ℂ :=
   ∑ D, if cell D = j then (w D : ℂ) * star (χ c D) * f D else 0
 
+omit [Fintype κ] in
 lemma mass_nonneg (w : α → ℝ) (cell : α → κ) (hw : ∀ x, 0 ≤ w x) (j : κ) :
     0 ≤ frameCellMass w cell j := by
   unfold frameCellMass
@@ -63,6 +64,7 @@ lemma mass_nonneg (w : α → ℝ) (cell : α → κ) (hw : ∀ x, 0 ≤ w x) (j
   intro x _
   by_cases h : cell x = j <;> simp [h, hw x]
 
+omit [Fintype κ] in
 /-- `Tf` vanishes on cells whose mass is below `ξ`. -/
 lemma apply_eq_zero_of_lt (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ)
     (ξ : ℝ) (f : α → ℂ) (X : α)
@@ -76,6 +78,7 @@ lemma apply_eq_zero_of_lt (w : α → ℝ) (cell : α → κ) (χ : γ → α �
     exact h hcon.2
   simp [hD]
 
+omit [Fintype κ] in
 /-- `Tf` formula on cells whose mass reaches `ξ`. -/
 lemma apply_eq_formula_of_le (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ)
     (ξ : ℝ) (f : α → ℂ) (X : α)
@@ -107,7 +110,7 @@ lemma apply_eq_formula_of_le (w : α → ℝ) (cell : α → κ) (χ : γ → α
           χ c X := by
     intro D
     by_cases hD : cell D = cell X
-    · simp only [hD, if_true]
+    · simp only [hD, ite_true]
       simp_rw [Finset.mul_sum, Finset.sum_mul]
       apply Finset.sum_congr rfl
       intro c _
@@ -131,14 +134,17 @@ def cellU (w : α → ℝ) (cell : α → κ) (f : α → ℂ) (j : κ) :
     EuclideanSpace ℂ α :=
   WithLp.toLp 2 (fun x => if cell x = j then ((Real.sqrt (w x) : ℝ) : ℂ) * f x else 0)
 
+omit [Fintype α] in
 lemma sqrt_mul_self_complex (w : α → ℝ) (hw : ∀ x, 0 ≤ w x) (x : α) :
     ((Real.sqrt (w x) : ℝ) : ℂ) * ((Real.sqrt (w x) : ℝ) : ℂ) = (w x : ℂ) := by
   rw [← Complex.ofReal_mul, Real.mul_self_sqrt (hw x)]
 
+omit [Fintype α] in
 lemma star_sqrt_complex (x : α) (w : α → ℝ) :
     star (((Real.sqrt (w x) : ℝ) : ℂ)) = ((Real.sqrt (w x) : ℝ) : ℂ) := by
   simp
 
+omit [Fintype κ] [Fintype γ] in
 lemma inner_cellVec (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ)
     (hw : ∀ x, 0 ≤ w x) (j : κ) (c d : γ) :
     inner ℂ (cellVec w cell χ j c) (cellVec w cell χ j d) =
@@ -149,7 +155,7 @@ lemma inner_cellVec (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ)
   apply Finset.sum_congr rfl
   intro x _
   by_cases hx : cell x = j
-  · simp only [hx, if_true, PiLp.toLp_apply]
+  · simp only [hx, ite_true]
     rw [RCLike.inner_apply']
     have hsq := sqrt_mul_self_complex w hw x
     have hstar := star_sqrt_complex x w
@@ -162,8 +168,9 @@ lemma inner_cellVec (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ)
         = (((Real.sqrt (w x) : ℝ) : ℂ) * ((Real.sqrt (w x) : ℝ) : ℂ)) *
             (star (χ c x) * χ d x) := by ring
       _ = (w x : ℂ) * star (χ c x) * χ d x := by rw [hsq]; ring
-  · simp [hx, WithLp.ofLp_toLp]
+  · simp [hx]
 
+omit [Fintype κ] [Fintype γ] in
 lemma inner_cellU (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ) (f : α → ℂ)
     (hw : ∀ x, 0 ≤ w x) (j : κ) (c : γ) :
     inner ℂ (cellVec w cell χ j c) (cellU w cell f j) = cellCoeff w cell χ f j c := by
@@ -173,7 +180,7 @@ lemma inner_cellU (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ) (
   apply Finset.sum_congr rfl
   intro x _
   by_cases hx : cell x = j
-  · simp only [hx, if_true, PiLp.toLp_apply]
+  · simp only [hx, ite_true]
     rw [RCLike.inner_apply']
     have hsq := sqrt_mul_self_complex w hw x
     have hstar := star_sqrt_complex x w
@@ -186,10 +193,11 @@ lemma inner_cellU (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ) (
         = (((Real.sqrt (w x) : ℝ) : ℂ) * ((Real.sqrt (w x) : ℝ) : ℂ)) *
             (star (χ c x) * f x) := by ring
       _ = (w x : ℂ) * star (χ c x) * f x := by rw [hsq]; ring
-  · rw [if_neg hx]
-    simp only [WithLp.ofLp_toLp]
+  · rw [ite_eq_right hx]
+    simp only
     simp [hx]
 
+omit [Fintype κ] in
 lemma norm_cellU_sq (w : α → ℝ) (cell : α → κ) (f : α → ℂ)
     (hw : ∀ x, 0 ≤ w x) (j : κ) :
     ‖cellU w cell f j‖ ^ 2 =
@@ -201,13 +209,14 @@ lemma norm_cellU_sq (w : α → ℝ) (cell : α → κ) (f : α → ℂ)
   apply Finset.sum_congr rfl
   intro x _
   by_cases hx : cell x = j
-  · simp only [cellU, hx, if_true, PiLp.toLp_apply]
+  · simp only [cellU, hx, ite_true, PiLp.toLp_apply]
     have hsqrt_nonneg : 0 ≤ Real.sqrt (w x) := Real.sqrt_nonneg _
     have hnorm_sqrt : ‖(((Real.sqrt (w x) : ℝ) : ℂ))‖ = Real.sqrt (w x) := by
       rw [Complex.norm_real, Real.norm_eq_abs, abs_of_nonneg hsqrt_nonneg]
     rw [norm_mul, hnorm_sqrt, mul_pow, Real.sq_sqrt (hw x)]
-  · simp [cellU, hx, PiLp.toLp_apply, WithLp.ofLp_toLp]
+  · simp [cellU, hx, PiLp.toLp_apply]
 
+omit [Fintype κ] [Fintype γ] in
 lemma inner_diag_le (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ)
     (hw : ∀ x, 0 ≤ w x) (hχ : ∀ c x, ‖χ c x‖ ≤ 1) (j : κ) (c : γ) :
     ‖inner ℂ (cellVec w cell χ j c) (cellVec w cell χ j c)‖ ≤
@@ -221,7 +230,7 @@ lemma inner_diag_le (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ)
         apply Finset.sum_le_sum
         intro x _
         by_cases hx : cell x = j
-        · simp only [hx, if_true]
+        · simp only [hx, ite_true]
           have h1 : ‖(((w x : ℝ)) : ℂ)‖ = w x := by
             rw [Complex.norm_real, Real.norm_eq_abs, abs_of_nonneg (hw x)]
           have hstar_norm : ‖star (χ c x)‖ = ‖χ c x‖ := by simp
@@ -233,7 +242,7 @@ lemma inner_diag_le (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ)
               _ = 1 := one_mul 1
           calc ‖(w x : ℂ) * star (χ c x) * χ c x‖
               = ‖(((w x : ℝ)) : ℂ)‖ * ‖star (χ c x)‖ * ‖χ c x‖ := by
-                simp [norm_mul]
+                simp
             _ = w x * (‖χ c x‖ * ‖χ c x‖) := by rw [h1, hstar_norm]; ring
             _ ≤ w x * 1 := by
                 apply mul_le_mul_of_nonneg_left hprod (hw x)
@@ -241,6 +250,7 @@ lemma inner_diag_le (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ)
         · simp [hx]
     _ = frameCellMass w cell j := rfl
 
+omit [Fintype κ] in
 lemma row_sum_le (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ)
     (hw : ∀ x, 0 ≤ w x) (hχ : ∀ c x, ‖χ c x‖ ≤ 1) (δ : ℝ) (hδ : 0 ≤ δ)
     (j : κ)
@@ -302,6 +312,7 @@ def synthVec (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ) (f : �
   ∑ c ∈ (Finset.univ : Finset γ),
     (cellCoeff w cell χ f j c) • cellVec w cell χ j c
 
+omit [Fintype κ] in
 lemma norm_synth_le (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ) (f : α → ℂ)
     (hw : ∀ x, 0 ≤ w x) (hχ : ∀ c x, ‖χ c x‖ ≤ 1) (δ : ℝ) (hδ : 0 ≤ δ)
     (j : κ)
@@ -347,6 +358,7 @@ lemma norm_synth_le (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ)
           ∑ c ∈ (Finset.univ : Finset γ), ‖cellCoeff w cell χ f j c‖ ^ 2 := by
         rw [← Finset.sum_mul, mul_comm]
 
+omit [Fintype κ] in
 lemma coeff_energy_le (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ) (f : α → ℂ)
     (hw : ∀ x, 0 ≤ w x) (hχ : ∀ c x, ‖χ c x‖ ≤ 1) (δ : ℝ) (hδ : 0 ≤ δ)
     (j : κ)
@@ -379,6 +391,7 @@ lemma coeff_energy_le (w : α → ℝ) (cell : α → κ) (χ : γ → α → �
   simp_rw [heq] at hlarge
   exact hlarge
 
+omit [Fintype κ] in
 lemma synth_apply (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ) (f : α → ℂ)
     (j : κ) (X : α) :
     (synthVec w cell χ f j) X =
@@ -386,16 +399,16 @@ lemma synth_apply (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ) (
         (∑ c, cellCoeff w cell χ f j c * χ c X) else 0 := by
   classical
   unfold synthVec cellVec
-  simp only [WithLp.ofLp_sum, WithLp.ofLp_smul, WithLp.ofLp_toLp,
-    Finset.sum_apply, Pi.smul_apply, smul_eq_mul]
+  simp only [WithLp.ofLp_sum, WithLp.ofLp_smul, Finset.sum_apply, Pi.smul_apply, smul_eq_mul]
   by_cases hx : cell X = j
-  · simp only [hx, if_true]
+  · simp only [hx, ite_true]
     rw [Finset.mul_sum]
     apply Finset.sum_congr rfl
     intro c _
     ring
   · simp [hx]
 
+omit [Fintype κ] in
 lemma norm_synth_sq (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ) (f : α → ℂ)
     (hw : ∀ x, 0 ≤ w x) (j : κ) :
     ‖synthVec w cell χ f j‖ ^ 2 =
@@ -410,13 +423,14 @@ lemma norm_synth_sq (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ)
   intro X _
   rw [synth_apply w cell χ f j X]
   by_cases hx : cell X = j
-  · simp only [hx, if_true]
+  · simp only [hx, ite_true]
     have hsqrt_nonneg : 0 ≤ Real.sqrt (w X) := Real.sqrt_nonneg _
     have hnorm_sqrt : ‖(((Real.sqrt (w X) : ℝ) : ℂ))‖ = Real.sqrt (w X) := by
       rw [Complex.norm_real, Real.norm_eq_abs, abs_of_nonneg hsqrt_nonneg]
     rw [norm_mul, hnorm_sqrt, mul_pow, Real.sq_sqrt (hw X)]
   · simp [hx]
 
+omit [Fintype κ] in
 lemma per_cell_le (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ) (f : α → ℂ)
     (hw : ∀ x, 0 ≤ w x) (hχ : ∀ c x, ‖χ c x‖ ≤ 1)
     (ξ δ : ℝ) (hξ : 0 < ξ) (hδ : 0 ≤ δ)
@@ -442,7 +456,7 @@ lemma per_cell_le (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ) (
     apply Finset.sum_nonneg
     intro X _
     by_cases hx : cell X = j
-    · simp only [hx, if_true]
+    · simp only [hx, ite_true]
       apply mul_nonneg (hw X) (sq_nonneg _)
     · simp [hx]
   have hoff_j : ∀ c d : γ, c ≠ d →
@@ -479,7 +493,7 @@ lemma per_cell_le (w : α → ℝ) (cell : α → κ) (χ : γ → α → ℂ) (
     apply Finset.sum_congr rfl
     intro X _
     by_cases hx : cell X = j
-    · simp only [hx, if_true]
+    · simp only [hx, ite_true]
       have hMX : frameCellMass w cell (cell X) = M := by
         simp [hMdef, hx]
       have hle : ξ ≤ frameCellMass w cell (cell X) := by
@@ -569,7 +583,7 @@ theorem CellFrameTask_proof : CellFrameTask := by
                 have hne : ¬ (cell X = b) := fun heq => hb heq.symm
                 simp [hne])
               (fun hmem => absurd (Finset.mem_univ _) hmem)
-        _ = g X := if_pos rfl
+        _ = g X := ite_eq_left rfl
     exact hsingle
   -- Actually `∑ j : κ, ...` is `∑ j ∈ univ, ...` definitionally; adjust
   have hE_part : (∑ j : κ, ∑ X : α, (if cell X = j then w X * ‖f X‖ ^ 2 else 0))
@@ -593,7 +607,7 @@ theorem CellFrameTask_proof : CellFrameTask := by
         apply Finset.sum_eq_zero
         intro X _
         by_cases hx : cell X = j
-        · simp only [hx, if_true]
+        · simp only [hx, ite_true]
           have hMX : frameCellMass w cell (cell X) = frameCellMass w cell j := by
             simp [hx]
           have hlt : ¬ ξ ≤ frameCellMass w cell (cell X) := by
@@ -606,7 +620,7 @@ theorem CellFrameTask_proof : CellFrameTask := by
       apply Finset.sum_nonneg
       intro X _
       by_cases hx : cell X = j
-      · simp only [hx, if_true]
+      · simp only [hx, ite_true]
         apply mul_nonneg (hw X) (sq_nonneg _)
       · simp [hx]
   have htotal : (∑ X, w X * ‖frameCellApply w cell χ ξ f X‖ ^ 2) ≤

@@ -196,12 +196,12 @@ lemma patternDensity_replace_left (ν : Pattern P J ell m)
   unfold patternDensity
   rw [matchesBig_replace_left ν S hS a y b]
   by_cases hm : ν.matchesBig a b
-  · simp only [if_pos hm]
+  · simp only [ite_eq_left hm]
     rw [sharedLabelMass_replace_eq ν S hS a y]
     apply Finset.sum_congr rfl
     intro u _
     rw [hcoef u, hDBig u]
-  · simp only [if_neg hm]
+  · simp only [ite_eq_right hm]
 
 lemma patternDensity_replace_right (ν : Pattern P J ell m)
     (S : P.BigGroup → Finset (Fin (J + ell)))
@@ -212,11 +212,11 @@ lemma patternDensity_replace_right (ν : Pattern P J ell m)
   unfold patternDensity
   rw [matchesBig_replace_right ν S hS a b y]
   by_cases hm : ν.matchesBig a b
-  · simp only [if_pos hm]
+  · simp only [ite_eq_left hm]
     apply Finset.sum_congr rfl
     intro u _
     rw [hcoef u]
-  · simp only [if_neg hm]
+  · simp only [ite_eq_right hm]
 
 lemma onePattern_idealRaw_eq_density (F : FixedData)
     (ν : Pattern P J F.ell m) (hV : ∀ g, 0 < P.V g) (θ ζ : ℝ)

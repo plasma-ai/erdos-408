@@ -102,7 +102,7 @@ theorem prime_product_fiber_card (s : Finset ℕ) (j n : ℕ)
     exact hcard.trans (by simpa only [listOf, List.length_permutations, List.length_ofFn] using
       (listOf z₀).permutations.toFinset_card_le)
   · have : fiber = ∅ := Finset.not_nonempty_iff_eq_empty.mp h
-    simpa [fiber, this] using Nat.zero_le (Nat.factorial j)
+    simp [fiber, this]
 
 /-- A finite fiber Cauchy bound, independent of the prime-polynomial application. -/
 theorem norm_sum_sq_le_card_mul_sum {ι : Type*} (s : Finset ι) (f : ι → ℂ) :

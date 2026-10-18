@@ -40,14 +40,14 @@ theorem freeCollisionError_union_le {G : PrimeGroups} {J ell m : ℕ}
   have hp (n : ℕ) : (if FreeCollisionEvent ν u n then f n else 0) ≤
       ∑ i : FreeIndex ν, if (u i).val ∣ n then f n else 0 := by
     by_cases h : FreeCollisionEvent ν u n
-    · rw [if_pos h]
+    · rw [ite_eq_left h]
       obtain ⟨i, hi⟩ := h
-      apply (show f n ≤ if (u i).val ∣ n then f n else 0 by rw [if_pos hi]).trans
+      apply (show f n ≤ if (u i).val ∣ n then f n else 0 by rw [ite_eq_left hi]).trans
       exact Finset.single_le_sum
         (f := fun j : FreeIndex ν => if (u j).val ∣ n then f n else 0)
         (fun j hj => by split_ifs <;> first | exact hf n | rfl)
         (Finset.mem_univ i)
-    · rw [if_neg h]
+    · rw [ite_eq_right h]
       exact Finset.sum_nonneg (fun i hi => by split_ifs <;> first | exact hf n | rfl)
   unfold freeCollisionError
   calc
@@ -112,7 +112,7 @@ theorem free_slot_collision_error_negligible (P : Geometry) (J ell m : ℕ)
       _ ≤ (m : ℝ) * G.size := hc
       _ ≤ (m : ℝ) * (2 * P.C₀ * T x) :=
         mul_le_mul_of_nonneg_left (admissible_count_le P G x hG) (Nat.cast_nonneg _)
-      _ ≤ (m : ℝ) * (2 * P.C₀ * L x) := by gcongr <;> positivity
+      _ ≤ (m : ℝ) * (2 * P.C₀ * L x) := by gcongr
       _ = _ := by dsimp [Q]; ring
   have hsum : freeCollisionError ν u x E H k s ≤ Q * L x * L x ^ (-(A + B + 2)) := by
     calc

@@ -247,7 +247,7 @@ theorem Erdos821.S2Core.LowRankMemoryTask_proof : Erdos821.S2Core.LowRankMemoryT
       (Fintype.card Ξ : ℂ)⁻¹ * ∑ ξ, ∑ d : BoundedHistoryData A n B,
         (if (mkH d).Valid then (mkH d).Weight rho theta * LF ξ (mkH d) else 0) := by
     unfold lowRankHistoryExpression
-    rw [tsum_trunc A n B _ (fun H hH => if_neg (fun h => hH h.2.1))]
+    rw [tsum_trunc A n B _ (fun H hH => ite_eq_right (fun h => hH h.2.1))]
     rw [Finset.sum_comm, Finset.mul_sum]
     apply Finset.sum_congr rfl
     intro d _
@@ -262,15 +262,15 @@ theorem Erdos821.S2Core.LowRankMemoryTask_proof : Erdos821.S2Core.LowRankMemoryT
       intro ξ _
       exact (phi_factor A n B (mm ξ) U (mkH d)).symm
     by_cases hV : (mkH d).Valid
-    · simp only [if_pos hV]
+    · simp only [ite_eq_left hV]
       calc (if (mkH d).Valid ∧ (mkH d).Truncated B ∧
             birthEvent ((mkH d).performedFin B) ((mkH d).valueFin B) pi then
             (mkH d).Weight rho theta else 0)
           = (mkH d).Weight rho theta *
               (if birthEvent ((mkH d).performedFin B) ((mkH d).valueFin B) pi then 1 else 0) := by
             by_cases hev : birthEvent ((mkH d).performedFin B) ((mkH d).valueFin B) pi
-            · rw [if_pos ⟨hV, hT, hev⟩, if_pos hev, mul_one]
-            · rw [if_neg (fun h => hev h.2.2), if_neg hev, mul_zero]
+            · rw [ite_eq_left ⟨hV, hT, hev⟩, ite_eq_left hev, mul_one]
+            · rw [ite_eq_right (fun h => hev h.2.2), ite_eq_right hev, mul_zero]
         _ = (mkH d).Weight rho theta * ((Fintype.card Ξ : ℂ)⁻¹ * ∑ ξ, LF ξ (mkH d)) := by
             rw [key]
         _ = _ := by
@@ -278,8 +278,8 @@ theorem Erdos821.S2Core.LowRankMemoryTask_proof : Erdos821.S2Core.LowRankMemoryT
             apply Finset.sum_congr rfl
             intro ξ _
             ring
-    · rw [if_neg (fun h => hV h.1)]
-      simp only [if_neg hV, Finset.sum_const_zero, mul_zero]
+    · rw [ite_eq_right (fun h => hV h.1)]
+      simp only [ite_eq_right hV, Finset.sum_const_zero, mul_zero]
   -- Step 2: each local-multiplier sum is a finite kernel chain.
   have hc : ∀ i, 0 ≤ c i := by
     intro i
@@ -296,10 +296,10 @@ theorem Erdos821.S2Core.LowRankMemoryTask_proof : Erdos821.S2Core.LowRankMemoryT
       exact hG i _ (fun s t c' => norm_prod_le_one _ _ fun j _ => hnorm _ _ _ _)
     · intro i
       by_cases hi : i ∈ Aff
-      · have hci : c i = CA := if_pos hi
+      · have hci : c i = CA := ite_eq_left hi
         rw [hci]
         exact hEA i _ (fun s t c' => norm_prod_le_one _ _ fun j _ => hnorm _ _ _ _)
-      · have hci : c i = CE := if_neg hi
+      · have hci : c i = CE := ite_eq_right hi
         rw [hci, edgeF_unaffected A n B (mm ξ) U i hi]
         exact hE i
   -- Step 3: the affected-edge count.

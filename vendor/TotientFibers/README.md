@@ -74,6 +74,31 @@ longer see, because a module sees only what its imports export.
 does not export its private declarations. In `P3Rare/Base.lean`, two `dsimp`
 calls now close their goals, and the `rfl` after each is removed.
 
+255 modules were also changed to clear Lean's and Mathlib's warnings:
+
+- Deprecated names are replaced by their successors, for example `if_pos`,
+  `if_neg`, `dif_pos` and `dif_neg` by `ite_eq_left`, `ite_eq_right`,
+  `dite_eq_left` and `dite_eq_right`, and `push_neg` by `push Not`.
+- The `simp` arguments, tactics and `<;>` combinators that the linters report
+  as unused are removed, a `simpa` that `simp` closes becomes `simp`, `letI`
+  and `haveI` in proofs become `let` and `have`, consecutive `intro`s are
+  merged, and names that a proof never uses become `_`.
+- In `Classical/HarmonicCharacters.lean`, the linter reports `abs_of_pos hy`
+  and `abs_of_pos hlogpos` as unused in one `simp` call that needs them, so
+  that call keeps them and drops the arguments it does not use.
+- Hypotheses and arguments that a declaration never uses are removed from its
+  signature, together with the matching argument at every call site, and
+  unused section variables are omitted with `omit … in`. Callers whose own
+  hypotheses then went unused were shortened in turn. Where an unused argument
+  is the only thing that determines an implicit one (the `Model` argument of
+  `rawEdgeWeight`, `bannedPatternCoefficient` and
+  `allPrimes_sup_le_two_exp`), it is kept and named `_A`.
+- Unused names of bound variables inside statements, such as hypotheses
+  quantified in the propositions of `Blueprint/`, become `_` or an arrow,
+  which leaves the propositions unchanged.
+
+The modules build without warnings.
+
 No `sorry`, `axiom`, or heartbeat option was added. Eighteen modules carry
 upstream's own `maxHeartbeats` or `synthInstance.maxHeartbeats` options, which
 are kept as they are.

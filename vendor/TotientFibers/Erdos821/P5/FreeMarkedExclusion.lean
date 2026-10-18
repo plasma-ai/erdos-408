@@ -22,7 +22,7 @@ def unsharedBanRow {G : PrimeGroups} {J ell m : ℕ}
 theorem unsharedBanRow_norm_le {G : PrimeGroups} {J ell m : ℕ}
     (P : Geometry) (ν : Blueprint.Graph.Pattern G.graph J ell m) (u : FreeDraw ν)
     (n n' : ℕ) (c : UnsharedDraw ν → UnsharedDraw ν → ℂ) (B : ℝ) (hB : 0 ≤ B)
-    (hc : ∀ r s, ‖c r s‖ ≤ B) (hV : ∀ g, 0 ≤ G.graph.V g) :
+    (hc : ∀ r s, ‖c r s‖ ≤ B) :
     ‖unsharedBanRow P ν u n n' c‖ ≤ B * unsharedWeight P ν n * unsharedWeight P ν n' := by
   let f := fun r s : UnsharedDraw ν =>
     if UnsharedPhysical ν n r ∧ UnsharedPhysical ν n' s ∧ ¬UnsharedBan ν r s u
@@ -31,8 +31,8 @@ theorem unsharedBanRow_norm_le {G : PrimeGroups} {J ell m : ℕ}
       B * (if UnsharedPhysical ν n r then (1 : ℝ) else 0) *
         (if UnsharedPhysical ν n' s then (1 : ℝ) else 0) := by
     by_cases h : UnsharedPhysical ν n r ∧ UnsharedPhysical ν n' s ∧ ¬UnsharedBan ν r s u
-    · simpa only [f, h, h.1, h.2.1, true_and, not_false_eq_true, if_true, mul_one] using hc r s
-    · simp only [f, h, if_false, norm_zero]
+    · simpa only [f, h, h.1, h.2.1, true_and, not_false_eq_true, ite_true, mul_one] using hc r s
+    · simp only [f, h, ite_false, norm_zero]
       apply mul_nonneg
       · exact mul_nonneg hB (by split_ifs <;> norm_num)
       · split_ifs <;> norm_num
@@ -73,7 +73,7 @@ theorem unsharedBanRow_eq_zero_of_no_collision {G : PrimeGroups} {J ell m : ℕ}
     by_cases h : UnsharedPhysical ν n r ∧ UnsharedPhysical ν n' s ∧ ¬UnsharedBan ν r s u
     · exact False.elim (hn (unshared_ban_violation_free_divisor ν r s u n n' k
         h.1 h.2.1 hshift h.2.2))
-    · rw [if_neg h]
+    · rw [ite_eq_right h]
   rw [hzero, mul_zero]
 
 def weightedFreeBanError {G : PrimeGroups} {J ell m : ℕ}
@@ -115,12 +115,12 @@ theorem weighted_free_ban_error_negligible (P : Geometry) (J ell m : ℕ)
       ‖unsharedBanRow P ν u n ((n : ℤ) + k * (freeDrawProduct ν u : ℤ)).toNat (c u n)‖ ≤
         if FreeCollisionEvent ν u n then L x ^ cost else 0 := by
     by_cases h : FreeCollisionEvent ν u n
-    · rw [if_pos h]
+    · rw [ite_eq_left h]
       calc
         _ ≤ L x ^ B * unsharedWeight P ν n *
             unsharedWeight P ν ((n : ℤ) + k * (freeDrawProduct ν u : ℤ)).toNat :=
           unsharedBanRow_norm_le P ν u n _ (c u n) (L x ^ B)
-            (Real.rpow_nonneg hLpos.le _) (hc u n hn) (fun g => (hV g).le)
+            (Real.rpow_nonneg hLpos.le _) (hc u n hn)
         _ ≤ L x ^ B * L x ^ Cm * L x ^ Cm := by
           have hn0 := unsharedWeight_nonneg P ν n (fun g => (hV g).le)
           have hn'0 := unsharedWeight_nonneg P ν ((n : ℤ) + k * (freeDrawProduct ν u : ℤ)).toNat
@@ -133,7 +133,7 @@ theorem weighted_free_ban_error_negligible (P : Geometry) (J ell m : ℕ)
           congr 1
           dsimp [cost]
           ring
-    · rw [if_neg h, unsharedBanRow_eq_zero_of_no_collision P ν u n _ k (c u n)
+    · rw [ite_eq_right h, unsharedBanRow_eq_zero_of_no_collision P ν u n _ k (c u n)
         (Int.toNat_of_nonneg ((hs u).2.2.2.2 n hn).2.2.1.le) h, norm_zero]
   unfold weightedFreeBanError
   calc

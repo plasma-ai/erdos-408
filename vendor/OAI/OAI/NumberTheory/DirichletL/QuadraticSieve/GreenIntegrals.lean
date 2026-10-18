@@ -211,7 +211,6 @@ theorem secondChildColumn_norm_le_test (Ψ : O →* ℂ) (hΨ : ∀ a, ‖Ψ a�
     _ ≤ 1 * 1 * 1 * 1^4 * 1 * ‖H S‖ := by
       gcongr <;> first
         | exact hΨ _
-        | exact hm
         | exact finiteSquarefreeRow_norm_le_one _ hg S f
         | exact finiteSquarefreeRow_norm_le_one _ hg S y
     _ = _ := by ring

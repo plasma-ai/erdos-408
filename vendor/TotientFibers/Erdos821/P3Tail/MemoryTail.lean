@@ -70,7 +70,7 @@ theorem sum_ghostTerm_eq (F : FixedData) (J n : ℕ) (rho : ℝ) (i : Fin (n + 1
     (s t : P.MemoryState (J + F.ell)) (h : s.1 = t.1 ∧ s.2.1 = t.2.1) :
     ∑ c : GhostChoice s t, ghostTerm F n rho i c =
       absoluteScaledMemoryGhostKernel F J n rho 2 i s t := by
-  simp only [absoluteScaledMemoryGhostKernel, if_pos h]
+  simp only [absoluteScaledMemoryGhostKernel, ite_eq_left h]
   rfl
 
 theorem sum_edgeTerm_eq (A : Model F P J m) (n : ℕ) (rho theta : ℝ) (i : Fin n)
@@ -101,11 +101,11 @@ theorem norm_weight_mul_pow {A : Model F P J m} {n : ℕ} (H : MemoryHistory A n
     ‖H.Weight rho theta‖ * (2 : ℝ) ^ H.totalGhostBirths = doubledWeight H rho theta := by
   have hg : ∀ i, ghostTerm F n rho i (H.ghost i) =
       |ghostChoiceWeight F n rho i (H.ghost i)| * (2 : ℝ) ^ ghostBirthCount (H.ghost i) :=
-    fun i => if_pos (hH.2.2.1 i).2.2
+    fun i => ite_eq_left (hH.2.2.1 i).2.2
   have he : ∀ i, edgeTerm A n rho theta i (H.after i.castSucc) (H.before i.succ) (H.edge i) =
       edgeSymmetryFactor P (J + F.ell) *
         ‖edgeChoiceCoefficient A n rho theta i (H.after i.castSucc) (H.before i.succ) (H.edge i)‖ :=
-    fun i => if_pos (hH.2.2.2 i)
+    fun i => ite_eq_left (hH.2.2.2 i)
   simp only [doubledWeight, hg, he, MemoryHistory.Weight, MemoryHistory.totalGhostBirths,
     norm_mul, norm_prod, Complex.norm_real, Real.norm_eq_abs,
     abs_of_nonneg (edgeSymmetryFactor_nonneg P (J + F.ell)), Finset.prod_mul_distrib,
@@ -147,9 +147,9 @@ theorem fiber_sum_le (A : Model F P J m) (n : ℕ) (rho theta v : ℝ) (hv : 1 �
       |P.memoryMass F J n (H0.before 0)| *
         pathWeight (P.memoryWeight v) n (fun i => absoluteScaledMemoryGhostKernel F J n rho 2 i)
           (fun i => absoluteMemoryEdgeKernel A n rho theta i .all) (statePath H0) := by
-  letI : Fintype ((i : Fin (n + 1)) → GhostChoice (H0.before i) (H0.after i)) := Pi.instFintype
-  letI : Fintype ((i : Fin n) → EdgeChoice A (H0.after i.castSucc)) := Pi.instFintype
-  letI : Fintype (((i : Fin (n + 1)) → GhostChoice (H0.before i) (H0.after i)) ×
+  let : Fintype ((i : Fin (n + 1)) → GhostChoice (H0.before i) (H0.after i)) := Pi.instFintype
+  let : Fintype ((i : Fin n) → EdgeChoice A (H0.after i.castSucc)) := Pi.instFintype
+  let : Fintype (((i : Fin (n + 1)) → GhostChoice (H0.before i) (H0.after i)) ×
       ((i : Fin n) → EdgeChoice A (H0.after i.castSucc))) := instFintypeProd _ _
   let mk : ((i : Fin (n + 1)) → GhostChoice (H0.before i) (H0.after i)) ×
       ((i : Fin n) → EdgeChoice A (H0.after i.castSucc)) → MemoryHistory A n :=
@@ -338,11 +338,11 @@ theorem Erdos821.S2Core.MemoryTailTask_proof : Erdos821.S2Core.MemoryTailTask :=
       (B : ℤ)) := zpow_nonneg (by norm_num) _
   rw [tsum_eq_sum (s := hfin.toFinset) (fun H hH => by
     rw [Set.Finite.mem_toFinset] at hH
-    exact if_neg hH)]
+    exact ite_eq_right hH)]
   calc ∑ H ∈ hfin.toFinset,
         (if H.Valid ∧ H.DistinctBirths ∧ ¬ H.Truncated B then ‖H.Weight rho theta‖ else 0)
       = ∑ H ∈ hfin.toFinset, ‖H.Weight rho theta‖ :=
-        Finset.sum_congr rfl fun H hH => if_pos (hfin.mem_toFinset.1 hH)
+        Finset.sum_congr rfl fun H hH => ite_eq_left (hfin.mem_toFinset.1 hH)
     _ ≤ ∑ H ∈ hfin.toFinset,
           (2 : ℝ) ^ (((n * ((J + F.ell) * Fintype.card P.BigGroup) : ℕ) : ℤ) - (B : ℤ)) *
             doubledWeight H rho theta :=

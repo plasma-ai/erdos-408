@@ -24,7 +24,7 @@ theorem normBound_weightedAdjoint {α : Type*} (mass : α → ℝ) (K : α → �
   have hform : (∑ a ∈ s, ∑ b ∈ t,
       (mass a : ℂ) * star (f a) * weightedAdjoint mass K a b * g b) =
       star (∑ b ∈ t, ∑ a ∈ s, (mass b : ℂ) * star (g b) * K b a * f a) := by
-    simp only [star_sum, star_mul, star_star, Complex.star_def, Complex.conj_ofReal,
+    simp only [star_sum, star_mul, Complex.star_def, Complex.conj_ofReal,
       Complex.conj_conj]
     rw [Finset.sum_comm]
     apply Finset.sum_congr rfl
@@ -34,7 +34,7 @@ theorem normBound_weightedAdjoint {α : Type*} (mass : α → ℝ) (K : α → �
     unfold weightedAdjoint
     have hma : (mass a : ℂ) ≠ 0 := Complex.ofReal_ne_zero.mpr (hm a)
     simp only [Complex.ofReal_div, Complex.star_def]
-    simp only [starRingEnd_apply, star_star]
+    simp only [starRingEnd_apply]
     field_simp [hma]
   rw [hform, norm_star]
   have heq : C * Real.sqrt (∑ b ∈ t, mass b * ‖g b‖ ^ 2) *

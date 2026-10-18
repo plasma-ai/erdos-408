@@ -49,7 +49,7 @@ lemma sharedLabelMass_matches (ν : Pattern P J ell m)
   apply Finset.prod_congr rfl
   intro i _
   by_cases hi : ν.shared g.val i
-  · rw [if_pos hi, if_pos hi, hab g i hi]
+  · rw [ite_eq_left hi, ite_eq_left hi, hab g i hi]
   · simp [hi]
 
 lemma freshMass_eq_div_shared (ν : Pattern P J ell m) (hV : ∀ g, 0 < P.V g)
@@ -76,7 +76,7 @@ lemma idealRaw_eq_targetMass {F : FixedData} (A : Model F P J m)
   apply Finset.sum_congr rfl
   intro u _
   by_cases hab : (A.pattern v).matchesBig a b
-  · rw [if_pos hab, if_pos hab, freshMass_eq_div_shared (A.pattern v) hV hab]
+  · rw [ite_eq_left hab, ite_eq_left hab, freshMass_eq_div_shared (A.pattern v) hV hab]
     simp only [Complex.ofReal_mul, Complex.ofReal_div]
     ring
   · simp [hab]

@@ -34,7 +34,7 @@ theorem physicalRaw_true_eq_norm_patterns {F : FixedData} {G : PrimeGroups} {J m
     split_ifs <;> simp only [norm_mul, imaginaryPower_eq_mellin, norm_mellin,
       mul_one, Complex.norm_real, Real.norm_of_nonneg hmass, Real.norm_of_nonneg hdn,
       Real.norm_of_nonneg hdn', Complex.ofReal_mul, Complex.ofReal_zero,
-      norm_zero, mul_zero] <;> ring
+      norm_zero, mul_zero]; ring
   · simp only [Model.physicalRaw, hp, ite_false, physicalPatternBody, false_and,
       ite_false, norm_zero, mul_zero, Finset.sum_const_zero, Complex.ofReal_zero]
 

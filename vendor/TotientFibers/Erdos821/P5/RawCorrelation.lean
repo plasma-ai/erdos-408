@@ -17,7 +17,7 @@ theorem freeDrawProduct_eq_one_of_empty {G : Blueprint.Graph.PrimeGroups} {J ell
   apply Finset.prod_eq_one
   intro i hi
   have hmem := i.2.property
-  have hf : False := by simpa [hν i.1] using hmem
+  have hf : False := by simp [hν i.1] at hmem
   exact False.elim hf
 
 theorem raw_pattern_t {G : Blueprint.Graph.PrimeGroups} {J ell m : ℕ}
@@ -76,11 +76,11 @@ theorem raw_stripped_lift_eq_shiftCorrelation {P : Geometry} {G : PrimeGroups} {
     cutoffRoots_ranges lo hi Z 1 k hlo hhi hZ (by norm_num) hX' hk n hncut
   simp only [Nat.cast_one, mul_one] at hn'pos
   have hnpos : 0 < n := by omega
-  rw [if_pos ⟨hnpos, hn'pos⟩]
+  rw [ite_eq_left ⟨hnpos, hn'pos⟩]
   have hshift : (((n : ℤ) + k).toNat : ℝ) = (n : ℝ) + (k : ℝ) := by
     exact_mod_cast Int.toNat_of_nonneg hn'pos.le
   simp only [strippedLiftScalar, harmonicCutoff, Nat.cast_one, mul_one, div_one,
-    Int.cast_natCast, Int.cast_add, hshift, Complex.ofReal_mul]
+    Int.cast_natCast, hshift, Complex.ofReal_mul]
   ring
 
 end Erdos821.P5Core

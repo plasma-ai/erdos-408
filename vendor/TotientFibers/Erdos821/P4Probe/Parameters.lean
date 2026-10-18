@@ -54,7 +54,7 @@ lemma exists_small_probe_beta (ell : ℕ) (hell : 1 ≤ ell) (c₀ E : ℝ)
     _ = _ := by field_simp
 
 lemma sqrt_beta_power_le (beta c₀ E L : ℝ) (b : ℕ)
-    (hb : 0 < beta) (hb1 : beta < 1) (hc : 0 < c₀) (hL : 1 ≤ L)
+    (hb : 0 < beta) (hb1 : beta < 1) (hL : 1 ≤ L)
     (hlog : c₀ / 6 * Real.log beta ≤ -(E + 2))
     (hsize : c₀ * Real.log L / 3 ≤ (b : ℝ)) :
     Real.sqrt (beta ^ b) ≤ L ^ (-(E + 2)) := by
@@ -99,7 +99,7 @@ lemma three_errors_le (L E : ℝ) (hL : 2 ≤ L) :
     _ = L ^ (-E) := by
       rw [← Real.rpow_natCast, ← Real.rpow_add hp]
       congr 1
-      norm_num <;> ring
+      norm_num
 
 end
 end Erdos821.P4Probe

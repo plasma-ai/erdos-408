@@ -59,10 +59,10 @@ variable {P M}
   simp [toFlat, flattenRows]
 
 lemma rowW_nonneg (hV : ∀ g, 0 < P.V g) : ∀ g a, 0 ≤ rowW P g a :=
-  fun g a => (graph_mu_pos P _ (hV _) a).le
+  fun _ a => (graph_mu_pos P _ (hV _) a).le
 
 lemma rowW_sum (hV : ∀ g, 0 < P.V g) : ∀ g, ∑ a, rowW P g a = 1 :=
-  fun g => graph_mu_sum P _ (hV _)
+  fun _ => graph_mu_sum P _ (hV _)
 
 lemma flatW_nonneg (hV : ∀ g, 0 < P.V g) : ∀ z a, 0 ≤ flatW P M z a :=
   fun z a => rowW_nonneg hV z.1 a
@@ -116,9 +116,9 @@ lemma toFlat_mix (T : Finset (RowSite (rowCount P) M)) (a b : P.BigLabels M) :
   funext z
   by_cases hz : z ∈ T
   · have hz' : ((rowEquiv P).symm (rowEquiv P z.1), z.2) ∈ T := by simpa using hz
-    simp [mixCoords, siteMix, hz, hz']
+    simp [mixCoords, siteMix, hz]
   · have hz' : ((rowEquiv P).symm (rowEquiv P z.1), z.2) ∉ T := by simpa using hz
-    simp [mixCoords, siteMix, hz, hz']
+    simp [mixCoords, siteMix, hz]
 
 /-- Average over a flat site set, on big labels. -/
 def siteAvg (T : Finset (RowSite (rowCount P) M)) (F : P.BigLabels M → ℂ)

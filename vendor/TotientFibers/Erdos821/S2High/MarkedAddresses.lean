@@ -20,31 +20,31 @@ abbrev PivotBlocks (pi : Finset (Finset PivotAddrFin)) := {C : Finset PivotAddrF
 def performedAddressSet (pi : Finset (Finset PivotAddrFin)) : Finset PivotAddrFin :=
   pi.biUnion id
 
-def blockContaining (pi : Finset (Finset PivotAddrFin)) (hpi : BirthCollection pi)
+def blockContaining (pi : Finset (Finset PivotAddrFin))
     (j : PivotAddrFin) (hj : j ∈ performedAddressSet pi) : PivotBlocks pi := by
   classical
   let h := Finset.mem_biUnion.mp hj
   exact ⟨Classical.choose h, (Classical.choose_spec h).1⟩
 
-theorem blockContaining_mem (pi : Finset (Finset PivotAddrFin)) (hpi : BirthCollection pi)
+theorem blockContaining_mem (pi : Finset (Finset PivotAddrFin))
     (j : PivotAddrFin) (hj : j ∈ performedAddressSet pi) :
-    j ∈ (blockContaining pi hpi j hj).val := by
+    j ∈ (blockContaining pi j hj).val := by
   classical
   exact (Classical.choose_spec (Finset.mem_biUnion.mp hj)).2
 
 theorem blockContaining_eq (pi : Finset (Finset PivotAddrFin)) (hpi : BirthCollection pi)
     (j : PivotAddrFin) (hj : j ∈ performedAddressSet pi)
     (C : Finset PivotAddrFin) (hC : C ∈ pi) (hjC : j ∈ C) :
-    blockContaining pi hpi j hj = ⟨C, hC⟩ := by
+    blockContaining pi j hj = ⟨C, hC⟩ := by
   apply Subtype.ext
   by_contra hne
-  have hdis := hpi.2 (blockContaining pi hpi j hj).property hC hne
-  exact (Finset.disjoint_left.mp hdis (blockContaining_mem pi hpi j hj)) hjC
+  have hdis := hpi.2 (blockContaining pi j hj).property hC hne
+  exact (Finset.disjoint_left.mp hdis (blockContaining_mem pi j hj)) hjC
 
 def pivotValueAtAddress (pi : Finset (Finset PivotAddrFin)) (hpi : BirthCollection pi)
     (values : PivotAssignment pi hpi) (j : PivotAddrFin)
     (hj : j ∈ performedAddressSet pi) : ℕ :=
-  (values (blockContaining pi hpi j hj)).val
+  (values (blockContaining pi j hj)).val
 
 theorem pivotValueAtAddress_eq (pi : Finset (Finset PivotAddrFin)) (hpi : BirthCollection pi)
     (values : PivotAssignment pi hpi) (j : PivotAddrFin)

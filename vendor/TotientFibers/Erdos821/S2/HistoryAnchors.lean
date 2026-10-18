@@ -68,7 +68,7 @@ theorem anchorInvariant_initial (hH : H.Valid) (hd : H.DistinctBirths) : H.Ancho
     rw [ResiduePath.offset_zero, H.anchorOffset_initial hH hd]
   · intro g z hz
     rw [hH.1 g] at hz
-    have hz' : False := by simpa using hz
+    have hz' : False := by simp at hz
     exact hz'.elim
 
 end MemoryHistory

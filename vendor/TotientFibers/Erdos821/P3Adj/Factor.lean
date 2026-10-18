@@ -51,19 +51,19 @@ lemma globalSummand_eq_prod (c : GhostChoice s t) :
           d ^ (c.2.1 g).val
       else 0) := by
   by_cases hvalid : ghostChoiceValid c
-  · rw [if_pos hvalid]
+  · rw [ite_eq_left hvalid]
     have hsingle : ∀ g, singleValid g (s.2.2 g) (t.2.2 g) (c.1 g) (c.2.1 g) (c.2.2 g) := fun g => hvalid g
-    rw [Finset.prod_congr rfl (fun g _ => if_pos (hsingle g))]
+    rw [Finset.prod_congr rfl (fun g _ => ite_eq_left (hsingle g))]
     have hweight : ghostChoiceWeight F n rho i c =
         ∏ g, singleWeight F n rho i g (s.2.2 g) (t.2.2 g) (c.1 g) (c.2.1 g) (c.2.2 g) := rfl
     rw [hweight, Finset.abs_prod]
     have hbirth : ghostBirthCount c = ∑ g : P.BigGroup, (c.2.1 g).val := rfl
     rw [hbirth, ← Finset.prod_pow_eq_pow_sum]
     rw [Finset.prod_mul_distrib]
-  · rw [if_neg hvalid]
+  · rw [ite_eq_right hvalid]
     have hneg : ∃ g0 : P.BigGroup, ¬ singleValid g0 (s.2.2 g0) (t.2.2 g0) (c.1 g0) (c.2.1 g0) (c.2.2 g0) := by
       by_contra hcon
-      push_neg at hcon
+      push Not at hcon
       apply hvalid
       intro g
       exact hcon g
@@ -74,7 +74,7 @@ lemma globalSummand_eq_prod (c : GhostChoice s t) :
           d ^ (c.2.1 g).val
       else 0)) = 0 := by
       apply Finset.prod_eq_zero (Finset.mem_univ g0)
-      rw [if_neg hg0]
+      rw [ite_eq_right hg0]
     rw [hzero]
 
 lemma globalSum_split :
@@ -126,7 +126,7 @@ lemma interchange_p (A : (g : P.BigGroup) → Finset (Fin (s.2.2 g).card))
   rw [Fintype.piFinset_univ] at h
   exact h.symm
 
-lemma interchange_b (A : (g : P.BigGroup) → Finset (Fin (s.2.2 g).card))
+lemma interchange_b
     (G : ∀ g : P.BigGroup, Fin ((t.2.2 g).card + 1) → ℝ) :
     (∑ b : ((g : P.BigGroup) → Fin ((t.2.2 g).card + 1)), ∏ g, G g (b g)) =
     ∏ g, ∑ b_g : Fin ((t.2.2 g).card + 1), G g b_g := by
@@ -149,7 +149,7 @@ lemma globalKernel_eq_prod (hcoord : s.1 = t.1 ∧ s.2.1 = t.2.1) :
     absoluteScaledMemoryGhostKernel F J n rho d i s t =
     ∏ g : P.BigGroup, singleKernel F n rho d i g (s.2.2 g) (t.2.2 g) := by
   unfold absoluteScaledMemoryGhostKernel singleKernel
-  rw [if_pos hcoord]
+  rw [ite_eq_left hcoord]
   rw [globalSum_split F J n rho d i s t]
   calc
     (∑ A : ((g : P.BigGroup) → Finset (Fin (s.2.2 g).card)),
@@ -174,7 +174,7 @@ lemma globalKernel_eq_prod (hcoord : s.1 = t.1 ∧ s.2.1 = t.2.1) :
               |singleWeight F n rho i g (s.2.2 g) (t.2.2 g) (A g) b_g p_g| * d ^ b_g.val else 0) := by
         apply Finset.sum_congr rfl
         intro A _
-        exact interchange_b F J s t A
+        exact interchange_b F J t
           (fun g b_g => ∑ p_g : Fin b_g.val → P.Prime g.val,
             (if singleValid g (s.2.2 g) (t.2.2 g) (A g) b_g p_g then
               |singleWeight F n rho i g (s.2.2 g) (t.2.2 g) (A g) b_g p_g| * d ^ b_g.val else 0))

@@ -39,7 +39,7 @@ theorem fibre_entry_sum {X Y D : Type*} [Fintype Y] [Fintype D]
   rcases b with ⟨w, z⟩
   simp only [fibreCoefficient]
   by_cases hx : x ∈ s y <;> by_cases hw : w ∈ s z <;> by_cases hp : p x = p w
-  all_goals simp [hx, hw, hp, apply_ite, ite_and, mul_ite, ite_mul,
+  all_goals simp [hx, hw, hp, apply_ite, ite_and, ite_mul,
     Finset.sum_ite_eq, Finset.sum_ite_eq', mul_assoc]
 
 def fibreMass {X Y : Type*} (s : Y → Finset X) (m : ℝ) (mass : Y → ℝ) (a : X × Y) : ℝ :=
@@ -58,15 +58,15 @@ theorem fibreMass_entry {X Y D : Type*} [Fintype Y] [Fintype D]
   classical
   rw [fibre_entry_sum]
   by_cases ha : a.1 ∈ s a.2
-  · simp only [fibreMass, if_pos ha, Complex.ofReal_mul]
+  · simp only [fibreMass, ite_eq_left ha, Complex.ofReal_mul]
     calc
       _ = (mass a.2 : ℂ) * ((m : ℂ) * K a b) := by ring
       _ = _ := by
         rw [hentry]
         by_cases h : a.1 ∈ s a.2 ∧ b.1 ∈ s b.2 ∧ p a.1 = p b.1
-        · simp only [if_pos h]
+        · simp only [ite_eq_left h]
           ring
-        · simp only [if_neg h, mul_zero]
+        · simp only [ite_eq_right h, mul_zero]
   · simp [fibreMass, ha]
 
 theorem fibreMass_energy {X Y : Type*} [Fintype X] [Fintype Y]

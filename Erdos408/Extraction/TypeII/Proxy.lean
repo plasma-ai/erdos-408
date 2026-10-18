@@ -37,7 +37,7 @@ theorem stripPrimes_eq_prod (n : ℕ) :
 theorem factorization_stripPrimes (n : ℕ) :
     (stripPrimes P n).factorization = n.factorization.filter (· ∉ P) := by
   rw [stripPrimes_eq_prod]
-  refine Nat.prod_pow_factorization_eq_self fun p hp => ?_
+  refine Nat.factorization_prod_pow_eq_self fun p hp => ?_
   rw [Finsupp.support_filter, mem_filter, Nat.support_factorization] at hp
   exact Nat.prime_of_mem_primeFactors hp.1
 
@@ -84,7 +84,7 @@ theorem partPrimes_eq_prod (n : ℕ) :
 theorem factorization_partPrimes (n : ℕ) :
     (partPrimes P n).factorization = n.factorization.filter (· ∈ P) := by
   rw [partPrimes_eq_prod]
-  refine Nat.prod_pow_factorization_eq_self fun p hp => ?_
+  refine Nat.factorization_prod_pow_eq_self fun p hp => ?_
   rw [Finsupp.support_filter, mem_filter, Nat.support_factorization] at hp
   exact Nat.prime_of_mem_primeFactors hp.1
 

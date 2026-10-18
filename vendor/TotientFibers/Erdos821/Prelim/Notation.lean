@@ -174,7 +174,7 @@ theorem T_pos_of_exp_one_lt {x : ℝ} (hx : Real.exp 1 < x) : 0 < T x := by
 
 theorem W_pos (x : ℝ) : 0 < W x := Real.exp_pos _
 
-theorem one_le_W_of_nonneg_log {x : ℝ} (hx : 0 ≤ Real.log x) : 1 ≤ W x := by
+theorem one_le_W_of_nonneg_log {x : ℝ} : 1 ≤ W x := by
   unfold W
   have h : (0 : ℝ) ≤ Real.sqrt (Real.log x) := Real.sqrt_nonneg _
   have := Real.exp_le_exp.mpr h
@@ -199,7 +199,7 @@ def IsAsymp (n Y : ℝ) : Prop :=
 theorem isAsymp_refl_of_nonneg {n : ℝ} (_hn : 0 ≤ n) : IsAsymp n n :=
   ⟨1, 1, one_pos, one_pos, by rw [one_mul], by rw [one_mul]⟩
 
-theorem isAsymp_symm_of_pos {n Y : ℝ} (hn : 0 < n)
+theorem isAsymp_symm_of_pos {n Y : ℝ}
     (h : IsAsymp n Y) : IsAsymp Y n := by
   obtain ⟨c₁, c₂, hc₁, hc₂, hlo, hhi⟩ := h
   refine ⟨1 / c₂, 1 / c₁, by positivity, by positivity, ?_, ?_⟩

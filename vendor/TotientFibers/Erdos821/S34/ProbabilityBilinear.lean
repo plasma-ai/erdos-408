@@ -116,7 +116,7 @@ theorem weighted_bilinear_reduction {α β : Type} [Fintype α] [Fintype β]
       (Real.sqrt_nonneg _)
     exact mul_nonneg hK.le (mul_nonneg (Real.sqrt_nonneg _) (Real.sqrt_nonneg _))
   have ht := hb.trans (mul_le_mul_of_nonneg_right hn (Real.sqrt_nonneg _))
-  convert ht using 1 <;> ring
+  convert ht using 1; ring
 
 end
 end Erdos821.S34Core

@@ -82,7 +82,7 @@ theorem epsf_eq_zero_of_good (P : Geometry) (G : PrimeGroups) (x Y v : ℝ) (E :
     (hmass : 0 < mass G gs) (n : ℕ) (hgood : ∀ p ∈ G.primes gs, ¬ p ^ 2 ∣ n) :
     epsf P G x Y v E t b Ψ gs (Wres G t gs ls P.q b) r u n = 0 := by
   unfold epsf
-  rw [weightedMarks_eq_Wtil ls hgs P.q P.damping.1 b hb hmass n hgood, sub_self, mul_zero]
+  rw [weightedMarks_eq_Wtil ls hgs P.q b hb hmass n hgood, sub_self, mul_zero]
 
 theorem norm_Wtil_le (G : PrimeGroups) (gs : Fin G.size) (Wr : ℕ → ℂ) (Wb : ℝ)
     (hWb : ∀ k, ‖Wr k‖ ≤ Wb) (hmass : 0 < mass G gs) (n : ℕ) :
@@ -126,7 +126,7 @@ theorem norm_quad_le (f1 f2 f3 f4 : ℕ → ℂ) (B1 B2 B3 B4 : ℝ) (h1 : ∀ m
     have hinj : Set.InjOn (fun z : Q4 => (z.1, z.2.1, z.2.2.1))
         ((icc4 N).filter (fun z => prod4 z = n) : Set Q4) := by
       intro z hz z' hz' heq
-      simp only [Finset.coe_filter, Set.mem_setOf_eq, icc4, Finset.mem_product,
+      simp only [Finset.coe_filter, Set.mem_ofPred_eq, icc4, Finset.mem_product,
         Finset.mem_Icc] at hz hz'
       simp only [Prod.mk.injEq] at heq
       obtain ⟨e1, e2, e3⟩ := heq

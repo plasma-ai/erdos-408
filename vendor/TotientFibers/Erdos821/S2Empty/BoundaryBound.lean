@@ -14,7 +14,7 @@ namespace Erdos821.S2Empty
 open Erdos821.Blueprint.Graph
 
 theorem big_boundary_factor_le_two (F : FixedData) (P : PrimeGroups) (n M : ℕ)
-    (e : ℝ) (he0 : 0 ≤ e) (hehalf : e ≤ 1 / 2)
+    (e : ℝ) (hehalf : e ≤ 1 / 2)
     (hbudget : (M : ℝ) * (Fintype.card P.BigGroup : ℝ) * e ≤ 1 / 2)
     (hV : ∀ g, 0 < P.V g)
     (hfloor : ∀ g : P.BigGroup, ∀ p : P.Prime g.val,
@@ -41,11 +41,11 @@ theorem big_boundary_factor_le_two (F : FixedData) (P : PrimeGroups) (n M : ℕ)
   change (∑ b : BigLabels P M,
     ∏ g : P.BigGroup, ∏ j : Fin M, tiltedMu F P n g.val (b g j)) ≤ 2
   rw [big_label_sum_eq_prod F P n M]
-  exact big_label_product_le_two P M e he0 hehalf hbudget S hS
+  exact big_label_product_le_two P M e hehalf hbudget S hS
 
 theorem initial_boundary_mass_le_two_of_budget
     (F : FixedData) (P : PrimeGroups) (J m n : ℕ) (A : Model F P J m)
-    (e : ℝ) (he0 : 0 ≤ e) (hehalf : e ≤ 1 / 2)
+    (e : ℝ) (hehalf : e ≤ 1 / 2)
     (hbudget : (J + F.ell : ℝ) * (Fintype.card P.BigGroup : ℝ) * e ≤ 1 / 2)
     (hV : ∀ g, 0 < P.V g)
     (hfloor : ∀ g : P.BigGroup, ∀ p : P.Prime g.val,
@@ -73,7 +73,7 @@ theorem initial_boundary_mass_le_two_of_budget
     simpa [Nat.cast_add] using hbudget
   have hbig_le : bigTerm ≤ 2 := by
     simpa [bigTerm, M] using big_boundary_factor_le_two F P n (J + F.ell)
-      e he0 hehalf hbudget' hV hfloor
+      e hehalf hbudget' hV hfloor
   have htermPos (g : P.BigGroup) (p : P.Prime g.val) :
       0 < tiltedMu F P n g.val p := by
     have hp : 0 < (p.val : ℝ) := by

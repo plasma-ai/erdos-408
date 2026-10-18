@@ -304,12 +304,12 @@ lemma arithmetic_onLines_bound_of_gaps {ι : Type*} (η : Character) (S : Finset
         scaleBound Y (19/20-1) (cw-1)*(C*height p.1.1^2)*((3/2)*slotBound J T b Bs Bz)*
         ((zBoxAmplitude (∏P∈S,P) Bz/δz)*height p.1.2^3)*
         ((wAmplitude (∏P∈S,P) cw/δw)*height p.2^3) := by
-      gcongr <;> first | positivity | exact hlz | exact hlw
+      gcongr <;> first | exact hlz | exact hlw
     _ ≤ scaleBound X (1/2-Bz) (1/2-33/200)*scaleBound Z (a+33/200-1) (Bs+Bz-1)*
         scaleBound Y (19/20-1) (cw-1)*(C*jointHeight p.1.1 p.1.2 p.2^2)*((3/2)*slotBound J T b Bs Bz)*
         ((zBoxAmplitude (∏P∈S,P) Bz/δz)*jointHeight p.1.1 p.1.2 p.2^3)*
         ((wAmplitude (∏P∈S,P) cw/δw)*jointHeight p.1.1 p.1.2 p.2^3) := by
-      gcongr <;> first | positivity | exact height_le_joint_s _ _ _ | exact height_le_joint_z _ _ _ | exact height_le_joint_w _ _ _
+      gcongr <;> first | exact height_le_joint_s _ _ _ | exact height_le_joint_z _ _ _ | exact height_le_joint_w _ _ _
     _ = _ := by unfold arithmeticAmplitude boxScale; ring
 
 lemma arithmetic_onLines_bound {ι : Type*} (η : Character) (S : Finset Id)
@@ -675,10 +675,10 @@ lemma residue_arithmetic_bound {ι : Type*} (η : Character) (S : Finset Id)
     _ ≤ X^(1/2-ξ)*Z^(a+ξ-1)*(C*height q.1^2)*((3/2)*slotBound J T b a ξ)*
         ((zBoxAmplitude (∏P∈S,P) ξ/|6*ξ-1|)*height q.2^3) := by
       gcongr
-      first | positivity | exact hL
+      exact hL
     _ ≤ X^(1/2-ξ)*Z^(a+ξ-1)*(C*jointHeight q.1 q.2 0^2)*((3/2)*slotBound J T b a ξ)*
         ((zBoxAmplitude (∏P∈S,P) ξ/|6*ξ-1|)*jointHeight q.1 q.2 0^3) := by
-      gcongr <;> first | positivity | exact height_le_joint_s _ _ _ | exact height_le_joint_z _ _ _
+      gcongr <;> first | exact height_le_joint_s _ _ _ | exact height_le_joint_z _ _ _
     _ = _ := by unfold residueAmplitude; ring
 
 lemma residueAmplitude_nonneg {ι : Type*} (S : Finset Id) (hS : ∀P∈S,Prime P)

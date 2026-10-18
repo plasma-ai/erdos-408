@@ -53,7 +53,7 @@ theorem bilinear_scale_sqrt_bound (U V r H : ℝ)
 
 theorem bilinear_decay_minor_bound (U V r Q S Y : ℝ)
     (hU : 0 < U) (hV : 0 < V) (hr : 1 ≤ r) (hQ : 0 < Q) (hS : 0 < S)
-    (hY : 0 ≤ Y) (hrQ : Q < r) (hrS : r ≤ U * V / S)
+    (hrQ : Q < r) (hrS : r ≤ U * V / S)
     (hlog : Real.log (2 * r) ≤ Y) :
     bilinearDecay U V r ≤ 1 / V + 1 / Q + Y / U + Y / S := by
   have hrpos : 0 < r := by linarith

@@ -222,18 +222,18 @@ theorem spanGhost_product_some {F : FixedData} {P : PrimeGroups} {J m n : ℕ}
     by_cases hb : i = birth
     · by_cases hs : i = stop
       · have hbs : birth = stop := hb.symm.trans hs
-        simp [hb, hs, hbs, eq_comm, charge]
+        simp [hb, hbs, charge]
       · have hne : birth ≠ stop := by
           intro h
           exact hs (hb.trans h)
-        simp [hb, hs, hne, charge]
+        simp [hb, hne, charge]
     · by_cases hs : i = stop
       · have hne : birth ≠ stop := by
           intro h
           exact hb (hs.trans h.symm)
         have hne' : stop ≠ birth := Ne.symm hne
-        simp [hb, hs, hne, hne', charge]
-      · simp [hb, hs, charge]
+        simp [hs, hne']
+      · simp [hb, hs]
   have hbprod :
       (∏ i : Fin (n + 1), if i = birth ∧ birth ∉ active then -eta F n birth * charge else 1) =
         if birth ∈ active then 1 else -eta F n birth * charge := by
@@ -319,7 +319,7 @@ theorem spanWeight_some_ghost_scalar {F : FixedData} {P : PrimeGroups} {J m n : 
     · have hz' :
           ((Q.offset i : ℤ) : ZMod p.val) - ((Q.offset birth : ℤ) : ZMod p.val) = 0 := by
         simpa only [Int.cast_sub] using hz
-      simp [hz', eta] <;> ring_nf
+      simp [hz', eta]
     · have hz' :
           ¬(((Q.offset i : ℤ) : ZMod p.val) - ((Q.offset birth : ℤ) : ZMod p.val) = 0) := by
         simpa only [Int.cast_sub] using hz
@@ -333,7 +333,7 @@ theorem spanWeight_some_ghost_scalar {F : FixedData} {P : PrimeGroups} {J m n : 
       (if birth ∈ Q.activeVisits g p then c else 1) *
         (if birth ∈ Q.activeVisits g p then 1 else -eta F n birth * c) =
           c * (if birth ∈ Q.activeVisits g p then 1 else -eta F n birth) := by
-    by_cases hb : birth ∈ Q.activeVisits g p <;> simp [hb, c] <;> ring
+    by_cases hb : birth ∈ Q.activeVisits g p <;> simp [hb, c]; ring
   have hres (i : Fin (n + 1)) :
       ((Q.offset i - Q.offset birth : ℤ) : ZMod p.val) =
         ((-Q.offset birth + Q.offset i : ℤ) : ZMod p.val) := by
@@ -381,8 +381,7 @@ theorem spanWeight_scalarFactor {F : FixedData} {P : PrimeGroups} {J m n : ℕ}
   | none =>
       have hactive : Q.activeVisits g p = ∅ := by
         simpa [hspan, ResiduePath.spanValid] using hvalid
-      simp [hspan, ResiduePath.spanWeight, ResiduePath.spanValid,
-        ResiduePath.spanGhostFactor, ResiduePath.ghostBirthAt, ResiduePath.ghostStopAt,
+      simp [hspan, ResiduePath.spanWeight, ResiduePath.spanGhostFactor, ResiduePath.ghostBirthAt, ResiduePath.ghostStopAt,
         ResiduePath.pendingBefore, ResiduePath.pendingAfter, hactive]
   | some pair =>
       rcases pair with ⟨birth, stop⟩
@@ -468,10 +467,10 @@ theorem freshTarget_birth_eq {F : FixedData} {P : PrimeGroups} {J m n : ℕ}
     rw [hspan] at hv
     have hbounds := hv.2.2.1 i.succ htarget
     by_cases heq : birth = i.succ
-    · exact ⟨stop, by simpa [hspan, heq]⟩
+    · exact ⟨stop, by simp [heq]⟩
     · have hlt : birth < i.succ := lt_of_le_of_ne hbounds.1 heq
       have hltVal : birth.val < i.val + 1 := by
-        have h := Fin.lt_iff_val_lt_val.mp hlt
+        have h := Fin.lt_def.mp hlt
         simpa using h
       have hlePrevVal : birth.val ≤ i.val := by omega
       have hstopLeVal : i.val + 1 ≤ stop.val := by
@@ -482,7 +481,7 @@ theorem freshTarget_birth_eq {F : FixedData} {P : PrimeGroups} {J m n : ℕ}
         apply Fin.le_iff_val_le_val.mpr
         simpa using hlePrevVal
       have hltStop : i.castSucc < stop := by
-        apply Fin.lt_iff_val_lt_val.mpr
+        apply Fin.lt_def.mpr
         simpa using hltStopVal
       have hpending : Q.pendingAfter g p (some (birth, stop)) i.castSucc := by
         change birth ≤ i.castSucc ∧ i.castSucc < stop ∧ i.castSucc ∉ Q.activeVisits g p
@@ -521,7 +520,7 @@ theorem active_birth_has_freshTarget {F : FixedData} {P : PrimeGroups} {J m n : 
     have hv := hS g p
     rw [hspan] at hv
     have hpos : i.castSucc < i.succ := by
-      apply Fin.lt_iff_val_lt_val.mpr
+      apply Fin.lt_def.mpr
       simp
     have hbound := (hv.2.2.1 i.castSucc hp).1
     exact (not_le_of_gt hpos) hbound
@@ -681,7 +680,7 @@ theorem initialFreshCharge_single_prime {F : FixedData} {P : PrimeGroups} {J m n
   | none =>
       have hactive : Q.activeVisits g p = ∅ := by
         simpa [hspan, ResiduePath.spanValid] using hS g p
-      simp [hspan, hactive]
+      simp [hactive]
   | some pair =>
       rcases pair with ⟨birth, stop⟩
       have hprod' :
@@ -736,7 +735,7 @@ theorem initialFreshCharge_single_prime {F : FixedData} {P : PrimeGroups} {J m n
       simp only [hzero, hborn']
       simp
       by_cases hb : birth ∈ Q.activeVisits g p <;>
-        by_cases hz : birth = 0 <;> simp [hb, hz] <;> ring
+        by_cases hz : birth = 0 <;> simp [hb, hz]
 
 theorem initialFreshCharge_product_eq {F : FixedData} {P : PrimeGroups} {J m n : ℕ}
     {A : Model F P J m} (Q : ResiduePath A n) (S : LifespanAssignment P n)

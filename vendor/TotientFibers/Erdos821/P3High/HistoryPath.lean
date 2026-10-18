@@ -103,47 +103,47 @@ theorem abs_choice_sum (A : Model F P J m) (n : ℕ) (rho theta : ℝ)
             ghostChoiceValid (c1 i)
         · by_cases he : ∀ i, edgeChoiceValid A .all i (af i.castSucc) (bf i.succ) (c2 i)
           · have hV : (⟨bf, af, c1, c2⟩ : MemoryHistory A n).Valid := ⟨h0, hn, hg, he⟩
-            rw [if_pos hV, hX0, hY0, if_pos h0, if_pos hn]
+            rw [ite_eq_left hV, hX0, hY0, ite_eq_left h0, ite_eq_left hn]
             have hgT : ∀ i, gT i (c1 i) =
                 |ghostChoiceWeight F n rho i (c1 i)| * φG i (bf i) (af i) (c1 i) :=
-              fun i => if_pos (hg i)
+              fun i => ite_eq_left (hg i)
             have heT : ∀ i, eT i (c2 i) = edgeSymmetryFactor P (J + F.ell) *
                 ‖edgeChoiceCoefficient A n rho theta i (af i.castSucc) (bf i.succ) (c2 i)‖ *
                   φE i (af i.castSucc) (bf i.succ) (c2 i) :=
-              fun i => if_pos (he i)
+              fun i => ite_eq_left (he i)
             rw [norm_weight_eq]
             simp only [hgT, heT, localFactorR, Finset.prod_mul_distrib]
             ring
           · have hV : ¬ (⟨bf, af, c1, c2⟩ : MemoryHistory A n).Valid := fun hV => he hV.2.2.2
             obtain ⟨i, hi⟩ := not_forall.mp he
-            rw [if_neg hV, Finset.prod_eq_zero (Finset.mem_univ i) (if_neg hi)]
+            rw [ite_eq_right hV, Finset.prod_eq_zero (Finset.mem_univ i) (ite_eq_right hi)]
             ring
         · have hV : ¬ (⟨bf, af, c1, c2⟩ : MemoryHistory A n).Valid := fun hV => hg hV.2.2.1
           obtain ⟨i, hi⟩ := not_forall.mp hg
-          rw [if_neg hV, Finset.prod_eq_zero (Finset.mem_univ i) (if_neg hi)]
+          rw [ite_eq_right hV, Finset.prod_eq_zero (Finset.mem_univ i) (ite_eq_right hi)]
           ring
       · have hV : ¬ (⟨bf, af, c1, c2⟩ : MemoryHistory A n).Valid := fun hV => hn hV.2.1
-        rw [if_neg hV, hY0, if_neg hn]
+        rw [ite_eq_right hV, hY0, ite_eq_right hn]
         ring
     · have hV : ¬ (⟨bf, af, c1, c2⟩ : MemoryHistory A n).Valid := fun hV => h0 hV.1
-      rw [if_neg hV, hX0, if_neg h0]
+      rw [ite_eq_right hV, hX0, ite_eq_right h0]
       ring
   have hG : ∀ i, ∑ c, gT i c = ghostK F J n rho i (φG i) (bf i) (af i) := by
     intro i
     unfold ghostK
     by_cases hag : (bf i).1 = (af i).1 ∧ (bf i).2.1 = (af i).2.1
-    · rw [if_pos hag]
+    · rw [ite_eq_left hag]
       apply Finset.sum_congr rfl
       intro c _
       by_cases hc : ghostChoiceValid c
-      · rw [if_pos hc]
-        exact if_pos ⟨hag.1, hag.2, hc⟩
-      · rw [if_neg hc]
-        exact if_neg (fun h => hc h.2.2)
-    · rw [if_neg hag]
+      · rw [ite_eq_left hc]
+        exact ite_eq_left ⟨hag.1, hag.2, hc⟩
+      · rw [ite_eq_right hc]
+        exact ite_eq_right (fun h => hc h.2.2)
+    · rw [ite_eq_right hag]
       apply Finset.sum_eq_zero
       intro c _
-      exact if_neg (fun h => hag ⟨h.1, h.2.1⟩)
+      exact ite_eq_right (fun h => hag ⟨h.1, h.2.1⟩)
   have hE : ∀ i, ∑ c, eT i c = edgeK A n rho theta i (φE i) (af i.castSucc) (bf i.succ) := by
     intro i
     unfold edgeK
@@ -151,11 +151,11 @@ theorem abs_choice_sum (A : Model F P J m) (n : ℕ) (rho theta : ℝ)
     apply Finset.sum_congr rfl
     intro c _
     by_cases hc : edgeChoiceValid A .all i (af i.castSucc) (bf i.succ) c
-    · rw [if_pos hc]
-      simp only [eT, if_pos hc]
+    · rw [ite_eq_left hc]
+      simp only [eT, ite_eq_left hc]
       ring
-    · rw [if_neg hc]
-      simp only [eT, if_neg hc, mul_zero]
+    · rw [ite_eq_right hc]
+      simp only [eT, ite_eq_right hc, mul_zero]
   have hsplit : ∀ c1 : (i : Fin (n + 1)) → GhostChoice (bf i) (af i),
       ∑ c2 : (i : Fin n) → EdgeChoice A (af i.castSucc),
         X0 * (∏ i, gT i (c1 i)) * (∏ i, eT i (c2 i)) * Y0 =

@@ -30,9 +30,6 @@ lemma reciprocalTilt_sum_eq_one (P : PrimeGroups) (g : P.BigGroup)
       rw [mul_inv_rev]
       ring
     _ = (P.V g.val)⁻¹ * ∑ p : P.Prime g.val, (p.val : ℝ)⁻¹ := by
-      change (∑ p ∈ (Finset.univ : Finset (P.Prime g.val)),
-          (P.V g.val)⁻¹ * (p.val : ℝ)⁻¹) =
-        (P.V g.val)⁻¹ * ∑ p ∈ (Finset.univ : Finset (P.Prime g.val)), (p.val : ℝ)⁻¹
       rw [← Finset.mul_sum]
     _ = 1 := by rw [reciprocalPrime_sum_eq_V, inv_mul_cancel₀ hV.ne']
 

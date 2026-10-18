@@ -146,7 +146,7 @@ theorem local_small_group_mass_le_one (P : PrimeGroups) (g : P.Group) (M : ℕ)
         apply Finset.sum_congr rfl
         intro a _
         by_cases ha : Function.Injective a
-        · simp only [dif_pos ha]
+        · simp only [dite_eq_left ha]
           rw [havg a ha]
         · simp [ha]
       _ = cardY * ∑ a : Fin M → P.Prime g,
@@ -168,7 +168,7 @@ theorem local_small_group_mass_le_one (P : PrimeGroups) (g : P.Group) (M : ℕ)
         intro a _
         by_cases ha : Function.Injective a
         · simp [ha]
-        · simp only [if_neg ha]
+        · simp only [ite_eq_right ha]
           positivity
       _ = (P.V g) ^ M := by
         calc

@@ -126,7 +126,7 @@ theorem sharedLaw_eq_harmonic {P : PrimeGroups} {J ell m : ℕ} (ν : Pattern P 
     sharedLaw ν a = (∏ g, P.V g ^ (-((sharedSlots ν g).card : ℤ))) / (sharedProduct ν a : ℝ) := by
   unfold sharedLaw sharedProduct PrimeGroups.mu
   simp only [Nat.cast_prod, mul_inv, Finset.prod_mul_distrib, Finset.prod_inv_distrib,
-    Finset.prod_const, div_eq_mul_inv, zpow_neg, zpow_natCast, inv_pow]
+    Finset.prod_const, div_eq_mul_inv, zpow_neg, zpow_natCast]
 
 theorem markMass_shared_split {P : PrimeGroups} {J ell m : ℕ} (ν : Pattern P J ell m)
     (hV : ∀ g, P.V g ≠ 0) :

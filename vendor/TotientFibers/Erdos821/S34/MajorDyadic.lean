@@ -117,14 +117,14 @@ theorem dyadic_major_comparison (hfourier : RationalFourierTask) (hind : Primiti
     · rfl
   have hpoint (X : Tuple G a) (Y : Tuple G b) (hX : ¬ EA X) (hY : ¬ EB Y) : ‖raw X Y - comp X Y‖ ≤ E := by
     by_cases hv : valid X Y
-    · simp only [raw, comp, if_pos hv]
+    · simp only [raw, comp, ite_eq_left hv]
       have ht := major_retained_comparison hfourier hind G a b Q r u h ξ U V S θ β ζ ε hr hrQ
         hh hh2 hξ (by linarith) (by linarith) hS hθ hβ hε hε1 X Y hv.1 hv.2
         (cop a hPrimeA r hr hrQ) (cop b hPrimeB r hr hrQ) (repA X hX) (repB Y hY)
       apply ht.trans
       have htot : (r.totient : ℝ) ≤ (Q : ℝ) := by exact_mod_cast (Nat.totient_le r).trans hrQ
       exact add_le_add (le_refl _) (mul_le_mul_of_nonneg_left (Real.sqrt_le_sqrt htot) (by positivity))
-    · simp only [raw, comp, if_neg hv, sub_self, norm_zero]
+    · simp only [raw, comp, ite_eq_right hv, sub_self, norm_zero]
       exact hE
   have hprobA : (∑ X, tupleWeight G a X) = 1 := tuple_law_sum (coreGroups G) a hMass
   have hprobB : (∑ Y, tupleWeight G b Y) = 1 := tuple_law_sum (coreGroups G) b hMass
@@ -153,11 +153,11 @@ theorem dyadic_major_comparison (hfourier : RationalFourierTask) (hind : Primiti
   have hmass := add_le_add (discarded_tuple_mass_bound G a h ξ hξ.le) (discarded_tuple_mass_bound G b h ξ hξ.le)
   have hmass' : ((∑ X, if EA X then tupleWeight G a X else 0) + (∑ Y, if EB Y then tupleWeight G b Y else 0)) ≤
       ((occupiedProductCells G a h : ℝ) + occupiedProductCells G b h) * ξ := by
-    convert hmass using 1 <;> ring
+    convert hmass using 1; ring
   have hn := ht.trans (mul_le_mul_of_nonneg_right
     (mul_le_mul_of_nonneg_right (add_le_add (Real.sqrt_le_sqrt hmass') (le_refl E)) (tuple_norm_nonneg G a g))
     (tuple_norm_nonneg G b f))
-  convert hn using 1 <;> dsimp [E, ε] <;> ring
+  convert hn using 1; dsimp [E, ε]; ring
 
 end
 end Erdos821.S34Core

@@ -90,7 +90,7 @@ theorem residual_shared_error_le_cost {P : Geometry} {G : Blueprint.Analytic.Pri
     (fun g => (hV g).le)
   have hstrip := strippedMarkedRow_norm_le (B.pattern v) n n'
     (residualUnsharedCoefficient B v z₀ u) (patternCost (B.pattern v))
-    (patternCost_nonneg _) (residualUnsharedCoefficient_norm_le B v z₀ u)
+    (residualUnsharedCoefficient_norm_le B v z₀ u)
     (fun g => (hV g).le)
   calc
     _ ≤ _ := residual_shared_row_error_norm_le B hB v k ζ z₀ unused u n n' hn hn' hD hV

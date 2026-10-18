@@ -192,8 +192,7 @@ private theorem validHistory_norm_sum_le_doubled_bound
       Erdos821.P3Tail.finite_doubled_sum_le A n rho 0 v CG CE hv hCG hCE hG hE S hS
 
 theorem AbsoluteClosedRootTask_proof : AbsoluteClosedRootTask := by
-  intro hStructure hGhost hMark hSpan hRes
-  intro F P J m n A hn hk hV hbp rho v CG CE hrho hv hCG hCE hG hE
+  intro hStructure hGhost hMark hSpan hRes F P J m n A hn hk hV hbp rho v CG CE hrho hv hCG hCE hG hE
   have hClosedTerm (Q : ResiduePath A n) :
       ‖closedPathCoefficient A n Q‖ *
           P.residueExpectation n (visitQ F.q n) Q.offset Q.active =
@@ -207,7 +206,7 @@ theorem AbsoluteClosedRootTask_proof : AbsoluteClosedRootTask := by
               (P.residueExpectation n (visitQ F.q n) Q.offset Q.active : ℂ) := by
           simp [Erdos821.S2Core.ResiduePath.Weight, closedPathCoefficient, hQ, hc]
         rw [hW]
-        simp only [if_pos hQ, if_pos hc, norm_mul, Complex.norm_real, Real.norm_eq_abs,
+        simp only [ite_eq_left hQ, ite_eq_left hc, norm_mul, Complex.norm_real, Real.norm_eq_abs,
           abs_of_nonneg (residueExpectation_visitQ_nonneg Q)]
       · simp [closedPathCoefficient, hQ, hc]
     · simp [closedPathCoefficient, hQ]
@@ -255,7 +254,7 @@ theorem AbsoluteClosedRootTask_proof : AbsoluteClosedRootTask := by
         by_cases hc : Q.val.offset (Fin.last n) = 0
         · simpa [hc] using path_norm_le_configuration_fiber hGhost hMark hSpan hRes
             hn hk hV hbp rho hrho Q
-        · simp only [hc, if_false]
+        · simp only [hc, ite_false]
           apply Finset.sum_nonneg
           intro S hS
           apply Finset.sum_nonneg

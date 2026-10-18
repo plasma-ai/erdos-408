@@ -59,7 +59,7 @@ theorem log_product_bounds (P : Geometry) (x : ℝ) (G : PrimeGroups)
       have hj := j.isLt
       omega
     have hp := hG.2.2.2.1 g (z g j).val (z g j).property
-    rw [if_neg hbig] at hp
+    rw [ite_eq_right hbig] at hp
     have hpos : (0 : ℝ) < (z g j).val := by
       exact_mod_cast (G.prime g (z g j).val (z g j).property).pos
     constructor

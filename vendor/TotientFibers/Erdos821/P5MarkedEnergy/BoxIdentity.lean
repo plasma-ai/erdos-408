@@ -75,7 +75,7 @@ theorem box4_disjoint {K : ℕ} : (allBoxes K : Set Q4).PairwiseDisjoint box4 :=
   exact Prod.ext e1 (Prod.ext e2 (Prod.ext e3 e4))
 
 /-- Decomposition of the tuple range into dyadic boxes. -/
-theorem sum_icc4_eq_boxes (N : ℕ) (hN : 1 ≤ N) (Gf : Q4 → ℂ)
+theorem sum_icc4_eq_boxes (N : ℕ) (Gf : Q4 → ℂ)
     (hG : ∀ z, 1 ≤ z.1 → 1 ≤ z.2.1 → 1 ≤ z.2.2.1 → 1 ≤ z.2.2.2 → N < prod4 z → Gf z = 0) :
     ∑ z ∈ icc4 N, Gf z = ∑ β ∈ allBoxes (Nat.log 2 N), ∑ z ∈ box4 β, Gf z := by
   set K := Nat.log 2 N
@@ -176,17 +176,17 @@ theorem boxPoly_eq_sum (f1 f2 f3 f4 : ℕ → ℂ) (β : Q4) (τ : ℝ) :
 theorem continuous_mellin_freq (y : ℝ) : Continuous (fun ξ : Fin 1 → ℝ => Blueprint.Analytic.mellin y (2 * Real.pi * ξ 0)) := by
   unfold Blueprint.Analytic.mellin; fun_prop
 
-theorem integrable_mul_mellin {a : (Fin 1 → ℝ) → ℂ} (ha : Integrable a) (y : ℝ) (h : (Fin 1 → ℝ) → ℂ)
+theorem integrable_mul_mellin {a : (Fin 1 → ℝ) → ℂ} (ha : Integrable a) (h : (Fin 1 → ℝ) → ℂ)
     (hh : Continuous h) (C : ℝ) (hC : ∀ ξ, ‖h ξ‖ ≤ C) :
     Integrable (fun ξ => a ξ * h ξ) :=
   ha.mul_bdd hh.aestronglyMeasurable (Filter.Eventually.of_forall hC)
 
 /-- The Mellin box identity. -/
 theorem mellin_box_identity (f1 f2 f3 f4 : ℕ → ℂ) (Ψi : ℝ → ℂ) (a : (Fin 1 → ℝ) → ℂ)
-    (ha : Integrable a) (Y α v : ℝ) (hY : 0 < Y) (hα : 0 < α)
+    (ha : Integrable a) (Y α v : ℝ) (hY : 0 < Y)
     (hsupp : ∀ y, Ψi y ≠ 0 → α ≤ y ∧ y ≤ 2 * α)
     (hrep : ∀ y : ℝ, 0 < y → (y : ℂ) * Ψi y = ∫ ξ, a ξ * Blueprint.Analytic.mellin y (2 * Real.pi * ξ 0))
-    (N : ℕ) (hN : 1 ≤ N) (S : Finset ℕ) (hS : ∀ n : ℕ, Ψi (n / Y) ≠ 0 → n ∈ S)
+    (N : ℕ) (S : Finset ℕ) (hS : ∀ n : ℕ, Ψi (n / Y) ≠ 0 → n ∈ S)
     (hSN : S ⊆ Finset.Icc 1 N) (t : ℝ) :
     dp S (fun n => Ψi (n / Y) * Blueprint.Analytic.mellin n v * quad f1 f2 f3 f4 N n) t =
       (Y : ℂ) * ∑ β ∈ relBoxes (Nat.log 2 N) (α * Y),
@@ -228,7 +228,7 @@ theorem mellin_box_identity (f1 f2 f3 f4 : ℕ → ℂ) (Ψi : ℝ → ℂ) (a :
   -- Step D
   have hD : ∑ z ∈ icc4 N, g (prod4 z) * F z =
       ∑ β ∈ allBoxes (Nat.log 2 N), ∑ z ∈ box4 β, g (prod4 z) * F z := by
-    apply sum_icc4_eq_boxes N hN
+    apply sum_icc4_eq_boxes N
     intro z _ _ _ _ hz
     have : prod4 z ∉ S := fun h => by
       have := (Finset.mem_Icc.mp (hSN h)).2; omega
@@ -309,7 +309,7 @@ theorem mellin_box_identity (f1 f2 f3 f4 : ℕ → ℂ) (Ψi : ℝ → ℂ) (a :
       · apply Continuous.aestronglyMeasurable
         unfold Blueprint.Analytic.mellin; fun_prop
       · rw [norm_mul, P5Core.norm_mellin, mul_one]
-    rw [Finset.sum_congr rfl hterm, ← Finset.mul_sum, ← integral_finset_sum _ hint]
+    rw [Finset.sum_congr rfl hterm, ← Finset.mul_sum, ← integral_finsetSum _ hint]
     congr 1
     congr 1
     funext ξ

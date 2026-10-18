@@ -169,7 +169,7 @@ theorem GhostAnalyticParametersTask_proof :
           _ ≤ (P.V g.val * (p.val : ℝ) * (1 / 2))⁻¹ :=
             (inv_le_inv₀ hmaxPos hminPos).mpr hden
           _ = 2 * (P.V g.val)⁻¹ * (p.val : ℝ)⁻¹ := by
-            field_simp [ne_of_gt hVg, ne_of_gt hpPos] <;> ring
+            field_simp [ne_of_gt hVg, ne_of_gt hpPos]
       _ = 2 * (P.V g.val)⁻¹ *
           (∑ p : P.Prime g.val, (p.val : ℝ)⁻¹) := by
         rw [← Finset.mul_sum]
@@ -185,7 +185,7 @@ theorem GhostAnalyticParametersTask_proof :
           Real.exp (Acoef * (P.bigGroups.card : ℝ)) := by
             dsimp [Acoef]
             rw [← Real.exp_nat_mul]
-            congr 1 <;> ring
+            congr 1; ring
       _ ≤ Real.exp (Acoef * (F.C₀ * T x)) := by
         apply Real.exp_le_exp.mpr
         exact mul_le_mul_of_nonneg_left hBigCount hAcoef

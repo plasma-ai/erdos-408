@@ -57,7 +57,7 @@ theorem fixedContextRowCost_le (A : Model F P J m) (r : MemoryParameters F)
     (htilted : ∀ g : P.BigGroup, ∀ p : P.Prime g.val, 0 ≤ tiltedMu F P n g.val p)
     (htiltedSum : ∀ g : P.BigGroup, ∑ p : P.Prime g.val,
       tiltedMu F P n g.val p ≤ 2)
-    (Cprom Csmall0 : ℝ) (hCsmall0Pos : 0 < Csmall0)
+    (Cprom Csmall0 : ℝ)
     (hCprom : ∀ Z' a : ℕ, a ≤ F.ell + m →
       (Z' : ℝ) ^ a * r.rho ^ (Z' - a) ≤ Cprom)
     (hCsmall0 : ∀ Y : ℕ, F.ell ≤ Y →
@@ -103,7 +103,7 @@ theorem fixedContextRowCost_le (A : Model F P J m) (r : MemoryParameters F)
   let pref : ℝ := Erdos821.P3Edge.patternSup A v *
     (A.pattern v).auxMass u * P.memoryWeight r.v s
   have hTransfer := Erdos821.P3Edge.sum_transfer_labels_le F r n Cprom Csmall0
-    hCsmall0Pos hCprom hCsmall0 hVlo htilted htiltedSum (A.pattern v) delta ss
+    hCprom hCsmall0 hVlo htilted htiltedSum (A.pattern v) delta ss
   have hT : (∑ tr : TransferChoice ss, labelCost tr) ≤
       (Erdos821.P3Edge.bigGroupConst F r m Cprom) ^ Fintype.card P.BigGroup *
         (max 1 (max 1 ((F.vMin⁻¹) ^ (F.ell + m)) * Csmall0)) ^
@@ -166,7 +166,7 @@ theorem fixedContextColumnCost_le (A : Model F P J m) (r : MemoryParameters F)
     (htilted : ∀ g : P.BigGroup, ∀ p : P.Prime g.val, 0 ≤ tiltedMu F P n g.val p)
     (htiltedSum : ∀ g : P.BigGroup, ∑ p : P.Prime g.val,
       tiltedMu F P n g.val p ≤ 2)
-    (Cprom Csmall0 : ℝ) (hCsmall0Pos : 0 < Csmall0)
+    (Cprom Csmall0 : ℝ)
     (hCprom : ∀ Z' a : ℕ, a ≤ F.ell + m →
       (Z' : ℝ) ^ a * r.rho ^ (Z' - a) ≤ Cprom)
     (hCsmall0 : ∀ Y : ℕ, F.ell ≤ Y →
@@ -208,7 +208,7 @@ theorem fixedContextColumnCost_le (A : Model F P J m) (r : MemoryParameters F)
     exact mul_nonneg (mul_nonneg
       (Erdos821.P3Edge.patternSup_nonneg A v) hAux) hMW
   have hLabels := Erdos821.P3Edge.sum_colLabelTerm_le F r n Cprom Csmall0
-    hCsmall0Pos hCprom hCsmall0 hVlo htilted htiltedSum (A.pattern v)
+    hCprom hCsmall0 hVlo htilted htiltedSum (A.pattern v)
     (-edgeDelta A (A.pattern v) (edgeForward i) (permuteActive τ t).2.1 u)
     (permuteActive τ t)
   have hBA : fixedContextColumnCost A r n theta i v u t π τ S ≤ pref * (bigC * smallC) := by
@@ -350,7 +350,7 @@ theorem primeProduct_injective {α : Type*} [DecidableEq α]
       primeProduct_factorization_at p hp hinj T a] at h'
   by_cases hS : a ∈ S <;> by_cases hT : a ∈ T <;> simp_all
 
-abbrev SmallSlot (P : PrimeGroups) (M : ℕ) := Σ g : P.SmallGroup, Fin M
+abbrev SmallSlot (P : PrimeGroups) (M : ℕ) := Σ _ : P.SmallGroup, Fin M
 
 def smallSlotPrime {P : PrimeGroups} {M : ℕ} (a : P.Labels M)
     (z : SmallSlot P M) : ℕ := (a z.1.val z.2).val
@@ -379,17 +379,17 @@ theorem smallSlotPrime_injective (P : PrimeGroups) {M : ℕ}
   rfl
 
 def omittedSlots {P : PrimeGroups} {M : ℕ}
-    (O : ∀ g : P.SmallGroup, Finset (Fin M)) : Finset (SmallSlot P M) :=
+    (O : P.SmallGroup → Finset (Fin M)) : Finset (SmallSlot P M) :=
   Finset.sigma Finset.univ O
 
 def omittedPrimeProduct {P : PrimeGroups} {M : ℕ} (a : P.Labels M)
-    (O : ∀ g : P.SmallGroup, Finset (Fin M)) : ℕ :=
+    (O : P.SmallGroup → Finset (Fin M)) : ℕ :=
   (omittedSlots O).prod (smallSlotPrime a)
 
 /-- The product of omitted small labels uniquely determines every omitted slot. -/
 theorem omittedPrimeProduct_injective {P : PrimeGroups} {M : ℕ}
     (y : P.SmallResidues) (a : P.Labels M) (hphys : P.smallPhysical y a)
-    {O O' : ∀ g : P.SmallGroup, Finset (Fin M)}
+    {O O' : P.SmallGroup → Finset (Fin M)}
     (hprod : omittedPrimeProduct a O = omittedPrimeProduct a O') : O = O' := by
   classical
   have hslots : omittedSlots O = omittedSlots O' :=
@@ -403,7 +403,7 @@ theorem omittedPrimeProduct_injective {P : PrimeGroups} {M : ℕ}
   simpa [omittedSlots, Finset.mem_sigma] using hmem
 
 abbrev OmissionChoices (P : PrimeGroups) (M ell : ℕ) :=
-  ∀ g : P.SmallGroup, {S : Finset (Fin M) // S.card = ell}
+  ∀ _ : P.SmallGroup, {S : Finset (Fin M) // S.card = ell}
 
 /-- The number of independent omitted ell-subsets in the small groups. -/
 theorem omissionChoices_card (P : PrimeGroups) (M ell : ℕ) :
@@ -530,7 +530,7 @@ theorem omissionAlignment_map (P : PrimeGroups) (J ell : ℕ)
     (O g).val.image (omissionAlignment P J ell O O' g.val) = (O' g).val := by
   classical
   unfold omissionAlignment
-  simp only [dif_pos g.property]
+  simp only [dite_eq_left g.property]
   exact permMapFinset_image (O g).val (O' g).val (by
     rw [(O g).property, (O' g).property])
 
@@ -657,7 +657,7 @@ noncomputable def permutationSplitEquiv (P : PrimeGroups) (M : ℕ) :
     by_cases hb : P.big g = true
     · simp [combinePermutations, hb]
     · have hs := smallFlag_of_not_big P g hb
-      simp [combinePermutations, hb, hs]
+      simp [combinePermutations, hb]
   right_inv := by
     rintro ⟨πB, πS⟩
     apply Prod.ext
@@ -691,7 +691,7 @@ noncomputable def omissionAssignmentFiberSplitEquiv (P : PrimeGroups) (J ell : �
     by_cases hb : P.big g = true
     · simp [combinePermutations, hb]
     · have hs := smallFlag_of_not_big P g hb
-      simp [combinePermutations, hb, hs]
+      simp [combinePermutations, hb]
   right_inv := by
     rintro ⟨πB, πS⟩
     apply Prod.ext
@@ -841,12 +841,12 @@ theorem omissionSmallFiber_symmetry_normalization (P : PrimeGroups) (J ell : ℕ
   have hchoices_pos : 0 < (Fintype.card (OmissionChoices P (J + ell) ell) : ℝ) := by
     have hne : Nonempty (OmissionChoices P (J + ell) ell) :=
       ⟨fun _ => ⟨omissionTail J ell, omissionTail_card J ell⟩⟩
-    letI := hne
+    let := hne
     exact Nat.cast_pos.mpr Fintype.card_pos
   have hbig_pos : 0 < (Fintype.card (P.BigPermutations (J + ell)) : ℝ) := by
     have hne : Nonempty (P.BigPermutations (J + ell)) :=
       ⟨fun _ => Equiv.refl _⟩
-    letI := hne
+    let := hne
     exact Nat.cast_pos.mpr Fintype.card_pos
   have hsmall_pos : 0 < (Fintype.card (OmissionSmallFiber P J ell O) : ℝ) := by
     let O₁ := omissionOfSmallPerm P J ell (fun _ => Equiv.refl _)
@@ -854,12 +854,12 @@ theorem omissionSmallFiber_symmetry_normalization (P : PrimeGroups) (J ell : ℕ
       ⟨⟨fun _ => Equiv.refl _, rfl⟩⟩
     have hne : Nonempty (OmissionSmallFiber P J ell O) :=
       ⟨omissionSmallFiberEquiv P J ell O₁ O (Classical.choice hne₁)⟩
-    letI := hne
+    let := hne
     exact Nat.cast_pos.mpr Fintype.card_pos
   have hperms_pos : 0 < (Fintype.card (P.Permutations (J + ell)) : ℝ) := by
     have hne : Nonempty (P.Permutations (J + ell)) :=
       ⟨fun _ => Equiv.refl _⟩
-    letI := hne
+    let := hne
     exact Nat.cast_pos.mpr Fintype.card_pos
   unfold edgeSymmetryFactor
   rw [hreal]
@@ -983,7 +983,7 @@ theorem omissionFiber_symmetry_normalization (P : PrimeGroups) (J ell : ℕ)
   have hPerm : (Fintype.card (P.Permutations (J + ell)) : ℝ) ≠ 0 := by
     have hnonempty : Nonempty (P.Permutations (J + ell)) :=
       ⟨fun _ => Equiv.refl _⟩
-    letI := hnonempty
+    let := hnonempty
     have hcardPos : 0 < Fintype.card (P.Permutations (J + ell)) := Fintype.card_pos
     exact_mod_cast (Nat.ne_of_gt hcardPos)
   unfold edgeSymmetryFactor
@@ -1058,7 +1058,7 @@ theorem fixedContextOmissionRowCost_le (A : Model F P J m) (r : MemoryParameters
     (htilted : ∀ g : P.BigGroup, ∀ p : P.Prime g.val, 0 ≤ tiltedMu F P n g.val p)
     (htiltedSum : ∀ g : P.BigGroup, ∑ p : P.Prime g.val,
       tiltedMu F P n g.val p ≤ 2)
-    (Cprom Csmall0 : ℝ) (hCsmall0Pos : 0 < Csmall0)
+    (Cprom Csmall0 : ℝ)
     (hCprom : ∀ Z' a : ℕ, a ≤ F.ell + m →
       (Z' : ℝ) ^ a * r.rho ^ (Z' - a) ≤ Cprom)
     (hCsmall0 : ∀ Y : ℕ, F.ell ≤ Y →
@@ -1086,7 +1086,7 @@ theorem fixedContextOmissionRowCost_le (A : Model F P J m) (r : MemoryParameters
         (combinePermutations P πB πS.1) τ S ≤ C := by
     simpa [C] using fixedContextRowCost_le A r n theta i v u s
       (combinePermutations P πB πS.1) τ S hVlo hVpos htilted htiltedSum
-      Cprom Csmall0 hCsmall0Pos hCprom hCsmall0
+      Cprom Csmall0 hCprom hCsmall0
   simpa [C] using omissionSmallFiberAverage_le P J F.ell O πB
     (fun π τ => fixedContextRowCost A r n theta i v u s π τ S) C hterm
 
@@ -1102,7 +1102,7 @@ theorem fixedContextOmissionColumnCost_le (A : Model F P J m) (r : MemoryParamet
     (htilted : ∀ g : P.BigGroup, ∀ p : P.Prime g.val, 0 ≤ tiltedMu F P n g.val p)
     (htiltedSum : ∀ g : P.BigGroup, ∑ p : P.Prime g.val,
       tiltedMu F P n g.val p ≤ 2)
-    (Cprom Csmall0 : ℝ) (hCsmall0Pos : 0 < Csmall0)
+    (Cprom Csmall0 : ℝ)
     (hCprom : ∀ Z' a : ℕ, a ≤ F.ell + m →
       (Z' : ℝ) ^ a * r.rho ^ (Z' - a) ≤ Cprom)
     (hCsmall0 : ∀ Y : ℕ, F.ell ≤ Y →
@@ -1132,7 +1132,7 @@ theorem fixedContextOmissionColumnCost_le (A : Model F P J m) (r : MemoryParamet
         (combinePermutations P πB τS.1) S ≤ C := by
     simpa [C] using fixedContextColumnCost_le A r n theta i v u t π
       (combinePermutations P πB τS.1) S hVlo hVhi htilted htiltedSum
-      Cprom Csmall0 hCsmall0Pos hCprom hCsmall0
+      Cprom Csmall0 hCprom hCsmall0
   simpa [C] using omissionSmallFiberTargetAverage_le P J F.ell O πB
     (fun π τ => fixedContextColumnCost A r n theta i v u t π τ S) C hterm
 
@@ -1249,7 +1249,7 @@ theorem const_log_mul_rpow_lt {C alpha beta : ℝ} (hC : 0 < C) (hαβ : alpha <
     _ = y ^ beta := by
       calc
         _ = y ^ ((beta - alpha) + alpha) := (Real.rpow_add hy (beta - alpha) alpha).symm
-        _ = y ^ beta := by congr 1 <;> ring
+        _ = y ^ beta := by congr 1; ring
 
 theorem rpow_lt_exp_rpow_eventually {C beta : ℝ} (hbeta : 0 < beta) :
     ∀ᶠ y : ℝ in atTop, y ^ C < Real.exp (y ^ beta) := by
@@ -1312,8 +1312,8 @@ theorem bigPrime_gt_logpow_eventually (F : FixedData) (C₂ : ℝ) :
   exact hbase.trans_le hbig.1
 
 /-- The source k-size condition rules out a big prime dividing k. -/
-theorem bigPrime_not_dvd_k_of_bound {F : FixedData} {x C₂ : ℝ}
-    (P : PrimeGroups) (hAdm : P.Admissible F x) (g : P.BigGroup)
+theorem bigPrime_not_dvd_k_of_bound {x C₂ : ℝ}
+    (P : PrimeGroups) (g : P.BigGroup)
     (p : P.Prime g.val) (k : ℤ) (hk : 0 < |k|)
     (hK : (|k| : ℝ) ≤ (L x) ^ C₂)
     (hlarge : (L x) ^ C₂ < (p.val : ℝ)) : ¬ (p.val : ℤ) ∣ k := by
@@ -1527,8 +1527,8 @@ theorem pattern_D_split {P : PrimeGroups} {J ell m : ℕ}
     | false =>
         have hchanged := ν.small g hb
         have hj : j ∉ ν.changed g := by simp [hchanged]
-        simp [hb, hj]
-    | true => simp [hb]
+        simp [hj]
+    | true => simp
   calc
     _ = ∏ g : P.Group, ∏ j : Fin J,
           ((if P.big g = false then (a g (ν.slot j)).val else 1) *
@@ -1569,10 +1569,10 @@ theorem patternBigPart_eq_of_bigRestriction {P : PrimeGroups} {J ell m : ℕ}
   apply Finset.prod_congr rfl
   intro j hj
   cases hb : P.big g with
-  | false => simp [hb]
+  | false => simp
   | true =>
       have heq := hπ ⟨g, hb⟩
-      simp [hb, heq, PrimeGroups.act]
+      simp [heq, PrimeGroups.act]
 
 theorem patternSmallPart_act_eq_sourceHead {P : PrimeGroups} {J ell m : ℕ}
     (ν : Pattern P J ell m) (a : P.Labels (J + ell)) (π : P.Permutations (J + ell)) :
@@ -1613,8 +1613,8 @@ theorem promotionZModConstant_ne_zero {p : ℕ} (hp : Nat.Prime p)
     (hB : ¬ p ∣ B) (hS : ¬ p ∣ S) (forward : Bool) :
     (if forward then (k : ZMod p) * (B : ZMod p) * (S : ZMod p)
       else -((k : ZMod p) * (B : ZMod p) * (S : ZMod p))) ≠ 0 := by
-  haveI : Fact p.Prime := ⟨hp⟩
-  haveI : NeZero p := ⟨hp.ne_zero⟩
+  have : Fact p.Prime := ⟨hp⟩
+  have : NeZero p := ⟨hp.ne_zero⟩
   have hkz : (k : ZMod p) ≠ 0 := by
     intro h
     exact hk ((ZMod.intCast_zmod_eq_zero_iff_dvd k p).mp h)
@@ -1658,7 +1658,7 @@ theorem edgeDelta_mul_omitted_eq {F : FixedData} {P : PrimeGroups} {J m : ℕ}
               ((ν.D (P.act π a) u : ZMod p) *
                 (omittedChoiceProduct a (omissionOfPerm P J F.ell π) : ZMod p))) := by ring
         _ = -((A.k : ZMod p) * ((B : ZMod p) * (S : ZMod p))) := by rw [hcast]
-        _ = _ := by simp <;> ring
+        _ = _ := by simp; ring
   | true =>
       have hdelta :
           (edgeDelta A ν true (P.act π a) u : ZMod p) =
@@ -1671,7 +1671,7 @@ theorem edgeDelta_mul_omitted_eq {F : FixedData} {P : PrimeGroups} {J m : ℕ}
               ((ν.D (P.act π a) u : ZMod p) *
                 (omittedChoiceProduct a (omissionOfPerm P J F.ell π) : ZMod p)) := by ring
         _ = (A.k : ZMod p) * ((B : ZMod p) * (S : ZMod p)) := by rw [hcast]
-        _ = _ := by simp <;> ring
+        _ = _ := by simp; ring
 
 /-- A valid old-particle promotion pins the translated residue and excludes D. -/
 theorem rawEdgeValid_promotion_data {F : FixedData} {P : PrimeGroups} {J m : ℕ}
@@ -1941,7 +1941,7 @@ theorem deleteMemoryIndices_add_fiberEmbedding {P : PrimeGroups} {g : P.Group}
   have hpart : (Finset.univ \ S).val + S.val = Finset.univ.val := by
     have hUnion : (Finset.univ \ S).disjUnion S hdisj = Finset.univ := by
       ext i
-      simp [Finset.mem_disjUnion, Finset.mem_sdiff]
+      simp
     have hval := congrArg Finset.val hUnion
     simpa [Finset.disjUnion] using hval
   calc
@@ -2262,8 +2262,7 @@ theorem smallPhysical_act_iff {P : PrimeGroups} {M : ℕ}
   · intro h g
     obtain ⟨hinj, hzero⟩ := h g
     refine ⟨?_, ?_⟩
-    · change Function.Injective (a g)
-      intro i j hij
+    · intro i j hij
       have h' : (P.act π a) g ((π g).symm i) = (P.act π a) g ((π g).symm j) := by
         change a g ((π g) ((π g).symm i)) = a g ((π g) ((π g).symm j))
         simpa using hij
@@ -2271,7 +2270,6 @@ theorem smallPhysical_act_iff {P : PrimeGroups} {M : ℕ}
       have hEq := congrArg (π g) hsymm
       simpa using hEq
     · intro i
-      change y g (a g i) = 0
       have hz := hzero ((π g).symm i)
       change y g (a g ((π g) ((π g).symm i))) = 0 at hz
       have hi : (π g) ((π g).symm i) = i := Equiv.apply_symm_apply (π g) i
@@ -2498,7 +2496,7 @@ theorem promotionWitness_bad_card_le {F : FixedData} {P : PrimeGroups}
 instantiate the fixed-context union bound. -/
 theorem promotionWitness_bad_card_le_from_bounds {F : FixedData} {P : PrimeGroups}
     {J m : ℕ} {x C₂ : ℝ} (A : Model F P J m)
-    (hAdm : P.Admissible F x) (hk : 0 < |A.k|)
+    (hk : 0 < |A.k|)
     (hK : (|A.k| : ℝ) ≤ (L x) ^ C₂)
     (hbig : ∀ g : P.BigGroup, ∀ p : P.Prime g.val, (L x) ^ C₂ < (p.val : ℝ))
     (ν : Pattern P J F.ell m) (forward : Bool) (u : P.Aux J)
@@ -2511,7 +2509,7 @@ theorem promotionWitness_bad_card_le_from_bounds {F : FixedData} {P : PrimeGroup
       P.memorySize s := by
   apply promotionWitness_bad_card_le A ν forward u s πBig
   · intro idx
-    exact bigPrime_not_dvd_k_of_bound P hAdm idx.1
+    exact bigPrime_not_dvd_k_of_bound P idx.1
       (memoryEntry (s.2.2 idx.1) idx.2).1 A.k hk hK (hbig idx.1 _)
   · intro idx O
     exact hsmall O idx.1 (memoryEntry (s.2.2 idx.1) idx.2).1
@@ -2520,7 +2518,7 @@ theorem promotionWitness_bad_card_le_from_bounds {F : FixedData} {P : PrimeGroup
 bad promotion omissions. -/
 theorem promotionWitness_bad_card_le_cutoff {F : FixedData} {P : PrimeGroups}
     {J m : ℕ} {x C₂ : ℝ} (A : Model F P J m)
-    (hAdm : P.Admissible F x) (hk : 0 < |A.k|)
+    (hk : 0 < |A.k|)
     (hK : (|A.k| : ℝ) ≤ (L x) ^ C₂)
     (hbig : ∀ g : P.BigGroup, ∀ p : P.Prime g.val, (L x) ^ C₂ < (p.val : ℝ))
     (ν : Pattern P J F.ell m) (forward : Bool) (u : P.Aux J)
@@ -2531,7 +2529,7 @@ theorem promotionWitness_bad_card_le_cutoff {F : FixedData} {P : PrimeGroups}
     (Finset.univ.filter (fun O : OmissionChoices P (J + F.ell) F.ell =>
       ∃ idx : OldMemoryIndex s, PromotionWitness A ν forward u s πBig idx O)).card ≤
       memoryCutoff x := by
-  exact (promotionWitness_bad_card_le_from_bounds A hAdm hk hK hbig ν forward u s πBig
+  exact (promotionWitness_bad_card_le_from_bounds A hk hK hbig ν forward u s πBig
     hsmall).trans hs
 
 /-- Uniformly for large `x`, admissibility and the task's `k`-bound give the
@@ -2552,7 +2550,7 @@ theorem promotionWitness_bad_card_le_eventually (F : FixedData) (C₂ : ℝ)
   intro x hx P hAdm A hk hK ν forward u s πBig hs
   have hxBig : xBig ≤ x := (le_max_left _ _).trans hx
   have hxSmall : xSmall ≤ x := (le_max_right _ _).trans hx
-  exact promotionWitness_bad_card_le_cutoff A hAdm hk hK
+  exact promotionWitness_bad_card_le_cutoff A hk hK
     (fun g p => hBig x hxBig P hAdm g p) ν forward u s πBig
     (fun O g p => hSmall x hxSmall P hAdm J s.2.1 O g p) hs
 
@@ -2710,7 +2708,7 @@ theorem omissionRestrictedAbsoluteKernel_average {F : FixedData} {P : PrimeGroup
     dsimp [D]
     have hnonempty : Nonempty (OmissionChoices P (J + F.ell) F.ell) :=
       ⟨fun _ => ⟨omissionTail J F.ell, omissionTail_card J F.ell⟩⟩
-    letI : Nonempty (OmissionChoices P (J + F.ell) F.ell) := hnonempty
+    let : Nonempty (OmissionChoices P (J + F.ell) F.ell) := hnonempty
     exact Nat.cast_pos.mpr Fintype.card_pos
   have hinner (c : EdgeChoice A s) :
       (∑ O : OmissionChoices P (J + F.ell) F.ell,
@@ -2806,7 +2804,7 @@ theorem omissionOfPerm_combinePermutations {P : PrimeGroups} {J ell : ℕ}
 small source fiber are exactly one full source-permutation fiber. -/
 noncomputable def edgeContextOmissionEquiv {F : FixedData} {P : PrimeGroups}
     {J m : ℕ} (A : Model F P J m) (O : OmissionChoices P (J + F.ell) F.ell) :
-    (Σ ctx : EdgeTransferContext A, OmissionSmallFiber P J F.ell O) ≃
+    (Σ _ : EdgeTransferContext A, OmissionSmallFiber P J F.ell O) ≃
       Fin A.patternCount × P.Aux J × OmissionAssignmentFiber P J F.ell O where
   toFun x :=
     Prod.mk x.1.1 (Prod.mk x.1.2.1
@@ -2886,7 +2884,7 @@ def storeOnlyContextKernel {F : FixedData} {P : PrimeGroups} {J m n : ℕ}
 abbrev EdgeContextChoice {F : FixedData} {P : PrimeGroups} {J m : ℕ}
     (A : Model F P J m) (s : P.MemoryState (J + F.ell))
     (O : OmissionChoices P (J + F.ell) F.ell) :=
-  Σ ctx : EdgeTransferContext A,
+  Σ _ : EdgeTransferContext A,
     OmissionSmallFiber P J F.ell O ×
       (P.Permutations (J + F.ell) × TransferChoice s)
 
@@ -2989,7 +2987,7 @@ theorem promotionContextKernel_sum {F : FixedData} {P : PrimeGroups}
   let f : EdgeChoice A s → ℝ := fun c =>
     if edgeChoiceValid A .dirty i s t c ∧ edgeHasPromotion c then
       ‖edgeChoiceCoefficient A n r.rho theta i s t c‖ else 0
-  letI : Fintype (EdgeContextChoice A s O) := by
+  let : Fintype (EdgeContextChoice A s O) := by
     dsimp [EdgeContextChoice]
     infer_instance
   have hflat :
@@ -3141,7 +3139,7 @@ theorem storeOnlyContextKernel_sum {F : FixedData} {P : PrimeGroups}
   let f : EdgeChoice A s → ℝ := fun c =>
     if edgeChoiceValid A .dirty i s t c ∧ edgeHasStoreOnly c then
       ‖edgeChoiceCoefficient A n r.rho theta i s t c‖ else 0
-  letI : Fintype (EdgeContextChoice A s O) := by
+  let : Fintype (EdgeContextChoice A s O) := by
     dsimp [EdgeContextChoice]
     infer_instance
   have hflat :
@@ -3296,7 +3294,7 @@ theorem promotionContextKernel_rowCost_le {F : FixedData} {P : PrimeGroups}
     (htilted : ∀ g : P.BigGroup, ∀ p : P.Prime g.val, 0 ≤ tiltedMu F P n g.val p)
     (htiltedSum : ∀ g : P.BigGroup, ∑ p : P.Prime g.val,
       tiltedMu F P n g.val p ≤ 2)
-    (Cprom Csmall0 : ℝ) (hCsmall0Pos : 0 < Csmall0)
+    (Cprom Csmall0 : ℝ)
     (hCprom : ∀ Z' a : ℕ, a ≤ F.ell + m →
       (Z' : ℝ) ^ a * r.rho ^ (Z' - a) ≤ Cprom)
     (hCsmall0 : ∀ Y : ℕ, F.ell ≤ Y →
@@ -3499,7 +3497,7 @@ theorem promotionContextKernel_rowCost_le {F : FixedData} {P : PrimeGroups}
         rcases hdirty.1 with ⟨hraw, hmode⟩
         exact ⟨hraw, by simp [transferModeAccept]⟩
       simp [c, hdirty, hall]
-    · simp only [c, if_neg hdirty]
+    · simp only [c, ite_eq_right hdirty]
       by_cases hall : edgeChoiceValid A .all i s t c
       · have hall' : edgeChoiceValid A .all i s t
             (combinePermutations P πB πS.1, τ, v, u, tr) := by
@@ -3549,7 +3547,7 @@ theorem promotionContextKernel_rowCost_le {F : FixedData} {P : PrimeGroups}
             Fintype.card P.SmallGroup)) /
         (Fintype.card (P.BigPermutations (J + F.ell)) : ℝ) := by
     simpa [D, H] using fixedContextOmissionRowCost_le A r n theta i v u s πB O S
-      hVlo hVpos htilted htiltedSum Cprom Csmall0 hCsmall0Pos hCprom hCsmall0
+      hVlo hVpos htilted htiltedSum Cprom Csmall0 hCprom hCsmall0
   calc
     _ = D * H *
           ∑ πS : OmissionSmallFiber P J F.ell O,
@@ -4293,7 +4291,7 @@ theorem storeOnlyContextKernel_columnCost_le {F : FixedData} {P : PrimeGroups}
     (htilted : ∀ g : P.BigGroup, ∀ p : P.Prime g.val, 0 ≤ tiltedMu F P n g.val p)
     (htiltedSum : ∀ g : P.BigGroup, ∑ p : P.Prime g.val,
       tiltedMu F P n g.val p ≤ 2)
-    (Cprom Csmall0 : ℝ) (hCsmall0Pos : 0 < Csmall0)
+    (Cprom Csmall0 : ℝ)
     (hCprom : ∀ Z' a : ℕ, a ≤ F.ell + m →
       (Z' : ℝ) ^ a * r.rho ^ (Z' - a) ≤ Cprom)
     (hCsmall0 : ∀ Y : ℕ, F.ell ≤ Y →
@@ -4355,11 +4353,11 @@ theorem storeOnlyContextKernel_columnCost_le {F : FixedData} {P : PrimeGroups}
         rcases hc.1 with ⟨hraw, _⟩
         exact ⟨hraw, by simp [transferModeAccept]⟩
       simp [tr, hc, hall]
-    · simp only [tr, if_neg hc]
+    · simp only [tr, ite_eq_right hc]
       by_cases hall : edgeChoiceValid A .all i s t (π, τ, v, u, tr)
       · have hall' : edgeChoiceValid A .all i s t
             (π, τ, v, u, B, ⟨A_retr, f⟩) := by simpa [tr] using hall
-        simp only [if_pos hall']
+        simp only [ite_eq_left hall']
         simpa using mul_nonneg (mul_nonneg (hmass s)
           (norm_nonneg (edgeChoiceCoefficient A n r.rho theta i s t
             (π, τ, v, u, B, ⟨A_retr, f⟩)))) (hweight s)
@@ -4531,7 +4529,7 @@ theorem storeOnlyContextKernel_columnCost_le {F : FixedData} {P : PrimeGroups}
               _ = _ := hReorder
               _ = _ := by simp [fixedContextColumnCost])
   have hfinal := fixedContextOmissionColumnCost_le A r n theta i v u t πB O S
-    hVlo hVhi htilted htiltedSum Cprom Csmall0 hCsmall0Pos hCprom hCsmall0
+    hVlo hVhi htilted htiltedSum Cprom Csmall0 hCprom hCsmall0
   exact hsumBound.trans hfinal
 
 /-- Promotion contexts have the complementary column bound: after fixing a
@@ -4547,7 +4545,7 @@ theorem promotionContextKernel_columnCost_le {F : FixedData} {P : PrimeGroups}
     (hVhi : ∀ g : P.Group, P.V g ≤ F.vMax)
     (htilted : ∀ g : P.BigGroup, ∀ p : P.Prime g.val, 0 ≤ tiltedMu F P n g.val p)
     (htiltedSum : ∀ g : P.BigGroup, ∑ p : P.Prime g.val, tiltedMu F P n g.val p ≤ 2)
-    (Cprom Csmall0 : ℝ) (hCsmall0Pos : 0 < Csmall0)
+    (Cprom Csmall0 : ℝ)
     (hCprom : ∀ Z' a : ℕ, a ≤ F.ell + m →
       (Z' : ℝ) ^ a * r.rho ^ (Z' - a) ≤ Cprom)
     (hCsmall0 : ∀ Y : ℕ, F.ell ≤ Y →
@@ -4611,13 +4609,13 @@ theorem promotionContextKernel_columnCost_le {F : FixedData} {P : PrimeGroups}
         rcases hc.1 with ⟨hraw, _⟩
         exact ⟨hraw, by simp [transferModeAccept]⟩
       simp [tr, hc, hall]
-    · simp only [tr, if_neg hc]
+    · simp only [tr, ite_eq_right hc]
       by_cases hall : edgeChoiceValid A .all i s t
           (combinePermutations P πB πS.1, τ, v, u, tr)
       · have hall' : edgeChoiceValid A .all i s t
             (combinePermutations P πB πS.1, τ, v, u, B, ⟨A_retr, f⟩) := by
           simpa [tr] using hall
-        simp only [if_pos hall']
+        simp only [ite_eq_left hall']
         simpa using mul_nonneg (mul_nonneg (hmass s)
           (norm_nonneg (edgeChoiceCoefficient A n r.rho theta i s t
             (combinePermutations P πB πS.1, τ, v, u, B, ⟨A_retr, f⟩)))) (hweight s)
@@ -4829,7 +4827,7 @@ theorem promotionContextKernel_columnCost_le {F : FixedData} {P : PrimeGroups}
     (fun πS τ => by
       simpa using fixedContextColumnCost_le A r n theta i v u t
         (combinePermutations P ctx.2.2 πS.1) τ S
-        hVlo hVhi htilted htiltedSum Cprom Csmall0 hCsmall0Pos hCprom hCsmall0)
+        hVlo hVhi htilted htiltedSum Cprom Csmall0 hCprom hCsmall0)
   exact hsumBound.trans (by simpa [D, H] using hfinal)
 
 set_option maxHeartbeats 1000000 in
@@ -4846,7 +4844,7 @@ theorem storeOnlyContextKernel_rowCost_le {F : FixedData} {P : PrimeGroups}
     (htilted : ∀ g : P.BigGroup, ∀ p : P.Prime g.val, 0 ≤ tiltedMu F P n g.val p)
     (htiltedSum : ∀ g : P.BigGroup, ∑ p : P.Prime g.val,
       tiltedMu F P n g.val p ≤ 2)
-    (Cprom Csmall0 : ℝ) (hCsmall0Pos : 0 < Csmall0)
+    (Cprom Csmall0 : ℝ)
     (hCprom : ∀ Z' a : ℕ, a ≤ F.ell + m →
       (Z' : ℝ) ^ a * r.rho ^ (Z' - a) ≤ Cprom)
     (hCsmall0 : ∀ Y : ℕ, F.ell ≤ Y →
@@ -5034,7 +5032,7 @@ theorem storeOnlyContextKernel_rowCost_le {F : FixedData} {P : PrimeGroups}
         rcases hsOnly.1 with ⟨hraw, _⟩
         exact ⟨hraw, by simp [transferModeAccept]⟩
       simp [c, hsOnly, hall]
-    · simp only [c, if_neg hsOnly]
+    · simp only [c, ite_eq_right hsOnly]
       by_cases hall : edgeChoiceValid A .all i s t c
       · have hall' : edgeChoiceValid A .all i s t
             (π, combinePermutations P πB τS.1, v, u, tr) := by
@@ -5079,7 +5077,7 @@ theorem storeOnlyContextKernel_rowCost_le {F : FixedData} {P : PrimeGroups}
     (fun τS π => by
       simpa using fixedContextRowCost_le A r n theta i v u s π
         (combinePermutations P ctx.2.2 τS.1) S
-        hVlo hVpos htilted htiltedSum Cprom Csmall0 hCsmall0Pos hCprom hCsmall0)
+        hVlo hVpos htilted htiltedSum Cprom Csmall0 hCprom hCsmall0)
   calc
     _ = D * H *
           ∑ π : P.Permutations (J + F.ell),
@@ -5313,7 +5311,7 @@ theorem normBound_sum_projected_contexts_sparseRows
   let K' : κ → Ω → α → α → ℝ := fun j ω a b =>
     if keep a ∧ keep b then K j ω a b else 0
   let bad' : κ → α → Ω → Prop := fun j a ω => keep a ∧ bad j a ω
-  letI : ∀ j a, DecidablePred (bad' j a) := fun j a ω => by
+  let : ∀ j a, DecidablePred (bad' j a) := fun j a ω => by
     change Decidable (keep a ∧ bad j a ω)
     infer_instance
   have hK' : ∀ j ω a b, 0 ≤ K' j ω a b := by
@@ -5375,7 +5373,7 @@ theorem normBound_sum_projected_contexts_sparseCols
   let K' : κ → Ω → α → α → ℝ := fun j ω a b =>
     if keep a ∧ keep b then K j ω a b else 0
   let bad' : κ → α → Ω → Prop := fun j b ω => keep b ∧ bad j b ω
-  letI : ∀ j b, DecidablePred (bad' j b) := fun j b ω => by
+  let : ∀ j b, DecidablePred (bad' j b) := fun j b ω => by
     change Decidable (keep b ∧ bad j b ω)
     infer_instance
   have hK' : ∀ j ω a b, 0 ≤ K' j ω a b := by

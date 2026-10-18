@@ -69,8 +69,7 @@ theorem box_wmv : ∃ K c : ℝ, 0 < K ∧ 0 ≤ c ∧
     (fun j => by fin_cases j <;> simp [hB1, hB2, hB3, hB4])
     (fun j => by fin_cases j <;> simpa [boxF, boxI] using ‹_›)
   rw [Fin.prod_univ_four, sum_boxI] at hsq
-  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.cons_val_three,
-    Matrix.head_cons] at hsq
+  simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two, Matrix.cons_val_three] at hsq
   have hw := hW (2 ^ (bsize β + 4)) (coll (boxF f1 f2 f3 f4) (boxI β)) h c' hh
   simp_rw [boxPoly_eq_dp]
   refine ⟨hw.1, hw.2.trans ?_⟩

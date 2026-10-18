@@ -123,7 +123,7 @@ theorem Block_disjoint (α : Type) (S : Erdos821.Blueprint.SieveData α)
 
 /-- Every prime `p ≤ z` lies in some block `j < Jmax` (with `Z_Jmax < 2`). -/
 theorem Block_cover (α : Type) (S : Erdos821.Blueprint.SieveData α)
-    (z : ℝ) (hz : 1 < z) (Jmax : ℕ) (hJ : Zscale z Jmax < 2)
+    (z : ℝ) (Jmax : ℕ) (hJ : Zscale z Jmax < 2)
     (p : ℕ) (hpmem : p ∈ S.primes) (hple : (p : ℝ) ≤ z) :
     ∃ j, j < Jmax ∧ p ∈ Block α S z j := by
   have hprime : p.Prime := S.prime p hpmem

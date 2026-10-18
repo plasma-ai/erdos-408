@@ -129,7 +129,7 @@ theorem init_single (F : FixedData) (J n B : ℕ)
         ¬ (Q z.val ∧ (z.val.2.1 g.val h).val = vx) := by
       rintro z ⟨-, he⟩
       exact hvx (he ▸ (z.val.2.1 g.val h).property)
-    rw [Finset.sum_eq_zero fun z _ => if_neg (hz z)]
+    rw [Finset.sum_eq_zero fun z _ => ite_eq_right (hz z)]
     exact hRHS0
   let α : P.Prime g.val := ⟨vx, hvx⟩
   have hmu : muHat F P n g vx = tiltedMu F P n g.val α := muHat_of_mem F P n g α
@@ -143,8 +143,8 @@ theorem init_single (F : FixedData) (J n B : ℕ)
     apply Finset.sum_congr rfl
     intro z _
     by_cases hc : Q z.val ∧ z.val.2.1 g.val h = α
-    · rw [if_pos ⟨hc.1, congrArg Subtype.val hc.2⟩, if_pos hc]
-    · rw [if_neg (fun h' => hc ⟨h'.1, Subtype.ext h'.2⟩), if_neg hc]
+    · rw [ite_eq_left ⟨hc.1, congrArg Subtype.val hc.2⟩, ite_eq_left hc]
+    · rw [ite_eq_right (fun h' => hc ⟨h'.1, Subtype.ext h'.2⟩), ite_eq_right hc]
   have hS : (∑ z : BoundedMemoryState P (J + F.ell) B,
       (if Q z.val then initTerm F J n z.val else 0)) = ∑ z ∈ S, initTerm F J n z.val :=
     (Finset.sum_filter _ _).symm
@@ -181,12 +181,12 @@ theorem init_single (F : FixedData) (J n B : ℕ)
       unfold initTerm
       by_cases hem : ∀ g', z.val.2.2 g' = 0
       · have hem' : ∀ g', (relabelState g h p z.val).2.2 g' = 0 := hem
-        rw [if_pos hem, if_pos hem']
+        rw [ite_eq_left hem, ite_eq_left hem']
         have hM := congrArg abs (memoryMass_relabel F J n z.val g h p)
         rw [abs_mul, abs_mul, abs_of_pos (hμ _ _), abs_of_pos (hμ _ _), hlab] at hM
         exact hM.symm
       · have hem' : ¬ ∀ g', (relabelState g h p z.val).2.2 g' = 0 := hem
-        rw [if_neg hem, if_neg hem', zero_mul, zero_mul])
+        rw [ite_eq_right hem, ite_eq_right hem', zero_mul, zero_mul])
   rw [hLHS, hS, hmu]
   calc _ ≤ tiltedMu F P n g.val α / 1 * ∑ z ∈ S, initTerm F J n z.val := key
     _ = _ := by ring
@@ -212,9 +212,9 @@ theorem init_slots (F : FixedData) (J n B : ℕ)
             then initTerm F J n z.val else 0) := by
         intro z
         by_cases h1 : ∀ x ∈ insert y S, (z.val.2.1 x.1.val x.2).val = vals x
-        · rw [if_pos h1, if_pos ⟨fun x hx => h1 x (Finset.mem_insert_of_mem hx),
+        · rw [ite_eq_left h1, ite_eq_left ⟨fun x hx => h1 x (Finset.mem_insert_of_mem hx),
             h1 y (Finset.mem_insert_self y S)⟩]
-        · rw [if_neg h1, if_neg]
+        · rw [ite_eq_right h1, ite_eq_right]
           rintro ⟨h2, h3⟩
           apply h1
           intro x hx

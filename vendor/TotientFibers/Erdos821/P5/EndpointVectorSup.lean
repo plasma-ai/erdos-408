@@ -34,7 +34,7 @@ theorem damping_le_log_power (P : Geometry) (G : PrimeGroups) (x : ℝ) (J m : �
   apply Real.exp_le_exp.mpr
   calc
     _ ≤ (-Real.log P.q) * ((J + P.ell : ℕ) : ℝ) * G.size / 2 := by
-      convert hdrop using 1 <;> push_cast <;> ring
+      convert hdrop using 1; push_cast; ring
     _ ≤ (-Real.log P.q) * ((J + P.ell : ℕ) : ℝ) * P.C₀ * T x := by
       convert hscale using 1 <;> ring
     _ = _ := by unfold T; ring

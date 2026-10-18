@@ -26,7 +26,7 @@ lemma finite_multiset_bounded (α : Type*) [Fintype α] [DecidableEq α] (N : �
     ⟨z.val.count a, Nat.lt_succ_of_le (le_trans (Multiset.count_le_card a z.val) z.property)⟩
   have hfinj : Function.Injective f := by
     intro ⟨z1, h1⟩ ⟨z2, h2⟩ heq
-    simp only [S, Set.mem_setOf_eq] at h1 h2
+    simp only [S, Set.mem_ofPred_eq] at h1 h2
     -- heq : f ⟨z1,h1'⟩ = f ⟨z2,h2'⟩, need counts equal
     have hcount : ∀ a : α, z1.count a = z2.count a := by
       intro a

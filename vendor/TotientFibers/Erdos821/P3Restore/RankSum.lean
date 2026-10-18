@@ -85,7 +85,7 @@ theorem rank_sum_bound {a : ℕ} (low : Finset (Finset (Fin a)) → ℂ) (X Y Z 
     have hle : ∀ r ∈ t.filter (· < r0), (a : ℝ) ^ (2 * r) * f r ≤ X * M ^ r0 := by
       intro r hr
       have hr0 : r < r0 := (Finset.mem_filter.mp hr).2
-      have hfr : f r = X * Y ^ r := if_pos hr0
+      have hfr : f r = X * Y ^ r := ite_eq_left hr0
       rw [hfr]
       calc (a : ℝ) ^ (2 * r) * (X * Y ^ r) = X * ((a : ℝ) ^ 2 * Y) ^ r := by
             rw [pow_mul, mul_pow]; ring
@@ -111,7 +111,7 @@ theorem rank_sum_bound {a : ℕ} (low : Finset (Finset (Fin a)) → ℂ) (X Y Z 
     have heq : ∀ r ∈ t.filter (fun r => ¬ r < r0), (a : ℝ) ^ (2 * r) * f r = Z * V ^ r := by
       intro r hr
       have hr0 : ¬ r < r0 := (Finset.mem_filter.mp hr).2
-      have hfr : f r = Z * q ^ r := if_neg hr0
+      have hfr : f r = Z * q ^ r := ite_eq_right hr0
       rw [hfr, hVdef, pow_mul, mul_pow]
       ring
     rw [Finset.sum_congr rfl heq, ← Finset.mul_sum, mul_div_assoc]

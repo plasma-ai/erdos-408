@@ -20,7 +20,7 @@ theorem cellKernel_star (G : PrimeGroups) (k : Fin G.size → ℕ) (Q : ℕ)
     rw [hc]
     simp only [true_and]
     split_ifs
-    · simp [map_sum, mul_comm]
+    · simp [mul_comm]
     · simp
   · simp [cellKernel, hc, Ne.symm hc]
 
@@ -32,8 +32,7 @@ theorem cellTransposeApply_eq (G : PrimeGroups) (k : Fin G.size → ℕ) (Q : �
     (h ξ : ℝ) (f : Tuple G k → ℂ) :
     cellTransposeApply G k Q h ξ f = fun D => star (cellApply G k Q h ξ (fun X => star (f X)) D) := by
   funext D
-  simp only [cellTransposeApply, cellApply, expect, star_sum, star_mul, star_star,
-    Complex.star_def, Complex.conj_ofReal, Complex.conj_conj]
+  simp only [cellTransposeApply, cellApply, expect, star_sum, star_mul, Complex.star_def, Complex.conj_ofReal, Complex.conj_conj]
   apply Finset.sum_congr rfl
   intro X _
   have hs := cellKernel_star G k Q h ξ (product G k X) (product G k D)

@@ -96,7 +96,7 @@ private theorem primeThetaAP_cumulative (r a : ℕ) (x : ℝ) :
       simp [primeThetaCoefficient, hp, hres, OAI.LargePrimeGaps.theta]
   · simp [primeThetaCoefficient, hp, OAI.LargePrimeGaps.theta]
 
-private theorem primeCountAP_eq_theta_formula (r a : ℕ) (hr : 1 ≤ r)
+private theorem primeCountAP_eq_theta_formula (r a : ℕ)
     {x : ℝ} (hx : 2 ≤ x) :
     primeCountAP r a x = primeThetaAP r a x / Real.log x +
       ∫ t in 2..x, primeThetaAP r a t / (t * Real.log t ^ 2) := by
@@ -208,7 +208,7 @@ private theorem primeThetaAP_nonneg (r a : ℕ) (x : ℝ) :
   exact Finset.sum_nonneg fun n hn => OAI.LargePrimeGaps.theta_nonneg n
 
 private theorem primeThetaAP_integrableOn (r a : ℕ) {u v : ℝ}
-    (hu : 2 ≤ u) (huv : u ≤ v) :
+    (hu : 2 ≤ u) :
     IntegrableOn (fun t : ℝ => primeThetaAP r a t / (t * Real.log t ^ 2))
       (Set.Icc u v) := by
   let c : ℕ → ℝ := primeThetaCoefficient r a
@@ -241,7 +241,7 @@ private theorem primeThetaAP_errorKernel_integrable (r a : ℕ) {u v : ℝ}
   have hTheta : IntervalIntegrable
       (fun t : ℝ => primeThetaAP r a t / (t * Real.log t ^ 2)) volume u v :=
     (intervalIntegrable_iff_integrableOn_Icc_of_le huv).mpr
-      (primeThetaAP_integrableOn r a hu huv)
+      (primeThetaAP_integrableOn r a hu)
   have hmainCont : ContinuousOn
       (fun t : ℝ => (t / (r.totient : ℝ)) / (t * Real.log t ^ 2)) (Set.Icc u v) := by
     intro t ht
@@ -318,7 +318,7 @@ private theorem primeThetaAP_error_of_endpoint (D M : ℝ) {t : ℝ}
       exact add_le_add hremoveBound (hclass.trans hEP)
     _ ≤ M * t * (Real.log t) ^ (-D) + 1 + 2 * Real.sqrt t * Real.log t := by linarith
 
-private theorem primePowerTail_small (D : ℝ) (hD : 0 < D) :
+private theorem primePowerTail_small (D : ℝ) :
     ∀ᶠ t : ℝ in atTop,
       1 + 2 * Real.sqrt t * Real.log t ≤ 3 * t * (Real.log t) ^ (-D) := by
   have hlogpow := OAI.LargePrimeGaps.eventually_log_rpow_le_rpow (D + 1)
@@ -405,7 +405,7 @@ private theorem exists_primeThetaAP_profile (A C : ℝ) (hA : 0 < A) (hC : 0 < C
         (Real.log t) ^ (C + 1 + b) ≤ Real.sqrt t ∧
         1 + 2 * Real.sqrt t * Real.log t ≤ 3 * t * (Real.log t) ^ (-D) := by
     filter_upwards [eventually_ge_atTop x₀, eventually_ge_atTop (2 : ℝ),
-      eventually_ge_atTop (Real.exp (2 ^ C)), hlogPow, primePowerTail_small D hD]
+      eventually_ge_atTop (Real.exp (2 ^ C)), hlogPow, primePowerTail_small D]
       with t htx₀ ht2 hexp hpow htail
     have h2C : 2 ^ C ≤ Real.log t := by
       rw [← Real.log_exp (2 ^ C)]
@@ -465,7 +465,7 @@ private theorem exists_primeThetaAP_profile (A C : ℝ) (hA : 0 < A) (hC : 0 < C
         calc
           _ = (Real.log t) ^ (1 : ℝ) * (Real.log t) ^ C := by rw [Real.rpow_one]
           _ = (Real.log t) ^ (1 + C) := by rw [← Real.rpow_add hlogT]
-          _ = (Real.log t) ^ (C + 1) := by congr 1 <;> ring
+          _ = (Real.log t) ^ (C + 1) := by congr 1; ring
   have hlogB : 0 < (Real.log t) ^ b := Real.rpow_pos_of_pos hlogT _
   have hcross : (Real.log t) ^ (C + 1) * (Real.log t) ^ b =
       (Real.log t) ^ (C + 1 + b) := by rw [← Real.rpow_add hlogT]
@@ -495,7 +495,7 @@ private theorem primeCountAP_error_identity (r a : ℕ) (hr : 1 ≤ r)
   have hthetaInt : IntervalIntegrable
       (fun t : ℝ => primeThetaAP r a t / (t * Real.log t ^ 2)) volume 2 y :=
     (intervalIntegrable_iff_integrableOn_Icc_of_le hy).mpr
-      (primeThetaAP_integrableOn r a (by norm_num) hy)
+      (primeThetaAP_integrableOn r a (by norm_num))
   have hmainCont : ContinuousOn
       (fun t : ℝ => (t / (r.totient : ℝ)) / (t * Real.log t ^ 2)) (Set.Icc 2 y) := by
     intro t ht
@@ -542,12 +542,12 @@ private theorem primeCountAP_error_identity (r a : ℕ) (hr : 1 ≤ r)
           (∫ t in 2..y,
             (primeThetaAP r a t - t / (r.totient : ℝ)) / (t * Real.log t ^ 2)) := by
     linarith [hErrIntegral, hmainIntegral]
-  rw [primeCountAP_eq_theta_formula r a hr hy, hIntSplit, hli]
+  rw [primeCountAP_eq_theta_formula r a hy, hIntSplit, hli]
   field_simp [hlogy.ne', hlog2.ne', hφ.ne']
   ring
 
 private theorem primeCountAP_error_from_thetaProfile (r a : ℕ) (hr : 1 ≤ r)
-    (A D Kθ : ℝ) (hA : 0 < A) (hD : A ≤ D) (hDpos : 0 < D)
+    (A D Kθ : ℝ) (hA : 0 < A) (hD : A ≤ D)
     (hKθ : 0 ≤ Kθ) {y : ℝ} (hy : Real.exp 4 ≤ y)
     (hyAbsorb : (Real.log y) ^ A ≤ Real.sqrt y)
     (hθ : ∀ t ∈ Set.Icc (Real.sqrt y) y,
@@ -829,7 +829,7 @@ theorem prime_progressions_proof : Erdos821.Blueprint.PrimeProgressions := by
     have hpos : 0 < r.totient := Nat.totient_pos.mpr (by omega)
     omega
   have hφone : (1 : ℝ) ≤ r.totient := by exact_mod_cast hφNat
-  have hmain := primeCountAP_error_from_thetaProfile r a hr A D Kθ hA hD hDpos
+  have hmain := primeCountAP_error_from_thetaProfile r a hr A D Kθ hA hD
     hKθ.le (y := y) hyExp hAbs (hprofile y hy₀ r a hr hmod ha)
   have hlog : 0 < Real.log 2 := Real.log_pos (by norm_num)
   have hconst : 2 / ((r.totient : ℝ) * Real.log 2) ≤ 2 / Real.log 2 := by

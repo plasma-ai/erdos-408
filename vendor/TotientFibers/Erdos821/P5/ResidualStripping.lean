@@ -51,7 +51,7 @@ theorem residual_lift_difference_norm_le {P : Geometry} {G : PrimeGroups} {J m :
     (B : Blueprint.Graph.Family P.graph G.graph J m) (v : Fin B.count)
     (x Z a₁ a₂ : ℝ) (E H : Endpoint) (Ψ : ℝ → ℂ) (k : ℤ) (ζ : ℝ)
     (z₀ unused : SharedDraw (B.pattern v)) (s : FreeDraw (B.pattern v) → Finset ℕ)
-    (K : ℝ) (hK : 0 ≤ K) (hV : ∀ g, 0 ≤ G.graph.V g)
+    (K : ℝ) (hV : ∀ g, 0 ≤ G.graph.V g)
     (hΨ : ∀ u n, n ∈ s u → ‖Ψ ((n : ℝ) / (Z * freeDrawProduct (B.pattern v) u))‖ ≤ K) :
     ‖residualAveragedLift B v x Z a₁ a₂ E H Ψ k ζ unused s -
       residualStrippedLift B v x Z a₁ a₂ E H Ψ k z₀ s‖ ≤
@@ -137,7 +137,7 @@ theorem residual_lift_stripping_negligible (P : Geometry) (J m : ℕ)
   calc
     _ ≤ L x ^ CΨ * weightedResidualRowError B v x E H k ζ z₀ unused s :=
       residual_lift_difference_norm_le B v x Z a₁ a₂ E H Ψ k ζ z₀ unused s
-        (L x ^ CΨ) (Real.rpow_nonneg hLpos.le _) hV hΨ
+        (L x ^ CΨ) hV hΨ
     _ ≤ L x ^ CΨ * (patternCost (B.pattern v) * L x ^ (-(A + CΨ))) :=
       mul_le_mul_of_nonneg_left (hx G Q h ξ B v E H k ζ z₀ unused X Y s hG hB hE hH hD hs)
         (Real.rpow_nonneg hLpos.le _)

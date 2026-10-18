@@ -67,7 +67,7 @@ theorem sparse_residual_of_gram (hg : SparseGramKernelTask) :
     _ ≤ R * (A / U) := mul_le_mul_of_nonneg_left hcoeff hR
     _ = (20 * K) * A * Real.log (2 * Y) := by
       dsimp [R]
-      field_simp <;> ring
+      field_simp
 
 example (hg : SparseGramKernelTask) : Erdos821.Blueprint.Analytic.sparse_residual_statement :=
   sparse_residual_of_gram hg

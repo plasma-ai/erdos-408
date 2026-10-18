@@ -72,7 +72,7 @@ theorem physicalRootBlock_eq_raw {F : FixedData} {P : PrimeGroups} {J m : ℕ}
   simp_rw [rawRootBlock_act]
   simp only [Finset.sum_const, Finset.card_univ, nsmul_eq_mul]
   change (N ^ 2)⁻¹ * (N * (N * rawRootBlock A absolute n n')) = _
-  field_simp [hN] <;> ring
+  field_simp [hN]
 
 theorem rawRootBlock_eq_markMass {F : FixedData} {P : PrimeGroups} {J m : ℕ}
     (A : Model F P J m) (absolute : Bool) (n n' : ℤ) :

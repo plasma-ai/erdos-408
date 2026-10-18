@@ -13,7 +13,7 @@ namespace Erdos821.P3Edge
 open Erdos821.Blueprint.Graph
 open Erdos821.S2Core
 
-lemma visitQ_pos (q : ℝ) (hq0 : 0 < q) (hq1 : q < 1) (n : ℕ) (i : Fin (n + 1)) :
+lemma visitQ_pos (q : ℝ) (hq0 : 0 < q) (n : ℕ) (i : Fin (n + 1)) :
     0 < visitQ q n i := by
   unfold visitQ
   split
@@ -35,7 +35,7 @@ lemma eta_pos (F : FixedData) (n : ℕ) (i : Fin (n + 1)) : 0 < eta F n i := by
 
 lemma eta_lt_one (F : FixedData) (n : ℕ) (i : Fin (n + 1)) : eta F n i < 1 := by
   unfold eta
-  have h := visitQ_pos F.q F.q_pos F.q_lt n i
+  have h := visitQ_pos F.q F.q_pos n i
   linarith
 
 lemma L_pos_of_large (x : ℝ) (hx : 3 < x) : 0 < L x := by

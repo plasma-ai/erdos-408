@@ -32,7 +32,7 @@ theorem product_atom_bound_proof : Erdos821.Blueprint.Analytic.product_atom_boun
   have hc := Erdos821.S34Core.product_atom_group_count
     (Erdos821.S34Core.coreGroups G) k m G.big P.vmin hv hmass hcap hinactive n
   have hpow := Erdos821.S34Core.group_cost_log_power m G.big.card P.vmin P.C₀ (L x)
-    hv hL (hG.2.1.2)
+    hL (hG.2.1.2)
   exact hc.trans (div_le_div_of_nonneg_right hpow (Nat.cast_nonneg n))
 
 example : Erdos821.Blueprint.Analytic.product_atom_bound_statement := @product_atom_bound_proof

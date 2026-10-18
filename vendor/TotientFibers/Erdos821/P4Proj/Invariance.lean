@@ -41,6 +41,7 @@ def rowSampleEquiv (π : Fin s → Equiv.Perm (Fin M)) :
     show y (g, (π g) ((π g).symm i)) = y (g, i)
     rw [Equiv.apply_symm_apply]
 
+omit [(g : Fin s) → Fintype (α g)] in
 /-- Flat weights are constant along row permutations. -/
 lemma flatWeight_pushforward (w : ∀ g, α g → ℝ)
     (π : Fin s → Equiv.Perm (Fin M)) (y : ProductSample (FlatAlphabet α M)) :
@@ -49,6 +50,7 @@ lemma flatWeight_pushforward (w : ∀ g, α g → ℝ)
   exact Equiv.prod_comp (rowPermutation s M π).symm
     (fun j => (flatWeight w) j (y j))
 
+omit [(g : Fin s) → Fintype (α g)] in
 /-- A symmetric source stays invariant under row-permutation pushforward. -/
 lemma symmetric_pushforward_invariant
     (f : ProbeSample α M → ℂ)
@@ -83,6 +85,7 @@ lemma mem_map_rowPerm (π : Fin s → Equiv.Perm (Fin M))
     exact Finset.mem_map.mpr
       ⟨_, h, Equiv.apply_symm_apply _ _⟩
 
+omit [(g : Fin s) → Fintype (α g)] in
 /-- Mixing commutes with row-permutation pushforward over mapped sets. -/
 lemma mix_pushforward (π : Fin s → Equiv.Perm (Fin M))
     (S : Finset (RowSite s M))
@@ -102,11 +105,11 @@ lemma mix_pushforward (π : Fin s → Equiv.Perm (Fin M))
         (rowPush (s := s) (M := M) (α := α) π y) (g, i) =
         (rowPush (s := s) (M := M) (α := α) π y) (g, i) := by
       simp only [mixCoords]
-      exact if_pos hz
+      exact ite_eq_left hz
     have h2 : (mixCoords S x y) ((rowPermutation s M π).symm (g, i)) =
         y ((rowPermutation s M π).symm (g, i)) := by
       simp only [mixCoords]
-      exact if_pos hS
+      exact ite_eq_left hS
     have h3 : (rowPush (s := s) (M := M) (α := α) π (mixCoords S x y)) (g, i) =
         (mixCoords S x y) ((rowPermutation s M π).symm (g, i)) := rfl
     have h4 : (rowPush (s := s) (M := M) (α := α) π y) (g, i) =
@@ -119,11 +122,11 @@ lemma mix_pushforward (π : Fin s → Equiv.Perm (Fin M))
         (rowPush (s := s) (M := M) (α := α) π y) (g, i) =
         (rowPush (s := s) (M := M) (α := α) π x) (g, i) := by
       simp only [mixCoords]
-      exact if_neg hz
+      exact ite_eq_right hz
     have h2 : (mixCoords S x y) ((rowPermutation s M π).symm (g, i)) =
         x ((rowPermutation s M π).symm (g, i)) := by
       simp only [mixCoords]
-      exact if_neg hS
+      exact ite_eq_right hS
     have h3 : (rowPush (s := s) (M := M) (α := α) π (mixCoords S x y)) (g, i) =
         (mixCoords S x y) ((rowPermutation s M π).symm (g, i)) := rfl
     have h4 : (rowPush (s := s) (M := M) (α := α) π x) (g, i) =

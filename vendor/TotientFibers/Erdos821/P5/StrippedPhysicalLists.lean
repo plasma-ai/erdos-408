@@ -41,28 +41,28 @@ theorem physical_assemble_iff {P : PrimeGroups} {J ell m : ℕ}
     refine ⟨?_, ?_⟩
     · intro i j hij
       by_cases hi : ν.shared g i <;> by_cases hj : ν.shared g j
-      · rw [assembleLabels, dif_pos hi, assembleLabels, dif_pos hj] at hij
+      · rw [assembleLabels, dite_eq_left hi, assembleLabels, dite_eq_left hj] at hij
         have heq := hz (congrArg (fun p : P.Prime g => p.val) hij)
         have hslot := congrArg (fun k : SharedIndex ν => ν.slot k.2.val) heq
         simpa only [slot_sharedSource] using hslot
-      · rw [assembleLabels, dif_pos hi, assembleLabels, dif_neg hj] at hij
+      · rw [assembleLabels, dite_eq_left hi, assembleLabels, dite_eq_right hj] at hij
         have hd := (hr g).2 ⟨j, (mem_unsharedSlots ν g j).mpr hj⟩
         rw [← hij] at hd
         exact False.elim (hn ⟨g, sharedSource ν g i hi⟩ hd)
-      · rw [assembleLabels, dif_neg hi, assembleLabels, dif_pos hj] at hij
+      · rw [assembleLabels, dite_eq_right hi, assembleLabels, dite_eq_left hj] at hij
         have hd := (hr g).2 ⟨i, (mem_unsharedSlots ν g i).mpr hi⟩
         rw [hij] at hd
         exact False.elim (hn ⟨g, sharedSource ν g j hj⟩ hd)
-      · rw [assembleLabels, dif_neg hi, assembleLabels, dif_neg hj] at hij
+      · rw [assembleLabels, dite_eq_right hi, assembleLabels, dite_eq_right hj] at hij
         exact congrArg Subtype.val ((hr g).1 hij)
     · intro i
       apply Int.natCast_dvd_natCast.mpr
       by_cases hi : ν.shared g i
-      · rw [assembleLabels, dif_pos hi]
+      · rw [assembleLabels, dite_eq_left hi]
         apply dvd_mul_of_dvd_left
         exact Finset.dvd_prod_of_mem (fun k : SharedIndex ν => (z k).val)
           (Finset.mem_univ (⟨g, sharedSource ν g i hi⟩ : SharedIndex ν))
-      · rw [assembleLabels, dif_neg hi]
+      · rw [assembleLabels, dite_eq_right hi]
         exact dvd_mul_of_dvd_right ((hr g).2 ⟨i, (mem_unsharedSlots ν g i).mpr hi⟩) _
 
 theorem physical_assemble_good_iff {P : PrimeGroups} {J ell m : ℕ}
@@ -122,6 +122,6 @@ theorem good_physical_row_sum {P : PrimeGroups} {J ell m : ℕ}
   by_cases hgood : GoodSharedDraw ν n n' D z
   · rw [physical_assemble_good_iff ν z r n n' D hn hn' hD hgood,
       physical_assemble_good_right_iff ν z s n n' D hn hn' hD hgood]
-  · simp only [hgood, false_and, if_false]
+  · simp only [hgood, false_and, ite_false]
 
 end Erdos821.P5Core

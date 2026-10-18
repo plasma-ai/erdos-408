@@ -257,7 +257,7 @@ theorem box_J3 : ∃ K3r c3r Y0sp : ℝ, 0 < K3r ∧ 0 ≤ c3r ∧ 1 < Y0sp ∧
   obtain ⟨p2, hp2⟩ := h2e
   obtain ⟨hp2G, hp2d⟩ := Finset.mem_filter.mp hp2
   have hp2adm := hG.2.2.2.1 gs p2 hp2G
-  rw [if_pos hgs] at hp2adm
+  rw [ite_eq_left hgs] at hp2adm
   have hp2dy := mem_dyad.mp hp2d
   set P1 : ℝ := (2 : ℝ) ^ i2 with hP1
   have hP1ge1 : 1 ≤ P1 := one_le_pow₀ (by norm_num)

@@ -93,7 +93,7 @@ theorem pathSumR_eq : ∀ (n : ℕ) (G : Fin (n + 1) → β → β → ℝ) (E :
       intro t' _
       ring
 
-theorem tailR_bound (w : β → ℝ) (hw : ∀ t, 0 ≤ w t) :
+theorem tailR_bound (w : β → ℝ) :
     ∀ (n : ℕ) (G : Fin (n + 1) → β → β → ℝ) (E : Fin n → β → β → ℝ)
       (cG : Fin (n + 1) → ℝ) (cE : Fin n → ℝ),
       (∀ i s t, 0 ≤ G i s t) → (∀ i s t, 0 ≤ E i s t) →
@@ -153,7 +153,7 @@ theorem tailR_bound (w : β → ℝ) (hw : ∀ t, 0 ≤ w t) :
           _ = K * cG (Fin.succ 0) * cE 0 * w t := by ring
 
 /-- The path sum is at most the product of the row constants times the weighted start mass. -/
-theorem pathSumR_le (w : β → ℝ) (hw : ∀ t, 0 ≤ w t) (n : ℕ)
+theorem pathSumR_le (w : β → ℝ) (n : ℕ)
     (G : Fin (n + 1) → β → β → ℝ) (E : Fin n → β → β → ℝ)
     (cG : Fin (n + 1) → ℝ) (cE : Fin n → ℝ)
     (hG : ∀ i s t, 0 ≤ G i s t) (hE : ∀ i s t, 0 ≤ E i s t)
@@ -163,7 +163,7 @@ theorem pathSumR_le (w : β → ℝ) (hw : ∀ t, 0 ≤ w t) (n : ℕ)
     (u v : β → ℝ) (hu : ∀ s, 0 ≤ u s) (hv0 : ∀ t, 0 ≤ v t) (hvw : ∀ t, v t ≤ w t) :
     pathSumR n G E u v ≤ (∏ i, cG i) * (∏ i, cE i) * ∑ s, u s * w s := by
   rw [pathSumR_eq]
-  have hT := tailR_bound w hw n G E cG cE hG hE hcG hcE hGr hEr v hv0 hvw
+  have hT := tailR_bound w n G E cG cE hG hE hcG hcE hGr hEr v hv0 hvw
   set K : ℝ := (∏ i : Fin n, cG i.succ) * (∏ i, cE i) with hK
   have hK0 : 0 ≤ K := mul_nonneg (Finset.prod_nonneg fun i _ => hcG _)
     (Finset.prod_nonneg fun i _ => hcE _)
