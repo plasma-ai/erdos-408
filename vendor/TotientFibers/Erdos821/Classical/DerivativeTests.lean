@@ -386,7 +386,7 @@ private lemma discrete_second_derivative_bound_of_contDiff {lo hi x lam A : ℝ}
         f (x + (n : ℝ) + 2) - 2 * f (x + (n : ℝ) + 1) + f (x + (n : ℝ)) := by
       dsimp [d, g]
       push_cast
-      ring
+      ring_nf
     rw [hrewrite]
     exact hlocal
   have hsepBoth : ∀ i < N, ∀ j < N, i ≤ j →

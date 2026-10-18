@@ -30,6 +30,6 @@ lemma phase_mul_shift (θ C D : ℝ) :
     phase (θ * (C * D)) = Blueprint.Analytic.e ((θ * C) * D) := by
   unfold phase Blueprint.Analytic.e
   congr 1
-  ring
+  ring_nf
 
 end Erdos821.P4Probe

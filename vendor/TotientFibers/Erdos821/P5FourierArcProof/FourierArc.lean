@@ -87,12 +87,12 @@ lemma shift_integrand_expansion (s t : Finset ℤ) (a b : ℤ → ℂ) (d : ℤ)
   apply Finset.sum_congr rfl
   intro m _hm
   calc
-    _ = (star (a n) * b m) * (e (-θ * n) * e (θ * m) * e (-θ * d)) := by ring
+    _ = (star (a n) * b m) * (e (-θ * n) * e (θ * m) * e (-θ * d)) := by ring_nf
     _ = (star (a n) * b m) * e (θ * ((m - n - d : ℤ) : ℝ)) := by
       rw [e_mul3]
       congr 1
       push_cast
-      ring
+      ring_nf
 
 lemma shift_correlation_proof (s t : Finset ℤ) (a b : ℤ → ℂ) (d : ℤ) :
     (∑ n ∈ s, ∑ m ∈ t, if m = n + d then star (a n) * b m else 0) =

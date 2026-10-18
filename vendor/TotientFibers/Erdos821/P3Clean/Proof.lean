@@ -26,6 +26,4 @@ theorem MemoryCleanTask_proof (F : FixedData) (r : MemoryParameters F) : MemoryC
   rw [mul_assoc, ← Real.rpow_add hL] at h
   exact h
 
-#check MemoryCleanTask_proof
-
 end Erdos821.S2Core

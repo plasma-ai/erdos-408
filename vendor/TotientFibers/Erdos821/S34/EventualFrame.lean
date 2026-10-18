@@ -35,7 +35,7 @@ theorem gram_factor_le_two (L q ξexp K : ℝ) (Q : ℕ)
       _ = K * L ^ (-ξexp - 2) := by
         rw [mul_left_comm, ← Real.rpow_add hLpos]
         congr 1
-        ring
+        ring_nf
       _ = L ^ (-ξexp) * (K / L ^ (2 : ℕ)) := by
         rw [show -ξexp - 2 = -ξexp + (-2) by ring, Real.rpow_add hLpos,
           Real.rpow_neg hLpos.le (2 : ℝ), Real.rpow_two]

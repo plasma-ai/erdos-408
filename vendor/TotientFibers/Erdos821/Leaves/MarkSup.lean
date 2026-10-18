@@ -276,7 +276,7 @@ theorem mark_sup (P : Geometry) (tmax : ℕ) :
     -- convert pow to exp, rpow to exp
     have hpow_eq : (Kp ^ G.size : ℝ) = Real.exp (((G.size : ℕ) : ℝ) * Real.log Kp) := by
       rw [← Real.rpow_natCast Kp G.size, Real.rpow_def_of_pos hKp_pos]
-      ring
+      ring_nf
     have hrpow_eq : L x ^ C = Real.exp (Real.log (L x) * C) := by
       rw [Real.rpow_def_of_pos hLpos]
     rw [hpow_eq, hrpow_eq]

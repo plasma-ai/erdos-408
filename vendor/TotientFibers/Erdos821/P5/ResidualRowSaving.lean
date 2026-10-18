@@ -55,7 +55,7 @@ theorem shared_row_cost_factor_negligible (P : Geometry) (J m : ℕ) (r A : ℝ)
       rw [mul_assoc (2 : ℝ), ← Real.rpow_add hLpos,
         mul_assoc (2 : ℝ), ← Real.rpow_add hLpos]
       congr 2
-      ring
+      ring_nf
     _ ≤ _ := hprob G ν n n' D hG hn hn' hD hnx hn'x hDx
 
 /-- The full actual residual shared-row error has arbitrary log saving with

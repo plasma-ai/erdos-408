@@ -83,6 +83,8 @@ calls now close their goals, and the `rfl` after each is removed.
   as unused are removed, a `simpa` that `simp` closes becomes `simp`, `letI`
   and `haveI` in proofs become `let` and `have`, consecutive `intro`s are
   merged, and names that a proof never uses become `_`.
+- A `ring` that only succeeds by falling back to `ring_nf` is written
+  `ring_nf`, and the `#check` at the end of `P3Clean/Proof.lean` is removed.
 - In `Classical/HarmonicCharacters.lean`, the linter reports `abs_of_pos hy`
   and `abs_of_pos hlogpos` as unused in one `simp` call that needs them, so
   that call keeps them and drops the arguments it does not use.

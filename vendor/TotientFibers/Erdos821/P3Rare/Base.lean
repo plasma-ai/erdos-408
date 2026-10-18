@@ -1165,7 +1165,7 @@ theorem real_exp_nat_pow (x : ℝ) (n : ℕ) :
   | zero => simp
   | succ n ih =>
       rw [pow_succ, ih, ← Real.exp_add, Nat.cast_succ]
-      ring
+      ring_nf
 
 theorem omittedChoiceProductReal_le_exp {F : FixedData} {P : PrimeGroups}
     {J : ℕ} {x : ℝ} (hAdm : P.Admissible F x)

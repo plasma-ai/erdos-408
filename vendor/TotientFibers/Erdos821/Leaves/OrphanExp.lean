@@ -387,7 +387,7 @@ theorem orphan_expansion (p n : ℕ) [NeZero p] (η : Fin n → ℝ) (h : Fin n 
             ∏ t ∈ Finset.univ.filter (fun t : Fin n => j < t ∧ t < i),
               (1 - η t * if h t = h j then 1 else 0) := by
         rw [h1, hS, hDrew, hD]
-        ring
+        ring_nf
 
 example : @Erdos821.Blueprint.Graph.orphan_expansion =
     @Erdos821.Blueprint.Graph.orphan_expansion := rfl

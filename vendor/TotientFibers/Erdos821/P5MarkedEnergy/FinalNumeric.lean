@@ -79,7 +79,7 @@ theorem psi1_le_terms {ℓ kk KLM αmin Kmm K3r c3r As Al Kl B0 B C Cmk vmax KW 
     have h2 := mono_mul hℓ0 (by positivity) (by positivity) h1 (mono_const (KLM / αmin))
     have h3 := mono_mul hℓ0 (by positivity) (by positivity) h2 (mono_box hℓ)
     have h4 := mono_mul hℓ0 (by positivity) (by positivity) h3 (mono_box hℓ)
-    convert h4 using 2 <;> ring
+    convert h4 using 2 <;> ring_nf
   have hCC : (ℓ ^ C * ℓ ^ C * ℓ ^ Cmk) ^ 2 ≤ 1 * ℓ ^ (2 * (C + C + Cmk)) := by
     rw [rpow3 hℓ0]; exact mono_sq hℓ0 _
   have hCCv : (ℓ ^ C * ℓ ^ C * (vmax * ℓ ^ Cmk)) ^ 2 ≤ vmax ^ 2 * ℓ ^ (2 * (C + C + Cmk)) := by

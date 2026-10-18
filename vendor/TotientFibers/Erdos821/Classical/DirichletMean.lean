@@ -128,9 +128,9 @@ lemma mellin_hasDerivAt (n : ℕ) (x : ℝ) :
   convert h using 1
   · ext t
     simp [mellin]
-    ring
+    ring_nf
   · simp [mellin]
-    ring
+    ring_nf
 
 lemma dp_hasDerivAt (s : Finset ℕ) (a : ℕ → ℂ) (x : ℝ) :
     HasDerivAt (fun t => dp s a t)

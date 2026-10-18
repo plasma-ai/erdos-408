@@ -361,7 +361,7 @@ lemma dyad_card_inv_le_exp_of_scale {x gamma X : ℝ} (hx : 0 < x)
           rw [inv_div]
         _ = 2 * Real.exp (-gamma * L x) := by
           rw [div_eq_mul_inv, ← Real.exp_neg]
-          ring
+          ring_nf
 
 lemma interval_modEq_count_error (a b r v : ℤ) (hr : 0 < r) (hab : a ≤ b) :
     abs ((({z ∈ Finset.Ico a b | z ≡ v [ZMOD r]}.card : ℝ)) -
