@@ -54,7 +54,7 @@ vendored in `vendor/PrimeNumberTheoremAnd/`.
 Upstream pins Lean `v4.34.1`, Mathlib commit `d13f23b`, and
 [openai/math](https://github.com/openai/math) commit
 `adc7f1241b42e322a6451854ab7e4b4c146bf78a`. This project pins Lean and Mathlib
-`v4.35.0`, and three modules were changed to build here. The change
+`v4.35.0-rc3`, and three modules were changed to build here. The change
 follows a Lean change and keeps every statement:
 
 - `simp only [hp]` with a hypothesis `hp : p ∧ q` now rewrites `p` and `q`

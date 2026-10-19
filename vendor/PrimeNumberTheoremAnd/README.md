@@ -32,9 +32,9 @@ four groups:
   commit: the compatibility patch above creates them.
 
 The upstream source pins Lean `v4.34.0`, and this project pins Lean and
-Mathlib `v4.35.0`. Six modules were changed to build here. The changes
-follow Lean and Mathlib changes, or remove LeanArchitect, and keep every
-statement:
+Mathlib `v4.35.0-rc3`. Six modules were changed to build on Lean and Mathlib
+`v4.35.0`; they also build here. The changes follow Lean and Mathlib changes,
+or remove LeanArchitect, and keep every statement:
 
 - `IEANTN/Mertens`, `PerronFormula`, `ResidueCalcOnRectangles`, and
   `Rectangle` no longer import `Architect`. Their `blueprint_comment` blocks
@@ -49,9 +49,6 @@ statement:
 - Mathlib renamed `Mathlib.Analysis.SpecialFunctions.Integrability.LogMeromorphic`
   to `Mathlib.Analysis.SpecialFunctions.Integrability.Log`, and
   `IEANTN/Mertens` and `Erdos970/MertensClassical` import the new name.
-- `MeasureTheory.integrableOn_indicator_iff` takes a `NullMeasurableSet`, so
-  `IEANTN/Mertens` and `Erdos970/MertensClassical` pass
-  `measurableSet_Ici.nullMeasurableSet`.
 - `Mathlib.NumberTheory.AbelSummation` now imports
   `Mathlib.MeasureTheory.Function.Floor` privately, so `EulerMaclaurin`, whose
   `fun_prop` call needs that module's `Nat.floor` lemma, imports it directly.

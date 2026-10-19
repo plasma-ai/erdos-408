@@ -3,7 +3,7 @@ module
 public import Erdos821.S2.MemoryTailTask
 public import Erdos821.P3Tail.PathBound
 public import Mathlib.Algebra.Order.Ring.Star
-public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Data.Int.Star
 
 /-! The doubled-ghost memory tail estimate on the literal cutoff tail.
 

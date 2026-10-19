@@ -1,7 +1,7 @@
 module
 
 public import OAI.NumberTheory.PrimeGaps.LevelMoments
-public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Data.Int.Star
 
 @[expose] public section
 

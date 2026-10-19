@@ -89,7 +89,7 @@ local notation "O" => ActualEisensteinCubic.O
 
 lemma integralCoverMap_quasiMeasurePreserving {H K : Subgroup (SL(2,ActualEisensteinCubic.O))}
     (hHK : H≤K) (hK : K≤CubicKubota.levelThree) [H.IsFiniteRelIndex K] :
-    QuasiMeasurePreserving (integralCoverMap hHK)
+    Measure.QuasiMeasurePreserving (integralCoverMap hHK)
       (integralQuotientVolume H) (integralQuotientVolume K) := by
   refine ⟨integralCoverMap_measurable hHK,?_⟩
   rw [integralCoverMap_measure hHK hK]

@@ -3,7 +3,7 @@ module
 public import Erdos821.Blueprint.Graph
 public import Mathlib.Algebra.BigOperators.Field
 public import Mathlib.Algebra.Order.Ring.Star
-public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Data.Int.Star
 public import Mathlib.Algebra.Order.Star.Real
 
 @[expose] public section

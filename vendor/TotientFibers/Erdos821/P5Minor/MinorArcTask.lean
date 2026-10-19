@@ -4,7 +4,7 @@ public import Erdos821.P5.MinorArcTask
 public import Mathlib.NumberTheory.DiophantineApproximation.Basic
 public import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
 public import Mathlib.Algebra.Order.Ring.Star
-public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Data.Int.Star
 public import Mathlib.Algebra.Order.Star.Real
 public import Mathlib.Algebra.Ring.IsFormallyReal
 

@@ -3,7 +3,7 @@ module
 public import Erdos408.Graph.Pattern
 public import Erdos821.Blueprint.Transference
 public import Mathlib.Algebra.Order.Ring.Star
-public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Data.Int.Star
 
 /-!
 # Upstream's pairing for endpoints of the position alone

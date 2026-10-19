@@ -391,16 +391,16 @@ lemma arbitraryCuspPullback_ae (M : SL(2,ℂ)) (a b : ℝ) (ha : 0<a)
     ((arbitraryCusp_smul_measurePreserving M a b).quasiMeasurePreserving.ae_eq_comp (h1.trans h2))
 
 lemma arbitraryCusp_quasiMeasurePreserving (M : SL(2,ℂ)) (a b : ℝ) (ha : 0<a) :
-    QuasiMeasurePreserving
+    Measure.QuasiMeasurePreserving
       (fun w => integralOrbitProjection globalKubotaKernel (M • w))
       (hyperbolicVolume.restrict (cuspPeriodStrip a b))
       (integralQuotientVolume globalKubotaKernel) := by
-  have hcompact : QuasiMeasurePreserving (integralOrbitProjection globalKubotaKernel)
+  have hcompact : Measure.QuasiMeasurePreserving (integralOrbitProjection globalKubotaKernel)
       (hyperbolicVolume.restrict (arbitraryCuspCompact M a b))
       (integralQuotientVolume globalKubotaKernel) :=
     ⟨measurable_integralOrbitProjection _,Measure.absolutelyContinuous_of_le_smul
       (kernelCompactMultiplicity_spec _ (arbitraryCuspCompact_isCompact M a b ha))⟩
-  have himage : QuasiMeasurePreserving (integralOrbitProjection globalKubotaKernel)
+  have himage : Measure.QuasiMeasurePreserving (integralOrbitProjection globalKubotaKernel)
       (hyperbolicVolume.restrict ((M • ·) '' cuspPeriodStrip a b))
       (integralQuotientVolume globalKubotaKernel) :=
     ⟨hcompact.measurable,((Measure.absolutelyContinuous_of_le_smul

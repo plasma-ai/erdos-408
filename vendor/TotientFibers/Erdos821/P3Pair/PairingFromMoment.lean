@@ -1,7 +1,7 @@
 module
 
 public import Erdos821.S2.GhostTasks
-public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Data.Int.Star
 public import Mathlib.Algebra.Order.Star.Real
 public import Mathlib.Analysis.CStarAlgebra.Module.Constructions
 public import Mathlib.Analysis.InnerProductSpace.Positive

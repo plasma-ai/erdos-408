@@ -132,7 +132,7 @@ lemma translateL2_toL2 (a : E) (f : ↥(C1c (E := E))) :
         (fun x => (toL2 (μ := μ) (E := E) f : E → ℝ) (x + a)) =ᵐ[μ] fun x => f.1 (x + a) := by
       -- Move the a.e. equality through a measure-preserving map.
       exact
-        (QuasiMeasurePreserving.ae_eq_comp
+        (Measure.QuasiMeasurePreserving.ae_eq_comp
           (MeasureTheory.measurePreserving_add_right μ a).quasiMeasurePreserving hf)
     exact (translateL2_ae_eq (μ := μ) (F := ℝ) a (toL2 (μ := μ) (E := E) f)).trans hf'
   have h₂ :
@@ -157,7 +157,7 @@ lemma translateL2_toL2Grad (a : E) (f : ↥(C1c (E := E))) :
         (fun x => (toL2Grad (μ := μ) (E := E) f : E → E) (x + a)) =ᵐ[μ]
           fun x => grad (E := E) f.1 (x + a) := by
       exact
-        (QuasiMeasurePreserving.ae_eq_comp
+        (Measure.QuasiMeasurePreserving.ae_eq_comp
           (MeasureTheory.measurePreserving_add_right μ a).quasiMeasurePreserving hf)
     exact
       (translateL2_ae_eq (μ := μ) (F := E) a (toL2Grad (μ := μ) (E := E) f)).trans hf'

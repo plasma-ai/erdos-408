@@ -3,7 +3,7 @@ module
 public import Mathlib.Algebra.BigOperators.Field
 public import Mathlib.Algebra.CharP.Defs
 public import Mathlib.Algebra.Order.Ring.Star
-public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Data.Int.Star
 public import Mathlib.Algebra.Order.Star.Real
 public import Mathlib.Algebra.Ring.IsFormallyReal
 public import Mathlib.Analysis.Complex.Exponential

@@ -599,9 +599,9 @@ lemma kernelCuspHeightPullback_ae (a b : ℝ) (ha : 0<a) (F : KernelQuotientL2) 
   exact hfirst.trans hsecond
 
 lemma kernelCuspHeight_quasiMeasurePreserving (a b : ℝ) (ha : 0<a) :
-    QuasiMeasurePreserving (integralOrbitProjection globalKubotaKernel)
+    Measure.QuasiMeasurePreserving (integralOrbitProjection globalKubotaKernel)
       (hyperbolicVolume.restrict (cuspPeriodStrip a b)) (integralQuotientVolume globalKubotaKernel) := by
-  have hcompact : QuasiMeasurePreserving (integralOrbitProjection globalKubotaKernel)
+  have hcompact : Measure.QuasiMeasurePreserving (integralOrbitProjection globalKubotaKernel)
       (hyperbolicVolume.restrict (cuspHeightCompact a b)) (integralQuotientVolume globalKubotaKernel) :=
     ⟨measurable_integralOrbitProjection _,
       Measure.absolutelyContinuous_of_le_smul (kernelCompactMultiplicity_spec _ (cuspHeightCompact_isCompact a b ha))⟩
