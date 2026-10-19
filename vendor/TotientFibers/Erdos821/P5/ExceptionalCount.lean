@@ -4,7 +4,7 @@ public import Erdos821.P5.Exceptional
 public import Erdos821.P5.DiscreteMoments
 public import Erdos821.P5.CoefficientSquare
 public import Mathlib.Algebra.Order.Ring.Star
-public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Data.Int.Star
 
 @[expose] public section
 

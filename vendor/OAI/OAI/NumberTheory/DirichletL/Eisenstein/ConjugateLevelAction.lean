@@ -176,7 +176,7 @@ lemma kernelLevelAction_fundamentalDomain (M : levelThree) :
       hyperbolicVolume := by
   apply (hyperbolicFundamentalSet_isFundamentalDomain globalKubotaKernel
     globalKubotaKernel_le_levelThree).image_of_equiv (MulAction.toPerm (complexMatrix M))
-    (show QuasiMeasurePreserving (MulAction.toPerm (complexMatrix M)).symm hyperbolicVolume hyperbolicVolume from by
+    (show Measure.QuasiMeasurePreserving (MulAction.toPerm (complexMatrix M)).symm hyperbolicVolume hyperbolicVolume from by
       exact (measurePreserving_smul (complexMatrix M)⁻¹ hyperbolicVolume).quasiMeasurePreserving)
     (kernelConjugate M⁻¹).toEquiv
   intro N w

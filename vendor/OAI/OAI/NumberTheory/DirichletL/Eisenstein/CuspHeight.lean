@@ -396,7 +396,7 @@ lemma fullCuspHeight_chart_contDiffAt (x : FullCuspClasses) (p : SpatialCoordina
   induction x using Quotient.inductionOn with
   | _ M =>
     have hh : ContDiffAt ℝ ∞ (fun q => mobiusSpatial (integralComplexMatrix M) q 2) p :=
-      (contDiff_apply ℝ (fun _ : Fin 3 => ℝ) 2).contDiffAt.comp p
+      (contDiff_apply ℝ ℝ 2).contDiffAt.comp p
         (mobiusSpatial_contDiffAt _ p (hyperbolicSpatialChart_target_positive hp))
     apply hh.congr_of_eventuallyEq
     filter_upwards [hyperbolicSpatialChart.open_target.mem_nhds hp] with q hq

@@ -50,7 +50,7 @@ private lemma factorization_prod_filter (q : ℕ → Prop) [DecidablePred q] (n 
     (∏ p ∈ n.primeFactors with q p, p ^ n.factorization p).factorization =
       n.factorization.filter q := by
   rw [prod_filter_eq_prod]
-  refine Nat.factorization_prod_pow_eq_self fun p hp => ?_
+  refine Nat.prod_pow_factorization_eq_self fun p hp => ?_
   rw [Finsupp.support_filter, Nat.support_factorization] at hp
   exact Nat.prime_of_mem_primeFactors (mem_filter.1 hp).1
 

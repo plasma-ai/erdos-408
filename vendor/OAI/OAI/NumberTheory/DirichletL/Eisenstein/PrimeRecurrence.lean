@@ -204,7 +204,7 @@ local notation "Eis" => ActualEisensteinCubic.O
 
 lemma integralProjection_quasiMeasurePreserving (H:Subgroup (SL(2,Eis)))
     (hH:H≤CubicKubota.levelThree) :
-    QuasiMeasurePreserving (integralOrbitProjection H)
+    Measure.QuasiMeasurePreserving (integralOrbitProjection H)
       hyperbolicVolume (integralQuotientVolume H) := by
   let proj:=integralOrbitProjection H
   have hp:Measurable proj:=measurable_integralOrbitProjection H

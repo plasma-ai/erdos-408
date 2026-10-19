@@ -6,7 +6,7 @@ public import Erdos821.P3Adj.Weight
 public import Erdos821.P3Adj.FiberA
 public import Erdos821.P3Adj.FiberP
 public import Mathlib.Algebra.Order.Ring.Star
-public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Data.Int.Star
 public import Mathlib.Algebra.Ring.IsFormallyReal
 
 @[expose] public section

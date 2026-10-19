@@ -1,7 +1,7 @@
 module
 
 public import OAI.NumberTheory.PrimeGaps.CharacterErrors
-public import Mathlib.Algebra.Order.Star.Rat
+public import Mathlib.Data.Rat.Star
 public import Mathlib.Analysis.CStarAlgebra.Module.Constructions
 
 @[expose] public section

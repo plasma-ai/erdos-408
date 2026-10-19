@@ -83,7 +83,7 @@ theorem deleteCoordinate_smooth {n : ℕ} (f : (Fin (n+1) → ℝ) → ℝ)
     intro i
     cases i using Fin.lastCases with
     | last => simpa using contDiff_snd.neg
-    | cast i => simpa [Function.comp_def] using (contDiff_apply ℝ (fun _ => ℝ) i).comp contDiff_fst
+    | cast i => simpa [Function.comp_def] using (contDiff_apply ℝ ℝ i).comp contDiff_fst
   have hh := MeasureTheory.contDiffOn_convolution_right_with_param
     (μ:=volume) (ContinuousLinearMap.mul ℝ ℝ) isOpen_univ hK hgs
     (f:=fun _ : ℝ => (1:ℝ)) (continuous_const.locallyIntegrable) (hfs.comp hsm).contDiffOn

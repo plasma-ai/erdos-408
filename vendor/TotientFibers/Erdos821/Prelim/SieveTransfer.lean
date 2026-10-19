@@ -2,7 +2,7 @@ module
 
 public import Erdos821.Blueprint.Sieve
 public import Mathlib.Algebra.Order.Ring.Star
-public import Mathlib.Algebra.Order.Star.Int
+public import Mathlib.Data.Int.Star
 
 /-!
 # Sieve transfer: finset prime sets ↔ squarefree divisors (`lem:sieve`)

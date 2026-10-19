@@ -372,7 +372,7 @@ open scoped BigOperators Classical Topology MatrixGroups Pointwise
 open Finset AddChar MulChar EisensteinEmbedding
 
 lemma kernelProjection_quasiMeasurePreserving :
-    QuasiMeasurePreserving (integralOrbitProjection globalKubotaKernel)
+    Measure.QuasiMeasurePreserving (integralOrbitProjection globalKubotaKernel)
       hyperbolicVolume (integralQuotientVolume globalKubotaKernel) := by
   let proj := integralOrbitProjection globalKubotaKernel
   have hp : Measurable proj := measurable_integralOrbitProjection _

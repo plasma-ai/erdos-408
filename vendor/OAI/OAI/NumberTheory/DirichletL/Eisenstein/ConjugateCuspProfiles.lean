@@ -261,7 +261,7 @@ lemma cuspSpatialInput_contDiff : ContDiff ℝ 1 cuspSpatialInput := by
     fun_prop
 
 lemma cuspSpatialOutput_contDiff : ContDiff ℝ 1 cuspSpatialOutput :=
-  (contDiff_apply ℝ (fun _ : Fin 3 => ℝ) 2).prodMk (spatialHorizontal_contDiff.of_le (by simp))
+  (contDiff_apply ℝ ℝ 2).prodMk (spatialHorizontal_contDiff.of_le (by simp))
 
 lemma cuspSpatialInput_horizontal (q : ℝ × ℂ) : spatialHorizontal (cuspSpatialInput q)=q.2 :=
   Complex.re_add_im q.2

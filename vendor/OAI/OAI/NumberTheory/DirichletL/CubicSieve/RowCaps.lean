@@ -475,8 +475,8 @@ lemma mobiusSpatial_coordinates (g : SL(2,ℂ)) (p : SpatialCoordinates) (hp : 0
 
 lemma spatialHorizontal_contDiff : ContDiff ℝ ∞ spatialHorizontal := by
   unfold spatialHorizontal
-  exact (Complex.ofRealCLM.contDiff.comp (contDiff_apply ℝ (fun _ : Fin 3 => ℝ) 0)).add
-    ((Complex.ofRealCLM.contDiff.comp (contDiff_apply ℝ (fun _ : Fin 3 => ℝ) 1)).mul contDiff_const)
+  exact (Complex.ofRealCLM.contDiff.comp (contDiff_apply ℝ ℝ 0)).add
+    ((Complex.ofRealCLM.contDiff.comp (contDiff_apply ℝ ℝ 1)).mul contDiff_const)
 
 lemma mobiusSpatialDenominator_contDiff (g : SL(2,ℂ)) : ContDiff ℝ ∞ (mobiusSpatialDenominator g) := by
   unfold mobiusSpatialDenominator
@@ -488,7 +488,7 @@ lemma mobiusSpatialDenominator_contDiff (g : SL(2,ℂ)) : ContDiff ℝ ∞ (mobi
     (g 1 0*spatialHorizontal p+g 1 1).re*(g 1 0*spatialHorizontal p+g 1 1).re+
     (g 1 0*spatialHorizontal p+g 1 1).im*(g 1 0*spatialHorizontal p+g 1 1).im+
     Complex.normSq (g 1 0)*(p 2)^2)
-  exact ((hre.mul hre).add (him.mul him)).add (contDiff_const.mul ((contDiff_apply ℝ (fun _ : Fin 3 => ℝ) 2).pow 2))
+  exact ((hre.mul hre).add (him.mul him)).add (contDiff_const.mul ((contDiff_apply ℝ ℝ 2).pow 2))
 
 lemma mobiusSpatial_contDiffAt (g : SL(2,ℂ)) (p : SpatialCoordinates) (hp : 0<p 2) :
     ContDiffAt ℝ ∞ (mobiusSpatial g) p := by
@@ -503,7 +503,7 @@ lemma mobiusSpatial_contDiffAt (g : SL(2,ℂ)) (p : SpatialCoordinates) (hp : 0<
       (contDiffAt_const.mul hz).add contDiffAt_const
     have hc := Complex.conjCLE.contDiff.contDiffAt.comp p hcz
     have hv : ContDiffAt ℝ ∞ (fun p : SpatialCoordinates => (p 2:ℂ)) p :=
-      Complex.ofRealCLM.contDiff.contDiffAt.comp p (contDiff_apply ℝ (fun _ : Fin 3 => ℝ) 2).contDiffAt
+      Complex.ofRealCLM.contDiff.contDiffAt.comp p (contDiff_apply ℝ ℝ 2).contDiffAt
     exact (((contDiffAt_const.mul hz).add contDiffAt_const).mul hc).add
       (contDiffAt_const.mul (hv.pow 2))
   have hh : ContDiffAt ℝ ∞ (mobiusSpatialHorizontal g) p :=

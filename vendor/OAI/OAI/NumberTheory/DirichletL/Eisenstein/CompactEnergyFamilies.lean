@@ -237,12 +237,12 @@ open scoped BigOperators Classical Topology
 
 def kernelMassRestriction (K : Set KernelQuotient) (hK : MeasurableSet K)
     (f : KernelQuotientL2) : KernelQuotientL2 :=
-  ((Lp.memLp f).indicator hK.nullMeasurableSet).toLp (K.indicator f)
+  ((Lp.memLp f).indicator hK).toLp (K.indicator f)
 
 lemma kernelMassRestriction_coe (K : Set KernelQuotient) (hK : MeasurableSet K)
     (f : KernelQuotientL2) :
     (kernelMassRestriction K hK f : KernelQuotient→ℂ)=ᵐ[integralQuotientVolume globalKubotaKernel]
-      K.indicator f := ((Lp.memLp f).indicator hK.nullMeasurableSet).coeFn_toLp
+      K.indicator f := ((Lp.memLp f).indicator hK).coeFn_toLp
 
 def kernelMassRestrictionLinear (K : Set KernelQuotient) (hK : MeasurableSet K) :
     KernelQuotientL2→ₗ[ℂ]KernelQuotientL2 where

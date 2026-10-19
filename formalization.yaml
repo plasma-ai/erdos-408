@@ -165,7 +165,7 @@ review:
   reviewers: []
   notes: >-
     The full development, including the vendored libraries, builds on Lean
-    v4.35.0, and the three compared theorems depend only on propext,
+    v4.35.0-rc3, and the three compared theorems depend only on propext,
     Classical.choice, and Quot.sound. Comparator, built for this toolchain,
     accepts them against Challenge.lean with the Lean kernel. It ran on macOS
     with a stand-in for landrun that does not sandbox the solution build. No

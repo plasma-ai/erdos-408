@@ -15,20 +15,10 @@ are taken with the compatibility patch
 `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb` applied, as the OAI library builds
 them.
 
-This project pins Lean and Mathlib `v4.35.0`, and 2 of the modules were
-changed to build here. `memLp_indicator_iff_restrict` and
-`eLpNorm_indicator_eq_eLpNorm_restrict` now take a `NullMeasurableSet`, so
-`LpSpace/Restrict.lean` and `L2Compactness/Smoothing.lean` pass
-`hs.nullMeasurableSet` where they passed a `MeasurableSet`.
+This project pins Lean and Mathlib `v4.35.0-rc3`.
 
-All 15 modules also use the module system: each begins with `module`,
+All 15 modules use the module system: each begins with `module`,
 imports with `public import`, and exposes its definitions with
 `@[expose] public section`. `L2Compactness/Approximation.lean` imports
 `Mathlib.Algebra.Order.Star.Real`, which it uses but no longer sees, because a
 module sees only what its imports export.
-
-`Sobolev/Euclidean/Translation.lean` and
-`Sobolev/Euclidean/TranslationEstimateL2.lean` also replace the deprecated
-`Measure.QuasiMeasurePreserving.ae_eq_comp` by
-`QuasiMeasurePreserving.ae_eq_comp`, so that the modules build without
-warnings.

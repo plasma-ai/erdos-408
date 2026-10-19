@@ -458,7 +458,7 @@ lemma integralConjugate_fundamentalDomain {H J : Subgroup (SL(2,ActualEisenstein
       hyperbolicVolume := by
   apply (hyperbolicFundamentalSet_isFundamentalDomain H hH).image_of_equiv
     (MulAction.toPerm g)
-    (show QuasiMeasurePreserving (MulAction.toPerm g).symm
+    (show Measure.QuasiMeasurePreserving (MulAction.toPerm g).symm
       hyperbolicVolume hyperbolicVolume from
       (measurePreserving_smul g⁻¹ hyperbolicVolume).quasiMeasurePreserving)
     e.symm.toEquiv

@@ -380,7 +380,7 @@ lemma regularSpatialHeight_pos (deltaLoss : ℝ) (hδ : 0<deltaLoss) (p : Spatia
 lemma regularSpatialHeight_contDiff (deltaLoss : ℝ) : ContDiff ℝ ∞ (regularSpatialHeight deltaLoss) := by
   unfold regularSpatialHeight
   exact contDiff_const.mul (ConcreteCompactWeight.positiveExtension_smooth.comp
-    ((contDiff_apply ℝ (fun _ : Fin 3 => ℝ) 2).div_const deltaLoss))
+    ((contDiff_apply ℝ ℝ 2).div_const deltaLoss))
 
 lemma regularSpatialHeight_eq (deltaLoss : ℝ) (hδ : 0<deltaLoss) (p : SpatialCoordinates) (hp : deltaLoss≤p 2) :
     regularSpatialHeight deltaLoss p=p 2 := by
@@ -395,7 +395,7 @@ lemma regularRowDenominator_contDiff (deltaLoss : ℝ) :
     ContDiff ℝ ∞ (fun p : (Fin 2→ℂ)×SpatialCoordinates =>
       heightDenominator (spatialHorizontal p.2) (regularSpatialHeight deltaLoss p.2) p.1) := by
   have hc (j : Fin 2) : ContDiff ℝ ∞ (fun p : (Fin 2→ℂ)×SpatialCoordinates => p.1 j) :=
-    (contDiff_apply ℝ (fun _ => ℂ) j).comp contDiff_fst
+    (contDiff_apply ℝ ℂ j).comp contDiff_fst
   have hz := spatialHorizontal_contDiff.comp (contDiff_snd (E := Fin 2→ℂ))
   have hv := (regularSpatialHeight_contDiff deltaLoss).comp (contDiff_snd (E := Fin 2→ℂ))
   have hw := ((hc 0).mul hz).add (hc 1)

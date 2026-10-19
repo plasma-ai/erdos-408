@@ -112,8 +112,8 @@ theorem tensorProfile_smooth {n m : ℕ} (f : (Fin n → ℝ) → ℝ)
     (g : (Fin m → ℝ) → ℝ) (hf : ContDiff ℝ ∞ f) (hg : ContDiff ℝ ∞ g) :
     ContDiff ℝ ∞ (tensorProfile f g) := by
   unfold tensorProfile
-  exact (hf.comp (contDiff_pi.mpr (fun i => contDiff_apply ℝ (fun _ => ℝ) (i.castAdd m)))).mul
-    (hg.comp (contDiff_pi.mpr (fun i => contDiff_apply ℝ (fun _ => ℝ) (i.natAdd n))))
+  exact (hf.comp (contDiff_pi.mpr (fun i => contDiff_apply ℝ ℝ (i.castAdd m)))).mul
+    (hg.comp (contDiff_pi.mpr (fun i => contDiff_apply ℝ ℝ (i.natAdd n))))
 
 theorem tensorProfile_tsupport {n m : ℕ} {a b : ℝ}
     (f : (Fin n → ℝ) → ℝ) (g : (Fin m → ℝ) → ℝ)

@@ -1363,7 +1363,7 @@ theorem wkerLe_cleanBlockKer_main {C₀ : ℝ} (hC₀ : 0 < C₀)
       rw [hRc]
       have he : 0 ≤ (K : ℝ) * 4 ^ K * (1 + 52 * L ^ (3 * A₀)) * Real.exp (-L ^ alo) := by
         positivity
-      nlinarith
+      linarith
     calc c₁ * 4 ^ K * (C₀ * Λ * ε) + c₁ * Rc = c₁ * (4 ^ K * (C₀ * Λ * ε) + Rc) := by ring
       _ ≤ c₁ * cleanBound K C₀ A₀ alo x Y := mul_le_mul_of_nonneg_left h1 hc₁0
       _ ≤ c₁ * E := mul_le_mul_of_nonneg_left hEb hc₁0
